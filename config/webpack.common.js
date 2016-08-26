@@ -14,6 +14,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
 const HtmlElementsPlugin = require('./html-elements-plugin');
 
+const autoprefixer = require('autoprefixer');
+const ProvidePlugin = require('webpack/lib/ProvidePlugin');
+
 /*
  * Webpack Constants
  */
@@ -30,6 +33,7 @@ const METADATA = {
  */
 module.exports = {
 
+  postcss: [autoprefixer],
   /*
    * Static metadata for index.html
    *
@@ -78,7 +82,7 @@ module.exports = {
     root: helpers.root('src'),
 
     // remove other default values
-    modulesDirectories: ['node_modules'],
+    modulesDirectories: ['node_modules']
 
   },
 
@@ -147,6 +151,11 @@ module.exports = {
         loaders: ['to-string-loader', 'css-loader']
       },
 
+      {
+        test: /\.scss$/,
+        loaders: ['raw-loader', 'sass-loader']
+      },
+
       /* Raw loader support for *.html
        * Returns file content as string
        *
@@ -163,7 +172,17 @@ module.exports = {
       {
         test: /\.(jpg|png|gif)$/,
         loader: 'file'
+      },
+      {
+        test: /\.(woff2?|ttf|eot|svg)$/,
+        loader: 'url?limit=10000'
+      },
+      // Bootstrap 4
+      {
+        test: /bootstrap\/dist\/js\/umd\//,
+        loader: 'imports?jQuery=jquery'
       }
+
     ]
 
   },
@@ -256,7 +275,14 @@ module.exports = {
     new HtmlElementsPlugin({
       headTags: require('./head-config.common')
     }),
-
+    new ProvidePlugin({
+      jQuery: 'jquery',
+      $: 'jquery',
+      jquery: 'jquery',
+      "Tether": 'tether',
+      "window.Tether": "tether",
+      Util: 'util'
+    })
   ],
 
   /*
