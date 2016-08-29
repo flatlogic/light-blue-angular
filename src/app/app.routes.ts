@@ -1,8 +1,6 @@
 import { Routes, RouterModule } from '@angular/router';
-import { Home } from './home';
-import { NoContent } from './no-content';
-
 import { DataResolver } from './app.resolver';
+import {Core} from './core';
 
 // AngularClass
 // import { provideWebpack } from '@angularclass/webpack-toolkit';
@@ -10,9 +8,5 @@ import { DataResolver } from './app.resolver';
 
 
 export const ROUTES: Routes = [
-  { path: '',      component: Home },
-  {
-    path: 'detail', loadChildren: () => require('es6-promise-loader!./+detail')('default')
-  },
-  { path: '**',    component: NoContent },
+  { path: '',      component: Core }
 ];

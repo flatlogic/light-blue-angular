@@ -14,8 +14,7 @@ import { ROUTES } from './app.routes';
 import { App } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState } from './app.service';
-import { Home } from './home';
-import { NoContent } from './no-content';
+
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -29,9 +28,7 @@ const APP_PROVIDERS = [
 @NgModule({
   bootstrap: [ App ],
   declarations: [
-    App,
-    Home,
-    NoContent
+    App
   ],
   imports: [ // import Angular's modules
     BrowserModule,
