@@ -10,9 +10,9 @@ import { AppState } from './app.service';
  * Top Level Component
  */
 @Component({
-  selector: 'app',
+  selector: 'body',
   encapsulation: ViewEncapsulation.None,
-  styles: [require('./app.scss')],
+  styles: [require('../sass/application.scss')],
   templateUrl: './app.template.html'
 })
 export class App {
