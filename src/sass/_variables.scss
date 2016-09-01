@@ -4,6 +4,13 @@
 
 $libs-compiled-folder: '../../../node_module' !default;
 
+$icon-font-path: 'assets/fonts';
+$icon-font-name: 'glyphicons';
+// Glyphicons
+
+$glyphicons-halflings-include-bonus: false !default;
+$glyphicons-halflings-class-prefix: glyphicon !default;
+
 // Bootstrap options
 
 $enable-flex:               false !default;
@@ -156,6 +163,12 @@ $messenger-spinner-bg: #dd8f6a;
 $calendar-border: $basic-border-color;
 
 $dropzone-color:         #aaa;
+
+/////////////////////////////////////////////////
+//              Font Awesome vars              //
+/////////////////////////////////////////////////
+
+$fa-font-path: "assets/fonts/font-awesome";
 
 /////////////////////////////////////////////////
 //           Override bootstrap vars           //
