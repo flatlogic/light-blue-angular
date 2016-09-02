@@ -536,6 +536,9 @@ $i: 1;
       line-height: 36px;
       text-shadow: none;
 
+      &:after {
+        display: none;
+      }
       &:hover{
         color: $white;
       }
@@ -686,27 +689,33 @@ $i: 1;
     color: $header-dropdown-primary-color;
     padding: 8px 10px;
     @include clearfix();
-
-    &:hover,
-    &:focus{
-      background-color: $header-dropdown-item-hover;
-    }
   }
 
   .see-all{
     padding: 5px 10px;
   }
+
+}
+
+.dropdown-item {
+  &:hover,
+  &:focus {
+    background-color: $header-dropdown-item-hover;
+  }
 }
 
 .message{
+  height: 60px;
 
   img{
     float: left;
     width: 40px;
+    margin-top: 7px;
   }
 
   .details{
     margin-left: 50px;
+    margin-top: 7px;
   }
 
   .sender{
@@ -740,15 +749,17 @@ $i: 1;
   > li > a{
     color: $header-dropdown-primary-color;
     padding: 5px 10px;
-
-    &:hover,
-    &:focus{
-      background-color: $header-dropdown-item-hover;
-    }
   }
 
   .see-all{
     padding: 5px 10px;
+  }
+}
+
+.dropdown-item {
+  &:hover,
+  &:focus {
+    background-color: $header-dropdown-item-hover;
   }
 }
 

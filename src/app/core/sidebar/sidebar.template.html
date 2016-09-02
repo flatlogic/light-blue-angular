@@ -1,11 +1,12 @@
-<ul id="side-nav" class="side-nav">
+<ul id="side-nav" class="sidebar-nav">
   <li class="active">
     <a><i class="fa fa-home"></i> <span class="name">Dashboard</span></a>
   </li>
-  <li class="accordion-group">
-    <a class="accordion-toggle collapsed" data-toggle="collapse"
-       data-parent="#side-nav" href="#forms-collapse"><i class="fa fa-pencil"></i> <span class="name">Forms</span></a>
-    <ul id="forms-collapse" class="accordion-body collapse">
+  <li>
+    <a class="collapsed" data-target="#sidebar-forms" data-toggle="collapse" data-parent="#sidebar">
+      <i class="fa fa-pencil"></i> <span class="name">Forms</span>
+    </a>
+    <ul id="sidebar-forms" class="collapse">
       <li><a href="form_account.html">Account</a></li>
       <li><a href="form_article.html">Article</a></li>
       <li><a href="form_elements.html">Elements</a></li>
@@ -13,74 +14,78 @@
       <li><a href="form_wizard.html">Wizard</a></li>
     </ul>
   </li>
-  <li class="accordion-group">
-    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#stats-collapse"><i class="fa fa-area-chart"></i> <span class="name">Statistics</span></a>
-    <ul id="stats-collapse" class="accordion-body collapse">
+  <li>
+    <a class="collapsed" data-target="#sidebar-ui" data-toggle="collapse" data-parent="#sidebar">
+      <i class="fa fa-area-chart"></i> <span class="name">Statistics</span>
+    </a>
+    <ul id="sidebar-ui" class="collapse">
       <li><a href="stat_statistics.html">Stats</a></li>
       <li><a href="stat_charts.html">Charts</a></li>
       <li><a href="stat_realtime.html">Realtime</a></li>
     </ul>
   </li>
-  <li class="accordion-group">
-    <a class="accordion-toggle collapsed" data-toggle="collapse"
-       data-parent="#side-nav" href="#ui-collapse"><i class="fa fa-magic"></i> <span class="name">User Interface</span></a>
-    <ul id="ui-collapse" class="accordion-body collapse">
-      <li><a href="ui_buttons.html">Buttons</a></li>
-      <li><a href="ui_dialogs.html">Dialogs</a></li>
-      <li><a href="ui_icons.html">Icons</a></li>
-      <li><a href="ui_tabs.html">Tabs</a></li>
-      <li><a href="ui_accordion.html">Accordion</a></li>
-    </ul>
-  </li>
-  <li class="accordion-group">
-    <a class="accordion-toggle collapsed" data-toggle="collapse"
-       data-parent="#side-nav" href="#components-collapse"><i class="fa fa-tree"></i> <span class="name">Components</span></a>
-    <ul id="components-collapse" class="accordion-body collapse">
-      <li><a href="component_calendar.html">Calendar</a></li>
-      <li><a href="component_maps.html">Maps</a></li>
-      <li><a href="component_gallery.html">Gallery</a></li>
-      <li><a href="component_fileupload.html">Fileupload</a></li>
-    </ul>
-  </li>
-  <li class="accordion-group">
-    <a class="accordion-toggle collapsed" data-toggle="collapse"
-       data-parent="#side-nav" href="#tables-collapse"><i class="fa fa-cog"></i> <span class="name">Tables</span></a>
-    <ul id="tables-collapse" class="accordion-body collapse">
-      <li><a href="tables_static.html">Static</a></li>
-      <li><a href="tables_dynamic.html">Dynamic</a></li>
-    </ul>
-  </li>
-  <li class="accordion-group">
-    <a class="accordion-toggle collapsed" data-toggle="collapse"
-       data-parent="#side-nav" href="#widgets-collapse"><i class="fa fa-th"></i> <span class="name">Widgets</span></a>
-    <ul id="widgets-collapse" class="accordion-body collapse">
-      <li><a href="tables_static.html">Basic</a></li>
-      <li><a href="tables_dynamic.html">Live</a></li>
-    </ul>
-  </li>
-  <li class="accordion-group">
-    <a class="accordion-toggle collapsed" data-toggle="collapse"
-       data-parent="#side-nav" href="#special-collapse"><i class="fa fa-leaf"></i> <span class="name">Special</span></a>
-    <ul id="special-collapse" class="accordion-body collapse">
-      <li><a href="tables_static.html">Rearch</a></li>
-      <li><a href="tables_dynamic.html">Invoice</a></li>
-      <li><a href="tables_dynamic.html">Inbox</a></li>
-      <li><a href="tables_dynamic.html">Login</a></li>
-      <li><a href="tables_dynamic.html">Error Page</a></li>
-      <li><a href="tables_dynamic.html">Landing</a></li>
-      <li><a href="tables_dynamic.html">Dark</a></li>
-      <li><a href="tables_dynamic.html">Light</a></li>
-    </ul>
-  </li>
-  <li class="accordion-group">
-    <a class="accordion-toggle collapsed" data-toggle="collapse"
-       data-parent="#side-nav" href="#menu-collapse"><i class="fa fa-folder-open"></i> <span class="name">Menu Levels</span></a>
-    <ul id="menu-collapse" class="accordion-body collapse">
-      <li><a href="tables_static.html">Item 1.1</a></li>
-      <li><a href="tables_dynamic.html">Item 1.2</a></li>
-      <li><a href="tables_dynamic.html">Item 1.3</a></li>
-    </ul>
-  </li>
+  <!--<li class="accordion-group">-->
+    <!--<a class="accordion-toggle collapsed" data-toggle="collapse"-->
+       <!--data-parent="#side-nav" href="#ui-collapse"><i class="fa fa-magic"></i> <span class="name">User Interface</span></a>-->
+    <!--<ul id="ui-collapse" class="accordion-body collapse">-->
+      <!--<li><a href="ui_buttons.html">Buttons</a></li>-->
+      <!--<li><a href="ui_dialogs.html">Dialogs</a></li>-->
+      <!--<li><a href="ui_icons.html">Icons</a></li>-->
+      <!--<li><a href="ui_tabs.html">Tabs</a></li>-->
+      <!--<li><a href="ui_accordion.html">Accordion</a></li>-->
+    <!--</ul>-->
+  <!--</li>-->
+  <!--<li class="accordion-group">-->
+    <!--<a class="accordion-toggle collapsed" data-toggle="collapse"-->
+       <!--data-parent="#side-nav" href="#components-collapse"><i class="fa fa-tree"></i> <span-->
+      <!--class="name">Components</span></a>-->
+    <!--<ul id="components-collapse" class="accordion-body collapse">-->
+      <!--<li><a href="component_calendar.html">Calendar</a></li>-->
+      <!--<li><a href="component_maps.html">Maps</a></li>-->
+      <!--<li><a href="component_gallery.html">Gallery</a></li>-->
+      <!--<li><a href="component_fileupload.html">Fileupload</a></li>-->
+    <!--</ul>-->
+  <!--</li>-->
+  <!--<li class="accordion-group">-->
+    <!--<a class="accordion-toggle collapsed" data-toggle="collapse"-->
+       <!--data-parent="#side-nav" href="#tables-collapse"><i class="fa fa-cog"></i> <span class="name">Tables</span></a>-->
+    <!--<ul id="tables-collapse" class="accordion-body collapse">-->
+      <!--<li><a href="tables_static.html">Static</a></li>-->
+      <!--<li><a href="tables_dynamic.html">Dynamic</a></li>-->
+    <!--</ul>-->
+  <!--</li>-->
+  <!--<li class="accordion-group">-->
+    <!--<a class="accordion-toggle collapsed" data-toggle="collapse"-->
+       <!--data-parent="#side-nav" href="#widgets-collapse"><i class="fa fa-th"></i> <span class="name">Widgets</span></a>-->
+    <!--<ul id="widgets-collapse" class="accordion-body collapse">-->
+      <!--<li><a href="tables_static.html">Basic</a></li>-->
+      <!--<li><a href="tables_dynamic.html">Live</a></li>-->
+    <!--</ul>-->
+  <!--</li>-->
+  <!--<li class="accordion-group">-->
+    <!--<a class="accordion-toggle collapsed" data-toggle="collapse"-->
+       <!--data-parent="#side-nav" href="#special-collapse"><i class="fa fa-leaf"></i> <span class="name">Special</span></a>-->
+    <!--<ul id="special-collapse" class="accordion-body collapse">-->
+      <!--<li><a href="tables_static.html">Rearch</a></li>-->
+      <!--<li><a href="tables_dynamic.html">Invoice</a></li>-->
+      <!--<li><a href="tables_dynamic.html">Inbox</a></li>-->
+      <!--<li><a href="tables_dynamic.html">Login</a></li>-->
+      <!--<li><a href="tables_dynamic.html">Error Page</a></li>-->
+      <!--<li><a href="tables_dynamic.html">Landing</a></li>-->
+      <!--<li><a href="tables_dynamic.html">Dark</a></li>-->
+      <!--<li><a href="tables_dynamic.html">Light</a></li>-->
+    <!--</ul>-->
+  <!--</li>-->
+  <!--<li class="accordion-group">-->
+    <!--<a class="accordion-toggle collapsed" data-toggle="collapse"-->
+       <!--data-parent="#side-nav" href="#menu-collapse"><i class="fa fa-folder-open"></i> <span class="name">Menu-->
+      <!--Levels</span></a>-->
+    <!--<ul id="menu-collapse" class="accordion-body collapse">-->
+      <!--<li><a href="tables_static.html">Item 1.1</a></li>-->
+      <!--<li><a href="tables_dynamic.html">Item 1.2</a></li>-->
+      <!--<li><a href="tables_dynamic.html">Item 1.3</a></li>-->
+    <!--</ul>-->
+  <!--</li>-->
 </ul>
 
 <h5 class="sidebar-nav-title">Labels <a class="action-link" href="#"><i class="glyphicon glyphicon-plus"></i></a></h5>
@@ -113,6 +118,7 @@
   <div class="alert fade in">
     <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
     <span class="text-white fw-semi-bold">Sales Report</span> <br>
+
     <div class="progress progress-xs mt-xs mb-0">
       <div class="progress-bar progress-bar-gray-light" style="width: 16%"></div>
     </div>
@@ -121,6 +127,7 @@
   <div class="alert fade in">
     <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
     <span class="text-white fw-semi-bold">Personal Responsibility</span> <br>
+
     <div class="progress progress-xs mt-xs mb-0">
       <div class="progress-bar progress-bar-danger" style="width: 23%"></div>
     </div>
