@@ -60,7 +60,7 @@ export class AppModule {
   }
   hmrAfterDestroy(store) {
     // display new elements
-    store.disposeOldHosts()
+    store.disposeOldHosts();
     delete store.disposeOldHosts;
   }
 }
