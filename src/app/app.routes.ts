@@ -20,7 +20,7 @@ export const ROUTES: Routes = [
       {path: 'dashboard', component: Dashboard},
       {path: 'form',
         children: [
-          {path: '', redirect: 'account', pathMatch: 'full'},
+          {path: '', redirectTo: 'account', pathMatch: 'full'},
           {path: 'account', component: Account},
           {path: 'article', component: Article},
           {path: 'elements', component: Elements},
