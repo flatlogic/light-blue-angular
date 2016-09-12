@@ -1,9 +1,9 @@
 <div class="content container">
+  <h2 class="page-title">Dashboard
+    <small>Statistics and more</small>
+  </h2>
   <div class="row">
-    <h2 class="page-title">Dashboard
-      <small>Statistics and more</small>
-    </h2>
-    <div class="col-lg-8">
+    <div class="col-xl-8">
       <section class="widget">
         <header>
           <h4>
@@ -25,19 +25,19 @@
           </div>
           <div class="visits-info well well-sm">
             <div class="row">
-              <div class="col-sm-3 col-xs-6">
+              <div class="col-md-3 col-sm-6">
                 <div class="key"><i class="fa fa-users"></i> Total Traffic</div>
                 <div class="value">24 541 <i class="fa fa-caret-up color-green"></i></div>
               </div>
-              <div class="col-sm-3 col-xs-6">
+              <div class="col-md-3 col-sm-6">
                 <div class="key"><i class="fa fa-bolt"></i> Unique Visits</div>
                 <div class="value">14 778 <i class="fa fa-caret-down color-red"></i></div>
               </div>
-              <div class="col-sm-3 col-xs-6">
+              <div class="col-md-3 col-sm-6">
                 <div class="key"><i class="fa fa-plus-square"></i> Revenue</div>
                 <div class="value">$3 583.18 <i class="fa fa-caret-up color-green"></i></div>
               </div>
-              <div class="col-sm-3 col-xs-6">
+              <div class="col-md-3 col-sm-6">
                 <div class="key"><i class="fa fa-user"></i> Total Sales</div>
                 <div class="value">$59 871.12 <i class="fa fa-caret-down color-red"></i></div>
               </div>
@@ -66,9 +66,9 @@
               <th class="source-col-header">Source</th>
               <th>Amount</th>
               <th>Change</th>
-              <th class="hidden-xs">Percent.,%</th>
+              <th class="hidden-sm">Percent.,%</th>
               <th>Target</th>
-              <th class="chart-col-header hidden-xs">Trend</th>
+              <th class="chart-col-header hidden-sm">Trend</th>
             </tr>
             </thead>
             <tbody>
@@ -76,9 +76,9 @@
               <td><span class="label label-important">Direct</span></td>
               <td>713</td>
               <td><strong class="color-green">+53</strong></td>
-              <td class="hidden-xs">+12</td>
+              <td class="hidden-sm">+12</td>
               <td>900</td>
-              <td class="chart-cell hidden-xs">
+              <td class="chart-cell hidden-sm">
                 <div id="direct-trend"></div>
               </td>
             </tr>
@@ -86,9 +86,9 @@
               <td><span class="label label-warning">Refer</span></td>
               <td>562</td>
               <td><strong>+84</strong></td>
-              <td class="hidden-xs">+64</td>
+              <td class="hidden-sm">+64</td>
               <td>500</td>
-              <td class="chart-cell hidden-xs">
+              <td class="chart-cell hidden-sm">
                 <div id="refer-trend"></div>
               </td>
             </tr>
@@ -96,9 +96,9 @@
               <td><span class="label label-success">Social</span></td>
               <td>148</td>
               <td><strong class="color-red">-12</strong></td>
-              <td class="hidden-xs">+3</td>
+              <td class="hidden-sm">+3</td>
               <td>180</td>
-              <td class="chart-cell hidden-xs">
+              <td class="chart-cell hidden-sm">
                 <div id="social-trend"></div>
               </td>
             </tr>
@@ -106,9 +106,9 @@
               <td><span class="label label-info">Search</span></td>
               <td>653</td>
               <td><strong class="color-green">+23</strong></td>
-              <td class="hidden-xs">+43</td>
+              <td class="hidden-sm">+43</td>
               <td>876</td>
-              <td class="chart-cell hidden-xs">
+              <td class="chart-cell hidden-sm">
                 <div id="search-trend"></div>
               </td>
             </tr>
@@ -116,9 +116,9 @@
               <td><span class="label label-inverse">Internal</span></td>
               <td>976</td>
               <td><strong>+101</strong></td>
-              <td class="hidden-xs">-7</td>
+              <td class="hidden-sm">-7</td>
               <td>844</td>
-              <td class="chart-cell hidden-xs">
+              <td class="chart-cell hidden-sm">
                 <div id="internal-trend"></div>
               </td>
             </tr>
@@ -237,10 +237,10 @@
               </div>
             </div>
             <footer class="chat-footer row">
-              <div class="col-xs-9">
+              <div class="col-sm-9">
                 <input id="new-message" type="text" class="form-control" placeholder="Enter your message..">
               </div>
-              <div class="col-xs-3">
+              <div class="col-sm-3">
                 <button type="button" id="new-message-btn" class="btn btn-danger btn-block">Send</button>
               </div>
             </footer>
@@ -248,7 +248,7 @@
         </div>
       </section>
     </div>
-    <div class="col-lg-4">
+    <div class="col-xl-4">
       <section class="widget large">
         <header>
           <h4>
@@ -359,14 +359,14 @@
       <section class="widget widget-tabs">
         <header>
           <ul class="nav nav-tabs">
-            <li class="active">
-              <a href="#stats" data-toggle="tab">Users</a>
+            <li class="nav-item">
+              <a class="nav-link active" href="#stats" data-toggle="tab">Users</a>
             </li>
-            <li>
-              <a href="#report" data-toggle="tab">Favorites</a>
+            <li class="nav-item">
+              <a class="nav-link" href="#report" data-toggle="tab">Favorites</a>
             </li>
-            <li>
-              <a href="#dropdown1" data-toggle="tab">Commenters</a>
+            <li class="nav-item">
+              <a class="nav-link" href="#dropdown1" data-toggle="tab">Commenters</a>
             </li>
           </ul>
         </header>
