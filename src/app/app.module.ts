@@ -17,33 +17,10 @@ import { AppState, InteralStateType } from './app.service';
 
 import {Core} from './core'
 import {Dashboard} from './dashboard'
-import {Account} from './form/account'
-import {Article} from './form/article'
-import {Elements} from './form/elements'
-import {Validation} from './form/validation'
-import {Wizard} from './form/wizard'
-import {Stats} from './statistics/stats'
-import {Charts} from './statistics/charts'
-import {Realtime} from './statistics/realtime'
-import {Buttons} from './ui/buttons'
-import {Dialogs} from './ui/dialogs'
-import {Icons} from './ui/icons'
-import {Tabs} from './ui/tabs'
-import {Accordion} from './ui/accordion'
-import {Calendar} from './components/calendar'
-import {Maps} from './components/maps'
-import {Gallery} from './components/gallery'
-import {Fileupload} from './components/fileupload'
-import {Dynamic} from './tables/dynamic'
-import {Static} from './tables/static'
-import {Basic} from './widgets/basic'
-import {Live} from './widgets/live'
-import {Search} from './special/search'
-import {Invoice} from './special/invoice'
-import {Inbox} from './special/inbox'
 
 import {Sidebar} from './core/sidebar'
 import {Navbar} from './core/navbar'
+
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -66,30 +43,6 @@ type StoreType = {
     App,
     Core,
     Dashboard,
-    Calendar,
-    Maps,
-    Gallery,
-    Fileupload,
-    Dynamic,
-    Static,
-    Basic,
-    Live,
-    Search,
-    Invoice,
-    Inbox,
-    Charts,
-    Realtime,
-    Buttons,
-    Dialogs,
-    Icons,
-    Tabs,
-    Accordion,
-    Account,
-    Article,
-    Elements,
-    Validation,
-    Wizard,
-    Stats,
     Sidebar,
     Navbar
   ],
