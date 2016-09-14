@@ -120,13 +120,31 @@
       </ul>
     </li>
     <li class="divider"></li>
-    <li class="hidden-xs">
+    <li class="hidden-xs nav-item dropdown">
       <a href="#" id="settings"
          title="Settings"
-         data-toggle="popover"
-         data-placement="bottom">
+         class="nav-link dropdown-toggle"
+         data-toggle="dropdown">
         <i class="glyphicon glyphicon-cog"></i>
       </a>
+      <div class="dropdown-menu">
+        <div class="setting clearfix">
+          <div>Sidebar on the</div>
+          <div id="sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
+            <!--<% onRight = sidebar == 'right'%>-->
+            <button type="button" data-value="left" class="btn btn-sm btn-default <%= onRight? '' : 'active' %>">Left</button>
+            <button type="button" data-value="right" class="btn btn-sm btn-default <%= onRight? 'active' : '' %>">Right</button>
+          </div>
+        </div>
+        <div class="setting clearfix">
+          <div>Sidebar</div>
+          <div id="display-sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
+            <!--<% display = displaySidebar%>-->
+            <button type="button" data-value="true" class="btn btn-sm btn-default <%= display? 'active' : '' %>">Show</button>
+            <button type="button" data-value="false" class="btn btn-sm btn-default <%= display? '' : 'active' %>">Hide</button>
+          </div>
+        </div>
+      </div>
     </li>
     <li class="nav-item dropdown hidden-xs">
       <a href title="Account" id="account"

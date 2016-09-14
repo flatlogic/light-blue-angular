@@ -13,7 +13,7 @@ $glyphicons-halflings-class-prefix: glyphicon !default;
 
 // Bootstrap options
 
-$enable-flex:               false !default;
+$enable-flex:               true !default;
 $enable-rounded:            true !default;
 $enable-shadows:            true !default;
 $enable-gradients:          false !default;
@@ -199,9 +199,9 @@ $border-radius-base:        3px !default;
 
 $btn-font-weight:                $font-weight-base !default;
 
-$btn-default-color:              $white !default;
-$btn-default-bg:                 $gray !default;
-$btn-default-border:             rgba(0, 0, 0, 0.15) !default;
+$btn-secondary-color:              #fff !default;
+$btn-secondary-bg:                 $gray !default;
+$btn-secondary-border:             rgba(0, 0, 0, 0.15) !default;
 
 $btn-inverse-color:              $gray-dark !default;
 $btn-inverse-bg: $white-dark !default;
