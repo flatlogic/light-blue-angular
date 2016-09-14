@@ -25,15 +25,15 @@ $enable-grid-classes:       true !default;
 // ------------------------
 
 $lime:                  #8CBF26 !default;
-$red:                   #f53811 !default;
+$red:                   #f25118 !default;
 $red-dark:              #d04f4f !default;
-$blue:                  #3a87c5 !default;
-$green:                 #17c457 !default;
-$orange:                #f0b829 !default;
+$blue:                  #4e91ce !default;
+$green:                 #3ecd74 !default;
+$orange:                #f2c34d !default;
 $pink:                  #E671B8 !default;
 $purple:                #A700AE !default;
 $brown:                 #A05000 !default;
-$teal:                  #25a1c5 !default;
+$teal:                  #4ab0ce !default;
 $white:                 #ffffff !default;
 $black:                 #000000 !default;
 
@@ -44,11 +44,11 @@ $white-dark:            #f8f8f8 !default;
 $shadow-color:            rgba(#676767, .4) !default;
 
 //copy from BS
-$gray-darker:           lighten(#000, 13.5%) !default;
+$gray-darker:           lighten(#000, 13.5%) !default; // #222
 $gray-dark:             #555 !default;
-$gray:                  #606060;
-$gray-light:            lighten(#000, 60%) !default;
-$gray-lighter:          lighten(#000, 93.5%) !default;
+$gray:                  #666;
+$gray-light:            lighten(#000, 60%) !default;   // #999
+$gray-lighter:          lighten(#000, 93.5%) !default; // #eee
 $gray-semi-light:       #777;
 $gray-semi-lighter:     #ddd;
 
@@ -58,14 +58,14 @@ $brand-warning:         $orange !default;
 $brand-danger:          $red !default;
 $brand-info:            $teal !default;
 
-$bg-gradient-color-1: #2b6e80;
-$bg-gradient-color-2: #0c3252;
+$bg-gradient-color-1: #154265;
+$bg-gradient-color-2: #7392c2;
 
 // Typography
 // -------------------------
 $text-color: $white-dark !default;
 $text-bold: lighten($text-color, 3%);
-$text-muted: #808080 !default;
+$text-muted: darken($text-color, 15%) !default;
 
 $font-family-sans-serif:  "Open Sans", sans-serif !default;
 
@@ -80,7 +80,7 @@ $font-weight-bold: 700 !default;
 $font-weight-semi-bold: 600 !default;
 $font-weight-normal: 400 !default;
 $font-weight-thin: 300 !default;
-$font-weight-base: $font-weight-normal !default;
+$font-weight-base: $font-weight-thin !default;
 
 $line-height-base:        1.428571429 !default; // 20/14
 $line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
@@ -88,7 +88,7 @@ $line-height-computed:    floor(($font-size-base * $line-height-base)) !default;
 // Links
 // -------------------------
 
-$link-color:            #4D9DD7;
+$link-color:            saturate(lighten($blue, 25%), 50%);
 
 // Layout
 // -------------------------
@@ -100,19 +100,19 @@ $sidebar-mt: 80px;
 // Scaffolding
 // -------------------------
 
-$basic-border-color: #ddd;
+$basic-border-color: transparent;
 
-$widget-bg-common:        $white !default; //#ddd
+$widget-bg-common:        #333 !default; //#ddd
 $widget-mb:        30px;
-$widget-color:     $gray;
-$widget-header-color: $widget-color;
-$widget-header-smalls-color: $gray-light;
-$widget-controls-color: lighten($widget-color, 25%);
-$widget-controls-hover-color: lighten($widget-color, 5%);
+$widget-color:     $text-color;
+$widget-header-color: lighten($widget-color, 5%);
+$widget-header-smalls-color: $text-muted;
+$widget-controls-color: rgba($white, .45);
+$widget-controls-hover-color: rgba($white, .6);
 
-$text-transparent: rgba($widget-bg-common, .8);
-$bg-addition: $gray-lighter;
-$widget-bg: $widget-bg-common;
+$text-transparent: rgba($widget-bg-common, .5);
+$bg-addition: rgba($widget-bg-common, .3);
+$widget-bg: rgba($widget-bg-common, .4);
 
 $widget-padding-vertical: 12px;
 $widget-padding-horizontal: 17px;
@@ -126,16 +126,18 @@ $sidebar-item-sub-active-bg: darken($sidebar-item-active-bg, 15%);
 $page-title-color: $white;
 
 $header-link-color: $text-transparent;
-$header-notification-count: $brand-danger;
+$header-notification-count: rgba($widget-bg-common, .55);
 
 $header-search-query-bg-image: url(assets/img/search.png);
-$header-search-query-placeholder-color: rgba(#555, .76);
+$header-search-query-placeholder-color: rgba(#eee, .76);
 
-$header-dropdown-primary-color:          $widget-color;
-$header-dropdown-secondary-color:        #888;
-$header-dropdown-bg:                     $widget-bg;
-$header-dropdown-shadow:                 0 6px 12px rgba(0, 0, 0, 0.175);
-$header-dropdown-item-hover:             #eee;
+$header-dropdown-primary-color:          $widget-header-color;
+$header-dropdown-secondary-color:        #ddd;
+$header-dropdown-bg:                     rgba($widget-bg-common, .85);
+$header-dropdown-shadow:                 none;
+$header-dropdown-item-hover:             $brand-primary;
+
+$nav-tabs-link-color: $widget-color;
 
 $input-transparent-color: $text-color;
 $input-transparent-placeholder-color: rgba(#eee, .76);
@@ -143,26 +145,26 @@ $input-transparent-placeholder-color: rgba(#eee, .76);
 // Widgets
 // -------------------------
 
-$feed-item-bg: $bg-addition;
-$feed-item-color: #707070;
-$feed-item-line-color: $feed-item-bg;
+$feed-item-bg: $widget-bg;
+$feed-item-color: $white;
+$feed-item-line-color: transparent;
 
-$nav-tabs-link-color: $link-color;
-$nav-tabs-active-item-margin: -1px;
+$nav-tabs-link-color: $widget-color;
+$nav-tabs-active-item-margin: 0;
 $nav-tabs-active-item-border: $basic-border-color;
-$nav-tabs-active-item-border-bottom: $widget-bg;
-$nav-tabs-border: 1px solid $nav-tabs-active-item-border;
-$nav-tabs-tab-content-bg: $widget-bg;
+$nav-tabs-active-item-border-bottom: $basic-border-color;
+$nav-tabs-border: none;
+$nav-tabs-tab-content-bg: $bg-addition;
 
-$tabs-widget-active-item-hover-bg: $bg-addition;
+$tabs-widget-active-item-hover-bg: rgba(darken($widget-bg-common, 10%), .4);
 
-$location-selector-bg: darken($widget-bg, 2%);
-$location-selector-border-color: $basic-border-color;
-$messenger-spinner-bg: #dd8f6a;
+$location-selector-bg: $bg-addition;
+$location-selector-border-color: #eee;
+$messenger-spinner-bg: $white;
 
-$calendar-border: $basic-border-color;
+$calendar-border: rgba($white, .33);
 
-$dropzone-color:         #aaa;
+$dropzone-color:         #eee;
 
 /////////////////////////////////////////////////
 //              Font Awesome vars              //
@@ -211,15 +213,15 @@ $input-color:                    $gray-dark;
 $input-border:                   #ccc !default;
 $input-border-focus:             #66afe9 !default;
 
-$input-group-addon-bg:           $gray-lighter;
-$input-group-addon-border-color: $input-border;
+$input-group-addon-bg:           $bg-addition;
+$input-group-addon-border-color: transparent;
 
 // recalculate input heights
 $input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
 $input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
 
 
-$legend-color:                   $widget-header-color !default;
+$legend-color:                   $white !default;
 
 // Dropdowns
 // -------------------------
@@ -255,9 +257,9 @@ $state-danger-bg:                rgba($state-danger-border, 0.29) !default;
 
 //== Tables
 //
-$table-bg-accent:               #f9f9f9 !default;
-$table-border-color:            #ddd !default;
-$table-bg-hover:                #f5f5f5;
+$table-bg-accent:               $bg-addition !default;
+$table-border-color:            rgba($widget-bg-common, .35) !default; // table and cell border
+$table-bg-hover:                darken($bg-addition, 5%);
 
 
 // List group
@@ -276,31 +278,31 @@ $jumbotron-heading-color:        inherit !default;
 
 // Popovers
 // -------------------------
-$popover-bg:                          $widget-bg-common !default;
+$popover-bg:                          rgba($widget-bg-common, .85) !default;
 $popover-arrow-color:                 $popover-bg !default;
-$popover-border-color:                rgba(0,0,0,.2);
+$popover-border-color:                transparent;
 
 // Thumbnails
 // -------------------------
-$thumbnail-bg:                        $widget-bg;
-$thumbnail-border:                    1px solid #ddd;
+$thumbnail-bg:                    $widget-bg;
+$thumbnail-border:                    none;
 
 // Pagination
 // -------------------------
 
-$pagination-color:                     $widget-color !default;
+$pagination-color:                     $text-color !default;
 $pagination-bg:                        transparent !default;
 $pagination-border:                    transparent !default;
 
-$pagination-hover-color:               $widget-header-color !default;
+$pagination-hover-color:               $white !default;
 $pagination-hover-bg:                  $bg-addition !default;
 $pagination-hover-border:              transparent !default;
 
-$pagination-active-color:              $widget-header-color !default;
+$pagination-active-color:              $white !default;
 $pagination-active-bg:                 $bg-addition !default;
 $pagination-active-border:             transparent !default;
 
-$pagination-disabled-color:            $text-muted !default;
+$pagination-disabled-color:            $gray-lighter !default;
 $pagination-disabled-bg:               transparent !default;
 $pagination-disabled-border:           transparent !default;
 
@@ -326,20 +328,20 @@ $carousel-indicator-border-color:             transparent !default;
 // Wells
 // -------------------------
 
-$well-bg:                     #f5f5f5 !default;
-$well-border:                 darken($well-bg, 7%) !default;
+$well-bg:         $bg-addition !default;
+$well-border:     transparent !default;
 
 // Code (inline and block)
 // --------------------------------------------------
 
 $pre-bg: $bg-addition !default;
-$pre-color:                   $widget-color !default;
+$pre-color:                   $text-color !default;
 $pre-border-color: $widget-bg !default;
 
 // Type
 // --------------------------------------------------
 
-$blockquote-border-color:             #ddd;
+$blockquote-border-color:             $widget-bg;
 
 // Custom libs variables
 // ------------------------
@@ -347,5 +349,4 @@ $blockquote-border-color:             #ddd;
 // Awesome Checkbox
 // ------------------------
 
-$awesome-checkbox-default-color:       $gray;
-
+$awesome-checkbox-default-color:       #eee;
