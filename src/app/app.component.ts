@@ -12,8 +12,10 @@ import { AppState } from './app.service';
 @Component({
   selector: 'app',
   encapsulation: ViewEncapsulation.None,
-  styles: [require('../sass/application.scss')],
-  templateUrl: './app.template.html'
+  styleUrls: [
+    './scss/application.scss'
+  ],
+  template: `<router-outlet></router-outlet>`
 })
 export class App {
 }

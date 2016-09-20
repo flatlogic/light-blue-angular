@@ -1,7 +1,3 @@
-/**
- * @author: @AngularClass
- */
-
 const webpack = require('webpack');
 const helpers = require('./helpers');
 
@@ -17,13 +13,14 @@ const AssetsPlugin = require('assets-webpack-plugin');
 
 const autoprefixer = require('autoprefixer');
 const ProvidePlugin = require('webpack/lib/ProvidePlugin');
+const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin');
 
 /*
  * Webpack Constants
  */
 const HMR = helpers.hasProcessFlag('hot');
 const METADATA = {
-  title: 'Angular2 Webpack Starter by @gdi2290 from @AngularClass',
+  title: 'Light Blue',
   baseUrl: '/',
   isDevServer: helpers.isWebpackDevServer()
 };
@@ -153,6 +150,13 @@ module.exports = function(options) {
           loader: 'json-loader'
         },
 
+        { test: /\.scss$/, loaders: ['raw-loader', 'sass-loader'] },
+
+        { test: /\.(woff2?|ttf|eot|svg)$/, loader: 'url?limit=10000&name=[name].[ext]' },
+
+        // Bootstrap 4
+        { test: /bootstrap\/dist\/js\/umd\//, loader: 'imports?jQuery=jquery' },
+
         /*
          * to string and css loader support for *.css files
          * Returns file content as string
@@ -161,11 +165,6 @@ module.exports = function(options) {
         {
           test: /\.css$/,
           loaders: ['to-string-loader', 'css-loader']
-        },
-
-        {
-          test: /\.scss$/,
-          loaders: ['raw-loader', 'sass-loader']
         },
 
         /* Raw loader support for *.html
@@ -184,17 +183,6 @@ module.exports = function(options) {
         {
           test: /\.(jpg|png|gif)$/,
           loader: 'file'
-        },
-
-        {
-          test: /\.(woff2?|ttf|eot|svg)$/,
-          loader: 'url?limit=10000'
-        },
-
-        // Bootstrap 4
-        {
-          test: /bootstrap\/dist\/js\/umd\//,
-          loader: 'imports?jQuery=jquery'
         }
       ],
 
@@ -241,6 +229,19 @@ module.exports = function(options) {
       new webpack.optimize.CommonsChunkPlugin({
         name: ['polyfills', 'vendor'].reverse()
       }),
+
+      /**
+       * Plugin: ContextReplacementPlugin
+       * Description: Provides context to Angular's use of System.import
+       *
+       * See: https://webpack.github.io/docs/list-of-plugins.html#contextreplacementplugin
+       * See: https://github.com/angular/angular/issues/11580
+       */
+      new ContextReplacementPlugin(
+        // The (\\|\/) piece accounts for path separators in *nix and Windows
+        /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
+        helpers.root('src') // location of your src
+      ),
 
       /*
        * Plugin: CopyWebpackPlugin

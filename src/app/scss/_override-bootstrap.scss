@@ -599,7 +599,7 @@ textarea,
 }
 
 .navbar-nav {
-  margin: ($navbar-padding-vertical / 2) -$navbar-padding-horizontal;
+  margin: ($navbar-padding-y / 2) -$navbar-padding-x;
 
   > li > a {
     padding-top:    10px;
@@ -740,35 +740,35 @@ textarea,
 }
 
 .badge-default {
-  @include label-variant($label-default-bg);
+  @include tag-variant($tag-default-bg);
 }
 
 .badge-primary {
-  @include label-variant($label-primary-bg);
+  @include tag-variant($tag-primary-bg);
 }
 
 .badge-success {
-  @include label-variant($label-success-bg);
+  @include tag-variant($tag-success-bg);
 }
 
 .badge-info {
-  @include label-variant($label-info-bg);
+  @include tag-variant($tag-info-bg);
 }
 
 .badge-warning {
-  @include label-variant($label-warning-bg);
+  @include tag-variant($tag-warning-bg);
 }
 
 .badge-danger {
-  @include label-variant($label-danger-bg);
+  @include tag-variant($tag-danger-bg);
 }
 
-.label-important{
-  @extend .label-danger;
+.tag-important{
+  @include tag-variant($tag-danger-bg);
 }
 
 .label-inverse{
-  @extend .label-default;
+  @include tag-variant($tag-default-bg);
 }
 
 /***************************/

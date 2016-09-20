@@ -4,11 +4,10 @@
 
 // essential libs
 //
-@import "../../node_modules/bootstrap/scss/bootstrap";
-@import "../../node_modules/font-awesome/scss/font-awesome";
-@import "../../node_modules/glyphicons-halflings/scss/glyphicons-halflings";
-@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
-@import "../../node_modules/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss";
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+@import "../../../node_modules/font-awesome/scss/font-awesome";
+@import "../../../node_modules/glyphicons-halflings/scss/glyphicons-halflings";
+@import "../../../node_modules/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss";
 //@import "CSS:../../../bower_components/animate.css/animate";
 
 @import "override-libs";

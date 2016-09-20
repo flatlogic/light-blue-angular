@@ -81,20 +81,36 @@
   }
 }
 
-//// Placeholder text
-//@mixin placeholder($color: $input-color-placeholder) {
-//  // Firefox
-//  &::-moz-placeholder {
-//    color: $color;
-//    opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
-//  }
-//  &:-ms-input-placeholder { color: $color; } // Internet Explorer 10+
-//  &::-webkit-input-placeholder  { color: $color; } // Safari and Chrome
-//}
-//
-//// Box sizing
-//@mixin box-sizing($boxmodel) {
-//  -webkit-box-sizing: $boxmodel;
-//  -moz-box-sizing: $boxmodel;
-//  box-sizing: $boxmodel;
-//}
+@mixin gradient-vertical($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
+  background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent);
+}
+
+// Placeholder text
+@mixin placeholder($color: $input-color-placeholder) {
+  // Firefox
+  &::-moz-placeholder {
+    color: $color;
+    opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
+  }
+  &:-ms-input-placeholder { color: $color; } // Internet Explorer 10+
+  &::-webkit-input-placeholder  { color: $color; } // Safari and Chrome
+}
+
+// Box sizing
+@mixin box-sizing($boxmodel) {
+  -webkit-box-sizing: $boxmodel;
+  -moz-box-sizing: $boxmodel;
+  box-sizing: $boxmodel;
+}
+
+@mixin rotate($deg) {
+  transform: rotate($deg);
+}
+
+@mixin transition-transform($transition...) {
+  transition: transform $transition;
+}
+
+@mixin user-select($select) {
+  user-select: $select;
+}

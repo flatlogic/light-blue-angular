@@ -3,7 +3,9 @@ import { Component } from '@angular/core';
 @Component({
   selector: '[dashboard]',
   templateUrl: './dashboard.template.html',
-  styles: [require('./dashboard.style.scss')]
+  styleUrls: [
+    './dashboard.style.scss'
+  ],
 })
 export class Dashboard {
 

@@ -1,24 +1,16 @@
-import { Routes, RouterModule } from '@angular/router';
-import { DataResolver } from './app.resolver';
-import {Core} from './core';
-import {Dashboard} from './dashboard';
-
-// AngularClass
-// import { provideWebpack } from '@angularclass/webpack-toolkit';
-// import { providePrefetchIdleCallbacks } from '@angularclass/request-idle-callback';
+import { Routes } from '@angular/router';
+import { ErrorComponent } from './error/error.component';
 
 
-export const ROUTES: Routes = [
-  { path: '', component: Core,
-    children: [
-      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-      {path: 'dashboard', component: Dashboard},
-      {path: 'form', loadChildren: () => System.import('./form')},
-      {path: 'statistics', loadChildren: () => System.import('./statistics')},
-      {path: 'ui', loadChildren: () => System.import('./ui')},
-      {path: 'components', loadChildren: () => System.import('./components')},
-      {path: 'tables', loadChildren: () => System.import('./tables')},
-      {path: 'widgets', loadChildren: () => System.import('./widgets')},
-      {path: 'special', loadChildren: () => System.import('./special')},
-  ]}
+export const ROUTES: Routes = [{
+  path: '', redirectTo: 'app', pathMatch: 'full'
+}, {
+  path: 'app',   loadChildren: () => System.import('./layout/layout.module')
+}, {
+  path: 'login', loadChildren: () => System.import('./login/login.module')
+}, {
+  path: 'error', component: ErrorComponent
+}, {
+  path: '**',    component: ErrorComponent
+}
 ];

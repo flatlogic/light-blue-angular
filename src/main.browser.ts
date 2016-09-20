@@ -1,10 +1,6 @@
 /*
  * Angular bootstraping
  */
-import 'jquery';
-import 'tether';
-import 'bootstrap';
-
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { decorateModuleRef } from './app/environment';
 import { bootloader } from '@angularclass/hmr';

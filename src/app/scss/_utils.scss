@@ -86,7 +86,7 @@
 };
 
 .bg-attention{
-  @include animation(bg-attention 10s);
+  animation: bg-attention 10s;
 }
 
 /* .h* + .fw-bold */

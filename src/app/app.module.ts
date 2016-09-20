@@ -14,12 +14,7 @@ import { ROUTES } from './app.routes';
 import { App } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InteralStateType } from './app.service';
-
-import {Core} from './core'
-import {Dashboard} from './dashboard'
-
-import {Sidebar} from './core/sidebar'
-import {Navbar} from './core/navbar'
+import { ErrorComponent } from './error/error.component';
 
 
 // Application wide providers
@@ -41,10 +36,7 @@ type StoreType = {
   bootstrap: [ App ],
   declarations: [
     App,
-    Core,
-    Dashboard,
-    Sidebar,
-    Navbar
+    ErrorComponent
   ],
   imports: [ // import Angular's modules
     BrowserModule,
