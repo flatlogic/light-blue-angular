@@ -3,31 +3,25 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import {Buttons} from './buttons'
-import {Dialogs} from './dialogs'
-import {Icons} from './icons'
-import {Tabs} from './tabs'
-import {Accordion} from './accordion'
+import {Stats} from './stats/stats.component'
+import {Charts} from './charts/charts.component'
+import {Realtime} from './realtime/realtime.component'
 
 console.log('`Detail` bundle loaded asynchronously');
 // async components must be named routes for WebpackAsyncRoute
 export const routes = [
-  {path: '', redirectTo: 'buttons', pathMatch: 'full'},
-  {path: 'buttons', component: Buttons},
-  {path: 'dialogs', component: Dialogs},
-  {path: 'icons', component: Icons},
-  {path: 'tabs', component: Tabs},
-  {path: 'accordion', component: Accordion},
+  {path: '', redirectTo: 'stats', pathMatch: 'full'},
+  {path: 'stats', component: Stats},
+  {path: 'charts', component: Charts},
+  {path: 'realtime', component: Realtime},
 ];
 
 @NgModule({
   declarations: [
     // Components / Directives/ Pipes
-    Buttons,
-    Dialogs,
-    Icons,
-    Tabs,
-    Accordion
+    Stats,
+    Charts,
+    Realtime
   ],
   imports: [
     CommonModule,

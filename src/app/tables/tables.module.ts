@@ -1,14 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import {RouterModule, Routes} from '@angular/router';
 
-import {Dynamic} from './dynamic'
-import {Static} from './static'
+import {Dynamic} from './dynamic/dynamic.component'
+import {Static} from './static/static.component'
 
 console.log('`Detail` bundle loaded asynchronously');
 // async components must be named routes for WebpackAsyncRoute
-export const routes = [
+export const routes : Routes = [
   {path: '', redirectTo: 'static', pathMatch: 'full'},
   {path: 'static', component: Static},
   {path: 'dynamic', component: Dynamic}

@@ -3,11 +3,11 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import {Account} from './account'
-import {Article} from './article'
-import {Elements} from './elements'
-import {Validation} from './validation'
-import {Wizard} from './wizard'
+import {Account} from './account/account.component'
+import {Article} from './article/article.component'
+import {Elements} from './elements/elements.component'
+import {Validation} from './validation/validation.component'
+import {Wizard} from './wizard/wizard.component'
 
 export const routes = [
   {path: '', redirectTo: 'account', pathMatch: 'full'},

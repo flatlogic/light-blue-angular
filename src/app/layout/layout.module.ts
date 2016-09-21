@@ -1,7 +1,7 @@
 import { NgModule }      from '@angular/core';
 import { CommonModule }  from '@angular/common';
 
-import { ROUTES }       from './layout.routes';
+import { ROUTES } from './layout.routes';
 
 import { Layout } from './layout.component';
 import { Sidebar } from './sidebar/sidebar.component';
