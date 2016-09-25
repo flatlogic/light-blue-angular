@@ -3,6 +3,10 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
+import { SelectComponent } from 'ng2-select';
+import { OffClickDirective } from 'ng2-select/components/select/off-click';
+import { HighlightPipe } from 'ng2-select/components/select/select-pipes';
+
 import {Account} from './account/account.component'
 import {Article} from './article/article.component'
 import {Elements} from './elements/elements.component'
@@ -25,7 +29,10 @@ export const routes = [
     Article,
     Elements,
     Validation,
-    Wizard
+    Wizard,
+    SelectComponent,
+    OffClickDirective,
+    HighlightPipe
   ],
   imports: [
     CommonModule,
