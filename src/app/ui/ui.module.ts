@@ -7,6 +7,7 @@ import {Buttons} from './buttons/buttons.component'
 import {Dialogs} from './dialogs/dialogs.component'
 import {Icons} from './icons/icons.component'
 import {Tabs} from './tabs/tabs.component'
+import {Notifications} from './notifications/notifications.component'
 import {Accordion} from './accordion/accordion.component'
 
 console.log('`Detail` bundle loaded asynchronously');
@@ -17,6 +18,7 @@ export const routes = [
   {path: 'dialogs', component: Dialogs},
   {path: 'icons', component: Icons},
   {path: 'tabs', component: Tabs},
+  {path: 'notifications', component: Notifications},
   {path: 'accordion', component: Accordion},
 ];
 
@@ -27,7 +29,8 @@ export const routes = [
     Dialogs,
     Icons,
     Tabs,
-    Accordion
+    Accordion,
+    Notifications
   ],
   imports: [
     CommonModule,
