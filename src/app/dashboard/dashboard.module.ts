@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { Dashboard } from './dashboard.component';
+import { Chat } from './chat/chat.component';
 
 export const routes = [
   { path: '', component: Dashboard, pathMatch: 'full' }
@@ -11,7 +12,8 @@ export const routes = [
 
 @NgModule({
   declarations: [
-    Dashboard
+    Dashboard,
+    Chat
   ],
   imports: [
     CommonModule,

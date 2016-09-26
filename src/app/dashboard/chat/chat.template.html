@@ -1,0 +1,30 @@
+<div class="chat">
+  <div id="chat-messages" class="chat-messages" slimScroll
+       width="5px"
+       opacity="0.4"
+       border-radius="3px">
+    <div *ngFor="let message of _messages" class="chat-message">
+      <div class="sender pull-left">
+        <div class="icon">
+          <img src={{message.image}} class="img-circle" alt="">
+        </div>
+        <div class="time">
+          {{message.time}}
+        </div>
+      </div>
+      <div class="chat-message-body">
+        <span class="arrow"></span>
+        <div class="sender"><a href="#">{{message.sender}}</a></div>
+        <div class="text">{{message.text}}</div>
+      </div>
+    </div>
+  </div>
+  <footer class="chat-footer row">
+    <div class="col-sm-9">
+      <input #message id="new-message" type="text" class="form-control" placeholder="Enter your message..">
+    </div>
+    <div class="col-sm-3">
+      <button (click)="addMessage(message.value)" type="button" id="new-message-btn" class="btn btn-danger btn-block">Send</button>
+    </div>
+  </footer>
+</div>
