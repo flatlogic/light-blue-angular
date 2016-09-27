@@ -608,7 +608,7 @@ $i: 1;
   }
 
   // Menu position and menu carets
-  .navbar .nav > li > .dropdown-menu {
+  .navbar-nav > li > .dropdown-menu {
     &:after {
       content: '';
       display: inline-block;
