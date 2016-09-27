@@ -47,6 +47,8 @@ $i: 1;
   @media (min-height: 940px) {
     position: fixed;
   }
+  margin-top: 9px;
+  margin-bottom: 9px;
   left: 65px;
   top: 17px;
   z-index: 1;
@@ -593,6 +595,15 @@ $i: 1;
   }
 
   .navbar-nav{
+    .nav-item + .nav-item{
+      margin-left: 0px;
+    }
+
+    .dropdown-menu {
+      .see-all, .details, .sender{
+        color: #fff;
+      }
+    }
     margin: 0;
   }
 
@@ -652,7 +663,7 @@ $i: 1;
     background: transparentize($text-transparent, .1);
     border: none;
     font-size: $font-size-small;
-    line-height: $line-height-computed + 1;
+    line-height: 20px !important;
     margin-bottom: 0;
     padding: 3px 9px;
     color: $widget-color;

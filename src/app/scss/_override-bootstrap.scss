@@ -229,6 +229,15 @@ textarea,
 /*        Dropdowns        */
 /***************************/
 
+button.dropdown-toggle{
+  &:after {
+    content: none;
+  }
+  i {
+    margin-left: 3px;
+  }
+}
+
 .dropdown-menu{
   border-radius: $border-radius-lg;
 }
@@ -769,6 +778,13 @@ textarea,
 
 .label-inverse{
   @include tag-variant($tag-default-bg);
+}
+
+.help-block{
+  margin-top: 5px;
+  font-size: $font-size-smaller;
+  color: $text-muted;
+  display: block;
 }
 
 /***************************/
