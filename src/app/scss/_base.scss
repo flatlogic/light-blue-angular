@@ -503,9 +503,9 @@ $i: 1;
     border: none;
   }
 
-  .navbar .nav li.dropdown.open > .dropdown-toggle,
-  .navbar .nav li.dropdown.active > .dropdown-toggle,
-  .navbar .nav li.dropdown.open.active > .dropdown-toggle {
+  .navbar-nav.nav li.dropdown.open > .dropdown-toggle,
+  .navbar-nav.nav li.dropdown.active > .dropdown-toggle,
+  .navbar-nav.nav li.dropdown.open.active > .dropdown-toggle {
     background-color: transparent;
     color: $text-transparent;
     &:hover, &:focus{
@@ -513,11 +513,11 @@ $i: 1;
     }
   }
 
-  .navbar .nav > li > a:focus,
-  .navbar .nav > li > a:hover,
-  .navbar .nav > .active > a,
-  .navbar .nav > .active > a:hover,
-  .navbar .nav > .active > a:focus{
+  .navbar-nav.nav > li > a:focus,
+  .navbar-nav.nav > li > a:hover,
+  .navbar-nav.nav > .active > a,
+  .navbar-nav.nav > .active > a:hover,
+  .navbar-nav.nav > .active > a:focus{
     color: $white;
   }
 
@@ -622,8 +622,8 @@ $i: 1;
   }
 
   // Right aligned menus need alt position
-  .navbar .pull-right > li > .dropdown-menu,
-  .navbar .nav > li > .dropdown-menu.pull-right {
+  .navbar-nav.pull-right > li > .dropdown-menu,
+  .navbar-nav.nav > li > .dropdown-menu.pull-right {
     left: auto;
     right: 0;
     &:before {
@@ -791,29 +791,24 @@ $i: 1;
 /**          SETTINGS             **/
 /**********************************/
 
-.settings-popover{
+.navbar-nav.nav > li > .settings{
   background: $header-dropdown-bg;
-  @include box-shadow($header-dropdown-shadow);
   border-radius: $border-radius-base !important;
   color: $header-dropdown-primary-color;
   width: 122px;
   font-size: $font-size-small;
   text-align: center;
+  min-width: auto;
 
-  //override js-set variables
   left: -40px !important;
-  top: 30px !important;
+  margin-top: 4px;
 
-  &.bottom .arrow{
-    border-bottom-color: transparent;
-    top: -13px;
-    margin-left: 0;
-    left: 44% !important;
-    right: 4px;
-    &:after{
-      border-bottom-color: $popover-bg;
-      border-width: 6px;
-    }
+  &:after{
+    right: 56px !important;
+  }
+
+  .settings-content{
+    padding: 9px 14px;
   }
 
   .btn-group{
@@ -821,6 +816,8 @@ $i: 1;
   }
 
   .btn-sm{
+    line-height: 1.5;
+    font-size: 12px;
     padding: 0 7px;
   }
 }

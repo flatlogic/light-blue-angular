@@ -65,7 +65,7 @@
         <li role="presentation">
           <a href="#" class="dropdown-item support-ticket ">
             <div class="picture">
-              <span class="label label-important"><i class="fa fa-bell-o"></i></span>
+              <span class="tag tag-important"><i class="fa fa-bell-o"></i></span>
             </div>
             <div class="details">
               Check out this awesome ticket
@@ -75,7 +75,7 @@
         <li role="presentation">
           <a href="#" class="dropdown-item support-ticket">
             <div class="picture">
-              <span class="label label-warning"><i class="fa fa-question-circle"></i></span>
+              <span class="tag tag-warning"><i class="fa fa-question-circle"></i></span>
             </div>
             <div class="details">
               "What is the best way to get ...
@@ -85,7 +85,7 @@
         <li role="presentation">
           <a href="#" class="dropdown-item support-ticket">
             <div class="picture">
-              <span class="label label-success"><i class="fa fa-tag"></i></span>
+              <span class="tag tag-success"><i class="fa fa-tag"></i></span>
             </div>
             <div class="details">
               This is just a simple notification
@@ -95,7 +95,7 @@
         <li role="presentation">
           <a href="#" class="dropdown-item support-ticket">
             <div class="picture">
-              <span class="label label-info"><i class="fa fa-info-circle"></i></span>
+              <span class="tag tag-info"><i class="fa fa-info-circle"></i></span>
             </div>
             <div class="details">
               12 new orders has arrived today
@@ -105,7 +105,7 @@
         <li role="presentation">
           <a href="#" class="dropdown-item support-ticket">
             <div class="picture">
-              <span class="label label-important"><i class="fa fa-plus"></i></span>
+              <span class="tag tag-important"><i class="fa fa-plus"></i></span>
             </div>
             <div class="details">
               One more thing that just happened
@@ -127,21 +127,23 @@
          data-toggle="dropdown">
         <i class="glyphicon glyphicon-cog"></i>
       </a>
-      <div class="dropdown-menu">
-        <div class="setting clearfix">
-          <div>Sidebar on the</div>
-          <div id="sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
-            <!--<% onRight = sidebar == 'right'%>-->
-            <button type="button" data-value="left" class="btn btn-sm btn-default <%= onRight? '' : 'active' %>">Left</button>
-            <button type="button" data-value="right" class="btn btn-sm btn-default <%= onRight? 'active' : '' %>">Right</button>
+      <div class="dropdown-menu settings">
+        <div class="settings-content">
+          <div class="setting clearfix">
+            <div>Sidebar on the</div>
+            <div id="sidebar-toggle" class="pull-left btn-group">
+              <!--nRight = sidebar == 'right'-->
+              <button type="button" btnRadio="Left"  [(ngModel)]="radioModel" (click)="sidebarPosition('Left')"  class="btn btn-sm btn-secondary">Left</button>
+              <button type="button" btnRadio="Right" [(ngModel)]="radioModel" (click)="sidebarPosition('Right')"  class="btn btn-sm btn-secondary">Right</button>
+            </div>
           </div>
-        </div>
-        <div class="setting clearfix">
-          <div>Sidebar</div>
-          <div id="display-sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
-            <!--<% display = displaySidebar%>-->
-            <button type="button" data-value="true" class="btn btn-sm btn-default <%= display? 'active' : '' %>">Show</button>
-            <button type="button" data-value="false" class="btn btn-sm btn-default <%= display? '' : 'active' %>">Hide</button>
+          <div class="setting clearfix">
+            <div>Sidebar</div>
+            <div id="display-sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
+              <!--display = displaySidebar-->
+              <button type="button" btnRadio="Left"  [(ngModel)]="display" (click)="sidebarDisplay('Show')" class="btn btn-sm btn-secondary">Show</button>
+              <button type="button" btnRadio="Right" [(ngModel)]="display" (click)="sidebarDisplay('Hide')" class="btn btn-sm btn-secondary">Hide</button>
+            </div>
           </div>
         </div>
       </div>
