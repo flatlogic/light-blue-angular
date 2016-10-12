@@ -24,7 +24,7 @@
   margin: 20px;
   font-size: 80px;
   font-weight: $font-weight-normal;
-  color: $gray-dark;
+  color: $white;
   @include media-breakpoint-up(md){
     font-size: 180px;
   }
@@ -32,20 +32,21 @@
 
 .error-info{
   font-size: 20px;
-  color: $gray-dark;
+  color: $white-dark;
 }
 
 .error-help{
   font-size: 14px;
+  color: $white-dark;
 }
 
-.error-page .page-footer {
+.page-footer {
   position: absolute;
   bottom: 30px;
   left: 0;
   right: 0;
   width: 100%;
   font-size: $font-size-mini;
-  color: $text-muted;
+  color: $white;
   text-align: center;
 }
