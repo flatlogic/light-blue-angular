@@ -9,8 +9,6 @@ export const ROUTES: Routes = [{
 }, {
   path: 'login', loadChildren: () => System.import('./login/login.module')
 }, {
-  path: 'landing', loadChildren: () => System.import('./landing/landing.module')
-}, {
   path: 'error', component: ErrorComponent
 }, {
   path: '**',    component: ErrorComponent
