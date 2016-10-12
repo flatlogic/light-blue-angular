@@ -387,6 +387,10 @@ $i: 1;
     background: none;
     color: $widget-header-color;
 
+    + .widget-body{
+      margin-top: $widget-padding-vertical;
+    }
+
     h1,h2,h3,h4,h5{
       margin: 0;
       line-height: 20px;
@@ -400,7 +404,8 @@ $i: 1;
     }
 
     h4{
-      font-size: $font-size-larger;
+      font-weight: 300;
+      font-size: 1.5rem;
     }
   }
 
@@ -492,6 +497,7 @@ $i: 1;
 .page-header{
 
   border: none;
+  height: 40px;
   margin: 15px 2.5641% 0;
   padding: 0;
   position: relative;
@@ -1317,6 +1323,7 @@ $i: 1;
 
 .widget-container{
   min-height: 30px;
+  color: $white;
 
   .widget:not(.fullscreened) > header{
     cursor: move;

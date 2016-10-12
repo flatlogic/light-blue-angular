@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 
 import { Dashboard } from './dashboard.component';
 import { Chat } from './chat/chat.component';
-import { SlimScroll} from 'ng2-slimscroll'
+import {Widget} from '../layout/widget/widget.directive';
 
 export const routes = [
   { path: '', component: Dashboard, pathMatch: 'full' }
@@ -15,7 +15,7 @@ export const routes = [
   declarations: [
     Dashboard,
     Chat,
-    SlimScroll
+    Widget
   ],
   imports: [
     CommonModule,
