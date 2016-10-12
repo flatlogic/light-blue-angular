@@ -4,5 +4,7 @@
 <nav sidebar id="sidebar" class="sidebar nav-collapse collapse"></nav>
 <div class="wrap">
   <header navbar (changeSidebarPosition)="sidebarPosition($event)" (changeSidebarDisplay)="sidebarDisplay($event)" class="page-header"></header>
-  <router-outlet></router-outlet>
+  <main id="content" class="content view-animate fade-up" role="main">
+    <router-outlet></router-outlet>
+  </main>
 </div>
