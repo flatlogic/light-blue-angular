@@ -29,7 +29,7 @@
   }
 
   .input-group-addon{
-    padding: 8px 7px;
+    padding: 6px 7px;
     i{
       &, &:before, &:after{
         width: 20px;
@@ -119,16 +119,6 @@
   }
 }
 
-.widget-login{
-  padding: 30px;
-
-  > header{
-    h1,h2,h3,h4,h5,h6{
-      font-weight: $font-weight-normal;
-    }
-  }
-}
-
 .widget-login-info{
   font-size: $font-size-mini;
   color: #888;
@@ -137,18 +127,14 @@
 }
 
 .login-form{
-  .form-control{
-    font-size: $font-size-mini;
-    border: none;
-    background-color: $gray-lighter;
-    &:focus{
-      background-color: $gray-semi-lighter;
-    }
+  .fa {
+    font-size: 13px;
   }
 }
 
 header h4{
   font-size: 14px !important;
+  font-weight: 600 !important;
 }
 
 .btn {
