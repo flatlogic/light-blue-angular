@@ -586,6 +586,8 @@ $i: 1;
     color: $widget-color;
     border: none;
     background: $header-search-query-bg-image 5px 5px no-repeat transparentize($text-transparent, .1);
+    padding-top: 7px;
+    padding-bottom: 7px;
     padding-left: 26px;
     @include placeholder($header-search-query-placeholder-color);
     @include transition(width .2s);
@@ -642,7 +644,7 @@ $i: 1;
     }
     &:after {
       left: auto;
-      right: 13px;
+      right: 15px;
     }
     .dropdown-menu {
       left: auto;
