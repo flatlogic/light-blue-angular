@@ -8,8 +8,8 @@ export class Navbar {
   @Output() changeSidebarPosition = new EventEmitter();
   @Output() changeSidebarDisplay = new EventEmitter();
 
-  display:string = 'Left';
-  radioModel:string = 'Left';
+  display: string = 'Left';
+  radioModel: string = 'Left';
 
   sidebarPosition(position): void {
     this.changeSidebarPosition.emit(position);

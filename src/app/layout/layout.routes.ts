@@ -1,5 +1,5 @@
 import { Routes, RouterModule }  from '@angular/router';
-import { Layout } from "./layout.component";
+import { Layout } from './layout.component';
 // noinspection TypeScriptValidateTypes
 const routes: Routes = [
   { path: '', component: Layout, children: [
