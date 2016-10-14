@@ -7,6 +7,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 export class Navbar {
   @Output() changeSidebarPosition = new EventEmitter();
   @Output() changeSidebarDisplay = new EventEmitter();
+  @Output() openSidebar = new EventEmitter();
 
   display: string = 'Left';
   radioModel: string = 'Left';
@@ -17,5 +18,9 @@ export class Navbar {
 
   sidebarDisplay(position): void {
     this.changeSidebarDisplay.emit(position);
+  }
+
+  sidebarOpen(): void {
+    this.openSidebar.emit();
   }
 }

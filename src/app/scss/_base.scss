@@ -47,6 +47,16 @@ $i: 1;
   @media (min-height: 940px) {
     position: fixed;
   }
+
+  @media (max-width: 767px) {
+    display: block;
+    left: 1.6% !important;
+    right: auto !important;
+    padding-right: 5px;
+    width: 40px;
+    top: 4px
+  }
+
   margin-top: 9px;
   margin-bottom: 9px;
   left: 65px;
@@ -236,8 +246,7 @@ $i: 1;
       margin-top: $line-height-computed/2;
     }
   }
-  @include media-breakpoint-down(xs) {
-  //@media (max-width: $screen-xs-max) {
+  @media (max-width: 767px) {
     display: none;
   }
 }
@@ -254,8 +263,7 @@ $i: 1;
       color: rgba($sidebar-color, .9);
     }
   }
-  @include media-breakpoint-down(xs) {
-  //@media (max-width: $screen-xs-max) {
+  @media (max-width: 767px) {
     display: none;
   }
 
@@ -278,8 +286,7 @@ $i: 1;
       font-size: 9px;
     }
   }
-  @include media-breakpoint-down(xs) {
-  //@media (max-width: $screen-xs-max) {
+  @media (max-width: 767px) {
     display: none;
   }
 }
@@ -312,11 +319,34 @@ $i: 1;
   }
 }
 
+.sidebar.nav-collapse, .sidebar.nav-collapse.collapse {
+  @media (max-width: 767px) {
+    overflow: hidden;
+    height: 0;
+  }
+}
+
+.sidebar, .sidebar-on-right .sidebar {
+  @media (max-width: 767px) {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 90px 5%;
+    width: 90%;
+    padding: 0;
+  }
+}
+
+.sidebar.nav-collapse.collapse.in {
+  @media (max-width: 767px){
+    height: auto;
+  }
+}
+
 /***********************************/
 /**          CONTENT              **/
 /**********************************/
-
-
 
 /*main content*/
 .wrap{
@@ -333,6 +363,13 @@ $i: 1;
 
   &.hiding{
     opacity: 0;
+  }
+}
+
+.sidebar+.wrap{
+  @media (max-width: 767px) {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 

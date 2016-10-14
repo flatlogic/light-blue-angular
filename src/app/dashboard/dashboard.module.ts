@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { Dashboard } from './dashboard.component';
-import { Chat } from './chat/chat.component';
 import { Widget } from '../layout/widget/widget.directive';
 
 export const routes = [
@@ -14,7 +13,6 @@ export const routes = [
 @NgModule({
   declarations: [
     Dashboard,
-    Chat,
     Widget
   ],
   imports: [
