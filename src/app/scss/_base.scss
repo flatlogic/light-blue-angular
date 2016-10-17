@@ -364,6 +364,10 @@ $i: 1;
   &.hiding{
     opacity: 0;
   }
+
+  @media (min-width: 767px) {
+    margin-top: 0 !important;
+  }
 }
 
 .sidebar+.wrap{
@@ -723,6 +727,10 @@ $i: 1;
       color: $widget-color;
       font-weight: bold;
     }
+  }
+
+  @media (max-width: 767px) {
+    margin-left: 35px;
   }
 }
 
