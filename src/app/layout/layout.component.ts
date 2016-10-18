@@ -6,7 +6,7 @@ import { Component, ViewEncapsulation, ElementRef, Renderer } from '@angular/cor
   templateUrl: './layout.template.html'
 })
 export class Layout {
-  sidebarStaate: boolean = true;
+  sidebarState: boolean = true;
 
   constructor(private el: ElementRef, private renderer: Renderer) {}
 
@@ -22,12 +22,12 @@ export class Layout {
 
   openSidebar(): void {
 
-    if(this.sidebarStaate) {
+    if(this.sidebarState) {
       this.renderer.setElementStyle(this.el.nativeElement.querySelector('.content'), 'margin-top', '100px');
     } else {
       this.renderer.setElementStyle(this.el.nativeElement.querySelector('.content'), 'margin-top', '0px');
     }
 
-    this.sidebarStaate = !this.sidebarStaate;
+    this.sidebarState = !this.sidebarState;
   }
 }
