@@ -1,8 +1,5 @@
 <div class="chat">
-  <div id="chat-messages" class="chat-messages" slimScroll
-       width="5px"
-       opacity="0.4"
-       border-radius="3px">
+  <div class="chat-messages">
     <div *ngFor="let message of _messages" class="chat-message">
       <div class="sender pull-left">
         <div class="icon">
@@ -21,10 +18,10 @@
   </div>
   <footer class="chat-footer row">
     <div class="col-sm-9">
-      <input #message id="new-message" type="text" class="form-control" placeholder="Enter your message..">
+      <input #message (keyup)="doneTyping($event)" id="new-message" type="text" class="form-control" placeholder="Enter your message..">
     </div>
     <div class="col-sm-3">
-      <button (click)="addMessage(message.value)" type="button" id="new-message-btn" class="btn btn-danger btn-block">Send</button>
+      <button (click)="addMessage(message)" type="button" id="new-message-btn" class="btn btn-danger btn-block">Send</button>
     </div>
   </footer>
 </div>
