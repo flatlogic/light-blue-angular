@@ -7,7 +7,7 @@ import 'jquery-slimscroll';
 
 import { Dashboard } from './dashboard.component';
 import { Chat } from './chat/chat.component';
-import { SlimScroll} from 'ng2-slimscroll'
+import {Widget} from '../layout/widget/widget.directive';
 
 import { Nvd3ChartModule } from './nvd3/nvd3.module';
 
@@ -19,7 +19,7 @@ export const routes = [
   declarations: [
     Dashboard,
     Chat,
-    SlimScroll
+    Widget
   ],
   imports: [
     CommonModule,

@@ -5,7 +5,7 @@ declare var d3: any;
 declare var nv: any;
 
 @Component({
-  selector: '[dashboard]',
+  selector: 'dashboard',
   templateUrl: './dashboard.template.html',
   styleUrls: [
     './dashboard.style.scss'
