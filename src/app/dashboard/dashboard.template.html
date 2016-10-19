@@ -6,12 +6,12 @@
     <div class="col-xl-8">
       <section class="widget">
         <header>
-          <h4>
+          <h5>
             Visits
             <small>
               Based on a three months data
             </small>
-          </h4>
+          </h5>
           <div class="widget-controls">
             <a title="Options" href="#"><i class="glyphicon glyphicon-cog"></i></a>
             <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
@@ -20,7 +20,7 @@
           </div>
         </header>
         <div class="body no-margin">
-          <div id="visits-chart" class="chart visits-chart">
+          <div nvd3-chart [chart]="nvd31Chart" [datum]="nvd31Data">
             <svg></svg>
           </div>
           <div class="visits-info well well-sm">
@@ -47,12 +47,12 @@
       </section>
       <section class="widget">
         <header>
-          <h4>
+          <h5>
             Traffic Sources
             <small>
               One month tracking
             </small>
-          </h4>
+          </h5>
           <div class="widget-controls">
             <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-plus"></i></a>
             <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-minus"></i></a>
@@ -73,7 +73,7 @@
             </thead>
             <tbody>
             <tr>
-              <td><span class="label label-important">Direct</span></td>
+              <td><span class="tag tag-important">Direct</span></td>
               <td>713</td>
               <td><strong class="color-green">+53</strong></td>
               <td class="hidden-sm">+12</td>
@@ -83,7 +83,7 @@
               </td>
             </tr>
             <tr>
-              <td><span class="label label-warning">Refer</span></td>
+              <td><span class="tag tag-warning">Refer</span></td>
               <td>562</td>
               <td><strong>+84</strong></td>
               <td class="hidden-sm">+64</td>
@@ -93,7 +93,7 @@
               </td>
             </tr>
             <tr>
-              <td><span class="label label-success">Social</span></td>
+              <td><span class="tag tag-success">Social</span></td>
               <td>148</td>
               <td><strong class="color-red">-12</strong></td>
               <td class="hidden-sm">+3</td>
@@ -103,7 +103,7 @@
               </td>
             </tr>
             <tr>
-              <td><span class="label label-info">Search</span></td>
+              <td><span class="tag tag-info">Search</span></td>
               <td>653</td>
               <td><strong class="color-green">+23</strong></td>
               <td class="hidden-sm">+43</td>
@@ -113,7 +113,7 @@
               </td>
             </tr>
             <tr>
-              <td><span class="label label-inverse">Internal</span></td>
+              <td><span class="tag tag-default">Internal</span></td>
               <td>976</td>
               <td><strong>+101</strong></td>
               <td class="hidden-sm">-7</td>
@@ -128,33 +128,28 @@
       </section>
       <section class="widget large">
         <header>
-          <h4>
+          <h5>
             Chat
-          </h4>
+          </h5>
 
           <div class="widget-controls">
             <a title="Options" href="#"><i class="glyphicon glyphicon-cog"></i></a>
             <a data-widgster="close" title="Close" href="#"><i class="glyphicon glyphicon-remove"></i></a>
           </div>
         </header>
-        <div class="body">
-          <div chat [messages]="messages" class="body"></div>
-        </div>
+        <div chat [messages]="messages" class="body"></div>
       </section>
     </div>
     <div class="col-xl-4">
-      <section class="widget large" slimScroll
-               width="5px"
-               opacity="0.4"
-               border-radius="3px">
+      <section class="widget large">
         <header>
-          <h4>
+          <h5>
             Feed
-            <span class="label label-success">412</span>
-          </h4>
+            <span class="tag tag-success">412</span>
+          </h5>
 
           <div class="actions">
-            <button class="btn btn-default btn-xs">Show All <i class="fa fa-arrow-down"></i></button>
+            <button class="btn btn-transparent btn-xs">Show All <i class="fa fa-arrow-down"></i></button>
           </div>
         </header>
         <div class="body">
@@ -269,7 +264,7 @@
         </header>
         <div class="body tab-content">
           <div id="stats" class="tab-pane active clearfix">
-            <h5 class="tab-header"><span class="label label-primary"><i class="fa fa-facebook"></i></span> Last
+            <h5 class="tab-header"><span class="tag tag-primary"><i class="fa fa-facebook"></i></span> Last
               logged-in users</h5>
             <ul class="news-list">
               <li>
@@ -473,9 +468,9 @@
       </section>
       <section class="widget">
         <header>
-          <h4>
+          <h5>
             Server Overview
-          </h4>
+          </h5>
 
           <div class="actions">
             <small class="text-muted pull-right">2 days ago</small>

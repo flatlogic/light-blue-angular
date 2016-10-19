@@ -296,9 +296,12 @@ module.exports = function(options) {
         jQuery: 'jquery',
         $: 'jquery',
         jquery: 'jquery',
-        "Tether": 'tether',
-        "window.Tether": "tether",
-        Util: 'util'
+        'window.jQuery': 'jquery',
+        'Tether': 'tether',
+        'window.Tether': 'tether',
+        Util: 'util',
+        d3: 'd3',
+        nv: 'nvd3'
       })
     ],
 

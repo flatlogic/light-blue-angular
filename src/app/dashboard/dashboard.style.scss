@@ -1,0 +1,8 @@
+@import "../../../node_modules/nvd3/build/nv.d3";
+@import "../scss/variables";
+@import "../../../node_modules/bootstrap/scss/_variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+
+.visits-info .row div {
+  padding: 0px;
+}
