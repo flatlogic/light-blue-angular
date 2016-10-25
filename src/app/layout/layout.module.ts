@@ -7,7 +7,7 @@ import { ROUTES } from './layout.routes';
 
 import { Layout } from './layout.component';
 import { Sidebar } from './sidebar/sidebar.component';
-import { Navbar } from "./navbar/navbar.component";
+import { Navbar } from './navbar/navbar.component';
 
 @NgModule({
   imports: [

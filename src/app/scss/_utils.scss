@@ -227,6 +227,7 @@ $z-index-variants: (more: 1, less: -1);
 @include bg-variant('.bg-gray-dark', $gray-dark);
 @include bg-variant('.bg-black', $black);
 @include bg-variant('.bg-gray-light', $gray-light);
+@include bg-variant('.bg-blue-light', rgba(0,0,0,0.15));
 @include bg-variant('.bg-gray-lighter', $gray-lighter);
 @include bg-variant('.bg-transparent', rgba(0,0,0,0));
 @include bg-variant('.bg-white', $white);

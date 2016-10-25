@@ -885,6 +885,7 @@ button.dropdown-toggle{
 
 .progress{
   background: rgba(black, .15);
+  overflow: hidden;
 }
 
 .progress-sm{
@@ -897,6 +898,9 @@ button.dropdown-toggle{
   margin-bottom: $line-height-computed/2;
 }
 
+.progress-bar {
+  border-radius: 0.25rem;
+}
 /***************************/
 /*          Panels         */
 /***************************/

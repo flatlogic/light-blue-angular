@@ -119,7 +119,7 @@ $widget-padding-vertical: 12px;
 $widget-padding-horizontal: 17px;
 $widget-padding: $widget-padding-vertical $widget-padding-horizontal;
 
-
+$sidebar-bg-color: #242424 !default;
 $sidebar-color:          $white;
 $sidebar-item-active-bg: rgba($black,.07);
 $sidebar-item-sub-active-bg: darken($sidebar-item-active-bg, 15%);

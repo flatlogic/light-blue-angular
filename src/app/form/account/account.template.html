@@ -1,121 +1,121 @@
-<div class="content container">
-  <h2 class="page-title">Account Demo
-    <small>Out of the box form</small>
-  </h2>
-  <div class="row">
-    <div class="col-lg-7">
-      <section class="widget">
-        <header>
-          <h4><i class="fa fa-user"></i> Account Profile
-            <small>Create new or edit existing user</small>
-          </h4>
-        </header>
-        <div class="body">
-          <form id="user-form" class="form-horizontal form-label-left"
-                novalidate="novalidate"
-                method="post"
-                data-parsley-priority-enabled="false"
-                data-parsley-excluded="input[name=gender]">
-            <div class="row">
-              <div class="col-md-4">
-                <div class="text-align-center">
-                  <img class="img-circle" src="../../../assets/img/3.png" alt="64x64" style="height: 112px;">
-                </div>
-              </div>
-              <div class="col-md-6">
-                <h3 class="mt-md mb-xs">Maryna Gils</h3>
-                <address>
-                  <strong>Development manager</strong> at <strong><a href="#">Allexample Inc.</a></strong><br>
-                  <abbr title="Work email">e-mail:</abbr> <a href="mailto:#">maryna.gils@example.com</a><br>
-                  <abbr title="Work Phone">phone:</abbr> (123) 456-7890
-                </address>
+<h2 class="page-title">Account Demo
+  <small>Out of the box form</small>
+</h2>
+<div class="row">
+  <div class="col-lg-7">
+    <section class="widget">
+      <header>
+        <h4><i class="fa fa-user"></i> Account Profile
+          <small>Create new or edit existing user</small>
+        </h4>
+      </header>
+      <div class="body">
+        <form id="user-form" class="form-horizontal form-label-left"
+              novalidate="novalidate"
+              method="post"
+              data-parsley-priority-enabled="false"
+              data-parsley-excluded="input[name=gender]">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="text-align-center">
+                <img class="img-circle" src="../../../assets/img/3.png" alt="64x64" style="height: 112px;">
               </div>
             </div>
-            <fieldset class="mt-md">
-              <legend>Account Edit Form
-                <small>Some explanation text</small>
-              </legend>
-            </fieldset>
-            <fieldset>
-              <legend class="section">Personal Info</legend>
-              <div class="form-group row">
-                <label class="form-control-label col-md-4" for="prefix">Prefix</label>
+            <div class="col-md-6">
+              <h3 class="mt-md mb-xs">Maryna Gils</h3>
+              <address>
+                <strong>Development manager</strong> at <strong><a href="#">Allexample Inc.</a></strong><br>
+                <abbr title="Work email">e-mail:</abbr> <a href="mailto:#">maryna.gils@example.com</a><br>
+                <abbr title="Work Phone">phone:</abbr> (123) 456-7890
+              </address>
+            </div>
+          </div>
+          <fieldset class="mt-md">
+            <legend>Account Edit Form
+              <small>Some explanation text</small>
+            </legend>
+          </fieldset>
+          <fieldset>
+            <legend class="section">Personal Info</legend>
+            <div class="form-group row">
+              <label class="form-control-label col-md-4" for="prefix">Prefix</label>
 
-                <div class="col-md-4">
-                  <input type="text" id="prefix" name="prefix" class="form-control input-transparent">
-                </div>
+              <div class="col-md-4">
+                <input type="text" id="prefix" name="prefix" class="form-control input-transparent">
               </div>
-              <div class="form-group row">
-                <label class="form-control-label col-md-4" for="first-name">First Name
-                  <span class="required">*</span>
-                </label>
+            </div>
+            <div class="form-group row">
+              <label class="form-control-label col-md-4" for="first-name">First Name
+                <span class="required">*</span>
+              </label>
 
-                <div class="col-md-6">
+              <div class="col-md-6">
                   <input type="text" id="first-name" name="first-name" required="required" class="form-control input-transparent">
-                </div>
               </div>
-              <div class="form-group row">
-                <label class="form-control-label col-md-4" for="last-name">Last Name <span
-                  class="required">*</span></label>
+            </div>
+            <div class="form-group row">
+              <label class="form-control-label col-md-4" for="last-name">Last Name <span
+                class="required">*</span></label>
 
-                <div class="col-md-6"><input type="text" id="last-name" name="last-name" required="required"
-                                             class="form-control input-transparent"></div>
-              </div>
-              <div class="form-group row">
-                <label for="middle-name" class="form-control-label col-md-4">Middle Name / Initial</label>
+              <div class="col-md-6"><input type="text" id="last-name" name="last-name" required="required"
+                                           class="form-control input-transparent"></div>
+            </div>
+            <div class="form-group row">
+              <label for="middle-name" class="form-control-label col-md-4">Middle Name / Initial</label>
 
                 <div class="col-md-6"><input id="middle-name" class="form-control input-transparent" type="text" name="middle-name"
-                                             value=""></div>
-              </div>
-              <div class="form-group row">
-                <label class="form-control-label col-md-4">Gender</label>
+                                           value=""></div>
+            </div>
+            <div class="form-group row">
+              <label class="form-control-label col-md-4">Gender</label>
 
-                <div class="col-md-6">
-                  <div id="gender" class="btn-group" data-toggle="buttons">
-                    <label class="btn btn-secondary" data-toggle-class="btn-primary"
-                           data-toggle-passive-class="btn-default">
-                      <input type="radio" name="gender" value="male"> &nbsp; Male &nbsp;
-                    </label>
-                    <label class="btn btn-primary active" data-toggle-class="btn-primary"
-                           data-toggle-passive-class="btn-secondary">
-                      <input type="radio" name="gender" value="female" checked> Female
-                    </label>
-                  </div>
+              <div class="col-md-6">
+                <div id="gender" class="btn-group" data-toggle="buttons">
+                  <label class="btn btn-secondary" data-toggle-class="btn-primary"
+                         data-toggle-passive-class="btn-default">
+                    <input type="radio" name="gender" value="male"> &nbsp; Male &nbsp;
+                  </label>
+                  <label class="btn btn-primary active" data-toggle-class="btn-primary"
+                         data-toggle-passive-class="btn-secondary">
+                    <input type="radio" name="gender" value="female" checked> Female
+                  </label>
                 </div>
               </div>
-              <div class="form-group row">
-                <label for="date-of-birth" class="form-control-label col-md-4">Date Of Birth <span
-                  class="required">*</span></label>
+            </div>
+            <div class="form-group row">
+              <label for="date-of-birth" class="form-control-label col-md-4">Date Of Birth <span
+                class="required">*</span></label>
 
                 <div class="col-md-6"><input id="date-of-birth" class="date-picker form-control input-transparent" required="required"
-                                             type="text" name="date-of-birth" value=""></div>
-              </div>
-            </fieldset>
-            <fieldset>
-              <legend class="section">Contact Info</legend>
-              <div class="form-group row">
-                <label id="email-label" for="email" class="form-control-label col-md-4">Email <span class="required">*</span></label>
+                                           type="text" name="date-of-birth" value=""></div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend class="section">Contact Info</legend>
+            <div class="form-group row">
+              <label id="email-label" for="email" class="form-control-label col-md-4">Email <span
+                class="required">*</span></label>
 
-                <div class="col-xs-12 col-md-6">
-                  <div class="input-group">
-                    <input id="email" type="email"
-                           data-trigger="change" required="required"
-                           class="form-control input-transparent"
-                           name="email">
+              <div class="col-xs-12 col-md-6">
+                <div class="input-group">
+                  <input id="email" type="email"
+                         data-trigger="change" required="required"
+                         class="form-control input-transparent"
+                         name="email">
                     <span class="input-group-btn">
                       <button class="btn btn-success" type="button">Write an email</button>
                     </span>
-                  </div>
                 </div>
               </div>
-              <div class="form-group row">
-                <label for="phone" class="form-control-label col-md-4">Phone <span class="required">*</span></label>
+            </div>
+            <div class="form-group row">
+              <label for="phone" class="form-control-label col-md-4">Phone <span class="required">*</span></label>
 
-                <div class="col-xs-12 col-md-6">
-                  <div class="input-group">
-                    <input id="phone" class="form-control input-transparent  mask"
-                           required="required" type="text"
-                           name="phone" maxlength="28">
+              <div class="col-xs-12 col-md-6">
+                <div class="input-group">
+                  <input id="phone" class="form-control input-transparent  mask"
+                         required="required" type="text"
+                         name="phone" maxlength="28">
                     <span class="input-group-btn">
                       <select id="phone-type" class="selectpicker" data-style="btn-default" data-width="auto">
                         <option>Mobile</option>
@@ -123,16 +123,16 @@
                         <option>Work</option>
                       </select>
                     </span>
-                  </div>
                 </div>
               </div>
-              <div class="form-group row">
-                <label for="fax" class="form-control-label col-md-4">Fax</label>
+            </div>
+            <div class="form-group row">
+              <label for="fax" class="form-control-label col-md-4">Fax</label>
 
-                <div class="col-xs-12 col-md-6">
-                  <div class="input-group">
-                    <input id="fax" class="form-control input-transparent" type="text"
-                           name="phone" maxlength="28">
+              <div class="col-xs-12 col-md-6">
+                <div class="input-group">
+                  <input id="fax" class="form-control input-transparent" type="text"
+                         name="phone" maxlength="28">
                     <span class="input-group-btn">
                       <select id="fax-type" class="selectpicker" data-style="btn-default" data-width="auto">
                         <option>Mobile</option>
@@ -140,25 +140,25 @@
                         <option>Work</option>
                       </select>
                     </span>
-                  </div>
                 </div>
               </div>
-            </fieldset>
-            <fieldset>
-              <legend class="section">
-                Address
-                <button type="button" class="btn btn-transparent btn-xs pull-right">
-                  <i class="fa fa-plus"></i>
-                  Add Address
-                </button>
-              </legend>
-              <div class="form-group row">
-                <label for="address" class="form-control-label col-md-4">Address <span class="required">*</span></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend class="section">
+              Address
+              <button type="button" class="btn btn-transparent btn-xs pull-right">
+                <i class="fa fa-plus"></i>
+                Add Address
+              </button>
+            </legend>
+            <div class="form-group row">
+              <label for="address" class="form-control-label col-md-4">Address <span class="required">*</span></label>
 
-                <div class="col-xs-12 col-md-6">
-                  <div class="input-group">
-                    <input id="address" class="form-control input-transparent" type="text"
-                           name="address">
+              <div class="col-xs-12 col-md-6">
+                <div class="input-group">
+                  <input id="address" class="form-control input-transparent" type="text"
+                         name="address">
                     <span class="input-group-btn">
                       <select id="address-type" class="selectpicker" data-style="btn-default" data-width="auto">
                         <option>Mobile</option>
@@ -166,108 +166,107 @@
                         <option>Work</option>
                       </select>
                     </span>
-                  </div>
+                </div>
                   <input id="address-2" class="form-control input-transparent mt-md" type="text" value="" name="address-2">
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="city" class="form-control-label col-md-4">City <span class="required">*</span></label>
-
-                <div class="col-xs-12 col-md-6"><input id="city" class="form-control input-transparent" required="required" type="text"
-                                                       value="" name="city"></div>
-              </div>
-              <div class="form-group row">
-                <label class="form-control-label col-md-4">State <span class="required">*</span></label>
-                <div class="col-md-4">
-                  <ng-select [allowClear]="true"
-                             [items]="state"
-                             [disabled]="disabled"
-                             placeholder="Select state">
-                  </ng-select>
-                </div>
-              </div>
-              <div class="form-group row">
-                <label class="form-control-label col-md-4">Country <span class="required">*</span></label>
-                <div class="col-md-4">
-                  <ng-select [allowClear]="true"
-                             [items]="country"
-                             [disabled]="disabled"
-                             placeholder="Select country">
-                  </ng-select>
-                </div>
-              </div>
-            </fieldset>
-            <div class="form-actions">
-              <div class="row">
-                <div class="col-md-8 col-md-offset-4">
-                  <button type="submit" class="btn btn-primary">Validate &amp; Submit</button>
-                  <button type="button" class="btn btn-secondary">Cancel</button>
-                </div>
               </div>
             </div>
-          </form>
-        </div>
-      </section>
-    </div>
-    <div class="col-lg-5">
-      <section class="widget">
-        <header>
-          <h4><i class="fa fa-cogs"></i> Account settings</h4>
+            <div class="form-group row">
+              <label for="city" class="form-control-label col-md-4">City <span class="required">*</span></label>
 
-          <div class="actions">
-            <button class="btn btn-xs btn-inverse"><i class="fa fa-arrow-down"></i> View more</button>
+                <div class="col-xs-12 col-md-6"><input id="city" class="form-control input-transparent" required="required" type="text"
+                                                     value="" name="city"></div>
+            </div>
+            <div class="form-group row">
+              <label class="form-control-label col-md-4">State <span class="required">*</span></label>
+              <div class="col-md-4">
+                <ng-select [allowClear]="true"
+                           [items]="state"
+                           [disabled]="disabled"
+                           placeholder="Select state">
+                </ng-select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="form-control-label col-md-4">Country <span class="required">*</span></label>
+              <div class="col-md-4">
+                <ng-select [allowClear]="true"
+                           [items]="country"
+                           [disabled]="disabled"
+                           placeholder="Select country">
+                </ng-select>
+              </div>
+            </div>
+          </fieldset>
+          <div class="form-actions">
+            <div class="row">
+              <div class="col-md-8 col-md-offset-4">
+                <button type="submit" class="btn btn-primary">Validate &amp; Submit</button>
+                <button type="button" class="btn btn-secondary">Cancel</button>
+              </div>
+            </div>
           </div>
-        </header>
-        <div class="body">
-          <form method="post">
-            <fieldset>
-              <div class="form-group row">
-                <label for="exp">Account expiration date</label>
-                <input id="exp" class="form-control date-picker" type="text" name="exp" value="">
+        </form>
+      </div>
+    </section>
+  </div>
+  <div class="col-lg-5">
+    <section class="widget">
+      <header>
+        <h4><i class="fa fa-cogs"></i> Account settings</h4>
 
-                <p class="help-block">Bootstrap datepicker</p>
-              </div>
-              <div class="form-group row">
-                <label for="website">Associate to Website</label>
-                <select id="website" class="select2 select-block-level"
-                        data-width="off"
-                        data-minimum-results-for-search="10"
-                        name="website">
-                  <option selected="selected" value="0">Admin</option>
-                  <option value="1">Main Website</option>
-                </select>
-              </div>
-              <div class="form-group row">
-                <label for="created_by">Created By</label>
-
-                <input id="created_by" class="form-control" type="text" name="created_by"
-                       value="Admin" disabled="disabled">
-
-              </div>
-              <div class="form-group row">
-                <label for="groups">Account Group</label>
-                <select id="groups" name="groups" class="select2 select-block-level" multiple
-                        data-placeholder="Choose one or more groups for account"
-                        data-width="off">
-                  <option value="0">Subscriber</option>
-                  <option value="1">Retailer</option>
-                  <option value="2">Supplier</option>
-                  <option value="3">Manager</option>
-                </select>
-
-              </div>
-              <div class="form-group row">
-                <div class="checkbox abc-checkbox">
-                  <input type="checkbox" id="change-password" name="change-password">
-                  <label for="change-password">
-                    Request password change
-                  </label>
-                </div>
-              </div>
-            </fieldset>
-          </form>
+        <div class="actions">
+          <button class="btn btn-xs btn-inverse"><i class="fa fa-arrow-down"></i> View more</button>
         </div>
-      </section>
-    </div>
+      </header>
+      <div class="body">
+        <form method="post">
+          <fieldset>
+            <div class="form-group row">
+              <label for="exp">Account expiration date</label>
+              <input id="exp" class="form-control date-picker" type="text" name="exp" value="">
+
+              <p class="help-block">Bootstrap datepicker</p>
+            </div>
+            <div class="form-group row">
+              <label for="website">Associate to Website</label>
+              <select id="website" class="select2 select-block-level"
+                      data-width="off"
+                      data-minimum-results-for-search="10"
+                      name="website">
+                <option selected="selected" value="0">Admin</option>
+                <option value="1">Main Website</option>
+              </select>
+            </div>
+            <div class="form-group row">
+              <label for="created_by">Created By</label>
+
+              <input id="created_by" class="form-control" type="text" name="created_by"
+                     value="Admin" disabled="disabled">
+
+            </div>
+            <div class="form-group row">
+              <label for="groups">Account Group</label>
+              <select id="groups" name="groups" class="select2 select-block-level" multiple
+                      data-placeholder="Choose one or more groups for account"
+                      data-width="off">
+                <option value="0">Subscriber</option>
+                <option value="1">Retailer</option>
+                <option value="2">Supplier</option>
+                <option value="3">Manager</option>
+              </select>
+
+            </div>
+            <div class="form-group row">
+              <div class="checkbox abc-checkbox">
+                <input type="checkbox" id="change-password" name="change-password">
+                <label for="change-password">
+                  Request password change
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </section>
   </div>
 </div>
