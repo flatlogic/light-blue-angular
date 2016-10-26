@@ -7,7 +7,7 @@ import 'jquery-slimscroll';
 
 import { Dashboard } from './dashboard.component';
 import { Chat } from './chat/chat.component';
-import {Widget} from '../layout/widget/widget.directive';
+import { Widget } from '../layout/widget/widget.directive';
 
 import { Nvd3ChartModule } from './nvd3/nvd3.module';
 

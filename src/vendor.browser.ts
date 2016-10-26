@@ -22,7 +22,9 @@ import 'rxjs/add/operator/mergeMap';
 import 'jquery';
 import 'tether';
 import 'bootstrap';
-import 'widgster'
+import 'widgster';
+import 'bootstrap-select';
+import 'select2';
 
 if ('production' === ENV) {
   // Production

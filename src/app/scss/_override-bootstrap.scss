@@ -119,6 +119,19 @@ textarea,
   color: $text-muted;
 }
 
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: $line-height-computed;
+  line-height: inherit;
+  color: $legend-color;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 15px;
+  font-weight: $font-weight-normal;
+}
+
 .search-query, .navbar-form .search-query{
   border-radius: $border-radius-base;
   line-height: $line-height-computed;
@@ -528,7 +541,7 @@ button.dropdown-toggle{
 .tabs-below > .nav-tabs > .active > a,
 .tabs-below > .nav-tabs > .active > a:hover,
 .tabs-below > .nav-tabs > .active > a:focus {
-//  border-color: transparent;
+  //  border-color: transparent;
 }
 
 .tabs-left > .nav-tabs > li > a {
@@ -617,8 +630,8 @@ button.dropdown-toggle{
   }
 
   @include media-breakpoint-up(xs) {
-  //@media (max-width: $screen-xs-max) {
-  // Dropdowns get custom display when collapsed
+    //@media (max-width: $screen-xs-max) {
+    // Dropdowns get custom display when collapsed
     .open .dropdown-menu {
       position: absolute;
       float: left;

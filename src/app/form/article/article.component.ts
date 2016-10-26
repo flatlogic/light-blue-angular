@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+declare var jQuery: any;
 
 @Component({
   selector: '[article]',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: [ './article.style.scss' ]
 })
 export class Article {
-
+  ngOnInit(): void {
+    jQuery('.selectpicker').selectpicker();
+  }
 }

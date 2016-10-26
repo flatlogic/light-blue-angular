@@ -187,6 +187,9 @@ $icon-font-path: "fonts/bootstrap/" !default;
 $padding-base-vertical:          0.3rem !default;
 $padding-base-horizontal:        12px !default;
 
+$padding-large-vertical:    10px !default;
+$padding-large-horizontal:  16px !default;
+
 $padding-small-vertical:         0.25rem !default;
 $padding-small-horizontal:       10px !default;
 
@@ -199,6 +202,8 @@ $border-radius-base:        3px !default;
 // -------------------------
 
 $btn-font-weight:                $font-weight-base !default;
+
+$btn-default-bg:                 #f8f8f8 !default;
 
 $btn-secondary-color:              #fff !default;
 $btn-secondary-bg:                 $gray !default;

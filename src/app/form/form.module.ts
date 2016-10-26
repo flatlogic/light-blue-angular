@@ -3,7 +3,9 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { SelectComponent } from 'ng2-select';
+import { Select2Module } from 'ng2-select2';
+import 'bootstrap-select/dist/js/bootstrap-select.js';
+
 import { OffClickDirective } from 'ng2-select/components/select/off-click';
 import { HighlightPipe } from 'ng2-select/components/select/select-pipes';
 
@@ -30,13 +32,13 @@ export const routes = [
     Elements,
     Validation,
     Wizard,
-    SelectComponent,
     OffClickDirective,
     HighlightPipe
   ],
   imports: [
     CommonModule,
     FormsModule,
+    Select2Module,
     RouterModule.forChild(routes),
   ]
 })

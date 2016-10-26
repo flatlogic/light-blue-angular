@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as data from '../account/account.data';
 
 @Component({
   selector: '[elements]',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: [ './elements.style.scss' ]
 })
 export class Elements {
-
+  getSelect2CountryList(): [string] {
+    return data.select2CountryData;
+  }
 }
