@@ -1,70 +1,73 @@
 <ul id="side-nav" class="side-nav">
-  <li class="active">
+  <li [routerLinkActive]="['active']">
     <a routerLink="dashboard"><i class="fa fa-home"></i> <span class="name">Dashboard</span></a>
   </li>
-  <li class="accordion-group">
+  <li class="accordion-group" [routerLinkActive]="['active']">
     <a class="accordion-toggle collapsed" data-toggle="collapse"
-       data-parent="#side-nav" href="#forms-collapse"><i class="fa fa-pencil"></i> <span class="name">Forms</span></a>
+       data-parent="#side-nav" href="#forms-collapse">
+			 <i class="fa fa-pencil"></i>
+			 <span class="name">Forms</span>
+		 </a>
     <ul id="forms-collapse" class="accordion-body collapse">
-      <li><a routerLink="form/account">Account</a></li>
-      <li><a routerLink="form/article">Article</a></li>
-      <li><a routerLink="form/elements">Elements</a></li>
-      <li><a routerLink="form/validation">Validation</a></li>
-      <li><a routerLink="form/wizard">Wizard</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="form/account">Account</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="form/article">Article</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="form/elements">Elements</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="form/validation">Validation</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="form/wizard">Wizard</a></li>
     </ul>
   </li>
-  <li class="accordion-group">
+  <li class="accordion-group" [routerLinkActive]="['active']">
     <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#stats-collapse"><i class="fa fa-area-chart"></i> <span class="name">Statistics</span></a>
     <ul id="stats-collapse" class="accordion-body collapse">
-      <li><a routerLink="statistics/stats">Stats</a></li>
-      <li><a routerLink="statistics/charts">Charts</a></li>
-      <li><a routerLink="statistics/realtime">Realtime</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="statistics/stats">Stats</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="statistics/charts">Charts</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="statistics/realtime">Realtime</a></li>
     </ul>
   </li>
-  <li class="accordion-group">
+  <li class="accordion-group" [routerLinkActive]="['active']">
     <a class="accordion-toggle collapsed" data-toggle="collapse"
        data-parent="#side-nav" href="#ui-collapse"><i class="fa fa-magic"></i> <span class="name">User Interface</span></a>
     <ul id="ui-collapse" class="accordion-body collapse">
-      <li><a routerLink="ui/buttons">Buttons</a></li>
-      <li><a routerLink="ui/dialogs">Dialogs</a></li>
-      <li><a routerLink="ui/icons">Icons</a></li>
-      <li><a routerLink="ui/tabs">Tabs</a></li>
-      <li><a routerLink="ui/accordion">Accordion</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="ui/buttons">Buttons</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="ui/dialogs">Dialogs</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="ui/icons">Icons</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="ui/tabs">Tabs</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="ui/accordion">Accordion</a></li>
     </ul>
   </li>
-  <li class="accordion-group">
+  <li class="accordion-group" [routerLinkActive]="['active']">
     <a class="accordion-toggle collapsed" data-toggle="collapse"
        data-parent="#side-nav" href="#components-collapse"><i class="fa fa-tree"></i> <span class="name">Components</span></a>
     <ul id="components-collapse" class="accordion-body collapse">
-      <li><a routerLink="components/calendar">Calendar</a></li>
-      <li><a routerLink="components/maps">Maps</a></li>
-      <li><a routerLink="components/gallery">Gallery</a></li>
-      <li><a routerLink="components/fileupload">Fileupload</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="components/calendar">Calendar</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="components/maps">Maps</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="components/gallery">Gallery</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="components/fileupload">Fileupload</a></li>
     </ul>
   </li>
-  <li class="accordion-group">
+  <li class="accordion-group" [routerLinkActive]="['active']">
     <a class="accordion-toggle collapsed" data-toggle="collapse"
        data-parent="#side-nav" href="#tables-collapse"><i class="fa fa-cog"></i> <span class="name">Tables</span></a>
     <ul id="tables-collapse" class="accordion-body collapse">
-      <li><a routerLink="tables/static">Static</a></li>
-      <li><a routerLink="tables/dynamic">Dynamic</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="tables/static">Static</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="tables/dynamic">Dynamic</a></li>
     </ul>
   </li>
-  <li class="accordion-group">
+  <li class="accordion-group" [routerLinkActive]="['active']">
     <a class="accordion-toggle collapsed" data-toggle="collapse"
        data-parent="#side-nav" href="#widgets-collapse"><i class="fa fa-th"></i> <span class="name">Widgets</span></a>
     <ul id="widgets-collapse" class="accordion-body collapse">
-      <li><a routerLink="widgets/basic">Basic</a></li>
-      <li><a routerLink="widgets/live">Live</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="widgets/basic">Basic</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="widgets/live">Live</a></li>
     </ul>
   </li>
-  <li class="accordion-group">
+  <li class="accordion-group" [routerLinkActive]="['active']">
     <a class="accordion-toggle collapsed" data-toggle="collapse"
        data-parent="#side-nav" href="#special-collapse"><i class="fa fa-leaf"></i> <span class="name">Special</span></a>
     <ul id="special-collapse" class="accordion-body collapse">
-      <li><a routerLink="special/search">Search</a></li>
-      <li><a routerLink="special/invoice">Invoice</a></li>
-      <li><a routerLink="special/inbox">Inbox</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="special/search">Search</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="special/invoice">Invoice</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="special/inbox">Inbox</a></li>
       <li><a routerLink="/login">Login</a></li>
       <li><a routerLink="/error">Error Page</a></li>
       <li><a routerLink="/landing">Landing</a></li>
