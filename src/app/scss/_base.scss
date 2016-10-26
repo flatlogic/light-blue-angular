@@ -170,11 +170,17 @@ $i: 1;
     font-weight: 700;
   }
 
-  .panel-collapse{ //second level menu
-    li a{
-      padding: 4px 20px;
+	.accordion-body {
+		li a {
+			padding: 4px 20px;
+    		padding-left: 50px;
+		}
+	}
 
-      padding-left: 50px;
+  .panel-collapse { //second level menu
+    li a{
+		padding: 4px 20px;
+    	padding-left: 50px;
 
       &:hover, &:focus{
         background: $sidebar-item-active-bg;
