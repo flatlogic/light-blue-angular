@@ -20,12 +20,12 @@ $default-duration: 3s;
 
 // Mixin for the ui-spinner. Paramters use defaults from above if none passed in.
 @mixin ui-spinner(
-$hole-color: $default-hole-color,
-$size: $default-size,
-$bkg-color-light: $default-bkg-color-light,
-$bkg-color-dark: $default-bkg-color-dark,
-$opacity: $default-opacity,
-$duration: $default-duration
+  $hole-color: $default-hole-color,
+  $size: $default-size,
+  $bkg-color-light: $default-bkg-color-light,
+  $bkg-color-dark: $default-bkg-color-dark,
+  $opacity: $default-opacity,
+  $duration: $default-duration
 ) {
   .messenger-spinner {
     width: $size;
