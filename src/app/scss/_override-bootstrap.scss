@@ -185,6 +185,14 @@ legend {
   }
 }
 
+.table.table-striped,
+.table.table-hover {
+  thead > tr > th,
+  tfoot > tr > td{
+    border-top: none;
+  }
+}
+
 .table thead > tr > th{
   border-bottom: none;
   font-weight: 600;
@@ -192,13 +200,14 @@ legend {
   border-bottom-width: 1px;
 }
 
-.table td > .checkbox,
-.table th > .checkbox{
+.table td > .abc-checkbox,
+.table th > .abc-checkbox{
   position: relative;
   left: 3px;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
+  width: 5px;
   > label:before,
   > label:after{
     margin-left: 0;
@@ -257,6 +266,10 @@ button.dropdown-toggle{
 
 .dropdown-menu > li > a {
   font-weight: $font-weight-base;
+}
+
+.dropdown .dropdown-item {
+  width: auto;
 }
 
 /***************************/
@@ -678,6 +691,20 @@ button.dropdown-toggle{
       margin: 0 2px;
     }
   }
+
+  .page-item.disabled .page-link,
+  .page-item.disabled .page-link:focus,
+  .page-item.disabled .page-link:hover {
+    color: $gray-semi-lighter;
+  }
+
+  .page-link {
+    border: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 /***************************/
@@ -744,11 +771,11 @@ button.dropdown-toggle{
 }
 
 /***************************/
-/*    Labels and badges    */
+/*    Labels and tags    */
 /***************************/
 
 .label,
-.badge {
+.tag {
   display: inline-block;
   padding: 2px 4px;
   line-height: 14px; // ensure proper line-height if floated
@@ -757,31 +784,31 @@ button.dropdown-toggle{
   font-size: $font-size-small - 1;
 }
 
-.badge{
+.tag{
   padding: 2px 9px;
 }
 
-.badge-default {
+.tag-default {
   @include tag-variant($tag-default-bg);
 }
 
-.badge-primary {
+.tag-primary {
   @include tag-variant($tag-primary-bg);
 }
 
-.badge-success {
+.tag-success {
   @include tag-variant($tag-success-bg);
 }
 
-.badge-info {
+.tag-info {
   @include tag-variant($tag-info-bg);
 }
 
-.badge-warning {
+.tag-warning {
   @include tag-variant($tag-warning-bg);
 }
 
-.badge-danger {
+.tag-danger {
   @include tag-variant($tag-danger-bg);
 }
 
@@ -898,6 +925,7 @@ button.dropdown-toggle{
 
 .progress{
   background: rgba(black, .15);
+  transition: width 0.6s ease;
   overflow: hidden;
 }
 
@@ -912,7 +940,24 @@ button.dropdown-toggle{
 }
 
 .progress-bar {
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
+}
+
+.progress[value] {
+  background: none !important;
+  border-radius: 0.5rem;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.table {
+  .progress-bar {
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  }
+
+  .progress[value]::-webkit-progress-value {
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,0.15);
+  }
 }
 /***************************/
 /*          Panels         */

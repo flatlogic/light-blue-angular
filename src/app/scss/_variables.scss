@@ -15,7 +15,7 @@ $glyphicons-halflings-class-prefix: glyphicon !default;
 
 $enable-flex:               true !default;
 $enable-rounded:            true !default;
-$enable-shadows:            true !default;
+$enable-shadows:            false !default;
 $enable-gradients:          false !default;
 $enable-transitions:        true !default;
 $enable-hover-media-query:  false !default;
@@ -69,7 +69,8 @@ $text-muted: darken($text-color, 15%) !default;
 
 $font-family-sans-serif:  "Open Sans", sans-serif !default;
 
-$font-size-base:          0.8rem !default;
+$font-size-root: 14px !default;
+$font-size-base:          0.95rem !default;
 $font-size-large:         $font-size-base * 1.25 !default;
 $font-size-larger:        $font-size-base + 1;
 $font-size-small:         0.75rem !default;

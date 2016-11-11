@@ -1,5 +1,5 @@
 /* Awesome Bootstrap Checkbox override */
-.checkbox label{
+.abc-checkbox label{
   &::before {
     background: none;
     border-color: #aaa;
@@ -8,7 +8,7 @@
    }
 }
 
-.radio {
+.abc-radio {
   label {
 
     &::before {
@@ -22,8 +22,18 @@
   }
 }
 
-.checkbox-dark input[type="checkbox"]:checked + label{
+.abc-checkbox-dark input[type="checkbox"]:checked + label{
   &::after{
     color: $gray;
+  }
+}
+
+.table {
+  .abc-checkbox {
+    label {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
   }
 }

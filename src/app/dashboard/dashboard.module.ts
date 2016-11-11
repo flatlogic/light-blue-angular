@@ -7,7 +7,7 @@ import 'jquery-slimscroll';
 
 import { Dashboard } from './dashboard.component';
 import { Chat } from './chat/chat.component';
-import { Widget } from '../layout/widget/widget.directive';
+import { WidgetModule } from '../layout/widget/widget.module';
 
 import { Nvd3ChartModule } from './nvd3/nvd3.module';
 
@@ -18,13 +18,13 @@ export const routes = [
 @NgModule({
   declarations: [
     Dashboard,
-    Chat,
-    Widget
+    Chat
   ],
   imports: [
     CommonModule,
     FormsModule,
     Nvd3ChartModule,
+    WidgetModule,
     RouterModule.forChild(routes),
   ]
 })

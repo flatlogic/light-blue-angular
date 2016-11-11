@@ -1,14 +1,19 @@
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { PaginationModule, DropdownModule } from 'ng2-bootstrap/ng2-bootstrap';
+import { DataTableModule } from 'angular2-datatable';
+import { Ng2TableModule } from 'ng2-table';
+import { JqSparklineModule } from '../components/sparkline/sparkline.module';
+import { WidgetModule } from '../layout/widget/widget.module';
+import { UtilsModule } from '../layout/utils/utils.module';
 
-import {Dynamic} from './dynamic/dynamic.component'
-import {Static} from './static/static.component'
+import { Static } from './static/static.component';
+import { Dynamic } from './dynamic/dynamic.component';
+import { SearchPipe } from './dynamic/pipes/search-pipe';
 
-console.log('`Detail` bundle loaded asynchronously');
-// async components must be named routes for WebpackAsyncRoute
-export const routes : Routes = [
+export const routes = [
   {path: '', redirectTo: 'static', pathMatch: 'full'},
   {path: 'static', component: Static},
   {path: 'dynamic', component: Dynamic}
@@ -16,16 +21,23 @@ export const routes : Routes = [
 
 @NgModule({
   declarations: [
-    // Components / Directives/ Pipes
     Static,
-    Dynamic
+    Dynamic,
+    SearchPipe
   ],
   imports: [
+    DataTableModule,
     CommonModule,
     FormsModule,
-    RouterModule.forChild(routes),
+    PaginationModule,
+    WidgetModule,
+    Ng2TableModule,
+    JqSparklineModule,
+    UtilsModule,
+    DropdownModule,
+    RouterModule.forChild(routes)
   ]
 })
-export default class StatisticsModule {
+export default class TablesModule {
   static routes = routes;
 }

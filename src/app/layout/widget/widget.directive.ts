@@ -11,7 +11,7 @@ export class Widget {
   constructor(el: ElementRef) {
     this.$el = jQuery(el.nativeElement);
 
-    jQuery.fn.widgster.Constructor.DEFAULTS.bodySelector = '.widget-body';
+    jQuery.fn.widgster.Constructor.DEFAULTS.bodySelector = '.body';
 
     /*
      When widget is closed remove its parent if it is .col-*
