@@ -1,0 +1,117 @@
+@import "../../../../node_modules/bootstrap-select/dist/css/bootstrap-select";
+@import "../../scss/variables";
+@import "../../scss/mixins";
+@import "../../../../node_modules/bootstrap/scss/_variables";
+@import "../../../../node_modules/bootstrap/scss/mixins";
+@import "../../scss/select2-variables";
+
+
+/***********************************/
+/**         Search Result         **/
+/***********************************/
+
+:host {
+  color: #f8f8f8;
+}
+
+.pagination {
+  li a {
+    padding: 4px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 0 2px;
+    text-decoration: none;
+  }
+
+  & > .disabled > a {
+    &, &:hover, &:focus {
+      color: #ddd;
+      background-color: transparent;
+      border-color: transparent;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.pagination-search-result > .active > a {
+  background-color: rgba(51,51,51,0.25);
+  color: #fff;
+}
+
+.value3, .search-results-count {
+  color: #f8f8f8;
+}
+
+.search-result-categories{
+  > li > a {
+    font-weight: $font-weight-normal;
+  }
+}
+
+.search-results-count{
+  margin-top: 10px;
+}
+
+.btn-toolbar {
+  .btn-default {
+    background-color: #666;
+    border-color: rgba(0,0,0,0.15);
+  }
+}
+
+.search-result-item{
+  padding: 20px;
+  border-radius: $border-radius;
+  @include clearfix();
+
+  .image-link{
+    display: block;
+    overflow: hidden;
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+    @include media-breakpoint-up(md){
+      display: inline-block;
+      margin: -20px 0 -20px -20px;
+      float: left;
+      width: 200px;
+    }
+    @include media-breakpoint-down(sm) {
+      max-height: 200px;
+    }
+  }
+
+  .image{
+    max-width: 100%;
+  }
+
+  .info{
+    margin-top: 2px;
+    font-size: $font-size-sm;
+  }
+
+  .description{
+    font-size: $font-size-base;
+  }
+
+  + .search-result-item{
+    margin-top: 20px;
+  }
+}
+
+.search-result-item-body{
+  height: auto;
+  @include media-breakpoint-down(sm) {
+    margin-top: 10px;
+  }
+  @include media-breakpoint-up(md){
+    margin-left: 200px;
+  }
+}
+
+.search-result-item-heading{
+  font-weight: $font-weight-normal;
+
+  @include media-breakpoint-up(md){
+    margin: 0;
+  }
+}
