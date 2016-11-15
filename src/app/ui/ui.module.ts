@@ -1,3 +1,6 @@
+import 'messenger/build/js/messenger';
+import 'messenger/build/js/messenger-theme-flat';
+
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
@@ -10,6 +13,7 @@ import {Tabs} from './tabs/tabs.component'
 import {Notifications} from './notifications/notifications.component'
 import {Accordion} from './accordion/accordion.component'
 import { TabsModule, AccordionModule } from 'ng2-bootstrap/ng2-bootstrap';
+import { MessengerDemo } from './notifications/messenger/messenger.directive';
 
 console.log('`Detail` bundle loaded asynchronously');
 // async components must be named routes for WebpackAsyncRoute
@@ -31,7 +35,8 @@ export const routes = [
     Icons,
     Tabs,
     Accordion,
-    Notifications
+    Notifications,
+    MessengerDemo
   ],
   imports: [
     CommonModule,
