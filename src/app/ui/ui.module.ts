@@ -9,6 +9,7 @@ import {Icons} from './icons/icons.component'
 import {Tabs} from './tabs/tabs.component'
 import {Notifications} from './notifications/notifications.component'
 import {Accordion} from './accordion/accordion.component'
+import { TabsModule, AccordionModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 console.log('`Detail` bundle loaded asynchronously');
 // async components must be named routes for WebpackAsyncRoute
@@ -36,6 +37,7 @@ export const routes = [
     CommonModule,
     FormsModule,
     RouterModule.forChild(routes),
+    TabsModule, AccordionModule
   ]
 })
 export default class StatisticsModule {
