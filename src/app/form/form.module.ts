@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 
 import { Select2Module } from 'ng2-select2';
 import 'bootstrap-select/dist/js/bootstrap-select.js';
+import 'parsleyjs';
 
 import {Account} from './account/account.component'
 import {Article} from './article/article.component'

@@ -5,14 +5,14 @@
   <div class="col-lg-7">
     <section class="widget">
       <header>
-        <h4>
+        <h5>
           <i class="fa fa-check-square-o"></i>
           Dead simple validation
           <small>No JS needed to tune-up</small>
-        </h4>
+        </h5>
       </header>
       <div class="body">
-        <form id="validation-form" class="form-horizontal form-label-left" method="post"
+        <form id="validation-form" class="form-horizontal form-label-left parsleyjs" method="post"
               data-parsley-priority-enabled="false"
               novalidate="novalidate">
           <fieldset>
@@ -22,8 +22,8 @@
             <div class="form-group row">
               <label class="form-control-label col-lg-4" for="basic">Simple required</label>
 
-              <div class="col-lg-5">
-                <input type="text" id="basic" name="basic" class="form-control"
+              <div class="col-lg-4">
+                <input type="text" id="basic" name="basic" class="form-control input-transparent"
                        required="required">
               </div>
             </div>
@@ -35,8 +35,8 @@
                   </span>
               </label>
 
-              <div class="col-lg-5">
-                <input type="text" id="basic-change" name="basic-change" class="form-control"
+              <div class="col-lg-4">
+                <input type="text" id="basic-change" name="basic-change" class="form-control input-transparent"
                        data-parsley-trigger="change"
                        data-parsley-minlength="10"
                        required="required">
@@ -45,7 +45,7 @@
           </fieldset>
           <fieldset>
             <legend class="section">
-                <span class="label label-important">
+                <span class="tag tag-important text-white mr-xs">
                   HTML5
                 </span>
               input types supported
@@ -55,8 +55,8 @@
                 E-mail
               </label>
 
-              <div class="col-lg-5">
-                <input type="email" id="email" name="email" class="form-control"
+              <div class="col-lg-4">
+                <input type="email" id="email" name="email" class="form-control input-transparent"
                        data-parsley-trigger="change"
                        data-parsley-validation-threshold="1"
                        required="required">
@@ -67,8 +67,8 @@
                 Number
               </label>
 
-              <div class="col-lg-5">
-                <input type="text" id="number" name="number" class="form-control"
+              <div class="col-lg-4">
+                <input type="text" id="number" name="number" class="form-control input-transparent"
                        data-parsley-type="number"
                        required="required">
               </div>
@@ -78,8 +78,8 @@
                 Range
               </label>
 
-              <div class="col-lg-5">
-                <input type="text" class="form-control"
+              <div class="col-lg-4">
+                <input type="text" class="form-control input-transparent"
                        id="range" name="range"
                        data-parsley-range="[10, 100]"
                        data-parsley-trigger="change"
@@ -97,12 +97,12 @@
                 Password helpers
               </label>
 
-              <div class="col-lg-5">
-                <input type="password" id="password" name="password" class="form-control"
+              <div class="col-lg-4">
+                <input type="password" id="password" name="password" class="form-control input-transparent"
                        data-parsley-trigger="change"
                        data-parsley-minlength="6"
                        required="required">
-                <input type="password" id="password-r" name="password-r" class="form-control mt-sm"
+                <input type="password" id="password-r" name="password-r" class="form-control mt-sm input-transparent"
                        data-parsley-trigger="change"
                        data-parsley-minlength="6"
                        data-parsley-equalto="#password"
@@ -114,8 +114,8 @@
                 Website
               </label>
 
-              <div class="col-lg-5">
-                <input type="text" id="website" name="website" class="form-control"
+              <div class="col-lg-4">
+                <input type="text" id="website" name="website" class="form-control input-transparent"
                        data-parsley-trigger="change"
                        data-parsley-type="url"
                        required="required">
@@ -124,7 +124,7 @@
           </fieldset>
           <div class="form-actions">
             <div class="row">
-              <div class="col-lg-8 col-lg-offset-4">
+              <div class="col-lg-8 offset-lg-4">
                 <button type="submit" class="btn btn-danger">Validate &amp; Submit</button>
                 <button type="button" class="btn btn-default">Cancel</button>
               </div>

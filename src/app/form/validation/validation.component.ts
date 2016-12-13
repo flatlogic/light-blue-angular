@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+declare var jQuery: any;
 
 @Component({
   selector: '[validation]',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: [ './validation.style.scss' ]
 })
 export class Validation {
-
+  ngOnInit(): void {
+    jQuery('.parsleyjs').parsley();
+  }
 }
