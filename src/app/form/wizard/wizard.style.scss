@@ -1,0 +1,27 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+@import "../../../../node_modules/bootstrap/scss/_variables";
+@import "../../../../node_modules/bootstrap/scss/mixins";
+
+.form-wizard{
+  .progress{
+    margin-bottom: 10px;
+  }
+}
+
+.wizard-navigation{
+  margin-bottom: 5px;
+  @include nav-justified;
+
+  a{
+    color: $text-color;
+
+    //strong{
+    //  font-weight: bold;
+    //}
+  }
+}
+
+//.pager .disabled button{
+//  @extend .btn.disabled;
+//}

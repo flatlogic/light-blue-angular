@@ -603,7 +603,10 @@ button.dropdown-toggle{
 // Active state
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
-.nav-pills > li.active > a:focus {
+.nav-pills > li.active > a:focus,
+.nav-pills > li > a.nav-link.active,
+.nav-pills > li > a.nav-link.active:hover,
+.nav-pills > li > a.nav-link.active:focus{
   color: $widget-header-color;
   background: none;
 }
