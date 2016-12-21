@@ -995,6 +995,11 @@ $i: 1;
   }
 }
 
+.form-horizontal {
+  .form-group {
+    @include box-sizing(border-box);
+  }
+}
 
 .form-control{
   &.input-transparent{
