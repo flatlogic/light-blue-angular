@@ -169,6 +169,15 @@ svg .title {
 }
 
 /**
+ * Make Simple Select2's selects be the same height with the rest of the inputs
+ */
+
+.select2-container .select2-selection.select2-selection--single {
+  height: $input-height;
+  padding: $input-padding-y $input-padding-x;
+}
+
+/**
  * Make Multi Select2's choices match Bootstrap 3's default button styles.
  */
 
