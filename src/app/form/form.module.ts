@@ -13,7 +13,9 @@ import {Article} from './article/article.component'
 import {Elements} from './elements/elements.component'
 import {Validation} from './validation/validation.component'
 import {Wizard} from './wizard/wizard.component'
-import { FormWizard } from './wizard/form-wizard/form-wizard.directive';
+import {FormWizard} from './wizard/form-wizard/form-wizard.directive';
+import {WidgetModule} from '../layout/widget/widget.module';
+
 
 export const routes = [
   {path: '', redirectTo: 'account', pathMatch: 'full'},
@@ -38,6 +40,7 @@ export const routes = [
     CommonModule,
     FormsModule,
     Select2Module,
+    WidgetModule,
     RouterModule.forChild(routes),
   ]
 })

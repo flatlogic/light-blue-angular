@@ -3,7 +3,7 @@
 </h2>
 <div class="row">
   <div class="col-xl-7 col-xl-offset-1">
-    <section class="widget">
+    <section widget class="widget">
       <header>
         <h4>
           <i class="fa fa-windows"></i>
@@ -49,7 +49,7 @@
                     <div class="col-md-8">
                       <div class="col-md-10">
                         <input type="text" id="username" name="username" placeholder="" class="form-control">
-                        <span class="help-block">Username can contain any letters or numbers, without spaces</span>
+                        <p class="help-block">Username can contain any letters or numbers, without spaces</p>
                       </div>
                     </div>
                   </div>
@@ -60,7 +60,7 @@
                       <div class="col-md-10">
                         <input type="text" id="email" name="email"
                                placeholder="" class="form-control">
-                        <span class="help-block">Please provide your E-mail</span>
+                        <p class="help-block">Please provide your E-mail</p>
                       </div>
                     </div>
                   </div>
@@ -70,7 +70,7 @@
                     <div class="col-md-8">
                       <div class="col-md-10">
                         <input type="text" id="address" name="address" placeholder="" class="form-control">
-                        <span class="help-block">Please provide your address</span>
+                        <p class="help-block">Please provide your address</p>
                       </div>
                     </div>
                   </div>
@@ -88,7 +88,7 @@
                           <select2 id="country-select"
                                    class="select-block-level chzn-select"
                                    [data]="getSelect2CountriesList()" [width]="'100%'" [theme]="'bootstrap'"></select2>
-                          <span class="help-block pull-left">Please choose your country destination</span>
+                          <p class="help-block">Please choose your country destination</p>
                         </div>
                     </div>
                   </div>
@@ -98,7 +98,7 @@
                         <div class="col-md-10">
                           <select2 id="courier" class="select-block-level chzn-select"
                                    [data]="getSelect2Shipment()" [width]="'100%'" [theme]="'bootstrap'"></select2>
-                        <span class="help-block pull-left">Please choose your shipping option</span>
+                        <p class="help-block">Please choose your shipping option</p>
                         </div>
                     </div>
                   </div>
@@ -106,14 +106,14 @@
                     <label class="col-form-label text-md-right col-md-3" for="destination">Destination Zip Code</label>
                     <div class="col-md-8">
                         <div class="col-md-10"><input type="text" id="destination" name="destination" placeholder="" class="form-control">
-                        <span class="help-block">Please provide your Destination Zip Code</span></div>
+                        <p class="help-block">Please provide your Destination Zip Code</p></div>
                     </div>
                   </div>
                   <div class="form-group row">
                     <label class="col-form-label text-md-right col-md-3" for="dest-address">Destination Address</label>
                     <div class="col-md-8">
                         <div class="col-md-10"><input type="text" id="dest-address" name="address" placeholder="" class="form-control">
-                        <span class="help-block">Please provide the destination address</span></div>
+                        <p class="help-block">Please provide the destination address</p></div>
                     </div>
                   </div>
                 </fieldset>
@@ -155,9 +155,9 @@
             </div>
             <div class="tab-pane" id="tab4">
               <h2>Thank you!</h2>
-              <p class="mb-lg">Your submission has been received.</p>
+              <p>Your submission has been received.</p>
             </div>
-            <div class="description ml mr mt-n-md">
+            <div class="description ml mr">
               <ul class="pager wizard">
                 <li class="previous">
                   <button class="btn btn-primary"><i class="fa fa-caret-left"></i> Previous</button>
