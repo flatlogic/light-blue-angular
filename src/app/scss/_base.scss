@@ -1051,24 +1051,6 @@ $i: 1;
   @include clearfix(); // Adding clearfix to allow for .pull-right button containers
 }
 
-.form-wizard{
-  .progress{
-    margin-bottom: 10px;
-  }
-}
-
-.wizard-navigation{
-  margin-bottom: 5px;
-
-  a{
-    color: $widget-color;
-  }
-}
-
-.pager .disabled button{
-  @extend .btn.disabled;
-}
-
 /***********************************/
 /**          ICONS                **/
 /**********************************/
