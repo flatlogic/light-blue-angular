@@ -42,6 +42,10 @@ h2 small { font-size: $font-size-base * 1.25; } // ~18px
 h3 small { font-size: $font-size-base; }
 h4 small { font-size: $font-size-base; }
 
+small {
+  font-size: 92%;
+}
+
 .text-primary        { color: $brand-primary; }
 .text-warning        { color: $brand-warning; }
 .text-danger         { color: $brand-danger; }
@@ -598,6 +602,10 @@ button.dropdown-toggle{
   margin-bottom: 2px;
   border-radius: $border-radius-base;
   background: $bg-addition;
+}
+
+.nav-pills .nav-link {
+  padding: 0.8em 1.1em;
 }
 
 // Active state

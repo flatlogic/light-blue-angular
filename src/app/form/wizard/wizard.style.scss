@@ -32,8 +32,12 @@
   a{
     color: $text-color;
 
-    //strong{
-    //  font-weight: bold;
-    //}
+    strong{
+      font-weight: 600;
+    }
+
+    small {
+      font-weight: 100;
+    }
   }
 }
