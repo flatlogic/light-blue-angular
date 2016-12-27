@@ -119,8 +119,9 @@ textarea,
 
 .help-block {
   margin-top: 0;
-  font-size: $font-size-small - 1;
+  font-size: $font-size-smaller;
   color: $text-muted;
+  display: block;
 }
 
 legend {
@@ -829,13 +830,6 @@ button.dropdown-toggle{
 
 .label-inverse{
   @include tag-variant($tag-default-bg);
-}
-
-.help-block{
-  margin-top: 5px;
-  font-size: $font-size-smaller;
-  color: $text-muted;
-  display: block;
 }
 
 /***************************/
