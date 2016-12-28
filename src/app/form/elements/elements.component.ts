@@ -1,5 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import * as data from '../account/account.data';
+import * as data from './elements.data';
+
+import {Select2OptionData} from 'ng2-select2/ng2-select2';
 
 declare var jQuery: any;
 
@@ -10,8 +12,16 @@ declare var jQuery: any;
   encapsulation: ViewEncapsulation.None
 })
 export class Elements {
-  getSelect2CountryList(): [string] {
+  getSelect2CountryList(): Select2OptionData[] {
     return data.select2CountryData;
+  }
+
+  getSelect2GalaxyList():  Select2OptionData[]  {
+    return data.select2GalaxyData;
+  }
+
+  getSelect2GroupedList(): Select2OptionData[] {
+    return data.select2GroupedData;
   }
 
   ngOnInit(): void {
