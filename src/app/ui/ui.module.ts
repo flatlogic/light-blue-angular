@@ -12,6 +12,7 @@ import {Icons} from './icons/icons.component'
 import {Tabs} from './tabs/tabs.component'
 import {Notifications} from './notifications/notifications.component'
 import {Accordion} from './accordion/accordion.component'
+import { TooltipModule, AlertModule, DropdownModule } from 'ng2-bootstrap/ng2-bootstrap'
 import { TabsModule, AccordionModule } from 'ng2-bootstrap/ng2-bootstrap';
 import { MessengerDemo } from './notifications/messenger/messenger.directive';
 
@@ -42,6 +43,7 @@ export const routes = [
     CommonModule,
     FormsModule,
     RouterModule.forChild(routes),
+    TooltipModule, AlertModule, DropdownModule,
     TabsModule, AccordionModule
   ]
 })

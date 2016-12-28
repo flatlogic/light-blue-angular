@@ -133,6 +133,11 @@ legend {
   border-bottom: 1px solid #e5e5e5;
   font-size: 19.5px;
   font-weight: $font-weight-normal;
+
+  &.section {
+    font-size: 14px;
+    padding: 0;
+  }
 }
 
 .search-query, .navbar-form .search-query{
