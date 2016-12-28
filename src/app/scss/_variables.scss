@@ -207,7 +207,9 @@ $border-radius-base:        3px !default;
 
 $btn-font-weight:                $font-weight-base !default;
 
-$btn-default-bg:                 #f8f8f8 !default;
+$btn-default-color:              $white !default;
+$btn-default-bg:                 $gray !default;
+$btn-default-border:             rgba(0, 0, 0, 0.15) !default;
 
 $btn-secondary-color:              #fff !default;
 $btn-secondary-bg:                 $gray !default;

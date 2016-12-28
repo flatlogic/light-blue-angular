@@ -971,6 +971,10 @@ $i: 1;
   @include button-variant($btn-inverse-color, $btn-inverse-bg, rgba(0, 0, 0, .2));
 }
 
+.btn-default {
+  @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+}
+
 /* since 1.5 */
 .btn-white{
   background: none;
