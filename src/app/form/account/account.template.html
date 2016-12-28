@@ -40,7 +40,7 @@
               <div class="form-group row">
                 <label class="form-control-label col-md-4" for="prefix">Prefix</label>
 
-                <div class="col-md-4">
+                <div class="col-md-3">
                   <input type="text" id="prefix" name="prefix" class="form-control input-transparent">
                 </div>
               </div>
@@ -49,7 +49,7 @@
                   <span class="required">*</span>
                 </label>
 
-                <div class="col-md-6">
+                <div class="col-md-7">
                   <input type="text" id="first-name" name="first-name" required="required" class="form-control input-transparent">
                 </div>
               </div>
@@ -57,13 +57,13 @@
                 <label class="form-control-label col-md-4" for="last-name">Last Name <span
                   class="required">*</span></label>
 
-                <div class="col-md-6"><input type="text" id="last-name" name="last-name" required="required"
+                <div class="col-md-7"><input type="text" id="last-name" name="last-name" required="required"
                                              class="form-control input-transparent"></div>
               </div>
               <div class="form-group row">
                 <label for="middle-name" class="form-control-label col-md-4">Middle Name / Initial</label>
 
-                <div class="col-md-6"><input id="middle-name" class="form-control input-transparent" type="text" name="middle-name"
+                <div class="col-md-7"><input id="middle-name" class="form-control input-transparent" type="text" name="middle-name"
                                              value=""></div>
               </div>
               <div class="form-group row">
@@ -86,7 +86,7 @@
                 <label for="date-of-birth" class="form-control-label col-md-4">Date Of Birth <span
                   class="required">*</span></label>
 
-                <div class="col-md-6"><input id="date-of-birth" class="date-picker form-control input-transparent" required="required"
+                <div class="col-md-5"><input id="date-of-birth" class="date-picker form-control input-transparent" required="required"
                                              type="text" name="date-of-birth" value=""></div>
               </div>
             </fieldset>
@@ -116,7 +116,7 @@
                            required="required" type="text"
                            name="phone" maxlength="28">
                     <span class="input-group-btn">
-                      <select id="phone-type" class="selectpicker" data-style="btn-default" data-width="auto">
+                      <select id="phone-type" class="selectpicker" data-style="btn-secondary" data-width="auto">
                         <option>Mobile</option>
                         <option>Home</option>
                         <option>Work</option>
@@ -133,7 +133,7 @@
                     <input id="fax" class="form-control input-transparent" type="text"
                            name="phone" maxlength="28">
                     <span class="input-group-btn">
-                      <select id="fax-type" class="selectpicker" data-style="btn-default" data-width="auto">
+                      <select id="fax-type" class="selectpicker" data-style="btn-secondary" data-width="auto">
                         <option>Mobile</option>
                         <option>Home</option>
                         <option>Work</option>
@@ -146,7 +146,7 @@
             <fieldset>
               <legend class="section">
                 Address
-                <button type="button" class="btn btn-transparent btn-xs pull-right">
+                <button type="button" class="btn btn-transparent btn-sm pull-right">
                   <i class="fa fa-plus"></i>
                   Add Address
                 </button>
@@ -159,7 +159,7 @@
                     <input id="address" class="form-control input-transparent" type="text"
                            name="address">
                     <span class="input-group-btn">
-                      <select id="address-type" class="selectpicker" data-style="btn-default" data-width="auto">
+                      <select id="address-type" class="selectpicker" data-style="btn-secondary" data-width="auto">
                         <option>Mobile</option>
                         <option>Home</option>
                         <option>Work</option>
@@ -190,7 +190,7 @@
             </fieldset>
             <div class="form-actions">
               <div class="row">
-                <div class="col-md-8 col-md-offset-4">
+                <div class="col-md-8 offset-md-4">
                   <button type="submit" class="btn btn-primary">Validate &amp; Submit</button>
                   <button type="button" class="btn btn-secondary">Cancel</button>
                 </div>
@@ -206,40 +206,36 @@
           <h5><i class="fa fa-cogs"></i> Account settings</h5>
 
           <div class="actions">
-            <button class="btn btn-xs btn-inverse"><i class="fa fa-arrow-down"></i> View more</button>
+            <button class="btn btn-sm btn-inverse"><i class="fa fa-arrow-down"></i> View more</button>
           </div>
         </header>
         <div class="body">
           <form method="post">
             <fieldset>
-              <div class="form-group row">
-                <label for="exp">Account expiration date</label>
-                <input id="exp" class="form-control date-picker" type="text" name="exp" value="">
-
+              <div class="form-group">
+                <label for="datetimepicker">
+                  Account expiration date
+                </label>
+                <datetime class="form-line" [timepicker]="false" [(ngModel)]="date" name="datetime" id="datetimepicker"></datetime>
                 <p class="help-block">Bootstrap datepicker</p>
               </div>
-              <div class="form-group row">
+              <div class="form-group">
                 <label for="website">Associate to Website</label>
-                <select id="website" class="select2 select-block-level"
-                        data-width="off"
-                        data-minimum-results-for-search="10"
-                        name="website">
+                <select id="website" class="select2 form-control"
+                        data-minimum-results-for-search="10">
                   <option selected="selected" value="0">Admin</option>
                   <option value="1">Main Website</option>
                 </select>
               </div>
-              <div class="form-group row">
+              <div class="form-group">
                 <label for="created_by">Created By</label>
-
                 <input id="created_by" class="form-control" type="text" name="created_by"
                        value="Admin" disabled="disabled">
-
               </div>
-              <div class="form-group row">
+              <div class="form-group">
                 <label for="groups">Account Group</label>
                 <select id="groups" name="groups" class="select2 select-block-level" multiple
-                        data-placeholder="Choose one or more groups for account"
-                        data-width="off">
+                        data-placeholder="Choose one or more groups for account">
                   <option value="0">Subscriber</option>
                   <option value="1">Retailer</option>
                   <option value="2">Supplier</option>

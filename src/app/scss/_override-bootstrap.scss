@@ -75,9 +75,12 @@ textarea {
   font-weight: $font-weight-base;
 }
 
+small, .small {
+  font-size: 70%;
+}
+
 legend small{
   color: $text-muted;
-  font-size: $font-size-larger;
 }
 
 .form-control{
@@ -128,7 +131,7 @@ legend {
   color: $legend-color;
   border: 0;
   border-bottom: 1px solid #e5e5e5;
-  font-size: 15px;
+  font-size: 19.5px;
   font-weight: $font-weight-normal;
 }
 
@@ -270,6 +273,25 @@ button.dropdown-toggle{
 
 .dropdown .dropdown-item {
   width: auto;
+}
+
+// Dropdown arrow/caret
+// --------------------
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  vertical-align: top;
+  border-top:   4px solid $black;
+  border-right: 4px solid transparent;
+  border-left:  4px solid transparent;
+  content: "";
+}
+
+// Place the caret
+.dropdown .caret {
+  margin-top: 8px;
+  margin-left: 2px;
 }
 
 /***************************/

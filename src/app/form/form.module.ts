@@ -6,6 +6,9 @@ import { RouterModule } from '@angular/router';
 import { Select2Module } from 'ng2-select2';
 import 'bootstrap-select/dist/js/bootstrap-select.js';
 import 'parsleyjs';
+import 'ng2-datetime/src/vendor/bootstrap-datepicker/bootstrap-datepicker.min.js';
+
+import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
 
 import {Account} from './account/account.component'
 import {Article} from './article/article.component'
@@ -35,6 +38,7 @@ export const routes = [
     CommonModule,
     FormsModule,
     Select2Module,
+    NKDatetimeModule,
     RouterModule.forChild(routes),
   ]
 })

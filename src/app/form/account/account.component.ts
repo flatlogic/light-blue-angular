@@ -9,6 +9,7 @@ declare var jQuery: any;
   encapsulation: ViewEncapsulation.None,
 })
 export class Account {
+  date: Date = new Date(2016, 5, 10);
 
   getSelect2StateList(): [string] {
     return data.select2StateData;
@@ -20,5 +21,6 @@ export class Account {
 
   ngOnInit(): void {
     jQuery('.select2').select2();
+    jQuery('.selectpicker').selectpicker();
   }
 }
