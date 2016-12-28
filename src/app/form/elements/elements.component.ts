@@ -12,6 +12,9 @@ declare var jQuery: any;
   encapsulation: ViewEncapsulation.None
 })
 export class Elements {
+  colorOptions: Object = {color: '#f0b518'};
+  date: Date = new Date(2016, 5, 10);
+
   getSelect2CountryList(): Select2OptionData[] {
     return data.select2CountryData;
   }
@@ -26,5 +29,6 @@ export class Elements {
 
   ngOnInit(): void {
     jQuery('.selectpicker').selectpicker();
+    jQuery('#colorpicker').colorpicker(this.colorOptions);
   }
 }

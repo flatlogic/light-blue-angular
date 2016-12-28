@@ -191,6 +191,10 @@ legend {
   margin-left: -1px;
 }
 
+.form-inline .input-group-addon {
+  display: table-cell;
+}
+
 /***************************/
 /*        Tables        */
 /***************************/

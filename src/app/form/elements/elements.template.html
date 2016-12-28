@@ -740,30 +740,18 @@
             <legend class="section">
               Date & Time
             </legend>
-            <div class="form-group row">
-              <label for="datetimepicker1">In place</label>
-              <input id="datetimepicker1" type="text" class="form-control" />
-            </div>
-            <div class="form-group row">
-              <label for="datepicker2i">
+            <div class="form-group">
+              <label for="datetimepicker2i">
                 Time-enabled
-                <span class="help-block">
-                  Can be customized for both 24 hour and 12 hour clocks.
-                </span>
               </label>
-              <div id="datetimepicker2" class="input-group">
-                <input id="datepicker2i" type="text" class="form-control" />
-                <span class="input-group-addon btn btn-success">
-                  <span class="glyphicon glyphicon-calendar"></span>
-                </span>
-              </div>
+              <datetime [(ngModel)]="date" name="datetime" id="datetimepicker2i"></datetime>
             </div>
           </fieldset>
           <fieldset>
             <legend class="section">
               Colors
             </legend>
-            <div class="form-group row">
+            <div class="form-group">
               <label for="colorpickeri">
                 Simple select
                 <span class="help-block">
@@ -771,7 +759,7 @@
                 </span>
               </label>
               <div id="colorpicker" class="input-group">
-                <input type="text" value="#888888" class="form-control" id="colorpickeri"/>
+                <input type="text" value="" class="form-control" id="colorpickeri"/>
                 <span class="input-group-addon"><i></i></span>
               </div>
             </div>

@@ -3,7 +3,9 @@
 @import "../../scss/mixins";
 @import "../../../../node_modules/bootstrap/scss/_variables";
 @import "../../../../node_modules/bootstrap/scss/mixins";
-@import "../../../../node_modules/bootstrap-select/dist/css/bootstrap-select";
+@import "../../../../node_modules/bootstrap-colorpicker/dist/css/bootstrap-colorpicker";
+@import "../../../../node_modules/ng2-datetime/src/vendor/bootstrap-datepicker/bootstrap-datepicker3.min";
+@import "../../../../node_modules/ng2-datetime/src/vendor/bootstrap-timepicker/bootstrap-timepicker.min";
 @import "../../scss/select2-variables";
 @import "../../../../node_modules/select2/src/scss/core";
 @import "../../../../node_modules/select2-bootstrap-theme/src/select2-bootstrap";
@@ -133,5 +135,42 @@
   padding-right: 0;
   padding-left: 20px;
   background: rgb(100, 189, 99);
+}
+
+/**
+ * Bootstrap Colorpicker
+ * setting correct urls
+ */
+
+.colorpicker-saturation {
+  background-image: url("assets/bootstrap-colorpicker/saturation.png");;
+}
+
+.colorpicker-hue {
+  background-image: url("assets/bootstrap-colorpicker/hue.png");
+}
+
+.colorpicker-alpha,
+.colorpicker-color {
+  background-image: url("assets/bootstrap-colorpicker/alpha.png");
+}
+
+.colorpicker.colorpicker-horizontal .colorpicker-hue {
+  background-image: url("assets/bootstrap-colorpicker/hue-horizontal.png");
+}
+
+.colorpicker.colorpicker-horizontal .colorpicker-alpha {
+  background-image: url("assets/bootstrap-colorpicker/alpha-horizontal.png");
+}
+
+/**
+* datetime
+**/
+.input-group.date, .input-group.timepicker {
+  width: auto;
+  box-sizing: border-box;
+  .input-group-addon {
+    padding: .375rem .75rem .375rem .75rem;
+  }
 }
 
