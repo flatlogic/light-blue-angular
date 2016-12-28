@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { Select2Module } from 'ng2-select2';
+import { Autosize } from 'angular2-autosize';
 import 'bootstrap-select/dist/js/bootstrap-select.js';
 import 'parsleyjs';
 import 'twitter-bootstrap-wizard/jquery.bootstrap.wizard.js';
@@ -34,7 +35,8 @@ export const routes = [
     Elements,
     Validation,
     Wizard,
-    FormWizard
+    FormWizard,
+    Autosize
   ],
   imports: [
     CommonModule,
