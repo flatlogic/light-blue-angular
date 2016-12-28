@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { Select2Module } from 'ng2-select2';
+import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
 import { Autosize } from 'angular2-autosize';
 import 'bootstrap-select/dist/js/bootstrap-select.js';
 import 'parsleyjs';
@@ -42,6 +43,7 @@ export const routes = [
     CommonModule,
     FormsModule,
     Select2Module,
+    AlertModule,
     WidgetModule,
     RouterModule.forChild(routes),
   ]
