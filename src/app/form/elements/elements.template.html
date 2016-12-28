@@ -340,7 +340,7 @@
             <div class="form-group row">
               <label class="col-md-3 form-control-label" for="default-textarea">Default textarea</label>
               <div class="col-md-9">
-                <textarea rows="4" class="form-control" id="default-textarea"></textarea>
+                <textarea rows="4" class="form-control input-transparent" id="default-textarea"></textarea>
               </div>
             </div>
             <div class="form-group row">
@@ -348,8 +348,10 @@
                 Auto-growing textarea
               </label>
               <div class="col-md-9">
-                                        <textarea rows="3" class="autogrow form-control transition-height" id="elastic-textarea"
-                                                  placeholder="Try to add few new lines.."></textarea>
+                <textarea rows="3" class="autogrow form-control input-transparent transition-height"
+                          id="elastic-textarea"
+                          autosize
+                          placeholder="Try to add few new lines.."></textarea>
               </div>
             </div>
             <div class="form-group row">
