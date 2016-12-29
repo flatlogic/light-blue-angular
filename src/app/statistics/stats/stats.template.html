@@ -71,25 +71,25 @@
   <div class="col-md-4">
     <section class="widget normal">
       <header>
-        <h4>
+        <h5>
           <i class="fa fa-arrow-right"></i>
           Progressbars
-        </h4>
+        </h5>
       </header>
       <div class="body">
         <h5 class="mt-0 mb-xs weight-normal">Simple one</h5>
-        <div class="progress">
-          <div class="progress-bar" style="width: 60%;"></div>
+        <div class="bg-blue-light m-t-0">
+          <progress class="progress" value="100" max="100" style="width: 60%;"></progress>
         </div>
         <h5 class="mt-0 mb-xs weight-normal">Styled ones</h5>
-        <div class="progress">
-          <div class="progress-bar progress-bar-inverse" style="width: 33%;"></div>
+        <div class="bg-blue-light m-t-0">
+          <progress class="progress progress-success" value="100" max="100" style="width: 33%;"></progress>
         </div>
-        <div class="progress">
-          <div class="progress-bar progress-bar-warning" style="width: 52%;"></div>
+        <div class="bg-blue-light m-t-2">
+          <progress class="progress progress-warning" value="100" max="100" style="width: 52%;"></progress>
         </div>
-        <div class="progress">
-          <div class="progress-bar progress-bar-danger" style="width: 43%;"></div>
+        <div class="bg-blue-light m-t-2">
+          <progress class="progress progress-danger" value="100" max="100" style="width: 43%;"></progress>
         </div>
       </div>
     </section>
@@ -97,28 +97,28 @@
   <div class="col-md-4">
     <section class="widget normal">
       <header>
-        <h4>
+        <h5>
           <i class="fa fa-caret-right"></i>
           Small ones
-        </h4>
+        </h5>
       </header>
       <div class="body">
         <h5 class="mt-0 mb-xs weight-normal">Colors</h5>
-        <div class="progress progress-small">
-          <div class="progress-bar progress-bar-inverse" style="width: 23%;"></div>
+        <div class="bg-blue-light m-t-0">
+          <progress class="progress progress-sm progress-info" value="100" max="100" style="width: 23%;"></progress>
         </div>
-        <div class="progress progress-small">
-          <div class="progress-bar progress-bar-warning" style="width: 76%;"></div>
+        <div class="bg-blue-light m-t-1">
+          <progress class="progress progress-sm progress-warning" value="100" max="100" style="width: 76%;"></progress>
         </div>
-        <div class="progress progress-small">
-          <div class="progress-bar progress-bar-success" style="width: 43%;"></div>
+        <div class="bg-blue-light m-t-1">
+          <progress class="progress progress-sm progress-success" value="100" max="100" style="width: 43%;"></progress>
         </div>
-        <div class="progress progress-small">
-          <div class="progress-bar progress-bar-danger" style="width: 53%;"></div>
+        <div class="bg-blue-light m-t-1">
+          <progress class="progress progress-sm progress-danger" value="100" max="100" style="width: 53%;"></progress>
         </div>
         <h5 class="mt-0 mb-xs weight-normal">Default progressbar</h5>
-        <div class="progress progress-small">
-          <div class="progress-bar" style="width: 60%;"></div>
+        <div class="bg-blue-light m-t-0">
+          <progress class="progress progress-sm" value="100" max="100" style="width: 60%;"></progress>
         </div>
       </div>
     </section>
@@ -126,36 +126,29 @@
   <div class="col-md-4">
     <section class="widget normal">
       <header>
-        <h4>
+        <h5>
           <i class="fa fa-angle-right"></i>
           Some extensions
-        </h4>
+        </h5>
       </header>
       <div class="body">
-        <h5 class="mt-0 mb-xs weight-normal">With embedded percentage</h5>
-        <div class="progress">
-          <div class="progress-bar" style="width: 79%;">79%</div>
-        </div>
+        <div class="alert alert-warning alert-sm">Animated and containg text progress bars are not yet supported in Bootstrap 4</div>
         <h5 class="mt-0 mb-xs weight-normal">Active one</h5>
-        <div class="progress progress-striped active">
-          <div class="progress-bar progress-bar-warning" style="width: 51%;">51%</div>
-        </div>
-        <h5 class="mt-0 mb-xs weight-normal">Inversed progress-bar</h5>
-        <div class="progress progress-striped active">
-          <div class="progress-bar progress-bar-inverse" style="width: 64%;">64%</div>
+        <div class="bg-blue-light m-t-0">
+          <progress class="progress progress-striped progress-animated progress-warning" value="100" max="100" style="width: 51%;"></progress>
         </div>
       </div>
     </section>
   </div>
 </div>
 <div class="row">
-  <div class="col-md-3 col-md-offset-3">
+  <div class="col-md-3 offset-md-3">
     <section class="widget">
       <header>
-        <h4>
+        <h5>
           <i class="fa fa-magnet"></i>
           Server Overview
-        </h4>
+        </h5>
       </header>
       <div class="body">
         <ul class="server-stats">
@@ -163,8 +156,8 @@
             <div class="key pull-right">CPU</div>
             <div class="stat">
               <div class="info">60% / 37&deg;C / 3.3 Ghz</div>
-              <div class="progress progress-small">
-                <div class="progress-bar" style="width: 70%;"></div>
+              <div class="bg-blue-light m-t-0">
+                <progress class="progress progress-sm" value="100" max="100" style="width: 70%;"></progress>
               </div>
             </div>
           </li>
@@ -172,8 +165,8 @@
             <div class="key pull-right">Mem</div>
             <div class="stat">
               <div class="info">29% / 4GB (16 GB)</div>
-              <div class="progress progress-small">
-                <div class="progress-bar progress-bar-warning" style="width: 29%;"></div>
+              <div class="bg-blue-light m-t-0">
+                <progress class="progress progress-sm progress-warning" value="100" max="100" style="width: 29%;"></progress>
               </div>
             </div>
           </li>
@@ -182,8 +175,8 @@
             <div class="stat">
               <div class="info">6 Mb/s <i class="fa fa-caret-down"></i> &nbsp; 3 Mb/s <i class="fa fa-caret-up"></i>
               </div>
-              <div class="progress progress-small">
-                <div class="progress-bar progress-bar-danger" style="width: 48%;"></div>
+              <div class="bg-blue-light m-t-0">
+                <progress class="progress progress-sm progress-danger" value="100" max="100" style="width: 48%;"></progress>
               </div>
             </div>
           </li>
@@ -191,8 +184,8 @@
             <div class="key pull-right">Access</div>
             <div class="stat">
               <div class="info">17 Mb/s <i class="fa fa-caret-up"></i> &nbsp; (+18%)</div>
-              <div class="progress progress-small">
-                <div class="progress-bar progress-bar-success" style="width: 64%;"></div>
+              <div class="bg-blue-light m-t-0">
+                <progress class="progress progress-sm progress-success" value="100" max="100" style="width: 64%;"></progress>
               </div>
             </div>
           </li>
@@ -203,10 +196,10 @@
   <div class="col-md-3">
     <section class="widget widget-overview">
       <header>
-        <h4>
+        <h5>
           <i class="fa fa-lightbulb"></i>
           Stats Overview
-        </h4>
+        </h5>
       </header>
       <div class="body">
         <ul class="overall-stats">
@@ -215,9 +208,7 @@
               <i class="fa fa-user"></i>
             </div>
             <span class="key">Total Users</span>
-            <div class="value pull-right">
-              <span class="badge badge-danger">7 541</span>
-            </div>
+              <span class="tag-pill tag-danger pull-xs-right">7 541</span>
           </li>
           <li>
             <div class="icon pull-left">
@@ -225,7 +216,7 @@
             </div>
             <span class="key">Total Orders</span>
             <div class="value pull-right">
-              <span class="badge badge-warning">2 876</span>
+              <span class="tag-pill tag-warning">2 876</span>
             </div>
           </li>
           <li>
@@ -234,7 +225,7 @@
             </div>
             <span class="key">Desktop</span>
             <div class="value pull-right">
-              <span class="badge badge-info">68%</span>
+              <span class="tag-pill tag-info">68%</span>
             </div>
           </li>
           <li>
@@ -243,7 +234,7 @@
             </div>
             <span class="key">Mobile</span>
             <div class="value pull-right">
-              <span class="badge badge-default">32%</span>
+              <span class="tag-pill tag-default">32%</span>
             </div>
           </li>
         </ul>
