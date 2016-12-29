@@ -185,6 +185,11 @@ $slider-handle-size: 26px;
   display: inline-block;
   vertical-align: middle;
   position: relative;
+
+  .slider-handle {
+    cursor: pointer;
+  }
+
   &.slider-horizontal {
     width: 210px;
     height: $slider-line-height;
@@ -203,7 +208,6 @@ $slider-handle-size: 26px;
     .slider-handle {
       margin-left: -$slider-handle-size/2;
       margin-top: -$slider-handle-size*3/8;
-      cursor: pointer;
       &.triangle {
         border-width: 0 $slider-line-height/2 $slider-line-height/2 $slider-line-height/2;
         width: 0;
