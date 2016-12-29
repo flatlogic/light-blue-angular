@@ -108,8 +108,13 @@ input[type="checkbox"]:focus {
   outline: none;
 }
 
-.input-group-btn > .btn{
+.input-group-btn > .btn, .btn-group > .btn {
   z-index: 2;
+  height: 100%;
+}
+
+.input-group-btn > .btn-group {
+  height: 100%;
 }
 
 /*adding .btn-group here because selectpicker's select become .btn-group
