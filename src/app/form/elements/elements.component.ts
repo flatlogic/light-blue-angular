@@ -30,5 +30,6 @@ export class Elements {
   ngOnInit(): void {
     jQuery('.selectpicker').selectpicker();
     jQuery('#colorpicker').colorpicker(this.colorOptions);
+    jQuery('.js-slider').slider();
   }
 }
