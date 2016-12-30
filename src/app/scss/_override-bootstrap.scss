@@ -94,7 +94,7 @@ legend small{
 }
 
 .form-control{
-  @include transition(border linear .2s, box-shadow linear .2s);
+  transition: border linear .2s, box-shadow linear .2s;
 
   &[type=search], &.search{
     padding-left: 26px;
@@ -186,14 +186,7 @@ legend {
 /***************************/
 .input-group-addon {
   color: $text-muted;
-}
-
-.input-group-addon:first-child {
-  margin-right: -1px;
-}
-
-.input-group-addon:last-child {
-  margin-left: -1px;
+  padding: 0.5rem 0.9rem;
 }
 
 .form-inline .input-group-addon {
