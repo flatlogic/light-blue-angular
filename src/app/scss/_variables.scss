@@ -191,23 +191,14 @@ $icon-font-path: "fonts/bootstrap/" !default;
 // Components
 // -------------------------
 
-$padding-base-vertical:          0.385rem !default; //~5px
-$padding-base-horizontal:        12px !default;
+$input-padding-y:          0.385rem !default; //~5px
+$input-padding-x:          12px !default;
 
-$padding-large-vertical:         0.77rem !default; //~10px
-$padding-large-horizontal:       16px !default;
+$input-padding-y-lg:             0.77rem !default; //~10px
+$input-padding-x-lg:             16px !default;
 
-$padding-small-vertical:         0.31rem !default; //~4px
-$padding-small-horizontal:       10px !default;
-
-$input-padding-x:                $padding-base-horizontal !default;
-$input-padding-y:                $padding-base-vertical !default;
-
-$input-padding-x-lg:             $padding-large-horizontal !default;
-$input-padding-y-lg:             $padding-large-vertical !default;
-
-$input-padding-x-sm:             $padding-small-horizontal !default;
-$input-padding-y-sm:             $padding-small-vertical !default;
+$input-padding-y-sm:             0.31rem !default; //~4px
+$input-padding-x-sm:             10px !default;
 
 $line-height-large:              1.33 !default;
 $line-height-small:              1.5 !default;
