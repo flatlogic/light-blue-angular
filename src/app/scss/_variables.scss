@@ -246,13 +246,9 @@ $input-group-addon-bg:           $bg-addition;
 $input-group-addon-border-color: transparent;
 
 // recalculate input heights
-$input-height-base:              (($font-size-base * $line-height-base) + ($input-padding-y * 2) + ($font-size-base * (2px/$font-size-root))) !default; // ~30.5px
-$input-height-small:             (($font-size-sm * $line-height-sm) + ($input-padding-y-sm * 2) + ($font-size-base * (2px/$font-size-root))) !default;
-$input-height-large:             (($font-size-lg * $line-height-lg) + ($input-padding-y-lg * 2) + ($font-size-base * (2px/$font-size-root))) !default;
-
-$input-height-lg:                $input-height-large !default;
-$input-height-sm:                $input-height-small !default;
-$input-height:                   $input-height-base !default;
+$input-height:              (($font-size-base * $line-height-base) + ($input-padding-y * 2) + ($font-size-base * (2px/$font-size-root))) !default; // ~30.5px
+$input-height-sm:             (($font-size-sm * $line-height-sm) + ($input-padding-y-sm * 2) + ($font-size-base * (2px/$font-size-root))) !default;
+$input-height-lg:             (($font-size-lg * $line-height-lg) + ($input-padding-y-lg * 2) + ($font-size-base * (2px/$font-size-root))) !default;
 
 $form-group-margin-bottom:               1.39rem;
 
