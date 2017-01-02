@@ -19,6 +19,9 @@
 }
 
 .bootstrap-select {
+  &.btn-group.open {
+    z-index: 5;
+  }
   .btn.dropdown-toggle {
     padding-left: 10px;
     box-sizing: border-box;
