@@ -18,7 +18,7 @@
   height: auto;
 }
 
-.bootstrap-select {
+.bootstrap-select, .input-group-btn:not(first-child) .bootstrap-select {
   &.btn-group.open {
     z-index: 5;
   }

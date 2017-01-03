@@ -119,8 +119,12 @@ input[type="checkbox"]:focus {
 }
 
 .input-group-btn > .btn, .btn-group > .btn {
-  z-index: 2;
+  z-index: 3;
   height: 100%;
+}
+
+.input-group-btn:not(:first-child) > .btn, .input-group-btn:not(:first-child) > .btn-group {
+  z-index: 3;
 }
 
 .input-group-btn > .btn-group {
