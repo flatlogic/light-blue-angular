@@ -20,7 +20,11 @@ export class Account {
   }
 
   ngOnInit(): void {
-    jQuery('.select2').select2();
+    jQuery('.parsleyjs').parsley({
+      errorsContainer:  function ( elem, isRadioOrCheckbox ) {
+        return jQuery(elem.$element).closest('.form-group').children('label');
+      }
+    });
     jQuery('.selectpicker').selectpicker();
   }
 }
