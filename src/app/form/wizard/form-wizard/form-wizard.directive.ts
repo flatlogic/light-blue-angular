@@ -33,6 +33,6 @@ export class FormWizard {
   }
 
   ngOnInit(): void {
-    this.render();
+    setTimeout(() => {this.render()});  //Timeout for smooth progress bar animation on wizard page enter
   }
 }
