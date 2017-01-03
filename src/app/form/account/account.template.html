@@ -178,13 +178,21 @@
               <div class="form-group row">
                 <label class="col-form-label col-md-4">State <span class="required">*</span></label>
                 <div class="col-md-4">
-                  <select2 [data]="getSelect2StateList()" [width]="250" [theme]="'bootstrap'"></select2>
+                  <select2
+                    [data]="getSelect2StateList()"
+                    class="select-block-level chzn-select"
+                    [width]="'100%'"
+                    [theme]="'bootstrap'"></select2>
                 </div>
               </div>
               <div class="form-group row">
                 <label class="col-form-label col-md-4">Country <span class="required">*</span></label>
                 <div class="col-md-4">
-                  <select2 [data]="getSelect2CountryList()" [width]="250" [theme]="'bootstrap'"></select2>
+                  <select2
+                    [data]="getSelect2CountryList()"
+                    [width]="'100%'"
+                    class="select-block-level chzn-select"
+                    [theme]="'bootstrap'"></select2>
                 </div>
               </div>
             </fieldset>
