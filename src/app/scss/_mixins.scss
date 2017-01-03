@@ -1,3 +1,31 @@
+@mixin nav-justified {
+  width: 100%;
+
+  .nav-item {
+    float: none;
+  }
+
+  .nav-link {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  > .dropdown .dropdown-menu { //todo: remove child selector
+    top: auto;
+    left: auto;
+  }
+
+  @include media-breakpoint-up(md) {
+    .nav-item {
+      display: table-cell;
+      width: 1%;
+    }
+    .nav-link {
+      margin-bottom: 0;
+    }
+  }
+}
+
 @mixin bold-font{
   font-weight: $font-weight-base;
   color: $text-bold;
@@ -20,7 +48,7 @@
 @mixin input-block-level {
   display: block;
   width: 100%;
-  min-height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+  min-height: $input-height; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
   @include box-sizing(border-box); // Makes inputs behave like true block-level elements
 }
 

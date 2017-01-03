@@ -42,6 +42,10 @@ h2 small { font-size: $font-size-base * 1.25; } // ~18px
 h3 small { font-size: $font-size-base; }
 h4 small { font-size: $font-size-base; }
 
+small {
+  font-size: 92%;
+}
+
 .text-primary        { color: $brand-primary; }
 .text-warning        { color: $brand-warning; }
 .text-danger         { color: $brand-danger; }
@@ -61,6 +65,15 @@ h4 small { font-size: $font-size-base; }
 code,
 pre {
   border-radius: $border-radius-base;
+}
+
+
+/***************************/
+/*         Grid           */
+/***************************/
+
+.row {
+  box-sizing: border-box;
 }
 
 /***************************/
@@ -84,7 +97,17 @@ legend small{
 }
 
 .form-control{
-  @include transition(border linear .2s, box-shadow linear .2s);
+  transition: border linear .2s, box-shadow linear .2s;
+  box-sizing: border-box;
+  height: $input-height;
+
+  &.form-control-lg {
+    height: $input-height-lg;
+  }
+
+  &.form-control-sm {
+    height: $input-height-sm;
+  }
 
   &[type=search], &.search{
     padding-left: 26px;
@@ -98,8 +121,17 @@ input[type="checkbox"]:focus {
   outline: none;
 }
 
-.input-group-btn > .btn{
-  z-index: 2;
+.input-group-btn > .btn, .btn-group > .btn {
+  z-index: 3;
+  height: 100%;
+}
+
+.input-group-btn:not(:first-child) > .btn, .input-group-btn:not(:first-child) > .btn-group {
+  z-index: 3;
+}
+
+.input-group-btn > .btn-group {
+  height: 100%;
 }
 
 /*adding .btn-group here because selectpicker's select become .btn-group
@@ -118,8 +150,9 @@ textarea,
 
 .help-block {
   margin-top: 0;
-  font-size: $font-size-small - 1;
+  font-size: $font-size-smaller;
   color: $text-muted;
+  display: block;
 }
 
 legend {
@@ -159,7 +192,7 @@ legend {
 }
 
 .form-group{
-  margin-bottom: $line-height-computed;
+  margin-bottom: $form-group-margin-bottom;   //~18px
 }
 
 .form-horizontal.form-label-left {
@@ -175,6 +208,18 @@ legend {
 /***************************/
 .input-group-addon {
   color: $text-muted;
+
+  .input-group-lg & > *{
+    line-height: $line-height-lg;
+  }
+
+  .input-group-sm & > *{
+    line-height: $line-height-sm;
+  }
+}
+
+.form-inline .input-group-addon {
+  display: table-cell;
 }
 
 /***************************/
@@ -280,23 +325,16 @@ button.dropdown-toggle{
   width: auto;
 }
 
-// Dropdown arrow/caret
-// --------------------
 .caret {
   display: inline-block;
   width: 0;
   height: 0;
-  vertical-align: top;
-  border-top:   4px solid $black;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top:   4px dashed;
+  border-top:   4px solid \9; // IE8
   border-right: 4px solid transparent;
   border-left:  4px solid transparent;
-  content: "";
-}
-
-// Place the caret
-.dropdown .caret {
-  margin-top: 8px;
-  margin-left: 2px;
 }
 
 /***************************/
@@ -336,6 +374,12 @@ button.dropdown-toggle{
 
 .btn-secondary {
   @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+}
+
+.btn, .btn-inverse, .btn-gray {
+  &:not(.active) {
+    box-shadow: none !important;
+  }
 }
 
 /***************************/
@@ -627,10 +671,17 @@ button.dropdown-toggle{
   background: $bg-addition;
 }
 
+.nav-pills .nav-link {
+  padding: 0.8em 1.1em;
+}
+
 // Active state
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
-.nav-pills > li.active > a:focus {
+.nav-pills > li.active > a:focus,
+.nav-pills > li > a.nav-link.active,
+.nav-pills > li > a.nav-link.active:hover,
+.nav-pills > li > a.nav-link.active:focus{
   color: $widget-header-color;
   background: none;
 }
@@ -847,13 +898,6 @@ button.dropdown-toggle{
   @include tag-variant($tag-default-bg);
 }
 
-.help-block{
-  margin-top: 5px;
-  font-size: $font-size-smaller;
-  color: $text-muted;
-  display: block;
-}
-
 /***************************/
 /*        Jumbotron        */
 /***************************/
@@ -966,7 +1010,7 @@ button.dropdown-toggle{
   margin-bottom: $line-height-computed/2;
 }
 
-.progress-bar {
+.progress-bar, .progress {
   border-radius: 0.5rem;
 }
 

@@ -72,14 +72,17 @@ $text-muted: darken($text-color, 15%) !default;
 
 $font-family-sans-serif:  "Open Sans", sans-serif !default;
 
-$font-size-root: 14px !default;
-$font-size-base:          0.95rem !default;
+$font-size-root:          13px !default;
+$font-size-base:          1rem !default;
 $font-size-large:         $font-size-base * 1.25 !default;
-$font-size-larger:        $font-size-base + 1;
-$font-size-small:         0.75rem !default;
+$font-size-larger:        $font-size-base * 1.1;
+$font-size-small:         0.92rem !default;
 $font-size-mini:          $font-size-base * 0.75 !default;
 $font-size-index:         $font-size-base * 0.7 !default;
 $font-size-smaller:       $font-size-base * 0.85 !default;
+
+$font-size-lg:            $font-size-large !default;
+$font-size-sm:            $font-size-small !default;
 
 $font-weight-bold: 700 !default;
 $font-weight-semi-bold: 600 !default;
@@ -144,7 +147,7 @@ $header-dropdown-item-hover:             $brand-primary;
 
 $nav-tabs-link-color: $widget-color;
 
-$input-transparent-color: $text-color;
+$input-transparent-color: $widget-color;
 $input-transparent-placeholder-color: rgba(#eee, .76);
 
 // Widgets
@@ -188,17 +191,20 @@ $icon-font-path: "fonts/bootstrap/" !default;
 // Components
 // -------------------------
 
-$padding-base-vertical:          0.3rem !default;
-$padding-base-horizontal:        12px !default;
+$input-padding-y:          0.385rem !default; //~5px
+$input-padding-x:          12px !default;
 
-$padding-large-vertical:    10px !default;
-$padding-large-horizontal:  16px !default;
+$input-padding-y-lg:             0.77rem !default; //~10px
+$input-padding-x-lg:             16px !default;
 
-$padding-small-vertical:         0.25rem !default;
-$padding-small-horizontal:       10px !default;
+$input-padding-y-sm:             0.31rem !default; //~4px
+$input-padding-x-sm:             10px !default;
 
 $line-height-large:              1.33 !default;
 $line-height-small:              1.5 !default;
+
+$line-height-sm:                 $line-height-small !default;
+$line-height-lg:                 $line-height-large !default;
 
 $border-radius-base:        3px !default;
 
@@ -207,8 +213,9 @@ $border-radius-base:        3px !default;
 
 $btn-font-weight:                $font-weight-base !default;
 
-$btn-default-bg:                 #666 !default;
-$btn-default-hover-bg:           #4d4d4d !default;
+$btn-default-color:              $white !default;
+$btn-default-bg:                 $gray !default;
+$btn-default-border:             rgba(0, 0, 0, 0.15) !default;
 
 $btn-secondary-color:              #fff !default;
 $btn-secondary-bg:                 $gray !default;
@@ -217,20 +224,24 @@ $btn-secondary-border:             rgba(0, 0, 0, 0.15) !default;
 $btn-inverse-color:              $gray-dark !default;
 $btn-inverse-bg: $white-dark !default;
 
+$btn-border: #bbb !default;
+
 // Forms
 // -------------------------
 
 $input-color:                    $gray-dark;
-$input-border:                   #ccc !default;
+$input-border-color:                   #ccc !default;
 $input-border-focus:             #66afe9 !default;
 
 $input-group-addon-bg:           $bg-addition;
 $input-group-addon-border-color: transparent;
 
 // recalculate input heights
-$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
-$input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
+$input-height:              (($font-size-base * $line-height-base) + ($input-padding-y * 2) + ($font-size-base * (2px/$font-size-root))) !default; // ~30.5px
+$input-height-sm:             (($font-size-sm * $line-height-sm) + ($input-padding-y-sm * 2) + ($font-size-base * (2px/$font-size-root))) !default;
+$input-height-lg:             (($font-size-lg * $line-height-lg) + ($input-padding-y-lg * 2) + ($font-size-base * (2px/$font-size-root))) !default;
 
+$form-group-margin-bottom:               1.39rem;
 
 $legend-color:                   $white !default;
 
