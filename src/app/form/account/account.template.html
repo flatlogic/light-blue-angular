@@ -5,9 +5,9 @@
     <div class="col-lg-7">
       <section class="widget">
         <header>
-          <h5><i class="fa fa-user"></i> Account Profile
+          <h4><i class="fa fa-user"></i> Account Profile
             <small>Create new or edit existing user</small>
-          </h5>
+          </h4>
         </header>
         <div class="body">
           <form id="user-form" class="form-horizontal form-label-left"
@@ -38,14 +38,14 @@
             <fieldset>
               <legend class="section">Personal Info</legend>
               <div class="form-group row">
-                <label class="form-control-label col-md-4" for="prefix">Prefix</label>
+                <label class="col-form-label col-md-4" for="prefix">Prefix</label>
 
                 <div class="col-md-3">
                   <input type="text" id="prefix" name="prefix" class="form-control input-transparent">
                 </div>
               </div>
               <div class="form-group row">
-                <label class="form-control-label col-md-4" for="first-name">First Name
+                <label class="col-form-label col-md-4" for="first-name">First Name
                   <span class="required">*</span>
                 </label>
 
@@ -54,20 +54,20 @@
                 </div>
               </div>
               <div class="form-group row">
-                <label class="form-control-label col-md-4" for="last-name">Last Name <span
+                <label class="col-form-label col-md-4" for="last-name">Last Name <span
                   class="required">*</span></label>
 
                 <div class="col-md-7"><input type="text" id="last-name" name="last-name" required="required"
                                              class="form-control input-transparent"></div>
               </div>
               <div class="form-group row">
-                <label for="middle-name" class="form-control-label col-md-4">Middle Name / Initial</label>
+                <label for="middle-name" class="col-form-label col-md-4">Middle Name / Initial</label>
 
                 <div class="col-md-7"><input id="middle-name" class="form-control input-transparent" type="text" name="middle-name"
                                              value=""></div>
               </div>
               <div class="form-group row">
-                <label class="form-control-label col-md-4">Gender</label>
+                <label class="col-form-label col-md-4">Gender</label>
 
                 <div class="col-md-6">
                   <div id="gender" class="btn-group" data-toggle="buttons">
@@ -83,7 +83,7 @@
                 </div>
               </div>
               <div class="form-group row">
-                <label for="date-of-birth" class="form-control-label col-md-4">Date Of Birth <span
+                <label for="date-of-birth" class="col-form-label col-md-4">Date Of Birth <span
                   class="required">*</span></label>
 
                 <div class="col-md-5"><input id="date-of-birth" class="date-picker form-control input-transparent" required="required"
@@ -93,7 +93,7 @@
             <fieldset>
               <legend class="section">Contact Info</legend>
               <div class="form-group row">
-                <label id="email-label" for="email" class="form-control-label col-md-4">Email <span class="required">*</span></label>
+                <label id="email-label" for="email" class="col-form-label col-md-4">Email <span class="required">*</span></label>
 
                 <div class="col-xs-12 col-md-6">
                   <div class="input-group">
@@ -108,7 +108,7 @@
                 </div>
               </div>
               <div class="form-group row">
-                <label for="phone" class="form-control-label col-md-4">Phone <span class="required">*</span></label>
+                <label for="phone" class="col-form-label col-md-4">Phone <span class="required">*</span></label>
 
                 <div class="col-xs-12 col-md-6">
                   <div class="input-group">
@@ -126,7 +126,7 @@
                 </div>
               </div>
               <div class="form-group row">
-                <label for="fax" class="form-control-label col-md-4">Fax</label>
+                <label for="fax" class="col-form-label col-md-4">Fax</label>
 
                 <div class="col-xs-12 col-md-6">
                   <div class="input-group">
@@ -152,7 +152,7 @@
                 </button>
               </legend>
               <div class="form-group row">
-                <label for="address" class="form-control-label col-md-4">Address <span class="required">*</span></label>
+                <label for="address" class="col-form-label col-md-4">Address <span class="required">*</span></label>
 
                 <div class="col-xs-12 col-md-6">
                   <div class="input-group">
@@ -170,19 +170,19 @@
                 </div>
               </div>
               <div class="form-group row">
-                <label for="city" class="form-control-label col-md-4">City <span class="required">*</span></label>
+                <label for="city" class="col-form-label col-md-4">City <span class="required">*</span></label>
 
                 <div class="col-xs-12 col-md-6"><input id="city" class="form-control input-transparent" required="required" type="text"
                                                        value="" name="city"></div>
               </div>
               <div class="form-group row">
-                <label class="form-control-label col-md-4">State <span class="required">*</span></label>
+                <label class="col-form-label col-md-4">State <span class="required">*</span></label>
                 <div class="col-md-4">
                   <select2 [data]="getSelect2StateList()" [width]="250" [theme]="'bootstrap'"></select2>
                 </div>
               </div>
               <div class="form-group row">
-                <label class="form-control-label col-md-4">Country <span class="required">*</span></label>
+                <label class="col-form-label col-md-4">Country <span class="required">*</span></label>
                 <div class="col-md-4">
                   <select2 [data]="getSelect2CountryList()" [width]="250" [theme]="'bootstrap'"></select2>
                 </div>
@@ -203,7 +203,7 @@
     <div class="col-lg-5">
       <section class="widget">
         <header>
-          <h5><i class="fa fa-cogs"></i> Account settings</h5>
+          <h4><i class="fa fa-cogs"></i> Account settings</h4>
 
           <div class="actions">
             <button class="btn btn-sm btn-inverse"><i class="fa fa-arrow-down"></i> View more</button>

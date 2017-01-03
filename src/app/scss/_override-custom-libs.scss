@@ -118,8 +118,8 @@ svg .title {
 /*!
  * Bootstrap-select
  */
-.bootstrap-select .btn:focus{
-  outline: 0 !important;
+.bootstrap-select .btn:focus, .bootstrap-select > .btn.dropdown-toggle:focus{
+  outline: none !important;
 }
 
 /**
