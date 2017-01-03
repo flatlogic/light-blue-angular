@@ -9,7 +9,8 @@ declare var jQuery: any;
   encapsulation: ViewEncapsulation.None,
 })
 export class Account {
-  date: Date = new Date(2016, 5, 10);
+  birthDate: Date = new Date(2016, 5, 10);
+  expirationDate: Date = new Date(2017, 5, 10);
 
   getSelect2StateList(): [string] {
     return data.select2StateData;
@@ -17,6 +18,14 @@ export class Account {
 
   getSelect2CountryList(): [string] {
     return data.select2CountryData;
+  }
+
+  getSelect2WebsiteAssociateList(): [string] {
+    return data.select2WebsiteAssociateList;
+  }
+
+  getSelect2AccountGroupsList(): [string] {
+    return data.select2AccountGroupsList;
   }
 
   ngOnInit(): void {

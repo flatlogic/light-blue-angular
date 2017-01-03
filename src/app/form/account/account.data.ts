@@ -59,3 +59,7 @@ export const select2StateData: [string] = ['Amsterdam', 'Antwerp', 'Athens', 'Ba
   'Zagreb', 'Zaragoza', 'Łódź'
 ];
 
+export const select2WebsiteAssociateList: [string] = ['Admin', 'Main Website'];
+
+export const select2AccountGroupsList: [string] = ['Subscriber', 'Retailer', 'Supplier', 'Manager'];
+

@@ -89,7 +89,7 @@
                 <div class="col-md-6">
                   <datetime
                     id="date-of-birth"
-                    [(ngModel)]="date"
+                    [(ngModel)]="birthDate"
                     name="datetime"
                     [timepicker]="false"
                     datetime-transparent
@@ -231,16 +231,16 @@
                 <label for="datetimepicker">
                   Account expiration date
                 </label>
-                <datetime class="form-line" [timepicker]="false" [(ngModel)]="date" name="datetime" id="datetimepicker"></datetime>
+                <datetime class="form-line" [timepicker]="false" [(ngModel)]="expirationDate" name="datetime" id="datetimepicker"></datetime>
                 <p class="help-block">Bootstrap datepicker</p>
               </div>
               <div class="form-group">
                 <label for="website">Associate to Website</label>
-                <select id="website" class="select2 form-control"
-                        data-minimum-results-for-search="10">
-                  <option selected="selected" value="0">Admin</option>
-                  <option value="1">Main Website</option>
-                </select>
+                <select2 id="website"
+                         [data]="getSelect2WebsiteAssociateList()"
+                         [width]="'100%'"
+                         class="select-block-level chzn-select"
+                         [theme]="'bootstrap'"></select2>
               </div>
               <div class="form-group">
                 <label for="created_by">Created By</label>
@@ -249,14 +249,11 @@
               </div>
               <div class="form-group">
                 <label for="groups">Account Group</label>
-                <select id="groups" name="groups" class="select2 select-block-level" multiple
-                        data-placeholder="Choose one or more groups for account">
-                  <option value="0">Subscriber</option>
-                  <option value="1">Retailer</option>
-                  <option value="2">Supplier</option>
-                  <option value="3">Manager</option>
-                </select>
-
+                <select2 id="groups"
+                         [data]="getSelect2AccountGroupsList()"
+                         [width]="'100%'"
+                         class="select-block-level chzn-select"
+                         [theme]="'bootstrap'"></select2>
               </div>
               <div class="form-group row">
                 <div class="checkbox abc-checkbox">

@@ -137,6 +137,10 @@ svg .title {
   border-radius: $input-border-radius;
 }
 
+.select2.select2-container .select2-selection--single .select2-selection__rendered {
+  padding-left: 0;
+}
+
 /**
  * setting correct urls
  */

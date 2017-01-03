@@ -19,21 +19,13 @@
 **/
 #datetimepicker {
   .input-group {
-    width: auto;
+    width: 100%;
     display: flex !important;
     .input-group-addon {
       padding: .375rem .75rem .375rem .75rem;
     }
   }
 }
-
-///**
-//* select2
-//**/
-//.select2.select2-container {
-//  width: auto !important;
-//  display: inherit;
-//}
 
 /**
  * Bootstrap select
