@@ -296,6 +296,17 @@ a.fc-event{
   height: 15px;
 }
 
+.abc-checkbox label:after {
+  top: -1px;
+  left: -1px;
+}
+
+.abc-checkbox, .abc-radio {
+  label {
+    font-weight: $font-weight-normal;
+  }
+}
+
 /***********************************/
 /**        Select2       **/
 /***********************************/
