@@ -86,8 +86,15 @@
                 <label for="date-of-birth" class="col-form-label col-md-4">Date Of Birth <span
                   class="required">*</span></label>
 
-                <div class="col-md-5"><input id="date-of-birth" class="date-picker form-control input-transparent" required="required"
-                                             type="text" name="date-of-birth" value=""></div>
+                <div class="col-md-6">
+                  <datetime
+                    id="date-of-birth"
+                    [(ngModel)]="date"
+                    name="datetime"
+                    [timepicker]="false"
+                    datetime-transparent
+                    [showAddon]="false"></datetime>
+                </div>
               </div>
             </fieldset>
             <fieldset>

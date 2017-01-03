@@ -1033,6 +1033,13 @@ $i: 1;
   }
 }
 
+.input-group .form-control:not(:last-child) {
+  &.addon-hidden {
+    border-top-right-radius: $border-radius-base;
+    border-bottom-right-radius: $border-radius-base;
+  }
+}
+
 .select-block-level{
   width: 100%;
 }

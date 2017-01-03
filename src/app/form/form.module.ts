@@ -24,6 +24,7 @@ import {Validation} from './validation/validation.component'
 import {Wizard} from './wizard/wizard.component'
 import {FormWizard} from './wizard/form-wizard/form-wizard.directive';
 import {WidgetModule} from '../layout/widget/widget.module';
+import {DatetimeTransparent} from '../ui/datetime-transparent/datetime-transparent.directive';
 
 
 export const routes = [
@@ -44,7 +45,8 @@ export const routes = [
     Validation,
     Wizard,
     FormWizard,
-    Autosize
+    Autosize,
+    DatetimeTransparent
   ],
   imports: [
     CommonModule,

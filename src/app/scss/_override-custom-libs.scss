@@ -298,3 +298,14 @@ a.fc-event{
 .select2-container--bootstrap .select2-search--dropdown .select2-search__field{
   padding-left: 28px;
 }
+
+/**
+* datetime
+**/
+.input-group.date, .input-group.timepicker {
+  width: auto;
+  box-sizing: border-box;
+  .input-group-addon {
+    padding: .375rem .75rem .375rem .75rem;
+  }
+}
