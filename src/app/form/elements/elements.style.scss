@@ -100,18 +100,20 @@
 *  checkbox and radio
 **/
 
-.abc-checkbox, .abc-radio {
-  margin-left: -15px;
+.checkbox-controls-widget, .radio-controls-widget {
+  .abc-checkbox, .abc-radio {
+    margin-left: -15px;
 
-  label {
-    font-weight: $font-weight-normal;
+    label {
+      font-weight: $font-weight-normal;
+    }
   }
-}
 
-.abc-checkbox {
-  label:after {
-    top: -1px;
-    left: -1px;
+  .abc-checkbox {
+    label:after {
+      top: -1px;
+      left: -1px;
+    }
   }
 }
 
