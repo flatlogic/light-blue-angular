@@ -12,7 +12,7 @@ const PEOPLE = [
     'description': 'Palo Alto',
     'date': 'June 27, 2013',
     'status': {
-      'progress': '29%',
+      'progress': '29',
       'type': 'success'
     }
   },
@@ -26,7 +26,7 @@ const PEOPLE = [
     'description': 'Vilnia',
     'date': 'January 1, 1442',
     'status': {
-      'progress': '19%',
+      'progress': '19',
       'type': 'danger'
     }
   },
@@ -40,7 +40,7 @@ const PEOPLE = [
     'description': 'Berlin',
     'date': 'August 6, 2013',
     'status': {
-      'progress': '49%',
+      'progress': '49',
       'type': 'bar-gray-light'
     }
   },
@@ -54,7 +54,7 @@ const PEOPLE = [
     'description': 'San Francisco',
     'date': 'August 19, 2013',
     'status': {
-      'progress': '69%'
+      'progress': '69'
     }
   },
   {
@@ -67,7 +67,7 @@ const PEOPLE = [
     'description': 'Brasilia',
     'date': 'October 1, 2013',
     'status': {
-      'progress': '9%',
+      'progress': '9',
       'type': 'bar-gray-light'
     }
   },
@@ -81,7 +81,7 @@ const PEOPLE = [
     'description': 'Helsinki',
     'date': 'October 29, 2013',
     'status': {
-      'progress': '38%',
+      'progress': '38',
       'type': 'warning'
     }
   },
@@ -95,7 +95,7 @@ const PEOPLE = [
     'description': 'Radashkovichi',
     'date': 'November 11, 2013',
     'status': {
-      'progress': '83%',
+      'progress': '83',
       'type': 'danger'
     }
   },
@@ -109,7 +109,7 @@ const PEOPLE = [
     'description': 'Mumbai',
     'date': 'December 2, 2013',
     'status': {
-      'progress': '40%',
+      'progress': '40',
       'type': 'info'
     }
   },
@@ -123,7 +123,7 @@ const PEOPLE = [
     'description': 'Singapore',
     'date': 'December 6, 2013',
     'status': {
-      'progress': '18%',
+      'progress': '18',
       'type': 'warning'
     }
   },
@@ -137,7 +137,7 @@ const PEOPLE = [
     'description': 'Portland',
     'date': 'December 13, 2013',
     'status': {
-      'progress': '54%',
+      'progress': '54',
       'type': 'bar-gray-light'
     }
   },
@@ -151,7 +151,7 @@ const PEOPLE = [
     'description': 'Minsk',
     'date': 'December 14, 2013',
     'status': {
-      'progress': '25%'
+      'progress': '25'
     }
   },
   {
@@ -164,7 +164,7 @@ const PEOPLE = [
     'description': 'Hrodna',
     'date': 'July 9, 2012',
     'status': {
-      'progress': '50%',
+      'progress': '50',
       'type': 'warning'
     }
   },
@@ -178,7 +178,7 @@ const PEOPLE = [
     'description': 'Los Angeles',
     'date': 'August 2, 2012',
     'status': {
-      'progress': '8%',
+      'progress': '8',
       'type': 'success'
     }
   },
@@ -192,7 +192,7 @@ const PEOPLE = [
     'description': 'Panama',
     'date': 'September 3, 2012',
     'status': {
-      'progress': '80%',
+      'progress': '80',
       'type': 'bar-gray-light'
     }
   },
@@ -206,7 +206,7 @@ const PEOPLE = [
     'description': 'Amsterdam',
     'date': 'November 13, 2012',
     'status': {
-      'progress': '10%',
+      'progress': '10',
       'type': 'bar-gray-light'
     }
   },
@@ -220,7 +220,7 @@ const PEOPLE = [
     'description': 'Sluck',
     'date': 'December 5, 2012',
     'status': {
-      'progress': '93%'
+      'progress': '93'
     }
   },
   {
@@ -233,7 +233,7 @@ const PEOPLE = [
     'description': 'Tokyo',
     'date': 'December 8, 2012',
     'status': {
-      'progress': '44%',
+      'progress': '44',
       'type': 'danger'
     }
   },
@@ -247,7 +247,7 @@ const PEOPLE = [
     'description': 'Cape Town',
     'date': 'December 29, 2012',
     'status': {
-      'progress': '5%',
+      'progress': '5',
       'type': 'bar-gray-light'
     }
   },
@@ -261,7 +261,7 @@ const PEOPLE = [
     'description': 'Mahileu',
     'date': 'December 7, 2013',
     'status': {
-      'progress': '0%',
+      'progress': '0',
       'type': 'gray-light'
     }
   }
