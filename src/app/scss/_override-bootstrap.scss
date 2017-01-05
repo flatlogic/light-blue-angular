@@ -1031,12 +1031,15 @@ button.dropdown-toggle{
 
 .progress[value]::-ms-fill {
   box-shadow: $progress-value-box-shadow;
+  transition: width 0.4s ease;
 }
 .progress[value]::-moz-progress-bar {
   box-shadow: $progress-value-box-shadow;
+  transition: width 0.4s ease;
 }
 .progress[value]::-webkit-progress-value {
   box-shadow: $progress-value-box-shadow;
+  transition: width 0.4s ease;
 }
 
 .progress[value] {
