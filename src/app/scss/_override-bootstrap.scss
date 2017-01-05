@@ -994,31 +994,45 @@ button.dropdown-toggle{
 /*         Progress        */
 /***************************/
 
-.progress{
+.progress {
+  border-radius: 0;
+  height: $progress-height;
   background: rgba(black, .15);
   transition: width 0.6s ease;
-  overflow: hidden;
+  margin-bottom: 0;
+
+  @include progress-variant($brand-primary);
+
+  &.progress-sm {
+    height: $progress-height-sm;
+  }
+
+  &.progress-xs {
+    height: $progress-height-sm;
+  }
 }
 
-.progress-sm{
-  height: 10px;
-  margin-bottom: $line-height-computed/2;
+.progress-success {
+  @include progress-variant($brand-success);
 }
-
-.progress-xs{
-  height: 5px;
-  margin-bottom: $line-height-computed/2;
+.progress-info {
+  @include progress-variant($brand-info);
 }
-
-.progress-bar, .progress {
-  border-radius: 0.5rem;
+.progress-warning {
+  @include progress-variant($brand-warning);
+}
+.progress-danger {
+  @include progress-variant($brand-danger);
+}
+.progress-inverse {
+  @include progress-variant($widget-color);
 }
 
 .progress[value] {
   background: none !important;
-  border-radius: 0.5rem;
   -webkit-appearance: none;
   appearance: none;
+  border: 0;
 }
 
 .table {
