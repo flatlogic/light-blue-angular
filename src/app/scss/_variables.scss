@@ -331,12 +331,14 @@ $pagination-disabled-border:           transparent !default;
 // Progress
 // --------------------------------------------------
 
-$progress-border-radius: 0;
-$progress-container-border-radius: 0.23rem; //~3px
+$progress-border-radius: 0.23rem; //~3px;
 $progress-height: 1.38rem;  //~18px
 $progress-height-sm: 0.62rem;  //~8px
 $progress-height-xs: 0.38rem;  //~5px
 
+$progress-value-box-shadow: inset 0 -1px 0 rgba(0,0,0,0.15);
+
+$progress-bg: rgba(0,0,0,0.15) !default;
 $progress-bar-bg: $brand-primary !default;
 
 // Breadcrumbs

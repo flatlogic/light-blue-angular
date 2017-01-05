@@ -999,7 +999,8 @@ button.dropdown-toggle{
   height: $progress-height;
   background: rgba(black, .15);
   transition: width 0.6s ease;
-  margin-bottom: 0;
+  margin-bottom: $form-group-margin-bottom;
+  box-shadow: $progress-box-shadow;
 
   @include progress-variant($brand-primary);
 
@@ -1026,6 +1027,16 @@ button.dropdown-toggle{
 }
 .progress-inverse {
   @include progress-variant($widget-color);
+}
+
+.progress[value]::-ms-fill {
+  box-shadow: $progress-value-box-shadow;
+}
+.progress[value]::-moz-progress-bar {
+  box-shadow: $progress-value-box-shadow;
+}
+.progress[value]::-webkit-progress-value {
+  box-shadow: $progress-value-box-shadow;
 }
 
 .progress[value] {
