@@ -1125,18 +1125,15 @@ $i: 1;
     color: $widget-header-color;
   }
 
-  .nav > li.active{
-    margin-bottom: 0;
-    & > a{
-      border-color: transparent;
-      background: $widget-bg;
-      &:hover{
-        color: $widget-color;
-      }
+  .nav > .nav-item > .active{
+    border-color: transparent;
+    background: $widget-bg;
+    &:hover{
+      color: $widget-color;
     }
   }
 
-  .nav > li:not(.active) > a{
+  .nav > .nav-item > .nav-link:not(.active) {
     background: $widget-bg;
     border-bottom: none;
     &:hover{
