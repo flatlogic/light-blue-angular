@@ -449,8 +449,8 @@ button.dropdown-toggle{
 // BOTTOM
 // ------
 
-.tabs-below > .nav-tabs > li {
-  margin-top: -1px;
+.tabs-below > .nav-tabs > .nav-item {
+  margin-top: 0;
   margin-bottom: 0;
 }
 .tabs-below > .nav-tabs > li > a {
