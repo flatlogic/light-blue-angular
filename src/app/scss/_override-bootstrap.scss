@@ -552,7 +552,7 @@ button.dropdown-toggle{
   background-color: rgba($widget-bg-common, .25);
 }
 
-.nav-tabs > li > a {
+.nav-tabs > .nav-item > .nav-link {
   border-radius: $border-radius-base $border-radius-base 0 0;
   color: $nav-tabs-link-color;
   padding-top: 8px;

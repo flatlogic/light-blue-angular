@@ -1119,7 +1119,7 @@ $i: 1;
     border-bottom: none;
   }
 
-  .nav > li > a{
+  .nav > .nav-item > .nav-link{
     padding-top: 10px;
     padding-bottom: 10px;
     color: $widget-header-color;
@@ -1149,6 +1149,40 @@ $i: 1;
 
 //base look for inner tabs
 .widget:not(.widget-tabs){
+
+  .nav > .nav-item  {
+    margin-bottom: 0;
+  }
+
+  .nav > .nav-item > .nav-link.active {
+    background: $nav-tabs-tab-content-bg;
+    &:hover{
+      background: $nav-tabs-tab-content-bg;
+    }
+  }
+
+  .nav > .nav-item > .nav-link {
+    &:focus {
+      background: $nav-tabs-tab-content-bg;
+    }
+    &:hover {
+      background: $nav-tabs-tab-content-bg;
+    }
+  }
+
+  .nav > .nav-item.dropdown.open > .nav-link.dropdown-toggle {
+    background-color: transparent;
+  }
+
+  .nav > .nav-item.dropdown.open {
+    background: $nav-tabs-tab-content-bg;
+    border-color: transparent;
+
+    > .nav-link.dropdown-toggle {
+      background-color: transparent;
+    }
+  }
+
   .tab-content{
     background: $nav-tabs-tab-content-bg;
     padding: 10px;
