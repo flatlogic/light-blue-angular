@@ -377,6 +377,10 @@ button.dropdown-toggle{
   }
 }
 
+.btn-block {
+  box-sizing: border-box;
+}
+
 /***************************/
 /*      Button Groups      */
 /***************************/
@@ -563,6 +567,10 @@ button.dropdown-toggle{
   margin-bottom: $nav-tabs-active-item-margin;
 }
 
+.nav-tabs > .nav-item {
+  margin-bottom: 1px;
+}
+
 .nav-tabs{
   border-bottom: $nav-tabs-border;
 }
@@ -572,21 +580,25 @@ button.dropdown-toggle{
 .nav-tabs > .nav-item > .nav-link.active:hover,
 .nav-tabs > .nav-item > .nav-link.active:focus {
   color: $widget-color;
-  background-color: $nav-tabs-tab-content-bg;
+  background-color: $widget-bg;
   border-color: $nav-tabs-active-item-border;
   border-bottom-color: $nav-tabs-active-item-border-bottom;
-}
-
-.nav-tabs > .nav-item > .nav-link.active {
-  margin-bottom: -5px;
 }
 
 .nav-tabs .dropdown-menu {
   border-radius: 0 0 $border-radius-base $border-radius-base; // remove the top rounded corners here since there is a hard edge above the menu
 }
 .nav-tabs .nav-item.dropdown > .nav-link, .nav-tabs .nav-item.dropdown.open > .nav-link {
-  border: none;
+  border: 1px solid $nav-tabs-border-color;
   color: $widget-color;
+
+  &.active {
+    border-bottom: 1px solid $nav-tabs-border-color;
+  }
+
+  &:after {
+    display: none;
+  }
 }
 
 .nav-pills .dropdown-menu {
