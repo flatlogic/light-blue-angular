@@ -569,6 +569,7 @@ button.dropdown-toggle{
 
 .nav-tabs > .nav-item {
   margin-bottom: 1px;
+  box-sizing: border-box;
 }
 
 .nav-tabs{
@@ -608,7 +609,7 @@ button.dropdown-toggle{
   border-top: $nav-tabs-border;
 }
 
-.tabs-below > .nav-tabs > li > a {
+.tabs-below > .nav-tabs > .nav-item > .nav-link {
   border-radius: 0 0 $border-radius-base $border-radius-base;
 }
 
@@ -617,7 +618,7 @@ button.dropdown-toggle{
   border-right: $nav-tabs-border;
 }
 
-.tabs-left > .nav-tabs > li > a {
+.tabs-left > .nav-tabs > .nav-item > .nav-link {
   border-radius: $border-radius-base 0 0 $border-radius-base;
 }
 
@@ -625,15 +626,15 @@ button.dropdown-toggle{
   margin-left: 0;
   border-left: $nav-tabs-border;
 }
-.tabs-right > .nav-tabs > li > a {
+.tabs-right > .nav-tabs > .nav-item > .nav-link {
   border-radius: 0 $border-radius-base $border-radius-base 0;
 }
 
-.tabs-below > .nav-tabs > li {
+.tabs-below > .nav-tabs > .nav-item {
   margin-top: $nav-tabs-active-item-margin;
 }
 
-.tabs-below > .nav-tabs > li > a {
+.tabs-below > .nav-tabs > .nan-item > .nav-link {
   &:hover,
   &:focus {
     border-top-color: transparent;
@@ -645,26 +646,31 @@ button.dropdown-toggle{
   //  border-color: transparent;
 }
 
-.tabs-left > .nav-tabs > li > a {
-  margin-right: 0;
+.tabs-left > .nav-tabs > .nav-item {
+  margin-bottom: 0;
 }
-.tabs-left > .nav-tabs > li > a:hover,
+
+.tabs-left > .nav-tabs > .nav-item > .nav-link {
+  margin-right: 0;
+  margin-bottom: 3px;
+}
+.tabs-left > .nav-tabs > .nav-item > .nav-link:hover,
 .tabs-left > .nav-tabs > li > a:focus {
   border-color: transparent;
 }
-.tabs-left > .nav-tabs .active > a,
-.tabs-left > .nav-tabs .active > a:hover,
-.tabs-left > .nav-tabs .active > a:focus {
+.tabs-left > .nav-tabs .active > .nav-link,
+.tabs-left > .nav-tabs .active > .nav-link:hover,
+.tabs-left > .nav-tabs .active > .nav-link:focus {
   border-color: $nav-tabs-active-item-border;
   border-right-color: $nav-tabs-active-item-border-bottom;
 }
 
 .tabs-left > .nav-tabs .active{
-  margin-right: $nav-tabs-active-item-margin;
+  margin-right: 0;
 }
 
 .tabs-right > .nav-tabs .active{
-  margin-left: $nav-tabs-active-item-margin;
+  margin-left: 0;
 }
 
 .tabs-right > .nav-tabs > li > a {
