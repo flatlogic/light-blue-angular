@@ -630,10 +630,6 @@ button.dropdown-toggle{
   border-radius: 0 $border-radius-base $border-radius-base 0;
 }
 
-.tabs-below > .nav-tabs > .nav-item {
-  margin-top: $nav-tabs-active-item-margin;
-}
-
 .tabs-below > .nav-tabs > .nan-item > .nav-link {
   &:hover,
   &:focus {
@@ -675,12 +671,12 @@ button.dropdown-toggle{
 
 .tabs-right > .nav-tabs > .nav-item > .nav-link {
   margin-left: 0;
-  margin-bottom: 0;
+  margin-bottom: 3px;
 }
 
 .tabs-right > .nav-tabs > .nav-item {
   margin-left: 0;
-  margin-bottom: 3px;
+  margin-bottom: 0;
 }
 
 .tabs-right > .nav-tabs > .nav-item > .nav-link:hover,
