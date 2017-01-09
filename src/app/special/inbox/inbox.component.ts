@@ -61,7 +61,7 @@ export class Inbox {
   }
   /* tslint:disable */
   initMailboxAppDemo($el: any): void {
-    let showAlert = function(): void {
+    let showAlert = () => {
       $el.find('#app-alert')
         .removeClass('hide')
         .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(): void {

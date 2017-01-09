@@ -41,8 +41,8 @@
 .widget-email-count{
   display: inline-block;
   margin: 0;
-  font-size: $font-size-mini;
-  color: $text-muted;
+  font-size: $font-size-small;
+  color: #d2d2d2;
   line-height: 29px;
 
   + .widget-email-pagination{
@@ -54,38 +54,40 @@
   }
 }
 
-.widget-email {
-  header {
-    .form-control {
-      font-size: 0.7rem;
-      height: 20px;
-
-      &:focus {
-        outline: none;
-      }
-    }
-  }
-}
-
 .widget-email-pagination{
   margin: 0;
+}
+
+.widget-body {
+  margin: 0 -17px -12px;
 }
 
 .table-emails{
   margin-bottom: 0;
 
-  tbody > tr > td:first-child {
-    width: 45px;
+  tbody > tr > td {
+    &:first-child {
+      width: 45px;
+    }
+
+    &:last-child {
+      padding-right: 17px;
+    }
+  }
+
+  tr {
+    height: 40px;
   }
 
   td,
   th {
-    padding: 7px 5px 7px 5px;
+    padding: 10px 20px 10px 5px;
   }
 
   td > .abc-checkbox,
   th > .abc-checkbox{
-    left: -18px;
+
+    top: 8px;
 
     label {
       top: -7px;
