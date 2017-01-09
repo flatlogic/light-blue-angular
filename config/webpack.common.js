@@ -301,6 +301,7 @@ module.exports = function(options) {
         'window.Tether': 'tether',
         Util: 'util',
         d3: 'd3',
+        Rickshaw: 'rickshaw',
         nv: 'nvd3'
       })
     ],
