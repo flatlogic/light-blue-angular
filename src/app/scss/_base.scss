@@ -273,6 +273,7 @@ $i: 1;
 
   .progress{
     background-color: lighten($sidebar-bg-color, 10%);
+    margin-top: 0.35rem;
   }
 }
 
@@ -396,12 +397,6 @@ $i: 1;
   background: $widget-bg;
   margin-bottom: $widget-mb;
   position: relative;
-
-
-  //widget sizes
-  &.normal{
-    height: 220px;
-  }
 
   &.large{
     height: 315px;
@@ -1189,29 +1184,6 @@ $i: 1;
   margin-bottom: 1em;
   font-size: $font-size-larger;
   color: $widget-header-color;
-}
-
-/***********************************/
-/**          PROGRESSBARS         **/
-/**********************************/
-
-.progress-small{
-  height: 8px;
-}
-
-// Inverse
-.progress-inverse .bar, .progress .progress-bar-inverse {
-  color: $widget-bg-common;
-  background-color: $widget-color;
-  @include gradient-vertical($widget-color, $widget-color);
-}
-.progress-inverse.progress-striped .bar, .progress-striped .progress-bar-inverse {
-  @include gradient-striped($widget-color);
-}
-
-.progress .bar {
-  height: 100%;
-  transition: width 0.4s ease;
 }
 
 /***********************************/

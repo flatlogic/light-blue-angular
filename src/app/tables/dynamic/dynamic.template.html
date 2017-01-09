@@ -103,9 +103,7 @@
           <td class="hidden-sm-down"><a href="#">{{person.description}}</a></td>
           <td class="hidden-sm-down">{{person.date}}</td>
           <td class="width-150">
-            <div class="bg-blue-light progress-bar mt-xs">
-              <progress class="progress progress-sm progress-{{person.status.type}}" value="100" max="100" [ngStyle]="{ 'width': person.status.progress}"></progress>
-            </div>
+            <progress class="progress progress-sm progress-{{person.status.type}}" value="{{person.status.progress}}" max="100"></progress>
           </td>
         </tr>
         <tr *ngIf="(mf.data | SearchPipe : searchText).length === 0">

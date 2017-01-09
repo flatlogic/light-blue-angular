@@ -19,7 +19,7 @@ export class FormWizard {
       var $current = index+1;
       var $percent = ($current/$total) * 100;
       var $wizard = jQuery("#wizard");
-      $wizard.find('.bar').css({width:$percent+'%'});
+      $wizard.find('#bar').attr('value', $percent);
 
       if($current >= $total) {
         $wizard.find('.pager .next').hide();

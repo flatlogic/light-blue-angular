@@ -6,7 +6,7 @@ declare var jQuery: any;
 })
 
 export class ProgressAnimate {
-  @Input() width: number;
+  @Input() value: number;
 
   constructor(
               private el: ElementRef,
@@ -17,11 +17,11 @@ export class ProgressAnimate {
     this.renderer.setElementStyle(this.el.nativeElement, 'opacity', '0');
     setTimeout(() => {
       this.renderer.setElementStyle(this.el.nativeElement, 'transition', 'none');
-      this.renderer.setElementStyle(this.el.nativeElement, 'width', '0');
+      this.renderer.setElementProperty(this.el.nativeElement, 'value', 0);
       this.renderer.setElementStyle(this.el.nativeElement, 'opacity', '1');
       setTimeout(() => {
         this.renderer.setElementStyle(this.el.nativeElement, 'transition', '');
-        this.renderer.setElementStyle(this.el.nativeElement, 'width', `${this.width}%`);
+        this.renderer.setElementProperty(this.el.nativeElement, 'value', this.value)
       });
     });
   }
