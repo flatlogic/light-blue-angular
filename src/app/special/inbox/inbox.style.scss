@@ -1,0 +1,30 @@
+@import "../../../../node_modules/bootstrap/scss/_variables";
+@import "../../scss/variables";
+@import "../../../../node_modules/bootstrap/scss/mixins";
+
+.nav-email-folders{
+  > li > .nav-link {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: $border-radius;
+    font-weight: $font-weight-normal;
+
+    > .fa-circle{
+      margin-top: 3px;
+    }
+  }
+
+  > li > .nav-link > .label {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  > li.active > .nav-link{
+    &,
+    &:hover,
+    &:focus {
+      font-weight: $font-weight-semi-bold;
+    }
+  }
+}
+
