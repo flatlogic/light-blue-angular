@@ -587,16 +587,28 @@ button.dropdown-toggle{
   border-bottom-color: $nav-tabs-active-item-border-bottom;
 }
 
+.nav-tabs > .nav-item > .nav-link.active {
+  cursor: default;
+}
+
 .nav-tabs .dropdown-menu {
   border-radius: 0 0 $border-radius-base $border-radius-base; // remove the top rounded corners here since there is a hard edge above the menu
 }
-.dropdown > .nav-link, .nav-tabs .nav-item.dropdown.open > .nav-link {
+.nav-tabs .nav-item.dropdown > .nav-link, .nav-tabs .nav-item.dropdown.open > .nav-link {
   border: 1px solid $nav-tabs-border-color;
   color: $widget-color;
-  background-color: transparent;
 
   &:after {
     display: none;
+  }
+}
+
+.nav-tabs > .nav-item.dropdown.open {
+  background: none;
+  border-color: $nav-tabs-border-color;
+
+  & > .nav-link {
+    background-color: $nav-tabs-tab-content-bg;
   }
 }
 

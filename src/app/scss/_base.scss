@@ -1147,23 +1147,13 @@ $i: 1;
     }
   }
 
-  .nav > li:first-child > a{
+  .nav > .nav-item:first-child > .nav-link{
     border-left: none;
   }
 }
 
 //base look for inner tabs
 .widget:not(.widget-tabs){
-
-  .nav > .nav-item.dropdown.open {
-    background: none;
-    border-color: transparent;
-
-    > .nav-link.dropdown-toggle {
-      background-color: $nav-tabs-tab-content-bg;
-    }
-  }
-
   .tab-content{
     background: $nav-tabs-tab-content-bg;
     padding: 10px;
