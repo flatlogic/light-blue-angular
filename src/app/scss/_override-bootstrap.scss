@@ -593,6 +593,7 @@ button.dropdown-toggle{
 .dropdown > .nav-link, .nav-tabs .nav-item.dropdown.open > .nav-link {
   border: 1px solid $nav-tabs-border-color;
   color: $widget-color;
+  background-color: transparent;
 
   &:after {
     display: none;

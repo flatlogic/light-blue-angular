@@ -1155,10 +1155,6 @@ $i: 1;
 //base look for inner tabs
 .widget:not(.widget-tabs){
 
-  .nav > .nav-item.dropdown.open > .nav-link.dropdown-toggle {
-    background-color: transparent;
-  }
-
   .nav > .nav-item.dropdown.open {
     background: $nav-tabs-tab-content-bg;
     border-color: transparent;
