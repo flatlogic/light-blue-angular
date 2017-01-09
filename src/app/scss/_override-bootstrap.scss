@@ -567,13 +567,9 @@ button.dropdown-toggle{
   margin-left: 2px;
 }
 
-.nav-tabs > .nav-item > .active{
-  margin-bottom: $nav-tabs-active-item-margin;
-}
-
 .nav-tabs > .nav-item {
-  margin-bottom: 1px;
   box-sizing: border-box;
+  margin-bottom: 0;
 }
 
 .nav-tabs{

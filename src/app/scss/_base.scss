@@ -1128,9 +1128,14 @@ $i: 1;
   .nav > .nav-item > .active{
     border-color: transparent;
     background: $widget-bg;
+    margin-bottom: -1px;
     &:hover{
       color: $widget-color;
     }
+  }
+
+  .nav > .nav-item {
+    margin-bottom: 1px;
   }
 
   .nav > .nav-item > .nav-link:not(.active) {
@@ -1149,10 +1154,6 @@ $i: 1;
 
 //base look for inner tabs
 .widget:not(.widget-tabs){
-
-  .nav > .nav-item  {
-    margin-bottom: 0;
-  }
 
   .nav > .nav-item > .nav-link.active {
     background: $nav-tabs-tab-content-bg;
