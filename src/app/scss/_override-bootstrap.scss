@@ -589,7 +589,7 @@ button.dropdown-toggle{
 .nav-tabs .dropdown-menu {
   border-radius: 0 0 $border-radius-base $border-radius-base; // remove the top rounded corners here since there is a hard edge above the menu
 }
-.nav-tabs .nav-item.dropdown > .nav-link, .nav-tabs .nav-item.dropdown.open > .nav-link {
+.dropdown > .nav-link, .nav-tabs .nav-item.dropdown.open > .nav-link {
   border: 1px solid $nav-tabs-border-color;
   color: $widget-color;
 
@@ -673,11 +673,18 @@ button.dropdown-toggle{
   margin-left: 0;
 }
 
-.tabs-right > .nav-tabs > li > a {
+.tabs-right > .nav-tabs > .nav-item > .nav-link {
   margin-left: 0;
+  margin-bottom: 0;
 }
-.tabs-right > .nav-tabs > li > a:hover,
-.tabs-right > .nav-tabs > li > a:focus {
+
+.tabs-right > .nav-tabs > .nav-item {
+  margin-left: 0;
+  margin-bottom: 3px;
+}
+
+.tabs-right > .nav-tabs > .nav-item > .nav-link:hover,
+.tabs-right > .nav-tabs > .nav-item > .nav-link:focus {
   border-color: transparent;
 }
 .tabs-right > .nav-tabs .active > a,
