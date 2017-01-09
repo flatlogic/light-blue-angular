@@ -1156,11 +1156,11 @@ $i: 1;
 .widget:not(.widget-tabs){
 
   .nav > .nav-item.dropdown.open {
-    background: $nav-tabs-tab-content-bg;
+    background: none;
     border-color: transparent;
 
     > .nav-link.dropdown-toggle {
-      background-color: transparent;
+      background-color: $nav-tabs-tab-content-bg;
     }
   }
 
