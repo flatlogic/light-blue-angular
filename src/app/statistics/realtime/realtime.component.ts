@@ -25,7 +25,6 @@ let $lime = "#8CBF26",
 })
 export class Realtime {
   ngOnInit(): void {
-    console.log('INIT!!')
     var seriesData = [ [], [], [], [], [] ];
     var random = new Rickshaw.Fixtures.RandomData(150);
 

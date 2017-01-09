@@ -1,5 +1,5 @@
 import 'fullcalendar/dist/fullcalendar.js';
-import 'jquery-ui/ui/draggable.js';
+import 'jquery-ui/ui/widgets/draggable.js';
 import 'magnific-popup/dist/jquery.magnific-popup.min.js';
 import 'shufflejs/dist/shuffle.js';
 import 'moment/moment.js';

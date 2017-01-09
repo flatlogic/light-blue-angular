@@ -7,6 +7,10 @@ import {Stats} from './stats/stats.component'
 import {Charts} from './charts/charts.component'
 import {Realtime} from './realtime/realtime.component'
 
+import 'jquery-ui';
+import 'jquery-ui/ui/widgets/sortable.js';
+import 'jquery-ui/ui/widgets/resizable.js';
+
 console.log('`Detail` bundle loaded asynchronously');
 // async components must be named routes for WebpackAsyncRoute
 export const routes = [
