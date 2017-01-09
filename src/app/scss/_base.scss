@@ -1125,11 +1125,11 @@ $i: 1;
     color: $widget-header-color;
   }
 
-  .nav > .nav-item > .active{
+  .nav > .nav-item > .nav-link.active{
     border-color: transparent;
     background: $widget-bg;
     margin-bottom: -1px;
-    &:hover{
+    &:hover, &:focus{
       color: $widget-color;
     }
   }
@@ -1154,22 +1154,6 @@ $i: 1;
 
 //base look for inner tabs
 .widget:not(.widget-tabs){
-
-  .nav > .nav-item > .nav-link.active {
-    background: $nav-tabs-tab-content-bg;
-    &:hover{
-      background: $nav-tabs-tab-content-bg;
-    }
-  }
-
-  .nav > .nav-item > .nav-link {
-    &:focus {
-      background: $nav-tabs-tab-content-bg;
-    }
-    &:hover {
-      background: $nav-tabs-tab-content-bg;
-    }
-  }
 
   .nav > .nav-item.dropdown.open > .nav-link.dropdown-toggle {
     background-color: transparent;

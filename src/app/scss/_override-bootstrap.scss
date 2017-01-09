@@ -576,12 +576,13 @@ button.dropdown-toggle{
   border-bottom: $nav-tabs-border;
 }
 
-
 .nav-tabs > .nav-item > .nav-link.active,
 .nav-tabs > .nav-item > .nav-link.active:hover,
-.nav-tabs > .nav-item > .nav-link.active:focus {
+.nav-tabs > .nav-item > .nav-link.active:focus,
+.nav-tabs > .nav-item > .nav-link:hover,
+.nav-tabs > .nav-item > .nav-link:focus{
   color: $widget-color;
-  background-color: $widget-bg;
+  background: $nav-tabs-tab-content-bg;
   border-color: $nav-tabs-active-item-border;
   border-bottom-color: $nav-tabs-active-item-border-bottom;
 }
