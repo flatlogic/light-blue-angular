@@ -3,6 +3,8 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
+import {RickshawChartModule} from '../components/rickshaw/rickshaw.module';
+
 import {Stats} from './stats/stats.component'
 import {Charts} from './charts/charts.component'
 import {Realtime} from './realtime/realtime.component'
@@ -30,6 +32,7 @@ export const routes = [
   imports: [
     CommonModule,
     FormsModule,
+    RickshawChartModule,
     RouterModule.forChild(routes),
   ]
 })

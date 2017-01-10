@@ -3,19 +3,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 declare var Rickshaw: any;
 declare var jQuery: any;
 
-let $lime = "#8CBF26",
-  $red = "#f25118",
-  $redDark = "#d04f4f",
-  $blue = "#4e91ce",
-  $green = "#3ecd74",
-  $orange = "#f2c34d",
-  $pink = "#E671B8",
-  $purple = "#A700AE",
-  $brown = "#A05000",
-  $teal = "#4ab0ce",
-  $gray = "#666",
-  $white = "#fff",
-  $textColor = $gray;
+import {ColorsData} from '../colors.data';
 
 @Component({
   selector: '[realtime]',
@@ -24,103 +12,55 @@ let $lime = "#8CBF26",
   encapsulation: ViewEncapsulation.None
 })
 export class Realtime {
+  seriesData: Array<any>;
+  series: Array<any>;
+  chartHeight: number = 300;
+  messages: Array<string>;
+  rickshawRandom: any;
+
   ngOnInit(): void {
-    var seriesData = [ [], [], [], [], [] ];
-    var random = new Rickshaw.Fixtures.RandomData(150);
+    this.initRandom();
+    this.initSeriesData();
+    this.initSeries();
+    this.initMessages();
+  }
 
-    for (var i = 0; i < 150; i++) {
-      random.addData(seriesData);
-    }
+  initRandom(): void {
+    this.rickshawRandom = new Rickshaw.Fixtures.RandomData(150);
+  }
 
-    var palette = new Rickshaw.Color.Palette( { scheme: 'classic9' } );
-
-// instantiate our graph!
-
-    var graph = new Rickshaw.Graph( {
-      element: document.getElementById("realtime-chart"),
-      //width: $("#chart-container").width(),
-      height: 300,
-      renderer: 'area',
-      stroke: true,
-      preserve: true,
-      series: [{
-        color: $blue,
-        data: seriesData[0],
+  initSeries(): void {
+    this.series = [
+      {
+        color: ColorsData['$blue'],
+        data: this.seriesData[0],
         name: 'Belarus'
       }, {
-        color: $green,
-        data: seriesData[2],
+        color: ColorsData['$green'],
+        data: this.seriesData[2],
         name: 'Canada'
       }, {
-        color: $orange,
-        data: seriesData[3],
+        color: ColorsData['$orange'],
+        data: this.seriesData[3],
         name: 'UK'
       }, {
-        color: $red,
-        data: seriesData[4],
+        color: ColorsData['$red'],
+        data: this.seriesData[4],
         name: 'US'
       }
-      ]
-    } );
+    ]
+  }
 
-    graph.render();
+  initSeriesData(): void {
+    this.seriesData = [ [], [], [], [], [] ];
 
-    jQuery(window).resize(function(){
-      graph.width = jQuery("#chart-container").width();
-      graph.render();
-    });
+    for (let i = 0; i < 150; i++) {
+      this.rickshawRandom.addData(this.seriesData);
+    }
+  }
 
-    var hoverDetail = new Rickshaw.Graph.HoverDetail( {
-      graph: graph
-    } );
-
-    var annotator = new Rickshaw.Graph.Annotate( {
-      graph: graph,
-      element: document.getElementById('timeline')
-    } );
-
-    var legend = new Rickshaw.Graph.Legend( {
-      graph: graph,
-      element: document.getElementById('legend')
-
-    } );
-
-    var shelving = new Rickshaw.Graph.Behavior.Series.Toggle( {
-      graph: graph,
-      legend: legend
-    } );
-
-    var order = new Rickshaw.Graph.Behavior.Series.Order( {
-      graph: graph,
-      legend: legend
-    } );
-
-    var highlighter = new Rickshaw.Graph.Behavior.Series.Highlight( {
-      graph: graph,
-      legend: legend
-    } );
-
-    var ticksTreatment = 'glow';
-
-    var xAxis = new Rickshaw.Graph.Axis.Time( {
-      graph: graph,
-      ticksTreatment: ticksTreatment
-    } );
-
-    xAxis.render();
-
-    var yAxis = new Rickshaw.Graph.Axis.Y( {
-      graph: graph,
-      tickFormat: Rickshaw.Fixtures.Number.formatKMBT,
-      ticksTreatment: ticksTreatment
-    } );
-
-    yAxis.render();
-
-
-// add some data every so often
-
-    var messages = [
+  initMessages(): void {
+    this.messages =  [
       "Changed home page welcome message",
       "Minified JS and CSS",
       "Changed button color from blue to green",
@@ -130,20 +70,5 @@ export class Realtime {
       "Rewrite conditional logic for clarity",
       "Added documentation for new methods"
     ];
-
-    setInterval( function() {
-      random.addData(seriesData);
-      graph.update();
-
-    }, 1500 );
-
-    function addAnnotation(force) {
-      if (messages.length > 0 && (force || Math.random() >= 0.95)) {
-        annotator.add(seriesData[2][seriesData[2].length-1].x, messages.shift());
-      }
-    }
-
-    addAnnotation(true);
-    setTimeout( function() { setInterval( addAnnotation, 3000 ) }, 3000 );
   }
 }
