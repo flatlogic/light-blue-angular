@@ -2,22 +2,24 @@
   <small>Tabs-enabled widget and more</small>
 </h2>
 <div class="row">
-  <div class="col-md-6 col-md-offset-2">
+  <div class="col-md-6 offset-md-2">
     <section class="widget widget-tabs">
       <header>
-        <ul class="nav nav-tabs">
-          <li class="active">
-            <a href="#stats" data-toggle="tab">Red</a>
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" href="#stats" data-toggle="tab">Red</a>
           </li>
-          <li>
-            <a href="#report" data-toggle="tab">Orange</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#report" data-toggle="tab">Orange</a>
           </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <i class="fa fa-caret-down"></i></a>
-            <ul class="dropdown-menu">
-              <li><a href="#dropdown1" data-toggle="tab">Green</a></li>
-              <li><a href="#dropdown2" data-toggle="tab">Blue</a></li>
-            </ul>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+              Dropdown <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" id="dropdown1-tab" href="#dropdown1" data-toggle="tab" role="tab" aria-controls="dropdown1" aria-expanded="false">Green</a>
+              <a class="dropdown-item" id="dropdown2-tab" href="#dropdown2" data-toggle="tab" role="tab" aria-controls="dropdown2" aria-expanded="false">Blue</a>
+            </div>
           </li>
         </ul>
       </header>
@@ -78,14 +80,18 @@
       </header>
       <div class="body">
         <ul id="myTab" class="nav nav-tabs">
-          <li><a href="#home" data-toggle="tab">Home</a></li>
-          <li class="active"><a href="#profile" data-toggle="tab">Profile</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="#dropdown3" data-toggle="tab">@fat</a></li>
-              <li><a href="#dropdown4" data-toggle="tab">@mdo</a></li>
-            </ul>
+          <li class="nav-item">
+            <a href="#home" class="nav-link" data-toggle="tab">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#profile" class="nav-link active" data-toggle="tab">Profile</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+            <div class="dropdown-menu">
+              <a href="#dropdown3" class="dropdown-item" data-toggle="tab">@fat</a>
+              <a href="#dropdown4" class="dropdown-item" data-toggle="tab">@mdo</a>
+            </div>
           </li>
         </ul>
         <div id="myTabContent" class="tab-content">
@@ -133,9 +139,15 @@
             </div>
           </div>
           <ul id="myTabbottom" class="nav nav-tabs ">
-            <li><a href="#home-bottom" data-toggle="tab">Home</a></li>
-            <li><a href="#profile-bottom" data-toggle="tab">Profile</a></li>
-            <li class="active"><a href="#dropdown3-bottom" data-toggle="tab">Search</a></li>
+            <li class="nav-item">
+              <a href="#home-bottom" class="nav-link" data-toggle="tab">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#profile-bottom" class="nav-link" data-toggle="tab">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a href="#dropdown3-bottom" class="nav-link active" data-toggle="tab">Search</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -154,9 +166,15 @@
       <div class="body">
         <div class="tabbable tabs-left">
           <ul id="myTabLeft" class="nav nav-tabs">
-            <li><a href="#home-left" data-toggle="tab">Home</a></li>
-            <li class="active"><a href="#profile-left" data-toggle="tab">Profile</a></li>
-            <li><a href="#dropdown3-left" data-toggle="tab">Search</a></li>
+            <li class="nav-item">
+              <a href="#home-left" class="nav-link" data-toggle="tab">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#profile-left" class="nav-link active" data-toggle="tab">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a href="#dropdown3-left" class="nav-link" data-toggle="tab">Search</a>
+            </li>
           </ul>
           <div id="myTabContentLeft" class="tab-content">
             <div class="tab-pane fade" id="home-left">
@@ -188,9 +206,15 @@
       <div class="body">
         <div class="tabbable tabs-right">
           <ul id="myTabright" class="nav nav-tabs">
-            <li><a href="#home-right" data-toggle="tab">Home</a></li>
-            <li class="active"><a href="#profile-right" data-toggle="tab">Profile</a></li>
-            <li><a href="#dropdown3-right" data-toggle="tab">Search</a></li>
+            <li class="nav-item">
+              <a href="#home-right" class="nav-link" data-toggle="tab">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#profile-right" class="nav-link active" data-toggle="tab">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a href="#dropdown3-right" class="nav-link" data-toggle="tab">Search</a>
+            </li>
           </ul>
           <div id="myTabContentright" class="tab-content">
             <div class="tab-pane fade" id="home-right">

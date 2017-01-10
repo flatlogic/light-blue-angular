@@ -1114,24 +1114,26 @@ $i: 1;
     border-bottom: none;
   }
 
-  .nav > li > a{
+  .nav > .nav-item > .nav-link{
     padding-top: 10px;
     padding-bottom: 10px;
     color: $widget-header-color;
   }
 
-  .nav > li.active{
-    margin-bottom: 0;
-    & > a{
-      border-color: transparent;
-      background: $widget-bg;
-      &:hover{
-        color: $widget-color;
-      }
+  .nav > .nav-item > .nav-link.active{
+    border-color: transparent;
+    background: $widget-bg;
+    margin-bottom: -1px;
+    &:hover, &:focus{
+      color: $widget-color;
     }
   }
 
-  .nav > li:not(.active) > a{
+  .nav > .nav-item {
+    margin-bottom: 1px;
+  }
+
+  .nav > .nav-item > .nav-link:not(.active) {
     background: $widget-bg;
     border-bottom: none;
     &:hover{
@@ -1140,7 +1142,7 @@ $i: 1;
     }
   }
 
-  .nav > li:first-child > a{
+  .nav > .nav-item:first-child > .nav-link{
     border-left: none;
   }
 }
