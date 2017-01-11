@@ -846,6 +846,26 @@ button.dropdown-toggle{
 }
 
 /***************************/
+/*       Cards        */
+/***************************/
+
+.card {
+  background-color: $widget-bg;
+  color: $widget-color;
+  border: none;
+  padding: $card-padding;
+}
+
+.card-title {
+  margin-top: $card-spacer-y;
+}
+
+.card-img-top {
+  width: 100%;
+}
+
+
+/***************************/
 /*    Labels and tags    */
 /***************************/
 
