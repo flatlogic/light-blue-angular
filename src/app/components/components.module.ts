@@ -3,6 +3,7 @@ import 'jquery-ui/ui/widgets/draggable.js';
 import 'magnific-popup/dist/jquery.magnific-popup.min.js';
 import 'shufflejs/dist/shuffle.js';
 import 'moment/moment.js';
+import 'blueimp-file-upload/js/jquery.fileupload.js'
 
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
