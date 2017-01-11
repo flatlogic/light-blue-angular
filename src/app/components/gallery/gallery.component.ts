@@ -15,7 +15,7 @@ export class Gallery {
 
   initGallery(): void {
     jQuery('#grid').magnificPopup({
-      delegate: 'li > a', // child items selector, by clicking on it popup will open
+      delegate: 'a', // child items selector, by clicking on it popup will open
       type: 'image',
       gallery: {
         enabled: true

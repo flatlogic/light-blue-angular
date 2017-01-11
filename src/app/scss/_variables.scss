@@ -312,8 +312,9 @@ $popover-border-color:                transparent;
 
 // Thumbnails
 // -------------------------
-$thumbnail-bg:                    $widget-bg;
-$thumbnail-border:                    none;
+$img-thumbnail-bg:                    $widget-bg;
+$img-thumbnail-border:                    none;
+$img-thumbnail-padding:               0.31rem;
 
 // Pagination
 // -------------------------
