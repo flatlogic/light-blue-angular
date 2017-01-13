@@ -1,7 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
 declare var Rickshaw: any;
-declare var jQuery: any;
 
 import {ColorsData} from '../colors.data';
 

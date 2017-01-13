@@ -1,5 +1,5 @@
 import { Directive, ElementRef, Input } from '@angular/core';
-declare var jQuery: any;
+
 declare var Rickshaw: any;
 
 @Directive ({
@@ -7,7 +7,7 @@ declare var Rickshaw: any;
 })
 
 export class RickshawChart {
-  $el: any;
+  elRef: ElementRef;
   @Input() height: string;
   @Input() series: Array<any>;
   @Input() seriesData: Array<any>;
@@ -19,12 +19,12 @@ export class RickshawChart {
   @Input() addAnnotation: boolean;
 
   constructor(el: ElementRef) {
-    this.$el = jQuery(el.nativeElement);
+    this.elRef = el;
   }
 
   render(): void {
     let graph = new Rickshaw.Graph({
-      element: this.$el[0],
+      element: this.elRef.nativeElement,
       height: this.height,
       renderer: this.renderer || 'area',
       series: this.series,
@@ -33,16 +33,17 @@ export class RickshawChart {
     });
 
     let onResize = () => {
-      let configureProperties = jQuery.extend({
+      let configureProperties = Object.assign({
         height: this.height
       }, this.configureProps);
       graph.configure(configureProperties);
       graph.render();
 
-      this.$el.find('svg').css({height: this.height, width: '100%'});
+      let svg = this.elRef.nativeElement.getElementsByTagName('svg')[0];
+      Object.assign(svg.style, {height: this.height, width: '100%'})
     };
 
-    jQuery(window).on('sn:resize', onResize);
+    window.addEventListener('sn:resize', onResize);
     onResize();
 
     let hoverDetail = new Rickshaw.Graph.HoverDetail({
