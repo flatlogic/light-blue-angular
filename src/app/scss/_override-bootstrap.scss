@@ -367,6 +367,10 @@ button.dropdown-toggle{
   }
 }
 
+.btn-sm {
+  line-height: 18px;  //TODO: Change after $line-height-computed is recalculated
+}
+
 .btn-secondary {
   @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
 }
