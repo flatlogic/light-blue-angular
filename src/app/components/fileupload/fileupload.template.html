@@ -30,11 +30,11 @@
           <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
           <div class="form-actions fileupload-buttonbar no-margin">
             <!-- The fileinput-button span is used to style the file input field as button -->
-              <span class="btn btn-default fileinput-button mr-xs">
-                <i class="glyphicon glyphicon-plus"></i>
-                <span>Add files...</span>
-                <input type="file" name="files[]" ng2FileSelect [uploader]="uploader" multiple>
-              </span>
+            <button class="btn btn-default fileinput-button mr-xs">
+              <i class="glyphicon glyphicon-plus"></i>
+              <span>Add files...</span>
+              <input type="file" name="files[]" ng2FileSelect [uploader]="uploader" multiple>
+            </button>
             <button type="submit" class="btn btn-primary start mr-xs"
                     (click)="uploader.uploadAll()">
               <i class="glyphicon glyphicon-upload"></i>
@@ -48,7 +48,7 @@
           </div>
 
           <!-- The table listing the files available for upload/download -->
-          <table role="presentation" class="table table-striped">
+          <table role="presentation" class="table table-striped files-table">
             <tbody class="files">
             <tr class="template-upload fade in" *ngFor="let item of uploader.queue">
               <td>
@@ -57,7 +57,7 @@
               </td>
               <td>
                 <p class="size">{{ item?.file?.size/1024 | number:'.2' }} KB</p>
-                <progress class="progress progress-xs progress-success m-t-1" value="{{item?.progress}}" max="100"></progress>
+                <progress class="progress progress-xs progress-success" value="{{item?.progress}}" max="100"></progress>
               </td>
               <td>
                 <button class="btn btn-primary btn-sm start"
