@@ -35,6 +35,7 @@ html{
 body{
   font-weight: $font-weight-base;
   padding-bottom: 100px;
+  color: $white-dark;
   @include background-radial-gradient(ellipse, farthest-side, 10%, 0,
           $bg-gradient-color-1 20%, $bg-gradient-color-2
   );
@@ -48,6 +49,10 @@ h1,h2,h3,h4,h5,h6{
     color: $text-muted;
     font-weight: $font-weight-base;
   }
+}
+
+h4 {
+  margin: 0.69rem 0;
 }
 
 input[type=search], input.search {

@@ -132,12 +132,17 @@ $widget-padding-vertical: 12px;
 $widget-padding-horizontal: 17px;
 $widget-padding: $widget-padding-vertical $widget-padding-horizontal;
 
+$panel-body-padding: 1.15rem;
+$panel-mt: 0.38rem;
+
 $sidebar-bg-color: #242424 !default;
+$panel-opened-color: #d2d2d2;
 $sidebar-color:          $white;
 $sidebar-item-active-bg: rgba($black,.07);
 $sidebar-item-sub-active-bg: darken($sidebar-item-active-bg, 15%);
 
 $page-title-color: $white;
+$page-title-mb: 1.39rem;
 
 $header-link-color: $text-transparent;
 $header-notification-count: rgba($widget-bg-common, .55);

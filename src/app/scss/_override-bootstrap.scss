@@ -1102,22 +1102,67 @@ button.dropdown-toggle{
 .panel-heading {
   padding: 0;
 
-  > .accordion-toggle{
+  .accordion-toggle{
     display: block;
     padding: 8px 15px;
+
+    > div {
+      font-size: $font-size-base;
+    }
   }
 }
 
 .panel-group {
+  .panel {
+    border-radius: 3px;
+  }
+
+  .panel-open .panel-heading .accordion-toggle{
+    color: $widget-color;
+    &:before {
+     transform: rotate(-90deg);
+    }
+  }
+
   .panel-heading {
     + .panel-collapse .panel-body {
       border-top: 1px solid $bg-addition;
+    }
+
+    .accordion-toggle {
+      display: block;
+      line-height: $line-height-base;
+      color: $panel-opened-color;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &:before {
+        display: inline-block;
+        font-family: FontAwesome;
+        content: "\f104";
+        float: right;
+        font-size: $font-size-base;
+        margin-right: -8px;
+        position: relative;
+        top: 1px;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+
+    .panel-title {
+      margin-bottom: 0;
     }
   }
   .panel-footer {
     + .panel-collapse .panel-body {
       border-bottom: 1px solid $bg-addition;
     }
+  }
+
+  .panel +.panel, accordion-group + accordion-group .panel {
+    margin-top: $panel-mt;
   }
 }
 
@@ -1161,6 +1206,7 @@ button.dropdown-toggle{
 
 .panel-body{
   border-top-color: $bg-addition;
+  padding: $panel-body-padding;
 }
 
 /***************************/

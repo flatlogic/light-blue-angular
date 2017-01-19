@@ -701,7 +701,7 @@ $i: 1;
   color: $page-title-color;
   font-weight: 300;
   line-height: 1;
-  margin: 11px 0 $line-height-computed;
+  margin: 11px 0 $page-title-mb;
 
   small{
     color: rgba($page-title-color, .7);
