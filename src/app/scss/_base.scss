@@ -1007,7 +1007,7 @@ $i: 1;
 }
 
 .form-control{
-  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  box-shadow: $input-shadow;
 
   &.input-transparent{
     border: none;
@@ -1017,7 +1017,7 @@ $i: 1;
 
     &:focus{
       color: $input-transparent-color;
-      box-shadow: inset 0 1px 1px rgba(0,0,0,.2);
+      box-shadow: $input-transparent-focused-shadow;
     }
 
     &[disabled],

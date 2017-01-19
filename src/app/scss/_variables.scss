@@ -160,6 +160,7 @@ $nav-tabs-link-color: $widget-color;
 
 $input-transparent-color: $widget-color;
 $input-transparent-placeholder-color: rgba(#eee, .76);
+$input-transparent-focused-shadow: inset 0 1px 1px rgba(0,0,0,.2);
 
 // Widgets
 // -------------------------
@@ -218,6 +219,8 @@ $line-height-sm:                 $line-height-small !default;
 $line-height-lg:                 $line-height-large !default;
 
 $border-radius-base:        3px !default;
+
+$input-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
 
 // Buttons
 // -------------------------
