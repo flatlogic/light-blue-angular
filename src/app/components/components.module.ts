@@ -9,13 +9,15 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import {Calendar} from './calendar/calendar.component'
-import {Maps} from './maps/maps.component'
-import {Gallery} from './gallery/gallery.component'
-import {Fileupload} from './fileupload/fileupload.component'
+import { Calendar } from './calendar/calendar.component'
+import { Maps } from './maps/maps.component'
+import { Gallery } from './gallery/gallery.component'
+import { Fileupload } from './fileupload/fileupload.component'
 
-console.log('`Detail` bundle loaded asynchronously');
-// async components must be named routes for WebpackAsyncRoute
+import { AgmCoreModule } from 'angular2-google-maps/core';
+import { JqvmapModule } from './maps/jvmap/jqvmap.module';
+import { ModalModule } from 'ng2-bootstrap/ng2-bootstrap';
+
 export const routes = [
   {path: '', redirectTo: 'calendar', pathMatch: 'full'},
   {path: 'calendar', component: Calendar},
@@ -27,7 +29,6 @@ export const routes = [
 
 @NgModule({
   declarations: [
-    // Components / Directives/ Pipes
     Calendar,
     Maps,
     Gallery,
@@ -36,9 +37,15 @@ export const routes = [
   imports: [
     CommonModule,
     FormsModule,
+    JqvmapModule,
+    ModalModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDe_oVpi9eRSN99G4o6TwVjJbFBNr58NxE',
+      libraries: ['places']
+    }),
     RouterModule.forChild(routes),
   ]
 })
-export default class StatisticsModule {
+export default class MapsModule {
   static routes = routes;
 }
