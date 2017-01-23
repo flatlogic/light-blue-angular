@@ -303,13 +303,19 @@ export class Charts {
         axisLabel: 'Month',
         axisLabelUseCanvas: true,
         axisLabelFontSizePixels: 13,
-        axisLabelPadding: 15
+        axisLabelPadding: 15,
+        font: {
+          color: '#f8f8f8'
+        },
       },
       yaxis: {
         axisLabel: 'Value',
         axisLabelUseCanvas: true,
         axisLabelFontSizePixels: 13,
-        axisLabelPadding: 5
+        axisLabelPadding: 5,
+        font: {
+          color: '#f8f8f8'
+        },
       },
       grid: {
         hoverable: true,

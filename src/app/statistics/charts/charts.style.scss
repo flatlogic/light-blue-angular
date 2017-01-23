@@ -64,7 +64,7 @@ svg .title {
   height: 120px;
   width: 120px;
   text-align: center;
-  color: $gray-semi-light;
+  color: $widget-color;
   canvas{
     position: absolute;
     top: 0;
@@ -84,4 +84,8 @@ svg .title {
   border: 1px solid $gray-semi-lighter;
   font-size: $font-size-mini;
   background-color: $white;
+}
+
+[flot-chart] .legend .legendLabel {
+  color: $widget-color;
 }

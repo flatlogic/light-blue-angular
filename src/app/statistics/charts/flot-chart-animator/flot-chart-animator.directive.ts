@@ -30,7 +30,7 @@ export class FlotChartAnimator {
             lineHeight: 13,
             weight: 'bold',
             /* tslint:disable */
-            color: ColorsData['$gray']
+            color: ColorsData['$widgetColor']
             /* tslint:enable */
           }
         },
@@ -41,7 +41,7 @@ export class FlotChartAnimator {
             lineHeight: 13,
             weight: 'bold',
             /* tslint:disable */
-            color: ColorsData['$gray']
+            color: ColorsData['$widgetColor']
             /* tslint:enable */
           }
         },

@@ -12,5 +12,6 @@ export const ColorsData = {
   '$teal': "#4ab0ce",
   '$gray': "#666",
   '$white': "#fff",
+  '$widgetColor': '#f8f8f8',
   '$textColor': "#666"
 };
