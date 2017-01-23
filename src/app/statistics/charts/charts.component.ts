@@ -1,7 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
 declare var jQuery: any;
-declare var Rickshaw: any;
 declare var d3: any;
 declare var nv: any;
 
@@ -12,9 +11,6 @@ declare var nv: any;
   encapsulation: ViewEncapsulation.None
 })
 export class Charts {
-  seriesData: Array<any> = [ [], [] ];
-  random: any;
-  series: Array<any>;
   flotBarsData: Array<any>;
   flotBarsOptions: any;
   sparklineCompositeData: Array<any>;
@@ -56,25 +52,6 @@ export class Charts {
     [6, 28],
     [7, 31]
   ];
-
-  applyRickshawData(): void {
-    console.log(Rickshaw);
-    this.random = new Rickshaw.Fixtures.RandomData(30);
-    for (let i = 0; i < 30; i++) {
-      this.random.addData(this.seriesData);
-    }
-    this.series = [
-      {
-        color: '#96E593',
-        data: this.seriesData[0],
-        name: 'Uploads'
-      }, {
-        color: '#ecfaec',
-        data: this.seriesData[1],
-        name: 'Downloads'
-      }
-    ];
-  };
 
   applyNvd3Data(): void {
     /* Inspired by Lee Byron's test data generator. */
@@ -157,8 +134,6 @@ export class Charts {
   };
 
   ngOnInit(): void {
-    this.applyRickshawData();
-
     this.sparklineCompositeData = [
       [2, 4, 6, 2, 7, 5, 3, 7, 8, 3, 6],
       [5, 3, 7, 8, 3, 6, 2, 4, 6, 2, 7]
