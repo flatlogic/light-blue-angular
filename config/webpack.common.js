@@ -302,6 +302,8 @@ module.exports = function(options) {
         Util: 'util',
         d3: 'd3',
         Rickshaw: 'rickshaw',
+        Raphael: 'webpack-raphael',
+        'window.Raphael': 'webpack-raphael',
         nv: 'nvd3'
       })
     ],
