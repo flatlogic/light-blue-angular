@@ -1,0 +1,87 @@
+@import "../../../../node_modules/rickshaw/rickshaw";
+@import "../../../../node_modules/morris.js/morris";
+@import "../../../../node_modules/nvd3/build/nv.d3";
+@import "../../scss/variables";
+@import "../../../../node_modules/bootstrap/scss/_variables";
+@import "../../../../node_modules/bootstrap/scss/mixins";
+
+/***********************/
+/*         NvD3        */
+/***********************/
+
+.nvtooltip {
+  padding: $input-padding-y-sm $input-padding-x-sm;
+  font-family: $font-family-sans-serif;
+  font-size: $font-size-sm;
+  text-align: center;
+
+  p{
+    margin: 0;
+    padding: 0;
+  }
+
+  h3{
+    background: none;
+    border-bottom: 0;
+  }
+}
+
+svg text {
+  font: $font-weight-base $font-size-sm $font-family-sans-serif;
+  fill: $text-color;
+}
+
+svg .title {
+  font: $font-weight-bold $font-size-base $font-family-sans-serif;
+}
+
+.nvd3.nv-noData {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+}
+
+.nvd3 .nv-axis path.domain {
+  stroke-opacity: 0;
+}
+
+.nv-controlsWrap{
+
+  .nv-legend-symbol{
+    fill: #666 !important;
+    stroke: #666 !important;
+  }
+}
+
+/***********************/
+/*   Easy Pie Chart    */
+/***********************/
+
+
+.easy-pie-chart{
+  position: relative;
+  display: inline-block;
+  line-height: 120px;
+  height: 120px;
+  width: 120px;
+  text-align: center;
+  color: $gray-semi-light;
+  canvas{
+    position: absolute;
+    top: 0;
+    left: 0
+  }
+}
+
+
+/***********************/
+/*         Flot        */
+/***********************/
+
+
+.chart-tooltip{
+  position: fixed;
+  padding: $input-padding-y-sm $input-padding-x-sm;
+  border: 1px solid $gray-semi-lighter;
+  font-size: $font-size-mini;
+  background-color: $white;
+}
