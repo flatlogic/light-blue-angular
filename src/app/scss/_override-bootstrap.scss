@@ -96,6 +96,10 @@ legend small{
   color: $text-muted;
 }
 
+textarea.form-control {
+  height: auto;
+}
+
 .form-control{
   transition: border linear .2s, box-shadow linear .2s;
   box-sizing: border-box;

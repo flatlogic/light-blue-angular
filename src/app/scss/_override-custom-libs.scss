@@ -295,15 +295,6 @@ a.fc-event{
 /***********************************/
 /**        Awesome Checkbox       **/
 /***********************************/
-.abc-checkbox label::before {
-  width: 15px;
-  height: 15px;
-}
-
-.abc-checkbox label:after {
-  top: -1px;
-  left: -1px;
-}
 
 .abc-checkbox, .abc-radio {
   label {
