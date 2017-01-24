@@ -9,8 +9,12 @@ declare var jQuery: any;
   encapsulation: ViewEncapsulation.None,
 })
 export class Account {
-  birthDate: Date = new Date(2016, 5, 10);
-  expirationDate: Date = new Date(2017, 5, 10);
+  birthDate: Date = null;
+  expirationDate: Date = null;
+
+  datepickerOpts: any = {
+   placeholder: ' '
+  };
 
   getSelect2StateList(): [string] {
     return data.select2StateData;

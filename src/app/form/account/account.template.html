@@ -91,6 +91,7 @@
                     id="date-of-birth"
                     [(ngModel)]="birthDate"
                     name="datetime"
+                    [datepicker]="datepickerOpts"
                     [timepicker]="false"
                     datetime-transparent
                     [showAddon]="false"></datetime>
@@ -231,7 +232,7 @@
                 <label for="datetimepicker">
                   Account expiration date
                 </label>
-                <datetime class="form-line" [timepicker]="false" [(ngModel)]="expirationDate" name="datetime" id="datetimepicker"></datetime>
+                <datetime class="form-line" [timepicker]="false" [datepicker]="datepickerOpts" [(ngModel)]="expirationDate" name="datetime" id="datetimepicker"></datetime>
                 <p class="help-block">Bootstrap datepicker</p>
               </div>
               <div class="form-group">
