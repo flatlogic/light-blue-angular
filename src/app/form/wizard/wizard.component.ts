@@ -12,6 +12,12 @@ declare var jQuery: any;
   encapsulation: ViewEncapsulation.None
 })
 export class Wizard {
+  expirationDate: Date = null;
+
+  datepickerOpts: any = {
+    placeholder: ' '
+  };
+
   getSelect2CountriesList(): Select2OptionData[] {
     return data.select2CountriesData;
   }
@@ -22,5 +28,14 @@ export class Wizard {
 
   getSelect2CardTypes(): Select2OptionData[] {
     return data.cardTypesData;
+  }
+
+  ngOnInit() {
+    jQuery("#destination").inputmask({
+      mask: '99999'
+    });
+    jQuery("#credit").inputmask({
+      mask: '9999-9999-9999-9999'
+    });
   }
 }

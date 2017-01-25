@@ -1,12 +1,19 @@
-table {
-  small, .small {
-    font-size: 92%;
+div[static] {
+  table {
+    small, .small {
+      font-size: 92%;
+    }
   }
-}
 
-.static-table {
-  .progress.progress-sm {
-    height: 0.77rem;
-    margin-top: 0.35rem;
+  .static-table {
+    .progress.progress-sm {
+      height: 0.77rem;
+      margin-top: 0.35rem;
+    }
+  }
+
+  .table .abc-checkbox label:before {
+    width: 15px;
+    height: 15px;
   }
 }

@@ -96,6 +96,10 @@ legend small{
   color: $text-muted;
 }
 
+textarea.form-control {
+  height: auto;
+}
+
 .form-control{
   transition: border linear .2s, box-shadow linear .2s;
   box-sizing: border-box;
@@ -381,6 +385,10 @@ button.dropdown-toggle{
   }
 }
 
+.btn-block {
+  box-sizing: border-box;
+}
+
 /***************************/
 /*      Button Groups      */
 /***************************/
@@ -449,8 +457,8 @@ button.dropdown-toggle{
 // BOTTOM
 // ------
 
-.tabs-below > .nav-tabs > li {
-  margin-top: -1px;
+.tabs-below > .nav-tabs > .nav-item {
+  margin-top: 0;
   margin-bottom: 0;
 }
 .tabs-below > .nav-tabs > li > a {
@@ -552,7 +560,7 @@ button.dropdown-toggle{
   background-color: rgba($widget-bg-common, .25);
 }
 
-.nav-tabs > li > a {
+.nav-tabs > .nav-item > .nav-link {
   border-radius: $border-radius-base $border-radius-base 0 0;
   color: $nav-tabs-link-color;
   padding-top: 8px;
@@ -563,26 +571,55 @@ button.dropdown-toggle{
   }
 }
 
-.nav-tabs > .active{
-  margin-bottom: $nav-tabs-active-item-margin;
+.nav-tabs .nav-item + .nav-item {
+  margin-left: 2px;
+}
+
+.nav-tabs > .nav-item {
+  box-sizing: border-box;
+  margin-bottom: 0;
 }
 
 .nav-tabs{
   border-bottom: $nav-tabs-border;
 }
 
-.nav-tabs > li.active > a,
-.nav-tabs > li.active > a:hover,
-.nav-tabs > li.active > a:focus {
+.nav-tabs > .nav-item > .nav-link.active,
+.nav-tabs > .nav-item > .nav-link.active:hover,
+.nav-tabs > .nav-item > .nav-link.active:focus,
+.nav-tabs > .nav-item > .nav-link:hover,
+.nav-tabs > .nav-item > .nav-link:focus{
   color: $widget-color;
-  background-color: $nav-tabs-tab-content-bg;
+  background: $nav-tabs-tab-content-bg;
   border-color: $nav-tabs-active-item-border;
   border-bottom-color: $nav-tabs-active-item-border-bottom;
+}
+
+.nav-tabs > .nav-item > .nav-link.active {
+  cursor: default;
 }
 
 .nav-tabs .dropdown-menu {
   border-radius: 0 0 $border-radius-base $border-radius-base; // remove the top rounded corners here since there is a hard edge above the menu
 }
+.nav-tabs .nav-item.dropdown > .nav-link, .nav-tabs .nav-item.dropdown.open > .nav-link {
+  border: 1px solid $nav-tabs-border-color;
+  color: $widget-color;
+
+  &:after {
+    display: none;
+  }
+}
+
+.nav-tabs > .nav-item.dropdown.open {
+  background: none;
+  border-color: $nav-tabs-border-color;
+
+  & > .nav-link {
+    background-color: $nav-tabs-tab-content-bg;
+  }
+}
+
 .nav-pills .dropdown-menu {
   border-radius: $border-radius-base; // make rounded corners match the pills
 }
@@ -590,7 +627,7 @@ button.dropdown-toggle{
   border-top: $nav-tabs-border;
 }
 
-.tabs-below > .nav-tabs > li > a {
+.tabs-below > .nav-tabs > .nav-item > .nav-link {
   border-radius: 0 0 $border-radius-base $border-radius-base;
 }
 
@@ -599,7 +636,7 @@ button.dropdown-toggle{
   border-right: $nav-tabs-border;
 }
 
-.tabs-left > .nav-tabs > li > a {
+.tabs-left > .nav-tabs > .nav-item > .nav-link {
   border-radius: $border-radius-base 0 0 $border-radius-base;
 }
 
@@ -607,15 +644,11 @@ button.dropdown-toggle{
   margin-left: 0;
   border-left: $nav-tabs-border;
 }
-.tabs-right > .nav-tabs > li > a {
+.tabs-right > .nav-tabs > .nav-item > .nav-link {
   border-radius: 0 $border-radius-base $border-radius-base 0;
 }
 
-.tabs-below > .nav-tabs > li {
-  margin-top: $nav-tabs-active-item-margin;
-}
-
-.tabs-below > .nav-tabs > li > a {
+.tabs-below > .nav-tabs > .nan-item > .nav-link {
   &:hover,
   &:focus {
     border-top-color: transparent;
@@ -627,33 +660,46 @@ button.dropdown-toggle{
   //  border-color: transparent;
 }
 
-.tabs-left > .nav-tabs > li > a {
-  margin-right: 0;
+.tabs-left > .nav-tabs > .nav-item {
+  margin-bottom: 0;
+  margin-left: 0;
 }
-.tabs-left > .nav-tabs > li > a:hover,
+
+.tabs-left > .nav-tabs > .nav-item > .nav-link {
+  margin-right: 0;
+  margin-bottom: 3px;
+}
+.tabs-left > .nav-tabs > .nav-item > .nav-link:hover,
 .tabs-left > .nav-tabs > li > a:focus {
   border-color: transparent;
 }
-.tabs-left > .nav-tabs .active > a,
-.tabs-left > .nav-tabs .active > a:hover,
-.tabs-left > .nav-tabs .active > a:focus {
+.tabs-left > .nav-tabs .active > .nav-link,
+.tabs-left > .nav-tabs .active > .nav-link:hover,
+.tabs-left > .nav-tabs .active > .nav-link:focus {
   border-color: $nav-tabs-active-item-border;
   border-right-color: $nav-tabs-active-item-border-bottom;
 }
 
 .tabs-left > .nav-tabs .active{
-  margin-right: $nav-tabs-active-item-margin;
+  margin-right: 0;
 }
 
 .tabs-right > .nav-tabs .active{
-  margin-left: $nav-tabs-active-item-margin;
-}
-
-.tabs-right > .nav-tabs > li > a {
   margin-left: 0;
 }
-.tabs-right > .nav-tabs > li > a:hover,
-.tabs-right > .nav-tabs > li > a:focus {
+
+.tabs-right > .nav-tabs > .nav-item > .nav-link {
+  margin-left: 0;
+  margin-bottom: 3px;
+}
+
+.tabs-right > .nav-tabs > .nav-item {
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+.tabs-right > .nav-tabs > .nav-item > .nav-link:hover,
+.tabs-right > .nav-tabs > .nav-item > .nav-link:focus {
   border-color: transparent;
 }
 .tabs-right > .nav-tabs .active > a,
@@ -1086,22 +1132,67 @@ button.dropdown-toggle{
 .panel-heading {
   padding: 0;
 
-  > .accordion-toggle{
+  .accordion-toggle{
     display: block;
     padding: 8px 15px;
+
+    > div {
+      font-size: $font-size-base;
+    }
   }
 }
 
 .panel-group {
+  .panel {
+    border-radius: 3px;
+  }
+
+  .panel-open .panel-heading .accordion-toggle{
+    color: $widget-color;
+    &:before {
+     transform: rotate(-90deg);
+    }
+  }
+
   .panel-heading {
     + .panel-collapse .panel-body {
       border-top: 1px solid $bg-addition;
+    }
+
+    .accordion-toggle {
+      display: block;
+      line-height: $line-height-base;
+      color: $panel-opened-color;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &:before {
+        display: inline-block;
+        font-family: FontAwesome;
+        content: "\f104";
+        float: right;
+        font-size: $font-size-base;
+        margin-right: -8px;
+        position: relative;
+        top: 1px;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+
+    .panel-title {
+      margin-bottom: 0;
     }
   }
   .panel-footer {
     + .panel-collapse .panel-body {
       border-bottom: 1px solid $bg-addition;
     }
+  }
+
+  .panel +.panel, accordion-group + accordion-group .panel {
+    margin-top: $panel-mt;
   }
 }
 
@@ -1145,6 +1236,7 @@ button.dropdown-toggle{
 
 .panel-body{
   border-top-color: $bg-addition;
+  padding: $panel-body-padding;
 }
 
 /***************************/

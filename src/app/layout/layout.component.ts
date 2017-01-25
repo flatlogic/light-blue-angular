@@ -21,9 +21,13 @@ export class Layout {
   }
 
   openSidebar(): void {
+    let sidebar = document.getElementById('side-nav');
+    let sidebarMarginTop = parseInt(window.getComputedStyle(sidebar).marginTop);
+    let sidebarMarginBottom = parseInt(window.getComputedStyle(sidebar).marginBottom);
+    let sidebarHeight = sidebar.offsetHeight + sidebarMarginTop + sidebarMarginBottom;
 
     if(this.sidebarState) {
-      this.renderer.setElementStyle(this.el.nativeElement.querySelector('.content'), 'margin-top', '100px');
+      this.renderer.setElementStyle(this.el.nativeElement.querySelector('.content'), 'margin-top', sidebarHeight + 'px');
     } else {
       this.renderer.setElementStyle(this.el.nativeElement.querySelector('.content'), 'margin-top', '0px');
     }

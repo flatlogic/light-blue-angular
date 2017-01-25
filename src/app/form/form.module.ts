@@ -7,6 +7,12 @@ import { Select2Module } from 'ng2-select2';
 import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
 import { AlertModule, TooltipModule } from 'ng2-bootstrap/ng2-bootstrap';
 import { Autosize } from 'angular2-autosize';
+
+declare var global: any;
+
+var markdown = require('markdown').markdown;
+global.markdown = markdown;
+import 'bootstrap-markdown/js/bootstrap-markdown.js';
 import 'bootstrap-select/dist/js/bootstrap-select.js';
 import 'parsleyjs';
 import 'twitter-bootstrap-wizard/jquery.bootstrap.wizard.js';
@@ -25,6 +31,7 @@ import {Wizard} from './wizard/wizard.component'
 import {FormWizard} from './wizard/form-wizard/form-wizard.directive';
 import {WidgetModule} from '../layout/widget/widget.module';
 import {DatetimeTransparent} from '../ui/datetime-transparent/datetime-transparent.directive';
+import {MarkdownToolbarTransparent} from '../ui/markdown-toolbar-transparent/markdown-toolbar-transparent.directive';
 
 
 export const routes = [
@@ -46,7 +53,8 @@ export const routes = [
     Wizard,
     FormWizard,
     Autosize,
-    DatetimeTransparent
+    DatetimeTransparent,
+    MarkdownToolbarTransparent
   ],
   imports: [
     CommonModule,

@@ -8,35 +8,35 @@
           <h4><i class="fa fa-file-alt"></i> Article <small>Create new or edit existing article</small></h4>
       </header>
       <div class="body">
-        <form class="form-horizontal" role="form" id="article-form" method="post" novalidate="novalidate"
+        <form class="form-horizontal article-form" role="form" id="article-form" method="post" novalidate="novalidate"
               data-parsley-priority-enabled="false">
           <fieldset>
             <div class="form-group row">
-              <label class="col-md-3 from-control-label" for="title">Title <span class="required">*</span></label>
+              <label class="col-md-3 col-form-label text-md-right" for="title">Title <span class="required">*</span></label>
               <div class="col-md-9">
                 <input type="text" id="title" name="title" class="form-control input-transparent"
                        required="required">
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-md-3 form-control-label" for="content">
+              <label class="col-md-3 col-form-label text-md-right">
                 Content
               </label>
-              <div class="col-md-9">
-                <textarea rows="10" class="form-control" id="content"></textarea>
+              <div class="col-md-9" markdown-toolbar-transparent>
+                <textarea class="form-control input-transparent" id="markdown-editor" data-provide="markdown" rows="6"></textarea>
               </div>
             </div>
             <div class="form-group row">
-              <label for="description" class="col-md-3 from-control-label">Description</label>
+              <label class="col-md-3 col-form-label text-md-right">Description</label>
               <div class="col-md-9">
-                <textarea id="description" rows="3" name="text" class="form-control input-transparent"></textarea>
+                <textarea id="description" rows="3" name="text" class="form-control article-description input-transparent"></textarea>
                 <span class="help-block">Optional summary of your article that can be used in previews</span>
               </div>
             </div>
           </fieldset>
           <div class="form-actions">
             <div class="row">
-              <div class="col-md-9 col-md-offset-3">
+              <div class="col-md-9 offset-md-3">
                 <div class="btn-toolbar">
                   <button type="submit" class="btn btn-success">Submit</button>
                   <button type="button" class="btn btn-secondary">Cancel</button>
@@ -61,7 +61,7 @@
           <fieldset>
             <legend class="section">Publishing</legend>
             <div class="form-group row">
-              <label for="article-status" class="from-control-label col-md-4">Status</label>
+              <label for="article-status" class="col-form-label col-md-4">Status</label>
 
               <div class="col-md-8">
                 <select id="article-status" name="article-status"
@@ -75,14 +75,13 @@
               </div>
             </div>
             <div class="form-group row">
-              <label for="publish-date" class="from-control-label col-md-4">Publish at</label>
+              <label for="publish-date" class="col-form-label col-md-4">Publish at</label>
               <div class="col-md-8">
-                <input type="text" id="publish-date" name="publish-date" class="form-control date-picker">
-                <input type="text" id="publish-time" name="publish-time" class="form-control mt-sm">
+                <datetime [(ngModel)]="publishDate" class="article-options-datetime" name="publish-date" id="publish-date"></datetime>
               </div>
             </div>
             <div class="form-group row">
-              <label for="article-language" class="from-control-label col-md-4">Language</label>
+              <label for="article-language" class="col-form-label col-md-4">Language</label>
               <div class="col-md-8">
                 <select id="article-language" name="article-language"
                         data-style="btn-success"
@@ -96,9 +95,9 @@
             </div>
           </fieldset>
           <fieldset>
-            <legend class="section">Category & Tags</legend>
+            <legend class="section">Category</legend>
             <div class="form-group row">
-              <label for="article-category" class="from-control-label col-md-4">Category</label>
+              <label for="article-category" class="col-form-label col-md-4">Category</label>
               <div class="col-md-8">
                 <select id="article-category" name="article-category"
                         data-style="btn-warning"
@@ -111,14 +110,14 @@
                 </select>
               </div>
             </div>
-            <div class="form-group row">
-              <label for="article-tags" class="from-control-label col-md-4">Tags</label>
-              <div class="col-md-8">
-                <input type="text" id="article-tags" name="article-tags"
-                       class="select-block-level">
-                <span class="help-block">Write or select a tag and press "Enter" to add it.</span>
-              </div>
-            </div>
+            <!--<div class="form-group row">-->
+              <!--<label for="article-tags" class="col-form-label col-md-4">Tags</label>-->
+              <!--<div class="col-md-8">-->
+                <!--<input type="text" id="article-tags" name="article-tags"-->
+                       <!--class="select-block-level">-->
+                <!--<span class="help-block">Write or select a tag and press "Enter" to add it.</span>-->
+              <!--</div>-->
+            <!--</div>-->
           </fieldset>
         </form>
       </div>
@@ -132,7 +131,7 @@
               method="post">
           <fieldset>
             <div class="form-group row">
-              <label for="article-visibility" class="from-control-label col-md-4">Visibility</label>
+              <label for="article-visibility" class="col-form-label col-md-4">Visibility</label>
               <div class="col-md-8">
                 <select id="article-visibility" name="article-visibility"
                         data-style="btn-warning"
@@ -146,7 +145,7 @@
               </div>
             </div>
             <div class="form-group row">
-              <label for="article-password" class="from-control-label col-md-4">Password</label>
+              <label for="article-password" class="col-form-label col-md-4">Password</label>
               <div class="col-md-8">
                 <input type="password" id="article-password" class="form-control" name="article-password">
               </div>
