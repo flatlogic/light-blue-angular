@@ -371,6 +371,10 @@ button.dropdown-toggle{
   }
 }
 
+.btn-sm {
+  line-height: 18px;  //TODO: Change after $line-height-computed is recalculated
+}
+
 .btn-secondary {
   @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
 }
@@ -876,18 +880,40 @@ button.dropdown-toggle{
 /*       Thumbnails        */
 /***************************/
 
-.thumbnail {
-  border: none;
-  @include box-shadow(none);
+.img-thumbnail {
+  border: $img-thumbnail-border;
+  background-color: $img-thumbnail-bg;
+  box-shadow: none;
+  padding: $img-thumbnail-padding;
 
   .widget &{
-    border: $thumbnail-border;
+    border: $img-thumbnail-border;
   }
 }
 
-.thumbnail .caption {
+.img-thumbnail .caption {
   color: $widget-color;
 }
+
+/***************************/
+/*       Cards        */
+/***************************/
+
+.card {
+  background-color: $widget-bg;
+  color: $widget-color;
+  border: none;
+  padding: $card-padding;
+}
+
+.card-title {
+  margin-top: $card-spacer-y;
+}
+
+.card-img-top {
+  width: 100%;
+}
+
 
 /***************************/
 /*    Labels and tags    */

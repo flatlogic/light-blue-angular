@@ -240,6 +240,9 @@ $btn-inverse-bg: $white-dark !default;
 
 $btn-border: #bbb !default;
 
+$btn-padding-y-sm: 0.31rem;
+$btn-padding-x-sm: 0.77rem;
+
 // Forms
 // -------------------------
 
@@ -320,8 +323,15 @@ $popover-border-color:                transparent;
 
 // Thumbnails
 // -------------------------
-$thumbnail-bg:                    $widget-bg;
-$thumbnail-border:                    none;
+$img-thumbnail-bg:                    $widget-bg;
+$img-thumbnail-border:                    none;
+$img-thumbnail-padding:               0.31rem;
+
+// Cards
+// -------------------------
+$card-spacer-y:              0.69rem;
+$card-spacer-x:              0.69rem;
+$card-padding:               0.31rem;
 
 // Pagination
 // -------------------------

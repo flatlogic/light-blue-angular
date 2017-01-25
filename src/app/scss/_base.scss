@@ -1213,11 +1213,11 @@ $i: 1;
 /**          THUMBNAILS          **/
 /**********************************/
 
-.thumbnail img{
+.img-thumbnail{
   width: 100%;
 }
 
-.thumbnails > li {
+.thumbnails .img-thumbnail {
   margin-bottom: 20px;
 }
 
