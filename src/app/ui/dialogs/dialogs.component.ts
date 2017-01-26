@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+declare var jQuery: any;
 
 @Component({
   selector: '[dialogs]',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: [ './dialogs.style.scss' ]
 })
 export class Dialogs {
+
+  ngOnInit() {
+    jQuery('[data-toggle="popover"]').popover();
+  }
 
 }
