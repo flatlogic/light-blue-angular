@@ -2,7 +2,7 @@
   <div class="chat-messages">
     <div *ngFor="let message of _messages, let i = index" class="chat-message">
 
-      <div class="sender" [ngClass]="{'pull-left': i % 2 === 0, 'pull-right': i % 2 !== 0}">
+      <div class="sender" [ngClass]="{'float-xs-left': i % 2 === 0, 'float-xs-right': i % 2 !== 0}">
         <div class="icon">
           <img src={{message.image}} class="img-circle" alt="">
         </div>

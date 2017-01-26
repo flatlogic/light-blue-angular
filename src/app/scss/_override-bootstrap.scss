@@ -925,6 +925,10 @@ button.dropdown-toggle{
   font-size: 11px;
 }
 
+.tag-pill {
+  padding: 2px 8px;
+}
+
 .tag-default {
   @include tag-variant($tag-default-bg);
 }

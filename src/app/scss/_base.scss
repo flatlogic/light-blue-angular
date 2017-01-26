@@ -675,8 +675,8 @@ $i: 1;
   }
 
   // Right aligned menus need alt position
-  .navbar-nav.pull-right > li > .dropdown-menu,
-  .navbar-nav.nav > li > .dropdown-menu.pull-right {
+  .navbar-nav.float-xs-right > li > .dropdown-menu,
+  .navbar-nav.nav > li > .dropdown-menu.float-xs-right {
     left: auto;
     right: 0;
     &:before {
@@ -1062,7 +1062,7 @@ $i: 1;
   padding: 17px 20px 18px;
   margin-top: 18px;
   background-color: $bg-addition;
-  @include clearfix(); // Adding clearfix to allow for .pull-right button containers
+  @include clearfix(); // Adding clearfix to allow for .float-xs-right button containers
 }
 
 /***********************************/
