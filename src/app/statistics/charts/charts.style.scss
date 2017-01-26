@@ -6,53 +6,6 @@
 @import "../../../../node_modules/bootstrap/scss/mixins";
 
 /***********************/
-/*         NvD3        */
-/***********************/
-
-.nvtooltip {
-  padding: $input-padding-y-sm $input-padding-x-sm;
-  font-family: $font-family-sans-serif;
-  font-size: $font-size-sm;
-  text-align: center;
-
-  p{
-    margin: 0;
-    padding: 0;
-  }
-
-  h3{
-    background: none;
-    border-bottom: 0;
-  }
-}
-
-svg text {
-  font: $font-weight-base $font-size-sm $font-family-sans-serif;
-  fill: $text-color;
-}
-
-svg .title {
-  font: $font-weight-bold $font-size-base $font-family-sans-serif;
-}
-
-.nvd3.nv-noData {
-  font-size: $font-size-lg;
-  font-weight: $font-weight-bold;
-}
-
-.nvd3 .nv-axis path.domain {
-  stroke-opacity: 0;
-}
-
-.nv-controlsWrap{
-
-  .nv-legend-symbol{
-    fill: #666 !important;
-    stroke: #666 !important;
-  }
-}
-
-/***********************/
 /*   Easy Pie Chart    */
 /***********************/
 

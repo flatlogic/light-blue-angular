@@ -10,6 +10,7 @@ import { Chat } from './chat/chat.component';
 import { WidgetModule } from '../layout/widget/widget.module';
 
 import { Nvd3ChartModule } from './nvd3/nvd3.module';
+import { JqSparklineModule } from '../components/sparkline/sparkline.module';
 
 export const routes = [
   { path: '', component: Dashboard, pathMatch: 'full' }
@@ -25,6 +26,7 @@ export const routes = [
     FormsModule,
     Nvd3ChartModule,
     WidgetModule,
+    JqSparklineModule,
     RouterModule.forChild(routes),
   ]
 })

@@ -2,25 +2,13 @@
  * override custom libs styles. This files is not required for core sing functionality and may be removed
  */
 
+/***********************/
+/*         NvD3        */
+/***********************/
 
 
-/**
- * nvd3
- */
-.nvtooltip {
-  padding: $input-padding-y-sm $input-padding-x-sm;
-  font-family: $font-family-base;
-  font-size: $font-size-small;
-  text-align: center;
-
-  p{
-    margin: 0;
-    padding: 0;
-  }
-}
-
-svg text,
-.nvd3 text{
+.nvd3-svg svg text,
+.nvd3-svg .nvd3 text{
   font: $font-weight-base $font-size-small $font-family-base;
   fill: $text-color;
 
@@ -29,36 +17,36 @@ svg text,
   }
 }
 
-svg .title {
+.nvd3-svg svg .title {
   font: $font-weight-bold $font-size-base $font-family-base;
 }
 
-.nvd3.nv-noData {
+.nvd3-svg  .nvd3.nv-noData {
   font-size: $font-size-large;
   font-weight: $font-weight-bold;
 }
 
-.nvd3 .nv-axis path.domain {
+.nvd3-svg .nvd3 .nv-axis path.domain {
   stroke-opacity: 0;
 }
 
-.nv-controlsWrap{
+.nvd3-svg .nv-controlsWrap{
   .nv-legend-symbol{
     fill: #666 !important;
     stroke: #666 !important;
   }
 }
 
-.nvd3 .nv-legend .disabled circle {
+.nvd3-svg .nvd3 .nv-legend .disabled circle {
   fill-opacity: 0;
 }
 
-.nvd3 .nv-axis line{
+.nvd3-svg .nvd3 .nv-axis line{
   stroke: #000;
   stroke-opacity: .1;
 }
 
-.nvtooltip h3{
+.nvtooltip.xy-tooltip h3{
   background-color: transparent;
   border: none;
   color: inherit;
@@ -68,19 +56,20 @@ svg .title {
   fill-opacity: 1 !important;
 }
 
-.nvd3.nv-stackedarea path.nv-area {
+.nvd3-svg .nvd3.nv-stackedarea path.nv-area {
   fill-opacity: .8;
 }
 
-.nvd3.nv-stackedarea path.nv-area.hover {
+.nvd3-svg .nvd3.nv-stackedarea path.nv-area.hover {
   fill-opacity: .95;
 }
 
-.nvd3 .nv-axis path.domain{
+.nvd3-svg .nvd3 .nv-axis path.domain{
   display: none;
 }
 
-.nvtooltip{
+
+.nvtooltip.xy-tooltip {
   padding: 5px;
   position: absolute;
   background-color: rgba($widget-bg-common, .6);
@@ -102,16 +91,12 @@ svg .title {
   -webkit-transition: none;
 }
 
-.nvtooltip {
-  h3, h4{
-    margin: 0;
-    padding: 0;
+.nvtooltip.xy-tooltip {
     font-size: $font-size-base;
     text-align: center;
-  }
 }
 
-.nvd3 .nv-axis line.zero{
+.nvd3-svg .nvd3 .nv-axis line.zero{
   display: none;
 }
 

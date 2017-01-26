@@ -1,7 +1,8 @@
 <div class="chat">
   <div class="chat-messages">
-    <div *ngFor="let message of _messages" class="chat-message">
-      <div class="sender pull-left">
+    <div *ngFor="let message of _messages, let i = index" class="chat-message">
+
+      <div class="sender" [ngClass]="{'pull-left': i % 2 === 0, 'pull-right': i % 2 !== 0}">
         <div class="icon">
           <img src={{message.image}} class="img-circle" alt="">
         </div>
@@ -9,7 +10,7 @@
           {{message.time}}
         </div>
       </div>
-      <div class="chat-message-body">
+      <div class="chat-message-body" [ngClass]="{'on-left': i % 2 !== 0}">
         <span class="arrow"></span>
         <div class="sender"><a href="#">{{message.sender}}</a></div>
         <div class="text">{{message.text}}</div>
@@ -18,10 +19,10 @@
   </div>
   <footer class="chat-footer row">
     <div class="col-sm-9">
-      <input #message (keyup)="doneTyping($event)" id="new-message" type="text" class="form-control" placeholder="Enter your message..">
+      <input #message (keyup)="doneTyping($event)" id="new-message" type="text" class="form-control input-transparent" placeholder="Enter your message..">
     </div>
     <div class="col-sm-3">
-      <button (click)="addMessage(message)" type="button" id="new-message-btn" class="btn btn-danger btn-block">Send</button>
+      <button (click)="addMessage(message)" type="button" id="new-message-btn" class="btn btn-transparent btn-block">Send</button>
     </div>
   </footer>
 </div>
