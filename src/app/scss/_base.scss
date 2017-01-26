@@ -401,7 +401,7 @@ $i: 1;
   &.large{
     height: 315px;
 
-    .body{
+    .widget-body{
       height: 280px;
     }
   }
@@ -409,7 +409,7 @@ $i: 1;
   &.xlarge{
     height: 415px;
 
-    .body{
+    .widget-body{
       height: 380px;
     }
   }
@@ -449,7 +449,7 @@ $i: 1;
     }
   }
 
-  .body{
+  .widget-body{
     margin-top: 10px;
   }
 
@@ -769,7 +769,6 @@ $i: 1;
 }
 
 .message{
-  height: 60px;
 
   img{
     float: left;
@@ -1060,7 +1059,6 @@ $i: 1;
 
 .form-actions {
   padding: 17px 20px 18px;
-  margin-top: 18px;
   background-color: $bg-addition;
   @include clearfix(); // Adding clearfix to allow for .float-xs-right button containers
 }
@@ -1102,7 +1100,7 @@ $i: 1;
   @include box-shadow(none);
   padding: 0;
 
-  .body{
+  .widget-body{
     background: $widget-bg;
     margin-top: 0;
     padding: $widget-padding;

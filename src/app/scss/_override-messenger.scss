@@ -172,7 +172,7 @@ $spinnerSize: 22px;
 ul.messenger-theme-air {
   @include unselectable;
   .messenger-message {
-    @include transition(background-color 0.4s);
+    transition: background-color 0.4s;
     border-radius: 5px;
     border-color: $basic-border-color;
     background-color: lighten($widget-bg, .2);
@@ -210,7 +210,7 @@ ul.messenger-theme-air {
       float: none;
       margin-top: 10px;
       a {
-        @include transition(background-color .3s);
+        transition: background-color .3s;
         border-radius: 4px;
         text-decoration: none;
         display: inline-block;

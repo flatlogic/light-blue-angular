@@ -95,7 +95,6 @@ export class MessengerDemo {
     $lsel.locationSelector()
       .on('update', (e, pos) => {
         loc = pos;
-
         update();
       });
 

@@ -18,7 +18,7 @@
           <a data-widgster="close" title="Close" href="#"><i class="glyphicon glyphicon-remove"></i></a>
         </div>
       </header>
-      <div class="body no-margin">
+      <div class="widget-body no-margin">
         <div nvd3-chart [chart]="nvd31Chart" [datum]="nvd31Data">
           <svg></svg>
         </div>
@@ -58,7 +58,7 @@
           <a data-widgster="close" title="Close" href="#"><i class="glyphicon glyphicon-remove"></i></a>
         </div>
       </header>
-      <div class="widget-table-overflow body">
+      <div class="widget-table-overflow widget-body">
         <table class="table table-striped table-lg mt-sm mb-0 sources-table">
           <thead>
           <tr>
@@ -136,7 +136,7 @@
           <a data-widgster="close" title="Close" href="#"><i class="glyphicon glyphicon-remove"></i></a>
         </div>
       </header>
-      <div chat [messages]="messages" class="body"></div>
+      <div chat [messages]="messages" class="widget-body"></div>
     </section>
   </div>
   <div class="col-xl-4">
@@ -151,7 +151,7 @@
           <button class="btn btn-transparent">Show All <i class="fa fa-arrow-down"></i></button>
         </div>
       </header>
-      <div class="body">
+      <div class="widget-body">
         <div id="feed" class="feed">
           <div class="wrapper">
             <div class="vertical-line"></div>
@@ -261,7 +261,7 @@
           </li>
         </ul>
       </header>
-      <div class="body tab-content">
+      <div class="widget-body tab-content">
         <div id="stats" class="tab-pane active clearfix">
           <h5 class="tab-header"><span class="tag tag-primary"><i class="fa fa-facebook"></i></span> Last
             logged-in users</h5>
@@ -475,7 +475,7 @@
           <small class="text-muted float-xs-right">2 days ago</small>
         </div>
       </header>
-      <div class="body">
+      <div class="widget-body">
         <ul class="server-stats">
           <li>
             <div class="key float-xs-right">CPU</div>
@@ -488,7 +488,7 @@
             <div class="key float-xs-right">Mem</div>
             <div class="stat">
               <div class="info">29% / 4GB (16 GB)</div>
-              <div class="bg-progress-transparent progress-bar m-t-2">
+              <div class="bg-progress-transparent progress-bar mt-2">
                 <progress class="progress progress-sm" value="29" max="100"></progress>
               </div>
             </div>
@@ -498,7 +498,7 @@
             <div class="stat">
               <div class="info">6 Mb/s <i class="fa fa-caret-down"></i> &nbsp; 3 Mb/s <i class="fa fa-caret-up"></i>
               </div>
-              <div class="bg-progress-transparent progress-bar m-t-2">
+              <div class="bg-progress-transparent progress-bar mt-2">
                 <progress class="progress progress-sm progress-inverse" value="48" max="100"></progress>
               </div>
             </div>

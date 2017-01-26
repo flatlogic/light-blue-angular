@@ -15,6 +15,7 @@ import {Accordion} from './accordion/accordion.component'
 import { TooltipModule, AlertModule, DropdownModule } from 'ng2-bootstrap/ng2-bootstrap'
 import { TabsModule, AccordionModule } from 'ng2-bootstrap/ng2-bootstrap';
 import { MessengerDemo } from './notifications/messenger/messenger.directive';
+import { WidgetModule } from '../layout/widget/widget.module';
 
 console.log('`Detail` bundle loaded asynchronously');
 // async components must be named routes for WebpackAsyncRoute
@@ -41,6 +42,7 @@ export const routes = [
   ],
   imports: [
     CommonModule,
+    WidgetModule,
     FormsModule,
     RouterModule.forChild(routes),
     TooltipModule, AlertModule, DropdownModule,
