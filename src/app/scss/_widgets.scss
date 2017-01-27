@@ -282,53 +282,6 @@ table.table thead .sorting_desc_disabled { background: url('#{$libs-compiled-fol
 }
 
 /***********************************/
-/**          ERROR PAGE           **/
-/***********************************/
-
-//.error-page{
-//  background-color: $gray-semi-lighter;
-//}
-
-.error-container{
-  padding-top: 5%;
-  text-align: center;
-
-  > .btn{
-    padding-left: 35px;
-    padding-right: 35px;
-  }
-}
-
-.error-code{
-  font-size: 80px;
-  font-weight: $font-weight-thin;
-  color: $white;
-  @include media-breakpoint-up(sm) {
-  //@media (min-width: $screen-sm-min) {
-    font-size: 180px;
-  }
-}
-
-.error-info{
-  font-size: 20px;
-}
-
-.error-help{
-  font-size: 14px;
-}
-
-.error-page .page-footer {
-  position: absolute;
-  bottom: 30px;
-  left: 0;
-  right: 0;
-  width: 100%;
-  font-size: $font-size-small;
-  color: rgba($white, .8);
-  text-align: center;
-}
-
-/***********************************/
 /**            INVOICE            **/
 /***********************************/
 
