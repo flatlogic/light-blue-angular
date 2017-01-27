@@ -14,25 +14,6 @@
   color: #f8f8f8;
 }
 
-.pagination {
-  li a {
-    padding: 4px 10px;
-    font-size: 12px;
-    line-height: 1.5;
-    margin: 0 2px;
-    text-decoration: none;
-  }
-
-  & > .disabled > a {
-    &, &:hover, &:focus {
-      color: #ddd;
-      background-color: transparent;
-      border-color: transparent;
-      cursor: not-allowed;
-    }
-  }
-}
-
 .pagination-search-result > .active > a {
   background-color: rgba(51,51,51,0.25);
   color: #fff;
@@ -43,8 +24,22 @@
 }
 
 .search-result-categories{
-  > li > a {
+  > .nav-item > .nav-link {
+    color: $text-color;
+    background-color: transparent;
     font-weight: $font-weight-normal;
+    &:hover{
+      color: $white;
+      background-color: rgba($widget-bg-common, .25);
+    }
+
+    > .glyphicon{
+      margin-right: 5px;
+    }
+
+    > .badge{
+      float: right;
+    }
   }
 }
 
@@ -52,15 +47,9 @@
   margin-top: 10px;
 }
 
-.btn-toolbar {
-  .btn-default {
-    background-color: #666;
-    border-color: rgba(0,0,0,0.15);
-  }
-}
-
 .search-result-item{
   padding: 20px;
+  background-color: $widget-bg;
   border-radius: $border-radius;
   @include clearfix();
 
@@ -111,7 +100,47 @@
 .search-result-item-heading{
   font-weight: $font-weight-normal;
 
-  @include media-breakpoint-up(md){
+  > a {
+    color: $widget-header-color;
+  }
+
+  @include media-breakpoint-up(md) {
     margin: 0;
   }
+}
+
+.pagination-search-result{
+  > .page-link > .page-item,
+  > .page-link > span{
+    color: $text-color;
+
+    &:hover,
+    &:focus{
+      background-color: rgba($widget-bg, .25);
+      color: $white;
+    }
+  }
+
+  > .disabled > span,
+  > .disabled > span:hover,
+  > .disabled > span:focus,
+  > .disabled > .page-item,
+  > .disabled > .page-item:hover,
+  > .disabled > .page-item:focus{
+    color: #ddd;
+  }
+
+  > .active > .page-item,
+  > .active > .page-item:hover,
+  > .active > .page-item:focus,
+  > .active > span,
+  > .active > span:hover,
+  > .active > span:focus{
+    background-color: rgba($widget-bg, .25);
+    color: $white;
+  }
+}
+
+.dropdown-toggle:after {
+  display: none;
 }
