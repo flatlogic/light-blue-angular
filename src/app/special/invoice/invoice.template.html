@@ -8,10 +8,10 @@
         <img src="../../../assets/img/logo.png" alt="Logo" class="invoice-logo"/>
       </div>
       <div class="col-sm-6 col-print-6">
-        <div class="invoice-number text-align-right">
+        <div class="invoice-number text-xs-right">
           #4346345 / 6 Nov 2014
         </div>
-        <div class="invoice-number-info text-align-right">
+        <div class="invoice-number-info text-xs-right">
           Some Invoice number description or whatever
         </div>
       </div>
@@ -21,7 +21,7 @@
       <div class="row">
         <div class="col-sm-6 col-print-6">
           <h4 class="details-title">Company Information</h4>
-          <h3 class="company-name">
+          <h3 class="company-name mt-1">
             Wrapbootstrap LLC
           </h3>
           <address>
@@ -35,7 +35,7 @@
         </div>
         <div class="col-sm-6 col-print-6 client-details">
           <h4 class="details-title">Client Information</h4>
-          <h3 class="client-name">
+          <h3 class="client-name mt-1">
             Veronica Niasvizhskaja
           </h3>
           <address>
@@ -56,9 +56,9 @@
       <tr>
         <th>#</th>
         <th>Item</th>
-        <th class="hidden-xs">Description</th>
+        <th class="hidden-xs hidden-print">Description</th>
         <th>Quantity</th>
-        <th class="hidden-xs">Price per Unit</th>
+        <th class="hidden-xs hidden-print">Price per Unit</th>
         <th>Total</th>
       </tr>
       </thead>
@@ -66,45 +66,45 @@
       <tr>
         <td>1</td>
         <td>Brand-new 27' monitor</td>
-        <td class="hidden-xs">2,560x1,440-pixel (WQHD) resolution supported!</td>
+        <td class="hidden-xs hidden-print">2,560x1,440-pixel (WQHD) resolution supported!</td>
         <td>2</td>
-        <td class="hidden-xs">700</td>
+        <td class="hidden-xs hidden-print">700</td>
         <td>1,400.00</td>
       </tr>
       <tr>
         <td>2</td>
         <td>Domain: okendoken.com</td>
-        <td class="hidden-xs">6-month registration</td>
+        <td class="hidden-xs hidden-print">6-month registration</td>
         <td>1</td>
-        <td class="hidden-xs">10.99</td>
+        <td class="hidden-xs hidden-print">10.99</td>
         <td>21.88</td>
       </tr>
       <tr>
         <td>3</td>
         <td>Atlas Shrugged</td>
-        <td class="hidden-xs">Novel by Ayn Rand, first published in 1957 in the United States</td>
+        <td class="hidden-xs hidden-print">Novel by Ayn Rand, first published in 1957 in the United States</td>
         <td>5</td>
-        <td class="hidden-xs">35</td>
+        <td class="hidden-xs hidden-print">35</td>
         <td>175.00</td>
       </tr>
       <tr>
         <td>4</td>
         <td>New Song by Dr. Pre</td>
-        <td class="hidden-xs">Lyrics: praesent blandit augue non sapien ornare imperdiet</td>
+        <td class="hidden-xs hidden-print">Lyrics: praesent blandit augue non sapien ornare imperdiet</td>
         <td>1</td>
-        <td class="hidden-xs">2</td>
+        <td class="hidden-xs hidden-print">2</td>
         <td>2.00</td>
       </tr>
       </tbody>
     </table>
     <div class="row">
       <div class="col-sm-6 col-print-6">
-        <blockquote class="blockquote-sm">
+        <blockquote class="blockquote blockquote-sm">
           <strong>Note:</strong> Keep in mind, sometimes bad things happen. But it's just sometimes.
         </blockquote>
       </div>
       <div class="col-sm-6 col-print-6">
-        <div class="row text-align-right">
+        <div class="row text-xs-right">
           <div class="col-xs-6"></div>
           <!-- instead of offset -->
           <div class="col-xs-3">
@@ -120,14 +120,14 @@
         </div>
       </div>
     </div>
-    <p class="text-align-right mt-lg mb-xs">
+    <p class="text-xs-right mt-lg mb-xs">
       Marketing Consultant
     </p>
-    <p class="text-align-right">
+    <p class="text-xs-right">
       <span class="fw-semi-bold">Bob Smith</span>
     </p>
-    <div class="btn-toolbar mt-lg text-align-right hidden-print">
-      <button id="print" class="btn btn-default">
+    <div class="btn-toolbar mt-lg text-xs-right hidden-print">
+      <button id="print" (click)="printInvoice()" class="btn btn-default">
         <i class="fa fa-print"></i>
         &nbsp;&nbsp;
         Print
