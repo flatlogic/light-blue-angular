@@ -3,6 +3,8 @@
 @import "../../../../../node_modules/bootstrap/scss/mixins";
 
 .email-view{
+  margin: $widget-padding-vertical $widget-padding-horizontal;
+
   hr{
     margin: 5px 0;
   }
@@ -10,9 +12,12 @@
   .email-body{
     margin-top: $line-height-computed;
   }
+}
 
-  #email-opened-reply {
-    height: 20px;
+.email-actions {
+  .dropdown-toggle {
+    padding-left: 8px;
+    padding-right: 8px;
   }
 }
 

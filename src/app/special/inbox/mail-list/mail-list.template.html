@@ -16,6 +16,7 @@
         <div class="btn-group">
           <a class="btn btn-secondary btn-sm dropdown-toggle" href="#" data-toggle="dropdown">
             Selects
+            <i class="fa fa-angle-down "></i>
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" (click)="toggleAll(true)">All</a></li>
@@ -28,6 +29,7 @@
         <div class="btn-group">
           <a class="btn btn-sm btn-secondary dropdown-toggle" href="#" data-toggle="dropdown">
             Actions
+            <i class="fa fa-angle-down "></i>
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Reply</a></li>
@@ -60,13 +62,13 @@
       </thead>
       <tbody>
       <tr *ngFor="let mail of mails | FoldersPipe : folderName | SearchPipe : searchText" [ngClass]="{'unread': mail.unread}">
-        <td>
+        <td class="select-mail">
           <div class="checkbox abc-checkbox">
             <input class="toggle-one" type="checkbox" id="checkbox{{mail.id}}" [checked]="mail.selected"  (click)="selectMail(mail)">
             <label attr.for="checkbox{{mail.id}}"></label>
           </div>
         </td>
-        <td><span class="starred"><i class="fa" [ngClass]="{'fa-star': mail.starred, 'fa-star-o': !mail.starred}" (click)="changeStarStatus(mail)"></i></span></td>
+        <td class="favorite"><span class="starred"><i class="fa" [ngClass]="{'fa-star': mail.starred, 'fa-star-o': !mail.starred}" (click)="changeStarStatus(mail)"></i></span></td>
         <td class="name hidden-xs-down" (click)="openMail(mail)">{{mail.sender}}</td>
         <td class="subject" (click)="openMail(mail)">{{mail.subject}}</td>
         <td class="hidden-xs-down">

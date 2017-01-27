@@ -5,6 +5,7 @@ import { EventEmitter } from '@angular/core';
 @Component({
   selector: '[mail-form]',
   templateUrl: './mail-form.template.html',
+  styleUrls: ['./mail-form.style.scss']
 })
 
 export class MailForm {

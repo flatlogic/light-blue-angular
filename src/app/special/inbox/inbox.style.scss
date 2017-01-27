@@ -1,29 +1,41 @@
 @import "../../../../node_modules/bootstrap/scss/_variables";
 @import "../../scss/variables";
-@import "../../../../node_modules/bootstrap/scss/mixins";
 
 .nav-email-folders{
-  > li > .nav-link {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: $border-radius;
+  > li > a {
+    color: $gray-lighter;
     font-weight: $font-weight-normal;
+    background-color: transparent;
+    &:hover{
+      background-color: rgba($widget-bg-common, .25);
+      color: $text-color;
+    }
+
+    > .glyphicon{
+      margin-right: 5px;
+    }
 
     > .fa-circle{
       margin-top: 3px;
     }
+
+    > .badge{
+      background-color: $brand-danger;
+      font-weight: $font-weight-semi-bold;
+    }
   }
 
-  > li > .nav-link > .label {
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-
-  > li.active > .nav-link{
+  > li.active > a{
     &,
     &:hover,
     &:focus {
+      background-color: rgba($widget-bg-common, .25);
+      color: $text-color;
       font-weight: $font-weight-semi-bold;
+
+      > .badge{
+        color: $gray-dark
+      }
     }
   }
 }
