@@ -49,6 +49,6 @@ export const routes = [
     FileUploadModule
   ]
 })
-export default class MapsModule {
+export default class ComponentsModule {
   static routes = routes;
 }

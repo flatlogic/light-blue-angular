@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { PaginationModule, DropdownModule } from 'ng2-bootstrap/ng2-bootstrap';
 import { DataTableModule } from 'angular2-datatable';
 import { Ng2TableModule } from 'ng2-table';
-import { JqSparklineModule } from '../components/sparkline/sparkline.module';
+import { JqSparklineModule } from '../layout/directives/sparkline/sparkline.module';
 import { WidgetModule } from '../layout/widget/widget.module';
 import { UtilsModule } from '../layout/utils/utils.module';
 

@@ -49,6 +49,6 @@ export const routes = [
     TabsModule, AccordionModule
   ]
 })
-export default class StatisticsModule {
+export default class UiModule {
   static routes = routes;
 }

@@ -3,11 +3,11 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import {RickshawChartModule} from '../components/rickshaw/rickshaw.module';
-import { Nvd3ChartModule } from '../components/nvd3/nvd3.module';
-import { MorrisChartModule } from '../components/morris/morris.module';
-import { JqSparklineModule } from '../components/sparkline/sparkline.module';
-import { FlotChartModule } from '../components/flot/flot.module';
+import {RickshawChartModule} from '../layout/directives/rickshaw/rickshaw.module';
+import { Nvd3ChartModule } from '../layout/directives/nvd3/nvd3.module';
+import { MorrisChartModule } from '../layout/directives/morris/morris.module';
+import { JqSparklineModule } from '../layout/directives/sparkline/sparkline.module';
+import { FlotChartModule } from '../layout/directives/flot/flot.module';
 
 import {Stats} from './stats/stats.component'
 import {Charts} from './charts/charts.component'

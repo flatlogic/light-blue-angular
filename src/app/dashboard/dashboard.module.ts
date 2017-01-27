@@ -10,7 +10,7 @@ import { Chat } from './chat/chat.component';
 import { WidgetModule } from '../layout/widget/widget.module';
 
 import { Nvd3ChartModule } from './nvd3/nvd3.module';
-import { JqSparklineModule } from '../components/sparkline/sparkline.module';
+import { JqSparklineModule } from '../layout/directives/sparkline/sparkline.module';
 
 export const routes = [
   { path: '', component: Dashboard, pathMatch: 'full' }
@@ -30,6 +30,6 @@ export const routes = [
     RouterModule.forChild(routes),
   ]
 })
-export default class LoginModule {
+export default class DashboardModule {
   static routes = routes;
 }

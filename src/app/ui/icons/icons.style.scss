@@ -1,5 +1,7 @@
 @import "../../scss/variables";
 
+/* Using [component name] on selectors, when --ViewEncapsulation-- is None */
+
 div[icons] {
   .nav-tabs {
     .nav-link.active {
