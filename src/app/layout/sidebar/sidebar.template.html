@@ -66,9 +66,9 @@
     <a (click)="sidebarBehavior($event)" class="accordion-toggle collapsed" data-toggle="collapse"
        data-parent="#side-nav" href="#special-collapse"><i class="fa fa-leaf"></i> <span class="name">Special</span></a>
     <ul id="special-collapse" class="accordion-body collapse" aria-expanded="false">
-      <li [routerLinkActive]="['active']"><a routerLink="special/search">Search</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="special/search">Search <sup class="text-warning fw-bold">new</sup></a></li>
       <li [routerLinkActive]="['active']"><a routerLink="special/invoice">Invoice</a></li>
-      <li [routerLinkActive]="['active']"><a routerLink="special/inbox">Inbox</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="special/inbox">Inbox &nbsp; <span class="tag tag-danger">3</span></a></li>
       <li><a routerLink="/login" >Login</a></li>
       <li><a routerLink="/error">Error Page</a></li>
       <li><a routerLink="/landing">Landing</a></li>
