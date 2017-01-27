@@ -1,71 +1,78 @@
 @import "../../scss/variables";
 
-.nav-tabs {
-  .nav-link.active {
-    color: $text-color;
-    cursor: default;
-
-    &:hover, &:focus {
-      border-color: transparent;
+div[icons] {
+  .nav-tabs {
+    .nav-link.active {
       color: $text-color;
-      background-color: rgba(51, 51, 51, 0.4);
+      cursor: default;
+
+      &:hover, &:focus {
+        border-color: transparent;
+        color: $text-color;
+        background-color: rgba(51, 51, 51, 0.4);
+      }
+    }
+
+    .nav-link:not(.active) {
+      &:hover {
+        background: rgba(26, 26, 26, 0.4);
+      }
     }
   }
 
-  .nav-link:not(.active) {
-    &:hover {
-      background: rgba(26, 26, 26, 0.4);
-    }
+  .tag, .label {
+    padding: 1px 4px;
   }
 }
-
 
 /***********************************/
 /**           ICON LIST           **/
 /***********************************/
 
-h3 {
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.icon-list{
-  margin-top: $line-height-computed;
-}
-
-.icon-list-item{
-  height: 32px;
-  font-size: 14px;
-  line-height: 32px;
-  > a{
-    color: $text-color;
-    text-decoration: none;
+div[icons] {
+  h3 {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
   }
 
-
-  .glyphicon,
-  .fa{
-    width: 32px;
-    margin-right: 10px;
+  .icon-list{
+    margin-top: $line-height-computed;
   }
 
-  .glyphicon {
-    top: 10px;
-  }
+  .icon-list-item{
+    height: 32px;
+    font-size: 14px;
+    line-height: 32px;
+    > a{
+      color: $text-color;
+      text-decoration: none;
+    }
 
-  &:hover{
+
     .glyphicon,
     .fa{
-      font-size: 28px;
-      top: 2px;
+      width: 32px;
+      margin-right: 10px;
     }
 
-    .fa{
-      vertical-align: -5px;
+    .glyphicon {
+      top: 10px;
     }
 
-    .glyphicon{
-      vertical-align: -6px;
+    &:hover{
+      .glyphicon,
+      .fa{
+        font-size: 28px;
+        top: 2px;
+      }
+
+      .fa{
+        vertical-align: -5px;
+      }
+
+      .glyphicon{
+        vertical-align: -6px;
+      }
     }
   }
 }
