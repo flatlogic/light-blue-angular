@@ -2,3 +2,7 @@
 @import "../../scss/variables";
 @import "../../../../node_modules/bootstrap/scss/_variables";
 @import "../../../../node_modules/bootstrap/scss/mixins";
+
+.gallery-widget .thumbnails .img-thumbnail {
+  margin-bottom: 23px;
+}
