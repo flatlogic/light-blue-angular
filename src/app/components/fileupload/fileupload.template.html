@@ -18,13 +18,9 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-md-12 fileupload-progress fade">
+            <div class="col-md-12 fileupload-progress">
               <!-- The global progress bar -->
-              <div class="progress progress-xs active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
-                <div class="progress-bar progress-bar-inverse" style="width:0%;"></div>
-              </div>
-              <!-- The extended global progress state -->
-              <div class="progress-extended">&nbsp;</div>
+              <progress class="progress progress-xs progress-inverse mt-0" *ngIf="uploader.progress || uploader.isUploading" value="{{uploader.progress}}" max="100"></progress>
             </div>
           </div>
           <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
