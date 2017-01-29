@@ -107,3 +107,17 @@
 .fileupload-progress {
   padding-top: 1.39rem;
 }
+
+@media (max-width: #{map-get($grid-breakpoints, 'sm')}) {
+  .files-table td p {
+    word-break: break-all;
+    max-width: 100px;
+  }
+
+  .fileinput-button.add-files-btn {
+    max-width: 26px;
+    i {
+      left: -5px;
+    }
+  }
+}
