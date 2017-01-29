@@ -15,6 +15,7 @@ import { Calendar } from './calendar/calendar.component'
 import { Maps } from './maps/maps.component'
 import { Gallery } from './gallery/gallery.component'
 import { Fileupload } from './fileupload/fileupload.component'
+import { HideOnUpload } from './fileupload/hideOnUpload.directive'
 
 import { AgmCoreModule } from 'angular2-google-maps/core';
 import { JqvmapModule } from './maps/jvmap/jqvmap.module';
@@ -34,7 +35,8 @@ export const routes = [
     Calendar,
     Maps,
     Gallery,
-    Fileupload
+    Fileupload,
+    HideOnUpload
   ],
   imports: [
     CommonModule,
