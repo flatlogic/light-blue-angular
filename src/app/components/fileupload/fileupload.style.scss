@@ -99,6 +99,7 @@
 
 .form-actions {
   display: flex;
+  flex-wrap: wrap;
   .btn {
     margin-right: 7px;
   }
@@ -120,13 +121,6 @@
   .files-table td p {
     word-break: break-all;
     max-width: 100px;
-  }
-
-  .fileinput-button.add-files-btn {
-    max-width: 26px;
-    i {
-      left: -5px;
-    }
   }
 
   .files-table td .btn .glyphicon {
