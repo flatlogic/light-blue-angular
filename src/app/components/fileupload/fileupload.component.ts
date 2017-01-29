@@ -21,4 +21,8 @@ export class Fileupload {
   cancelItem(item: any): void {
     item.isUploading ? item.cancel() : item.remove();
   }
+
+  floor(num: number): number {
+    return Math.floor(num);
+  }
 }

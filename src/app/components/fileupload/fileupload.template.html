@@ -21,6 +21,7 @@
             <div class="col-md-12 fileupload-progress">
               <!-- The global progress bar -->
               <progress class="progress progress-xs progress-inverse mt-0" *ngIf="uploader.progress || uploader.isUploading" value="{{uploader.progress}}" max="100"></progress>
+              <div *ngIf="uploader.progress || uploader.isUploading" class="progress-extended">{{floor(uploader.progress * uploader.queue.length / 100)}} / {{uploader.queue.length}} files uploaded</div>
             </div>
           </div>
           <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->

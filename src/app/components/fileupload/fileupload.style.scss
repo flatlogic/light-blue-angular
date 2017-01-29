@@ -106,6 +106,14 @@
 
 .fileupload-progress {
   padding-top: 1.39rem;
+
+  progress {
+    margin-bottom: 0.39rem;
+  }
+
+  .progress-extended {
+    margin-bottom: 1.39rem;
+  }
 }
 
 @media (max-width: #{map-get($grid-breakpoints, 'sm')}) {
