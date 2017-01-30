@@ -1,18 +1,18 @@
-<div class="landing">
+<div class="landing" id="landing-top">
   <div class="container">
     <header class="page-header">
       <div class="navbar">
         <div class="logo float-xs-left">
-          <h4><a href="index.html">Light <strong>Blue</strong></a> <small>bootstrap 3 template</small></h4>
+          <h4><a href="index.html">Light <strong>Blue</strong></a> <small>bootstrap 4 template</small></h4>
         </div>
-        <ul class="nav navbar-nav float-xs-right navbar-menu hidden-xs">
+        <ul class="nav navbar-nav float-xs-right navbar-menu hidden-sm-down">
           <li class="active">
             <a href="#">
               Home
             </a>
           </li>
           <li>
-            <a href="#about">
+            <a [routerLink]="['/landing']" fragment="about" (click)="onAnchorClick()">
               About
             </a>
           </li>
@@ -35,19 +35,19 @@
       </div>
     </header>
     <div class="content">
-      <div id="carousel-landing" class="carousel slide carousel-landing carousel-fade">
+      <div id="carousel-landing" class="carousel slide carousel-landing carousel-fade" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carousel-landing" data-slide-to="0" class="active"></li>
           <li data-target="#carousel-landing" data-slide-to="1" class=""></li>
           <li data-target="#carousel-landing" data-slide-to="2" class=""></li>
         </ol>
         <div class="carousel-inner">
-          <div class="item active">
+          <div class="carousel-item active">
             <div class="row">
               <div class="col-xs-6">
                 <div class="animated fadeInLeftBig">
                   <h1 class="slide-one-header"><strong>Light Blue</strong> <br>Dashboard Template</h1>
-                  <p class="lead hidden-xs">
+                  <p class="lead hidden-sm-down">
                     World <strong>First</strong> Transparent Dashboard
                   </p>
                   <p>
@@ -68,8 +68,8 @@
               </div>
             </div>
           </div>
-          <div class="item">
-            <h1 class="slide-two-header text-xs-center animated fadeInDown">
+          <div class="carousel-item">
+            <h1 class="slide-two-header text-xs-center animated fadeInDown mt-1">
               <strong>Transparent</strong> & <strong>White</strong>
               Versions
             </h1>
@@ -104,7 +104,7 @@
               </div>
             </div>
           </div>
-          <div class="item">
+          <div class="carousel-item">
             <div class="row">
               <div class="col-xs-6">
                 <div class="animated fadeInLeft">
@@ -140,14 +140,14 @@
   <div id="about" class="widget widget-white widget-about">
     <div class="container">
       <div class="row">
-        <div class="col-sm-offset-1 col-sm-10">
+        <div class="offset-md-1 col-md-10">
           <h2><strong>About Light Blue</strong></h2>
           <p>
             <strong>Light Blue</strong> - is a next generation dashboard template. Flat design and transparency - the
             design that the world haven't seen before Light Blue.
           </p>
           <div class="row features">
-            <div class="col-sm-4">
+            <div class="col-md-4">
               <section class="feature">
                 <div class="row">
                   <div class="col-xs-4">
@@ -158,16 +158,16 @@
                     </p>
                   </div>
                   <div class="col-xs-8">
-                    <h4>Bootstrap 3</h4>
+                    <h4>Bootstrap 4</h4>
                     <p>
-                      Light Blue comes with built-in Twitter Bootstrap 3 support.
+                      Light Blue comes with built-in Bootstrap 4 support.
                       Easy to design your next web app.
                     </p>
                   </div>
                 </div>
               </section>
             </div>
-            <div class="col-sm-4">
+            <div class="col-md-4">
               <section class="feature">
                 <div class="row">
                   <div class="col-xs-4">
@@ -187,7 +187,7 @@
                 </div>
               </section>
             </div>
-            <div class="col-sm-4">
+            <div class="col-md-4">
               <section class="feature">
                 <div class="row">
                   <div class="col-xs-4">
@@ -208,7 +208,7 @@
             </div>
           </div>
           <div class="row features">
-            <div class="col-sm-4">
+            <div class="col-md-4">
               <section class="feature">
                 <div class="row">
                   <div class="col-xs-4">
@@ -227,7 +227,7 @@
                 </div>
               </section>
             </div>
-            <div class="col-sm-4">
+            <div class="col-md-4">
               <section class="feature">
                 <div class="row">
                   <div class="col-xs-4">
@@ -247,7 +247,7 @@
                 </div>
               </section>
             </div>
-            <div class="col-sm-4">
+            <div class="col-md-4">
               <section class="feature">
                 <div class="row">
                   <div class="col-xs-4">
@@ -278,5 +278,5 @@
     </div>
   </div>
   <h2 class="thanks text-xs-center">Thanks for watching!</h2>
-  <p class="lead text-xs-center"><a class="back-to-top" href="#"> back to top <i class="fa fa-angle-up"></i></a></p>
+  <p class="lead text-xs-center"><a href="#" class="back-to-top"> back to top <i class="fa fa-angle-up"></i></a></p>
 </div>

@@ -138,34 +138,6 @@
   .client-details{
     text-align: left;
   }
-
-  .landing{
-    .logo{
-      width: auto;
-
-      small{
-        display: none;
-      }
-    }
-
-    .features{
-      + .features{
-        margin-top: 0;
-      }
-    }
-
-    .feature{
-      margin-bottom: 20px;
-    }
-  }
-
-  .carousel-landing{
-    height: 215px;
-    margin-bottom: -24px;
-    h1{
-      font-size: 20px;
-    }
-  }
 }
 
 @include media-breakpoint-down(xs) {
