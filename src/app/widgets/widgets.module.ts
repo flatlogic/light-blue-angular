@@ -5,6 +5,7 @@ import {RouterModule} from '@angular/router';
 
 import {Basic} from './basic/basic.component'
 import {Live} from './live/live.component'
+import { WidgetModule } from '../layout/widget/widget.module';
 
 console.log('`Detail` bundle loaded asynchronously');
 // async components must be named routes for WebpackAsyncRoute
@@ -23,6 +24,7 @@ export const routes = [
   imports: [
     CommonModule,
     FormsModule,
+    WidgetModule,
     RouterModule.forChild(routes),
   ]
 })
