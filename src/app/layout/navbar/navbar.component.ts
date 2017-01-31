@@ -12,6 +12,9 @@ export class Navbar {
   display: string = 'Left';
   radioModel: string = 'Left';
   searchFormState: boolean = true;
+  settings: any = {
+    isOpen: false
+  };
 
   constructor(private renderer: Renderer, private el: ElementRef) {}
 

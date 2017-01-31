@@ -48,7 +48,7 @@
           </a>
         </li>
         <li role="presentation">
-          <a href="#" class="dropdown-item text-align-center see-all">
+          <a href="#" class="dropdown-item text-xs-center see-all">
             See all messages <i class="fa fa-arrow-right"></i>
           </a>
         </li>
@@ -113,25 +113,25 @@
           </a>
         </li>
         <li role="presentation">
-          <a href="#" class="dropdown-item text-align-center see-all">
+          <a href="#" class="dropdown-item text-xs-center see-all">
             See all tickets <i class="fa fa-arrow-right"></i>
           </a>
         </li>
       </ul>
     </li>
     <li class="divider"></li>
-    <li class="nav-item dropdown hidden-sm-down">
+    <li dropdown [isOpen]="settings.isOpen" [autoClose]="'outsideClick'" class="nav-item dropdown hidden-sm-down">
       <a href="#" id="settings"
          title="Settings"
          class="nav-link dropdown-toggle"
-         data-toggle="dropdown">
+         dropdownToggle>
         <i class="glyphicon glyphicon-cog"></i>
       </a>
-      <div class="dropdown-menu settings">
+      <div class="settings" dropdownMenu role="menu" aria-labelledby="settings">
         <div class="settings-content">
           <div class="setting clearfix">
             <div>Sidebar on the</div>
-            <div id="sidebar-toggle" class="pull-left btn-group">
+            <div id="sidebar-toggle" class="btn-group">
               <!--nRight = sidebar == 'right'-->
               <button type="button" btnRadio="Left"  [(ngModel)]="radioModel" (click)="sidebarPosition('Left')"  class="btn btn-sm btn-secondary">Left</button>
               <button type="button" btnRadio="Right" [(ngModel)]="radioModel" (click)="sidebarPosition('Right')"  class="btn btn-sm btn-secondary">Right</button>
@@ -139,7 +139,7 @@
           </div>
           <div class="setting clearfix">
             <div>Sidebar</div>
-            <div id="display-sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
+            <div id="display-sidebar-toggle" class="btn-group" data-toggle="buttons-radio">
               <!--display = displaySidebar-->
               <button type="button" btnRadio="Left"  [(ngModel)]="display" (click)="sidebarDisplay('Show')" class="btn btn-sm btn-secondary">Show</button>
               <button type="button" btnRadio="Right" [(ngModel)]="display" (click)="sidebarDisplay('Hide')" class="btn btn-sm btn-secondary">Hide</button>
@@ -181,20 +181,20 @@
     </li>
     <li class="hidden-md-up">
       <a href="#" (click)="sidebarOpen()" class="btn-navbar" data-toggle="collapse" data-target=".sidebar" title="">
-      <i class="fa fa-bars"></i>
+        <i class="fa fa-bars"></i>
       </a>
     </li>
     <li class="nav-item hidden-sm-down">
       <a class="nav-link" routerLink="/login"><i class="glyphicon glyphicon-off"></i></a>
     </li>
   </ul>
-  <form id="search-form" class="navbar-form pull-right" role="search">
+  <form id="search-form" class="navbar-form float-xs-right" role="search">
     <input type="search" class="form-control search-query" placeholder="Search...">
   </form>
-  <div class="notifications pull-right">
-    <div class="alert pull-right">
+  <div class="notifications float-xs-right">
+    <div class="alert float-xs-right">
       <a href="#" class="close ml-xs" data-dismiss="alert">&times;</a>
-      <i class="fa fa-info-circle mr-xs"></i> Check out Light Blue <a id="notification-link" href="#">settings</a> on
+      <i class="fa fa-info-circle mr-xs"></i> Check out Light Blue <a (click)="settings.isOpen = !settings.isOpen" id="notification-link" href="#">settings</a> on
       the right!
     </div>
   </div>
