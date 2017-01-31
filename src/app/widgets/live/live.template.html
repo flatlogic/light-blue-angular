@@ -34,9 +34,9 @@
     </section>
   </div>
 </div>
-<div class="row">
+<div class="row" grid-demo>
   <div class="col-md-6 widget-container">
-    <section widget class="widget" id="default-widget" data-widgster-load="server/php/widgets/default.php">
+    <section widget class="widget" id="default-widget" data-widgster-load="assets/server/php/widgets/default.php">
       <header>
         <h5>Default Widget</h5>
         <div class="widget-controls">
@@ -54,7 +54,7 @@
       </div>
     </section>
     <section widget class="widget" id="shares-widget"
-             data-widgster-load="server/php/widgets/shares.php">
+             data-widgster-load="assets/server/php/widgets/shares.php">
       <header>
         <h5>
           <span class="tag tag-primary"><i class="fa fa-facebook"></i></span> &nbsp;
@@ -103,7 +103,7 @@
       </div>
     </section>
     <section widget class="widget" id="autoload-widget"
-             data-widgster-load="server/php/widgets/autoload-white.php"
+             data-widgster-load="assets/server/php/widgets/autoload.php"
              data-widgster-autoload="true"
              data-widgster-show-loader="false">
       <header>
@@ -118,16 +118,16 @@
           </a>
           <ul class="dropdown-menu dropdown-menu-right">
             <li>
-              <a data-widgster="load" title="Reload" href="#">Reload
-                &nbsp;&nbsp;<span class="badge background-success animated bounceIn"><strong>9</strong></span>
+              <a class="dropdown-item" data-widgster="load" title="Reload" href="#">Reload
+                &nbsp;&nbsp;<span class="tag tag-pill background-success animated bounceIn"><strong>9</strong></span>
               </a>
             </li>
             <li>
-              <a data-widgster="fullscreen" title="Full Screen" href="#">Fullscreen</a>
-              <a data-widgster="restore" title="Restore" href="#">Restore</a>
+              <a class="dropdown-item" data-widgster="fullscreen" title="Full Screen" href="#">Fullscreen</a>
+              <a class="dropdown-item" data-widgster="restore" title="Restore" href="#">Restore</a>
             </li>
-            <li class="divider"></li>
-            <li><a data-widgster="close" title="Close" href="#">Close</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a class="dropdown-item" data-widgster="close" title="Close" href="#">Close</a></li>
           </ul>
         </div>
       </header>
@@ -156,7 +156,7 @@
                 <strong>data-widgster-autoload</strong> attribute and provide an url.
               </p>
                                     <pre><code>data-widgster-load="server/ajax_widget.php"
-                                      data-widgster-autoload="true"</code></pre>
+data-widgster-autoload="true"</code></pre>
               <p>
                 <strong>data-widgster-autoload</strong> may be set to an integer value. If set, for example, to
                 2000 will refresh widget every 2 seconds.
@@ -184,7 +184,7 @@
     </section>
   </div>
   <div class="col-md-6 widget-container">
-    <section widget class="widget" id="news-widget" data-widgster-load="server/php/widgets/news.php">
+    <section widget class="widget" id="news-widget" data-widgster-load="assets/server/php/widgets/news.php">
       <header>
         <h5>
           News <span class="tag tag-pill tag-success">17</span>
@@ -246,7 +246,7 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">?</button>
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
               <h4 class="modal-title" id="news-close-modal-label">Sure?</h4>
             </div>
             <div class="modal-body">
@@ -289,8 +289,8 @@
     <section widget class="widget">
       <div class="jumbotron handle">
         <div class="container">
-          <h1>Draggable story!</h1>
-          <p class="lead">
+          <h1 class="px-1">Draggable story!</h1>
+          <p class="lead px-1">
             <em>Build</em> your own
             interfaces! Sit back and relax.
           </p>

@@ -70,7 +70,7 @@ pre {
 
 pre {
   display: block;
-  padding: (($line-height-computed - 1) / 2);
+  padding: (($line-height-computed) / 2);
   margin: 0 0 9px;
   line-height: $line-height-base;
   word-break: break-all;
@@ -997,6 +997,27 @@ button.dropdown-toggle{
   h1, .h1{
     line-height: 1;
   }
+
+  padding-left: 60px;
+  padding-right: 60px;
+
+  @include media-breakpoint-up (md) {
+
+    .container &,
+    .container-fluid & {
+      padding-left:  ($jumbotron-padding * 2);
+      padding-right: ($jumbotron-padding * 2);
+    }
+
+    h1,
+    .h1 {
+      font-size: 59px;
+    }
+  }
+
+  p {
+    font-size: 20px;
+  }
 }
 
 /***************************/
@@ -1032,7 +1053,7 @@ button.dropdown-toggle{
   .widget > &{
     margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);
   }
-  .widget .body > &{
+  .widget .widget-body > &{
     margin: 0 (-$widget-padding-horizontal) (-$widget-padding-vertical);
 
     .list-group-item:first-child{
