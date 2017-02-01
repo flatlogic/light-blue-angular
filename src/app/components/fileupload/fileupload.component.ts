@@ -12,12 +12,6 @@ const URL = 'https://evening-anchorage-3159.herokuapp.com/api/';
 export class Fileupload {
   public uploader:FileUploader = new FileUploader({url: URL});
 
-  ngOnInit(): void {
-    setInterval(() => {
-      console.log(this.uploader)
-    }, 10000)
-  }
-
   cancelItem(item: any): void {
     item.isUploading ? item.cancel() : item.remove();
   }

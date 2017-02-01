@@ -9,7 +9,7 @@ declare var jQuery: any;
 export class HideOnUpload {
   @Input('fileItem') item: any;
   el: any;
-  uploadedSubject: Subject = new Subject();
+  uploadedSubject: Subject<boolean> = new Subject();
 
   constructor(el: ElementRef) {
     this.el = el.nativeElement;
