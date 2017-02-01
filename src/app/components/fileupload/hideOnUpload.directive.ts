@@ -3,7 +3,7 @@ import { Subject } from 'rxjs/Subject';
 declare var jQuery: any;
 
 @Directive ({
-  selector: '[hide-on-upoad]'
+  selector: '[hide-on-upload]'
 })
 
 export class HideOnUpload {
