@@ -141,7 +141,7 @@ export class Charts {
     this.sparklineCompositeOptions = [{
       width: '99%',
       fillColor: '#ddd',
-      height: '100px',
+      height: '200px',
       lineColor: 'transparent',
       spotColor: '#c0d0f0',
       minSpotColor: null,
@@ -161,8 +161,8 @@ export class Charts {
     this.sparklinePieData = [2, 4, 6];
     this.sparklinePieOptions = {
       type: 'pie',
-      width: '100px',
-      height: '100px',
+      width: '200px',
+      height: '200px',
       sliceColors: ['#F5CB7B', '#FAEEE5', '#f0f0f0']
     };
 
