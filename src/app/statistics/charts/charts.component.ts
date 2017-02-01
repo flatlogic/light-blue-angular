@@ -218,10 +218,8 @@ export class Charts {
         {label: 'Mail-Order Sales', value: 20}
       ],
       colors: ['#F7653F', '#F8C0A2', '#e6e6e6'],
-      gridTextColor: '#f8f8f8',
-      gridTextWeight: 300,
-      gridTextFamily: 'Open Sans',
-      gridTextSize: 12
+      backgroundColor: 'none',
+      labelColor: '#fff'
     };
 
     jQuery('.easy-pie-chart').easyPieChart({
