@@ -27,10 +27,13 @@
 
   .name {
     margin-top: 10px;
+    font-size: $font-size-larger;
   }
 
   .value {
     margin-bottom: 10px;
+    font-size: $font-size-larger;
+    font-weight: bold;
   }
 }
 
