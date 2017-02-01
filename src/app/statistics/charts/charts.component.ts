@@ -182,7 +182,11 @@ export class Charts {
       xkey: 'y',
       ykeys: ['a', 'b'],
       labels: ['Series A', 'Series B'],
-      lineColors: ['#88C4EE', '#ccc']
+      lineColors: ['#88C4EE', '#ccc'],
+      gridTextColor: '#f8f8f8',
+      gridTextWeight: 300,
+      gridTextFamily: 'Open Sans',
+      gridTextSize: 12
     };
 
     this.morris2Options = {
@@ -200,6 +204,10 @@ export class Charts {
       ykeys: ['a', 'b'],
       labels: ['Series A', 'Series B'],
       lineColors: ['#80DE78', '#9EEE9B'],
+      gridTextColor: '#f8f8f8',
+      gridTextWeight: 300,
+      gridTextFamily: 'Open Sans',
+      gridTextSize: 12,
       lineWidth: 0
     };
 
@@ -209,7 +217,11 @@ export class Charts {
         {label: 'In-Store Sales', value: 30},
         {label: 'Mail-Order Sales', value: 20}
       ],
-      colors: ['#F7653F', '#F8C0A2', '#e6e6e6']
+      colors: ['#F7653F', '#F8C0A2', '#e6e6e6'],
+      gridTextColor: '#f8f8f8',
+      gridTextWeight: 300,
+      gridTextFamily: 'Open Sans',
+      gridTextSize: 12
     };
 
     jQuery('.easy-pie-chart').easyPieChart({
@@ -304,16 +316,24 @@ export class Charts {
         axisLabelUseCanvas: true,
         axisLabelFontSizePixels: 13,
         axisLabelPadding: 15,
-        font: {
+        font : {
+          lineHeight: 12,
+          weight: 300,
+          family: 'Open Sans',
+          size: 12,
           color: '#f8f8f8'
-        },
+        }
       },
       yaxis: {
         axisLabel: 'Value',
         axisLabelUseCanvas: true,
         axisLabelFontSizePixels: 13,
         axisLabelPadding: 5,
-        font: {
+        font : {
+          lineHeight: 12,
+          weight: 300,
+          family: 'Open Sans',
+          size: 12,
           color: '#f8f8f8'
         },
       },

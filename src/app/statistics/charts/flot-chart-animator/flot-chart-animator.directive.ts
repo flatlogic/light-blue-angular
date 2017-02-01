@@ -27,22 +27,22 @@ export class FlotChartAnimator {
           tickDecimals: 0,
           min: 2,
           font : {
-            lineHeight: 13,
-            weight: 'bold',
-            /* tslint:disable */
-            color: ColorsData['$widgetColor']
-            /* tslint:enable */
+            lineHeight: 12,
+            weight: 300,
+            family: 'Open Sans',
+            size: 12,
+            color: '#f8f8f8'
           }
         },
         yaxis: {
           tickDecimals: 0,
           tickColor: '#f3f3f3',
           font : {
-            lineHeight: 13,
-            weight: 'bold',
-            /* tslint:disable */
-            color: ColorsData['$widgetColor']
-            /* tslint:enable */
+            lineHeight: 12,
+            weight: 300,
+            family: 'Open Sans',
+            size: 12,
+            color: '#f8f8f8'
           }
         },
         grid: {
