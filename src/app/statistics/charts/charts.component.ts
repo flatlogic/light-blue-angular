@@ -141,7 +141,7 @@ export class Charts {
     this.sparklineCompositeOptions = [{
       width: '99%',
       fillColor: '#ddd',
-      height: '137px',
+      height: '132px',
       lineColor: 'transparent',
       spotColor: '#c0d0f0',
       minSpotColor: null,
