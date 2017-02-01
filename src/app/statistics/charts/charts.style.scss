@@ -5,6 +5,35 @@
 @import "../../../../node_modules/bootstrap/scss/_variables";
 @import "../../../../node_modules/bootstrap/scss/mixins";
 
+.stats-row {
+  &.centered {
+    text-align: center;
+  }
+}
+
+.stat-item+.stat-item {
+  padding-left: 15px;
+}
+
+.stat-item {
+  display: inline-block;
+  padding-right: 15px;
+
+  &.stat-item-mini-chart {
+    position: relative;
+    top: -15px;
+    padding-left: 0;
+  }
+
+  .name {
+    margin-top: 10px;
+  }
+
+  .value {
+    margin-bottom: 10px;
+  }
+}
+
 /***********************/
 /*   Easy Pie Chart    */
 /***********************/
