@@ -28,6 +28,8 @@ if ('production' === ENV) {
     const appRef = modRef.injector.get(ApplicationRef);
     const cmpRef = appRef.components[0];
 
+    (<any>window).ng = (<any>window).ng || {};
+
     let _ng = (<any>window).ng;
     enableDebugTools(cmpRef);
     (<any>window).ng.probe = _ng.probe;
