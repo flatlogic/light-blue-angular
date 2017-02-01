@@ -8,6 +8,7 @@ import { Nvd3ChartModule } from '../layout/directives/nvd3/nvd3.module';
 import { MorrisChartModule } from '../layout/directives/morris/morris.module';
 import { JqSparklineModule } from '../layout/directives/sparkline/sparkline.module';
 import { FlotChartModule } from '../layout/directives/flot/flot.module';
+import {WidgetModule} from '../layout/widget/widget.module';
 
 import {Stats} from './stats/stats.component'
 import {Charts} from './charts/charts.component'
@@ -44,7 +45,8 @@ export const routes = [
     JqSparklineModule,
     FlotChartModule,
     Nvd3ChartModule,
-    MorrisChartModule
+    MorrisChartModule,
+    WidgetModule
   ]
 })
 export default class StatisticsModule {
