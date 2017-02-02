@@ -24,6 +24,7 @@ export class FlotChartAnimator {
       jQuery.plotAnimator($el, data, {
         xaxis: {
           tickLength: 0,
+          tickColor: 'transparent',
           tickDecimals: 0,
           min: 2,
           font : {
@@ -36,7 +37,7 @@ export class FlotChartAnimator {
         },
         yaxis: {
           tickDecimals: 0,
-          tickColor: '#f3f3f3',
+          tickColor: 'transparent',
           font : {
             lineHeight: 12,
             weight: 300,
@@ -46,9 +47,9 @@ export class FlotChartAnimator {
           }
         },
         grid: {
-          backgroundColor: { colors: [ '#fff', '#fff' ] },
-          borderWidth: 1,
-          borderColor: '#f0f0f0',
+          backgroundColor: { colors: [ 'transparent', 'transparent' ] },
+          borderWidth: 0,
+          borderColor: 'transparent',
           margin: 0,
           minBorderMargin: 0,
           labelMargin: 20,

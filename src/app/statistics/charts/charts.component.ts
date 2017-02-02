@@ -140,7 +140,7 @@ export class Charts {
     ];
     this.sparklineCompositeOptions = [{
       width: '99%',
-      fillColor: '#ddd',
+      fillColor: 'rgba(255,255,255,.7)',
       height: '132px',
       lineColor: 'transparent',
       spotColor: '#c0d0f0',
@@ -151,7 +151,7 @@ export class Charts {
     }, {
       lineColor: 'transparent',
       spotColor: '#c0d0f0',
-      fillColor: 'rgba(192, 208, 240, 0.76)',
+      fillColor: 'rgba(78, 145, 206, 0.75)',
       minSpotColor: null,
       maxSpotColor: null,
       highlightSpotColor: '#ddd',
@@ -163,7 +163,7 @@ export class Charts {
       type: 'pie',
       width: '220px',
       height: '220px',
-      sliceColors: ['#F5CB7B', '#FAEEE5', '#f0f0f0']
+      sliceColors: ['rgb(242, 195, 77)', 'rgba(242, 195, 77, 0.3)', 'rgba(255,255,255,.2)']
     };
 
     this.applyNvd3Data();
@@ -203,12 +203,12 @@ export class Charts {
       xkey: 'y',
       ykeys: ['a', 'b'],
       labels: ['Series A', 'Series B'],
-      lineColors: ['#80DE78', '#9EEE9B'],
+      lineColors: ['#f25118', '#f2c34d'],
       gridTextColor: '#f8f8f8',
       gridTextWeight: 300,
       gridTextFamily: 'Open Sans',
       gridTextSize: 12,
-      lineWidth: 0
+      fillOpacity: 0.15
     };
 
     this.morris3Options = {
@@ -217,7 +217,7 @@ export class Charts {
         {label: 'In-Store Sales', value: 30},
         {label: 'Mail-Order Sales', value: 20}
       ],
-      colors: ['#F7653F', '#F8C0A2', '#e6e6e6'],
+      colors: ['#f25118', '#f2c34d', '#3ecd74'],
       backgroundColor: 'none',
       labelColor: '#fff'
     };
