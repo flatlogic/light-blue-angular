@@ -308,6 +308,13 @@ a.fc-event{
   }
 }
 
+.datepicker.datepicker-dropdown {
+  margin-top: 20px;
+  &.datepicker-orient-top {
+    margin-top: 14px;
+  }
+}
+
 /**
  * Bootstrap select
  */
