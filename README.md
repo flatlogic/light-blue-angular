@@ -30,7 +30,7 @@ This project serves as an Angular 2 starter for anyone looking to get up and run
 
 ```bash
 # change directory to our repo
-cd sing/angular2
+cd light-blue/angular2
 
 # makesure typings are installed globally
 npm install -g typings
@@ -67,7 +67,7 @@ to ensure maintainable code by encapsulation of our behavior logic. A component 
 app usually in a single file or a folder with each concern as a file: style, template, specs, e2e, and component class.
  Here's how it looks:
 ```
-sing/angular2/
+light-blue/angular2/
  ├──config/                    * our configuration
  |   ├──helpers.js             * helper functions for our configuration files
  │   ├──webpack.dev.js         * our development webpack config
