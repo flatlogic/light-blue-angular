@@ -2,7 +2,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 
 declare var Rickshaw: any;
 
-import {ColorsData} from '../colors.data';
+import { ColorsData } from '../colors.data';
 
 @Component({
   selector: '[realtime]',
@@ -47,7 +47,7 @@ export class Realtime {
         data: this.seriesData[4],
         name: 'US'
       }
-    ]
+    ];
   }
 
   initSeriesData(): void {

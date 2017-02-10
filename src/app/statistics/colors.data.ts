@@ -1,4 +1,4 @@
-
+/* tslint:disable */
 export const ColorsData = {
   '$lime': '#8CBF26',
   '$red': '#f25118',
@@ -15,3 +15,4 @@ export const ColorsData = {
   '$widgetColor': '#f8f8f8',
   '$textColor': '#666'
 };
+/* tslint:enable */

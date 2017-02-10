@@ -15,13 +15,13 @@ export class FormWizard {
 
   render(): void {
     jQuery(this.$el).bootstrapWizard({onTabShow: function(tab, navigation, index) {
-      var $total = navigation.find('li').length;
-      var $current = index+1;
-      var $percent = ($current/$total) * 100;
-      var $wizard = jQuery('#wizard');
+      let $total = navigation.find('li').length;
+      let $current = index + 1;
+      let $percent = ($current / $total) * 100;
+      let $wizard = jQuery('#wizard');
       $wizard.find('#bar').attr('value', $percent);
 
-      if($current >= $total) {
+      if ($current >= $total) {
         $wizard.find('.pager .next').hide();
         $wizard.find('.pager .finish').show();
         $wizard.find('.pager .finish').removeClass('disabled');
@@ -33,6 +33,7 @@ export class FormWizard {
   }
 
   ngOnInit(): void {
-    setTimeout(() => {this.render()});  //Timeout for smooth progress bar animation on wizard page enter
+    // Timeout for smooth progress bar animation on wizard page enter
+    setTimeout(() => { this.render(); });
   }
 }

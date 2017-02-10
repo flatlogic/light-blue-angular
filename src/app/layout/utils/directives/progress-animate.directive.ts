@@ -21,7 +21,7 @@ export class ProgressAnimate {
       this.renderer.setElementStyle(this.el.nativeElement, 'opacity', '1');
       setTimeout(() => {
         this.renderer.setElementStyle(this.el.nativeElement, 'transition', '');
-        this.renderer.setElementProperty(this.el.nativeElement, 'value', this.value)
+        this.renderer.setElementProperty(this.el.nativeElement, 'value', this.value);
       });
     });
   }

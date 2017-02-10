@@ -24,13 +24,13 @@ export class MessengerDemo {
       LocationSelector.prototype.className = 'location-selector';
 
       LocationSelector.prototype.handleClick = function(e) {
-        var $bit;
+        let $bit;
         $bit = jQuery(e.target);
         return this.$el.trigger('update', [$bit.attr('data-position').split(' ')]);
       };
 
       jQuery.fn.locationSelector = function() {
-        var loc;
+        let loc;
         loc = new LocationSelector(this);
         jQuery(this).addClass(loc.className);
         return jQuery(this);

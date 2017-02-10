@@ -23,6 +23,6 @@ export class MarkdownToolbarTransparent {
   }
 
   ngOnInit(): void {
-    this.render()
+    this.render();
   }
 }

@@ -1,4 +1,4 @@
-import {Select2OptionData} from 'ng2-select2/ng2-select2';
+import { Select2OptionData } from 'ng2-select2/ng2-select2';
 
 export const select2CountriesData: Select2OptionData[] = [
   {text: 'Afghanistan', id: 'AF'},
@@ -249,9 +249,9 @@ export const select2CountriesData: Select2OptionData[] = [
 
 
 export const select2ShipmentData: Select2OptionData[] = [
-  {id: 'Australia Post', text:'Australia Post'},
+  {id: 'Australia Post', text: 'Australia Post'},
   {id: 'DHL US', text: 'DHL US'},
-  {id:'Other', text: 'Other'}
+  {id: 'Other', text: 'Other'}
   ];
 
 export const cardTypesData: Select2OptionData[] = [

@@ -22,7 +22,7 @@ export class GridDemo {
       tolerance: 'pointer'
     });
 
-    var $widgets = jQuery('.widget'),
+    let $widgets = jQuery('.widget'),
       $newsWidget = jQuery('#news-widget'),
       $sharesWidget = jQuery('#shares-widget'),
       $autoloadWidget = jQuery('#autoload-widget');
@@ -31,24 +31,26 @@ export class GridDemo {
      * fade out background & disable sorting when widget fullscreened
      */
     $widgets.on('fullscreen.widgster', function(){
-      jQuery('.widget, .sidebar, .logo, .page-header, .page-title').not(jQuery(this)).fadeTo(150, 0);
+      jQuery('.widget, .sidebar, .logo, .page-header, .page-title')
+        .not(jQuery(this)).fadeTo(150, 0);
 
-      //prevent widget from dragging when fullscreened
+      // prevent widget from dragging when fullscreened
       jQuery('.widget-container').sortable( 'option', 'disabled', true );
     }).on('restore.widgster closed.widgster', function(){
-      jQuery('.widget, .sidebar, .logo, .page-header, .page-title').not(jQuery(this)).fadeTo(150, 1);
+      jQuery('.widget, .sidebar, .logo, .page-header, .page-title')
+        .not(jQuery(this)).fadeTo(150, 1);
 
-      //allow dragging back
+      // allow dragging back
       jQuery('.widget-container').sortable( 'option', 'disabled', false );
     });
 
     /**
      * Make refresh button spin when loading
      */
-    $newsWidget.on('load.widgster', function(){
-      jQuery(this).find('[data-widgster="load"] > i').addClass('fa-spin')
-    }).on('loaded.widgster', function(){
-      jQuery(this).find('[data-widgster="load"] > i').removeClass('fa-spin')
+    $newsWidget.on('load.widgster', function() {
+      jQuery(this).find('[data-widgster="load"] > i').addClass('fa-spin');
+    }).on('loaded.widgster', function() {
+      jQuery(this).find('[data-widgster="load"] > i').removeClass('fa-spin');
     });
 
     /**
@@ -79,7 +81,7 @@ export class GridDemo {
     $autoloadWidget.on('load.widgster', function(){
       jQuery(this).find('.fa-spinner').addClass('fa-spin in');
     }).on('loaded.widgster', function(){
-      jQuery(this).find('.fa-spinner').removeClass('fa-spin in')
+      jQuery(this).find('.fa-spinner').removeClass('fa-spin in');
     }).on('load.widgster fullscreen.widgster restore.widgster', function(){
       jQuery(this).find('.dropdown.open > .dropdown-toggle').dropdown('toggle');
     });

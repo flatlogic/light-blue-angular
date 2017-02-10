@@ -40,7 +40,7 @@ export class RickshawChart {
       graph.render();
 
       let svg = this.elRef.nativeElement.getElementsByTagName('svg')[0];
-      Object.assign(svg.style, {height: this.height, width: '100%'})
+      Object.assign(svg.style, {height: this.height, width: '100%'});
     };
 
     window.addEventListener('sn:resize', onResize);
@@ -88,7 +88,7 @@ export class RickshawChart {
 
     xAxis.render();
 
-    var yAxis = new Rickshaw.Graph.Axis.Y( {
+    let yAxis = new Rickshaw.Graph.Axis.Y( {
       graph: graph,
       tickFormat: Rickshaw.Fixtures.Number.formatKMBT,
       ticksTreatment: ticksTreatment
@@ -106,13 +106,13 @@ export class RickshawChart {
 
     let addAnnotation = (force) => {
       if (this.messages.length > 0 && (force || Math.random() >= 0.9)) {
-        annotator.add(this.seriesData[2][this.seriesData[2].length-1].x, this.messages.shift());
+        annotator.add(this.seriesData[2][this.seriesData[2].length - 1].x, this.messages.shift());
       }
     };
 
     if (this.addAnnotation) {
       addAnnotation(true);
-      setTimeout( () => { setInterval( () => addAnnotation(false), 3000 ) }, 3000 );
+      setTimeout( () => { setInterval( () => addAnnotation(false), 3000 ); }, 3000 );
     }
   }
 

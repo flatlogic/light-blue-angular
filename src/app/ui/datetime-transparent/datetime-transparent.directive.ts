@@ -22,6 +22,6 @@ export class DatetimeTransparent {
   }
 
   ngOnInit(): void {
-    this.render()
+    this.render();
   }
 }

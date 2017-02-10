@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
-import {Select2OptionData} from 'ng2-select2/ng2-select2';
+import { Select2OptionData } from 'ng2-select2/ng2-select2';
 import * as data from './wizard.data';
 
 declare var jQuery: any;
@@ -23,7 +23,7 @@ export class Wizard {
   }
 
   getSelect2Shipment(): Select2OptionData[] {
-    return data.select2ShipmentData
+    return data.select2ShipmentData;
   }
 
   getSelect2CardTypes(): Select2OptionData[] {

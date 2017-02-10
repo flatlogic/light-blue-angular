@@ -3,10 +3,10 @@ import 'jquery-ui/ui/widgets/sortable.js';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
-import {RouterModule} from '@angular/router';
+import { RouterModule } from '@angular/router';
 
-import {Basic} from './basic/basic.component'
-import {Live} from './live/live.component'
+import { Basic } from './basic/basic.component';
+import { Live } from './live/live.component';
 import { WidgetModule } from '../layout/widget/widget.module';
 import { GridDemoModule } from '../layout/directives/grid-demo/grid-demo.module';
 

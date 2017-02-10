@@ -20,9 +20,13 @@ export class Sidebar {
   }
 
   setSidebarHeight(event) {
-    if (window.innerWidth < 768){
-      let sidebarMarginTop = parseInt(window.getComputedStyle(this.sidebarMenu).marginTop);
-      let sidebarMarginBottom = parseInt(window.getComputedStyle(this.sidebarMenu).marginBottom);
+    if (window.innerWidth < 768) {
+      let sidebarMarginTop = parseInt(
+        window.getComputedStyle(this.sidebarMenu).marginTop, 10
+      );
+      let sidebarMarginBottom = parseInt(
+        window.getComputedStyle(this.sidebarMenu).marginBottom, 10
+      );
       this.sidebarHeight = this.sidebarMenu.offsetHeight + sidebarMarginTop + sidebarMarginBottom;
       let closestAccordionGroup = event.target.closest('.accordion-group');
       let submenuHeight = 0;
@@ -30,8 +34,10 @@ export class Sidebar {
       submenuItems.forEach(() => {
         submenuHeight += 26;
       });
-      let expandedMenu = closestAccordionGroup.querySelector('.accordion-body').getAttribute('aria-expanded');
-      if(expandedMenu === 'false') {
+      let expandedMenu = closestAccordionGroup
+        .querySelector('.accordion-body')
+        .getAttribute('aria-expanded');
+      if (expandedMenu === 'false') {
         this.sidebarHeight += submenuHeight;
       } else {
         this.sidebarHeight -= submenuHeight;
@@ -40,10 +46,13 @@ export class Sidebar {
   }
 
   collapseSubMenu(event) {
-    let currentMenu = event.target.closest('.accordion-group').querySelector('.accordion-body');
-    let collapsingMenu = this.sidebarMenu.querySelector('.accordion-group .accordion-body.collapse.in');
+    let currentMenu = event.target
+      .closest('.accordion-group')
+      .querySelector('.accordion-body');
+    let collapsingMenu = this.sidebarMenu
+      .querySelector('.accordion-group .accordion-body.collapse.in');
     jQuery(collapsingMenu).collapse('hide');
-    if(collapsingMenu && currentMenu !== collapsingMenu && window.innerWidth < 768) {
+    if (collapsingMenu && currentMenu !== collapsingMenu && window.innerWidth < 768) {
       let submenuHeight = 0;
       let submenuItems = collapsingMenu.querySelectorAll('li');
       submenuItems.forEach(() => {
@@ -56,6 +65,7 @@ export class Sidebar {
   sidebarBehavior(event) {
     this.setSidebarHeight(event);
     this.collapseSubMenu(event);
-    this.renderer.setElementStyle(document.querySelector('.content'), 'margin-top', this.sidebarHeight + 'px');
+    this.renderer.setElementStyle(document
+      .querySelector('.content'), 'margin-top', this.sidebarHeight + 'px');
   }
 }

@@ -1,5 +1,4 @@
 import { Directive, ElementRef, Input } from '@angular/core';
-import {ColorsData} from '../../colors.data';
 
 declare var jQuery: any;
 

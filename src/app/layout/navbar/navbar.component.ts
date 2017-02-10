@@ -1,4 +1,4 @@
-import {Component, Output, EventEmitter, Renderer, ElementRef} from '@angular/core';
+import { Component, Output, EventEmitter, Renderer, ElementRef } from '@angular/core';
 
 @Component({
   selector: '[navbar]',
@@ -9,8 +9,8 @@ export class Navbar {
   @Output() changeSidebarDisplay = new EventEmitter();
   @Output() openSidebar = new EventEmitter();
 
-  display:string = 'Left';
-  radioModel:string = 'Left';
+  display: string = 'Left';
+  radioModel: string = 'Left';
   searchFormState: boolean = true;
   settings: any = {
     isOpen: false
@@ -31,7 +31,7 @@ export class Navbar {
   }
 
   searchFormOpen(): void {
-    if(this.searchFormState) {
+    if (this.searchFormState) {
       this.changeStyleElement('#search-form', 'height', '40px');
       this.changeStyleElement('.notifications ', 'top', '86px');
     } else {
@@ -42,6 +42,7 @@ export class Navbar {
   }
 
   private changeStyleElement(selector, styleName, styleValue): void {
-    this.renderer.setElementStyle(this.el.nativeElement.querySelector(selector), styleName, styleValue);
+    this.renderer.setElementStyle(this.el.nativeElement
+      .querySelector(selector), styleName, styleValue);
   }
 }

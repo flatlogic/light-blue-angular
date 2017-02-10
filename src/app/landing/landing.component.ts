@@ -17,7 +17,7 @@ export class Landing {
     this.route.fragment.subscribe( f => {
       let element: any = document.querySelector( '#' + f );
       if ( element ) {
-        element.scrollIntoView(element)
+        element.scrollIntoView(element);
       }
     });
   }

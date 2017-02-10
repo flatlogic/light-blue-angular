@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import * as data from './elements.data';
 
-import {Select2OptionData} from 'ng2-select2/ng2-select2';
+import { Select2OptionData } from 'ng2-select2/ng2-select2';
 
 declare var jQuery: any;
 

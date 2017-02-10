@@ -10,7 +10,7 @@ import { Autosize } from 'angular2-autosize';
 
 declare var global: any;
 
-var markdown = require('markdown').markdown;
+let markdown = require('markdown').markdown;
 global.markdown = markdown;
 import 'bootstrap-markdown/js/bootstrap-markdown.js';
 import 'bootstrap-select/dist/js/bootstrap-select.js';
@@ -23,15 +23,19 @@ import 'ng2-datetime/src/vendor/bootstrap-timepicker/bootstrap-timepicker.min.js
 import 'bootstrap-slider/dist/bootstrap-slider.js';
 
 
-import {Account} from './account/account.component'
-import {Article} from './article/article.component'
-import {Elements} from './elements/elements.component'
-import {Validation} from './validation/validation.component'
-import {Wizard} from './wizard/wizard.component'
-import {FormWizard} from './wizard/form-wizard/form-wizard.directive';
-import {WidgetModule} from '../layout/widget/widget.module';
-import {DatetimeTransparent} from '../ui/datetime-transparent/datetime-transparent.directive';
-import {MarkdownToolbarTransparent} from '../ui/markdown-toolbar-transparent/markdown-toolbar-transparent.directive';
+import { Account } from './account/account.component';
+import { Article } from './article/article.component';
+import { Elements } from './elements/elements.component';
+import { Validation } from './validation/validation.component';
+import { Wizard } from './wizard/wizard.component';
+import { FormWizard } from './wizard/form-wizard/form-wizard.directive';
+import { WidgetModule } from '../layout/widget/widget.module';
+import {
+  DatetimeTransparent
+} from '../ui/datetime-transparent/datetime-transparent.directive';
+import {
+  MarkdownToolbarTransparent
+} from '../ui/markdown-toolbar-transparent/markdown-toolbar-transparent.directive';
 
 
 export const routes = [
