@@ -16,7 +16,11 @@ export class Sidebar {
 
   ngAfterViewInit() {
     this.sidebarMenu = this.el.nativeElement.querySelector('#side-nav');
-    console.log(this.sidebarMenu);
+    if (window.innerWidth > 768) {
+      setTimeout(() => {
+        jQuery(this.sidebarMenu).find('.accordion-group.active .accordion-body').collapse('show');
+      });
+    }
   }
 
   setSidebarHeight(event) {
