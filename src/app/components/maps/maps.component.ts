@@ -60,7 +60,8 @@ export class Maps {
     });
 
     this.apiLoader.load().then(() => {
-      let autocomplete = new google.maps.places.Autocomplete(document.getElementById('address'), {});
+      let autocomplete =
+        new google.maps.places.Autocomplete(document.getElementById('address'), {});
       google.maps.event.addListener(autocomplete, 'place_changed', () => {
         this.zone.run(() => {
           let place = autocomplete.getPlace();

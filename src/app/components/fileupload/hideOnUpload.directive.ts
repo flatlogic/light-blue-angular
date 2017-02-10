@@ -21,17 +21,19 @@ export class HideOnUpload {
         this.uploadedSubject.unsubscribe();
         this.hideSelf();
       }
-    })
+    });
   }
 
   hideSelf(): void {
     setTimeout(() => {
       this.el.style.display = 'none';
-    }, 650)
+    }, 650);
   }
 
   ngDoCheck(): void {
-    !this.uploadedSubject.closed && this.uploadedSubject.next(this.item.isUploaded);
+    if (!this.uploadedSubject.closed) {
+      this.uploadedSubject.next(this.item.isUploaded);
+    }
   }
 }
 

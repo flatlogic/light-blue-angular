@@ -10,7 +10,7 @@ const URL = 'https://evening-anchorage-3159.herokuapp.com/api/';
   encapsulation: ViewEncapsulation.None
 })
 export class Fileupload {
-  public uploader:FileUploader = new FileUploader({url: URL});
+  public uploader: FileUploader = new FileUploader({url: URL});
 
   cancelItem(item: any): void {
     item.isUploading ? item.cancel() : item.remove();

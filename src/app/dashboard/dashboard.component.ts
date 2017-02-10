@@ -1,4 +1,4 @@
-import {Component, ViewEncapsulation} from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 declare var jQuery: any;
 declare var d3: any;
@@ -53,6 +53,74 @@ export class Dashboard {
       'image': 'assets/img/2.png'
     }
   ];
+
+  tableSparklineValues: any = [[], [], [], [], []];
+  tableSparklineOptions: any = [
+    {
+      lineColor: '#3ecd74',
+      fillColor: 'rgba(86, 188, 118, 0.1)'
+    },
+    {
+      lineColor: '#f2c34d',
+      fillColor: 'rgba(234, 200, 94, 0.1)'
+    },
+    {
+      lineColor: '#4e91ce',
+      fillColor: 'rgba(106, 141, 167, 0.1)'
+    },
+    {
+      lineColor: '#f25118',
+      fillColor: 'rgba(229, 96, 59, 0.1)'
+    },
+    {
+      lineColor: '#fff',
+      fillColor: 'rgba(128, 128, 128, 0.2)'
+    }
+  ];
+
+  tableSparklineGeneralOptions: any = {
+    width: '150px',
+    height: '30px',
+    lineWidth: '2',
+    spotRadius: '2',
+    highlightLineColor: '#666',
+    highlightSpotColor: '#666',
+    spotColor: false,
+    minSpotColor: false,
+    maxSpotColor: false
+  };
+
+  constructor() {
+    for (let i = 0; i < this.tableSparklineValues.length; i++) {
+      this.tableSparklineValues[i] = [
+        10 + this.randomValue(), 15 + this.randomValue(),
+        20 + this.randomValue(), 15 + this.randomValue(),
+        25 + this.randomValue(), 25 + this.randomValue(),
+        30 + this.randomValue(), 30 + this.randomValue(),
+        40 + this.randomValue()
+      ];
+    }
+
+    for (let i = 0; i < this.tableSparklineOptions.length; i++) {
+      Object.assign(this.tableSparklineOptions[i], this.tableSparklineGeneralOptions);
+    }
+    console.log(this.tableSparklineOptions[4]);
+  }
+
+  randomValue() {
+    return Math.floor( Math.random() * 40 );
+  }
+
+  ngOnInit(): void {
+    this.applyNvd3Data();
+
+    jQuery('#feed').slimscroll({
+      height: 'auto',
+      size: '5px',
+      alwaysVisible: true,
+      railVisible: true
+    });
+  }
 
   applyNvd3Data(): void {
     /* Inspired by Lee Byron's test data generator. */
@@ -123,67 +191,4 @@ export class Dashboard {
     this.nvd31Data = testData(['Unique', 'Visits'], 30);
     this.nvd31Data[0].area = true;
   };
-
-  tableSparklineValues: any = [[],[],[],[],[]];
-  tableSparklineOptions: any = [
-    {
-      lineColor: '#3ecd74',
-      fillColor: 'rgba(86, 188, 118, 0.1)'
-    },
-    {
-      lineColor: '#f2c34d',
-      fillColor: 'rgba(234, 200, 94, 0.1)'
-    },
-    {
-      lineColor: '#4e91ce',
-      fillColor: 'rgba(106, 141, 167, 0.1)'
-    },
-    {
-      lineColor: '#f25118',
-      fillColor: 'rgba(229, 96, 59, 0.1)'
-    },
-    {
-      lineColor: '#fff',
-      fillColor: 'rgba(128, 128, 128, 0.2)'
-    }
-  ];
-
-  tableSparklineGeneralOptions: any = {
-    width: '150px',
-    height: '30px',
-    lineWidth: '2',
-    spotRadius: '2',
-    highlightLineColor: '#666',
-    highlightSpotColor: '#666',
-    spotColor: false,
-    minSpotColor: false,
-    maxSpotColor: false
-  };
-
-  constructor() {
-    for (let i = 0; i < this.tableSparklineValues.length; i++){
-      this.tableSparklineValues[i] = [10 + this.randomValue(), 15 + this.randomValue(), 20 + this.randomValue(), 15 + this.randomValue(), 25 + this.randomValue(),
-        25 + this.randomValue(), 30 + this.randomValue(), 30 + this.randomValue(), 40 + this.randomValue()]
-    }
-
-    for (let i = 0; i < this.tableSparklineOptions.length; i++){
-      Object.assign(this.tableSparklineOptions[i], this.tableSparklineGeneralOptions);
-    }
-    console.log(this.tableSparklineOptions[4]);
-  }
-
-  randomValue(){
-    return Math.floor( Math.random() * 40 );
-  }
-
-  ngOnInit(): void {
-    this.applyNvd3Data();
-
-    jQuery('#feed').slimscroll({
-      height: 'auto',
-      size: '5px',
-      alwaysVisible: true,
-      railVisible: true
-    });
-  }
 }
