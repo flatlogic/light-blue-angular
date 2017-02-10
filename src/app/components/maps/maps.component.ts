@@ -55,7 +55,7 @@ export class Maps {
   }
 
   ngOnInit() {
-    jQuery(".selectpicker").selectpicker().on("change", (event) => {
+    jQuery('.selectpicker').selectpicker().on('change', (event) => {
       this.vectorMapContinent = event.target.value;
     });
 

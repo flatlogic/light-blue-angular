@@ -23,8 +23,8 @@ export class Landing {
   }
 
   ngAfterViewInit() {
-    jQuery(".back-to-top").on('click', function() {
-      jQuery("html, body").animate({ scrollTop: 0 }, "fast");
+    jQuery('.back-to-top').on('click', function() {
+      jQuery('html, body').animate({ scrollTop: 0 }, 'fast');
       return false;
     });
   }

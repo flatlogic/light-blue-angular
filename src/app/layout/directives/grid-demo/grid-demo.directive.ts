@@ -7,7 +7,7 @@ declare var jQuery: any;
 
 export class GridDemo {
   render(): void {
-    jQuery(".widget-container").sortable({
+    jQuery('.widget-container').sortable({
       connectWith: '.widget-container',
       handle: 'header, .handle',
       cursor: 'move',
@@ -30,24 +30,24 @@ export class GridDemo {
     /**
      * fade out background & disable sorting when widget fullscreened
      */
-    $widgets.on("fullscreen.widgster", function(){
+    $widgets.on('fullscreen.widgster', function(){
       jQuery('.widget, .sidebar, .logo, .page-header, .page-title').not(jQuery(this)).fadeTo(150, 0);
 
       //prevent widget from dragging when fullscreened
-      jQuery(".widget-container").sortable( "option", "disabled", true );
-    }).on("restore.widgster closed.widgster", function(){
+      jQuery('.widget-container').sortable( 'option', 'disabled', true );
+    }).on('restore.widgster closed.widgster', function(){
       jQuery('.widget, .sidebar, .logo, .page-header, .page-title').not(jQuery(this)).fadeTo(150, 1);
 
       //allow dragging back
-      jQuery(".widget-container").sortable( "option", "disabled", false );
+      jQuery('.widget-container').sortable( 'option', 'disabled', false );
     });
 
     /**
      * Make refresh button spin when loading
      */
-    $newsWidget.on("load.widgster", function(){
+    $newsWidget.on('load.widgster', function(){
       jQuery(this).find('[data-widgster="load"] > i').addClass('fa-spin')
-    }).on("loaded.widgster", function(){
+    }).on('loaded.widgster', function(){
       jQuery(this).find('[data-widgster="load"] > i').removeClass('fa-spin')
     });
 
@@ -76,9 +76,9 @@ export class GridDemo {
     /**
      * Make hidden spinner appear & spin when loading
      */
-    $autoloadWidget.on("load.widgster", function(){
+    $autoloadWidget.on('load.widgster', function(){
       jQuery(this).find('.fa-spinner').addClass('fa-spin in');
-    }).on("loaded.widgster", function(){
+    }).on('loaded.widgster', function(){
       jQuery(this).find('.fa-spinner').removeClass('fa-spin in')
     }).on('load.widgster fullscreen.widgster restore.widgster', function(){
       jQuery(this).find('.dropdown.open > .dropdown-toggle').dropdown('toggle');

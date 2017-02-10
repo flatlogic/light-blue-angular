@@ -179,7 +179,7 @@ export class Dashboard {
   ngOnInit(): void {
     this.applyNvd3Data();
 
-    jQuery("#feed").slimscroll({
+    jQuery('#feed').slimscroll({
       height: 'auto',
       size: '5px',
       alwaysVisible: true,

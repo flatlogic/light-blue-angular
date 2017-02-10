@@ -18,7 +18,7 @@ export class FormWizard {
       var $total = navigation.find('li').length;
       var $current = index+1;
       var $percent = ($current/$total) * 100;
-      var $wizard = jQuery("#wizard");
+      var $wizard = jQuery('#wizard');
       $wizard.find('#bar').attr('value', $percent);
 
       if($current >= $total) {

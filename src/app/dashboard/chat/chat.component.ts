@@ -39,12 +39,12 @@ export class Chat {
 
   private scrollDown() {
     setTimeout(()=> {
-        jQuery(".chat-messages").slimscroll({scrollBy: '500px'});
+        jQuery('.chat-messages').slimscroll({scrollBy: '500px'});
     }, 10);
   }
 
   ngOnInit(): void {
-     jQuery(".chat-messages").slimscroll({
+     jQuery('.chat-messages').slimscroll({
         height: '240px',
         size: '5px',
         alwaysVisible: true,

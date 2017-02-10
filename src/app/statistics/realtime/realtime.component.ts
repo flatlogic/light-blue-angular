@@ -60,14 +60,14 @@ export class Realtime {
 
   initMessages(): void {
     this.messages =  [
-      "Changed home page welcome message",
-      "Minified JS and CSS",
-      "Changed button color from blue to green",
-      "Refactored SQL query to use indexed columns",
-      "Added additional logging for debugging",
-      "Fixed typo",
-      "Rewrite conditional logic for clarity",
-      "Added documentation for new methods"
+      'Changed home page welcome message',
+      'Minified JS and CSS',
+      'Changed button color from blue to green',
+      'Refactored SQL query to use indexed columns',
+      'Added additional logging for debugging',
+      'Fixed typo',
+      'Rewrite conditional logic for clarity',
+      'Added documentation for new methods'
     ];
   }
 }

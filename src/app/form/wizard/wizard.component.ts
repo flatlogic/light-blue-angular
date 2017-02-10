@@ -31,10 +31,10 @@ export class Wizard {
   }
 
   ngOnInit() {
-    jQuery("#destination").inputmask({
+    jQuery('#destination').inputmask({
       mask: '99999'
     });
-    jQuery("#credit").inputmask({
+    jQuery('#credit').inputmask({
       mask: '9999-9999-9999-9999'
     });
   }
