@@ -1,6 +1,6 @@
 <ul id="side-nav" class="side-nav">
   <li [routerLinkActive]="['active']">
-    <a routerLink="dashboard"><i class="fa fa-home"></i> <span class="name">Dashboard</span></a>
+    <a routerLink="dashboard"><i class="fa fa-home"></i> <span class="name">Dashboard <sup class="text-warning fw-bold">new</sup></span></a>
   </li>
   <li class="accordion-group panel" [routerLinkActive]="['active']">
     <a (click)="sidebarBehavior($event)" class="accordion-toggle collapsed" data-toggle="collapse"
@@ -40,9 +40,9 @@
     <a (click)="sidebarBehavior($event)" class="accordion-toggle collapsed" data-toggle="collapse"
        data-parent="#side-nav" href="#components-collapse"><i class="fa fa-tree"></i> <span class="name">Components</span></a>
     <ul id="components-collapse" class="accordion-body collapse" aria-expanded="false">
-      <li [routerLinkActive]="['active']"><a routerLink="components/calendar">Calendar</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="components/calendar">Calendar <sup class="text-danger fw-bold">ng2</sup></a></li>
       <li [routerLinkActive]="['active']"><a routerLink="components/maps">Maps</a></li>
-      <li [routerLinkActive]="['active']"><a routerLink="components/gallery">Gallery</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="components/gallery">Gallery <sup class="text-danger fw-bold">ng2</sup></a></li>
       <li [routerLinkActive]="['active']"><a routerLink="components/fileupload">Fileupload</a></li>
     </ul>
   </li>
@@ -51,7 +51,7 @@
        data-parent="#side-nav" href="#tables-collapse"><i class="fa fa-cog"></i> <span class="name">Tables</span></a>
     <ul id="tables-collapse" class="accordion-body collapse" aria-expanded="false">
       <li [routerLinkActive]="['active']"><a routerLink="tables/static">Static</a></li>
-      <li [routerLinkActive]="['active']"><a routerLink="tables/dynamic">Dynamic</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="tables/dynamic">Dynamic <sup class="text-danger fw-bold">ng2</sup></a></li>
     </ul>
   </li>
   <li class="accordion-group panel" [routerLinkActive]="['active']">
