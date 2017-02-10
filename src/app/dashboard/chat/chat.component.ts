@@ -33,7 +33,7 @@ export class Chat {
           'time': 'just now',
           'sender': 'Tikhon Laninga',
           'text': `${message}`,
-          'image': '../../../assets/img/2.png'
+          'image': 'assets/img/2.png'
       });
   }
 

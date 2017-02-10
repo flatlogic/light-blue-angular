@@ -15,7 +15,7 @@ const MAILS = [
     'starred': true,
     'folderId': 1,
     'selected': false,
-    'attachments': ['../../../../assets/img/jpeg/1.jpg', '../../../../assets/img/jpeg/2.jpg'],
+    'attachments': ['assets/img/jpeg/1.jpg', 'assets/img/jpeg/2.jpg'],
     'body': '<p>Projecting surrounded literature ' +
     'yet delightful alteration but bed men. Open are' +
     ' from long why cold. If must snug by upon sang ' +
@@ -39,7 +39,7 @@ const MAILS = [
     'timestamp': 1376508566000,
     'folderId': 1,
     'selected': false,
-    'attachments': ['../../../../assets/img/jpeg/3.jpg'],
+    'attachments': ['assets/img/jpeg/3.jpg'],
     'body': '<h1>THIS IS HTML!!!!</h1>' },
 
   { 'id': 3,
@@ -87,7 +87,7 @@ const MAILS = [
     'date': 'Apr 23',
     'paperclip': true,
     'attachment': true,
-    'attachments': ['../../../../assets/img/jpeg/5.jpg', '../../../../assets/img/jpeg/4.jpg'],
+    'attachments': ['assets/img/jpeg/5.jpg', 'assets/img/jpeg/4.jpg'],
     'unread': false,
     'selected': false,
     'timestamp': 1374508566000,
@@ -117,7 +117,7 @@ const MAILS = [
     'subject': 'Improve up at to on mention perhaps raising',
     'date': 'Jul 13',
     'attachment': true,
-    'attachments': ['../../../../assets/img/jpeg/6.jpg'],
+    'attachments': ['assets/img/jpeg/6.jpg'],
     'selected': false,
     'unread': false,
     'timestamp': 1376508566000,
@@ -139,7 +139,7 @@ const MAILS = [
     'date': 'Jul 24',
     'starred': true,
     'attachment': true,
-    'attachments': ['../../../../assets/img/jpeg/9.jpg'],
+    'attachments': ['assets/img/jpeg/9.jpg'],
     'selected': false,
     'unread': false,
     'timestamp': 1375261974000,
