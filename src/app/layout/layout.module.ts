@@ -1,7 +1,8 @@
 import { NgModule }      from '@angular/core';
+import { FormsModule }      from '@angular/forms';
 import { CommonModule }  from '@angular/common';
 
-import { ButtonsModule } from 'ng2-bootstrap/ng2-bootstrap';
+import { ButtonsModule } from 'ng2-bootstrap';
 
 import { ROUTES } from './layout.routes';
 
@@ -13,9 +14,10 @@ import { Navbar } from './navbar/navbar.component';
   imports: [
     CommonModule,
     ROUTES,
-    ButtonsModule
+    ButtonsModule.forRoot(),
+    FormsModule
   ],
   declarations: [Layout, Sidebar, Navbar]
 })
-export default class LayoutModule {
+export class LayoutModule {
 }
