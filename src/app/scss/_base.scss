@@ -319,7 +319,7 @@ $i: 1;
   }
 }
 
-.sidebar.nav-collapse, .sidebar.nav-collapse.collapse {
+.sidebar.nav-collapse:not(.show) {
   @media (max-width: 767px) {
     overflow: hidden;
     height: 0;
@@ -556,6 +556,10 @@ $i: 1;
   .navbar-collapse {
     display: inline-block;
     width: 100%;
+  }
+
+  .navbar-collapse .navbar-nav {
+    flex-direction: row;
   }
 
   .navbar-nav.nav li.dropdown.open > .dropdown-toggle,
