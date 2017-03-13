@@ -58,7 +58,7 @@
     "jqvmap": "https://github.com/shoudaos/jqvmap.git#7828d7cbacfcc91850831aa6fe6f7b8657e7aa17",
     "assets-webpack-plugin": "3.4.0",
     "awesome-bootstrap-checkbox": "1.0.0-alpha.5",
-    "bootstrap": "4.0.0-alpha.5",
+    "bootstrap": "4.0.0-alpha.6",
     "bootstrap-select": "1.11.2",
     "core-js": "2.4.1",
     "d3": "3.5.17",
