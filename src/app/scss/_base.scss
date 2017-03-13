@@ -684,8 +684,8 @@ $i: 1;
   }
 
   // Right aligned menus need alt position
-  .navbar-nav.float-xs-right > li > .dropdown-menu,
-  .navbar-nav.nav > li > .dropdown-menu.float-xs-right {
+  .navbar-nav.float-right > li > .dropdown-menu,
+  .navbar-nav.nav > li > .dropdown-menu.float-right {
     left: auto;
     right: 0;
     &:before {
