@@ -22,6 +22,10 @@
   color: #f8f8f8;
 }
 
+.btn-toolbar {
+  justify-content: space-between;
+}
+
 .search-result-categories{
   > .nav-item > .nav-link {
     color: $text-color;
@@ -109,6 +113,8 @@
 }
 
 .pagination-search-result{
+  display: inline-flex;
+
   > .page-link > .page-item,
   > .page-link > span{
     color: $text-color;

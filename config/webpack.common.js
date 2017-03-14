@@ -251,7 +251,12 @@ module.exports = function(options) {
         jquery: 'jquery',
         'window.jQuery': 'jquery',
         "Tether": 'tether',
-        "window.Tether": "tether"
+        "window.Tether": "tether",
+        d3: 'd3',
+        Rickshaw: 'rickshaw',
+        Raphael: 'webpack-raphael',
+        'window.Raphael': 'webpack-raphael',
+        nv: 'nvd3'
       }),
 
       /*

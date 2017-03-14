@@ -6,7 +6,7 @@
   <small>Ready-to-use client-side application</small>
 </h2>
 <div class="row">
-  <div class="col-lg-3 col-xl-2 col-xs-12">
+  <div class="col-lg-3 col-xl-2 col-12">
     <button class="btn btn-danger btn-block" id="compose-btn" (click)="handleComposeBtn()">Compose</button>
     <ul class="nav nav-pills nav-stacked nav-email-folders mt" id="folders-list">
       <li class="nav-item active">
@@ -29,7 +29,7 @@
       <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-circle text-gray-light float-right"></i> Saved </a></li>
     </ul>
   </div>
-  <div *ngIf="mailListShow" mail-list [folderName]="currentFolderName" (replyMail)="onReplyMail($event)" class="col-lg-9 col-xl-10 col-xs-12"></div>
-  <div *ngIf="mailFormShow" mail-form (backToMailList)="changeEmailComponents('mailList')" [message]="repliedMessage" class="col-lg-9 col-xl-10 col-xs-12"></div>
-  <div *ngIf="mailDetailShow" mail-detail [mail]="currentMail" (replyMessage)="handleComposeBtn($event)" (backToMailList)="changeEmailComponents('mailList')" class="col-lg-9 col-xl-10 col-xs-12"></div>
+  <div *ngIf="mailListShow" mail-list [folderName]="currentFolderName" (replyMail)="onReplyMail($event)" class="col-lg-9 col-xl-10 col-12"></div>
+  <div *ngIf="mailFormShow" mail-form (backToMailList)="changeEmailComponents('mailList')" [message]="repliedMessage" class="col-lg-9 col-xl-10 col-12"></div>
+  <div *ngIf="mailDetailShow" mail-detail [mail]="currentMail" (replyMessage)="handleComposeBtn($event)" (backToMailList)="changeEmailComponents('mailList')" class="col-lg-9 col-xl-10 col-12"></div>
 </div>
