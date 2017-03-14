@@ -112,6 +112,27 @@
 }
 
 /**
+ * Bootstrap select
+ */
+
+.selectpicker.form-control {
+  height: auto;
+}
+
+.bootstrap-select {
+    z-index: 1;
+
+  &.show .dropdown-menu.inner {
+    display: block;
+  }
+
+  &.show {
+    z-index: 3;
+    display: inline-block !important;
+  }
+}
+
+/**
  * Select2 Bootstrap CSS
  */
 /*
@@ -330,7 +351,6 @@ a.fc-event{
   .btn.dropdown-toggle {
     padding-left: 10px;
     box-sizing: border-box;
-    margin-left: -1px;
 
     &:after {
       margin-right: 0;
@@ -347,7 +367,7 @@ a.fc-event{
     width: 100%; // For `<button>`s
     padding: 3px 20px;
     clear: both;
-    font-weight: normal;
+    font-weight: $font-weight-thin;
     line-height: $line-height-base;
     color: $dropdown-link-color;
     text-align: inherit; // For `<button>`s

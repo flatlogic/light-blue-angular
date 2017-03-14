@@ -225,6 +225,10 @@ legend {
 /***************************/
 /*      Input Groups       */
 /***************************/
+.input-group-btn {
+  flex-direction: row;
+}
+
 .input-group-addon {
   color: $text-muted;
 
