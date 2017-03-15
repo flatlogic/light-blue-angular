@@ -27,3 +27,12 @@
     margin-left: 0;
   }
 }
+
+.segmented-dropdowns {
+  .btn-group {
+    display: inline-flex !important;
+    > .btn {
+
+    }
+  }
+}

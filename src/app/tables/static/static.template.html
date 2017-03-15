@@ -57,7 +57,10 @@
               {{row.size}}
             </td>
             <td class="width-150">
-              <progress progress-animate class="progress progress-sm progress-{{row.progress.colorClass}}" [value]="row.progress.percent" max="100"></progress>
+              <div class="progress  bg-blue-light">
+                <div progress-animate class="progress-bar progress-sm progress-{{row.progress.colorClass}}" role="progressbar" [value]="row.progress.percent" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <!--<progress progress-animate class="progress progress-sm progress-{{row.progress.colorClass}}" [value]="row.progress.percent" max="100"></progress>-->
             </td>
           </tr>
 

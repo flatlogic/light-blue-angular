@@ -1,6 +1,6 @@
 import { Directive, ElementRef } from '@angular/core';
-declare var jQuery: any;
-declare var Tether: any;
+declare let jQuery: any;
+declare let Tether: any;
 
 @Directive ({
   selector: '[form-wizard]'

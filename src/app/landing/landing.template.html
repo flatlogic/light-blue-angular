@@ -1,23 +1,11 @@
 <div class="landing" id="landing-top">
   <div class="container">
     <header class="page-header">
-      <div class="navbar">
-        <div class="logo float-left">
+      <div class="navbar flex-row">
+        <div class="logo">
           <h4><a href="index.html">Light <strong>Blue</strong></a> <small>bootstrap 4 template</small></h4>
         </div>
-        <ul class="nav navbar-nav float-right navbar-menu hidden-sm-down">
-          <li class="active">
-            <a href="#">
-              Home
-            </a>
-          </li>
-          <li>
-            <a [routerLink]="['/landing']" fragment="about" (click)="onAnchorClick()">
-              About
-            </a>
-          </li>
-        </ul>
-        <ul class="navbar-buttons float-right">
+        <ul class="navbar-buttons">
           <li>
             <a href="index.html" class="btn btn-sm btn-transparent">
               Preview&nbsp;
@@ -29,6 +17,18 @@
                class="btn btn-sm btn-transparent">
               Download&nbsp;
               <i class="fa fa-download"></i>
+            </a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav flex-row navbar-menu hidden-sm-down ml-auto">
+          <li class="active">
+            <a href="#">
+              Home
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/landing']" fragment="about" (click)="onAnchorClick()">
+              About
             </a>
           </li>
         </ul>
@@ -128,11 +128,11 @@
             </div>
           </div>
         </div>
-        <a class="left carousel-control carousel-control-landing" href="#carousel-landing" data-slide="prev">
-          <span class="icon-prev"></span>
+        <a class="carousel-control-prev carousel-control-landing" href="#carousel-landing" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
         </a>
-        <a class="right carousel-control carousel-control-landing" href="#carousel-landing" data-slide="next">
-          <span class="icon-next"></span>
+        <a class="carousel-control-next carousel-control-landing" href="#carousel-landing" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
         </a>
       </div>
     </div>

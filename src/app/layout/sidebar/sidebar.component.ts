@@ -1,7 +1,7 @@
 import { Component, ElementRef } from '@angular/core';
 import { Renderer } from '@angular/core';
 
-declare var jQuery: any;
+declare let jQuery: any;
 
 @Component({
   selector: '[sidebar]',

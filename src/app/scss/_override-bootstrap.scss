@@ -882,6 +882,10 @@ button.dropdown-toggle{
 
 .tooltip {
   font-size: $font-size-small;
+
+  &.in {
+    opacity: 1;
+  }
 }
 
 .tooltip-inner {
@@ -1113,64 +1117,37 @@ button.dropdown-toggle{
 
 .progress {
   border-radius: 0.25rem;
-  height: $progress-height;
+  height: auto;
   background: rgba(black, .15);
   margin-bottom: $form-group-margin-bottom;
   box-shadow: $progress-box-shadow;
 
   .progress-bar {
-    transition: width 0.6s ease;
+    font-size: 1rem;
+    transition: width 0.4s ease-in-out;
+    box-shadow: $progress-value-box-shadow;
+
+    &.progress-sm {
+      height: $progress-height-sm;
+    }
+
+    &.progress-xs {
+      height: $progress-height-xs;
+    }
   }
   @include progress-variant($brand-primary);
-
-  &.progress-sm {
-    height: $progress-height-sm;
-  }
-
-  &.progress-xs {
-    height: $progress-height-xs;
-  }
 }
 
-.progress-success {
-  background: $brand-success;
-}
-.progress-info {
-  background: $brand-info;
-}
-.progress-warning {
-  background: $brand-warning;
-}
-.progress-danger {
-  background: $brand-danger;
-}
-.progress-inverse {
-  background: $widget-color;
+@include bg-variant('.bg-success', $brand-success);
+@include bg-variant('.bg-info', $brand-info);
+@include bg-variant('.bg-warning', $brand-warning);
+@include bg-variant('.bg-danger', $brand-danger);
+@include bg-variant('.bg-inverse', $widget-color);
+
+.bg-inverse {
+  color: $widget-bg-common;
 }
 
-.progress[value]::-ms-fill {
-  box-shadow: $progress-value-box-shadow;
-  transition: width 0.4s ease;
-}
-.progress[value]::-moz-progress-bar {
-  box-shadow: $progress-value-box-shadow;
-  transition: width 0.4s ease;
-}
-.progress[value]::-webkit-progress-value {
-  box-shadow: $progress-value-box-shadow;
-  transition: width 0.4s ease;
-}
-
-.progress[value] {
-  background: none !important;
-  -webkit-appearance: none;
-  appearance: none;
-  border: 0;
-}
-
-.progress[value]::-webkit-progress-value {
-  box-shadow: inset 0 -1px 0 rgba(0,0,0,0.15);
-}
 /***************************/
 /*          Panels         */
 /***************************/

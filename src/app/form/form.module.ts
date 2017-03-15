@@ -8,7 +8,7 @@ import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
 import { AlertModule, TooltipModule } from 'ng2-bootstrap';
 import { Autosize } from 'angular2-autosize';
 
-declare var global: any;
+declare let global: any;
 
 let markdown = require('markdown').markdown;
 global.markdown = markdown;

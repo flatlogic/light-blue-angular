@@ -9,6 +9,8 @@ export const ROUTES: Routes = [{
 }, {
   path: 'error', loadChildren: './error/error.module#ErrorModule'
 }, {
+  path: 'landing', loadChildren: './landing/landing.module#LandingModule'
+}, {
   path: '**',    loadChildren: './error/error.module#ErrorModule'
 }
 ];

@@ -8,7 +8,7 @@
 <div class="row">
   <div class="col-lg-3 col-xl-2 col-12">
     <button class="btn btn-danger btn-block" id="compose-btn" (click)="handleComposeBtn()">Compose</button>
-    <ul class="nav nav-pills nav-stacked nav-email-folders mt" id="folders-list">
+    <ul class="nav nav-pills nav-stacked nav-email-folders mt flex-column" id="folders-list">
       <li class="nav-item active">
         <a class="nav-link" (click)="setFolderName('Inbox')">
           Inbox
@@ -23,7 +23,7 @@
       <li class="nav-item"><a class="nav-link" (click)="setFolderName('Starred')">Starred</a></li>
     </ul>
     <h5 class="mt">QUICK VIEW</h5>
-    <ul class="nav nav-pills nav-stacked nav-email-folders mb-lg">
+    <ul class="nav nav-pills nav-stacked nav-email-folders mb-lg flex-column">
       <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-circle text-danger float-right"></i> Work </a></li>
       <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-circle text-white float-right"></i> Private </a></li>
       <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-circle text-gray-light float-right"></i> Saved </a></li>
