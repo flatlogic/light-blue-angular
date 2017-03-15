@@ -85,7 +85,7 @@
                         <div class="col-md-10">
                           <select2 id="country-select"
                                    class="select-block-level chzn-select"
-                                   [data]="getSelect2CountriesList()" [width]="'100%'" [theme]="'bootstrap'"></select2>
+                                   [data]="getSelect2CountriesList()" [width]="'100%'" [options]="{theme: 'bootstrap'}"></select2>
                           <p class="help-block">Please choose your country destination</p>
                         </div>
                     </div>
@@ -95,7 +95,7 @@
                     <div class="col-md-8">
                         <div class="col-md-10">
                           <select2 id="courier" class="select-block-level chzn-select"
-                                   [data]="getSelect2Shipment()" [width]="'100%'" [theme]="'bootstrap'"></select2>
+                                   [data]="getSelect2Shipment()" [width]="'100%'" [options]="{theme: 'bootstrap'}"></select2>
                         <p class="help-block">Please choose your shipping option</p>
                         </div>
                     </div>
@@ -132,7 +132,7 @@
                         <div class="col-md-10">
                           <select2 id="credit-card-type"
                                    class="select-block-level chzn-select"
-                                   [data]="getSelect2CardTypes()" [width]="'100%'" [theme]="'bootstrap'"></select2>
+                                   [data]="getSelect2CardTypes()" [width]="'100%'" [options]="{theme: 'bootstrap'}"></select2>
                         </div>
                     </div>
                   </div>
