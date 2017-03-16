@@ -104,7 +104,7 @@
           <td class="hidden-sm-down">{{person.date}}</td>
           <td class="width-150">
             <div class="progress  bg-blue-light">
-              <div class="progress-bar progress-sm progress-{{person.status.type}}" role="progressbar" [ngStyle]="{'width': person.status.progress + '%'}" [attr.aria-valuenow]="person.status.progress" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar progress-sm bg-{{person.status.type}}" role="progressbar" [ngStyle]="{'width': person.status.progress + '%'}" [attr.aria-valuenow]="person.status.progress" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
           </td>
         </tr>

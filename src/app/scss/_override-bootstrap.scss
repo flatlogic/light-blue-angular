@@ -1186,6 +1186,8 @@ button.dropdown-toggle{
   }
 
   .panel-heading {
+    background: transparent;
+    border-bottom: none;
     + .panel-collapse .panel-body {
       border-top: 1px solid $bg-addition;
     }
@@ -1214,6 +1216,7 @@ button.dropdown-toggle{
 
     .panel-title {
       margin-bottom: 0;
+      margin-top: 0;
     }
   }
   .panel-footer {

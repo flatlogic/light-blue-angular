@@ -15,18 +15,18 @@
         <table class="table table-striped static-table">
           <thead>
           <tr>
-            <th class="hidden-xs">#</th>
+            <th class="hidden-sm-down">#</th>
             <th>Picture</th>
             <th>Description</th>
-            <th class="hidden-xs">Info</th>
-            <th class="hidden-xs">Date</th>
-            <th class="hidden-xs">Size</th>
+            <th class="hidden-sm-down">Info</th>
+            <th class="hidden-sm-down">Date</th>
+            <th class="hidden-sm-down">Size</th>
             <th></th>
           </tr>
           </thead>
           <tbody>
           <tr *ngFor="let row of tableStriped; let i = index">
-            <td class="hidden-xs">{{row.id}}</td>
+            <td class="hidden-sm-down">{{row.id}}</td>
             <td>
               <img class="img-rounded" [src]="row.picture" alt="" height="50">
             </td>
@@ -36,7 +36,7 @@
                 <span class="badge badge-{{row.label.colorClass}}">{{row.label.text}}</span>
               </div>
             </td>
-            <td class="hidden-xs">
+            <td class="hidden-sm-down">
               <p class="no-margin">
                 <small>
                   <span class="fw-semi-bold">Type:</span>
@@ -50,15 +50,15 @@
                 </small>
               </p>
             </td>
-            <td class="hidden-xs text-muted">
+            <td class="hidden-sm-down text-muted">
               {{row.date | date}}
             </td>
-            <td class="hidden-xs text-muted">
+            <td class="hidden-sm-down text-muted">
               {{row.size}}
             </td>
             <td class="width-150">
               <div class="progress  bg-blue-light">
-                <div progress-animate class="progress-bar progress-sm progress-{{row.progress.colorClass}}" role="progressbar" [value]="row.progress.percent" aria-valuemin="0" aria-valuemax="100"></div>
+                <div progress-animate class="progress-bar progress-sm bg-{{row.progress.colorClass}}" role="progressbar" [value]="row.progress.percent" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
               <!--<progress progress-animate class="progress progress-sm progress-{{row.progress.colorClass}}" [value]="row.progress.percent" max="100"></progress>-->
             </td>

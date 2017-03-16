@@ -28,6 +28,10 @@
 
   .navbar-buttons{
     margin-right: 20px;
+
+    @include media-breakpoint-down(sm) {
+      margin-left: auto;
+    }
     > li{
       float: left;
       > a{
