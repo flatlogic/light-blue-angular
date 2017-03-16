@@ -120,6 +120,7 @@
 }
 
 .bootstrap-select {
+  width: auto !important;
     z-index: 1;
 
   &.show .dropdown-menu.inner {

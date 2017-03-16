@@ -9,6 +9,7 @@ declare let jQuery: any;
 })
 export class Article {
   publishDate: Date;
+  items: Array<string> = [];
 
   ngOnInit(): void {
     jQuery('.selectpicker').selectpicker();

@@ -406,6 +406,29 @@
               </div>
             </div>
             <div class="form-group row">
+              <label class="control-label col-form-label col-md-4" for="search-select">Select with search</label>
+              <div class="controls col-md-8">
+                <select2 id="search-select"
+                         class="select-block-level chzn-select"
+                         [data]="getSelect2CountryList()" [width]="'100%'" [options]="{theme: 'bootstrap'}">
+                </select2>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="control-label col-form-label col-md-4" for="multiple-select">
+                Multiple select
+                <span class="help-block">
+                  Search enabled
+                </span>
+              </label>
+              <div class="controls col-md-8">
+                <select2 id="multiple-select"
+                         class="select-block-level chzn-select"
+                         [data]="getSelect2CountryList()" [width]="'100%'" [options]="{theme: 'bootstrap', multiple: true}">
+                </select2>
+              </div>
+            </div>
+            <div class="form-group row">
               <label class="control-label col-form-label col-md-4" for="grouped">Select with groups</label>
               <div class="controls col-md-8">
                 <select2 id="grouped"
