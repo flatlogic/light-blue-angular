@@ -13,7 +13,7 @@ import { Tabs } from './tabs/tabs.component';
 import { Notifications } from './notifications/notifications.component';
 import { Accordion } from './accordion/accordion.component';
 import { TooltipModule, AlertModule, DropdownModule } from 'ng2-bootstrap';
-import { TabsModule, AccordionModule } from 'ng2-bootstrap';
+import { TabsModule, AccordionModule, PopoverModule  } from 'ng2-bootstrap';
 import { MessengerDemo } from './notifications/messenger/messenger.directive';
 import { WidgetModule } from '../layout/widget/widget.module';
 
@@ -47,7 +47,8 @@ export const routes = [
     RouterModule.forChild(routes),
     TooltipModule.forRoot(), AlertModule.forRoot(),
     DropdownModule.forRoot(),
-    TabsModule.forRoot(), AccordionModule.forRoot()
+    TabsModule.forRoot(), AccordionModule.forRoot(),
+    PopoverModule.forRoot()
   ]
 })
 export class UiModule {
