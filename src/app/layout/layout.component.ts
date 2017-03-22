@@ -21,7 +21,9 @@ export class Layout {
 
   constructor(private el: ElementRef, private renderer: Renderer, private router: Router, private ngZone: NgZone) {
     router.events.subscribe((event: RouterEvent) => {
-      this._navigationInterceptor(event);
+      setTimeout(() => {
+        this._navigationInterceptor(event);
+      })
     });
   }
 

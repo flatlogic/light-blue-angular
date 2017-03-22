@@ -305,7 +305,19 @@ a.fc-event{
 .abc-checkbox, .abc-radio {
   label {
     font-weight: $font-weight-normal;
+
+    &:before {
+      top: 1px;
+    }
   }
+}
+
+.abc-checkbox label:after {
+  top: 1px;
+}
+
+.abc-radio label:after {
+  top: 4px;
 }
 
 /***********************************/
