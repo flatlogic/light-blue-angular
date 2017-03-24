@@ -54,7 +54,7 @@ export class Sidebar {
       .closest('.accordion-group')
       .querySelector('.accordion-body');
     let collapsingMenu = this.sidebarMenu
-      .querySelector('.accordion-group .accordion-body.collapse.in');
+      .querySelector('.accordion-group .accordion-body.collapse.show');
     jQuery(collapsingMenu).collapse('hide');
     if (collapsingMenu && currentMenu !== collapsingMenu && window.innerWidth < 768) {
       let submenuHeight = 0;
