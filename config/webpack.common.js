@@ -22,7 +22,7 @@ const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const HMR = helpers.hasProcessFlag('hot');
 const AOT = helpers.hasNpmFlag('aot');
 const METADATA = {
-  title: 'Light Blue 3.4.0 with Angular 2.0 Final Release support by Flatlogic',
+  title: 'Light Blue 3.6.0 with Angular 2.4 Final Release support by Flatlogic',
   baseUrl: '/',
   isDevServer: helpers.isWebpackDevServer()
 };
