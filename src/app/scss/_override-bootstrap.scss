@@ -254,9 +254,12 @@ button.dropdown-toggle{
   outline: none;
 }
 
-.btn{
+.btn {
   color: $white;
   text-shadow: none;
+
+  // set to pointer since bs4 dropped this
+  cursor: pointer;
 
   @include box-shadow(none);
 
