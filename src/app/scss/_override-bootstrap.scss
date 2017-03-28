@@ -63,6 +63,14 @@ pre {
   border-radius: $border-radius-base;
 }
 
+
+/***************************/
+/*         Grid           */
+/***************************/
+.container {
+  position: static;
+}
+
 /***************************/
 /*         Forms           */
 /***************************/
@@ -228,6 +236,12 @@ textarea,
 /***************************/
 /*        Dropdowns        */
 /***************************/
+
+.dropdown.open {
+  .dropdown-menu {
+    display: block;
+  }
+}
 
 button.dropdown-toggle{
   &:after {

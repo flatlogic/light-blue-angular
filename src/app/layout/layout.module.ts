@@ -14,9 +14,9 @@ import { Navbar } from './navbar/navbar.component';
   imports: [
     CommonModule,
     ROUTES,
-    DropdownModule.forRoot(),
+    FormsModule,
     ButtonsModule.forRoot(),
-    FormsModule
+    DropdownModule.forRoot(),
   ],
   declarations: [Layout, Sidebar, Navbar]
 })
