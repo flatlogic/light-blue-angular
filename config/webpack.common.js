@@ -104,7 +104,7 @@ module.exports = function(options) {
           test: /\.ts$/,
           use: [
             '@angularclass/hmr-loader?pretty=' + !isProd + '&prod=' + isProd,
-            'awesome-typescript-loader?{configFileName: "tsconfig.webpack.json"}',
+            'awesome-typescript-loader?{tsconfig: "tsconfig.webpack.json"}',
             'angular2-template-loader',
             'angular-router-loader?loader=system&genDir=compiled/src/app&aot=' + AOT
           ],
