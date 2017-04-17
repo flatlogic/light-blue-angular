@@ -1,7 +1,7 @@
-# Light Blue (3.5.0 Full version) with Angular 2.4 Final Release support
+# Light Blue (3.7.0 Full version) with angular 4.0 Final Release support
 
 
-> An Angular 2 application featuring [Angular 2](https://angular.io)
+> An angular 4 application featuring [angular 4](https://angular.io)
  ([Router](https://angular.io/docs/js/latest/api/router/), [Forms](https://angular.io/docs/js/latest/api/forms/),
 [Http](https://angular.io/docs/js/latest/api/http/),
  [TypeScript](http://www.typescriptlang.org/),
@@ -12,15 +12,15 @@
   
 > This is a full version of Light Blue with Angular Final Release support. Seed version is also available.
 
-This project serves as an Angular 2 starter for anyone looking to get up and running with Angular 2 and TypeScript fast.
+This project serves as an angular 4 starter for anyone looking to get up and running with angular 4 and TypeScript fast.
  Using a [Webpack 2](http://webpack.github.io/) for building our files and assisting with boilerplate. 
-* Best practices in file and application organization for Angular 2.
+* Best practices in file and application organization for angular 4.
 * Unique to admin templates stylish and unobtrusive design
 * Ready to go build system using Webpack for working with TypeScript.
-* Angular 2 examples that are ready to go when experimenting with Angular 2.
+* angular 4 examples that are ready to go when experimenting with angular 4.
 * Ahead of Time (AoT) compile for rapid page loads of your production builds.
 * Tree shaking to automatically remove unused code from your production bundle.
-* A great Angular 2 template for anyone who wants to start their project.
+* A great angular 4 template for anyone who wants to start their project.
 * Type manager with @types
 * Hot Module Replacement with Webpack and [@angularclass/hmr](https://github.com/angularclass/angular2-hmr) and [@angularclass/hmr-loader](https://github.com/angularclass/angular2-hmr-loader)
 
@@ -207,7 +207,7 @@ import * as _ from 'lodash';
 ```
 
 # Support, Questions, or Feedback
-> Contact us anytime for anything about this Light Blue or Angular 2 consulting.
+> Contact us anytime for anything about this Light Blue or angular 4 consulting.
 
 * [Twitter: @Flatlogic](https://twitter.com/Flatlogic)
 * [Email: contact@flatlogic.com](mailto:contact@flatlogic.com)

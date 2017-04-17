@@ -15,7 +15,7 @@ export class MailForm {
   sender: string = '';
   subject: string = '';
   body: string = 'There are no implementations' +
-    ' of Wysiwyg editors in Angular 2 version yet.' +
+    ' of Wysiwyg editors in Angular 4 version yet.' +
     ' So we hope it will appear soon.';
 
   onToBack(): void {
