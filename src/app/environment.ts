@@ -12,10 +12,12 @@ let PROVIDERS: any[] = [
 // https://github.com/angular/angular/blob/86405345b781a9dc2438c0fbe3e9409245647019/TOOLS_JS.md
 let _decorateModuleRef = function identity<T>(value: T): T { return value; };
 
+
 if ('production' === ENV) {
+  enableProdMode();
+
   // Production
   disableDebugTools();
-  enableProdMode();
 
   PROVIDERS = [
     ...PROVIDERS,
@@ -27,6 +29,8 @@ if ('production' === ENV) {
   _decorateModuleRef = (modRef: any) => {
     const appRef = modRef.injector.get(ApplicationRef);
     const cmpRef = appRef.components[0];
+
+    (<any>window).ng = (<any>window).ng || {};
 
     let _ng = (<any>window).ng;
     enableDebugTools(cmpRef);

@@ -22,7 +22,7 @@ const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const HMR = helpers.hasProcessFlag('hot');
 const AOT = helpers.hasNpmFlag('aot');
 const METADATA = {
-  title: 'Light Blue 3.6.0 with Angular 2.4 Final Release support by Flatlogic',
+  title: 'Light Blue 3.7.0 with Angular 4.0 Final Release support by Flatlogic',
   baseUrl: '/',
   isDevServer: helpers.isWebpackDevServer()
 };
@@ -251,7 +251,12 @@ module.exports = function(options) {
         jquery: 'jquery',
         'window.jQuery': 'jquery',
         "Tether": 'tether',
-        "window.Tether": "tether"
+        "window.Tether": "tether",
+        d3: 'd3',
+        Rickshaw: 'rickshaw',
+        Raphael: 'webpack-raphael',
+        'window.Raphael': 'webpack-raphael',
+        nv: 'nvd3'
       }),
 
       /*

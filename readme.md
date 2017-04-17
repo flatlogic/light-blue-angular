@@ -1,24 +1,26 @@
-# Light Blue Dashboard App (3.4.0 Seed version) with Angular 2.0 Final Release support
+# Light Blue (3.7.0 Seed version) with angular 4.0 Final Release support
 
 
-> An Angular 2 application featuring [Angular 2](https://angular.io)
+> An angular 4 application featuring [angular 4](https://angular.io)
  ([Router](https://angular.io/docs/js/latest/api/router/), [Forms](https://angular.io/docs/js/latest/api/forms/),
 [Http](https://angular.io/docs/js/latest/api/http/),
  [TypeScript](http://www.typescriptlang.org/),
   [@types](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&cad=rja&uact=8&ved=0ahUKEwjgjdrR7u_NAhUQ7GMKHXgpC4EQFggnMAI&url=https%3A%2F%2Fwww.npmjs.com%2F~types&usg=AFQjCNG2PFhwEo88JKo12mrw_4d0w1oNiA&sig2=N69zbO0yN8ET7v4KVCUOKA), 
   [TsLint](http://palantir.github.io/tslint/), 
   [Hot Module Replacement](https://webpack.github.io/docs/hot-module-replacement-with-webpack.html), a
-  nd [Webpack 2](http://webpack.github.io/) by [Flatlogic](http://flatlogic.com).
+  nd [Webpack 2](http://webpack.github.io/) by [Flatlogic](https://flatlogic.com).
   
 > This is a seed version of Light Blue App with Angular Final Release support.
 
-This seed repo serves as an Angular 2 starter for anyone looking to get up and running with Angular 2 and TypeScript fast.
+This project serves as an Angular 4 starter for anyone looking to get up and running with Angular 4 and TypeScript fast.
  Using a [Webpack 2](http://webpack.github.io/) for building our files and assisting with boilerplate. 
-* Best practices in file and application organization for Angular 2.
+* Best practices in file and application organization for Angular 4.
 * Unique to admin templates stylish and unobtrusive design
 * Ready to go build system using Webpack for working with TypeScript.
-* Angular 2 examples that are ready to go when experimenting with Angular 2.
-* A great Angular 2 seed repo for anyone who wants to start their project.
+* angular 4 examples that are ready to go when experimenting with angular 4.
+* Ahead of Time (AoT) compile for rapid page loads of your production builds.
+* Tree shaking to automatically remove unused code from your production bundle.
+* A great angular 4 template for anyone who wants to start their project.
 * Type manager with @types
 * Hot Module Replacement with Webpack and [@angularclass/hmr](https://github.com/angularclass/angular2-hmr) and [@angularclass/hmr-loader](https://github.com/angularclass/angular2-hmr-loader)
 
@@ -125,6 +127,8 @@ npm run server:prod
 npm run build:dev
 # production
 npm run build:prod
+# AoT
+npm run build:aot
 ```
 
 ### hot module replacement
@@ -139,6 +143,16 @@ npm run watch
 
 # Configuration
 Configuration files live in `config/`. We are currently using webpack.
+
+# AoT  Don'ts
+The following are some things that will make AoT compile fail.
+
+- Don’t use require statements for your templates or styles, use styleUrls and templateUrls, the angular2-template-loader plugin will change it to require at build time.
+- Don’t use default exports.
+- Don’t use form.controls.controlName, use form.get(‘controlName’)
+- Don’t use control.errors?.someError, use control.hasError(‘someError’)
+- Don’t use functions in your providers, routes or declarations, export a function and then reference that function name
+- Inputs, Outputs, View or Content Child(ren), Hostbindings, and any field you use from the template or annotate for Angular should be public
 
 # Types
 > When you include a module that doesn't include Type Definitions inside of the module you can include external 
@@ -190,7 +204,7 @@ import * as _ from 'lodash';
 ```
 
 # Support, Questions, or Feedback
-> Contact us anytime for anything about this Light Blue App or Angular 2 consulting.
+> Contact us anytime for anything about this Light Blue or Angular 4 consulting.
 
 * [Twitter: @Flatlogic](https://twitter.com/Flatlogic)
 * [Email: support@flatlogic.com](mailto:support@flatlogic.com)
@@ -198,4 +212,4 @@ import * as _ from 'lodash';
 # License
 [Wrapbootstrap licence](http://support.wrapbootstrap.com/knowledge_base/topics/usage-licenses).
 
-Light Blue App 3.4.0 is based on [angular2-webpack-starter](https://github.com/AngularClass/angular2-webpack-starter).
+Light Blue 3.7.0 is based on [angular2-webpack-starter](https://github.com/AngularClass/angular2-webpack-starter).
