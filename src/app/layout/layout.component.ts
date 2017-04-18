@@ -39,13 +39,13 @@ export class Layout {
         // and enter/leave animation of the spinner
         this.renderer.setElementStyle(
           this.spinnerElement.nativeElement,
-          'display',
-          'block'
+          'opacity',
+          '1'
         );
         this.renderer.setElementStyle(
           this.routerComponent.nativeElement,
-          'display',
-          'none'
+          'opacity',
+          '0'
         );
       });
     }
@@ -73,13 +73,13 @@ export class Layout {
       // and enter/leave animation of the spinner
       this.renderer.setElementStyle(
         this.spinnerElement.nativeElement,
-        'display',
-        'none'
+        'opacity',
+        '0'
       );
       this.renderer.setElementStyle(
         this.routerComponent.nativeElement,
-        'display',
-        'block'
+        'opacity',
+        '1'
       );
     });
   }

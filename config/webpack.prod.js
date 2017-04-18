@@ -138,7 +138,7 @@ module.exports = function(env) {
           comments: false
         }, //prod
         mangle: {
-          screw_ie8: true
+          screw_ie8: true, keep_fnames: true, except: ['$super']
         }, //prod
         compress: {
           screw_ie8: true,

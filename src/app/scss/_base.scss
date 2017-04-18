@@ -1554,10 +1554,23 @@ ol.text-list{
 ////// Loader animation ////////
 
 .loading-overlay {
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
   padding-top: 40vh;
   text-align: center;
+  opacity: 0;
+}
+
+.loading-overlay,
+.router-component {
+  transition: opacity .3s ease-in-out;
+}
+
+.router-component {
+  opacity: 1;
 }
 
 .sk-fading-circle {
