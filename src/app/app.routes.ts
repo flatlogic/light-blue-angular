@@ -11,7 +11,7 @@ export const ROUTES: Routes = [{
     path: 'login', loadChildren: './login/login.module#LoginModule'
   },
   {
-    path: 'error', loadChildren: './error/error.module#ErrorModule'
+    path: 'error', component: ErrorComponent
   },
   {
     path: '**', component: ErrorComponent
