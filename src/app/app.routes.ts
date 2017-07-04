@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { ErrorComponent } from './error/error.component';
 
 export const ROUTES: Routes = [{
    path: '', redirectTo: 'app', pathMatch: 'full'
@@ -13,6 +14,6 @@ export const ROUTES: Routes = [{
     path: 'error', loadChildren: './error/error.module#ErrorModule'
   },
   {
-    path: '**',    loadChildren: './error/error.module#ErrorModule'
+    path: '**', component: ErrorComponent
   }
 ];

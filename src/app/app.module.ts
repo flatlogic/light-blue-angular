@@ -25,6 +25,7 @@ import { ROUTES } from './app.routes';
 import { App } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
+import { ErrorComponent } from './error/error.component';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -44,7 +45,8 @@ type StoreType = {
 @NgModule({
   bootstrap: [ App ],
   declarations: [
-    App
+    App,
+    ErrorComponent
   ],
   /**
    * Import Angular's modules.
