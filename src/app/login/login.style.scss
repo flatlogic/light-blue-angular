@@ -1,5 +1,7 @@
-@import "../../../node_modules/bootstrap/scss/variables";
 @import "../scss/variables";
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+
 
 /***********************************/
 /**             LOGIN             **/
@@ -143,5 +145,5 @@ header h4{
 }
 
 small {
-  font-size: $font-size-smaller;
+  font-size: $small-font-size;
 }

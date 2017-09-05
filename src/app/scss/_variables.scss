@@ -24,24 +24,24 @@ $enable-grid-classes:       true !default;
 // Colors
 // ------------------------
 
-$lime:                  #8CBF26 !default;
+$lime:                  #8cbf26 !default;
 $red:                   #f25118 !default;
 $red-dark:              #d04f4f !default;
 $blue:                  #4e91ce !default;
 $green:                 #3ecd74 !default;
 $orange:                #f2c34d !default;
-$pink:                  #E671B8 !default;
-$purple:                #A700AE !default;
-$brown:                 #A05000 !default;
+$pink:                  #e671b8 !default;
+$purple:                #a700ae !default;
+$brown:                 #a05000 !default;
 $teal:                  #4ab0ce !default;
-$white:                 #ffffff !default;
-$black:                 #000000 !default;
+$white:                 #fff !default;
+$black:                 #000 !default;
 
 $colors: $red, $orange, $lime, $green, $teal, $blue, $brown, $red-dark;
-$color-names: "red", "orange", "lime", "green", "teal", "blue", "brown", "red-dark";
+$color-names: 'red', 'orange', 'lime', 'green', 'teal', 'blue', 'brown', 'red-dark';
 
 $white-dark:            #f8f8f8 !default;
-$shadow-color:            rgba(#676767, .4) !default;
+$shadow-color:            rgba(#676767, 0.4) !default;
 
 //copy from BS
 $gray-darker:           lighten(#000, 13.5%) !default; // #222
@@ -67,15 +67,17 @@ $text-color: $white-dark !default;
 $text-bold: lighten($text-color, 3%);
 $text-muted: darken($text-color, 15%) !default;
 
-$font-family-sans-serif:  "Open Sans", sans-serif !default;
+$font-family-sans-serif:  'Open Sans', sans-serif !default;
 
-$font-size-base:          0.8rem !default;
-$font-size-large:         $font-size-base * 1.25 !default;
-$font-size-larger:        $font-size-base + 1;
-$font-size-small:         0.75rem !default;
-$font-size-mini:          $font-size-base * 0.75 !default;
-$font-size-index:         $font-size-base * 0.7 !default;
-$font-size-smaller:       $font-size-base * 0.85 !default;
+$font-size-initial:       13px; // reset default browser value from 16px to 13px
+$font-size-base:          1rem !default;
+$font-size-lg:            1.25rem !default;
+$font-size-sm:            0.875rem !default;
+$font-size-larger:        1.1rem;
+$font-size-mini:          0.9rem;
+$font-size-index:         0.7rem;
+
+$small-font-size:         85%;
 
 $font-weight-bold: 700 !default;
 $font-weight-semi-bold: 600 !default;
@@ -108,12 +110,12 @@ $widget-mb:        30px;
 $widget-color:     $text-color;
 $widget-header-color: lighten($widget-color, 5%);
 $widget-header-smalls-color: $text-muted;
-$widget-controls-color: rgba($white, .45);
-$widget-controls-hover-color: rgba($white, .6);
+$widget-controls-color: rgba($white, 0.45);
+$widget-controls-hover-color: rgba($white, 0.6);
 
-$text-transparent: rgba($widget-bg-common, .5);
-$bg-addition: rgba($widget-bg-common, .3);
-$widget-bg: rgba($widget-bg-common, .4);
+$text-transparent: rgba($widget-bg-common, 0.5);
+$bg-addition: rgba($widget-bg-common, 0.3);
+$widget-bg: rgba($widget-bg-common, 0.4);
 
 $widget-padding-vertical: 15px;
 $widget-padding-horizontal: 17px;
@@ -121,27 +123,27 @@ $widget-padding: $widget-padding-vertical $widget-padding-horizontal;
 
 $sidebar-bg-color: #242424 !default;
 $sidebar-color:          $white;
-$sidebar-item-active-bg: rgba($black,.07);
+$sidebar-item-active-bg: rgba($black, 0.07);
 $sidebar-item-sub-active-bg: darken($sidebar-item-active-bg, 15%);
 
 $page-title-color: $white;
 
 $header-link-color: $text-transparent;
-$header-notification-count: rgba($widget-bg-common, .55);
+$header-notification-count: rgba($widget-bg-common, 0.55);
 
 $header-search-query-bg-image: url(assets/img/search-white.png);
 $header-search-query-placeholder-color: rgba(#eee, .76);
 
 $header-dropdown-primary-color:          $widget-header-color;
 $header-dropdown-secondary-color:        #ddd;
-$header-dropdown-bg:                     rgba($widget-bg-common, .85);
+$header-dropdown-bg:                     rgba($widget-bg-common, 0.85);
 $header-dropdown-shadow:                 none;
 $header-dropdown-item-hover:             $brand-primary;
 
 $nav-tabs-link-color: $widget-color;
 
 $input-transparent-color: $text-color;
-$input-transparent-placeholder-color: rgba(#eee, .76);
+$input-transparent-placeholder-color: rgba(#eee, 0.76);
 
 // Widgets
 // -------------------------
@@ -157,13 +159,13 @@ $nav-tabs-active-item-border-bottom: $basic-border-color;
 $nav-tabs-border: none;
 $nav-tabs-tab-content-bg: $bg-addition;
 
-$tabs-widget-active-item-hover-bg: rgba(darken($widget-bg-common, 10%), .4);
+$tabs-widget-active-item-hover-bg: rgba(darken($widget-bg-common, 10%), 0.4);
 
 $location-selector-bg: $bg-addition;
 $location-selector-border-color: #eee;
 $messenger-spinner-bg: $white;
 
-$calendar-border: rgba($white, .33);
+$calendar-border: rgba($white, 0.33);
 
 $dropzone-color:         #eee;
 
@@ -200,7 +202,6 @@ $border-radius-base:        3px !default;
 
 $btn-font-weight:                $font-weight-base !default;
 
-$btn-secondary-color:              #fff !default;
 $btn-secondary-bg:                 $gray !default;
 $btn-secondary-border:             rgba(0, 0, 0, 0.15) !default;
 
@@ -219,7 +220,7 @@ $input-group-addon-border-color: transparent;
 
 // recalculate input heights
 $input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
-$input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
+$input-height-small:             (floor($font-size-sm * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
 
 
 $legend-color:                   $white !default;
@@ -228,7 +229,7 @@ $legend-color:                   $white !default;
 // -------------------------
 
 $dropdown-bg:                    $white !default;
-$dropdown-border:                rgba(0,0,0,.2) !default;
+$dropdown-border:                rgba(0, 0, 0, 0.2) !default;
 
 $dropdown-link-active-color:     #fff !default;
 $dropdown-link-active-bg:        $blue !default;
@@ -241,7 +242,7 @@ $dropdown-link-hover-bg:         $dropdown-link-active-bg !default;
 // -------------------------
 
 $state-success-text:             $white !default;
-$state-success-border:           #D6E9C6 !default;
+$state-success-border:           #d6e9c6 !default;
 $state-success-bg:               rgba($state-success-border, 0.28) !default;
 
 $state-info-text:                $white !default;
@@ -249,19 +250,18 @@ $state-info-border:              #4ab0ce !default;
 $state-info-bg:                  rgba($state-info-border, 0.29) !default;
 
 $state-warning-text:             $white !default;
-$state-warning-border:           #E5BE56 !default;
+$state-warning-border:           #e5be56 !default;
 $state-warning-bg:               rgba($state-warning-border, 0.28) !default;
 
 $state-danger-text:              $white !default;
-$state-danger-border:            rgba(#F26349, .7) !default;
+$state-danger-border:            rgba(#f26349, 0.7) !default;
 $state-danger-bg:                rgba($state-danger-border, 0.29) !default;
 
 //== Tables
 //
 $table-bg-accent:               $bg-addition !default;
-$table-border-color:            rgba($widget-bg-common, .35) !default; // table and cell border
+$table-border-color:            rgba($widget-bg-common, 0.35) !default; // table and cell border
 $table-bg-hover:                darken($bg-addition, 5%);
-
 
 // List group
 // -------------------------
@@ -279,7 +279,7 @@ $jumbotron-heading-color:        inherit !default;
 
 // Popovers
 // -------------------------
-$popover-bg:                          rgba($widget-bg-common, .85) !default;
+$popover-bg:                          rgba($widget-bg-common, 0.85) !default;
 $popover-arrow-color:                 $popover-bg !default;
 $popover-border-color:                transparent;
 
@@ -312,7 +312,7 @@ $pagination-disabled-border:           transparent !default;
 $breadcrumb-bg:               transparent !default;
 $breadcrumb-color:            $text-color !default;
 $breadcrumb-active-color:     darken($breadcrumb-color, 25%) !default;
-$breadcrumb-separator:        ">" !default;
+$breadcrumb-separator:        '>' !default;
 
 // Carousel
 // ------------------------

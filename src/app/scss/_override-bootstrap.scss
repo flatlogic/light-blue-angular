@@ -123,7 +123,7 @@ textarea,
 
 .help-block {
   margin-top: 0;
-  font-size: $font-size-small - 1;
+  font-size: $font-size-sm - 1;
   color: $text-muted;
 }
 
@@ -299,7 +299,7 @@ button.dropdown-toggle{
 }
 
 .btn-secondary {
-  @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+  @include button-variant($btn-secondary-bg, $btn-secondary-border);
 }
 
 /***************************/
@@ -455,7 +455,7 @@ button.dropdown-toggle{
     &,
     &:hover,
     &:focus {
-      background-color: $nav-link-hover-bg;
+      background-color: $gray-lighter;
       border-color: transparent;
     }
   }
@@ -706,7 +706,7 @@ button.dropdown-toggle{
 /***************************/
 
 .tooltip {
-  font-size: $font-size-small;
+  font-size: $font-size-sm;
 }
 
 .tooltip-inner {
@@ -758,7 +758,7 @@ button.dropdown-toggle{
   line-height: 14px; // ensure proper line-height if floated
   text-shadow: none;
   font-weight: $font-weight-semi-bold;
-  font-size: $font-size-small - 1;
+  font-size: $font-size-sm - 1;
 }
 
 .badge{
@@ -766,40 +766,56 @@ button.dropdown-toggle{
 }
 
 .badge-default {
-  @include badge-variant($badge-default-bg);
+  @include badge-variant($gray-400);
 }
 
 .badge-primary {
-  @include badge-variant($badge-primary-bg);
+  @include badge-variant(theme-color('primary'));
 }
 
 .badge-success {
-  @include badge-variant($badge-success-bg);
+  @include badge-variant(theme-color('success'));
+
+  color: $white;
+
+  &[href] {
+    @include hover-focus {
+      color: $white;
+    }
+  }
 }
 
 .badge-info {
-  @include badge-variant($badge-info-bg);
+  @include badge-variant(theme-color('info'));
 }
 
 .badge-warning {
-  @include badge-variant($badge-warning-bg);
+  @include badge-variant(theme-color('warning'));
+
+  color: $white;
+
+  &[href] {
+    @include hover-focus {
+      color: $white;
+    }
+  }
 }
 
 .badge-danger {
-  @include badge-variant($badge-danger-bg);
+  @include badge-variant(theme-color('danger'));
 }
 
-.badge-important{
-  @include badge-variant($badge-danger-bg);
+.badge-important {
+  @include badge-variant(theme-color('danger'));
 }
 
-.badge-inverse{
-  @include badge-variant($badge-default-bg);
+.badge-inverse {
+  @include badge-variant($gray-400);
 }
 
 .help-block{
   margin-top: 5px;
-  font-size: $font-size-smaller;
+  font-size: $small-font-size;
   color: $text-muted;
   display: block;
 }
@@ -834,7 +850,7 @@ button.dropdown-toggle{
 
 .alert-sm{
   padding: 10px 12px;
-  font-size: $font-size-small;
+  font-size: $font-size-sm;
 
   .close{
     font-size: 18px;

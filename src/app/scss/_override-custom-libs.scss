@@ -10,7 +10,7 @@
 .nvtooltip {
   padding: $padding-small-vertical $padding-small-horizontal;
   font-family: $font-family-base;
-  font-size: $font-size-small;
+  font-size: $font-size-sm;
   text-align: center;
 
   p{
@@ -21,7 +21,7 @@
 
 svg text,
 .nvd3 text{
-  font: $font-weight-base $font-size-small $font-family-base;
+  font: $font-weight-base $font-size-sm $font-family-base;
   fill: $text-color;
 
   .widget &{
@@ -34,7 +34,7 @@ svg .title {
 }
 
 .nvd3.nv-noData {
-  font-size: $font-size-large;
+  font-size: $font-size-lg;
   font-weight: $font-weight-bold;
 }
 
@@ -216,7 +216,7 @@ svg .title {
     &.active,
     &.active:hover
     {
-      background-color: $btn-primary-bg;
+      background-color: $brand-primary;
       text-shadow: none;
     }
 
@@ -237,7 +237,7 @@ svg .title {
 
       &.active
       {
-        background-color: $btn-primary-bg;
+        background-color: $brand-primary;
       }
 
       &.old
@@ -597,7 +597,7 @@ a.fc-event{
       }
     }
 
-    @include pagination-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-base, $border-radius-sm);
+    @include pagination-size($padding-small-vertical, $padding-small-horizontal, $font-size-sm, $line-height-base, $border-radius-sm);
   }
 }
 

@@ -90,7 +90,7 @@
 }
 
 /* .h* + .fw-bold */
-$font-sizes: 54px, $font-size-h1, $font-size-h2, $font-size-h3, $font-size-h4, $font-size-h5, $font-size-h6;
+$font-sizes: 54px, $h1-font-size, $h2-font-size, $h3-font-size, $h4-font-size, $h5-font-size, $h6-font-size;
 $i: 0;
 @each $font-size in $font-sizes{
 
@@ -255,7 +255,7 @@ $z-index-variants: (more: 1, less: -1);
 }
 
 .fs-sm{
-  font-size: $font-size-small;
+  font-size: $font-size-sm;
 }
 
 .fs-larger{
