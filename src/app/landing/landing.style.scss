@@ -1,6 +1,7 @@
+@import "../scss/variables";
+@import "../../../node_modules/bootstrap/scss/functions";
 @import "../../../node_modules/bootstrap/scss/variables";
 @import "../../../node_modules/bootstrap/scss/mixins";
-@import "../scss/variables";
 
 /***********************************/
 /**            LANDING            **/
@@ -22,7 +23,7 @@
       line-height: 40px;
       padding: 0 10px;
       width: auto;
-      font-size: $font-size-large;
+      font-size: $font-size-lg;
     }
   }
 

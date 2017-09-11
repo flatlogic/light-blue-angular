@@ -1,10 +1,12 @@
 @import "../../scss/variables";
 @import "../../scss/mixins";
+@import "../../../../node_modules/bootstrap/scss/functions";
 @import "../../../../node_modules/bootstrap/scss/_variables";
 @import "../../../../node_modules/bootstrap/scss/mixins";
 @import "../../../../node_modules/bootstrap-colorpicker/dist/css/bootstrap-colorpicker";
 @import "../../../../node_modules/ng2-datetime/src/vendor/bootstrap-datepicker/bootstrap-datepicker3.min";
 @import "../../../../node_modules/ng2-datetime/src/vendor/bootstrap-timepicker/bootstrap-timepicker.min";
+@import "../../../../node_modules/bootstrap-select/sass/bootstrap-select";
 @import "../../scss/select2-variables";
 @import "../../../../node_modules/select2/src/scss/core";
 @import "../../../../node_modules/select2-bootstrap-theme/src/select2-bootstrap";
@@ -217,7 +219,7 @@ $slider-handle-size: 26px;
   width: $slider-handle-size;
   height: $slider-handle-size;
   background-color: $white;
-  @include box-shadow(inset 0 1px 0 rgba(255,255,255,.2), 0 1px 3px rgba(0,0,0,.5));
+  @include box-shadow("inset 0 1px 0 rgba(255,255,255,.2), 0 1px 3px rgba(0,0,0,.5)");
   border: 0px solid transparent;
 
   &:focus{

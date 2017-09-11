@@ -27,7 +27,7 @@ blockquote{
   }
   p{
     font-size: inherit;
-    margin-bottom: $line-height-computed / 2;
+    margin-bottom: $spacer / 2;
   }
 }
 
@@ -70,7 +70,7 @@ pre {
 
 pre {
   display: block;
-  padding: (($line-height-computed) / 2);
+  padding: (($spacer) / 2);
   margin: 0 0 9px;
   line-height: $line-height-base;
   word-break: break-all;
@@ -173,13 +173,13 @@ textarea,
 .input-prepend,
 .input-append {
   + .help-block {
-    margin-top: $line-height-computed / 4;
+    margin-top: $spacer / 4;
   }
 }
 
 .help-block {
   margin-top: 0;
-  font-size: $font-size-smaller;
+  font-size: $small-font-size;
   color: $text-muted;
   display: block;
 }
@@ -188,7 +188,7 @@ legend {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: $line-height-computed;
+  margin-bottom: $spacer;
   line-height: inherit;
   color: $legend-color;
   border: 0;
@@ -199,7 +199,7 @@ legend {
 
 .search-query, .navbar-form .search-query{
   border-radius: $border-radius-base;
-  line-height: $line-height-computed;
+  line-height: $spacer;
 }
 
 .form-horizontal{
@@ -210,7 +210,7 @@ legend {
   .input-prepend,
   .input-append {
     + .help-block {
-      margin-top: $line-height-computed / 4;
+      margin-top: $spacer / 4;
     }
   }
 }
@@ -418,7 +418,7 @@ button.dropdown-toggle{
 }
 
 .btn-secondary {
-  @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+  @include button-variant($btn-secondary-bg, $btn-secondary-border);
 }
 
 .btn-secondary:focus,
@@ -589,7 +589,7 @@ button.dropdown-toggle{
     &,
     &:hover,
     &:focus {
-      background-color: $nav-link-hover-bg;
+      background-color: $gray-lighter;
       border-color: transparent;
     }
   }
@@ -809,7 +809,7 @@ button.dropdown-toggle{
   > li > a {
     padding-top:    10px;
     padding-bottom: 10px;
-    line-height: $line-height-computed;
+    line-height: $spacer;
   }
 
   @include media-breakpoint-up(xs) {
@@ -899,7 +899,7 @@ button.dropdown-toggle{
 /***************************/
 
 .tooltip {
-  font-size: $font-size-small;
+  font-size: $font-size-sm;
 
   &.in {
     opacity: 1;
@@ -932,13 +932,13 @@ button.dropdown-toggle{
 /***************************/
 
 .img-thumbnail {
-  border: $img-thumbnail-border;
-  background-color: $img-thumbnail-bg;
+  border: $thumbnail-border-width solid $thumbnail-border-color;
+  background-color: $thumbnail-bg;
   box-shadow: none;
-  padding: $img-thumbnail-padding;
+  padding: $thumbnail-padding;
 
   .widget &{
-    border: $img-thumbnail-border;
+    border: $thumbnail-border-width solid $thumbnail-border-color;
   }
 }
 
@@ -954,7 +954,8 @@ button.dropdown-toggle{
   background-color: $widget-bg;
   color: $widget-color;
   border: none;
-  padding: $card-padding;
+  //padding: $card-padding;
+  padding: 2px;
 }
 
 .card-title {
@@ -985,36 +986,53 @@ button.dropdown-toggle{
 }
 
 .badge-default {
-  @include badge-variant($badge-default-bg);
+  @include badge-variant($gray-400);
 }
 
 .badge-primary {
-  @include badge-variant($badge-primary-bg);
+  @include badge-variant(theme-color('primary'));
 }
 
 .badge-success {
-  @include badge-variant($badge-success-bg);
+  @include badge-variant(theme-color('success'));
+
+  color: $white;
+
+  &[href] {
+    @include hover-focus {
+      color: $white;
+    }
+  }
 }
 
 .badge-info {
-  @include badge-variant($badge-info-bg);
+  @include badge-variant(theme-color('info'));
 }
 
 .badge-warning {
-  @include badge-variant($badge-warning-bg);
+  @include badge-variant(theme-color('warning'));
+
+  color: $white;
+
+  &[href] {
+    @include hover-focus {
+      color: $white;
+    }
+  }
 }
 
 .badge-danger {
-  @include badge-variant($badge-danger-bg);
+  @include badge-variant(theme-color('danger'));
 }
 
-.badge-important{
-  @include badge-variant($badge-danger-bg);
+.badge-important {
+  @include badge-variant(theme-color('danger'));
 }
 
-.label-inverse{
-  @include badge-variant($badge-default-bg);
+.badge-inverse {
+  @include badge-variant($gray-400);
 }
+
 
 /***************************/
 /*        Jumbotron        */
@@ -1067,7 +1085,7 @@ button.dropdown-toggle{
 
 .alert-sm{
   padding: 10px 12px;
-  font-size: $font-size-small;
+  font-size: $font-size-sm;
 
   .close{
     font-size: 18px;

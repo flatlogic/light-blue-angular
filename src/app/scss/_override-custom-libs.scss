@@ -9,7 +9,7 @@
 
 .nvd3-svg svg text,
 .nvd3-svg .nvd3 text{
-  font: $font-weight-base $font-size-small $font-family-base;
+  font: $font-weight-base $font-size-sm $font-family-base;
   fill: $text-color;
 
   .widget &{
@@ -22,7 +22,7 @@
 }
 
 .nvd3-svg  .nvd3.nv-noData {
-  font-size: $font-size-large;
+  font-size: $font-size-lg;
   font-weight: $font-weight-bold;
 }
 
@@ -189,7 +189,7 @@
 
 .select2-container .select2-selection.select2-selection--single {
   height: $input-height;
-  padding: $input-padding-y $input-padding-x;
+  padding: $padding-base-vertical $padding-base-horizontal;
 }
 
 /**

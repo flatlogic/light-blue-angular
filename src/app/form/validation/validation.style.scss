@@ -1,4 +1,5 @@
 @import "../../scss/_variables";
+@import "../../../../node_modules/bootstrap/scss/functions";
 @import "../../../../node_modules/bootstrap/scss/_variables";
 @import "../../../../node_modules/bootstrap/scss/mixins";
 
@@ -13,7 +14,7 @@ input.parsley-error{
 }
 
 .parsley-errors-list{
-  font-size: $font-size-smaller;
+  font-size: $small-font-size;
   padding-left: 0;
   margin-bottom: 5px;
 

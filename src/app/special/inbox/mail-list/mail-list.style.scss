@@ -1,5 +1,6 @@
-@import "../../../../../node_modules/bootstrap/scss/_variables";
 @import "../../../scss/variables";
+@import "../../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../../node_modules/bootstrap/scss/_variables";
 @import "../../../../../node_modules/bootstrap/scss/mixins";
 
 //#folder-actions {
@@ -125,7 +126,7 @@
 .widget-email-count{
   display: inline-block;
   margin: 0;
-  font-size: $font-size-small;
+  font-size: $font-size-sm;
   color: #d2d2d2;
   line-height: 29px;
   vertical-align: bottom;
