@@ -111,10 +111,6 @@
   outline: none !important;
 }
 
-/**
- * Bootstrap select
- */
-
 .selectpicker.form-control {
   height: auto;
 }
@@ -131,6 +127,11 @@
     z-index: 3;
     display: inline-block !important;
   }
+}
+
+body .bootstrap-select > select {
+  width: 0 !important;
+  height: 0 !important;
 }
 
 /**
@@ -318,6 +319,55 @@ a.fc-event{
 
 .abc-radio label:after {
   top: 4px;
+}
+
+.abc-checkbox, .abc-radio {
+  margin-bottom: 10px;
+  padding-left: 1.5rem;
+}
+
+.abc-checkbox label{
+  &::before {
+    background: none;
+    border-color: #aaa;
+  }&::after{
+     color: $awesome-checkbox-default-color;
+   }
+}
+
+.abc-radio {
+  label {
+
+    &::before {
+      background: none;
+      border-color: #aaa;
+    }
+
+    &::after {
+      background-color: $awesome-checkbox-default-color;
+    }
+  }
+}
+
+.abc-checkbox-dark input[type="checkbox"]:checked + label{
+  &::after{
+    color: $gray;
+  }
+}
+
+.table {
+  .abc-checkbox {
+    label {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      &:before {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
 }
 
 /***********************************/

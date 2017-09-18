@@ -675,8 +675,6 @@ $i: 1;
   // Right aligned menus need alt position
   .navbar-nav.float-right > li > .dropdown-menu,
   .navbar-nav.nav > li > .dropdown-menu.float-right {
-    left: auto;
-    right: 0;
     &:before {
       left: auto;
       right: 12px;
