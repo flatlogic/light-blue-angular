@@ -147,6 +147,15 @@ $z-index-variants: (more: 1, less: -1);
   border: none;
 }
 
+.input-no-border{
+  border: none !important;
+  @include transition(background-color ease-in-out .15s);
+
+  &:focus{
+    background-color: #f1f1f1;
+  }
+}
+
 .bt{ border-top: 1px solid $gray-semi-lighter }
 .br{ border-right: 1px solid $gray-semi-lighter }
 .bb{ border-bottom: 1px solid $gray-semi-lighter }

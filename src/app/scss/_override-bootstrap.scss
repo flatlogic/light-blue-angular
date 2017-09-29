@@ -342,9 +342,6 @@ button.dropdown-toggle{
   &:after {
     content: none;
   }
-  i {
-    margin-left: 3px;
-  }
 }
 
 .dropdown-menu{
@@ -990,6 +987,7 @@ button.dropdown-toggle{
 
 .badge-default {
   @include badge-variant($gray-400);
+  color: $text-color;
 }
 
 .badge-primary {

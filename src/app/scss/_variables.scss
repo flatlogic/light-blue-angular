@@ -142,8 +142,6 @@ $header-dropdown-bg:                     rgba($widget-bg-common, 0.85);
 $header-dropdown-shadow:                 none;
 $header-dropdown-item-hover:             $brand-primary;
 
-$nav-tabs-link-color: $widget-color;
-
 $input-transparent-color: $text-color;
 $input-transparent-placeholder-color: rgba(#eee, 0.76);
 $input-transparent-focused-shadow: inset 0 1px 1px rgba(0,0,0,.2);
@@ -160,6 +158,7 @@ $nav-tabs-active-item-margin: 0;
 $nav-tabs-active-item-border: $basic-border-color;
 $nav-tabs-active-item-border-bottom: $basic-border-color;
 $nav-tabs-border: none;
+$nav-tabs-border-color: transparent;
 $nav-tabs-tab-content-bg: $bg-addition;
 
 $tabs-widget-active-item-hover-bg: rgba(darken($widget-bg-common, 10%), 0.4);
