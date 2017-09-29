@@ -916,7 +916,10 @@ button.dropdown-toggle{
 /***************************/
 
 .popover {
-  color: $text-color;
+  &, .popover-body {
+    color: $text-color;
+  }
+
   border-radius: $border-radius-base;
   h1,h2,h3,h4,h5,h6{
     color: $text-color;
@@ -1162,6 +1165,7 @@ button.dropdown-toggle{
     font-size: 1rem;
     transition: width 0.4s ease-in-out;
     box-shadow: $progress-value-box-shadow;
+    height: $progress-height;
 
     &.progress-sm {
       height: $progress-height-sm;
