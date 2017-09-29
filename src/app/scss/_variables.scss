@@ -86,7 +86,6 @@ $font-weight-thin: 300 !default;
 $font-weight-base: $font-weight-thin !default;
 
 $line-height-base:        1.428571429 !default; // 20/14
-$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
 
 // Links
 // -------------------------
@@ -219,7 +218,7 @@ $input-group-addon-bg:           $bg-addition;
 $input-group-addon-border-color: transparent;
 
 // recalculate input heights
-$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
+$input-height-base:              calc(#{1rem} + (#{$padding-base-vertical} * 2) + 2) !default;
 $input-height-small:             (floor($font-size-sm * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
 
 

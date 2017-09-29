@@ -223,7 +223,7 @@ $i: 1;
     }
 
     + li {
-      margin-top: $line-height-computed/2;
+      margin-top: $spacer/2;
     }
   }
   @media (max-width: 767px) {
@@ -234,7 +234,7 @@ $i: 1;
 .sidebar-alerts{
   .alert{
     margin-bottom: 0;
-    padding: $line-height-computed/2 12px $line-height-computed/2 20px;
+    padding: $spacer/2 12px $spacer/2 20px;
 
     .close{
       font-size: 16px;
@@ -689,7 +689,7 @@ $i: 1;
   color: $page-title-color;
   font-weight: 300;
   line-height: 1;
-  margin: 11px 0 $line-height-computed;
+  margin: 11px 0 $spacer;
 
   small{
     color: rgba($page-title-color, .7);
@@ -1032,8 +1032,8 @@ $i: 1;
 // ------------
 
 .form-actions {
-  padding: ($line-height-computed - 1) 20px $line-height-computed;
-  margin-top: $line-height-computed;
+  padding: ($spacer - 1) 20px $spacer;
+  margin-top: $spacer;
   background-color: $bg-addition;
   @include clearfix(); // Adding clearfix to allow for .pull-right button containers
 }
@@ -1549,7 +1549,7 @@ $i: 1;
 }
 
 ul.text-list, ol.text-list{
-  margin-bottom: $line-height-computed/2;
+  margin-bottom: $spacer/2;
   padding-left: 40px;
 }
 

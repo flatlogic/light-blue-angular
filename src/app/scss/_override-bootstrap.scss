@@ -26,7 +26,7 @@ blockquote{
   }
   p{
     font-size: inherit;
-    margin-bottom: $line-height-computed / 2;
+    margin-bottom: $spacer / 2;
   }
 }
 
@@ -117,7 +117,7 @@ textarea,
 .input-prepend,
 .input-append {
   + .help-block {
-    margin-top: $line-height-computed / 4;
+    margin-top: $spacer / 4;
   }
 }
 
@@ -129,7 +129,7 @@ textarea,
 
 .search-query, .navbar-form .search-query{
   border-radius: $border-radius-base;
-  line-height: $line-height-computed;
+  line-height: $spacer;
 }
 
 .form-horizontal{
@@ -140,13 +140,13 @@ textarea,
   .input-prepend,
   .input-append {
     + .help-block {
-      margin-top: $line-height-computed / 4;
+      margin-top: $spacer / 4;
     }
   }
 }
 
 .form-group{
-  margin-bottom: $line-height-computed;
+  margin-bottom: $spacer;
 }
 
 .form-horizontal.form-label-left {
@@ -630,7 +630,7 @@ button.dropdown-toggle{
   > li > a {
     padding-top:    10px;
     padding-bottom: 10px;
-    line-height: $line-height-computed;
+    line-height: $spacer;
   }
 
   @include media-breakpoint-up(xs) {
@@ -924,12 +924,12 @@ button.dropdown-toggle{
 
 .progress-sm{
   height: 10px;
-  margin-bottom: $line-height-computed/2;
+  margin-bottom: $spacer/2;
 }
 
 .progress-xs{
   height: 5px;
-  margin-bottom: $line-height-computed/2;
+  margin-bottom: $spacer/2;
 }
 
 .progress-bar {
