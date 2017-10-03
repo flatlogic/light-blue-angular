@@ -42,11 +42,11 @@ h2 small { font-size: $font-size-base * 1.25; } // ~18px
 h3 small { font-size: $font-size-base; }
 h4 small { font-size: $font-size-base; }
 
-.text-primary        { color: $brand-primary; }
-.text-warning        { color: $brand-warning; }
-.text-danger         { color: $brand-danger; }
-.text-success        { color: $brand-success; }
-.text-info           { color: $brand-info; }
+.text-primary        { color: theme-color('primary') }
+.text-warning        { color: theme-color('warning'); }
+.text-danger         { color: theme-color('danger'); }
+.text-success        { color: theme-color('success'); }
+.text-info           { color: theme-color('info'); }
 
 @media (min-width: 768px) {
   .lead {
@@ -379,7 +379,7 @@ button.dropdown-toggle{
   &:hover,
   &:focus {
     border-bottom-color: transparent;
-    border-top-color: #ddd;
+    border-top-color: $gray-light;
   }
 }
 .tabs-below > .nav-tabs > .active > a,
@@ -408,7 +408,7 @@ button.dropdown-toggle{
 .tabs-left > .nav-tabs {
   float: left;
   margin-right: 19px;
-  border-right: 1px solid #ddd;
+  border-right: 1px solid $gray-light;
 }
 .tabs-left > .nav-tabs > li > a {
   margin-right: -1px;
@@ -416,19 +416,19 @@ button.dropdown-toggle{
 }
 .tabs-left > .nav-tabs > li > a:hover,
 .tabs-left > .nav-tabs > li > a:focus {
-  border-color: $gray-lighter #ddd $gray-lighter $gray-lighter;
+  border-color: $gray-200 $gray-light $gray-200 $gray-200;
 }
 .tabs-left > .nav-tabs .active > a,
 .tabs-left > .nav-tabs .active > a:hover,
 .tabs-left > .nav-tabs .active > a:focus {
-  border-color: #ddd transparent #ddd #ddd;
+  border-color: $gray-light transparent $gray-light $gray-light;
 }
 
 // Tabs on the right
 .tabs-right > .nav-tabs {
   float: right;
   margin-left: 19px;
-  border-left: 1px solid #ddd;
+  border-left: 1px solid $gray-light;
 }
 .tabs-right > .nav-tabs > li > a {
   margin-left: -1px;
@@ -436,12 +436,12 @@ button.dropdown-toggle{
 }
 .tabs-right > .nav-tabs > li > a:hover,
 .tabs-right > .nav-tabs > li > a:focus {
-  border-color: $gray-lighter $gray-lighter $gray-lighter #ddd;
+  border-color: $gray-200 $gray-200 $gray-200 $gray-light;
 }
 .tabs-right > .nav-tabs .active > a,
 .tabs-right > .nav-tabs .active > a:hover,
 .tabs-right > .nav-tabs .active > a:focus {
-  border-color: #ddd #ddd #ddd transparent;
+  border-color: $gray-light $gray-light $gray-light transparent;
 }
 
 /***************************/
@@ -455,7 +455,7 @@ button.dropdown-toggle{
     &,
     &:hover,
     &:focus {
-      background-color: $gray-lighter;
+      background-color: $gray-200;
       border-color: transparent;
     }
   }
@@ -689,11 +689,11 @@ button.dropdown-toggle{
 /***************************/
 
 .modal {
-  color: $gray-dark;
+  color: $gray-800;
   border-radius: $border-radius-base;
 
   h1,h2,h3,h4,h5,h6{
-    color: $gray-dark;
+    color: $gray-800 ;
   }
 }
 

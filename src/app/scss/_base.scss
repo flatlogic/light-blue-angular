@@ -1,21 +1,21 @@
-$i: 1;
-@each $color in $colors{
-
-  .#{nth($color-names, $i)}{
-    background: #{$color} !important;
-    color:  $white !important;
-  }
-  $i: $i + 1;
-}
-
-$i: 1;
-@each $color in $colors{
-
-  .color-#{nth($color-names, $i)}{
-    color: #{$color} !important;
-  }
-  $i: $i + 1;
-}
+//$i: 1;
+//@each $color in $colors{
+//
+//  .#{nth($color-names, $i)}{
+//    background: #{$color} !important;
+//    color:  $white !important;
+//  }
+//  $i: $i + 1;
+//}
+//
+//$i: 1;
+//@each $color in $colors{
+//
+//  .color-#{nth($color-names, $i)}{
+//    color: #{$color} !important;
+//  }
+//  $i: $i + 1;
+//}
 
 /***********************************/
 /**          LOGO                **/
@@ -608,7 +608,7 @@ $i: 1;
       height: 38px;
       width: 1px;
       margin: 0 20px;
-      background: linear-gradient(rgba($text-transparent, 0), $text-transparent, rgba($gray, 0));
+      background: linear-gradient(rgba($text-transparent, 0), $text-transparent, rgba($gray-300, 0));
     }
   }
 
@@ -639,7 +639,7 @@ $i: 1;
 
   .navbar-nav{
     .nav-item + .nav-item{
-      margin-left: 0px;
+      margin-left: 0;
     }
 
     .dropdown-menu {
@@ -984,6 +984,14 @@ $i: 1;
     font-size: $font-size-sm;
     color: $text-muted;
     font-weight: bold;
+  }
+}
+
+.input-group {
+  &.input-group-transparent {
+    .input-group-addon {
+      border: none;
+    }
   }
 }
 
@@ -1439,27 +1447,27 @@ $i: 1;
 }
 
 .background-danger{
-  background: $brand-danger;
+  background: theme-color('danger');
   color: white;
 }
 
 .background-warning{
-  background: $brand-warning;
+  background: theme-color('warning');
   color: white;
 }
 
 .background-success{
-  background: $brand-success;
+  background: theme-color('success');
   color: white;
 }
 
 .background-primary{
-  background: $brand-primary;
+  background: theme-color('primary');
   color: white;
 }
 
 .background-info{
-  background: $brand-info;
+  background: theme-color('info');
   color: white;
 }
 

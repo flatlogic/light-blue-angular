@@ -190,7 +190,7 @@ svg .title {
 .bootstrap-datetimepicker-widget
 {
   border-radius: $border-radius-base;
-  color: $gray;
+  color: $gray-300;
   td,
   th
   {
@@ -204,7 +204,7 @@ svg .title {
     &.minute:hover,
     &.second:hover
     {
-      background: $gray-lighter;
+      background: $gray-200;
     }
 
     &.old,
@@ -216,7 +216,7 @@ svg .title {
     &.active,
     &.active:hover
     {
-      background-color: $brand-primary;
+      background-color: theme-color('primary');
       text-shadow: none;
     }
 
@@ -232,12 +232,12 @@ svg .title {
 
       &:hover
       {
-        background: $gray-lighter;
+        background: $gray-200;
       }
 
       &.active
       {
-        background-color: $brand-primary;
+        background-color: theme-color('primary');
       }
 
       &.old
@@ -269,7 +269,7 @@ svg .title {
   {
     &:hover
     {
-      background: $gray-lighter;
+      background: $gray-200;
     }
   }
 
@@ -405,22 +405,22 @@ $slider-handle-size: 26px;
 }
 .slider-selection {
   position: absolute;
-  background-color: $brand-primary;
+  background-color: theme-color('primary');
   @include box-shadow(inset 0 -1px 0 rgba(0,0,0,.15));
   //@include box-sizing(border-box);
   border-radius: $border-radius-base;
 
   .slider-danger &{
-    background-color: $brand-danger;
+    background-color: theme-color('danger');
   }
   .slider-success &{
-    background-color: $brand-success;
+    background-color: theme-color('success');
   }
   .slider-warning &{
-    background-color: $brand-warning;
+    background-color: theme-color('warning');
   }
   .slider-info &{
-    background-color: $brand-info;
+    background-color: theme-color('info');
   }
   .slider-inverse &{
     background-color: $widget-color;
@@ -432,7 +432,7 @@ $slider-handle-size: 26px;
   height: $slider-handle-size;
   background-color: $white;
   @include box-shadow(inset 0 1px 0 rgba(255,255,255,.2), 0 1px 3px rgba(0,0,0,.5));
-  border: 0px solid transparent;
+  border: 0 solid transparent;
 
   &:focus{
     outline: 0;
@@ -451,7 +451,7 @@ $slider-handle-size: 26px;
  */
 
 .rickshaw_graph .detail .x_label {
-  color: $gray;
+  color: $gray-300;
 }
 
 /***********************/
@@ -466,7 +466,7 @@ $slider-handle-size: 26px;
   padding: 2px 3px;
   border: none;
   font-weight: $font-weight-normal;
-  background-color: $gray-semi-lighter;
+  background-color: $gray-light;
   color: $text-color;
 }
 
@@ -480,7 +480,7 @@ a.fc-event{
 }
 
 .fc-event, .fc-event:hover, .ui-widget .fc-event{
-  color: $gray;
+  color: $gray-300;
 }
 
 .fc-unthemed th,
@@ -641,4 +641,37 @@ table.dataTable thead .sorting_desc_disabled {
 
 .glyphicon-comment:before {
   content:"\E111";
+}
+
+/***********************************/
+/**  Awesome bootstrap Checkbox   **/
+/***********************************/
+
+.checkbox label{
+  &::before {
+    background: none;
+    border-color: #aaa;
+  }&::after{
+     color: $awesome-checkbox-default-color;
+   }
+}
+
+.radio {
+  label {
+
+    &::before {
+      background: none;
+      border-color: #aaa;
+    }
+
+    &::after {
+      background-color: $awesome-checkbox-default-color;
+    }
+  }
+}
+
+.checkbox-dark input[type="checkbox"]:checked + label{
+  &::after{
+    color: $gray-300;
+  }
 }

@@ -74,7 +74,7 @@
   }
 
   .facebook-login {
-    height: 30px;
+    height: 40px;
     background: $blue;
     text-align: center;
     padding-top: 10px;
@@ -87,10 +87,6 @@
     }
 
   }
-}
-
-.login-page{
-  background-color: $gray-semi-lighter;
 }
 
 .login-page .page-footer {
@@ -137,11 +133,6 @@
 header h4{
   font-size: 14px !important;
   font-weight: 600 !important;
-}
-
-.btn {
-  height: 21px;
-  width: 90%;
 }
 
 small {
