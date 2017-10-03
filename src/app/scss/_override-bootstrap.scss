@@ -47,11 +47,11 @@ small, .small {
   font-size: 92%;
 }
 
-.text-primary        { color: $brand-primary; }
-.text-warning        { color: $brand-warning; }
-.text-danger         { color: $brand-danger; }
-.text-success        { color: $brand-success; }
-.text-info           { color: $brand-info; }
+.text-primary        { color: theme-color('primary'); }
+.text-warning        { color: theme-color('warning'); }
+.text-danger         { color: theme-color('danger'); }
+.text-success        { color: theme-color('success'); }
+.text-info           { color: theme-color('info'); }
 
 @media (min-width: 768px) {
   .lead {
@@ -510,7 +510,7 @@ button.dropdown-toggle{
   &:hover,
   &:focus {
     border-bottom-color: transparent;
-    border-top-color: #ddd;
+    border-top-color: $gray-light;
   }
 }
 .tabs-below > .nav-tabs > .active > a,
@@ -539,7 +539,7 @@ button.dropdown-toggle{
 .tabs-left > .nav-tabs {
   float: left;
   margin-right: 19px;
-  border-right: 1px solid #ddd;
+  border-right: 1px solid $gray-light;
 }
 .tabs-left > .nav-tabs > li > a {
   margin-right: -1px;
@@ -547,19 +547,19 @@ button.dropdown-toggle{
 }
 .tabs-left > .nav-tabs > li > a:hover,
 .tabs-left > .nav-tabs > li > a:focus {
-  border-color: $gray-lighter #ddd $gray-lighter $gray-lighter;
+  border-color: $gray-200 $gray-light $gray-200 $gray-200;
 }
 .tabs-left > .nav-tabs .active > a,
 .tabs-left > .nav-tabs .active > a:hover,
 .tabs-left > .nav-tabs .active > a:focus {
-  border-color: #ddd transparent #ddd #ddd;
+  border-color: $gray-light transparent $gray-light $gray-light;
 }
 
 // Tabs on the right
 .tabs-right > .nav-tabs {
   float: right;
   margin-left: 19px;
-  border-left: 1px solid #ddd;
+  border-left: 1px solid $gray-light;
 }
 .tabs-right > .nav-tabs > li > a {
   margin-left: -1px;
@@ -567,12 +567,12 @@ button.dropdown-toggle{
 }
 .tabs-right > .nav-tabs > li > a:hover,
 .tabs-right > .nav-tabs > li > a:focus {
-  border-color: $gray-lighter $gray-lighter $gray-lighter #ddd;
+  border-color: $gray-200 $gray-200 $gray-200 $gray-light;
 }
 .tabs-right > .nav-tabs .active > a,
 .tabs-right > .nav-tabs .active > a:hover,
 .tabs-right > .nav-tabs .active > a:focus {
-  border-color: #ddd #ddd #ddd transparent;
+  border-color: $gray-light $gray-light $gray-light transparent;
 }
 
 /***************************/
@@ -586,7 +586,7 @@ button.dropdown-toggle{
     &,
     &:hover,
     &:focus {
-      background-color: $gray-lighter;
+      background-color: $gray-200;
       border-color: transparent;
     }
   }
@@ -862,7 +862,7 @@ button.dropdown-toggle{
   .page-item.disabled .page-link,
   .page-item.disabled .page-link:focus,
   .page-item.disabled .page-link:hover {
-    color: $gray-semi-lighter;
+    color: $gray-light;
   }
 
   .page-link {
@@ -879,11 +879,11 @@ button.dropdown-toggle{
 /***************************/
 
 .modal {
-  color: $gray-dark;
+  color: $gray-800;
   border-radius: $border-radius-base;
 
   h1,h2,h3,h4,h5,h6{
-    color: $gray-dark;
+    color: $gray-800;
   }
 }
 
@@ -1173,13 +1173,13 @@ button.dropdown-toggle{
       height: $progress-height-xs;
     }
   }
-  @include progress-variant($brand-primary);
+  @include progress-variant(theme-color('primary'));
 }
 
-@include bg-variant('.bg-success', $brand-success);
-@include bg-variant('.bg-info', $brand-info);
-@include bg-variant('.bg-warning', $brand-warning);
-@include bg-variant('.bg-danger', $brand-danger);
+@include bg-variant('.bg-success', theme-color('success'));
+@include bg-variant('.bg-info', theme-color('info'));
+@include bg-variant('.bg-warning', theme-color('warning'));
+@include bg-variant('.bg-danger', theme-color('danger'));
 @include bg-variant('.bg-inverse', $widget-color);
 
 .bg-inverse {
@@ -1352,7 +1352,7 @@ button.dropdown-toggle{
   border: 1px solid $well-border;
   border-radius: $border-radius-base;
   blockquote {
-    border-color: #ddd;
+    border-color: $gray-light;
     border-color: rgba(0,0,0,.15);
   }
 }

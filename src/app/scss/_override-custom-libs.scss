@@ -244,7 +244,7 @@ body .bootstrap-select > select {
  */
 
 .rickshaw_graph .detail .x_label {
-  color: $gray;
+  color: $gray-300;
 }
 
 /***********************/
@@ -259,7 +259,7 @@ body .bootstrap-select > select {
   padding: 2px 3px;
   border: none;
   font-weight: $font-weight-normal;
-  background-color: $gray-semi-lighter;
+  background-color: $gray-light;
   color: $text-color;
 }
 
@@ -277,7 +277,7 @@ a.fc-event{
 }
 
 .fc-event, .fc-event:hover, .ui-widget .fc-event{
-  color: $gray;
+  color: $gray-300;
 }
 
 .fc-unthemed th,
@@ -351,7 +351,7 @@ a.fc-event{
 
 .abc-checkbox-dark input[type="checkbox"]:checked + label{
   &::after{
-    color: $gray;
+    color: $gray-300;
   }
 }
 
@@ -378,7 +378,7 @@ a.fc-event{
 }
 
 .select2-container--bootstrap .select2-results .select2-results__option{
-  color: $gray-dark;
+  color: $gray-800;
 }
 
 /**

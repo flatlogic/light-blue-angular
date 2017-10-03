@@ -4,7 +4,7 @@
 
 .nav-email-folders{
   > li > a {
-    color: $gray-lighter;
+    color: $gray-200;
     font-weight: $font-weight-normal;
     background-color: transparent;
     &:hover{
@@ -21,7 +21,7 @@
     }
 
     > .badge{
-      background-color: $brand-danger;
+      background-color: theme-color('danger');
       font-weight: $font-weight-semi-bold;
     }
   }
@@ -35,7 +35,7 @@
       font-weight: $font-weight-semi-bold;
 
       > .badge{
-        color: $gray-dark
+        color: $gray-800;
       }
     }
   }

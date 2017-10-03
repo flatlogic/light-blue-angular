@@ -120,11 +120,11 @@
 
 .widget-white{
   background: $white;
-  color: $gray;
+  color: $gray-300;
   box-shadow: 0 -1px 1px $shadow-color, 0 1px 1px $shadow-color;
 
   *{
-    color: $gray;
+    color: $gray-300;
   }
 }
 
