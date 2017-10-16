@@ -1,5 +1,4 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {
@@ -15,6 +14,8 @@ import {
   RouterModule,
   PreloadAllModules
 } from '@angular/router';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 /*
  * Platform and Environment providers/directives/pipes
@@ -55,9 +56,9 @@ type StoreType = {
    */
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpModule,
-    BrowserAnimationsModule,
     RouterModule.forRoot(ROUTES, {
       useHash: true,
       preloadingStrategy: PreloadAllModules
