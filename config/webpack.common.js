@@ -7,6 +7,7 @@ const helpers = require('./helpers');
  * problem with copy-webpack-plugin
  */
 const AssetsPlugin = require('assets-webpack-plugin');
+const IgnorePlugin = require('webpack/lib/IgnorePlugin');
 const NormalModuleReplacementPlugin = require('webpack/lib/NormalModuleReplacementPlugin');
 const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin');
 const CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
@@ -29,7 +30,8 @@ const METADATA = {
   title: 'Light Blue 3.8.0 with Angular 4.0 Final Release support by Flatlogic',
   baseUrl: '/',
   isDevServer: helpers.isWebpackDevServer(),
-  HMR: HMR
+  HMR: HMR,
+  AOT: AOT
 };
 
 /**
@@ -112,13 +114,6 @@ module.exports = function (options) {
           test: /\.ts$/,
           use: [
             {
-              loader: '@angularclass/hmr-loader',
-              options: {
-                pretty: !isProd,
-                prod: isProd
-              }
-            },
-            {
               /**
                *  MAKE SURE TO CHAIN VANILLA JS CODE, I.E. TS COMPILATION OUTPUT.
                */
@@ -132,8 +127,14 @@ module.exports = function (options) {
             {
               loader: 'awesome-typescript-loader',
               options: {
-                tsconfig: 'tsconfig.webpack.json',
+                configFileName: 'tsconfig.webpack.json',
                 useCache: !isProd
+              }
+            },
+            {
+              loader: 'ngc-webpack',
+              options: {
+                disable: !AOT,
               }
             },
             {
@@ -254,7 +255,7 @@ module.exports = function (options) {
         /**
          * The (\\|\/) piece accounts for path separators in *nix and Windows
          */
-        /angular(\\|\/)core(\\|\/)@angular/,
+        /(.+)?angular(\\|\/)core(.+)?/,
         helpers.root('src'), // location of your src
         {
           /**
@@ -287,13 +288,19 @@ module.exports = function (options) {
       new HtmlWebpackPlugin({
         template: 'src/index.html',
         title: METADATA.title,
-        chunksSortMode: 'dependency',
+        chunksSortMode: function (a, b) {
+          const entryPoints = ["inline","polyfills","sw-register","styles","vendor","main"];
+          return entryPoints.indexOf(a.names[0]) - entryPoints.indexOf(b.names[0]);
+        },
         metadata: METADATA,
-        inject: 'head'
+        inject: 'body'
       }),
 
       new ScriptExtHtmlWebpackPlugin({
-        defaultAttribute: 'defer'
+        sync: /polyfills|vendor/,
+        defaultAttribute: 'async',
+        preload: [/polyfills|vendor|main/],
+        prefetch: [/chunk/]
       }),
 
       /*
@@ -359,29 +366,6 @@ module.exports = function (options) {
          */
         disabled: !AOT,
         tsConfig: helpers.root('tsconfig.webpack.json'),
-        /**
-         * A path to a file (resource) that will replace all resource referenced in @Components.
-         * For each `@Component` the AOT compiler compiles it creates new representation for the templates (html, styles)
-         * of that `@Components`. It means that there is no need for the source templates, they take a lot of
-         * space and they will be replaced by the content of this resource.
-         *
-         * To leave the template as is set to a falsy value (the default).
-         *
-         * TIP: Use an empty file as an overriding resource. It is recommended to use a ".js" file which
-         * usually has small amount of loaders hence less performance impact.
-         *
-         * > This feature is doing NormalModuleReplacementPlugin for AOT compiled resources.
-         *
-         * ### resourceOverride and assets
-         * If you reference assets in your styles/html that are not inlined and you expect a loader (e.g. url-loader)
-         * to copy them, don't use the `resourceOverride` feature as it does not support this feature at the moment.
-         * With `resourceOverride` the end result is that webpack will replace the asset with an href to the public
-         * assets folder but it will not copy the files. This happens because the replacement is done in the AOT compilation
-         * phase but in the bundling it won't happen (it's being replaced with and empty file...)
-         *
-         * @default undefined
-         */
-        resourceOverride: helpers.root('config/resource-override.js')
       }),
 
       /**
