@@ -42,7 +42,7 @@ $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
 $gray-600: #868e96 !default;
-$gray-700: #555 !default;
+$gray-700: #666 !default;
 $gray-800: #343434 !default;
 $gray-900: #242424 !default;
 $black: #000 !default;
@@ -62,7 +62,7 @@ $theme-colors: (
   danger: $red,
   light: $gray-200,
   dark: $gray-800,
-  inverse: $gray-700,
+  inverse: $white-dark,
   gray: $gray-300,
   default: #f8f8f8
 );

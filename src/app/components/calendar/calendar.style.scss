@@ -1,19 +1,8 @@
+@import "../../scss/helpers";
 @import "../../../../node_modules/fullcalendar/dist/fullcalendar";
-@import "../../scss/variables";
-@import "../../../../node_modules/bootstrap/scss/functions";
-@import "../../../../node_modules/bootstrap/scss/_variables";
-@import "../../../../node_modules/bootstrap/scss/mixins";
 
 .widget > header h4 {
   font-size: 14px;
-}
-
-/**************************/
-/* Full Calendar Override */
-/**************************/
-
-label.btn.btn-secondary {
-  margin-bottom: 0;
 }
 
 .fc-body {
@@ -24,20 +13,16 @@ label.btn.btn-secondary {
   }
 }
 
-.fc-grid th{
-  text-transform: uppercase;
-}
-
 .fc-event {
   padding: 2px 3px;
   border: none;
   font-weight: $font-weight-normal;
   background-color: $gray-light;
-  color: $gray-300;
+  color: $gray-700;
 }
 
 a:not([href]):not([tabindex]) {
-  color: $gray-300;
+  color: $gray-700;
   text-decoration: none;
 }
 
@@ -51,10 +36,6 @@ a.fc-event{
   height: auto;
   line-height: $line-height-base;
 }
-
-/***********************************/
-/**      Full Calendar Custom     **/
-/***********************************/
 
 .full-calendar{
   margin-top: 10px;
@@ -85,3 +66,31 @@ a.fc-event{
     margin-top: -100px;
   }
 }
+
+.fc-grid th{
+  text-transform: uppercase;
+}
+
+a.fc-event{
+  height: auto;
+  line-height: 20px;
+}
+
+.fc-event, .fc-event:hover, .ui-widget .fc-event{
+  color: $gray-700;
+}
+
+.fc-unthemed .fc-today{
+  background-color: rgba(#fff1b8, .35);
+}
+
+.fc-unthemed th,
+.fc-unthemed td,
+.fc-unthemed hr,
+.fc-unthemed thead,
+.fc-unthemed tbody,
+.fc-unthemed .fc-row,
+.fc-unthemed .fc-popover{
+  border-color: $calendar-border;
+}
+

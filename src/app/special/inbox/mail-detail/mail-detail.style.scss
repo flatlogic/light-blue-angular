@@ -1,7 +1,4 @@
-@import "../../../scss/variables";
-@import "../../../../../node_modules/bootstrap/scss/functions";
-@import "../../../../../node_modules/bootstrap/scss/_variables";
-@import "../../../../../node_modules/bootstrap/scss/mixins";
+@import "../../../scss/helpers";
 
 .email-view{
   margin: $widget-padding-vertical $widget-padding-horizontal;

@@ -1,10 +1,6 @@
+@import "../../scss/helpers";
 @import "../../../../node_modules/ng2-datetime/src/vendor/bootstrap-datepicker/bootstrap-datepicker3.min";
 @import "../../../../node_modules/ng2-datetime/src/vendor/bootstrap-timepicker/bootstrap-timepicker.min";
-@import "../../scss/variables";
-@import "../../scss/mixins";
-@import "../../../../node_modules/bootstrap/scss/functions";
-@import "../../../../node_modules/bootstrap/scss/_variables";
-@import "../../../../node_modules/bootstrap/scss/mixins";
 @import "../../../../node_modules/bootstrap-select/sass/bootstrap-select";
 @import "../../scss/select2-variables";
 @import "../../../../node_modules/select2/src/scss/core";

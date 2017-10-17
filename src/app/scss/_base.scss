@@ -1221,7 +1221,6 @@
 /**********************************/
 
 .table th {
-  @include bold-font;
 
   .widget &{
     color: $widget-header-color;
@@ -1403,10 +1402,6 @@
 
 .margin-bottom{
   margin-bottom: 10px;
-}
-
-.no-margin{
-  margin: 0 !important;
 }
 
 .weight-normal{

@@ -1,10 +1,7 @@
+@import "../../scss/helpers";
 @import "../../../../node_modules/rickshaw/rickshaw";
 @import "../../../../node_modules/morris.js/morris";
 @import "../../../../node_modules/nvd3/build/nv.d3";
-@import "../../scss/variables";
-@import "../../../../node_modules/bootstrap/scss/functions";
-@import "../../../../node_modules/bootstrap/scss/_variables";
-@import "../../../../node_modules/bootstrap/scss/mixins";
 
 .stats-row {
   &.centered {

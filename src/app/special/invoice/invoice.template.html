@@ -2,7 +2,7 @@
   <small>Print optimized page</small>
 </h2>
 <section widget class="widget">
-  <div class="widget-body no-margin">
+  <div class="widget-body m-0">
     <div class="row">
       <div class="col-sm-6 col-print-6">
         <img src="assets/img/logo.png" alt="Logo" class="invoice-logo"/>
@@ -108,12 +108,12 @@
           <div class="col-3">
             <p>Subtotal</p>
             <p>Tax(10%)</p>
-            <p class="no-margin"><strong>Total</strong></p>
+            <p class="m-0"><strong>Total</strong></p>
           </div>
           <div class="col-3">
             <p>1,598.88</p>
             <p>159.89</p>
-            <p class="no-margin"><strong>1,758.77</strong></p>
+            <p class="m-0"><strong>1,758.77</strong></p>
           </div>
         </div>
       </div>
@@ -125,7 +125,7 @@
       <span class="fw-semi-bold">Bob Smith</span>
     </p>
     <div class="btn-toolbar mt-lg text-right hidden-print">
-      <button id="print" (click)="printInvoice()" class="btn btn-default">
+      <button id="print" (click)="printInvoice()" class="btn btn-secondary">
         <i class="fa fa-print"></i>
         &nbsp;&nbsp;
         Print

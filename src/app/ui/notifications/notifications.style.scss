@@ -1,10 +1,7 @@
 @import "../../../../node_modules/messenger/build/css/messenger";
 @import "../../../../node_modules/messenger/build/css/messenger-spinner";
-@import "../../scss/variables";
+@import "../../scss/helpers";
 @import "../../scss/override-messenger";
-@import "../../../../node_modules/bootstrap/scss/functions";
-@import "../../../../node_modules/bootstrap/scss/_variables";
-@import "../../../../node_modules/bootstrap/scss/mixins";
 
 pre.form-actions {
   padding: 8.5px;

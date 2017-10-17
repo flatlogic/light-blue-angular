@@ -1,0 +1,35 @@
+@import "../../scss/helpers";
+
+accordion {
+  [accordion-heading] {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .card-header {
+    background: transparent;
+    border-bottom: none;
+    cursor: pointer;
+
+    .fa-angle-left {
+      transition: transform 0.15s ease-in-out;
+    }
+  }
+
+  .panel-open {
+    .fa-angle-left {
+      transform: rotate(-90deg);
+    }
+  }
+
+  .panel-body {
+    border-top: 1px solid $card-border-color;
+  }
+
+  .card {
+    margin-bottom: $spacer / 2;
+    background: $widget-bg;
+    padding: 0;
+  }
+}
