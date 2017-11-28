@@ -14,6 +14,10 @@ declare let jQuery: any;
 export class Elements {
   colorOptions: Object = {color: '#f0b518'};
   date: Date = new Date(2016, 5, 10);
+  froalaOptions: any = {
+    toolbarButtons: ['undo', 'redo' , '|', 'bold', 'italic', 'underline', 'strikeThrough', 'subscript', 'superscript', 'outdent', 'indent', 'clearFormatting', 'insertTable', 'html'],
+    toolbarButtonsXS: ['undo', 'redo' , '-', 'bold', 'italic', 'underline']
+  };
 
   getSelect2CountryList(): Select2OptionData[] {
     return data.select2CountryData;

@@ -22,6 +22,7 @@ import 'jasny-bootstrap/js/inputmask.js';
 import 'ng2-datetime/src/vendor/bootstrap-datepicker/bootstrap-datepicker.min.js';
 import 'ng2-datetime/src/vendor/bootstrap-timepicker/bootstrap-timepicker.min.js';
 import 'bootstrap-slider/dist/bootstrap-slider.js';
+import 'froala-editor/js/froala_editor.pkgd.min.js';
 
 
 import { Account } from './account/account.component';
@@ -37,6 +38,7 @@ import {
 import {
   MarkdownToolbarTransparent
 } from '../ui/markdown-toolbar-transparent/markdown-toolbar-transparent.directive';
+import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 
 
 export const routes = [
@@ -71,6 +73,8 @@ export const routes = [
     WidgetModule,
     TagInputModule,
     RouterModule.forChild(routes),
+    FroalaEditorModule.forRoot(),
+    FroalaViewModule.forRoot()
   ]
 })
 export class FormModule {

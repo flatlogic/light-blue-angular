@@ -6,6 +6,8 @@
 @import "../../scss/select2-variables";
 @import "../../../../node_modules/select2/src/scss/core";
 @import "../../../../node_modules/select2-bootstrap-theme/src/select2-bootstrap";
+@import "../../../../node_modules/froala-editor/css/froala_editor.pkgd.min";
+@import "../../../../node_modules/froala-editor/css/froala_style.min";
 
 /**
 *  autosize
@@ -238,4 +240,15 @@ $slider-handle-size: 26px;
     background: $white-dark;
     border: 1px solid rgba(0,0,0,0.15);
   }
+}
+
+/*
+  Froala Editor
+ */
+.fr-toolbar {
+  border-top-width: 1px;
+}
+
+.fr-box.fr-basic.fr-top .fr-wrapper {
+  box-shadow: none;
 }
