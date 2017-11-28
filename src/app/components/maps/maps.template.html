@@ -13,10 +13,10 @@
       <div class="widget-body">
         <div class="map">
           <div id="basic">
-            <sebm-google-map [latitude]="latFirst" [longitude]="lngFirst" [zoom]="zoom" class="content-map">
-              <sebm-google-map-marker [latitude]="lat" [longitude]="lng" [markerDraggable]="true">
-              </sebm-google-map-marker>
-            </sebm-google-map>
+            <agm-map [latitude]="latFirst" [longitude]="lngFirst" [zoom]="zoom" class="content-map">
+              <agm-marker [latitude]="lat" [longitude]="lng" [markerDraggable]="true">
+              </agm-marker>
+            </agm-map>
           </div>
         </div>
       </div>
@@ -37,10 +37,10 @@
       <div class="widget-body">
         <div class="map">
           <div id="location">
-            <sebm-google-map [latitude]="latSecond" [longitude]="lngSecond" [zoom]="zoom" class="content-map">
-              <sebm-google-map-marker [latitude]="lat" [longitude]="lng" [markerDraggable]="true">
-              </sebm-google-map-marker>
-            </sebm-google-map>
+            <agm-map [latitude]="latSecond" [longitude]="lngSecond" [zoom]="zoom" class="content-map">
+              <agm-marker [latitude]="lat" [longitude]="lng" [markerDraggable]="true">
+              </agm-marker>
+            </agm-map>
           </div>
         </div>
       </div>

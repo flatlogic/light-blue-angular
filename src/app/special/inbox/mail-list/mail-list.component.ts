@@ -168,6 +168,7 @@ export class MailList  {
   mails = MAILS;
   $el: any;
   $toggleAll: any;
+  searchText: '';
 
   constructor(el: ElementRef) {
     this.$el = jQuery(el.nativeElement);

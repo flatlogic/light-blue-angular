@@ -17,7 +17,7 @@ import { Gallery } from './gallery/gallery.component';
 import { Fileupload } from './fileupload/fileupload.component';
 import { HideOnUpload } from './fileupload/hideOnUpload.directive';
 
-import { AgmCoreModule } from 'angular2-google-maps/core';
+import { AgmCoreModule } from '@agm/core';
 import { JqvmapModule } from './maps/jvmap/jqvmap.module';
 import { ModalModule } from 'ngx-bootstrap';
 

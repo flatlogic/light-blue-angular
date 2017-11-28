@@ -6,8 +6,8 @@ import { RouterModule } from '@angular/router';
 import { Select2Module } from 'ng2-select2';
 import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
 import { AlertModule, TooltipModule } from 'ngx-bootstrap';
-import { Autosize } from 'angular2-autosize';
-import { TagInputModule } from 'ng2-tag-input';
+import { Autosize } from 'ng-autosize';
+import { TagInputModule } from 'ngx-chips';
 
 declare let global: any;
 
@@ -19,8 +19,8 @@ import 'parsleyjs';
 import 'twitter-bootstrap-wizard/jquery.bootstrap.wizard.js';
 import 'bootstrap-colorpicker';
 import 'jasny-bootstrap/js/inputmask.js';
-import 'ng2-datetime/src/vendor/bootstrap-datepicker/bootstrap-datepicker.min.js';
-import 'ng2-datetime/src/vendor/bootstrap-timepicker/bootstrap-timepicker.min.js';
+import 'ng2-datetime/node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.js';
+import 'bootstrap-timepicker/js/bootstrap-timepicker.js';
 import 'bootstrap-slider/dist/bootstrap-slider.js';
 import 'froala-editor/js/froala_editor.pkgd.min.js';
 

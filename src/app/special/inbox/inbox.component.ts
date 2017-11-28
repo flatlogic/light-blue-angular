@@ -22,8 +22,8 @@ export class Inbox {
     this.initMailboxAppDemo(this.$el);
   }
 
-  handleComposeBtn(event): void {
-    this.repliedMessage = event || undefined;
+  handleComposeBtn(): void {
+    this.repliedMessage = void 0;
     this.changeEmailComponents('mailForm');
   }
 

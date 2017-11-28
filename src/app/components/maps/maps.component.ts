@@ -1,5 +1,5 @@
 import {Component, NgZone, ViewEncapsulation} from '@angular/core';
-import { MapsAPILoader } from 'angular2-google-maps/core';
+import { MapsAPILoader } from '@agm/core';
 import { Select2OptionData } from 'ng2-select2/ng2-select2';
 declare let google: any;
 declare let jQuery: any;
@@ -12,7 +12,9 @@ declare let jQuery: any;
 })
 export class Maps {
   latFirst: number = -37.813179;
+  lat: number = -37.813179;
   lngFirst: number = 144.950259;
+  lng: number = 144.950259;
   latSecond: number = 53.901771;
   lngSecond: number = 27.501222;
   zoom: number = 12;

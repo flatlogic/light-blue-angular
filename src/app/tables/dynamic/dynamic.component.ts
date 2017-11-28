@@ -291,6 +291,7 @@ export class Dynamic {
   maxSize: number = 5;
   numPages: number = 1;
   length: number = 0;
+  searchText: '';
 
   config: any = {
     paging: true,
