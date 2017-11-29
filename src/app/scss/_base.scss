@@ -272,7 +272,6 @@
   }
 
   .progress{
-    background-color: lighten($sidebar-bg-color, 10%);
     margin-top: 0.35rem;
   }
 }
@@ -760,6 +759,7 @@
 }
 
 .message{
+  overflow: hidden;
 
   img{
     float: left;

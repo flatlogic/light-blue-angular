@@ -208,6 +208,10 @@ legend {
 /***************************/
 .input-group-btn {
   flex-direction: row;
+
+  .btn {
+    background-clip: border-box;
+  }
 }
 
 .input-group-addon {

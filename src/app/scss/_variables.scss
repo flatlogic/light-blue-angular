@@ -25,11 +25,11 @@ $enable-grid-classes:       true !default;
 // ------------------------
 
 $lime:                  #8cbf26 !default;
-$blue: #5d8fc2 !default;
-$red: #dd5826 !default;
-$yellow: #f0b518 !default;
-$green: #64bd63 !default;
-$cyan: #5dc4bf !default;
+$blue: #4e85bd !default;
+$red: #db4912 !default;
+$yellow: #f0af03 !default;
+$green: #57b955 !default;
+$cyan: #4ebfbb !default;
 $white: #fff !default;
 $black: #000 !default;
 
@@ -67,8 +67,8 @@ $theme-colors: (
   default: #f8f8f8
 );
 
-$bg-gradient-color-1: #154265;
-$bg-gradient-color-2: #7392c2;
+$bg-gradient-color-1: #003058;
+$bg-gradient-color-2: #6688be;
 $bg-messenger-color: rgba(51,51,51,0.3);
 $bg-messenger-bit-color: rgba(26,26,26,0.3);
 $bg-messenger-bit-hover-color: rgba(13,13,13,0.3);
@@ -126,15 +126,14 @@ $widget-controls-hover-color: rgba($white, 0.6);
 
 $text-transparent: rgba($widget-bg-common, 0.5);
 $bg-addition: rgba($widget-bg-common, 0.3);
-$widget-bg: rgba($widget-bg-common, 0.4);
+$widget-bg: rgba($widget-bg-common, 0.45);
 
 $widget-padding-vertical: 15px;
 $widget-padding-horizontal: 17px;
 $widget-padding: $widget-padding-vertical $widget-padding-horizontal;
 
-$sidebar-bg-color: #242424 !default;
 $sidebar-color:          $white;
-$sidebar-item-active-bg: rgba($black, 0.07);
+$sidebar-item-active-bg: rgba($black, 0.1);
 $sidebar-item-sub-active-bg: darken($sidebar-item-active-bg, 15%);
 
 $page-title-color: $white;
@@ -216,10 +215,10 @@ $border-radius-base:        3px !default;
 
 $btn-font-weight:                $font-weight-base !default;
 
-$btn-default-bg:                 $gray-300 !default;
+$btn-default-bg:                 $gray-700 !default;
 $btn-default-border:             rgba(0, 0, 0, 0.15) !default;
 
-$btn-secondary-bg:                 $gray-700 !default;
+$btn-secondary-bg:                 $gray-300 !default;
 $btn-secondary-border:             rgba(0, 0, 0, 0.15) !default;
 
 $btn-inverse-bg: $white-dark !default;
