@@ -2,15 +2,15 @@ import { NgModule }      from '@angular/core';
 import { CommonModule }  from '@angular/common';
 
 import { RouterModule } from '@angular/router';
-import { AnotherPage } from './another.component.ts';
+import { AnotherComponent } from './another.component';
 
 export const routes = [
-  { path: '', component: AnotherPage, pathMatch: 'full' }
+  { path: '', component: AnotherComponent, pathMatch: 'full' }
 ];
 
 @NgModule({
   imports: [ CommonModule, RouterModule.forChild(routes) ],
-  declarations: [ AnotherPage ]
+  declarations: [ AnotherComponent ]
 })
 export class AnotherModule {
   static routes = routes;

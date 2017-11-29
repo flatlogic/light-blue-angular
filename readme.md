@@ -1,5 +1,6 @@
 # Light Blue (3.7.0 Seed version) with angular 4.0 Final Release support
 
+#### A build of App with JIT compilation is unavailable now, only AOT. Please see this issue: https://github.com/gdi2290/angular-starter/issues/1921
 
 > An angular 4 application featuring [angular 4](https://angular.io)
  ([Router](https://angular.io/docs/js/latest/api/router/), [Forms](https://angular.io/docs/js/latest/api/forms/),

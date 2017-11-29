@@ -15,7 +15,7 @@
       "dom",
       "es6"
     ],
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "paths": {
       "@angular/*": ["node_modules/@angular/*"]
     },
@@ -31,8 +31,10 @@
     ]
   },
   "exclude": [
-    "node_modules",
     "dist"
+  ],
+  "include": [
+    "**/*.ts"
   ],
   "awesomeTypescriptLoaderOptions": {
     "forkChecker": true,

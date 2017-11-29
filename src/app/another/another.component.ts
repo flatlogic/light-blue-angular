@@ -4,5 +4,5 @@ import { Component } from '@angular/core';
   selector: 'another',
   templateUrl: 'another.template.html'
 })
-export class AnotherPage {
+export class AnotherComponent {
 }
