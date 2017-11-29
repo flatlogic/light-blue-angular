@@ -1,4 +1,20 @@
 @media print {
+  * {
+    color: black !important;
+  }
+
+  address {
+    line-height: 1.6;
+  }
+
+  .logo {
+    margin-left: 20px;
+  }
+
+  .content {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 
   hr{
     border-bottom-color: $gray-light;

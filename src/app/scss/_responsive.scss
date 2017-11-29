@@ -11,7 +11,7 @@
   }
 }
 
-@include media-breakpoint-down(xs) {
+@include media-breakpoint-down(sm) {
 //@media (max-width: $screen-xs-max){
 
   .sidebar.nav-collapse:not(.show) {
@@ -74,7 +74,7 @@
 
   .widget-404{
     padding: 0;
-    .body{
+    .widget-body{
       margin-top: 0;
     }
   }
@@ -137,34 +137,6 @@
   .client-details{
     text-align: left;
   }
-
-  .landing{
-    .logo{
-      width: auto;
-
-      small{
-        display: none;
-      }
-    }
-
-    .features{
-      + .features{
-        margin-top: 0;
-      }
-    }
-
-    .feature{
-      margin-bottom: 20px;
-    }
-  }
-
-  .carousel-landing{
-    height: 215px;
-    margin-bottom: -24px;
-    h1{
-      font-size: 20px;
-    }
-  }
 }
 
 @include media-breakpoint-down(xs) {
@@ -224,6 +196,7 @@
 
     h3{
       font-size: $font-size-lg;
+      line-height: calc(#{$spacer} + 2px);
     }
   }
 

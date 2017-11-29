@@ -105,15 +105,7 @@ $i: 0;
 // Style Classes
 // ----------------------------
 
-.text-align-center {
-  text-align: center;
-}
-
-.text-align-right {
-  text-align: right;
-}
-
-.no-margin {
+.m-0 {
   margin: 0;
 }
 
@@ -124,10 +116,6 @@ $margin-horizontal-variants: (lg: 20px, md: 15px, sm: 10px, xs: 5px, 0: 0);
 @include property-variants('.mb', 'margin-bottom', $margin-vertical-variants);
 @include property-variants('.ml', 'margin-left', $margin-horizontal-variants);
 @include property-variants('.mr', 'margin-right', $margin-horizontal-variants);
-
-.no-padding{
-  padding: 0;
-}
 
 $display-variants: (inline: inline, inline-block: inline-block, block: block);
 
@@ -153,6 +141,15 @@ $z-index-variants: (more: 1, less: -1);
 
 .no-border{
   border: none;
+}
+
+.input-no-border{
+  border: none !important;
+  @include transition(background-color ease-in-out .15s);
+
+  &:focus{
+    background-color: #f1f1f1;
+  }
 }
 
 .bt{ border-top: 1px solid $gray-light }
@@ -222,7 +219,7 @@ $z-index-variants: (more: 1, less: -1);
 @include bg-variant('.bg-danger', theme-color('danger'));
 
 @include bg-variant('.bg-body', $body-bg);
-@include bg-variant('.bg-gray', $gray-300);
+@include bg-variant('.bg-gray', $gray-700);
 @include bg-variant('.bg-gray-transparent', rgba($gray-300, .6));
 @include bg-variant('.bg-gray-dark', $gray-800);
 @include bg-variant('.bg-black', $black);
@@ -276,4 +273,19 @@ $z-index-variants: (more: 1, less: -1);
 
 .bbrr{
   border-bottom-right-radius: $border-radius-base;
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-down($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .d#{$infix}-down-none { display: none !important; }
+    .d#{$infix}-down-inline { display: inline !important; }
+    .d#{$infix}-down-inline-block { display: inline-block !important; }
+    .d#{$infix}-down-block { display: block !important; }
+    .d#{$infix}-down-table { display: table !important; }
+    .d#{$infix}-down-table-cell { display: table-cell !important; }
+    .d#{$infix}-down-flex { display: flex !important; }
+    .d#{$infix}-down-inline-flex { display: inline-flex !important; }
+  }
 }

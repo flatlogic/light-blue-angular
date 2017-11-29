@@ -19,6 +19,7 @@ hr {
 }
 
 blockquote{
+  border-width: 5px;
 
   &.blockquote-sm{
     padding: 0 0 0 15px;
@@ -42,7 +43,11 @@ h2 small { font-size: $font-size-base * 1.25; } // ~18px
 h3 small { font-size: $font-size-base; }
 h4 small { font-size: $font-size-base; }
 
-.text-primary        { color: theme-color('primary') }
+small, .small {
+  font-size: 92%;
+}
+
+.text-primary        { color: theme-color('primary'); }
 .text-warning        { color: theme-color('warning'); }
 .text-danger         { color: theme-color('danger'); }
 .text-success        { color: theme-color('success'); }
@@ -63,12 +68,17 @@ pre {
   border-radius: $border-radius-base;
 }
 
+pre {
+  padding: (($spacer) / 2);
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: $pre-bg;
+  border: 1px solid $pre-border-color;
 
-/***************************/
-/*         Grid           */
-/***************************/
-.container {
-  position: static;
+  // Account for some code outputs that place code tags in pre tags
+  code {
+    white-space: pre-wrap;
+  }
 }
 
 /***************************/
@@ -85,11 +95,24 @@ textarea {
 
 legend small{
   color: $text-muted;
-  font-size: $font-size-larger;
+  font-size: 14px;
+}
+
+textarea.form-control {
+  height: auto;
 }
 
 .form-control{
-  @include transition(border linear .2s, box-shadow linear .2s);
+  transition: border linear .2s, box-shadow linear .2s;
+  height: $input-height;
+
+  &.form-control-lg {
+    height: $input-height-lg;
+  }
+
+  &.form-control-sm {
+    height: $input-height-sm;
+  }
 
   &[type=search], &.search{
     padding-left: 26px;
@@ -103,8 +126,17 @@ input[type="checkbox"]:focus {
   outline: none;
 }
 
-.input-group-btn > .btn{
-  z-index: 2;
+.input-group-btn > .btn, .btn-group > .btn {
+  z-index: 3;
+  height: 100%;
+}
+
+.input-group-btn:not(:first-child) > .btn, .input-group-btn:not(:first-child) > .btn-group {
+  z-index: 3;
+}
+
+.input-group-btn > .btn-group {
+  height: 100%;
 }
 
 /*adding .btn-group here because selectpicker's select become .btn-group
@@ -123,8 +155,22 @@ textarea,
 
 .help-block {
   margin-top: 0;
-  font-size: $font-size-sm - 1;
+  font-size: $small-font-size;
   color: $text-muted;
+  display: block;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: $spacer;
+  line-height: inherit;
+  color: $legend-color;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 19.5px;
+  font-weight: $font-weight-normal;
 }
 
 .search-query, .navbar-form .search-query{
@@ -146,7 +192,7 @@ textarea,
 }
 
 .form-group{
-  margin-bottom: $spacer;
+  margin-bottom: $form-group-margin-bottom;   //~18px
 }
 
 .form-horizontal.form-label-left {
@@ -160,8 +206,28 @@ textarea,
 /***************************/
 /*      Input Groups       */
 /***************************/
+.input-group-btn {
+  flex-direction: row;
+
+  .btn {
+    background-clip: border-box;
+  }
+}
+
 .input-group-addon {
   color: $text-muted;
+
+  .input-group-lg & > *{
+    line-height: $line-height-lg;
+  }
+
+  .input-group-sm & > *{
+    line-height: $line-height-sm;
+  }
+}
+
+.form-inline .input-group-addon {
+  display: table-cell;
 }
 
 /***************************/
@@ -180,6 +246,14 @@ textarea,
   }
 }
 
+.table.table-striped,
+.table.table-hover {
+  thead > tr > th,
+  tfoot > tr > td{
+    border-top: none;
+  }
+}
+
 .table thead > tr > th{
   border-bottom: none;
   font-weight: 600;
@@ -187,13 +261,14 @@ textarea,
   border-bottom-width: 1px;
 }
 
-.table td > .checkbox,
-.table th > .checkbox{
+.table td > .abc-checkbox,
+.table th > .abc-checkbox{
   position: relative;
   left: 3px;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
+  width: 5px;
   > label:before,
   > label:after{
     margin-left: 0;
@@ -213,7 +288,7 @@ textarea,
     > tr {
       > th,
       > td {
-        padding: 10px;
+        padding: 0.75rem;
       }
     }
   }
@@ -226,7 +301,7 @@ textarea,
     > tr {
       > th,
       > td {
-        padding: 6px;
+        padding: 0.5rem;
       }
     }
   }
@@ -237,18 +312,9 @@ textarea,
 /*        Dropdowns        */
 /***************************/
 
-.dropdown.open {
-  .dropdown-menu {
-    display: block;
-  }
-}
-
 button.dropdown-toggle{
   &:after {
     content: none;
-  }
-  i {
-    margin-left: 3px;
   }
 }
 
@@ -260,20 +326,33 @@ button.dropdown-toggle{
   font-weight: $font-weight-base;
 }
 
+.dropdown .dropdown-item {
+  width: auto;
+}
+
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top:   4px dashed;
+  border-top:   4px solid \9; // IE8
+  border-right: 4px solid transparent;
+  border-left:  4px solid transparent;
+}
+
 /***************************/
 /*      Buttons            */
 /***************************/
 
-.btn:focus {
+.btn:focus, .btn.focus, .btn.active.focus {
   outline: none;
 }
 
-.btn {
+.btn{
   color: $white;
   text-shadow: none;
-
-  // set to pointer since bs4 dropped this
-  cursor: pointer;
 
   @include box-shadow(none);
 
@@ -298,8 +377,25 @@ button.dropdown-toggle{
   }
 }
 
+.btn-sm {
+  line-height: $spacer*1.5;
+}
+
+.btn-xs {
+  padding: 0 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+
 .btn-secondary {
   @include button-variant($btn-secondary-bg, $btn-secondary-border);
+}
+
+.btn, .btn-inverse, .btn-gray {
+  &:not(.active) {
+    box-shadow: none !important;
+  }
 }
 
 /***************************/
@@ -342,9 +438,7 @@ button.dropdown-toggle{
 // -------------
 
 // Clear any floats
-.tabbable {
-  @include clearfix();
-}
+
 .tab-content {
   overflow: auto; // prevent content from running below tabs
 }
@@ -370,8 +464,8 @@ button.dropdown-toggle{
 // BOTTOM
 // ------
 
-.tabs-below > .nav-tabs > li {
-  margin-top: -1px;
+.tabs-below > .nav-tabs > .nav-item {
+  margin-top: 0;
   margin-bottom: 0;
 }
 .tabs-below > .nav-tabs > li > a {
@@ -473,7 +567,7 @@ button.dropdown-toggle{
   background-color: rgba($widget-bg-common, .25);
 }
 
-.nav-tabs > li > a {
+.nav-tabs > .nav-item > .nav-link {
   border-radius: $border-radius-base $border-radius-base 0 0;
   color: $nav-tabs-link-color;
   padding-top: 8px;
@@ -484,26 +578,55 @@ button.dropdown-toggle{
   }
 }
 
-.nav-tabs > .active{
-  margin-bottom: $nav-tabs-active-item-margin;
+.nav-tabs .nav-item + .nav-item {
+  margin-left: 2px;
+}
+
+.nav-tabs > .nav-item {
+  box-sizing: border-box;
+  margin-bottom: 0;
 }
 
 .nav-tabs{
   border-bottom: $nav-tabs-border;
 }
 
-.nav-tabs > li.active > a,
-.nav-tabs > li.active > a:hover,
-.nav-tabs > li.active > a:focus {
+.nav-tabs > .nav-item > .nav-link.active,
+.nav-tabs > .nav-item > .nav-link.active:hover,
+.nav-tabs > .nav-item > .nav-link.active:focus,
+.nav-tabs > .nav-item > .nav-link:hover,
+.nav-tabs > .nav-item > .nav-link:focus{
   color: $widget-color;
-  background-color: $nav-tabs-tab-content-bg;
+  background: $nav-tabs-tab-content-bg;
   border-color: $nav-tabs-active-item-border;
   border-bottom-color: $nav-tabs-active-item-border-bottom;
+}
+
+.nav-tabs > .nav-item > .nav-link.active {
+  cursor: default;
 }
 
 .nav-tabs .dropdown-menu {
   border-radius: 0 0 $border-radius-base $border-radius-base; // remove the top rounded corners here since there is a hard edge above the menu
 }
+.nav-tabs .nav-item.dropdown > .nav-link, .nav-tabs .nav-item.dropdown.open > .nav-link {
+  border: 1px solid $nav-tabs-border-color;
+  color: $widget-color;
+
+  &:after {
+    display: none;
+  }
+}
+
+.nav-tabs > .nav-item.dropdown.open {
+  background: none;
+  border-color: $nav-tabs-border-color;
+
+  & > .nav-link {
+    background-color: $nav-tabs-tab-content-bg;
+  }
+}
+
 .nav-pills .dropdown-menu {
   border-radius: $border-radius-base; // make rounded corners match the pills
 }
@@ -511,7 +634,7 @@ button.dropdown-toggle{
   border-top: $nav-tabs-border;
 }
 
-.tabs-below > .nav-tabs > li > a {
+.tabs-below > .nav-tabs > .nav-item > .nav-link {
   border-radius: 0 0 $border-radius-base $border-radius-base;
 }
 
@@ -520,7 +643,7 @@ button.dropdown-toggle{
   border-right: $nav-tabs-border;
 }
 
-.tabs-left > .nav-tabs > li > a {
+.tabs-left > .nav-tabs > .nav-item > .nav-link {
   border-radius: $border-radius-base 0 0 $border-radius-base;
 }
 
@@ -528,15 +651,11 @@ button.dropdown-toggle{
   margin-left: 0;
   border-left: $nav-tabs-border;
 }
-.tabs-right > .nav-tabs > li > a {
+.tabs-right > .nav-tabs > .nav-item > .nav-link {
   border-radius: 0 $border-radius-base $border-radius-base 0;
 }
 
-.tabs-below > .nav-tabs > li {
-  margin-top: $nav-tabs-active-item-margin;
-}
-
-.tabs-below > .nav-tabs > li > a {
+.tabs-below > .nav-tabs > .nan-item > .nav-link {
   &:hover,
   &:focus {
     border-top-color: transparent;
@@ -545,36 +664,49 @@ button.dropdown-toggle{
 .tabs-below > .nav-tabs > .active > a,
 .tabs-below > .nav-tabs > .active > a:hover,
 .tabs-below > .nav-tabs > .active > a:focus {
-//  border-color: transparent;
+  //  border-color: transparent;
 }
 
-.tabs-left > .nav-tabs > li > a {
-  margin-right: 0;
+.tabs-left > .nav-tabs > .nav-item {
+  margin-bottom: 0;
+  margin-left: 0;
 }
-.tabs-left > .nav-tabs > li > a:hover,
+
+.tabs-left > .nav-tabs > .nav-item > .nav-link {
+  margin-right: 0;
+  margin-bottom: 3px;
+}
+.tabs-left > .nav-tabs > .nav-item > .nav-link:hover,
 .tabs-left > .nav-tabs > li > a:focus {
   border-color: transparent;
 }
-.tabs-left > .nav-tabs .active > a,
-.tabs-left > .nav-tabs .active > a:hover,
-.tabs-left > .nav-tabs .active > a:focus {
+.tabs-left > .nav-tabs .active > .nav-link,
+.tabs-left > .nav-tabs .active > .nav-link:hover,
+.tabs-left > .nav-tabs .active > .nav-link:focus {
   border-color: $nav-tabs-active-item-border;
   border-right-color: $nav-tabs-active-item-border-bottom;
 }
 
 .tabs-left > .nav-tabs .active{
-  margin-right: $nav-tabs-active-item-margin;
+  margin-right: 0;
 }
 
 .tabs-right > .nav-tabs .active{
-  margin-left: $nav-tabs-active-item-margin;
-}
-
-.tabs-right > .nav-tabs > li > a {
   margin-left: 0;
 }
-.tabs-right > .nav-tabs > li > a:hover,
-.tabs-right > .nav-tabs > li > a:focus {
+
+.tabs-right > .nav-tabs > .nav-item > .nav-link {
+  margin-left: 0;
+  margin-bottom: 3px;
+}
+
+.tabs-right > .nav-tabs > .nav-item {
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+.tabs-right > .nav-tabs > .nav-item > .nav-link:hover,
+.tabs-right > .nav-tabs > .nav-item > .nav-link:focus {
   border-color: transparent;
 }
 .tabs-right > .nav-tabs .active > a,
@@ -591,10 +723,17 @@ button.dropdown-toggle{
   background: $bg-addition;
 }
 
+.nav-pills .nav-link {
+  padding: 0.8em 1.1em;
+}
+
 // Active state
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
-.nav-pills > li.active > a:focus {
+.nav-pills > li.active > a:focus,
+.nav-pills > li > a.nav-link.active,
+.nav-pills > li > a.nav-link.active:hover,
+.nav-pills > li > a.nav-link.active:focus{
   color: $widget-header-color;
   background: none;
 }
@@ -634,8 +773,8 @@ button.dropdown-toggle{
   }
 
   @include media-breakpoint-up(xs) {
-  //@media (max-width: $screen-xs-max) {
-  // Dropdowns get custom display when collapsed
+    //@media (max-width: $screen-xs-max) {
+    // Dropdowns get custom display when collapsed
     .open .dropdown-menu {
       position: absolute;
       float: left;
@@ -682,6 +821,20 @@ button.dropdown-toggle{
       margin: 0 2px;
     }
   }
+
+  .page-item.disabled .page-link,
+  .page-item.disabled .page-link:focus,
+  .page-item.disabled .page-link:hover {
+    color: $gray-light;
+  }
+
+  .page-link {
+    border: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 /***************************/
@@ -693,7 +846,7 @@ button.dropdown-toggle{
   border-radius: $border-radius-base;
 
   h1,h2,h3,h4,h5,h6{
-    color: $gray-800 ;
+    color: $gray-800;
   }
 }
 
@@ -707,6 +860,10 @@ button.dropdown-toggle{
 
 .tooltip {
   font-size: $font-size-sm;
+
+  &.in {
+    opacity: 1;
+  }
 }
 
 .tooltip-inner {
@@ -719,7 +876,10 @@ button.dropdown-toggle{
 /***************************/
 
 .popover {
-  color: $text-color;
+  &, .popover-body {
+    color: $text-color;
+  }
+
   border-radius: $border-radius-base;
   h1,h2,h3,h4,h5,h6{
     color: $text-color;
@@ -750,6 +910,27 @@ button.dropdown-toggle{
 }
 
 /***************************/
+/*       Cards        */
+/***************************/
+
+.card {
+  background-color: $widget-bg;
+  color: $widget-color;
+  border: none;
+  //padding: $card-padding;
+  padding: 2px;
+}
+
+.card-title {
+  margin-top: $card-spacer-y;
+}
+
+.card-img-top {
+  width: 100%;
+}
+
+
+/***************************/
 /*    Labels and badges    */
 /***************************/
 
@@ -760,15 +941,16 @@ button.dropdown-toggle{
   line-height: 14px; // ensure proper line-height if floated
   text-shadow: none;
   font-weight: $font-weight-semi-bold;
-  font-size: $font-size-sm - 1;
+  font-size: 11px;
 }
 
-.badge{
-  padding: 2px 9px;
+.badge-pill {
+  padding: 2px 8px;
 }
 
 .badge-default {
   @include badge-variant($gray-400);
+  color: $text-color;
 }
 
 .badge-primary {
@@ -815,12 +997,6 @@ button.dropdown-toggle{
   @include badge-variant($gray-400);
 }
 
-.help-block{
-  margin-top: 5px;
-  font-size: $small-font-size;
-  color: $text-muted;
-  display: block;
-}
 
 /***************************/
 /*        Jumbotron        */
@@ -833,6 +1009,27 @@ button.dropdown-toggle{
 
   h1, .h1{
     line-height: 1;
+  }
+
+  padding-left: 60px;
+  padding-right: 60px;
+
+  @include media-breakpoint-up (md) {
+
+    .container &,
+    .container-fluid & {
+      padding-left:  ($jumbotron-padding * 2);
+      padding-right: ($jumbotron-padding * 2);
+    }
+
+    h1,
+    .h1 {
+      font-size: 59px;
+    }
+  }
+
+  p {
+    font-size: 20px;
   }
 }
 
@@ -869,7 +1066,7 @@ button.dropdown-toggle{
   .widget > &{
     margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);
   }
-  .widget .body > &{
+  .widget .widget-body > &{
     margin: 0 (-$widget-padding-horizontal) (-$widget-padding-vertical);
 
     .list-group-item:first-child{
@@ -918,92 +1115,38 @@ button.dropdown-toggle{
 /*         Progress        */
 /***************************/
 
-.progress{
-  background: rgba(black, .15);
-  overflow: hidden;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,.1)
-}
-
-.progress-sm{
-  height: 10px;
-  margin-bottom: $spacer/2;
-}
-
-.progress-xs{
-  height: 5px;
-  margin-bottom: $spacer/2;
-}
-
-.progress-bar {
+.progress {
   border-radius: 0.25rem;
+  height: auto;
+  background: rgba(black, .15);
+  margin-bottom: $form-group-margin-bottom;
+  box-shadow: $progress-box-shadow;
+
+  .progress-bar {
+    font-size: 1rem;
+    transition: width 0.4s ease-in-out;
+    box-shadow: $progress-value-box-shadow;
+    height: $progress-height;
+
+    &.progress-sm {
+      height: $progress-height-sm;
+    }
+
+    &.progress-xs {
+      height: $progress-height-xs;
+    }
+  }
+  @include progress-variant(theme-color('primary'));
 }
 
-/***************************/
-/*          Panels         */
-/***************************/
+@include bg-variant('.bg-success', theme-color('success'));
+@include bg-variant('.bg-info', theme-color('info'));
+@include bg-variant('.bg-warning', theme-color('warning'));
+@include bg-variant('.bg-danger', theme-color('danger'));
+@include bg-variant('.bg-inverse', $widget-color);
 
-.panel-heading {
-  padding: 0;
-
-  > .accordion-toggle{
-    display: block;
-    padding: 8px 15px;
-  }
-}
-
-.panel-group {
-  .panel-heading {
-    + .panel-collapse .panel-body {
-      border-top: 1px solid $bg-addition;
-    }
-  }
-  .panel-footer {
-    + .panel-collapse .panel-body {
-      border-bottom: 1px solid $bg-addition;
-    }
-  }
-}
-
-.panel{
-  border: none;
-  background-color: $widget-bg;
-  @include box-shadow(none);
-
-  .content &{
-    color: $widget-color;
-  }
-
-  .panel-heading a{
-    color: $widget-header-color;
-    font-weight: $font-weight-base;
-
-    &:focus{
-      text-decoration: none;
-    }
-    &.collapsed{
-      color: $text-muted;
-    }
-
-    &[data-toggle="collapse"]{
-      &:before{
-        display: inline-block;
-        font-family: FontAwesome;
-        content: "\f107";
-        float: right;
-        margin-right: -8px;
-        position: relative;
-        top: 1px;
-        @include transition(transform .3s ease-in-out)
-      }
-      &.collapsed:before{
-        transform: rotate(90deg);
-      }
-    }
-  }
-}
-
-.panel-body{
-  border-top-color: $bg-addition;
+.bg-inverse {
+  color: $widget-bg-common;
 }
 
 /***************************/
@@ -1047,6 +1190,25 @@ button.dropdown-toggle{
 /*          Wells          */
 /***************************/
 
-.well{
-  @include box-shadow(none);
+.well {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: $well-bg;
+  border: 1px solid $well-border;
+  border-radius: $border-radius-base;
+  blockquote {
+    border-color: $gray-light;
+    border-color: rgba(0,0,0,.15);
+  }
+}
+
+// Sizes
+.well-lg {
+  padding: 24px;
+  border-radius: $border-radius-lg;
+}
+.well-sm {
+  padding: 9px;
+  border-radius: $border-radius-sm;
 }
