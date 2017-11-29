@@ -960,7 +960,7 @@
 }
 
 .btn-inverse {
-  @include button-variant($btn-inverse-color, $btn-inverse-bg, rgba(0, 0, 0, .2));
+  @include button-variant($btn-inverse-bg, rgba(0, 0, 0, .2));
 }
 
 /* since 1.5 */

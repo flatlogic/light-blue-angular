@@ -734,16 +734,18 @@ button.dropdown-toggle{
 /*       Thumbnails        */
 /***************************/
 
-.thumbnail {
-  border: none;
-  @include box-shadow(none);
+.img-thumbnail {
+  border: $thumbnail-border-width solid $thumbnail-border-color;
+  background-color: $thumbnail-bg;
+  box-shadow: none;
+  padding: $thumbnail-padding;
 
   .widget &{
-    border: $thumbnail-border;
+    border: $thumbnail-border-width solid $thumbnail-border-color;
   }
 }
 
-.thumbnail .caption {
+.img-thumbnail .caption {
   color: $widget-color;
 }
 
