@@ -31,8 +31,12 @@
     ]
   },
   "exclude": [
-    "node_modules",
     "dist"
+  ],
+  "include": [
+    "node_modules/ng-autosize/**/*.ts",
+    "node_modules/ng2-datetime/ng2-datetime.ts",
+    "**/*.ts"
   ],
   "awesomeTypescriptLoaderOptions": {
     "forkChecker": true,

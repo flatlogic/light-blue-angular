@@ -27,10 +27,14 @@
     ]
   },
   "exclude": [
-    "node_modules",
     "dist",
     "src/**/*.spec.ts",
     "src/**/*.e2e.ts"
+  ],
+  "include": [
+    "node_modules/ng-autosize/**/*.ts",
+    "node_modules/ng2-datetime/ng2-datetime.ts",
+    "**/*.ts"
   ],
   "angularCompilerOptions": {
     "skipMetadataEmit": true
