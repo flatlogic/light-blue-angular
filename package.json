@@ -7,7 +7,7 @@
     "build:aot:prod": "npm run clean:dist && npm run clean:aot && cross-env BUILD_AOT=1 npm run webpack -- --config config/webpack.prod.js  --progress --profile --bail",
     "build:aot": "npm run build:aot:prod",
     "build:dev": "npm run clean:dist && npm run webpack -- --config config/webpack.dev.js --progress --profile",
-    "build:prod": "npm run build:aot:prod",
+    "build:prod": "npm run clean:dist && npm run webpack -- --config config/webpack.prod.js  --progress --profile --bail",
     "build": "npm run build:dev",
     "clean:dll": "npm run rimraf -- dll",
     "clean:aot": "npm run rimraf -- compiled",
