@@ -57,19 +57,19 @@ export class Dashboard {
   tableSparklineValues: any = [[], [], [], [], []];
   tableSparklineOptions: any = [
     {
-      lineColor: '#57b955',
+      lineColor: '#3ecd74',
       fillColor: 'rgba(86, 188, 118, 0.1)'
     },
     {
-      lineColor: '#f0af03',
+      lineColor: '#f2c34d',
       fillColor: 'rgba(234, 200, 94, 0.1)'
     },
     {
-      lineColor: '#4e85bd',
+      lineColor: '#4e91ce',
       fillColor: 'rgba(106, 141, 167, 0.1)'
     },
     {
-      lineColor: '#db4912',
+      lineColor: '#f25118',
       fillColor: 'rgba(229, 96, 59, 0.1)'
     },
     {
@@ -175,7 +175,7 @@ export class Dashboard {
     this.nvd31Chart = nv.models.lineChart()
       .useInteractiveGuideline(true)
       .margin({left: 28, bottom: 30, right: 0})
-      .color(['#3175ba', '#26a950']);
+      .color(['#4380bf', '#38b05e']);
 
     this.nvd31Chart.xAxis
       .showMaxMin(false)
