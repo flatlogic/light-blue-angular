@@ -35,6 +35,7 @@ function getUglifyOptions (supportES2015) {
     warnings: false,    // TODO verbose based on option?
     ie8: false,
     mangle: {
+      // Warning: This config is using for stable Rickshaw lib working
       reserved: ['$super']
     },
     compress: uglifyCompressOptions,
