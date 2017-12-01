@@ -11,7 +11,8 @@ const routes: Routes = [
     { path: 'components', loadChildren: '../components/components.module#ComponentsModule' },
     { path: 'tables', loadChildren: '../tables/tables.module#TablesModule' },
     { path: 'widgets', loadChildren: '../widgets/widgets.module#WidgetsModule' },
-    { path: 'special', loadChildren: '../special/special.module#SpecialModule' }
+    { path: 'special', loadChildren: '../special/special.module#SpecialModule' },
+    { path: 'package', loadChildren: '../package/package.module#PackageModule' },
   ]}
 ];
 

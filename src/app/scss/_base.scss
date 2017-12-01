@@ -436,7 +436,7 @@
       }
     }
 
-    h4{
+    h4 {
       font-size: $font-size-larger;
     }
   }
@@ -1092,7 +1092,8 @@
 /**          TABS                 **/
 /**********************************/
 
-.widget-tabs{
+.widget-tabs {
+  display: block;
   background: none;
   @include box-shadow(none);
   padding: 0;
