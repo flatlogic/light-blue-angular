@@ -29,7 +29,6 @@
 }
 
 html{
-  min-height: 100%;
   font-size: $font-size-initial;
 }
 
@@ -41,6 +40,11 @@ body{
           $bg-gradient-color-1 20%, $bg-gradient-color-2
   );
   background-attachment: fixed, fixed;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 h1,h2,h3,h4,h5,h6{
