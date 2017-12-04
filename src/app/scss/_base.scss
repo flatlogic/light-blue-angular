@@ -354,6 +354,7 @@
 
 /*content except of header*/
 .content{
+  position: absolute;
   padding: 25px 2.5641%;
   @include transition(margin-top .35s ease, opacity .2s);
   max-width: none;
@@ -366,6 +367,12 @@
 
   @media (min-width: 767px) {
     margin-top: 0 !important;
+  }
+
+  .content-footer {
+    position: absolute;
+    bottom: 10px;
+    color: $text-muted;
   }
 }
 
