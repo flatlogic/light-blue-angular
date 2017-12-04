@@ -354,7 +354,7 @@
 
 /*content except of header*/
 .content{
-  position: absolute;
+  position: relative;
   padding: 25px 2.5641%;
   @include transition(margin-top .35s ease, opacity .2s);
   max-width: none;
@@ -371,7 +371,7 @@
 
   .content-footer {
     position: absolute;
-    bottom: 10px;
+    bottom: -85px;
     color: $text-muted;
   }
 }
