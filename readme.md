@@ -1,8 +1,8 @@
-# Light Blue (3.7.0 Seed version) with angular 4.0 Final Release support
+# Light Blue (4.0.1 Seed version) with angular 5.0 Final Release support
 
 #### A build of App with JIT compilation is unavailable now, only AOT. Please see this issue: https://github.com/gdi2290/angular-starter/issues/1921
 
-> An angular 4 application featuring [angular 4](https://angular.io)
+> An angular 5 application featuring [angular 5](https://angular.io)
  ([Router](https://angular.io/docs/js/latest/api/router/), [Forms](https://angular.io/docs/js/latest/api/forms/),
 [Http](https://angular.io/docs/js/latest/api/http/),
  [TypeScript](http://www.typescriptlang.org/),
@@ -13,15 +13,15 @@
   
 > This is a seed version of Light Blue App with Angular Final Release support.
 
-This project serves as an Angular 4 starter for anyone looking to get up and running with Angular 4 and TypeScript fast.
+This project serves as an Angular 5 starter for anyone looking to get up and running with Angular 5 and TypeScript fast.
  Using a [Webpack 2](http://webpack.github.io/) for building our files and assisting with boilerplate. 
-* Best practices in file and application organization for Angular 4.
+* Best practices in file and application organization for Angular 5.
 * Unique to admin templates stylish and unobtrusive design
 * Ready to go build system using Webpack for working with TypeScript.
-* angular 4 examples that are ready to go when experimenting with angular 4.
+* angular 5 examples that are ready to go when experimenting with angular 5.
 * Ahead of Time (AoT) compile for rapid page loads of your production builds.
 * Tree shaking to automatically remove unused code from your production bundle.
-* A great angular 4 template for anyone who wants to start their project.
+* A great angular 5 template for anyone who wants to start their project.
 * Type manager with @types
 * Hot Module Replacement with Webpack and [@angularclass/hmr](https://github.com/angularclass/angular2-hmr) and [@angularclass/hmr-loader](https://github.com/angularclass/angular2-hmr-loader)
 
@@ -205,7 +205,7 @@ import * as _ from 'lodash';
 ```
 
 # Support, Questions, or Feedback
-> Contact us anytime for anything about this Light Blue or Angular 4 consulting.
+> Contact us anytime for anything about Light Blue Template or Angular 5 consulting.
 
 * [Twitter: @Flatlogic](https://twitter.com/Flatlogic)
 * [Email: support@flatlogic.com](mailto:support@flatlogic.com)
@@ -213,4 +213,4 @@ import * as _ from 'lodash';
 # License
 [Wrapbootstrap licence](http://support.wrapbootstrap.com/knowledge_base/topics/usage-licenses).
 
-Light Blue 3.7.0 is based on [angular2-webpack-starter](https://github.com/AngularClass/angular2-webpack-starter).
+Light Blue 4.0.1 is based on [angular2-webpack-starter](https://github.com/AngularClass/angular2-webpack-starter).
