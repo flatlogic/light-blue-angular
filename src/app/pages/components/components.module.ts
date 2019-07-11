@@ -1,7 +1,4 @@
-import 'fullcalendar/dist/fullcalendar.js';
-import 'magnific-popup/dist/jquery.magnific-popup.min.js';
 import 'shufflejs/dist/shuffle.js';
-import 'moment/moment.js';
 
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';

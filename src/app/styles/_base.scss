@@ -467,6 +467,11 @@
     a{
       text-decoration: none;
     }
+
+    .btn {
+      font-size: 12px;
+      padding: 1px 5px;
+    }
   }
 
   .widget-table-overflow{
@@ -701,6 +706,7 @@
   margin: 11px 0 $spacer;
 
   small{
+    margin-left: $spacer / 2;
     color: rgba($page-title-color, .7);
   }
 }

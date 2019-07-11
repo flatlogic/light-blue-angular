@@ -108,6 +108,10 @@
   @include media-breakpoint-up(md) {
     margin: 0;
   }
+
+  .badge {
+    margin-left: $spacer / 3;
+  }
 }
 
 .pagination-search-result{

@@ -1,7 +1,5 @@
 import { NgModule }      from '@angular/core';
 
-import 'morris.js/morris.js';
-
 import { MorrisChart } from './morris.directive';
 
 @NgModule({

@@ -15,8 +15,6 @@ import { Charts } from './charts/charts.component';
 import { FlotChartAnimator } from './charts/flot-chart-animator/flot-chart-animator.directive';
 import { Realtime } from './realtime/realtime.component';
 
-import 'easy-pie-chart/dist/jquery.easypiechart.js';
-
 export const routes = [
   {path: '', redirectTo: 'stats', pathMatch: 'full'},
   {path: 'stats', component: Stats},

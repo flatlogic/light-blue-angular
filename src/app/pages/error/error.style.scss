@@ -6,6 +6,9 @@
 
 .error-page{
   display: block;
+  .form-control {
+    width: 100%;
+  }
 }
 
 .error-container{

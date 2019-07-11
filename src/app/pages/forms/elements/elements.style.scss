@@ -252,3 +252,16 @@ $slider-handle-size: 26px;
 .fr-box.fr-basic.fr-top .fr-wrapper {
   box-shadow: none;
 }
+
+.fr-toolbar .fr-command.fr-btn svg.fr-svg {
+  height: 22px;
+  width: 22px;
+}
+
+.fr-toolbar.fr-top {
+  border-radius: $border-radius $border-radius 0 0;
+}
+
+.fr-basic .second-toolbar {
+  border-radius: 0 0 $border-radius $border-radius;
+}

@@ -1,5 +1,3 @@
-import 'moment/moment.js';
-
 import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 
 declare let jQuery: any;

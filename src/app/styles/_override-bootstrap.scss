@@ -105,6 +105,7 @@ textarea.form-control {
 .form-control{
   transition: border linear .2s, box-shadow linear .2s;
   height: $input-height;
+  width: inherit;
 
   &.form-control-lg {
     height: $input-height-lg;
