@@ -16,8 +16,8 @@ import {
 })
 export class Layout {
   sidebarState: boolean = true;
-  @ViewChild('spinnerElement') spinnerElement: ElementRef;
-  @ViewChild('routerComponent') routerComponent: ElementRef;
+  @ViewChild('spinnerElement', {static: true}) spinnerElement: ElementRef;
+  @ViewChild('routerComponent', {static: true}) routerComponent: ElementRef;
 
   constructor(private el: ElementRef, private renderer: Renderer, private router: Router, private ngZone: NgZone) {
     router.events.subscribe((event: RouterEvent) => {

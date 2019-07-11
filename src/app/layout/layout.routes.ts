@@ -3,16 +3,16 @@ import { Layout } from './layout.component';
 // noinspection TypeScriptValidateTypes
 const routes: Routes = [
   { path: '', component: Layout, children: [
-    { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-    { path: 'dashboard', loadChildren: '../dashboard/dashboard.module#DashboardModule' },
-    { path: 'form', loadChildren: '../form/form.module#FormModule' },
-    { path: 'statistics', loadChildren: '../statistics/statistics.module#StatisticsModule' },
-    { path: 'ui', loadChildren: '../ui/ui.module#UiModule' },
-    { path: 'components', loadChildren: '../components/components.module#ComponentsModule' },
-    { path: 'tables', loadChildren: '../tables/tables.module#TablesModule' },
-    { path: 'widgets', loadChildren: '../widgets/widgets.module#WidgetsModule' },
-    { path: 'special', loadChildren: '../special/special.module#SpecialModule' },
-    { path: 'package', loadChildren: '../package/package.module#PackageModule' },
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+      { path: 'dashboard', loadChildren: '../pages/dashboard/dashboard.module#DashboardModule' },
+      { path: 'forms', loadChildren: '../pages/forms/forms.module#FormModule' },
+      { path: 'statistics', loadChildren: '../pages/statistics/statistics.module#StatisticsModule' },
+      { path: 'ui', loadChildren: '../pages/ui/ui.module#UiModule' },
+      { path: 'components', loadChildren: '../pages/components/components.module#ComponentsModule' },
+      { path: 'tables', loadChildren: '../pages/tables/tables.module#TablesModule' },
+      { path: 'widgets', loadChildren: '../pages/widgets/widgets.module#WidgetsModule' },
+      { path: 'special', loadChildren: '../pages/special/special.module#SpecialModule' },
+      { path: 'package', loadChildren: '../pages/package/package.module#PackageModule' },
   ]}
 ];
 

@@ -1,0 +1,35 @@
+@import "../../../styles/variables";
+@import "../../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../../node_modules/bootstrap/scss/_variables";
+
+div[live] {
+  .widget .widget-body > .list-group {
+    margin: 0 -17px -12px;
+  }
+
+  .jumbotron .container {
+    padding: 0;
+  }
+
+  .dropdown-toggle:after {
+    display: none;
+  }
+
+  a.list-group-item,
+  button.list-group-item {
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: $white-dark;
+      background-color: $list-group-hover-bg;
+    }
+  }
+}
+
+#shares-widget {
+  .fa-circle {
+    margin-left: auto;
+  }
+}
+
+

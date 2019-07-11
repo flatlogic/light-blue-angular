@@ -1,0 +1,391 @@
+// Light Blue variables
+// -------------------------
+// -------------------------
+
+$libs-compiled-folder: '../../../node_modules' !default;
+
+$glyphicons-halflings-include-bonus: false !default;
+$glyphicons-halflings-class-prefix: glyphicon !default;
+$glyphicons-halflings-font-base-size: 14px !default;
+$glyphicons-halflings-font-path: 'fonts/glyphicons' !default;
+
+$fa-font-path: "~font-awesome/fonts";
+
+$colorpicker-img-path: "~bootstrap-colorpicker/dist/img/bootstrap-colorpicker" !default;
+
+// Bootstrap options
+
+$enable-shadows: true !default;
+
+// Colors
+// ------------------------
+
+$lime:                  #8cbf26 !default;
+$blue: #4e85bd !default;
+$red: #db4912 !default;
+$yellow: #f0af03 !default;
+$green: #57b955 !default;
+$cyan: #4ebfbb !default;
+$white: #fff !default;
+$black: #000 !default;
+
+$white-dark:            #f8f8f8 !default;
+$shadow-color:            rgba(#676767, 0.4) !default;
+
+$gray-100: #f5f5f5 !default;
+$gray-200: #eeeeee !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #666 !default;
+$gray-800: #343434 !default;
+$gray-900: #242424 !default;
+$black: #000 !default;
+$gray-light: #ddd !default;
+
+$theme-colors: (
+  'primary': $blue,
+  'secondary': $gray-600,
+  'success': $green,
+  'primary-light': #dee4ee,
+  'success-light': #ecfaec,
+  'info-light': #f2fafa,
+  'warning-light': #fdf7e6,
+  'danger-light': #fff2ef,
+  'info': $cyan,
+  'warning': $yellow,
+  'danger': $red,
+  'light': $gray-200,
+  'dark': $gray-800,
+  'inverse': $white-dark,
+  'gray': $gray-300,
+  'default': #f8f8f8
+);
+
+$bg-gradient-color-1: #414e60;
+$bg-gradient-color-2: #94a3b1;
+$bg-messenger-color: rgba(51,51,51,0.3);
+$bg-messenger-bit-color: rgba(26,26,26,0.3);
+$bg-messenger-bit-hover-color: rgba(13,13,13,0.3);
+
+// Typography
+// -------------------------
+$text-color: $white-dark !default;
+$text-bold: lighten($text-color, 3%);
+$text-muted: darken($text-color, 15%) !default;
+
+$font-family-sans-serif:  'Open Sans', sans-serif !default;
+
+$font-size-initial:       13px; // reset default browser value from 16px to 13px
+$font-size-base:          1rem !default;
+$font-size-lg:            1.25rem !default;
+$font-size-sm:            0.875rem !default;
+$font-size-larger:        1.1rem;
+$font-size-mini:          0.9rem;
+$font-size-index:         0.7rem;
+
+$small-font-size:         85%;
+
+$font-weight-bold: 700 !default;
+$font-weight-semi-bold: 600 !default;
+$font-weight-normal: 400 !default;
+$font-weight-thin: 300 !default;
+$font-weight-base: $font-weight-thin !default;
+
+$line-height-base:        1.428571429 !default; // 20/14
+
+// Links
+// -------------------------
+
+$link-color:            saturate(lighten($blue, 25%), 50%);
+
+// Layout
+// -------------------------
+
+$wrap-margin: 185px;
+$sidebar-mt: 80px;
+
+
+// Scaffolding
+// -------------------------
+
+$basic-border-color: transparent;
+
+$widget-bg-common:        #333 !default; //#ddd
+$widget-mb:        30px;
+$widget-color:     $text-color;
+$widget-header-color: lighten($widget-color, 5%);
+$widget-header-smalls-color: $text-muted;
+$widget-controls-color: rgba($white, 0.45);
+$widget-controls-hover-color: rgba($white, 0.6);
+
+$text-transparent: rgba($widget-bg-common, 0.5);
+$bg-addition: rgba($widget-bg-common, 0.3);
+$widget-bg: rgba($widget-bg-common, 0.425);
+
+$widget-padding-vertical: 15px;
+$widget-padding-horizontal: 17px;
+$widget-padding: $widget-padding-vertical $widget-padding-horizontal;
+
+$sidebar-color:          $white;
+$sidebar-item-active-bg: rgba($black, 0.1);
+$sidebar-item-sub-active-bg: darken($sidebar-item-active-bg, 15%);
+
+$page-title-color: $white;
+
+$header-link-color: $text-transparent;
+$header-notification-count: rgba($widget-bg-common, 0.55);
+
+$header-search-query-bg-image: url(assets/img/search-white.png);
+$header-search-query-placeholder-color: rgba(#eee, .76);
+
+$header-dropdown-primary-color:          $widget-header-color;
+$header-dropdown-secondary-color:        #ddd;
+$header-dropdown-bg:                     rgba($widget-bg-common, 0.85);
+$header-dropdown-shadow:                 none;
+$header-dropdown-item-hover:             $blue;
+
+$input-transparent-color: $text-color;
+$input-transparent-placeholder-color: rgba(#eee, 0.76);
+$input-transparent-focused-shadow: inset 0 1px 1px rgba(0,0,0,.2);
+
+// Widgets
+// -------------------------
+
+$feed-item-bg: $widget-bg;
+$feed-item-color: $white;
+$feed-item-line-color: transparent;
+
+$nav-tabs-link-color: $widget-color;
+$nav-tabs-active-item-margin: 0;
+$nav-tabs-active-item-border: $basic-border-color;
+$nav-tabs-active-item-border-bottom: $basic-border-color;
+$nav-tabs-border: none;
+$nav-tabs-border-color: transparent;
+$nav-tabs-tab-content-bg: $bg-addition;
+
+$tabs-widget-active-item-hover-bg: rgba(darken($widget-bg-common, 10%), 0.4);
+
+$location-selector-bg: $bg-addition;
+$location-selector-border-color: #eee;
+$messenger-spinner-bg: $white;
+
+$calendar-border: rgba($white, 0.33);
+
+$dropzone-color:         #eee;
+
+/////////////////////////////////////////////////
+//           Override bootstrap vars           //
+/////////////////////////////////////////////////
+
+$bootstrap-sass-asset-helper: false;
+
+$icon-font-path: "fonts/bootstrap/" !default;
+
+// Components
+// -------------------------
+
+$padding-base-vertical:          0.3rem !default;
+$padding-base-horizontal:        12px !default;
+
+$padding-small-vertical:         0.25rem !default;
+$padding-small-horizontal:       10px !default;
+
+$input-padding-large-vertical:             0.75rem !default; //~10px
+$input-padding-large-horizontal:             16px !default;
+
+$line-height-large:              1.33 !default;
+$line-height-small:              1.5 !default;
+
+$border-radius-base:        3px !default;
+
+// Buttons
+// -------------------------
+
+$btn-font-weight:                $font-weight-base !default;
+
+$btn-default-bg:                 $gray-700 !default;
+$btn-default-border:             rgba(0, 0, 0, 0.15) !default;
+
+$btn-secondary-bg:                 $gray-300 !default;
+$btn-secondary-border:             rgba(0, 0, 0, 0.15) !default;
+
+$btn-inverse-bg: $white-dark !default;
+
+// Forms
+// -------------------------
+
+$input-color:                    $gray-800;
+$input-border:                   #ccc !default;
+$input-border-focus:             #66afe9 !default;
+
+$input-group-addon-bg:           $bg-addition;
+$input-group-addon-border-color: transparent;
+
+$cursor-disabled:                not-allowed !default;
+
+
+// Section
+// -------------------------
+
+$section-margin-bottom: 1.39rem; //~18px
+$section-padding-top: 0.77rem; //~10px
+
+// recalculate input heights
+$input-height-base:              calc(#{1rem} + (#{$padding-base-vertical} * 2) + 2) !default;
+$input-height-small:             (floor($font-size-sm * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
+
+
+$legend-color:                   $white !default;
+
+// Dropdowns
+// -------------------------
+
+$dropdown-bg:                    $white !default;
+$dropdown-border:                rgba(0, 0, 0, 0.2) !default;
+
+$dropdown-link-active-color:     #fff !default;
+$dropdown-link-active-bg:        $blue !default;
+
+$dropdown-link-color:            $gray-900 !default;
+$dropdown-link-hover-color:      $white !default;
+$dropdown-link-hover-bg:         $dropdown-link-active-bg !default;
+
+// Form states and alerts
+// -------------------------
+
+$state-success-text:             $white !default;
+$state-success-border:           #d6e9c6 !default;
+$state-success-bg:               rgba($state-success-border, 0.28) !default;
+
+$state-info-text:                $white !default;
+$state-info-border:              #4ab0ce !default;
+$state-info-bg:                  rgba($state-info-border, 0.29) !default;
+
+$state-warning-text:             $white !default;
+$state-warning-border:           #e5be56 !default;
+$state-warning-bg:               rgba($state-warning-border, 0.28) !default;
+
+$state-danger-text:              $white !default;
+$state-danger-border:            rgba(#f26349, 0.7) !default;
+$state-danger-bg:                rgba($state-danger-border, 0.29) !default;
+
+//== Tables
+//
+$table-bg-accent:               $bg-addition !default;
+$table-border-color:            rgba($widget-bg-common, 0.35) !default; // table and cell border
+$table-bg-hover:                darken($bg-addition, 5%);
+
+// List group
+// -------------------------
+$list-group-bg: $widget-bg !default;
+$list-group-border:           transparent !default;
+$list-group-link-color:       $widget-color;
+$list-group-hover-bg: $bg-addition;
+// Jumbotron
+// -------------------------
+
+$jumbotron-color:                inherit !default;
+$jumbotron-bg:                   transparent !default;
+
+$jumbotron-heading-color:        inherit !default;
+
+// Popovers
+// -------------------------
+$popover-bg:                          rgba($widget-bg-common, 0.85) !default;
+$popover-arrow-color:                 $popover-bg !default;
+$popover-border-color:                transparent;
+
+// Thumbnails
+// -------------------------
+$thumbnail-bg:                $widget-bg;
+$thumbnail-border-width:      0 !default;
+$thumbnail-border-color:      transparent !default;
+$thumbnail-border-radius:     0 !default;
+$thumbnail-padding:               0.31rem;
+
+// Pagination
+// -------------------------
+
+$pagination-color:                     $text-color !default;
+$pagination-bg:                        transparent !default;
+$pagination-border:                    transparent !default;
+
+$pagination-hover-color:               $white !default;
+$pagination-hover-bg:                  $bg-addition !default;
+$pagination-hover-border:              transparent !default;
+
+$pagination-active-color:              $white !default;
+$pagination-active-bg:                 $bg-addition !default;
+$pagination-active-border:             transparent !default;
+
+$pagination-disabled-color:            $gray-200 !default;
+$pagination-disabled-bg:               transparent !default;
+$pagination-disabled-border:           transparent !default;
+
+// Breadcrumbs
+// -------------------------
+$breadcrumb-bg:               transparent !default;
+$breadcrumb-color:            $text-color !default;
+$breadcrumb-active-color:     darken($breadcrumb-color, 25%) !default;
+$breadcrumb-separator:        '>' !default;
+
+// Carousel
+// ------------------------
+
+$carousel-control-color:      $widget-color;
+$carousel-text-shadow:                        none !default;
+
+$carousel-control-width:                      6% !default;
+$carousel-control-opacity:                    1 !default;
+
+$carousel-indicator-active-bg:                $red !default;
+$carousel-indicator-border-color:             transparent !default;
+
+// Progress
+// ------------------------
+
+$progress-border-radius: 0.23rem; //~3px;
+$progress-height: 1.38rem;  //~18px
+$progress-height-sm: 0.62rem;  //~8px
+$progress-height-xs: 0.38rem;  //~5px
+
+$progress-value-box-shadow: inset 0 -1px 0 rgba(0,0,0,0.15);
+
+$progress-bg: rgba(0,0,0,0.15) !default;
+$progress-bar-bg: $blue !default;
+
+// Panels
+// -------------------------
+
+$panel-body-padding: 1.15rem;
+$panel-mt: 0.38rem;
+$panel-opened-color: #d2d2d2;
+
+// Wells
+// -------------------------
+
+$well-bg:         $bg-addition !default;
+$well-border:     transparent !default;
+
+// Code (inline and block)
+// --------------------------------------------------
+
+$pre-bg: $bg-addition !default;
+$pre-color:                   $text-color !default;
+$pre-border-color: $widget-bg !default;
+
+// Type
+// --------------------------------------------------
+
+$blockquote-border-color:             $widget-bg;
+
+// Custom libs variables
+// ------------------------
+
+// Awesome Checkbox
+// ------------------------
+
+$awesome-checkbox-default-color:       #eee;
+$input-bg-disabled:                    $gray-200 !default;

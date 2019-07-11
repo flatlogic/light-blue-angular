@@ -1,0 +1,23 @@
+@import "../../../styles/helpers";
+
+.widget > header h4 {
+  font-size: 14px;
+}
+
+.dropdown-toggle {
+  padding-left: 10px;
+
+  &:after {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+.segmented-dropdowns {
+  .btn-group {
+    display: inline-flex !important;
+    > .btn {
+
+    }
+  }
+}

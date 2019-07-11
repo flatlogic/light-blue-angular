@@ -1,6 +1,8 @@
 import { Directive, ElementRef } from '@angular/core';
 declare let jQuery: any;
 
+import 'widgster';
+
 @Directive ({
   selector: '[widget]'
 })

@@ -1,0 +1,158 @@
+@import "../../../styles/helpers";
+@import "../../../../../node_modules/bootstrap-select/sass/bootstrap-select";
+@import "../../../../../node_modules/bootstrap-markdown/css/bootstrap-markdown.min";
+@import "../../../../../node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker";
+@import "../../../../../node_modules/bootstrap-timepicker/css/bootstrap-timepicker";
+
+.article-description {
+  min-height: calc(#{$input-height} * 2);
+}
+
+.article-options-datetime {
+  .timepicker {
+    margin-top: 10px;
+  }
+
+  .timepicker, .date {
+    width: 100%;
+
+    .input-group-addon {
+      width: 33px;
+    }
+  }
+}
+
+/**
+ * Markdown
+ */
+
+.md-editor {
+  display: block;
+  border: none;
+  border-radius: $input-border-radius;
+  box-shadow: none;
+  position: relative;
+
+  > .md-header, .md-footer {
+    display: block;
+    padding: 6px 4px;
+    background: $widget-bg;
+  }
+
+  > .md-footer {
+    border-bottom-left-radius: $input-border-radius;
+    border-bottom-right-radius: $input-border-radius;
+  }
+
+  > .md-header {
+    margin: 0 0 10px 0;
+    padding: 0;
+    background: none;
+    border: none;
+
+    .btn-sm { //TODO: remove after merging statistics-realtime branch
+      padding: 4px 10px;
+      line-height: 18px;
+    }
+
+    .btn-group:first-child {
+      margin-left: 0;
+    }
+
+    .glyphicon {
+      top: 4px;
+    }
+  }
+
+  > .md-preview {
+    padding: $padding-base-vertical $padding-base-horizontal;
+    background: $widget-bg;
+    border-top: none;
+    border-radius: $input-border-radius;
+    border-bottom: none;
+    min-height: 10px;
+  }
+
+  textarea.form-control {
+    font-family: 'Open Sans';
+    font-size: $font-size-base;
+    outline: 0;
+    outline: thin dotted  \9; /* IE6-9 */
+    margin: 0;
+    display: block;
+    width: 100%;
+    height: calc(6 * #{$input-height});
+    border: 0;
+    padding: $padding-base-vertical $padding-base-horizontal;
+    border-radius: $input-border-radius;
+  }
+
+  &.active {
+    border: none;
+    box-shadow: none;
+
+    .form-control {
+      background-color: $widget-bg;
+    }
+  }
+}
+
+.md-nooverflow .page-controls {
+  z-index: 0 !important;
+}
+
+.input-tags {
+  display: inline-table !important;
+
+  .ng2-tags-container {
+    min-height: 23px;
+  }
+
+  tag-input-form {
+    form {
+      height: 100%;
+      input {
+        height: 100% !important;
+        background: transparent;
+        width: 105px;
+      }
+    }
+  }
+
+  tag {
+    height: 100% !important;
+    line-height: 20px !important;
+    background: $white-dark;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: $border-radius-base !important;
+
+    > div > div {
+      height: 100%;
+      display: inline-flex;
+      align-items: center;
+      > span {
+        color: $gray-800;
+      }
+      > delete-icon {
+        height: 100%;
+
+        svg {
+          height: 100% !important;
+          width: 13px;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}
+
+.ng2-dropdown-menu {
+  margin-left: 5px;
+  margin-top: -4px;
+  border-radius: $border-radius-base !important;
+
+  .ng2-menu-item {
+    height: 24px !important;
+    line-height: 16px !important;
+  }
+}
