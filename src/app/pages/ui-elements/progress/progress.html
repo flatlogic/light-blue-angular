@@ -1,0 +1,108 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">YOU ARE HERE</li>
+  <li class="active breadcrumb-item">Progress</li>
+</ol>
+<h1 class="page-title">Progress</h1>
+<div class="row">
+  <div class="col-12 col-md-6">
+    <widget
+      [title]="'<h5>Progress <span class=fw-semi-bold>Example</span></h5>'"
+      [close]="true"
+      [collapse]="true"
+      [customHeader]="true"
+    >
+      <p>
+        Badges scale to match the size of the immediate parent element by
+        using relative font sizing and em units.
+      </p>
+      <progressbar class="mb-sm" [value]="25"></progressbar>
+      <progressbar class="mb-sm" [value]="50"></progressbar>
+      <progressbar class="mb-sm" [value]="75"></progressbar>
+      <progressbar [value]="100"></progressbar>
+    </widget>
+  </div>
+  <div class="col-12 col-md-6">
+    <widget
+      [title]="'<h5>Backgrounds</h5>'"
+      [close]="true"
+      [collapse]="true"
+      [customHeader]="true"
+    >
+      <p>
+        Use background utility classes to change the appearance of
+        individual progress bars.
+      </p>
+      <progressbar class="mb-sm" [value]="25" type="info"></progressbar>
+      <progressbar class="mb-sm" [value]="50" type="warning"></progressbar>
+      <progressbar class="mb-sm" [value]="75" type="danger"></progressbar>
+      <progressbar [value]="100" type="success"></progressbar>
+    </widget>
+  </div>
+  <div class="col-12 col-md-6">
+    <widget
+      [title]="'<h5>Labels</h5>'"
+      [close]="true"
+      [collapse]="true"
+      [customHeader]="true"
+    >
+      <p>
+        Add labels to your progress bars by placing
+        text within the <code>&lt;b-progress&gt;</code>
+      </p>
+      <progressbar [value]="25" class="mb-sm">25%</progressbar>
+      <progressbar [value]="100" class="mb-sm" type="danger">Something was wrong!</progressbar>
+      <progressbar [value]="100" type="success">Complited!</progressbar>
+    </widget>
+  </div>
+  <div class="col-12 col-md-6">
+    <widget
+      [title]="'<h5>Size</h5>'"
+      [close]="true"
+      [collapse]="true"
+      [customHeader]="true"
+    >
+      <p>
+        We only set a height value on the <code>&lt;b-progress&gt;</code>,
+        so if you change that value the inner
+        bar will automatically resize accordingly. Also <code>.progress-sm</code> is available.
+      </p>
+      <progressbar [value]="25" class="progress-sm mb-sm" type="dark">25%</progressbar>
+      <progressbar [value]="50" class="mb-sm" type="gray">50%</progressbar>
+      <progressbar [value]="75" type="secondary" [ngStyle]="{ height: '30px' }">75%</progressbar>
+    </widget>
+  </div>
+  <div class="col-12">
+    <widget
+      [title]="'<h5><span class=fw-semi-bold>Striped</span> Progress</h5>'"
+      [close]="true"
+      [collapse]="true"
+      [customHeader]="true"
+    >
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <p>
+            Add <code>striped</code> property to any <code>&lt;Progress&gt;</code> to
+            apply a stripe via CSS gradient over the progress bar’s background color.
+          </p>
+          <progressbar [striped]="true" class="mb-sm" [value]="10"></progressbar>
+          <progressbar [striped]="true" class="mb-sm" [value]="25" type="success"></progressbar>
+          <progressbar [striped]="true" class="mb-sm" [value]="50" type="info"></progressbar>
+          <progressbar [striped]="true" class="mb-sm" [value]="75" type="warning"></progressbar>
+          <progressbar [striped]="true" [value]="100" type="danger"></progressbar>
+        </div>
+        <div class="col-12 col-md-6">
+          <p>
+            The striped gradient can also be animated. Add <code>animated</code> property
+            to <code>&lt;b-progress&gt;</code> to animate the stripes
+            right to left via CSS3 animations.
+          </p>
+          <progressbar [animate]="true" [striped]="true" class="mb-sm" [value]="10" type="danger"></progressbar>
+          <progressbar [animate]="true" [striped]="true" class="mb-sm" [value]="25" type="warning"></progressbar>
+          <progressbar [animate]="true" [striped]="true" class="mb-sm" [value]="50" type="info"></progressbar>
+          <progressbar [animate]="true" [striped]="true" class="mb-sm" [value]="75" type="success"></progressbar>
+          <progressbar [animate]="true" [striped]="true" [value]="100"></progressbar>
+        </div>
+      </div>
+    </widget>
+  </div>
+</div>

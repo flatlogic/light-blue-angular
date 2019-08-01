@@ -1,0 +1,18 @@
+<div class="selects">
+  <div class="btn-group" dropdown>
+    <button dropdownToggle type="button" class="btn btn-default dropdown-toggle">
+      {{currentSize === 'Select size' ? currentSize : 'Size: ' + currentSize}}
+    </button>
+    <ul *dropdownMenu class="dropdown-menu" role="menu">
+      <li *ngFor="let item of sizes" role="menuitem"><a href="#" (click)="changeValue('currentSize', item)" class="dropdown-item">{{item}}</a></li>
+    </ul>
+  </div>
+  <div class="btn-group" dropdown>
+    <button dropdownToggle type="button" class="btn btn-default dropdown-toggle">
+      {{currentQuantity}}
+    </button>
+    <ul *dropdownMenu class="dropdown-menu" role="menu">
+      <li *ngFor="let item of quantity" role="menuitem"><a href="#" (click)="changeValue('currentQuantity', item)" class="dropdown-item">{{item}}</a></li>
+    </ul>
+  </div>
+</div>

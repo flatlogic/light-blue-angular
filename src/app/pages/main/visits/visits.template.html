@@ -1,0 +1,388 @@
+<h1 class="page-title">Dashboard <small><small>The Lucky One</small></small></h1>
+<div class="row">
+  <div class="col-lg-7 col-12">
+    <!-- minimal widget consist of .widget class. note bg-transparent - it can be any background like bg-gray,
+    bg-primary, bg-white -->
+    <section class="widget bg-transparent">
+      <!-- .widget-body is a mostly semantic class. may be a sibling to .widget>header or .widget>footer -->
+      <div class="widget-body">
+        <!-- for this particular example we also need to preload us map, as this is mapael's extension -->
+        <div class="mapael" geo-locations-widget>
+          <div class="stats">
+            <h6 class="mt-1">GEO-LOCATIONS</h6>
+            <p class="h3 m-0">
+              <span class="fw-normal" number-animate>1 656 843</span>
+              <i class="fa fa-map-marker mb-2"></i>
+            </p>
+          </div>
+          <div class="map">
+            <span>Alternative content for the map</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="col-lg-1"></div>
+  <div class="col-lg-4 col-12">
+    <section widget class="widget bg-transparent">
+      <header>
+        <h5>
+          Map
+          <span class="fw-semi-bold">Statistics</span>
+        </h5>
+        <div class="widget-controls widget-controls-hover">
+          <a href="#"><i class="la la-cog"></i></a>
+          <a href="#"><i class="la la-refresh"></i></a>
+          <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+        </div>
+      </header>
+      <div class="widget-body">
+        <p>Status: <strong>Live</strong></p>
+        <p>
+          <span class="circle bg-warning"><i class="fa fa-map-marker text-white"></i></span>
+          146 Countries, 2759 Cities
+        </p>
+        <div class="row progress-stats">
+          <div class="col-md-9 col-12">
+            <h6 class="name">Foreign Visits</h6>
+            <p class="description deemphasize">Some Cool Text</p>
+            <div class="bg-white progress progress-xs">
+              <div progress-animate class="progress-bar bg-primary" style="width: 60%;" data-width="60%"></div>
+            </div>
+          </div>
+          <div class="col-md-3 col-12 text-center">
+                                <span class="status rounded rounded-lg bg-body-light text-dark">
+                                    <small><span number-animate>75</span>%</small>
+                                </span>
+          </div>
+        </div>
+        <div class="row progress-stats">
+          <div class="col-md-9 col-12">
+            <h6 class="name">Local Visits</h6>
+            <p class="description deemphasize">P. to C. Conversion</p>
+            <div class="bg-white progress progress-xs">
+              <div progress-animate class="progress-bar bg-danger" style="width: 39%;" data-width="39%"></div>
+            </div>
+          </div>
+          <div class="col-md-3 col-12 text-center">
+                                <span class="status rounded rounded-lg bg-body-light text-dark">
+                                    <small><span number-animate>84</span>%</small>
+                                </span>
+          </div>
+        </div>
+        <div class="row progress-stats">
+          <div class="col-md-9 col-12">
+            <h6 class="name">Sound Frequencies</h6>
+            <p class="description deemphasize">Average Bitrate</p>
+            <div class="bg-white progress progress-xs">
+              <div progress-animate class="progress-bar bg-success" style="width: 80%;" data-width="80%"></div>
+            </div>
+          </div>
+          <div class="col-md-3 col-12 text-center">
+                                <span class="status rounded rounded-lg bg-body-light text-dark">
+                                    <small><span number-animate>92</span>%</small>
+                                </span>
+          </div>
+        </div>
+        <h6 class="fw-semi-bold mt">Map Distributions</h6>
+        <p>Tracking: <strong>Active</strong></p>
+        <p>
+          <span class="circle bg-warning"><i class="fa fa-cog text-white"></i></span>
+          391 elements installed, 84 sets
+        </p>
+        <div class="input-group mt">
+          <input type="text" class="form-control input-transparent" placeholder="Search Map">
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-default">
+                                  <i class="fa fa-search text-gray-dark"></i>
+                                </button>
+                            </span>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-4 col-12">
+    <section widget class="widget">
+      <!-- .widget>header is generally a place for widget title and widget controls. see .widget in _base.scss -->
+      <header>
+        <h6>
+          USERBASE GROWTH
+        </h6>
+        <div class="widget-controls">
+          <a href="#"><i class="la la-cog"></i></a>
+          <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+        </div>
+      </header>
+      <div class="widget-body">
+        <div class="stats-row">
+          <div class="stat-item">
+            <h6 class="name">Overall Growth</h6>
+            <p class="value">76.38%</p>
+          </div>
+          <div class="stat-item">
+            <h6 class="name">Montly</h6>
+            <p class="value">10.38%</p>
+          </div>
+          <div class="stat-item">
+            <h6 class="name">24h</h6>
+            <p class="value">3.38%</p>
+          </div>
+        </div>
+        <div class="bg-gray-lighter progress progress-xs">
+          <div class="progress-bar bg-success" style="width: 60%"></div>
+        </div>
+        <p>
+          <small><span class="circle bg-warning"><i class="fa fa-chevron-up text-white"></i></span></small>
+          <span class="fw-semi-bold">&nbsp;17% higher</span>
+          than last month</p>
+      </div>
+    </section>
+  </div>
+  <div class="col-lg-4 col-12">
+    <section widget class="widget">
+      <header>
+        <h6>
+          TRAFFIC VALUES
+        </h6>
+        <div class="widget-controls">
+          <a href="#"><i class="la la-cog"></i></a>
+          <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+        </div>
+      </header>
+      <div class="widget-body">
+        <div class="stats-row">
+          <div class="stat-item">
+            <h6 class="name">Overall Values</h6>
+            <p class="value">17 567 318</p>
+          </div>
+          <div class="stat-item">
+            <h6 class="name">Montly</h6>
+            <p class="value">55 120</p>
+          </div>
+          <div class="stat-item">
+            <h6 class="name">24h</h6>
+            <p class="value">9 695</p>
+          </div>
+        </div>
+        <div class="bg-gray-lighter progress progress-xs">
+          <div class="progress-bar bg-danger" style="width: 60%"></div>
+        </div>
+        <p>
+          <small><span class="circle bg-warning"><i class="fa fa-chevron-down text-white"></i></span></small>
+          <span class="fw-semi-bold">&nbsp;8% lower</span>
+          than last month
+        </p>
+      </div>
+    </section>
+  </div>
+  <div class="col-lg-4 col-12">
+    <section widget class="widget">
+      <header>
+        <h6>
+          RANDOM VALUES
+        </h6>
+        <div class="widget-controls">
+          <a href="#"><i class="la la-cog"></i></a>
+          <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+        </div>
+      </header>
+      <div class="widget-body">
+        <div class="stats-row">
+          <div class="stat-item">
+            <h6 class="name fs-sm">Overcome T.</h6>
+            <p class="value">104.85%</p>
+          </div>
+          <div class="stat-item">
+            <h6 class="name fs-sm">Takeoff Angle</h6>
+            <p class="value">14.29&deg;</p>
+          </div>
+          <div class="stat-item">
+            <h6 class="name fs-sm">World Pop.</h6>
+            <p class="value">7,211M</p>
+          </div>
+        </div>
+        <div class="bg-gray-lighter progress progress-xs">
+          <div class="progress-bar progress-xs bg-primary" style="width: 60%"></div>
+        </div>
+        <p>
+          <small><span class="circle bg-warning"><i class="fa fa-plus text-white"></i></span></small>
+          <span class="fw-semi-bold">&nbsp;8 734 higher</span>
+          than last month
+        </p>
+      </div>
+    </section>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-4 col-12">
+    <section widget class="widget">
+      <header>
+        <h6><span class="badge badge-danger">New</span> Messages</h6>
+        <div class="widget-controls">
+          <a href="#"><i class="la la-refresh"></i></a>
+          <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+        </div>
+      </header>
+      <div class="widget-body p-0">
+        <div class="list-group list-group-lg">
+          <button class="list-group-item text-left">
+                                <span class="thumb-sm float-left mr">
+                                    <img class="rounded-circle" src="assets/img/people/a2.jpg" alt="...">
+                                    <i class="status status-bottom bg-success"></i>
+                                </span>
+            <div>
+              <h6 class="m-0">Chris Gray</h6>
+              <p class="help-block text-ellipsis m-0">Hey! What's up? So many times since we</p>
+            </div>
+          </button>
+          <button class="list-group-item text-left">
+                                <span class="thumb-sm float-left mr">
+                                    <img class="rounded-circle" src="assets/img/people/a4.jpg" alt="...">
+                                    <i class="status status-bottom bg-success"></i>
+                                </span>
+            <div>
+              <h6 class="m-0">Jamey Brownlow</h6>
+              <p class="help-block text-ellipsis m-0">Good news coming tonight. Seems they agreed to proceed</p>
+            </div>
+          </button>
+          <button class="list-group-item text-left">
+                                <span class="thumb-sm float-left mr">
+                                    <img class="rounded-circle" src="assets/img/people/a1.jpg" alt="...">
+                                    <i class="status status-bottom bg-warning"></i>
+                                </span>
+            <div>
+              <h6 class="m-0">Livia Walsh</h6>
+              <p class="help-block text-ellipsis m-0">Check my latest email plz!</p>
+            </div>
+          </button>
+          <button class="list-group-item text-left">
+                                <span class="thumb-sm float-left mr">
+                                    <img class="rounded-circle" src="assets/img/people/a5.jpg" alt="...">
+                                    <i class="status status-bottom bg-danger"></i>
+                                </span>
+            <div>
+              <h6 class="m-0">Jaron Fitzroy</h6>
+              <p class="help-block text-ellipsis m-0">What about summer break?</p>
+            </div>
+          </button>
+        </div>
+      </div>
+      <footer class="bg-widget-transparent mt">
+        <input class="form-control input-transparent" placeholder="Search">
+      </footer>
+    </section>
+  </div>
+  <div class="col-lg-4 col-12">
+    <section widget class="widget">
+      <header>
+        <h6>
+          Market <span class="fw-semi-bold">Stats</span>
+        </h6>
+        <div class="widget-controls">
+          <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+        </div>
+      </header>
+      <div class="widget-body">
+        <h3>$720 Earned</h3>
+        <p class="fs-mini text-muted mb mt-sm">
+          Target <span class="fw-semi-bold">$820</span> day earnings
+          is <span class="fw-semi-bold">96%</span> reached.
+        </p>
+      </div>
+      <div class="widget-table-overflow">
+        <table class="table table-striped table-sm">
+          <thead class="no-bd">
+          <tr>
+            <th>
+              <div class="abc-checkbox">
+                <input id="checkbox210" type="checkbox" check-all>
+                <label for="checkbox210"></label>
+              </div>
+            </th>
+            <th></th>
+            <th></th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>
+              <div class="abc-checkbox">
+                <input id="checkbox212" type="checkbox">
+                <label for="checkbox212"></label>
+              </div>
+            </td>
+            <td>HP Core i7</td>
+            <td class="text-align-right fw-semi-bold">$346.1</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="abc-checkbox">
+                <input id="checkbox214" type="checkbox">
+                <label for="checkbox214"></label>
+              </div>
+            </td>
+            <td>Air Pro</td>
+            <td class="text-align-right fw-semi-bold">$533.1</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="widget-body mt-5" market-stats-widget>
+      </div>
+    </section>
+  </div>
+  <div class="col-lg-4 col-12">
+    <section widget class="widget">
+      <header>
+        <h6>Calendar</h6>
+        <div class="widget-controls">
+          <a href="#"><i class="la la-cog"></i></a>
+          <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+        </div>
+      </header>
+      <div class="widget-body p-0">
+        <calendar class="bg-gray-light" [events]="[
+                [
+                        '2/'+month+'/'+year,
+                    'The flower bed',
+                    '#',
+                    '#5d8fc2',
+                    'Contents here'
+                ],
+                [
+                        '5/'+month+'/'+year,
+                    'Stop world water pollution',
+                    '#',
+                    '#f0b518',
+                    'Have a kick off meeting with .inc company'
+                ],
+                [
+                        '18/'+month+'/'+year,
+                    'Light Blue 2.2 release',
+                    '#',
+                    '#64bd63',
+                    'Some contents here'
+                ],
+                [
+                        '29/'+month+'/'+year,
+                    'A link',
+                    'http://www.flatlogic.com',
+                    '#dd5826'
+                ]
+            ]"></calendar>
+        <div class="list-group fs-mini">
+          <button class="list-group-item text-left text-ellipsis">
+            <span class="badge badge-pill badge-warning float-right">6:45</span>
+            Weed out the flower bed
+          </button>
+          <button class="list-group-item text-left text-ellipsis">
+            <span class="badge badge-pill badge-success float-right">9:41</span>
+            Stop world water pollution
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

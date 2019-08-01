@@ -1,0 +1,78 @@
+@import "../../../styles/helpers";
+
+.widget-email-count{
+  display: inline-block;
+  margin: 0;
+  font-size: $font-size-mini;
+  color: $text-muted;
+  line-height: 29px;
+
+  + .widget-email-pagination{
+    margin-left: 10px;
+    border-left: 1px solid $gray-600;
+    padding-left: 15px;
+    border-radius: 0;
+    vertical-align: -9px;
+  }
+}
+
+.widget-email {
+  header {
+
+    .form-control {
+      font-size: 0.8571rem;
+      border: 1px solid #ccc;
+      &:focus {
+        border-color: #66afe9;
+        outline: none;
+      }
+    }
+  }
+}
+
+.widget-email-pagination{
+  margin: 0;
+}
+
+.table-emails{
+  margin-bottom: 0;
+
+  tbody > tr > td:first-child {
+    width: 45px;
+  }
+
+  td,
+  th {
+    padding: 10px 5px;
+  }
+
+  .name,
+  .subject,
+  .date{
+    cursor: pointer;
+  }
+
+  .date{
+    text-align: right;
+    min-width: 65px;
+  }
+
+  .unread{
+    font-weight: $font-weight-semi-bold;
+    color: $text-color;
+  }
+
+  .starred{
+    color: $text-muted;
+    cursor: pointer;
+    @include transition(color .2s);
+    &:hover{
+      color: $text-color;
+    }
+
+    .fa-star{
+      color: theme-color('warning');
+    }
+  }
+}
+

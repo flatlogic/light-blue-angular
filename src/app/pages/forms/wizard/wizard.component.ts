@@ -1,41 +1,33 @@
-import { Component, ViewEncapsulation } from '@angular/core';
-
-import { Select2OptionData } from 'ng2-select2/ng2-select2';
-import * as data from './wizard.data';
-
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 declare let jQuery: any;
 
 @Component({
-  selector: '[wizard]',
+  selector: '[forms-wizard]',
   templateUrl: './wizard.template.html',
-  styleUrls: [ './wizard.style.scss' ],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  styleUrls: ['./wizard.style.scss']
 })
-export class Wizard {
-  expirationDate: Date = null;
-
-  datepickerOpts: any = {
-    placeholder: ' '
+export class WizardComponent implements OnInit {
+  destindationMask = {
+    mask: [/[1-9]/, /\d/, /\d/, /\d/, /\d/]
   };
 
-  getSelect2CountriesList(): Select2OptionData[] {
-    return data.select2CountriesData;
+  creditMask = {
+    mask: [/[1-9]/, /\d/, /\d/, /\d/, '-',
+      /\d/, /\d/, /\d/, /\d/, '-',
+      /\d/, /\d/, /\d/, /\d/, '-',
+      /\d/, /\d/, /\d/, /\d/
+    ]
+  };
+
+  destinationValue = '';
+  creditValue = '';
+
+  unmask(event) {
+    return event.replace(/\D+/g, '');
   }
 
-  getSelect2Shipment(): Select2OptionData[] {
-    return data.select2ShipmentData;
-  }
-
-  getSelect2CardTypes(): Select2OptionData[] {
-    return data.cardTypesData;
-  }
-
-  ngOnInit() {
-    jQuery('#destination').inputmask({
-      mask: '99999'
-    });
-    jQuery('#credit').inputmask({
-      mask: '9999-9999-9999-9999'
-    });
+  ngOnInit(): void {
+    jQuery('.select2').select2();
   }
 }

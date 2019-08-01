@@ -1,0 +1,24 @@
+<section class="mb-5 pb-2 widget" widget>
+  <header>
+    <h6>
+      <div>
+        <h4>Today&apos;s Tasks
+          <span class='badge badge-pill badge-success fw-normal pull-right mt-xs'>
+            {{tasks.length}}
+          </span>
+        </h4>
+        <p class="mb-0">
+          <small class="text-primary">
+            {{tasksCompletedLength}} of {{tasks.length}} completed
+          </small>
+        </p>
+      </div>
+    </h6>
+  </header>
+  <div class="widget-body task-container mt">
+    <task *ngFor="let task of tasks" [task]="task" [completed]="task.completed" (toggle)="toggleTaskState($event)"></task>
+    <button class="btn btn-transparent w-100 text-center">
+      See All <i class="la la-arrow-down"></i>
+    </button>
+  </div>
+</section>

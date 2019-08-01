@@ -1,0 +1,8 @@
+<div class="btn-group dropdown" dropdown>
+  <button id="dropdown-btn" class="btn btn-default dropdown-toggle" dropdownToggle>
+    &nbsp; {{dropdown[0]}} &nbsp;
+  </button>
+  <ul *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="dropdown-btn">
+    <li *ngFor="let option of dropdown" role="menuitem"><a class="dropdown-item">{{option}}</a></li>
+  </ul>
+</div>

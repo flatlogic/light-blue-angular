@@ -1,0 +1,45 @@
+@import "../../styles/helpers";
+
+.nav-email-folders{
+  > li > .nav-link {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: $border-radius;
+    color: $text-color;
+    background-color: transparent;
+    font-weight: $font-weight-normal;
+    &:hover{
+      background-color: lighten($widget-bg, 10%);
+      color: $text-color;
+    }
+
+    > .fa-circle{
+      margin-top: 3px;
+    }
+  }
+
+  > li > .nav-link > .label {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  > li.active > .nav-link{
+    &,
+    &:hover,
+    &:focus {
+      background-color: $widget-bg;
+      color: $text-color;
+      font-weight: $font-weight-semi-bold;
+
+      > .label{
+        color: $text-color;
+        background-color: $widget-bg;
+      }
+    }
+  }
+
+  .badge-white {
+    color: #555;
+  }
+}
+

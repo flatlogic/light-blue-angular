@@ -14,9 +14,6 @@ export const ROUTES: Routes = [{
     path: 'error', component: ErrorComponent
   },
   {
-    path: 'landing', loadChildren: './pages/landing/landing.module#LandingModule'
-  },
-  {
     path: '**', component: ErrorComponent
   }
 ];

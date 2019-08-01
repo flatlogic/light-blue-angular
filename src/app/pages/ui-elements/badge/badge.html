@@ -1,0 +1,85 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">YOU ARE HERE</li>
+  <li class="active breadcrumb-item">Badge</li>
+</ol>
+<h1 class="page-title">Badge</h1>
+<div class="row">
+  <div class="col-12 col-md-8">
+    <widget
+      [title]="'<h5>Badge <span class=fw-semi-bold>Example</span></h5>'"
+      [close]="true"
+      [collapse]="true"
+      [customHeader]="true"
+    >
+      <p>
+        Badges scale to match the size of the immediate parent element by
+        using relative font sizing and em units.
+      </p>
+      <h1>Example heading
+        <span class="badge badge-primary">Primary</span>
+      </h1>
+      <h2>Example heading
+        <span class="badge badge-info">Info</span>
+      </h2>
+      <h3>Example heading
+        <span class="badge badge-warning">Warning</span>
+      </h3>
+      <h4>Example heading
+        <span class="badge badge-success">Success</span>
+      </h4>
+      <h5>Example heading
+        <span class="badge badge-danger">Danger</span>
+      </h5>
+      <h6>Example heading
+        <span class="badge badge-secondary">Secondary</span>
+      </h6>
+      <p>Badges can be used as part of links or buttons to provide a counter.</p>
+      <button class="btn btn-primary">Notifications
+        <span class="badge badge-danger">4</span>
+      </button>
+    </widget>
+  </div>
+  <div class="col-12 col-md-8">
+    <widget
+      [title]="'<h5>Pill <span class=fw-semi-bold>Badges</span></h5>'"
+      [close]="true"
+      [collapse]="true"
+      [customHeader]="true"
+    >
+      <p>
+        Use the <code>pill</code> property to make badges more rounded
+        (with a larger border-radius and additional horizontal padding).
+      </p>
+      <span class="badge mr-xs badge-primary badge-pill">Primary</span>
+      <span class="badge mr-xs badge-info badge-pill">Info</span>
+      <span class="badge mr-xs badge-warning badge-pill">Warning</span>
+      <span class="badge mr-xs badge-success badge-pill">Success</span>
+      <span class="badge mr-xs badge-danger badge-pill">Danger</span>
+      <span class="badge mr-xs badge-secondary badge-pill">Secondary</span>
+      <span class="badge mr-xs badge-light badge-pill">Light</span>
+      <span class="badge mr-xs badge-dark badge-pill">Dark</span>
+    </widget>
+  </div>
+  <div class="col-12 col-md-8">
+    <widget
+      [title]="'<h5>Pill <span class=fw-semi-bold>Badges</span></h5>'"
+      [close]="true"
+      [collapse]="true"
+      [customHeader]="true"
+    >
+      <p>
+        Using the contextual <code>href=&quot;&#35;&quot;</code> classes on
+        an <code>&lt;Badge&gt;</code> element quickly provide
+        actionable badges with hover and focus states.
+      </p>
+      <a class="badge mr-xs badge-primary" href="#">Primary</a>
+      <a class="badge mr-xs badge-info" href="#">Info</a>
+      <a class="badge mr-xs badge-warning" href="#">Warning</a>
+      <a class="badge mr-xs badge-success" href="#">Success</a>
+      <a class="badge mr-xs badge-danger" href="#">Danger</a>
+      <a class="badge mr-xs badge-secondary" href="#">Secondary</a>
+      <a class="badge mr-xs badge-light" href="#">Light</a>
+      <a class="badge mr-xs badge-dark" href="#">Dark</a>
+    </widget>
+  </div>
+</div>

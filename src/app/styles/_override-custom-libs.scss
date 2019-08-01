@@ -215,6 +215,10 @@ html[dir="rtl"] .select2-search input {
 /**           Glyphicon           **/
 /***********************************/
 
+.glyphicon {
+  vertical-align: baseline;
+}
+
 .glyphicon-comment:before {
   content:"\E111";
 }
@@ -222,71 +226,38 @@ html[dir="rtl"] .select2-search input {
 /***********************************/
 /**        Awesome Checkbox       **/
 /***********************************/
-
-.abc-checkbox, .abc-radio {
-  label {
-    font-weight: $font-weight-normal;
-
-    &:before {
-      top: 1px;
-    }
-  }
-}
-
-.abc-checkbox label:after {
-  top: 1px;
-}
-
-.abc-radio label:after {
-  top: 4px;
-}
-
-.abc-checkbox, .abc-radio {
-  margin-bottom: 10px;
-  padding-left: 1.5rem;
-}
-
-.abc-checkbox label{
+.abc-checkbox label, .abc-radio label{
   &::before {
     background: none;
     border-color: #aaa;
-  }&::after{
-     color: $awesome-checkbox-default-color;
-   }
+    margin-left: 0;
+    left: -20px;
+  }
 }
 
-.abc-radio {
-  label {
+.abc-checkbox label::after {
+  margin-left: 0;
+  left: -20px;
+  color: $awesome-checkbox-default-color;
+}
 
-    &::before {
-      background: none;
-      border-color: #aaa;
-    }
-
-    &::after {
-      background-color: $awesome-checkbox-default-color;
-    }
+.table td,
+.table th {
+  .abc-checkbox label::before,
+  .abc-checkbox label::after {
+    left: -5px;
+    color: $awesome-checkbox-default-color;
   }
+}
+
+.abc-radio label::after {
+  margin-left: 0;
+  left: -17px;
 }
 
 .abc-checkbox-dark input[type="checkbox"]:checked + label{
   &::after{
     color: $gray-300;
-  }
-}
-
-.table {
-  .abc-checkbox {
-    label {
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      &:before {
-        width: 15px;
-        height: 15px;
-      }
-    }
   }
 }
 
@@ -308,7 +279,7 @@ html[dir="rtl"] .select2-search input {
   width: auto;
   box-sizing: border-box;
   .input-group-addon {
-    padding: .375rem .75rem .375rem .75rem;
+    padding: 0.6rem;
     i {
       height: 13px;
       width: 13px;
@@ -356,7 +327,7 @@ html[dir="rtl"] .select2-search input {
     clear: both;
     font-weight: $font-weight-thin;
     line-height: $line-height-base;
-    color: $dropdown-link-color;
+    color: $text-color;
     text-align: inherit; // For `<button>`s
     white-space: nowrap; // prevent links from randomly breaking onto new lines
     background: none; // For `<button>`s
@@ -403,4 +374,57 @@ html[dir="rtl"] .select2-search input {
 
 .mfp-zoom-out-cur .mfp-image-holder .mfp-content .mfp-figure .mfp-close {
   cursor: pointer;
+}
+
+/*         Flot        */
+
+.chart-tooltip {
+  position: fixed;
+  padding: $spacer/2 $spacer;
+  color: $gray-600;
+  font-size: $font-size-mini;
+  background-color: $white;
+}
+
+.legendColorBox div {
+  border-radius: 50%;
+}
+
+.legendLabel {
+  color: $text-color;
+}
+
+//  Easy Pie Chart
+
+.easy-pie-chart-md,
+.easy-pie-chart-lg {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.easy-pie-chart-md canvas,
+.easy-pie-chart-lg canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.easy-pie-chart-md {
+  line-height: 120px;
+  height: 120px;
+  width: 120px;
+}
+
+.easy-pie-chart-lg {
+  line-height: 140px;
+  height: 140px;
+  width: 140px;
+}
+
+
+////// Wizard //////
+
+.form-wizard .tab-content .tab-pane {
+  padding: 0;
 }

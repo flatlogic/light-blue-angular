@@ -1,14 +1,17 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
-import { ProgressAnimate } from './directives/progress-animate.directive';
+import { ProgressAnimateDirective } from './directives/progress-animate.directive';
+import { AnimateNumberDirective } from './directives/animate-number.directive';
 
 @NgModule({
   declarations: [
-    ProgressAnimate
+    ProgressAnimateDirective,
+    AnimateNumberDirective
   ],
   exports: [
-    ProgressAnimate
+    ProgressAnimateDirective,
+    AnimateNumberDirective
   ],
   imports: [
     CommonModule

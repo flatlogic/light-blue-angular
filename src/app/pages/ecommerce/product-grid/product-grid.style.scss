@@ -1,0 +1,59 @@
+@import "../../../styles/helpers";
+
+.product-grid {
+  .product-filters {
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  .product-mobile-filters {
+    display: none;
+    margin: auto (-$content-padding / 2) ($spacer * 2);
+    padding: $spacer 0;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+
+    @include media-breakpoint-down(sm) {
+      display: flex;
+    }
+
+    .btn {
+      color: $text-color;
+      width: 50%;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 !important;
+
+      i {
+        color: $gray-200;
+        margin-left: $spacer;
+      }
+
+      &:first-child {
+        border-right: 1px solid $border-color;
+      }
+    }
+  }
+
+  .products {
+    display: grid;
+
+    grid-gap: $spacer;
+    grid-template-columns: repeat(4, 1fr);
+
+    @include media-breakpoint-down(lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include media-breakpoint-down(sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .product-card {
+    margin-bottom: 60px;
+  }
+}

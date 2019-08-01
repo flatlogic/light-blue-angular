@@ -1,0 +1,159 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">YOU ARE HERE</li>
+  <li class="active breadcrumb-item">Sparkline</li>
+</ol>
+<h1 class="page-title">Sparkline</h1>
+<div class="row">
+  <div class="col-12 col-lg-6 col-xl-5">
+    <widget
+      [title]="'<h5>Sparkline <span class=fw-semi-bold>Bar Chart</span></h5>'"
+      [close]="true"
+      [collapse]="true"
+      [customHeader]="true"
+    >
+      <p class="fs-mini text-muted">
+        Each example displayed below takes just 1 line of HTML or javascript to generate.
+      </p>
+      <div class="chart-overflow-bottom" #sparkline1></div>
+      <div class="stats-row text-muted mt-xlg">
+        <div class="stat-item">
+          <h6 class="name">ARR ($)</h6>
+          <p class="value">4 375 800</p>
+        </div>
+        <div class="stat-item">
+          <h6 class="name">MRR ($)</h6>
+          <p class="value">863 425</p>
+        </div>
+        <div class="stat-item">
+          <h6 class="name">TTN ($)</h6>
+          <p class="value">5 634 100</p>
+        </div>
+        <div class="stat-item">
+          <h6 class="name">MRR / ARR </h6>
+          <p class="value">0.1634</p>
+        </div>
+      </div>
+      <hr/>
+      <div class="d-flex justify-content-between">
+        <small>
+          <span class="badge badge-warning">Profit</span> Legend Item Emulation
+        </small>
+        <small>
+          <span class="badge badge-danger">Loss</span> Legend Item Emulation
+        </small>
+      </div>
+    </widget>
+  </div>
+  <div class="col-12 col-lg-6 col-xl-4">
+    <widget
+      [title]="'<h5>Sparkline <span class=fw-semi-bold>Pie Chart</span></h5>'"
+      [close]="true"
+      [collapse]="true"
+      [customHeader]="true"
+    >
+      <p class="fs-mini text-muted">
+        Each example displayed below takes just 1 line of HTML or javascript to generate.
+      </p>
+      <div class="text-center" #sparkline2></div>
+      <alert class="text-muted" [type]="'white'" [isOpen]="true" [dismissible]="true">
+        <h5>Sales Report</h5>
+        <progressbar class="progress-xs" type="secondary" [value]="16"></progressbar>
+        <p class="text-muted">
+          <small>Prev year quota achievement 16%. Should work harder!</small>
+        </p>
+      </alert>
+    </widget>
+  </div>
+  <div class="col-12 col-lg-6 col-xl-3">
+    <widget
+      [title]="'<h5>Area <span class=fw-semi-bold>Sparkline</span></h5>'"
+      [close]="true"
+      [collapse]="true"
+      [customHeader]="true"
+    >
+      <p class="fs-mini text-muted">
+        Each example displayed below takes just 1 line of HTML or javascript to generate.
+      </p>
+      <div class="stats-row text-muted mt">
+        <div class="stat-item">
+          <h6 class="name">Overall Growth</h6>
+          <p class="value">43.75%</p>
+        </div>
+        <div class="stat-item">
+          <h6 class="name">Montly</h6>
+          <p class="value">86.34%</p>
+        </div>
+      </div>
+      <p class="text-muted fs-mini">
+        <span class="fw-semi-bold">17% higher</span> than last month
+      </p>
+      <div class="chart-overflow-bottom" #sparkline3></div>
+    </widget>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 col-lg-7 col-xl-9">
+    <widget
+      [title]="'<h5>Sparkline <span class=fw-semi-bold>Line Chart</span></h5>'"
+      [close]="true"
+      [collapse]="true"
+      [customHeader]="true"
+    >
+      <p class="fs-mini text-muted">
+        Each example displayed below takes just 1 line of HTML or javascript to generate.
+      </p>
+      <div class="chart-overflow-bottom" #sparkline4></div>
+    </widget>
+  </div>
+  <div class="col-12 col-lg-5 col-xl-3">
+    <widget
+      [title]="'<h5>Sparkline <span class=fw-semi-bold>Pie Chart</span></h5>'"
+      [close]="true"
+      [collapse]="true"
+      [customHeader]="true"
+    >
+      <p class="fs-mini text-muted">
+        Each example displayed below takes just 1 line of HTML or javascript to generate.
+      </p>
+      <div class="text-center" #sparkline5></div>
+      <p class="mt">Possible actions:</p>
+      <div class="btn-group">
+        <button class="btn btn-light">Yoga</button>
+        <button class="btn btn-light">Coffee</button>
+        <button class="btn btn-light">Dancing</button>
+      </div>
+    </widget>
+  </div>
+  <div class="col-12 col-lg-6">
+    <widget
+      [title]="'<h5>Sparkline <span class=fw-semi-bold>Pie Chart</span></h5>'"
+      [close]="true"
+      [collapse]="true"
+      [customHeader]="true"
+    >
+      <div class="input-group input-group-transparent">
+        <input class="form-control" type="text" size="16" placeholder="Filter By Period: MM/DD/YYY"/>
+        <div class="input-group-append bg-white" slot="append">
+          <span class="input-group-text"><i class="fa fa-search"></i></span>
+        </div>
+      </div>
+      <p class="fs-mini text-muted mt">
+        Each example displayed below takes just 1 line of HTML or javascript to generate.
+      </p>
+      <div class="chart-overflow-bottom" #sparkline6></div>
+    </widget>
+  </div>
+  <div class="col-12 col-lg-6">
+    <widget
+      [title]="'<h5>Sparkline <span class=fw-semi-bold>Line Chart</span></h5>'"
+      [close]="true"
+      [collapse]="true"
+      [customHeader]="true"
+    >
+      <p class="fs-mini text-muted">
+        Each example displayed below takes just 1 line of HTML or javascript to generate.
+      </p>
+      <div class="chart-overflow-bottom" #sparkline7></div>
+    </widget>
+  </div>
+</div>

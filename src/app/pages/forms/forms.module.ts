@@ -1,65 +1,51 @@
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { Select2Module } from 'ng2-select2';
-import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
-import { AlertModule, TooltipModule } from 'ngx-bootstrap';
+import { TooltipModule, AlertModule, BsDropdownModule } from 'ngx-bootstrap';
 import { Autosize } from 'ng-autosize';
-import { TagInputModule } from 'ngx-chips';
-
-import { Account } from './account/account.component';
-import { Article } from './article/article.component';
-import { Elements } from './elements/elements.component';
-import { Validation } from './validation/validation.component';
-import { Wizard } from './wizard/wizard.component';
-import { FormWizard } from './wizard/form-wizard/form-wizard.directive';
+import { Select2Module } from 'ng2-select2';
 import { WidgetModule } from '../../layout/widget/widget.module';
-import {
-  DatetimeTransparent
-} from '../ui/datetime-transparent/datetime-transparent.directive';
-import {
-  MarkdownToolbarTransparent
-} from '../ui/markdown-toolbar-transparent/markdown-toolbar-transparent.directive';
-import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
-
+import { TextMaskModule } from 'angular2-text-mask';
+/* tslint:disable */
+import { BootstrapWizardModule } from '../../components/wizard/wizard.module';
+import { DropzoneDemoDirective } from '../../components/dropzone/dropzone.directive';
+import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
+/* tslint:enable */
+import { ElementsComponent } from './elements/elements.component';
+import { ValidationComponent } from './validation/validation.component';
+import { WizardComponent } from './wizard/wizard.component';
+import { EditorModule } from '@tinymce/tinymce-angular';
 
 export const routes = [
-  {path: '', redirectTo: 'account', pathMatch: 'full'},
-  {path: 'account', component: Account},
-  {path: 'article', component: Article},
-  {path: 'elements', component: Elements},
-  {path: 'validation', component: Validation},
-  {path: 'wizard', component: Wizard}
+  {path: '', redirectTo: 'elements', pathMatch: 'full'},
+  {path: 'elements', component: ElementsComponent},
+  {path: 'validation', component: ValidationComponent},
+  {path: 'wizard', component: WizardComponent}
 ];
 
 @NgModule({
   declarations: [
-    // Components / Directives/ Pipes
-    Account,
-    Article,
-    Elements,
-    Validation,
-    Wizard,
-    FormWizard,
     Autosize,
-    DatetimeTransparent,
-    MarkdownToolbarTransparent
+    ElementsComponent,
+    ValidationComponent,
+    WizardComponent,
+    DropzoneDemoDirective
   ],
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule,
-    Select2Module,
-    NKDatetimeModule,
-    AlertModule.forRoot(),
+    TextMaskModule,
     TooltipModule.forRoot(),
+    AlertModule.forRoot(),
+    BsDropdownModule.forRoot(),
     WidgetModule,
-    TagInputModule,
+    BootstrapWizardModule,
+    NKDatetimeModule,
+    Select2Module,
     RouterModule.forChild(routes),
-    FroalaEditorModule.forRoot(),
-    FroalaViewModule.forRoot()
+    EditorModule
   ]
 })
 export class FormModule {

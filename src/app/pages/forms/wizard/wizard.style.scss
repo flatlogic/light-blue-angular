@@ -1,59 +1,150 @@
 @import "../../../styles/helpers";
-@import "../../../../../node_modules/bootstrap-select/sass/bootstrap-select";
 @import "../../../styles/select2-variables";
 @import "../../../../../node_modules/select2/src/scss/core";
 @import "../../../../../node_modules/select2-bootstrap-theme/src/select2-bootstrap";
-@import "../../../../../node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker";
-@import "../../../../../node_modules/bootstrap-timepicker/css/bootstrap-timepicker";
+
+/***********************************/
+/**            PARSLEY            **/
+/***********************************/
+
+
+input.parsley-error{
+  border-color: theme-color('danger');
+  @include box-shadow(inset 0 1px 1px rgba(theme-color('danger'),.075));
+}
+
+.parsley-errors-list{
+  font-size: $small-font-size;
+  padding-left: 0;
+  margin-bottom: 5px;
+
+  li{
+    list-style: none;
+    color: theme-color('danger');
+  }
+}
+
+/***********************************/
+/**          FORM WIZARD          **/
+/***********************************/
 
 .form-wizard{
-  .progress{
-    margin-top: 6px;
-    margin-bottom: 10px;
+  .nav-pills{
+    > li > a{
+      padding-top: 15px;
+      padding-bottom: 15px;
+      background-color: $bg-addition;
+      color: $text-color;
+      @include border-radius(3px);
+      cursor: default;
+    }
+
+    > li.active > a{
+      background-color: theme-color('primary');
+      color: $white;
+    }
+    > li.done > a {
+      background-color: lighten(theme-color('primary'), 28%);
+      color: $white;
+      cursor: pointer;
+    }
+
+    @include media-breakpoint-up(md) {
+      margin-right: -$spacer * 0.75;
+      margin-left: -$spacer * 0.75;
+
+      > li {
+        padding: 0 $spacer * 0.75;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      > li {
+        margin-bottom: $spacer / 2;
+      }
+    }
   }
 
-  .form-group:last-child {
-    margin-bottom: 0;
+  .tab-pane{
+    padding: $spacer 20px;
+    @include border-radius(5px);
+  }
+
+  .pager > li.disabled > .btn{
+    cursor: not-allowed;
+    pointer-events: none; // Future-proof disabling of clicks
+    opacity: .65;
+    @include box-shadow(none);
   }
 
   .pager {
     display: flex;
-    margin: 18px 0;
-    flex-direction: row;
     justify-content: space-between;
-    .disabled button{
-      cursor: not-allowed;
-      opacity: .65;
-    }
-  }
-
-  #datetimepicker .input-group {
-    width: 100%;
-    display: flex !important;
-
-    .form-control {
-      border-bottom-right-radius: 0.25rem;
-      border-top-right-radius: 0.25rem;
-    }
-
-    .input-group-addon {
-      display: none;
-    }
+    margin-top: 1rem;
   }
 }
 
-.wizard-navigation{
-  margin-bottom: 5px;
+/***********************************/
+/**         MODAL WIZARD          **/
+/***********************************/
 
-  a{
-    color: $text-color;
+.wizard-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 
-    strong{
-      font-weight: $font-weight-semi-bold;
-    }
-
-    small {
-      font-weight: $font-weight-thin;
-    }
+  .close {
+    order: 1;
   }
+}
+
+.wizard-header h3 {
+  font-family: $font-family-base;
+  font-weight: $headings-font-weight;
+  color: $text-color;
+}
+
+.wizard-nav-list > li.already-visited > a.wizard-nav-link,
+.wizard-nav-list > li.already-visited.active > a.wizard-nav-link{
+  color: $text-color;
+}
+
+.wizard-nav-item:not(.active) > .wizard-nav-link:hover {
+  background-color: $gray-200;
+}
+
+.wizard-nav-list li.active > a,
+.wizard-nav-item .already-visited .active{
+  background-color: theme-color('info');
+  color: $white;
+}
+
+.wizard-dialog {
+  max-width: none;
+}
+
+.wizard-dialog .popover.error-popover .arrow {
+  border-right-color: transparent;
+}
+
+.wizard-nav-list li > a {
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  padding: 10px 15px;
+}
+
+.wizard-steps {
+  width: 30%;
+}
+
+.popover-body-error {
+  padding: 0;
+}
+
+.popover-content-error {
+  background-color:#F2DEDE;
+  color:#B94A48;
+  border-color:#953B39;
+  border-radius: $border-radius-lg;
 }

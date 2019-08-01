@@ -1,85 +1,130 @@
 <ul id="side-nav" class="side-nav">
-  <li [routerLinkActive]="['active']">
-    <a routerLink="dashboard"><i class="fa fa-home"></i> <span class="name">Dashboard</span></a>
+  <li class="accordion-group panel" [routerLinkActive]="['active']">
+    <a (click)="sidebarBehavior($event)" class="accordion-toggle collapsed" data-toggle="collapse"
+       data-parent="#side-nav" href="#main-collapse">
+      <i class="fi flaticon-home"></i>
+      <span class="name">Dashboard</span>
+    </a>
+    <ul id="main-collapse" class="accordion-body collapse" aria-expanded="false">
+      <li [routerLinkActive]="['active']"><a routerLink="main/visits">Visits</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="main/analytics">Analytics</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="main/widgets">Widgets</a></li>
+    </ul>
+  </li>
+  <li class="accordion-group panel" [routerLinkActive]="['active']">
+    <a (click)="sidebarBehavior($event)" class="accordion-toggle collapsed" data-toggle="collapse"
+       data-parent="#side-nav" href="#commerce-collapse">
+      <i class="fi flaticon-diamond"></i>
+      <span class="name">E-commerce</span>
+    </a>
+    <ul id="commerce-collapse" class="accordion-body collapse" aria-expanded="false">
+      <li [routerLinkActive]="['active']"><a routerLink="ecommerce/product-grid">Product Grid</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="ecommerce/product-detail">Product Detail</a></li>
+    </ul>
   </li>
   <li [routerLinkActive]="['active']">
-    <a routerLink="package"><i class="fa fa-database"></i> <span class="name">LB Package <sup class="text-warning fw-bold">4.0</sup></span></a>
+    <a routerLink="package"><i class="fi flaticon-database-1"></i> <span class="name">LB Package</span></a>
+  </li>
+  <li [routerLinkActive]="['active']">
+    <a routerLink="profile"><i class="fi flaticon-user"></i> <span class="name">Profile</span></a>
+  </li>
+
+  <li [routerLinkActive]="['active']">
+    <a routerLink="inbox"><i class="fi flaticon-paper-plane"></i> <span class="name">Email</span>
+      <span class="badge badge-pill badge-warning">
+          9
+      </span>
+    </a>
+  </li>
+  <h6 class="sidebar-nav-title">TEMPLATE</h6>
+  <li class="accordion-group panel" [routerLinkActive]="['active']">
+    <a (click)="sidebarBehavior($event)" class="accordion-toggle collapsed" data-toggle="collapse"
+       data-parent="#side-nav" href="#core-collapse">
+      <i class="fi flaticon-network"></i>
+      <span class="name">Core</span>
+    </a>
+    <ul id="core-collapse" class="accordion-body collapse" aria-expanded="false">
+      <li [routerLinkActive]="['active']"><a routerLink="core/typography">Typography</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="core/colors">Colors</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="core/grid">Grid</a></li>
+    </ul>
+  </li>
+  <li class="accordion-group panel" [routerLinkActive]="['active']">
+    <a (click)="sidebarBehavior($event)" class="accordion-toggle collapsed" data-toggle="collapse"
+       data-parent="#side-nav" href="#ui-collapse"><i class="fi flaticon-layers"></i> <span class="name">UI Elements</span></a>
+    <ul id="ui-collapse" class="accordion-body collapse" aria-expanded="false">
+      <li [routerLinkActive]="['active']"><a routerLink="ui/alerts">Alerts</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="ui/badge">Badge</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="ui/buttons">Buttons</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="ui/card">Card</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="ui/carousel">Carousel</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="ui/jumbotron">Jumbotron</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="ui/icons">Icons</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="ui/list-groups">List Groups</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="ui/modal">Modal</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="ui/notifications">Notifications</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="ui/popovers">Popovers</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="ui/progress">Progress</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="ui/tabs-accordion">Tabs & Accordion</a></li>
+    </ul>
   </li>
   <li class="accordion-group panel" [routerLinkActive]="['active']">
     <a (click)="sidebarBehavior($event)" class="accordion-toggle collapsed" data-toggle="collapse"
        data-parent="#side-nav" href="#forms-collapse">
-			 <i class="fa fa-pencil"></i>
+			 <i class="fi flaticon-list"></i>
 			 <span class="name">Forms</span>
 		 </a>
     <ul id="forms-collapse" class="accordion-body collapse" aria-expanded="false">
-      <li [routerLinkActive]="['active']"><a routerLink="forms/account">Account</a></li>
-      <li [routerLinkActive]="['active']"><a routerLink="forms/article">Article</a></li>
       <li [routerLinkActive]="['active']"><a routerLink="forms/elements">Elements</a></li>
       <li [routerLinkActive]="['active']"><a routerLink="forms/validation">Validation</a></li>
       <li [routerLinkActive]="['active']"><a routerLink="forms/wizard">Wizard</a></li>
     </ul>
   </li>
   <li class="accordion-group panel" [routerLinkActive]="['active']">
-    <a (click)="sidebarBehavior($event)" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#stats-collapse"><i class="fa fa-area-chart"></i> <span class="name">Statistics</span></a>
-    <ul id="stats-collapse" class="accordion-body collapse" aria-expanded="false">
-      <li [routerLinkActive]="['active']"><a routerLink="statistics/stats">Stats</a></li>
-      <li [routerLinkActive]="['active']"><a routerLink="statistics/charts">Charts</a></li>
-      <li [routerLinkActive]="['active']"><a routerLink="statistics/realtime">Realtime</a></li>
+    <a (click)="sidebarBehavior($event)" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#charts-collapse"><i class="fi flaticon-controls"></i> <span class="name">Charts</span></a>
+    <ul id="charts-collapse" class="accordion-body collapse" aria-expanded="false">
+      <li [routerLinkActive]="['active']"><a routerLink="charts/overview">Overview</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="charts/flot">Flot</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="charts/morris">Morris</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="charts/sparkline">Sparkline</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="charts/easy-pie">Easy Pie</a></li>
     </ul>
+  </li>
+  <li [routerLinkActive]="['active']">
+    <a routerLink="grid"><i class="fi flaticon-menu-4"></i> <span class="name">Grid</span></a>
   </li>
   <li class="accordion-group panel" [routerLinkActive]="['active']">
     <a (click)="sidebarBehavior($event)" class="accordion-toggle collapsed" data-toggle="collapse"
-       data-parent="#side-nav" href="#ui-collapse"><i class="fa fa-magic"></i> <span class="name">User Interface</span></a>
-    <ul id="ui-collapse" class="accordion-body collapse" aria-expanded="false">
-      <li [routerLinkActive]="['active']"><a routerLink="ui/buttons">Buttons</a></li>
-      <li [routerLinkActive]="['active']"><a routerLink="ui/dialogs">Dialogs</a></li>
-      <li [routerLinkActive]="['active']"><a routerLink="ui/notifications">Notifications</a></li>
-      <li [routerLinkActive]="['active']"><a routerLink="ui/icons">Icons</a></li>
-      <li [routerLinkActive]="['active']"><a routerLink="ui/tabs">Tabs</a></li>
-      <li [routerLinkActive]="['active']"><a routerLink="ui/accordion">Accordion</a></li>
-    </ul>
-  </li>
-  <li class="accordion-group panel" [routerLinkActive]="['active']">
-    <a (click)="sidebarBehavior($event)" class="accordion-toggle collapsed" data-toggle="collapse"
-       data-parent="#side-nav" href="#components-collapse"><i class="fa fa-tree"></i> <span class="name">Components</span></a>
-    <ul id="components-collapse" class="accordion-body collapse" aria-expanded="false">
-      <li [routerLinkActive]="['active']"><a routerLink="components/calendar">Calendar <sup class="text-danger fw-bold">ng2</sup></a></li>
-      <li [routerLinkActive]="['active']"><a routerLink="components/maps">Maps</a></li>
-      <li [routerLinkActive]="['active']"><a routerLink="components/gallery">Gallery <sup class="text-danger fw-bold">ng2</sup></a></li>
-      <li [routerLinkActive]="['active']"><a routerLink="components/fileupload">Fileupload</a></li>
-    </ul>
-  </li>
-  <li class="accordion-group panel" [routerLinkActive]="['active']">
-    <a (click)="sidebarBehavior($event)" class="accordion-toggle collapsed" data-toggle="collapse"
-       data-parent="#side-nav" href="#tables-collapse"><i class="fa fa-cog"></i> <span class="name">Tables</span></a>
+       data-parent="#side-nav" href="#tables-collapse"><i class="fi flaticon-equal-1"></i> <span class="name">Tables</span></a>
     <ul id="tables-collapse" class="accordion-body collapse" aria-expanded="false">
-      <li [routerLinkActive]="['active']"><a routerLink="tables/static">Static</a></li>
-      <li [routerLinkActive]="['active']"><a routerLink="tables/dynamic">Dynamic <sup class="text-danger fw-bold">ng2</sup></a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="tables/basic">Basic</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="tables/dynamic">Dynamic</a></li>
     </ul>
   </li>
   <li class="accordion-group panel" [routerLinkActive]="['active']">
     <a (click)="sidebarBehavior($event)" class="accordion-toggle collapsed" data-toggle="collapse"
-       data-parent="#side-nav" href="#widgets-collapse"><i class="fa fa-th"></i> <span class="name">Widgets</span></a>
-    <ul id="widgets-collapse" class="accordion-body collapse" aria-expanded="false">
-      <li [routerLinkActive]="['active']"><a routerLink="widgets/basic">Basic</a></li>
-      <li [routerLinkActive]="['active']"><a routerLink="widgets/live">Live</a></li>
+       data-parent="#side-nav" href="#maps-collapse"><i class="fi flaticon-map-location"></i> <span class="name">Maps</span></a>
+    <ul id="maps-collapse" class="accordion-body collapse" aria-expanded="false">
+      <li [routerLinkActive]="['active']"><a routerLink="maps/google">Google</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="maps/vector">Vector</a></li>
     </ul>
   </li>
   <li class="accordion-group panel" [routerLinkActive]="['active']">
     <a (click)="sidebarBehavior($event)" class="accordion-toggle collapsed" data-toggle="collapse"
-       data-parent="#side-nav" href="#special-collapse"><i class="fa fa-leaf"></i> <span class="name">Special</span></a>
+       data-parent="#side-nav" href="#special-collapse"><i class="fi flaticon-star"></i> <span class="name">Extra</span></a>
     <ul id="special-collapse" class="accordion-body collapse" aria-expanded="false">
-      <li [routerLinkActive]="['active']"><a routerLink="special/search">Search <sup class="text-warning fw-bold">new</sup></a></li>
-      <li [routerLinkActive]="['active']"><a routerLink="special/invoice">Invoice</a></li>
-      <li [routerLinkActive]="['active']"><a routerLink="special/inbox">Inbox &nbsp; <span class="badge badge-danger">3</span></a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="extra/calendar">Search</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="extra/invoice">Invoice</a></li>
       <li><a routerLink="/login" >Login</a></li>
       <li><a routerLink="/error">Error Page</a></li>
-      <li><a routerLink="/landing">Landing</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="extra/gallery">Gallery</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="extra/search">Search</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="extra/timeline">Time line</a></li>
     </ul>
   </li>
   <li class="accordion-group panel">
     <a (click)="sidebarBehavior($event)" class="accordion-toggle collapsed" data-toggle="collapse"
-       data-parent="#side-nav" href="#menu-collapse"><i class="fa fa-folder-open"></i> <span class="name">Menu Levels</span></a>
+       data-parent="#side-nav" href="#menu-collapse"><i class="fi flaticon-folder-10"></i> <span class="name">Menu Levels</span></a>
     <ul id="menu-collapse" class="accordion-body collapse" aria-expanded="false">
       <li><a href="#">Item 1.1</a></li>
       <li><a href="#">Item 1.2</a></li>
@@ -88,7 +133,7 @@
   </li>
 </ul>
 
-<h5 class="sidebar-nav-title">Labels <a class="action-link" href="#"><i class="glyphicon glyphicon-plus"></i></a></h5>
+<h6 class="sidebar-nav-title">LABELS <a class="action-link" href="#"><i class="glyphicon glyphicon-plus"></i></a></h6>
 <!-- some styled links in sidebar. ready to use as links to email folders, projects, groups, etc -->
 <ul class="sidebar-labels">
   <li>
@@ -112,7 +157,7 @@
   </li>
 </ul>
 
-<h5 class="sidebar-nav-title">Projects</h5>
+<h6 class="sidebar-nav-title">PROJECTS</h6>
 <!-- A place for sidebar notifications & alerts -->
 <div class="sidebar-alerts">
   <div class="alert fade show">

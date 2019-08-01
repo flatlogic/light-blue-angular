@@ -1,0 +1,52 @@
+@import "../../../styles/helpers";
+
+.email-view{
+  hr{
+    margin: 5px 0;
+  }
+
+  .email-body{
+    margin-top: $spacer;
+  }
+}
+
+.email-details img{
+  width: 30px;
+  height: 30px;
+  float: left;
+}
+
+.email-details-content{
+  @include clearfix();
+
+  .email{
+    color: $text-muted;
+    font-size: $font-size-mini;
+  }
+
+  .receiver{
+    display: block;
+    color: $text-muted;
+    margin-top: -6px;
+  }
+
+  .email-date{
+    margin-right: 10px;
+    line-height: 28px;
+    vertical-align: middle;
+  }
+}
+
+.email-attachments{
+  .attachment{
+    img{
+      display: block;
+    }
+
+    .title{
+      margin: 0;
+      font-weight: bold;
+    }
+
+  }
+}

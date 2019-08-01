@@ -1,0 +1,10 @@
+<div class="filters">
+  <div class="filters-group" *ngFor="let filter of filters.mainFilters">
+    {{filter.name}}
+    <filter-dropdown [dropdown]="filter.items"></filter-dropdown>
+  </div>
+  <div class="filters-group">
+    {{filters.sortFilter.name}}
+    <filter-dropdown [dropdown]="filters.sortFilter.items"></filter-dropdown>
+  </div>
+</div>

@@ -1,0 +1,148 @@
+@import "../../../styles/helpers";
+
+.product-card {
+  .card-photo {
+    height: 320px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    box-shadow: var(--widget-shadow);
+    border-radius: $border-radius;
+
+    @include media-breakpoint-down(sm) {
+      height: 200px;
+    }
+
+    @include media-breakpoint-down(md) {
+      height: 250px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      height: 150px;
+    }
+
+    .badge {
+      position: absolute;
+      left: 0;
+      top: 15px;
+      font-weight: $font-weight-thin;
+      padding: $spacer / 2;
+      border-radius: 0;
+      font-size: $font-size-base;
+    }
+
+    .star {
+      transition: .3s;
+      opacity: 0.85;
+      width: 26px;
+      height: 26px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $white;
+      border-radius: 50%;
+      position: absolute;
+      right: 14px;
+      top: 14px;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 1;
+      }
+
+      .fa {
+        color: theme-color('dark');
+      }
+
+    }
+  }
+
+  .card-title {
+    margin: 15px 0 5px;
+    font-weight: $font-weight-normal;
+  }
+
+  .card-description {
+    margin-bottom: 5px;
+    font-weight: $font-weight-normal;
+  }
+
+  .card-price-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .price {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-semi-bold;
+
+    &.price-sale {
+      font-weight: $font-weight-normal;
+    }
+
+    .old {
+      color: $text-muted;
+      position: relative;
+      margin-right: $spacer;
+
+      &::before {
+        content: '';
+        width: 100%;
+        height: 1px;
+        left: 0;
+        bottom: 0;
+        transform: translateY(-10px);
+        background-color: $gray-light;
+        position: absolute;
+      }
+
+      &::after {
+        content: '';
+        bottom: 2px;
+        position: absolute;
+        width: 1px;
+        height: 15px;
+        background-color: $gray-700;
+        margin: 0 7.5px;
+      }
+    }
+
+    .new {
+      color: theme-color('danger');
+      font-weight: $font-weight-semi-bold;
+    }
+  }
+
+  .rating {
+    color: theme-color('warning');
+    font-weight: $font-weight-semi-bold;
+    display: flex;
+    align-items: center;
+    font-size: $font-size-base;
+
+    i {
+      margin-left: 7.5px;
+    }
+
+    &.rating-reverse {
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+
+      i {
+        margin: 0 7.5px 0 0;
+      }
+    }
+
+    &.rating-lg {
+      font-size: $font-size-lg;
+
+      i {
+        margin-top: -2px;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+}

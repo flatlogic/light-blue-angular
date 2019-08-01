@@ -104,7 +104,7 @@
   max-width: 200px;
 }
 
-.dropzone{
+form.dropzone{
   border: 2px dashed $dropzone-color;
   margin-top: 10px;
   font-size: 40px;
@@ -113,6 +113,7 @@
   padding-left: 7%;
   vertical-align: middle;
   border-radius: $border-radius-base;
+  background-color: $bg-addition;
 
   @include clearfix;
 
@@ -294,116 +295,6 @@
 .jqstooltip{
   &, *{
     @include box-sizing(content-box);
-  }
-}
-
-/***********************************/
-/**          NEWS LIST           **/
-/**********************************/
-/**
- * Legacy .users-list. Will be removed in next release.
- */
-
-.news-list,
-.users-list{
-
-  &.news-list-no-hover li:hover{
-    background: none;
-    cursor: default;
-  }
-
-  &.stretchable > li{
-    height: auto;
-  }
-
-  li{
-    @include box-sizing(content-box);
-    border-top: 1px solid $bg-addition;
-    padding: 12px;
-    margin: 0 (-$widget-padding-horizontal);
-    cursor: pointer;
-    height: 50px;
-    @include transition(background-color .2s ease-out);
-
-    &:hover{
-      background: $bg-addition;
-    }
-
-    &:last-child{
-      margin-bottom: -$widget-padding-vertical;
-    }
-  }
-
-  img,
-  .icon{
-    float: left;
-    height: 50px;
-    width: 50px;
-  }
-
-  .icon{
-    line-height: 50px;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 32px;
-  }
-
-  .news-item-info{
-    margin-left: 62px; /*50 + 12px padding*/
-  }
-
-  .name, .time, .position{
-    line-height: 16px;
-  }
-
-  h4.name{
-    text-transform: none;
-  }
-
-  .name{
-    margin: 0;
-    text-transform: uppercase;
-
-    a{
-      text-decoration: none;
-      &:hover{
-        color: $link-color;
-      }
-    }
-  }
-
-  p{
-    margin-top: 5px;
-    font-size: 90%;
-    line-height: 1.4;
-  }
-
-  .time{
-    font-size: $font-size-sm;
-    color: $text-muted;
-  }
-
-  .options{
-    margin-top: 5px;
-  }
-
-  .comment{
-    font-size: $font-size-sm;
-    color: $widget-color;
-    line-height: 1.3em;
-  }
-}
-
-.users-list-group{
-  img{
-    width: 40px;
-    height: 40px;
-    float: left;
-    margin-right: 10px;
-  }
-
-  .fa-circle{
-    margin-top: 14px;
   }
 }
 

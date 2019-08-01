@@ -9,11 +9,52 @@
   @include transition(height .15s ease-in-out);
 }
 
+/**
+ * .circle is a pretty cool way to add a bit of beauty to raw data.
+ * should be used with bg-* and text-* classes for colors.
+ */
+.circle, .circle-o, .rounded {
+  display: inline-block;
+  width: #{$line-height-base}em;
+  height: #{$line-height-base}em;
+  line-height: #{$line-height-base}em;
+  text-align: center;
+}
+
+.circle, .circle-o {
+  @include border-radius(50%);
+}
+
+.circle-lg, .rounded-lg {
+  width: 2.2em;
+  height: 2.2em;
+  line-height: 2.2em;
+}
+
+.circle-o {
+  border: #{$line-height-base/5}em solid transparent;
+
+  &.circle-o-danger {border-color: theme-color('danger');}
+  &.circle-o-warning {border-color: theme-color('warning');}
+  &.circle-o-success {border-color: theme-color('success');}
+  &.circle-o-info {border-color: theme-color('info');}
+  &.circle-o-primary {border-color: theme-color('primary');}
+  &.circle-o-black {border-color: $black;}
+  &.circle-o-gray-darker {border-color: $gray-900;}
+  &.circle-o-gray-dark {border-color: $gray-800;}
+  &.circle-o-gray {border-color: $gray-700;}
+  &.circle-o-gray-light {border-color: $gray-600;}
+  &.circle-o-gray-lighter {border-color: $gray-200;}
+  &.circle-o-white {border-color: $white;}
+}
+
+@include thumb('.thumb-xl', 100px);
 @include thumb('.thumb-lg', 60px);
 @include thumb('.thumb', 48px);
 @include thumb('.thumb-sm', 34px);
 @include thumb('.thumb-xs', 28px);
 
+.thumb-xl,
 .thumb-xs,
 .thumb-sm,
 .thumb-lg,
@@ -138,6 +179,13 @@ $z-index-variants: (more: 1, less: -1);
 
 @include property-variants('.z-index', 'z-index', $z-index-variants);
 
+.w-100 {
+  width: 100%;
+}
+
+h-100 {
+  height: 100%;
+}
 
 .no-border{
   border: none;
@@ -219,6 +267,7 @@ $z-index-variants: (more: 1, less: -1);
 @include bg-variant('.bg-danger', theme-color('danger'));
 
 @include bg-variant('.bg-body', $body-bg);
+@include bg-variant('.bg-body-light', $body-bg-light);
 @include bg-variant('.bg-gray', $gray-700);
 @include bg-variant('.bg-gray-transparent', rgba($gray-300, .6));
 @include bg-variant('.bg-gray-dark', $gray-800);
@@ -235,13 +284,22 @@ $z-index-variants: (more: 1, less: -1);
 }
 
 @include text-emphasis-variant('.text-white', $white);
-@include text-emphasis-variant('.text-gray', $gray-300);
+@include text-emphasis-variant('.text-gray', $gray-700);
 @include text-emphasis-variant('.text-gray-dark', $gray-800);
-@include text-emphasis-variant('.text-gray-light', $gray-light);
+@include text-emphasis-variant('.text-gray-light', $gray-600);
 @include text-emphasis-variant('.text-semi-muted', $gray-light);
 @include text-emphasis-variant('.text-gray-darker', $gray-900);
 @include text-emphasis-variant('.text-gray-lighter', $gray-200);
 
+.deemphasize {
+  font-size: $font-size-mini;
+  color: $text-muted;
+}
+
+.help {
+  font-size: $font-size-mini;
+  color: $text-muted;
+}
 
 .text-light{
   opacity: .8;
@@ -288,4 +346,29 @@ $z-index-variants: (more: 1, less: -1);
     .d#{$infix}-down-flex { display: flex !important; }
     .d#{$infix}-down-inline-flex { display: inline-flex !important; }
   }
+}
+
+.chart-overflow-bottom {
+  margin: 0 (-$widget-padding-horizontal) (-$widget-padding-vertical);
+}
+
+// Background
+
+.background-cover {
+  background-size: cover;
+  background-position: center;
+}
+
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+  -webkit-transform: translate3d(0, 4%, 0) scale(.93);
+  transform: translate3d(0, 4%, 0) scale(.93);
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 200ms ease-in, -webkit-transform 200ms ease-in, transform 200ms ease-in;
+  -webkit-transform: translate3d(0, 0, 0) scale(1);
+  transform: translate3d(0, 0, 0) scale(1);
 }

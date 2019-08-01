@@ -1,0 +1,20 @@
+<div class="product-description widget">
+  <div *ngFor="let item of description" class="description-section {{item.extraClass}}">
+    <h5 class="description-title">{{item.title}}</h5>
+    <div [innerHtml]="item.body"></div>
+  </div>
+</div>
+<div class="product-description product-description-mobile">
+  <div *ngFor="let element of description, let i = index" class="card panel">
+    <div class="card-header panel-header" role="button" (click)="toggleAccordion(i)">
+      <div class="mb-0">
+        <a class="accordion-toggle" role="button">
+          {{element.title}}
+          <i class="fa fa-angle-down fa-2x" [ngClass]="{'expanded': accordion[i]}"></i>
+        </a>
+      </div>
+    </div>
+    <div [collapse]="!accordion[i]" class="panel-body card-body {{element.extraClass}}" [innerHtml]="element.body">
+    </div>
+  </div>
+</div>
