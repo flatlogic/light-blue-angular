@@ -57,17 +57,6 @@
     display: none;
   }
 
-  .logo,
-  .sidebar-on-right .logo,
-  .sidebar-hidden .logo{
-    display: block;
-    left: 1.6%;
-    right: auto;
-    padding-right: 5px;
-    width: 40px;
-    top: 4px;
-  }
-
   .widget-404-search, .widget-404{
     width: 402px;
   }
@@ -139,7 +128,7 @@
   }
 }
 
-@include media-breakpoint-down(xs) {
+@include media-breakpoint-down(sm) {
 //@media (max-width: $screen-xs-min){
 
   .sidebar,
@@ -230,6 +219,8 @@
     overflow: hidden;
     height: 0;
     @include transition(height .3s ease);
+    order: 2;
+    flex: 1 1 100%;
   }
 
   .page-header .search-query{

@@ -10,7 +10,7 @@
   z-index: 1000;
   max-width: 200px;
   display: none;
-  background-color : $widget-bg;
+  background-color : $widget-bg-color;
   border: 1px solid #ccc;
   border-radius: $border-radius;
   font-size: $font-size-sm;
@@ -26,7 +26,7 @@
 
   box-sizing: content-box;
   border: 1px solid $text-color;
-  background-color: $widget-bg;
+  background-color: $widget-bg-color;
   color: $text-color;
   line-height: 20px;
   text-align: center;

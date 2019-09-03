@@ -172,7 +172,7 @@ form.dropzone{
   padding: 5px;
   text-align: center;
   margin-bottom: $widget-mb;
-  background: $widget-bg;
+  background: $widget-bg-color;
   color: $widget-color;
 
   .description{
@@ -352,7 +352,7 @@ form.dropzone{
   padding: 8px 10px;
   background: $bg-addition;
   position: relative;
-  border-left: 2px solid darken($widget-bg, 10%);
+  border-left: 2px solid darken($widget-bg-color, 10%);
 
   border-radius: $border-radius-base;
 
@@ -360,14 +360,14 @@ form.dropzone{
     margin-left: 0;
     margin-right: 63px;
     border-left: none;
-    border-right: 2px solid darken($widget-bg, 10%);
+    border-right: 2px solid darken($widget-bg-color, 10%);
 
     .arrow{
       left: auto;
       right: -7px;
 
       border-right: none;
-      border-left: 5px solid darken($widget-bg, 10%);
+      border-left: 5px solid darken($widget-bg-color, 10%);
     }
 
     .sender, .text{
@@ -385,7 +385,7 @@ form.dropzone{
 
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
-    border-right: 5px solid darken($widget-bg, 10%);
+    border-right: 5px solid darken($widget-bg-color, 10%);
   }
 }
 
@@ -485,7 +485,7 @@ form.dropzone{
 
   > .list-group-item-placeholder{
     border: 1px dashed $gray-light;
-    background-color: rgba($widget-bg-common, .25);
+    background-color: rgba($widget-bg-color, .25);
   }
 
   &:last-of-type > .list-group-item:last-child{
@@ -543,7 +543,7 @@ form.dropzone{
   padding: 5px 10px;
   color: $widget-color;
   text-decoration: none;
-  background: $widget-bg;
+  background: $widget-bg-color;
   border-radius: $border-radius-base;
 
   @include box-sizing(border-box);
@@ -588,7 +588,7 @@ form.dropzone{
   margin: 5px 0;
   padding: 0;
   min-height: 30px;
-  background: rgba($widget-bg-common, .2);
+  background: rgba($widget-bg-color, .2);
   border: 1px dashed rgba(white, .6);
   box-sizing: border-box;
   -moz-box-sizing: border-box;

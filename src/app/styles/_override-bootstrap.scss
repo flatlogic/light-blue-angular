@@ -626,6 +626,10 @@ legend {
     margin-top: 11px;
     margin-bottom: 9px;
   }
+
+  .breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+  }
 }
 
 /***************************/
@@ -735,7 +739,7 @@ legend {
 /***************************/
 
 .card {
-  background-color: $widget-bg;
+  background-color: $widget-bg-color;
   color: $widget-color;
   border: none;
 }
@@ -785,7 +789,7 @@ legend {
 
 .jumbotron {
   @include border-radius($widget-border-radius);
-  background-color: $widget-bg;
+  background-color: $widget-bg-color;
 }
 
 /***************************/
@@ -795,11 +799,16 @@ legend {
 .alert {
   text-shadow: none;
   font-weight: normal;
-}
 
-.close{
-  @include transition(opacity .2s ease-out);
-  text-shadow: none;
+  button.close {
+    font-weight: 300;
+    color: #fff;
+    font-size: 18px;
+    text-shadow: none;
+    opacity: 1;
+    outline: none;
+    @include transition(opacity .2s ease-out);
+  }
 }
 
 .alert-sm{
@@ -896,7 +905,7 @@ legend {
 @include bg-variant('.bg-inverse', $widget-color);
 
 .bg-inverse {
-  color: $widget-bg-common;
+  color: $widget-bg-color;
 }
 
 /***************************/

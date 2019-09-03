@@ -98,6 +98,7 @@ $font-weight-base: $font-weight-thin !default;
 
 $line-height-base:        1.428571429 !default; // 20/14
 
+$logo-color: $white;
 // Links
 // -------------------------
 
@@ -119,7 +120,6 @@ $content-padding: 40px;
 
 $basic-border-color: transparent;
 
-$widget-bg-common:        #333 !default; //#ddd
 $widget-mb:        30px;
 $widget-color:     $text-color;
 $widget-header-color: lighten($widget-color, 5%);
@@ -129,9 +129,8 @@ $widget-controls-hover-color: rgba($white, 0.6);
 $widget-border-radius: 10px;
 $widget-bg-color: rgba(0, 0, 0, .24);
 
-$text-transparent: rgba($widget-bg-common, 0.5);
-$bg-addition: rgba($widget-bg-common, 0.3);
-$widget-bg: rgba($widget-bg-common, 0.425);
+$text-transparent: opacify($widget-bg-color, .07);
+$bg-addition: rgba($widget-bg-color, 0.3);
 
 $widget-padding-vertical: 15px;
 $widget-padding-horizontal: 17px;
@@ -144,14 +143,14 @@ $sidebar-item-sub-active-bg: darken($sidebar-item-active-bg, 15%);
 $page-title-color: $white;
 
 $header-link-color: $text-transparent;
-$header-notification-count: rgba($widget-bg-common, 0.55);
+$header-notification-count: rgba($widget-bg-color, 0.55);
 
 $header-search-query-bg-image: url(assets/img/search-white.png);
 $header-search-query-placeholder-color: rgba(#eee, .76);
 
 $header-dropdown-primary-color:          $widget-header-color;
 $header-dropdown-secondary-color:        #ddd;
-$header-dropdown-bg:                     rgba($widget-bg-common, 0.85);
+$header-dropdown-bg:                     rgba($widget-bg-color, 0.85);
 $header-dropdown-shadow:                 none;
 $header-dropdown-item-hover:             $blue;
 
@@ -162,14 +161,14 @@ $input-transparent-focused-shadow: inset 0 1px 1px rgba(0,0,0,.2);
 // Widgets
 // -------------------------
 
-$feed-item-bg: $widget-bg;
+$feed-item-bg: $widget-bg-color;
 $feed-item-color: $white;
 $feed-item-line-color: transparent;
 
 $nav-tabs-active-link-hover-bg: $bg-addition !default;
 $nav-tabs-active-link-hover-color: $gray-700 !default;
 
-$tabs-widget-active-item-hover-bg: rgba(darken($widget-bg-common, 10%), 0.4);
+$tabs-widget-active-item-hover-bg: rgba(darken($widget-bg-color, 10%), 0.4);
 
 $location-selector-bg: $bg-addition;
 $location-selector-border-color: #eee;
@@ -278,12 +277,12 @@ $state-danger-bg:                rgba($state-danger-border, 0.29) !default;
 //== Tables
 //
 $table-bg-accent:               $bg-addition !default;
-$table-border-color:            rgba($widget-bg-common, 0.35) !default; // table and cell border
+$table-border-color:            rgba($widget-bg-color, 0.35) !default; // table and cell border
 $table-bg-hover:                darken($bg-addition, 5%);
 
 // List group
 // -------------------------
-$list-group-bg: $widget-bg !default;
+$list-group-bg: $widget-bg-color !default;
 $list-group-border:           transparent !default;
 $list-group-link-color:       $widget-color;
 $list-group-hover-bg: $bg-addition;
@@ -297,13 +296,13 @@ $jumbotron-heading-color:        inherit !default;
 
 // Popovers
 // -------------------------
-$popover-bg:                          rgba($widget-bg-common, 0.85) !default;
+$popover-bg:                          rgba($widget-bg-color, 0.85) !default;
 $popover-arrow-color:                 $popover-bg !default;
 $popover-border-color:                transparent;
 
 // Thumbnails
 // -------------------------
-$thumbnail-bg:                $widget-bg;
+$thumbnail-bg:                $widget-bg-color;
 $thumbnail-border-width:      0 !default;
 $thumbnail-border-color:      transparent !default;
 $thumbnail-border-radius:     0 !default;
@@ -378,12 +377,12 @@ $well-border:     transparent !default;
 
 $pre-bg: $bg-addition !default;
 $pre-color:                   $text-color !default;
-$pre-border-color: $widget-bg !default;
+$pre-border-color: $widget-bg-color !default;
 
 // Type
 // --------------------------------------------------
 
-$blockquote-border-color:             $widget-bg;
+$blockquote-border-color:             $widget-bg-color;
 
 // Custom libs variables
 // ------------------------

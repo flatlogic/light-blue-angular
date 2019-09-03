@@ -9,7 +9,7 @@
     background-color: transparent;
     font-weight: $font-weight-normal;
     &:hover{
-      background-color: lighten($widget-bg, 10%);
+      background-color: lighten($widget-bg-color, 10%);
       color: $text-color;
     }
 
@@ -27,13 +27,13 @@
     &,
     &:hover,
     &:focus {
-      background-color: $widget-bg;
+      background-color: $widget-bg-color;
       color: $text-color;
       font-weight: $font-weight-semi-bold;
 
       > .label{
         color: $text-color;
-        background-color: $widget-bg;
+        background-color: $widget-bg-color;
       }
     }
   }

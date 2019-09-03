@@ -1,3 +1,6 @@
+<header class="logo">
+  <a href="https://demo.flatlogic.com/light-blue-react/">Light <span class="fw-bold">Blue</span></a>
+</header>
 <ul id="side-nav" class="side-nav">
   <li class="accordion-group panel" [routerLinkActive]="['active']">
     <a (click)="sidebarBehavior($event)" class="accordion-toggle collapsed" data-toggle="collapse"
@@ -113,7 +116,7 @@
     <a (click)="sidebarBehavior($event)" class="accordion-toggle collapsed" data-toggle="collapse"
        data-parent="#side-nav" href="#special-collapse"><i class="fi flaticon-star"></i> <span class="name">Extra</span></a>
     <ul id="special-collapse" class="accordion-body collapse" aria-expanded="false">
-      <li [routerLinkActive]="['active']"><a routerLink="extra/calendar">Search</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="extra/calendar">Calendar</a></li>
       <li [routerLinkActive]="['active']"><a routerLink="extra/invoice">Invoice</a></li>
       <li><a routerLink="/login" >Login</a></li>
       <li><a routerLink="/error">Error Page</a></li>
@@ -160,20 +163,14 @@
 <h6 class="sidebar-nav-title">PROJECTS</h6>
 <!-- A place for sidebar notifications & alerts -->
 <div class="sidebar-alerts">
-  <div class="alert fade show">
-    <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+  <alert [dismissible]="true" type="transparent">
     <span class="text-white fw-semi-bold">Sales Report</span> <br>
-    <div class="progress progress-xs bg-blue-light mt-xs mb-0">
-      <div class="progress-bar progress-xs" role="progressbar" style="width: 16%" aria-valuenow="16" aria-valuemin="0" aria-valuemax="100"></div>
-    </div>
+    <progressbar class="progress-xs mt-1 mb-0" type="primary" value="16"></progressbar>
     <small>Calculating x-axis bias... 65%</small>
-  </div>
-  <div class="alert fade show">
-    <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+  </alert>
+  <alert [dismissible]="true" type="transparent">
     <span class="text-white fw-semi-bold">Personal Responsibility</span> <br>
-    <div class="progress progress-xs bg-blue-light mt-xs mb-0">
-      <div class="progress-bar progress-xs bg-danger" role="progressbar" style="width: 23%" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100"></div>
-    </div>
+    <progressbar class="progress-xs mt-1 mb-0" type="danger" value="23"></progressbar>
     <small>Provide required notes</small>
-  </div>
+  </alert>
 </div>

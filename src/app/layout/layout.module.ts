@@ -2,7 +2,7 @@ import { NgModule }      from '@angular/core';
 import { FormsModule }      from '@angular/forms';
 import { CommonModule }  from '@angular/common';
 
-import { ButtonsModule, BsDropdownModule } from 'ngx-bootstrap';
+import {ButtonsModule, BsDropdownModule, AlertModule, ProgressbarModule} from 'ngx-bootstrap';
 
 import { ROUTES } from './layout.routes';
 
@@ -16,7 +16,9 @@ import { Navbar } from './navbar/navbar.component';
     ROUTES,
     FormsModule,
     ButtonsModule.forRoot(),
-    BsDropdownModule.forRoot()
+    BsDropdownModule.forRoot(),
+    AlertModule.forRoot(),
+    ProgressbarModule.forRoot()
   ],
   declarations: [Layout, Sidebar, Navbar]
 })

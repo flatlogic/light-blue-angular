@@ -1,5 +1,21 @@
 <nav class="navbar-collapse">
-  <ul class="nav navbar-nav navbar-right float-right">
+  <div class="notifications">
+    <alert [dismissible]="true">
+      <i class="fa fa-info-circle mr-xs"></i> Check out Light Blue <a (click)="settings.isOpen = !settings.isOpen"
+                                                                      id="notification-link" href="#">settings</a> on
+      the right!
+    </alert>
+  </div>
+  <form id="search-form" class="navbar-form" role="search">
+    <div class="form-group mb-0">
+      <div class="input-group-transparent input-group">
+        <div class="input-group-addon">
+          <i class="fa fa-search text-white"></i>
+        </div>
+        <input placeholder="Search..." type="text" class="input-transparent form-control"></div>
+    </div>
+  </form>
+  <ul class="nav navbar-nav">
     <li class="nav-item visible-phone-landscape">
       <a (click)="searchFormOpen()" class="nav-link" href="#" id="search-toggle">
         <i class="fa fa-search"></i>
@@ -188,14 +204,4 @@
       <a class="nav-link" routerLink="/login"><i class="glyphicon glyphicon-off"></i></a>
     </li>
   </ul>
-  <form id="search-form" class="navbar-form float-right" role="search">
-    <input type="search" class="form-control search-query" placeholder="Search...">
-  </form>
-  <div class="notifications float-right">
-    <div class="alert float-right">
-      <a href="#" class="close ml-xs" data-dismiss="alert">&times;</a>
-      <i class="fa fa-info-circle mr-xs"></i> Check out Light Blue <a (click)="settings.isOpen = !settings.isOpen" id="notification-link" href="#">settings</a> on
-      the right!
-    </div>
-  </div>
 </nav>

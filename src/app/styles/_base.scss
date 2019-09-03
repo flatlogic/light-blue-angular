@@ -41,33 +41,22 @@
 /**          LOGO                **/
 /**********************************/
 
-.logo{
-  @include box-sizing(content-box);
-  position: absolute;
-  @media (min-height: 940px) {
-    position: fixed;
-  }
-  @media (max-width: 767px) {
-    display: block;
-    left: 1.6% !important;
-    right: auto !important;
-    padding-right: 5px;
-    width: 40px;
-    top: 4px
-  }
-  margin-top: 9px;
-  margin-bottom: 9px;
-  left: 65px;
-  top: 17px;
-  z-index: 1;
-  a{
-    color: $white;
+.logo {
+  margin: 20px 0 55px;
+  font-size: 18px;
+  width: 100%;
+  font-weight: $font-weight-thin;
+  text-align: center;
+
+  a {
+    color: $logo-color;
+    padding: 0 5px;
     text-decoration: none;
-    font-weight: normal;
+    white-space: nowrap;
   }
 
-  strong{
-    color: $white;
+  @include media-breakpoint-down(sm) {
+    display: none;
   }
 }
 
@@ -81,11 +70,10 @@
     position: fixed;
   }
   width: $sidebar-width;
-  padding: 10px 0;
   top: 0;
   color: $sidebar-color;
   z-index: 1;
-  margin: $sidebar-mt 0 0 15px;
+  margin-left: 15px;
   font-weight: 300;
 
   .settings{
@@ -155,7 +143,7 @@
           font-family: FontAwesome;
           content: "\f107";
           position: absolute;
-          right: 5px;
+          right: 7px;
           @include transition(transform .3s ease-in-out)
         }
         &.collapsed:before{
@@ -176,7 +164,7 @@
 
 	.accordion-body {
 		li a {
-			padding: 4px 20px;
+			padding: 7px 20px;
       padding-left: 45px;
 		}
 	}
@@ -211,6 +199,10 @@
     margin: 0;
     border: none;
     border-radius: 0;
+
+    & > ul {
+      padding: .25rem 0;
+    }
   }
 }
 
@@ -378,8 +370,8 @@
     opacity: 0;
   }
 
-  @media (min-width: 767px) {
-    margin-top: 0 !important;
+  @include media-breakpoint-down(sm) {
+    padding: 20px 15px;
   }
 
   .content-footer {
@@ -655,11 +647,13 @@
   }
 
   .navbar-collapse {
-    display: inline-block;
-    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
   }
 
   .navbar-collapse .navbar-nav {
+    justify-content: flex-end;
     flex-direction: row;
   }
 
@@ -712,7 +706,7 @@
 
     .count{
       position: absolute;
-      bottom: 2px;
+      bottom: 5px;
       right: 2px;
       font-size: $font-size-index;
       font-weight: normal;
@@ -751,15 +745,15 @@
   }
 
   .navbar-form{
-    margin: 5px 15px 0 0;
+    margin-right: 15px;
     padding: 0;
     border: none;
     @include box-shadow(none);
   }
 
   .navbar-nav{
-    .nav-item + .nav-item{
-      margin-left: 0;
+    .nav-item{
+      margin: 0 3px;
     }
 
     .dropdown-menu {
@@ -821,20 +815,31 @@
   margin: 6px 20px 6px 35px;
   @include transition(margin-top .2s ease);
 
-  .alert{
-    background: transparentize($text-transparent, .1);
+  .alert {
+    width: 265px;
+    display: block;
+    margin: 0;
+    transition: margin-top 0.2s ease;
+    background: $text-transparent;
     border: none;
-    font-size: $font-size-sm;
-    line-height: 20px !important;
-    margin-bottom: 0;
-    padding: 3px 9px;
-    color: $widget-color;
-    text-shadow: none;
+    font-size: 0.8rem;
+    line-height: 20px;
+    padding: 2px 8px;
+    color: #f8f8f8;
     border-radius: 10px;
 
-    a{
-      color: $widget-color;
+    @media (max-width: breakpoint-max(sm)) {
+      display: none !important;
+    }
+
+    button.close {
+      color: #f8f8f8;
       font-weight: bold;
+      font-size: 18px !important;
+      top: 0;
+      left: 0;
+      padding: 0;
+      opacity: 1;
     }
   }
 }
@@ -1064,9 +1069,9 @@
 
   &.active{
     color: $widget-header-color;
-    background: rgba($widget-bg-common, .55);
+    background: rgba($widget-bg-color, .55);
     &:hover{
-      background: rgba($widget-bg-common, .55);
+      background: rgba($widget-bg-color, .55);
     }
   }
 
@@ -1102,7 +1107,7 @@
   &.input-transparent{
     border: none;
     color: $input-transparent-color;
-    background-color: $widget-bg;
+    background-color: $widget-bg-color;
     @include placeholder($input-transparent-placeholder-color);
 
     &:focus{
@@ -1113,7 +1118,7 @@
     &[disabled],
     &[readonly],
     fieldset[disabled] & {
-      background-color: lighten($widget-bg, 10%);
+      background-color: lighten($widget-bg-color, 10%);
     }
   }
 }
@@ -1193,7 +1198,7 @@
   padding: 0;
 
   .widget-body{
-    background: $widget-bg;
+    background: $widget-bg-color;
     margin-top: 0;
     padding: $widget-padding;
     border-radius:0 0 $border-radius-base $border-radius-base;
@@ -1212,7 +1217,7 @@
 
   .nav > .nav-item > .nav-link.active{
     border-color: transparent;
-    background: $widget-bg;
+    background: $widget-bg-color;
     margin-bottom: -1px;
     &:hover, &:focus{
       color: $widget-color;
@@ -1224,7 +1229,7 @@
   }
 
   .nav > .nav-item > .nav-link:not(.active) {
-    background: $widget-bg;
+    background: $widget-bg-color;
     border-bottom: none;
     &:hover{
       background: $tabs-widget-active-item-hover-bg;
@@ -1426,13 +1431,13 @@
 }
 
 .widget-placeholder{
-  background:  rgba($widget-bg-common, .2);
+  background:  rgba($widget-bg-color, .2);
   border: 1px dashed rgba(white, .6);
   margin: -1px -1px ($widget-mb - 1px) -1px;
 }
 
 .list-group-item-placeholder{
-  background:  rgba($widget-bg-common, .2);
+  background:  rgba($widget-bg-color, .2);
   border: 1px dashed rgba(white, .6);
   margin: -1px;
 }

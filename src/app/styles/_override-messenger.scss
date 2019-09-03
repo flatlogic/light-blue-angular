@@ -175,14 +175,14 @@ ul.messenger-theme-air {
     transition: background-color 0.4s;
     border-radius: 5px;
     border-color: $basic-border-color;
-    background-color: lighten($widget-bg, .2);
+    background-color: lighten($widget-bg-color, .2);
     position: relative;
     margin-bottom: 1em;
     color: $widget-color;
     font-weight: 500;
     padding: 10px 30px 11px 46px;
     &:hover {
-      background-color: $widget-bg;
+      background-color: $widget-bg-color;
     }
     .messenger-close {
       position: absolute;
