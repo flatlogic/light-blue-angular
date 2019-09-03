@@ -295,7 +295,7 @@
 .sidebar-on-right{
   .sidebar{
     right: 0;
-    margin: $sidebar-mt 25px 0 0;
+    margin-right: 25px;
   }
 
   .wrap{
@@ -849,13 +849,12 @@
 /**********************************/
 
 .messages{
-  background: $header-dropdown-bg;
   @include box-shadow($header-dropdown-shadow);
   border-radius: $border-radius-base !important;
   color: $header-dropdown-primary-color;
 }
 
-.navbar .nav > li > .messages{
+.messages{
   &:before{
     border-bottom: none;
   }
@@ -910,7 +909,6 @@
 /**********************************/
 
 .support{
-  background: $header-dropdown-bg;
   @include box-shadow($header-dropdown-shadow);
   border-radius: $border-radius-base !important;
   color: $header-dropdown-primary-color;
@@ -963,10 +961,8 @@
 /**********************************/
 
 .navbar-nav.nav > li > .settings{
-  background: $header-dropdown-bg;
   border-radius: $border-radius-base !important;
   color: $header-dropdown-primary-color;
-  width: 122px;
   font-size: $font-size-sm;
   text-align: center;
   min-width: auto;
@@ -1008,7 +1004,6 @@
 
 .account{
   width: 180px;
-  background: $header-dropdown-bg;
   @include box-shadow($header-dropdown-shadow);
   border-radius: $border-radius-base !important;
   color: $header-dropdown-primary-color;
@@ -1045,6 +1040,19 @@
 
 .account > li > a{
   padding: 7px 10px;
+}
+
+.dropdown .dropdown-menu.show {
+  &.messages,
+  &.support,
+  &.settings,
+  &.account {
+    background-color: rgba(51, 51, 51, .85);
+
+    &:after {
+      visibility: hidden;
+    }
+  }
 }
 
 /***********************************/

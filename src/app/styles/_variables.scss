@@ -57,7 +57,7 @@ $theme-colors: (
   'warning': $yellow,
   'danger': $red,
   'light': $gray-200,
-  'dark': $gray-800,
+  'dark': $gray-700,
   'inverse': $white-dark,
   'gray': $gray-300,
   'default': #f8f8f8
@@ -130,7 +130,7 @@ $widget-border-radius: 10px;
 $widget-bg-color: rgba(0, 0, 0, .24);
 
 $text-transparent: opacify($widget-bg-color, .07);
-$bg-addition: rgba($widget-bg-color, 0.3);
+$bg-addition: darken($widget-bg-color, .07);
 
 $widget-padding-vertical: 15px;
 $widget-padding-horizontal: 17px;
@@ -245,7 +245,7 @@ $legend-color:                   $white !default;
 // Dropdowns
 // -------------------------
 
-$dropdown-bg:                    $white !default;
+$dropdown-bg:                    rgba($bg-addition, .8) !default;
 $dropdown-border:                rgba(0, 0, 0, 0.2) !default;
 
 $dropdown-link-active-color:     #fff !default;
