@@ -1060,10 +1060,6 @@
 /**********************************/
 /* Custom behavior. For overridden bootstrap btns see bootstrap-override */
 
-.btn-default, .btn-primary, .btn-info, .btn-success {
-  border-color: rgba(0,0,0,0.15);
-}
-
 .btn-transparent{
   background: transparentize($text-transparent, .2);
   color: $widget-header-color;

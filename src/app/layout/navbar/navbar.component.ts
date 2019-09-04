@@ -1,4 +1,5 @@
 import { Component, Output, EventEmitter, Renderer, ElementRef } from '@angular/core';
+import {LoginService} from "../../pages/login/login.service";
 
 @Component({
   selector: '[navbar]',
@@ -16,7 +17,11 @@ export class Navbar {
     isOpen: false
   };
 
-  constructor(private renderer: Renderer, private el: ElementRef) {}
+  constructor(
+    private renderer: Renderer,
+    private el: ElementRef,
+    private loginService: LoginService
+  ) {}
 
   sidebarPosition(position): void {
     this.changeSidebarPosition.emit(position);
@@ -44,5 +49,9 @@ export class Navbar {
   private changeStyleElement(selector, styleName, styleValue): void {
     this.renderer.setElementStyle(this.el.nativeElement
       .querySelector(selector), styleName, styleValue);
+  }
+
+  logout() {
+    this.loginService.logoutUser();
   }
 }

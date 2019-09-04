@@ -1,47 +1,70 @@
-<div class="single-widget-container">
-  <section widget class="widget login-widget">
-    <header class="text-center">
-      <h4>Login to your account</h4>
-    </header>
-    <div class="widget-body">
-      <form class="m-0"
-            action="index.html" method="get">
-        <fieldset class="login-form">
-          <div class="form-group">
-            <label for="email" >Email</label>
-            <div class="input-group input-group-lg input-group-transparent">
-              <span class="input-group-addon">
-                <i class="fa fa-user"></i>
-              </span>
-              <input id="email" type="email" class="form-control input-lg input-transparent"
-                     placeholder="Your Email">
-            </div>
+<div class="container">
+  <widget
+    [title]="'<h3 class=mt-0>Login to your Web App</h3>'"
+    [customHeader]="true"
+    class="widget-auth mx-auto"
+  >
+    <p class="widget-auth-info">
+      Use your email to sign in.
+    </p>
+    <alert type="secondary alert-sm text-center mt-2 widget-middle-overflow rounded-0">
+      This is a real app with Node.js backend - use
+      <br/>
+      <span class="font-weight-bold">"admin@flatlogic.com / password"</span>
+      <br/>
+      to login!
+    </alert>
+    <form>
+      <alert *ngIf="loginService.errorMessage" type="danger alert-sm widget-middle-overflow rounded-0">
+        {{loginService.errorMessage}}
+      </alert>
+      <div class="form-group mt">
+        <label for="email">Email</label>
+        <div class="input-group input-group-transparent">
+          <div class="input-group-addon">
+            <i class="la la-user text-white"></i>
           </div>
-          <div class="form-group">
-            <label for="password" >Password</label>
-
-            <div class="input-group input-group-lg input-group-transparent">
-              <span class="input-group-addon">
-                <i class="fa fa-lock"></i>
-              </span>
-              <input id="password" type="password" class="form-control input-lg input-transparent"
-                     placeholder="Your Password">
-            </div>
-          </div>
-        </fieldset>
-        <div class="form-actions">
-          <button routerLink="/app/dashboard" type="submit" class="btn btn-lg btn-block btn-danger">
-            <span class="small-circle"><i class="fa fa-caret-right"></i></span>
-            <small>Sign In</small>
-          </button>
-          <a class="forgot" href="#">Forgot Username or Password?</a>
+          <input id="email" class="form-control input-transparent pl-3" [(ngModel)]="email"
+                 type="email"
+                 required name="email" placeholder="Email"/>
         </div>
-      </form>
-    </div>
-    <footer>
-      <div class="facebook-login">
-        <a routerLink="/app/dashboard"><span><i class="fa fa-facebook-square fa-lg"></i> LogIn with Facebook</span></a>
       </div>
-    </footer>
-  </section>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <div class="input-group input-group-transparent">
+          <div class="input-group-addon">
+            <i class="la la-lock text-white"></i>
+          </div>
+          <input id="password" class="form-control input-transparent pl-3" [(ngModel)]="password"
+                 type="password"
+                 required name="password" placeholder="Password"/>
+        </div>
+      </div>
+      <div class="bg-widget auth-widget-footer">
+        <button (click)="login()" type="submit" class="btn btn-sm btn-danger auth-btn">
+          <span class="auth-btn-circle">
+            <i class="la la-caret-right"></i>
+          </span>
+          {{loginService.isFetching ? 'Loading...' : 'Login'}}
+        </button>
+        <p class="widget-auth-info mt-4">
+          Don't have an account? Sign up now!
+        </p>
+        <a routerLink="/register" class="d-block text-center mb-4">Create an Account</a>
+        <div class="social-buttons">
+          <button (click)="googleLogin()" class="btn btn-primary social-button">
+            <i class="social-icon social-google"></i>
+            <p class="social-text">GOOGLE</p>
+          </button>
+          <button (click)="microsoftLogin()" class="btn btn-success social-button">
+            <i class="social-icon social-microsoft"></i>
+            <p class="social-text">MICROSOFT</p>
+          </button>
+        </div>
+      </div>
+    </form>
+  </widget>
 </div>
+<footer class="auth-footer">
+  2019 &copy; Sing App - React Admin Dashboard Template.
+</footer>

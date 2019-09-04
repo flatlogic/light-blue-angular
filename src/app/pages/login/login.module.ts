@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { Login } from './login.component';
+import {NewWidgetModule} from '../../layout/new-widget/widget.module';
+import {AlertModule} from 'ngx-bootstrap';
 
 export const routes = [
   { path: '', component: Login, pathMatch: 'full' }
@@ -17,6 +19,8 @@ export const routes = [
     CommonModule,
     FormsModule,
     RouterModule.forChild(routes),
+    NewWidgetModule,
+    AlertModule.forRoot()
   ]
 })
 export class LoginModule {

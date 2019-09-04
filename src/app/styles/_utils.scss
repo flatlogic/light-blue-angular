@@ -277,6 +277,7 @@ h-100 {
 @include bg-variant('.bg-gray-lighter', $gray-200);
 @include bg-variant('.bg-transparent', rgba(0,0,0,0));
 @include bg-variant('.bg-white', $white);
+@include bg-variant('.bg-widget', $widget-bg-color);
 
 .bg-body, .bg-body-light, .bg-gray, .bg-gray-transparent, .bg-transparent,
 .bg-primary, .bg-success, .bg-warning, .bg-danger, .bg-info{
