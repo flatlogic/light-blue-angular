@@ -1,4 +1,5 @@
 import { Component, Input, ViewEncapsulation } from '@angular/core';
+import {Product} from '../../../products.service';
 
 @Component({
   selector: 'description',
@@ -7,7 +8,7 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class DescriptionComponent {
-  @Input() public description: string = '';
+  @Input() public product: Product = {};
 
   public accordion: boolean[] = [false, false, false];
 

@@ -27,6 +27,7 @@ export class WidgetComponent implements AfterViewInit {
   @Input() bodyClass: string = '';
   @Input() options: any = null;
   @Input() dataWidgster: any = null;
+  @Input() fetchingData: boolean = false;
 
   constructor(el: ElementRef) {
     this.randomId = Math.floor(Math.random() * 100);

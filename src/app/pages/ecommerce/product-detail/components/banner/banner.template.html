@@ -1,7 +1,7 @@
 <div class="product-details-banner">
   <div class="product-photo" [ngStyle]="{'background-image': 'url(' + image + ')'}"></div>
   <div class="product-info">
-    <general [rating]="4.8" [title]="'Trainers'" [subtitle]="'trainers in white'" [price]="76"></general>
+    <general [rating]="product.rating" [title]="product.title" [subtitle]="product.subtitle" [price]="product.price"></general>
     <a href="#" class="product-guide">Size Guide</a>
     <selects [sizes]="[1, 2, 3, 4, 5]" [quantity]="[1, 2, 3, 4, 5, 6, 7]"></selects>
     <bag></bag>

@@ -3,11 +3,11 @@
   <li class="active breadcrumb-item">E-commerce</li>
 </ol>
 <h1 class="page-title">E-commerce - <span class="fw-semi-bold">Product Detail</span></h1>
-<banner [image]="'assets/img/products/img1.jpg'"></banner>
+<banner [product]="product" [image]="product.img || 'assets/img/products/img1.jpg'"></banner>
 
 <p-section title="Product Description" [isMobileTitleHidden]="true">
-  <description [description]="description"></description>
+  <description [product]="product"></description>
 </p-section>
 <p-section title="You may also like">
-  <slider [cards]="products"></slider>
+  <slider [products]="productsService.products"></slider>
 </p-section>

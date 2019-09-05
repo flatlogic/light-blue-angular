@@ -9,6 +9,13 @@
     box-shadow: var(--widget-shadow);
     border-radius: $border-radius;
 
+    cursor: pointer;
+    transition: $transition-base;
+
+    &:hover {
+      transform: scale(1.01);
+    }
+
     @include media-breakpoint-down(sm) {
       height: 200px;
     }

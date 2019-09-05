@@ -428,3 +428,79 @@ html[dir="rtl"] .select2-search input {
 .form-wizard .tab-content .tab-pane {
   padding: 0;
 }
+
+/////// NGX Datatable ///////
+
+.ngx-datatable {
+  width: 100%;
+
+  .datatable-body-cell,
+  .datatable-header-cell {
+    padding: $table-cell-padding;
+  }
+
+  .datatable-header-cell {
+    text-transform: uppercase;
+    font-weight: $font-weight-semi-bold;
+  }
+
+  .datatable-body-cell {
+    border-top: 1px solid $table-border-color;
+  }
+
+  .datatable-row-center.datatable-row-group .datatable-body-cell {
+    overflow-x: visible;
+    overflow-y: visible;
+  }
+
+  .datatable-row-wrapper {
+    &:nth-of-type(odd) {
+      background-color: $table-accent-bg;
+    }
+  }
+
+  .datatable-pager {
+    font-size: $font-size-sm;
+
+    .pager > li {
+      > a {
+        padding: $pagination-padding-y $pagination-padding-x;
+        color: $text-color;
+        text-decoration: none;
+      }
+
+      &.active > a {
+        background-color: $pagination-active-bg;
+        border-radius: $border-radius;
+      }
+
+      &.disabled > a {
+        color: $text-muted;
+      }
+    }
+
+    .datatable-icon-left::before {
+      content: "<";
+    }
+
+    .datatable-icon-right::before {
+      content: ">";
+    }
+  }
+}
+
+/////// NG2 TAG INPUT ///////
+
+.ng2-tag-input {
+
+  &__text-input {
+    color: $text-color;
+    background-color: transparent;
+
+    @include placeholder($text-color);
+  }
+
+  tag:hover {
+    box-shadow: none !important;
+  }
+}

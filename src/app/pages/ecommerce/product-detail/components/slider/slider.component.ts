@@ -1,4 +1,6 @@
 import { Component, Input, ViewEncapsulation } from '@angular/core';
+import {Router} from '@angular/router';
+import {Product} from '../../../products.service';
 
 @Component({
   selector: 'slider',
@@ -7,10 +9,26 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class SliderComponent {
-  @Input() cards: Array<any> = [];
+  @Input() products: Product[] = [];
 
-  public toggleSliderProductStarred(id) {
-    const index = this.cards.findIndex((it) => it.id === id);
-    this.cards[index].starred = !this.cards[index].starred;
+  constructor(
+    public router: Router
+  ) {}
+
+  public toggleSliderProductStarred(product: Product) {
+    product['starred'] = !product['starred'];
+  }
+
+  getLabel(product) {
+    return product.discount ? 'Sale' :
+      product.createdAt === product.updatedAt ?
+        'New' :
+        null;
+  }
+
+  newPrice(product) {
+    return product.discount ?
+      product.price - (product.price * product.discount / 100) :
+      product.price;
   }
 }

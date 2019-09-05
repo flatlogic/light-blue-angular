@@ -66,6 +66,7 @@
     "ng2-select2": "1.0.0-beta.16",
     "ng2-table": "1.3.2",
     "ngx-bootstrap": "5.0.0",
+    "ngx-chips": "^2.0.2",
     "ngx-toastr": "^10.2.0",
     "ngx-trend": "^3.4.3",
     "nvd3": "1.8.6",

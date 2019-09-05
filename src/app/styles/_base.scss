@@ -165,7 +165,7 @@
 	.accordion-body {
 		li a {
 			padding: 7px 20px;
-      padding-left: 45px;
+      padding-left: 40px;
 		}
 	}
 
@@ -402,6 +402,11 @@
   background: $widget-bg-color;
   margin-bottom: $widget-mb;
   position: relative;
+  min-height: 150px;
+
+  &.collapsed {
+    min-height: unset;
+  }
 
   &:hover .widget-controls-hover {
     opacity: 1;
@@ -435,6 +440,11 @@
 
     &.p-0 {
       margin: $widget-padding-vertical (-$widget-padding-horizontal) (-$widget-padding-vertical);
+    }
+
+    .fetching-data {
+      height: 0;
+      opacity: 0;
     }
   }
 
@@ -578,6 +588,12 @@
     background-color: $gray-700;
     border-radius: 0;
   }
+}
+
+.widget-loader {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .widget-padding-md {
@@ -808,6 +824,17 @@
   small{
     margin-left: $spacer / 2;
     color: rgba($page-title-color, .7);
+  }
+}
+
+.page-top-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  & .close {
+    margin-left: 25px;
   }
 }
 
@@ -1627,6 +1654,7 @@ ol.text-list{
   padding-top: 40vh;
   text-align: center;
   opacity: 0;
+  pointer-events: none;
 }
 
 .loading-overlay,

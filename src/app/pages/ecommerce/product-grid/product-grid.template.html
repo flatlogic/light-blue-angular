@@ -15,22 +15,22 @@
       </button>
     </div>
     <div class="products">
-      <div *ngFor="let product of products" class="product-card">
-        <div class="card-photo" [ngStyle]="{'background-image': 'url(' + product.image + ')'}">
-          <div class="badge" *ngIf="product.label" [ngClass]="product.label === 'Sale' ? 'badge-danger' : 'badge-success'">{{product.label}}</div>
-          <a role="button" class="star" (click)="changeItem(product.id)">
-            <i class="fa" [ngClass]="product.starred ? 'fa-star' : 'fa-star-o'"></i>
+      <div *ngFor="let product of productsService.products" class="product-card">
+        <div class="card-photo" (click)="router.navigate(['/app/ecommerce/product/' + product.id])" [ngStyle]="{'background-image': 'url(' + product.img + ')'}">
+          <div *ngIf="getLabel(product)" class="badge" [ngClass]="getLabel(product) === 'Sale' ? 'badge-danger' : 'badge-success'">{{getLabel(product)}}</div>
+          <a role="button" class="star" (click)="changeItem(product)">
+            <i class="fa" [ngClass]="product['starred'] ? 'fa-star' : 'fa-star-o'"></i>
           </a>
         </div>
         <h5 class="card-title">{{product.title}}</h5>
         <div class="card-description">{{product.subtitle}}</div>
-        <div class="price" *ngIf="!product.isSale">
+        <div class="price" *ngIf="!product.discount">
           ${{product.price}}
         </div>
-        <div class="price price-sale" *ngIf="product.isSale">
-          <span class="old">${{product.price.old}}</span>
-          {{product.price.percents}}% off
-          <span class="new"> ${{product.price.new}}</span>
+        <div class="price price-sale" *ngIf="product.discount">
+          <span class="old">${{product.price}}</span>
+          {{product.discount}}% off
+          <span class="new"> ${{newPrice(product)}}</span>
         </div>
       </div>
     </div>

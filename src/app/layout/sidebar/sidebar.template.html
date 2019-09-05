@@ -21,8 +21,9 @@
       <span class="name">E-commerce</span>
     </a>
     <ul id="commerce-collapse" class="accordion-body collapse" aria-expanded="false">
+      <li [routerLinkActive]="['active']"><a routerLink="ecommerce/management">Product Management</a></li>
       <li [routerLinkActive]="['active']"><a routerLink="ecommerce/product-grid">Product Grid</a></li>
-      <li [routerLinkActive]="['active']"><a routerLink="ecommerce/product-detail">Product Detail</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="ecommerce/product">Product Detail</a></li>
     </ul>
   </li>
   <li [routerLinkActive]="['active']">
