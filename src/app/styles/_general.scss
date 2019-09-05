@@ -76,6 +76,10 @@ form{
 
 a{
   @include transition(color .2s);
+
+  &:not([href]) {
+    cursor: pointer;
+  }
 }
 
 button, .btn{
