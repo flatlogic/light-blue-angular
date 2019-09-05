@@ -38,6 +38,8 @@ import {NasdaqSparklineWidgetComponent} from './widgets/nasdaq-sparkline-widget/
 import {RealtimeTrafficWidgetComponent} from './widgets/realtime-traffic-widget/realtime-traffic-widget.component';
 import {YearsMapWidgetComponent} from './widgets/years-map-widget/years-map-widget.component';
 import {FakeWorldData} from './widgets/years-map-widget/fake-world-data.service';
+import {AnalyticsService} from "./analytics/analytics.service";
+import {NewWidgetModule} from "../../layout/new-widget/widget.module";
 
 export const routes = [
   {path: '', redirectTo: 'visits', pathMatch: 'full'},
@@ -80,9 +82,10 @@ export const routes = [
     FlotChartModule,
     RickshawChartModule,
     JqSparklineModule,
-    MapaelLayersMapModule
+    MapaelLayersMapModule,
+    NewWidgetModule
   ],
-  providers: [FakeWorldData]
+  providers: [FakeWorldData, AnalyticsService]
 })
 export class MainModule {
   static routes = routes;

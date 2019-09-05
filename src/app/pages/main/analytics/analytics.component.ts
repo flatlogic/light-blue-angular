@@ -1,5 +1,6 @@
-import {Component, ViewChild, ElementRef, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, ViewChild, ElementRef, ViewEncapsulation, OnInit} from '@angular/core';
 import mock from './mock';
+import {AnalyticsService} from './analytics.service';
 
 declare let jQuery: any;
 
@@ -14,58 +15,6 @@ export class AnalyticsComponent implements OnInit {
   month = this.now.getMonth() + 1;
   year = this.now.getFullYear();
   mock = mock;
-  table = [
-      {
-        id: 0,
-        name: 'Mark Otto',
-        email: 'ottoto@wxample.com',
-        product: 'ON the Road',
-        price: '$25 224.2',
-        date: '11 May 2017',
-        city: 'Otsego',
-        status: 'Sent',
-      },
-      {
-        id: 1,
-        name: 'Jacob Thornton',
-        email: 'thornton@wxample.com',
-        product: 'HP Core i7',
-        price: '$1 254.2',
-        date: '4 Jun 2017',
-        city: 'Fivepointville',
-        status: 'Sent',
-      },
-      {
-        id: 2,
-        name: 'Larry the Bird',
-        email: 'bird@wxample.com',
-        product: 'Air Pro',
-        price: '$1 570.0',
-        date: '27 Aug 2017',
-        city: 'Leadville North',
-        status: 'Pending',
-      },
-      {
-        id: 3,
-        name: 'Joseph May',
-        email: 'josephmay@wxample.com',
-        product: 'Version Control',
-        price: '$5 224.5',
-        date: '19 Feb 2018',
-        city: 'Seaforth',
-        status: 'Declined',
-      },
-      {
-        id: 4,
-        name: 'Peter Horadnia',
-        email: 'horadnia@wxample.com',
-        product: 'Let\'s Dance',
-        price: '$43 594.7',
-        date: '1 Mar 2018',
-        city: 'Hanoverton',
-        status: 'Sent',
-      }
-    ];
 
   calendarEvents: Array<Array<any>> = [
     [
@@ -112,9 +61,15 @@ export class AnalyticsComponent implements OnInit {
     }
   ];
 
-  constructor() {
+  constructor(public analyticsService: AnalyticsService) {
     this.trends.map(t => {
       t.data = this.getRandomData();
+    });
+
+    this.analyticsService.onReceiveDataSuccess.subscribe(event => {
+      if (event) {
+        this.initChart();
+      }
     });
   }
 
@@ -127,22 +82,8 @@ export class AnalyticsComponent implements OnInit {
     return arr;
   }
 
-  getData() {
-    const data = [];
-    const seriesCount = 3;
-    const accessories = ['SMX', 'Direct', 'Networks'];
-
-    for (let i = 0; i < seriesCount; i += 1) {
-      data.push({
-        label: accessories[i],
-        data: Math.floor(Math.random() * 100) + 1,
-      });
-    }
-    return data;
-  }
-
   initChart() {
-    jQuery.plot($(this.chartContainer.nativeElement), this.getData(), {
+    jQuery.plot($(this.chartContainer.nativeElement), this.analyticsService.revenue, {
       series: {
         pie: {
           innerRadius: 0.8,
@@ -163,6 +104,6 @@ export class AnalyticsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.initChart();
+    this.analyticsService.receiveDataRequest();
   }
 }

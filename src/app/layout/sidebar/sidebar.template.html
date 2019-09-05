@@ -19,6 +19,9 @@
        data-parent="#side-nav" href="#commerce-collapse">
       <i class="fi flaticon-diamond"></i>
       <span class="name">E-commerce</span>
+      <sup class="ml-1 text-danger fw-semi-bold">
+        NodeJS
+      </sup>
     </a>
     <ul id="commerce-collapse" class="accordion-body collapse" aria-expanded="false">
       <li [routerLinkActive]="['active']"><a routerLink="ecommerce/management">Product Management</a></li>
@@ -27,18 +30,17 @@
     </ul>
   </li>
   <li [routerLinkActive]="['active']">
-    <a routerLink="package"><i class="fi flaticon-database-1"></i> <span class="name">LB Package</span></a>
-  </li>
-  <li [routerLinkActive]="['active']">
-    <a routerLink="profile"><i class="fi flaticon-user"></i> <span class="name">Profile</span></a>
-  </li>
-
-  <li [routerLinkActive]="['active']">
     <a routerLink="inbox"><i class="fi flaticon-paper-plane"></i> <span class="name">Email</span>
       <span class="badge badge-pill badge-warning">
           9
       </span>
     </a>
+  </li>
+  <li [routerLinkActive]="['active']">
+    <a routerLink="profile"><i class="fi flaticon-user"></i> <span class="name">Profile</span></a>
+  </li>
+  <li [routerLinkActive]="['active']">
+    <a routerLink="package"><i class="fi flaticon-database-1"></i> <span class="name">LB Package</span></a>
   </li>
   <h6 class="sidebar-nav-title">TEMPLATE</h6>
   <li class="accordion-group panel" [routerLinkActive]="['active']">
