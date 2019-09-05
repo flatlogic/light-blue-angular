@@ -1,8 +1,8 @@
-# Light Blue (4.0.1 Full version) with angular 5.0 Final Release support
+# Light Blue (7.0.1 Full version) with angular 8 Final Release support
 
 #### A build of App with JIT compilation is unavailable now, only AOT. Please see this issue: https://github.com/gdi2290/angular-starter/issues/1921
 
-> An angular 5 application featuring [angular 5](https://angular.io)
+> An angular 8 application featuring [angular 8](https://angular.io)
  ([Router](https://angular.io/docs/js/latest/api/router/), [Forms](https://angular.io/docs/js/latest/api/forms/),
 [Http](https://angular.io/docs/js/latest/api/http/),
  [TypeScript](http://www.typescriptlang.org/),
@@ -216,4 +216,4 @@ import * as _ from 'lodash';
 # License
 [Wrapbootstrap licence](http://support.wrapbootstrap.com/knowledge_base/topics/usage-licenses).
 
-Light Blue 4.0.1 is based on [angular2-webpack-starter](https://github.com/AngularClass/angular2-webpack-starter).
+Light Blue 7.0.1 is based on [angular2-webpack-starter](https://github.com/AngularClass/angular2-webpack-starter).

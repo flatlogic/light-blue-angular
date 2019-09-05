@@ -50,7 +50,7 @@ export class LoginService {
     this.requestLogin();
     if (creds.social) {
       // tslint:disable-next-line
-      window.location.href = this.config.baseURLApi + '/user/signin/' + creds.social + (process.env.NODE_ENV === 'production' ? '?app=4.0.1/angular' : '');
+      window.location.href = this.config.baseURLApi + '/user/signin/' + creds.social + (process.env.NODE_ENV === 'production' ? '?app=light-blue/angular' : '');
     } else if (creds.email.length > 0 && creds.password.length > 0) {
       this.http.post('/user/signin/local', creds).subscribe((res: any) => {
         const token = res.token;
