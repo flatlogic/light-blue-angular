@@ -5,12 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: './maps-google.template.html',
   styles: [`
     .content-map {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 100%;
+      width: 100%;
+      height: 60vh;
     }
   `]
 })

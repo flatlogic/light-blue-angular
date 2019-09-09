@@ -11,6 +11,7 @@ import { AgmCoreModule } from '@agm/core';
 
 import { MapsGoogleComponent } from './google/maps-google.component';
 import { MapsVectorComponent } from './vector/maps-vector.component';
+import {NewWidgetModule} from "../../layout/new-widget/widget.module";
 
 export const routes = [
   {path: '', redirectTo: 'google', pathMatch: 'full'},
@@ -32,8 +33,9 @@ export const routes = [
     ButtonsModule.forRoot(),
     BsDropdownModule.forRoot(),
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDe_oVpi9eRSN99G4o6TwVjJbFBNr58NxE'
-    })
+      apiKey: 'AIzaSyB7OXmzfQYua_1LEhRdqsoYzyJOPh9hGLg'
+    }),
+    NewWidgetModule
   ]
 })
 export class MapsModule {
