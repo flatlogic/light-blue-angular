@@ -36,18 +36,24 @@ export class RegisterService {
   }
 
   registerUser(payload) {
-    this.requestRegister();
-    const creds = payload;
-    if (creds.email.length > 0 && creds.password.length > 0) {
-      this.http.post('/user/signup', creds).subscribe(() => {
-        this.receiveRegister();
-        this.toastr.success('You\'ve been registered successfully');
-        this.router.navigate(['/login']);
-      }, err => {
-        this.registerError(err.response.data);
-      });
+    // We check if app runs with backend mode
+    if (!this.config.isBackend) {
+      this.toastr.success('You\'ve been registered successfully');
+      this.router.navigate(['/login']);
     } else {
-      this.registerError('Something was wrong. Try again');
+      this.requestRegister();
+      const creds = payload;
+      if (creds.email.length > 0 && creds.password.length > 0) {
+        this.http.post('/user/signup', creds).subscribe(() => {
+          this.receiveRegister();
+          this.toastr.success('You\'ve been registered successfully');
+          this.router.navigate(['/login']);
+        }, err => {
+          this.registerError(err.response.data);
+        });
+      } else {
+        this.registerError('Something was wrong. Try again');
+      }
     }
   }
 

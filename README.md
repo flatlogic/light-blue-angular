@@ -33,17 +33,16 @@ This project serves as an Angular 5 starter for anyone looking to get up and run
 # change directory to our repo
 cd light-blue/angular2
 
-# makesure typings are installed globally
-npm install -g typings
+# install the repo with yarn
+yarn install
 
-# install the repo with npm
-npm install
+# Development server
 
-# start the server
-npm start
+Run `yarn start` for a dev server. Navigate to `http://localhost:3000/`. The app will automatically reload if you change any of the source files.
 
-# use Hot Module Replacement
-npm run server:dev:hmr
+# If you use app with backend support, please use `yarn run serve:backend`
+
+# use Hot Module Replacement `yarn run hmr`
 ```
 go to [http://0.0.0.0:3000](http://0.0.0.0:3000) or [http://localhost:3000](http://localhost:3000) in your browser
 

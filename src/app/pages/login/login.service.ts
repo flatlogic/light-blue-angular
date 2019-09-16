@@ -38,6 +38,11 @@ export class LoginService {
 
   isAuthenticated() {
     const token = localStorage.getItem('token');
+
+    // We check if app runs with backend mode
+    if (!this.config.isBackend && token) {
+      return true;
+    }
     if (!token) {
       return;
     }
@@ -47,26 +52,40 @@ export class LoginService {
   }
 
   loginUser(creds) {
-    this.requestLogin();
-    if (creds.social) {
-      // tslint:disable-next-line
-      window.location.href = this.config.baseURLApi + '/user/signin/' + creds.social + (process.env.NODE_ENV === 'production' ? '?app=light-blue/angular' : '');
-    } else if (creds.email.length > 0 && creds.password.length > 0) {
-      this.http.post('/user/signin/local', creds).subscribe((res: any) => {
-        const token = res.token;
-        this.receiveToken(token);
-      }, err => {
-        this.loginError(err.response.data);
-      });
-
+    // We check if app runs with backend mode
+    if (!this.config.isBackend) {
+      this.receiveToken('token');
     } else {
-      this.loginError('Something was wrong. Try again');
+      this.requestLogin();
+      if (creds.social) {
+        // tslint:disable-next-line
+        window.location.href = this.config.baseURLApi + '/user/signin/' + creds.social + (process.env.NODE_ENV === 'production' ? '?app=light-blue/angular' : '');
+      } else if (creds.email.length > 0 && creds.password.length > 0) {
+        this.http.post('/user/signin/local', creds).subscribe((res: any) => {
+          const token = res.token;
+          this.receiveToken(token);
+        }, err => {
+          this.loginError(err.response.data);
+        });
+
+      } else {
+        this.loginError('Something was wrong. Try again');
+      }
     }
   }
 
   receiveToken(token) {
-    const user = jwt.decodeToken(token).user;
-    delete user.id;
+    let user: any = {};
+    // We check if app runs with backend mode
+    if (this.config.isBackend) {
+      user = jwt.decodeToken(token).user;
+      delete user.id;
+    } else {
+      user = {
+        email: this.config.auth.email
+      };
+    }
+
     localStorage.setItem('token', token);
     localStorage.setItem('user', JSON.stringify(user));
     this.receiveLogin();

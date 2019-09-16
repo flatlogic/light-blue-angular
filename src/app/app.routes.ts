@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { ErrorComponent } from './pages/error/error.component';
-import {AppGuard} from "./app.guard";
+import {AppGuard} from './app.guard';
 
 export const ROUTES: Routes = [{
    path: '', redirectTo: 'app', pathMatch: 'full'

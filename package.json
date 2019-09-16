@@ -6,6 +6,7 @@
     "install": "napa",
     "ng": "ng",
     "start": "ng serve",
+    "start:backend": "ng serve --configuration backend",
     "hmr": "ng serve --configuration hmr",
     "build": "ng build --prod",
     "test": "ng test",

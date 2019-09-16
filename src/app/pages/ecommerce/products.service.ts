@@ -2,6 +2,8 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Router} from '@angular/router';
 import {ToastrService} from 'ngx-toastr';
+import mock from './mock';
+import {AppConfig} from '../../app.config';
 
 export class Product {
   id?: number;
@@ -44,27 +46,47 @@ export class ProductsService {
   _isDeleting: boolean = false;
   _idToDelete: string = null;
 
+  config: any;
+
   constructor(
     private http: HttpClient,
     private router: Router,
-    private toastr: ToastrService
-  ) {}
+    private toastr: ToastrService,
+    appConfig: AppConfig
+  ) {
+    this.config = appConfig.getConfig();
+  }
 
   getProductsRequest() {
-    this.receivingProducts();
-    this.http.get('/products').subscribe(products => {
-      this.receiveProducts(products);
-    });
+    // We check if app runs with backend mode
+    if (!this.config.isBackend) {
+      this.receiveProducts(mock);
+    } else {
+      this.receivingProducts();
+      this.http.get('/products').subscribe(products => {
+        this.receiveProducts(products);
+      });
+    }
   }
 
   loadProductRequest(id) {
-    this.receivingProduct();
-    this.http.get('/products/' + id).subscribe(product => {
-      this.receiveProduct(product);
-    });
+    // We check if app runs with backend mode
+    if (!this.config.isBackend) {
+      this.receiveProduct(mock.find(arr => arr.id === id));
+    } else {
+      this.receivingProduct();
+      this.http.get('/products/' + id).subscribe(product => {
+        this.receiveProduct(product);
+      });
+    }
   }
 
   updateProductRequest(payload) {
+    // We check if app runs with backend mode
+    if (!this.config.isBackend) {
+      return;
+    }
+
     this.updatingProduct();
     this.http.put('/products/' + payload.product.id, payload.product).subscribe(() => {
       this.updateProduct(payload.product);
@@ -73,6 +95,11 @@ export class ProductsService {
   }
 
   createProductRequest(payload) {
+    // We check if app runs with backend mode
+    if (!this.config.isBackend) {
+      return;
+    }
+
     this.updatingProduct();
     this.http.post('/products', payload.product).subscribe(() => {
       this.updateProduct(payload.product);
@@ -82,9 +109,14 @@ export class ProductsService {
   }
 
   deleteProductRequest(payload) {
-    this.deletingProduct (payload);
+    // We check if app runs with backend mode
+    if (!this.config.isBackend) {
+      return;
+    }
+
+    this.deletingProduct(payload);
     this.http.delete('/products/' + payload.id).subscribe(() => {
-      this.deleteProduct ({id: payload.id});
+      this.deleteProduct({id: payload.id});
       // if (this.router.history.current.pathname !== '/app/ecommerce/management') {
       //   this.router.navigate(['/app/ecommerce/management']);
       // }
@@ -93,10 +125,15 @@ export class ProductsService {
   }
 
   getProductsImagesRequest(payload) {
+    // We check if app runs with backend mode
+    if (!this.config.isBackend) {
+      return;
+    }
+
     this.http.get('/products/images-list').subscribe((images: Array<string>) => {
       this.receiveProductImages(images);
       if (!payload.img && images.length) {
-        this.updateProduct ({id: payload.id, img: images[0]});
+        this.updateProduct({id: payload.id, img: images[0]});
       }
     });
   }
