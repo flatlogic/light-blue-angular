@@ -34,7 +34,7 @@
               "node_modules/nvd3/build/nv.d3.min.js",
               "node_modules/rickshaw/rickshaw.min.js",
               "node_modules/moment/min/moment.min.js",
-              "node_modules/fullcalendar/dist/fullcalendar.min.js",
+              "node_modules/fullcalendar/dist/fullcalendar.js",
               "node_modules/skycons/skycons.js",
               "node_modules/dropzone/dist/dropzone.js",
               "node_modules/parsleyjs/dist/parsley.js",
