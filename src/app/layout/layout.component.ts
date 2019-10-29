@@ -18,8 +18,8 @@ declare let Raphael: any;
 })
 export class Layout {
   sidebarState: boolean = true;
-  @ViewChild('spinnerElement', {static: true}) spinnerElement: ElementRef;
-  @ViewChild('routerComponent', {static: true}) routerComponent: ElementRef;
+  @ViewChild('spinnerElement', { static: true }) spinnerElement: ElementRef;
+  @ViewChild('routerComponent', { static: true }) routerComponent: ElementRef;
 
   constructor(private el: ElementRef, private renderer: Renderer, private router: Router, private ngZone: NgZone) {
     Raphael.prototype.safari = function (): any {
@@ -114,5 +114,15 @@ export class Layout {
     }
 
     this.sidebarState = !this.sidebarState;
+  }
+
+  public onMenuItemClick(): void {
+    if (!this.sidebarState) {
+      this.renderer.setElementStyle(this.el.nativeElement
+        .querySelector('.content'), 'margin-top', '0px');
+      ($('#sidebar') as any).collapse('hide');
+      this.sidebarState = !this.sidebarState;
+    }
+
   }
 }

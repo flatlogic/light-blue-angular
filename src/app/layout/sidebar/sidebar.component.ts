@@ -1,4 +1,4 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component, ElementRef, Output, EventEmitter } from '@angular/core';
 import { Renderer2 } from '@angular/core';
 
 declare let jQuery: any;
@@ -10,6 +10,8 @@ declare let jQuery: any;
 export class Sidebar {
   sidebarHeight: number = 0;
   sidebarMenu: any = 0;
+
+  @Output() public menuItemClick: EventEmitter<void> = new EventEmitter();
 
   constructor(private renderer: Renderer2, private el: ElementRef) {
   }
@@ -72,5 +74,9 @@ export class Sidebar {
     this.collapseSubMenu(event);
     this.renderer.setStyle(document
       .querySelector('.content'), 'margin-top', this.sidebarHeight + 'px');
+  }
+
+  public onMenuItemClick(): void {
+    this.menuItemClick.emit();
   }
 }

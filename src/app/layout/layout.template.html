@@ -1,7 +1,15 @@
-<nav sidebar id="sidebar" class="sidebar nav-collapse collapse"></nav>
+<nav 
+  (menuItemClick)="onMenuItemClick()" 
+  sidebar  
+  id="sidebar" 
+  class="sidebar nav-collapse collapse">
+</nav>
 <div class="wrap">
-  <header navbar (changeSidebarPosition)="sidebarPosition($event)" (changeSidebarDisplay)="sidebarDisplay($event)"
-          (openSidebar)="openSidebar()" class="page-header"></header>
+  <header navbar 
+    (changeSidebarPosition)="sidebarPosition($event)" 
+    (changeSidebarDisplay)="sidebarDisplay($event)"
+    (openSidebar)="openSidebar()" 
+    class="page-header"></header>
   <main id="content" class="content view-animate fade-up" role="main">
     <div class="loading-overlay" #spinnerElement>
       <div class="sk-fading-circle">
