@@ -1,7 +1,5 @@
 import {Component, Input} from '@angular/core';
 
-import 'widgster';
-
 @Component({
   selector: 'loader',
   templateUrl: './loader.html',

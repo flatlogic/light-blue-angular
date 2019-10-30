@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 
 import { WidgetModule } from '../../layout/widget/widget.module';
 import { FlotChartModule } from '../../components/flot/flot.module';
-import { MorrisChartModule } from '../../components/morris/morris.module';
 import { Nvd3ChartModule } from '../../components/nvd3/nvd3.module';
 import { JqSparklineModule } from '../../components/sparkline/sparkline.module';
 import { RickshawChartModule } from '../../components/rickshaw/rickshaw.module';
@@ -23,6 +22,7 @@ import {LineChartComponent} from './flot/components/line-chart/line-chart';
 import {MarkersChartComponent} from './flot/components/markers-chart/markers-chart';
 import {PieChartComponent} from './flot/components/pie-chart/pie-chart';
 import {TrackingChartComponent} from './flot/components/tracking-chart/tracking-chart';
+import { MorrisJsModule } from 'angular-morris-js';
 
 
 export const routes = [
@@ -39,14 +39,14 @@ export const routes = [
     CommonModule,
     WidgetModule,
     FlotChartModule,
-    MorrisChartModule,
     Nvd3ChartModule,
     JqSparklineModule,
     RickshawChartModule,
     RouterModule.forChild(routes),
     NewWidgetModule,
     AlertModule.forRoot(),
-    ProgressbarModule.forRoot()
+    ProgressbarModule.forRoot(),
+    MorrisJsModule
   ],
   declarations: [
     OverviewComponent,

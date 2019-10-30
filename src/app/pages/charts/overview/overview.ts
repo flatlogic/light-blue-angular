@@ -1,4 +1,5 @@
-import {Component, ElementRef, OnInit, ViewChild, ViewEncapsulation} from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import { MorrisonConfig } from './morrison-config.interface';
 
 declare let jQuery: any;
 declare let Rickshaw: any;
@@ -12,9 +13,9 @@ declare let nv: any;
   encapsulation: ViewEncapsulation.None
 })
 export class OverviewComponent implements OnInit {
-  @ViewChild('sparklineLineChart', {static: true}) sparklineLineChart: ElementRef;
+  @ViewChild('sparklineLineChart', { static: true }) sparklineLineChart: ElementRef;
 
-  seriesData: Array<any> = [ [], [] ];
+  seriesData: Array<any> = [[], []];
   random: any;
   series: Array<any>;
   flotBarsData: Array<any>;
@@ -23,9 +24,9 @@ export class OverviewComponent implements OnInit {
   sparklineCompositeOptions: Array<any>;
   sparklinePieData: Array<any>;
   sparklinePieOptions: any;
-  morris1Options: any;
-  morris2Options: any;
-  morris3Options: any;
+  morris1Config: MorrisonConfig;
+  morris2Config: MorrisonConfig;
+  morris3Config: MorrisonConfig;
   nvd31Chart: any;
   nvd31Data: any;
   nvd32Chart: any;
@@ -90,13 +91,13 @@ export class OverviewComponent implements OnInit {
           a[i] += x * Math.exp(-w * w);
         }
       }
-      return d3.range(n).map(function(): Array<Object> {
+      return d3.range(n).map(function (): Array<Object> {
         const a = [];
         let i;
         for (i = 0; i < m; i++) { a[i] = o + o * Math.random(); }
         for (i = 0; i < 5; i++) { bump(a); }
-        return a.map(function(d, iItem): Object {
-          return {x: iItem, y: Math.max(0, d)};
+        return a.map(function (d, iItem): Object {
+          return { x: iItem, y: Math.max(0, d) };
         });
       });
     }
@@ -109,10 +110,10 @@ export class OverviewComponent implements OnInit {
         daysAgoDate = now - daysAgo,
         pointsCount = pointCount || 45, // less for better performance
         daysPerPoint = daysAgoCount / pointsCount;
-      return _stream_layers(streamNames.length, pointsCount, .1).map(function(data, i): Object {
+      return _stream_layers(streamNames.length, pointsCount, .1).map(function (data, i): Object {
         return {
           key: streamNames[i],
-          values: data.map(function(d, j): Object {
+          values: data.map(function (d, j): Object {
             return {
               x: daysAgoDate + d.x * day * daysPerPoint,
               y: Math.floor(d.y * 100) // just a coefficient,
@@ -124,35 +125,35 @@ export class OverviewComponent implements OnInit {
 
     this.nvd31Chart = nv.models.lineChart()
       .useInteractiveGuideline(true)
-      .margin({left: 28, bottom: 30, right: 0})
+      .margin({ left: 28, bottom: 30, right: 0 })
       .color(['#ff6e7c', '#5faaff']);
 
     this.nvd31Chart.xAxis
       .showMaxMin(false)
-      .tickFormat(function(d): Object { return d3.time.format('%b %d')(new Date(d)); });
+      .tickFormat(function (d): Object { return d3.time.format('%b %d')(new Date(d)); });
 
     this.nvd31Chart.yAxis
       .showMaxMin(false)
       .tickFormat(d3.format(',f'));
 
-    this.nvd31Data = testData(['Search', 'Referral'], 50).map(function(el, i): boolean {
+    this.nvd31Data = testData(['Search', 'Referral'], 50).map(function (el, i): boolean {
       el.area = true;
       return el;
     });
 
     this.nvd32Chart = nv.models.multiBarChart()
-      .margin({left: 28, bottom: 30, right: 0})
+      .margin({ left: 28, bottom: 30, right: 0 })
       .color(['#4ce5d3', '#ff3d43']);
 
     this.nvd32Chart.xAxis
       .showMaxMin(false)
-      .tickFormat(function(d): Object { return d3.time.format('%b %d')(new Date(d)); });
+      .tickFormat(function (d): Object { return d3.time.format('%b %d')(new Date(d)); });
 
     this.nvd32Chart.yAxis
       .showMaxMin(false)
       .tickFormat(d3.format(',f'));
 
-    this.nvd32Data = testData(['Uploads', 'Downloads'], 10).map(function(el, i): boolean {
+    this.nvd32Data = testData(['Uploads', 'Downloads'], 10).map(function (el, i): boolean {
       el.area = true;
       return el;
     });
@@ -211,48 +212,54 @@ export class OverviewComponent implements OnInit {
 
     this.applyNvd3Data();
 
-    this.morris1Options = {
-      resize: true,
+    this.morris1Config = {
       data: [
         { y: '2006', a: 100, b: 90 },
-        { y: '2007', a: 75,  b: 65 },
-        { y: '2008', a: 50,  b: 40 },
-        { y: '2009', a: 75,  b: 65 },
-        { y: '2010', a: 50,  b: 40 },
-        { y: '2011', a: 75,  b: 65 },
+        { y: '2007', a: 75, b: 65 },
+        { y: '2008', a: 50, b: 40 },
+        { y: '2009', a: 75, b: 65 },
+        { y: '2010', a: 50, b: 40 },
+        { y: '2011', a: 75, b: 65 },
         { y: '2012', a: 100, b: 90 }
       ],
-      xkey: 'y',
-      ykeys: ['a', 'b'],
-      labels: ['Series A', 'Series B'],
-      lineColors: ['#8fe5d4', '#ffebb2']
+      options: {
+        resize: true,
+        xkey: 'y',
+        ykeys: ['a', 'b'],
+        labels: ['Series A', 'Series B'],
+        lineColors: ['#8fe5d4', '#ffebb2']
+      }
     };
 
-    this.morris2Options = {
-      resize: true,
+    this.morris2Config = {
       data: [
         { y: '2006', a: 100, b: 90 },
-        { y: '2007', a: 75,  b: 65 },
-        { y: '2008', a: 50,  b: 40 },
-        { y: '2009', a: 75,  b: 65 },
-        { y: '2010', a: 50,  b: 40 },
-        { y: '2011', a: 75,  b: 65 },
+        { y: '2007', a: 75, b: 65 },
+        { y: '2008', a: 50, b: 40 },
+        { y: '2009', a: 75, b: 65 },
+        { y: '2010', a: 50, b: 40 },
+        { y: '2011', a: 75, b: 65 },
         { y: '2012', a: 100, b: 90 }
       ],
-      xkey: 'y',
-      ykeys: ['a', 'b'],
-      labels: ['Series A', 'Series B'],
-      lineColors: ['#f5b868', '#f55d5d'],
-      lineWidth: 0
+      options: {
+        resize: true,
+        xkey: 'y',
+        ykeys: ['a', 'b'],
+        labels: ['Series A', 'Series B'],
+        lineColors: ['#f5b868', '#f55d5d'],
+        lineWidth: 0
+      }
     };
 
-    this.morris3Options = {
+    this.morris3Config = {
       data: [
-        {label: 'Download Sales', value: 12},
-        {label: 'In-Store Sales', value: 30},
-        {label: 'Mail-Order Sales', value: 20}
+        { label: 'Download Sales', value: 12 },
+        { label: 'In-Store Sales', value: 30 },
+        { label: 'Mail-Order Sales', value: 20 }
       ],
-      colors: ['#ff9592', '#ffcf94', '#e6e6e6']
+      options: {
+        colors: ['#ff9592', '#ffcf94', '#e6e6e6']
+      }
     };
 
     jQuery('.easy-pie-chart-md').easyPieChart({

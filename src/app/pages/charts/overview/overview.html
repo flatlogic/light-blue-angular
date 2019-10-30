@@ -248,8 +248,13 @@
             The public API is terribly simple. It's just one function: <code>Morris.Line(options)</code>,
             where options is an object containing some of the following configuration options.
           </p>
-          <div morris-chart [type]="'area'" [height]="343" [options]="morris2Options">
-          </div>
+          <div 
+            mk-morris-js 
+            [data]="morris2Config.data" 
+            [options]="morris2Config.options" 
+            [style.height.px]="343"
+            type="Area"
+          ></div>
         </div>
       </section>
     </div>
@@ -271,8 +276,13 @@
             The public API is terribly simple. It's just one function: <code>Morris.Line(options)</code>,
             where options is an object containing some of the following configuration options.
           </p>
-          <div morris-chart [type]="'line'" [height]="343" [options]="morris1Options">
-          </div>
+          <div 
+            mk-morris-js 
+            [data]="morris1Config.data" 
+            [options]="morris1Config.options" 
+            [style.height.px]="343"
+            type="Line"
+          ></div>
         </div>
       </section>
     </div>
@@ -348,8 +358,13 @@
           </div>
         </header>
         <div class="widget-body">
-          <div morris-chart [type]="'donut'" [height]="180" [options]="morris3Options">
-          </div>
+          <div 
+            mk-morris-js 
+            [data]="morris3Config.data" 
+            [options]="morris3Config.options" 
+            [style.height.px]="180"
+            type="Donut"
+          ></div>
           <p class="fs-mini text-muted">
             Donuts a great for representing some parted information like traffice sources,
             disk partitions, etc.
