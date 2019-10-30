@@ -10,13 +10,13 @@ import { WidgetModule } from '../../layout/widget/widget.module';
 import { TextMaskModule } from 'angular2-text-mask';
 /* tslint:disable */
 import { BootstrapWizardModule } from '../../components/wizard/wizard.module';
-import { DropzoneDemoDirective } from '../../components/dropzone/dropzone.directive';
 import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
 /* tslint:enable */
 import { ElementsComponent } from './elements/elements.component';
 import { ValidationComponent } from './validation/validation.component';
 import { WizardComponent } from './wizard/wizard.component';
 import { EditorModule } from '@tinymce/tinymce-angular';
+import { DropzoneModule } from 'ngx-dropzone-wrapper';
 
 export const routes = [
   {path: '', redirectTo: 'elements', pathMatch: 'full'},
@@ -30,8 +30,7 @@ export const routes = [
     Autosize,
     ElementsComponent,
     ValidationComponent,
-    WizardComponent,
-    DropzoneDemoDirective
+    WizardComponent
   ],
   imports: [
     CommonModule,
@@ -45,7 +44,8 @@ export const routes = [
     NKDatetimeModule,
     Select2Module,
     RouterModule.forChild(routes),
-    EditorModule
+    EditorModule,
+    DropzoneModule
   ]
 })
 export class FormModule {

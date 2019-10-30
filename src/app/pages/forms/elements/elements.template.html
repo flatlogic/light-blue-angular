@@ -1005,7 +1005,13 @@ Enjoy!
         </div>
       </header>
       <div class="widget-body">
-        <form dropzone-demo action="#" id="my-awesome-dropzone"></form>
+        <form 
+          [dropzone]="{url: 'https://httpbin.org/post'}"
+          class="dropzone" 
+          action="#" 
+          id="my-awesome-dropzone"
+          >
+        </form>
       </div>
     </section>
   </div>
