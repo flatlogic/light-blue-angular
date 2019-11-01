@@ -11,8 +11,10 @@ export class SkyconComponent implements OnChanges, OnInit, OnDestroy {
   @Input() public weather: string = 'clear-day';
   @Input() public height: string = '40px';
   @Input() public width: string = '40px';
+  @Input() public playing: boolean = true;
 
-  private icon: any;
+  private icon: any = new Skycons();
+  private initialized: boolean = false;
 
   constructor() { }
 
@@ -20,10 +22,11 @@ export class SkyconComponent implements OnChanges, OnInit, OnDestroy {
 
   public ngOnChanges(): void {
     this.initIcon();
+    this.initialized = true;
   }
 
   public ngOnInit(): void {
-    if (!Boolean(this.icon)) {
+    if (!this.initialized) {
       this.initIcon();
     }
   }
@@ -33,8 +36,9 @@ export class SkyconComponent implements OnChanges, OnInit, OnDestroy {
   }
 
   public initIcon(): void {
-    this.icon = new Skycons({ color: this.color });
+    this.icon.remove(this.canvas.nativeElement);
+    this.icon.color = this.color;
     this.icon.set(this.canvas.nativeElement, this.weather);
-    this.icon.play();
+    this.playing ? this.icon.play() : this.icon.pause();
   }
 }
