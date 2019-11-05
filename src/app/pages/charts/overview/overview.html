@@ -77,31 +77,16 @@
           </div>
         </header>
         <div class="widget-body">
-          <div class="mt mb" id="flot-main" style="width: 100%; height: 260px;" flot-chart-animator
-               [data]="[{
-                        label: 'Traffic',
-                        data: data3,
-                        lines: {
-                            fill: .3,
-                            lineWidth: 0
-                        },
-                        color:['#ffdb6f']
-                    },{
-                        label: 'Traffic',
-                        data: data2,
-                        lines: {
-                            fill: 0.6,
-                            lineWidth: 0
-                        },
-                        color:['#ffaa73']
-                    },{
-                        label: 'Traffic',
-                        data: data1,
-                        animator: {steps: 60, duration: 1000, start:0},
-                        lines: {lineWidth:2},
-                        shadowSize:0,
-                        color: '#ffc247'
-                }]"></div>
+            <apx-chart class="chart-inner transparent-bg"
+              [series]="apexOptions3.series" 
+              [stroke]="apexOptions3.stroke"
+              [chart]="apexOptions3.chart" 
+              [colors]="apexOptions3.colors"
+              [legend]="apexOptions3.legend"
+              [xaxis]="apexOptions3.xaxis"
+              [yaxis]="apexOptions3.yaxis"
+              [tooltip]="apexOptions3.tooltip"
+          ></apx-chart>
           <div class="chart-tooltip" id="flot-main-tooltip" style="opacity: 0"></div>
           <p class="fs-mini text-muted">
             Flot is a <span class="fw-semi-bold">pure</span> JavaScript plotting library for jQuery, with a
@@ -334,10 +319,18 @@
           </div>
         </header>
         <div class="widget-body">
-          <div class="mt-lg" flot-chart
-               [data]="flotBarsData"
-               [options]="flotBarsOptions"
-               style="width: 100%; height: 260px;"></div>
+          <apx-chart class="chart-inner transparent-bg"
+               [chart]="apexOptions4.chart" 
+               [plotOptions]="apexOptions4.plotOptions"
+               [dataLabels]="apexOptions4.dataLabels"
+               [stroke]="apexOptions4.stroke"
+               [series]="apexOptions4.series" 
+               [xaxis]="apexOptions4.xaxis"
+               [colors]="apexOptions4.colors"
+               [legend]="apexOptions4.legend"
+               [tooltip]="apexOptions4.tooltip"
+               [grid]="apexOptions4.grid"
+           ></apx-chart>
           <p class="fs-mini text-muted">
             Flot is a <span class="fw-semi-bold">pure</span> JavaScript plotting library for jQuery, with a
             focus on simple usage, attractive looks and interactive features.

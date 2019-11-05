@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { ApexOptions } from 'ng-apexcharts';
 
-import { apexOptions1, apexOptions2 } from './apex-charts.data';
+import { apexOptions1, apexOptions2 } from '../../../utils/apex-charts.data';
 
 @Component({
   selector: 'widgets',

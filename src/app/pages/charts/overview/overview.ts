@@ -1,5 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+
 import { MorrisonConfig } from './morrison-config.interface';
+import { apexOptions3, apexOptions4 } from '../../../utils/apex-charts.data';
 
 declare let jQuery: any;
 declare let Rickshaw: any;
@@ -14,6 +16,9 @@ declare let nv: any;
 })
 export class OverviewComponent implements OnInit {
   @ViewChild('sparklineLineChart', { static: true }) sparklineLineChart: ElementRef;
+
+  public apexOptions3 = apexOptions3;
+  public apexOptions4 = apexOptions4;
 
   seriesData: Array<any> = [[], []];
   random: any;
