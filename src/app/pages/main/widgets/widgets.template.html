@@ -160,6 +160,119 @@
 <div class="row" flot-chart-widget>
 </div>
 <div class="row">
+  <div class="col-lg-6 col-12">
+    <section class="widget widget-chart-stats-simple" widget>
+      <header>
+        <div class="row">
+          <div class="col-3">
+            <h6>
+              Total Sales
+            </h6>
+            <p class="value5">
+              January, 2014
+            </p>
+          </div>
+          <div class="col-3">
+            <h5>
+              <small class="text-white">Best</small>
+            </h5>
+            <p class="value6 fs-sm">
+              March, 2013 + 1
+            </p>
+          </div>
+        </div>
+        <div class="widget-controls">
+          <a href="#"><i class="la la-cog"></i></a>
+          <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+        </div>
+      </header>
+      <div class="widget-body">
+        <div class="chart-stats">
+          <p class="text-muted fs-mini mt-xs">
+            <i class="fa fa-map-marker fa-5x pull-left"></i>
+            <span class="fw-semi-bold">Jess:</span> Seems like statically it's getting impossible to achieve any sort of
+            results in nearest future. The only thing we can hope for is pressing one of these two buttons:
+          </p>
+          <div class="btn-toolbar">
+            <button class="btn btn-xs btn-success">Accept</button>
+            <button class="btn btn-xs btn-default">Reject</button>
+          </div>
+        </div>
+        <div class="chart">
+          <apx-chart class="chart-inner transparent-bg"
+            [series]="apexOptions1.series" 
+            [stroke]="apexOptions1.stroke"
+            [chart]="apexOptions1.chart" 
+            [colors]="apexOptions1.colors"
+            [legend]="apexOptions1.legend"
+            [xaxis]="apexOptions1.xaxis"
+            [yaxis]="apexOptions1.yaxis"
+            [grid]="apexOptions1.grid"
+          ></apx-chart>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="col-lg-6 col-12">
+    <section class="widget widget-chart-stats-simple" widget>
+      <header>
+        <h6 class="mb-0">
+          <span class="fw-semi-bold">Budget</span>&nbsp;<span class="badge badge-pill badge-danger">2017</span>
+        </h6>
+        <span class="text-muted fs-mini">monthly report will be available in <a href="#">6 hours</a></span>
+        <div class="widget-controls">
+          <a href="#"><i class="la la-cog"></i></a>
+          <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+        </div>
+      </header>
+      <div class="widget-body">
+        <div class="chart-stats">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="clearfix m-t-1">
+                <h6 class="pull-left text-muted mb-xs">
+                  Income
+                </h6>
+                <p class="pull-right h6 mb-xs">
+                  <span class="fw-semi-bold">$14,595</span>
+                </p>
+              </div>
+              <div class="clearfix">
+                <h6 class="pull-left m-0 text-muted">
+                  Recent
+                </h6>
+                <p class="pull-right">
+                  <span class="fw-semi-bold">$7,647</span>
+                </p>
+              </div>
+            </div>
+            <div class="col-md-3 text-right m-t-1">
+              <h6 class="text-muted mb-xs">Inqueries</h6>
+              <p class="fw-semi-bold">73 at 14am</p>
+            </div>
+            <div class="col-md-4 text-right m-t-1">
+              <h6 class="text-muted mb-xs">Last Updated</h6>
+              <p class="fw-semi-bold">23.06.2013</p>
+            </div>
+          </div>
+        </div>
+        <div class="chart">
+          <apx-chart class="chart-inner transparent-bg"
+            [series]="apexOptions2.series" 
+            [stroke]="apexOptions2.stroke"
+            [chart]="apexOptions2.chart" 
+            [colors]="apexOptions2.colors"
+            [legend]="apexOptions2.legend"
+            [xaxis]="apexOptions2.xaxis"
+            [yaxis]="apexOptions2.yaxis"
+            [grid]="apexOptions2.grid"
+          ></apx-chart>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+<div class="row">
   <div class="col-lg-4 col-12">
     <section widget class="widget">
       <header>
@@ -320,7 +433,7 @@
             </div>
             <div class="col-3 col-md-2 p-0">
               <h6 class="m-0">TOMMOROW</h6>
-                <skycon weather="partly-cloudy-day" color="white" width="28px" height="28px"></skycon>
+              <skycon weather="partly-cloudy-day" color="white" width="28px" height="28px"></skycon>
               <p class="m-0 fw-semi-bold">32&deg;</p>
             </div>
             <div class="col-3 col-md-2 p-0">
@@ -335,7 +448,7 @@
             </div>
             <div class="col-3 col-md-2 p-0">
               <h6 class="m-0">THU</h6>
-                <skycon weather="partly-cloudy-day" color="white" width="28px" height="28px"></skycon>
+              <skycon weather="partly-cloudy-day" color="white" width="28px" height="28px"></skycon>
               <p class="m-0 fw-semi-bold">17&deg;</p>
             </div>
           </div>
@@ -385,7 +498,8 @@
               <p class="text-white display-inline-block fw-normal display-inline-block mb">SUNDAY</p>
             </div>
             <div class="col-5">
-                <skycon class="mt display-block" weather="partly-cloudy-day" color="#57b955" width="60px" height="60px"></skycon>
+              <skycon class="mt display-block" weather="partly-cloudy-day" color="#57b955" width="60px" height="60px">
+              </skycon>
               <p class="fw-normal fs-sm text-muted">WINDY</p>
             </div>
           </div>

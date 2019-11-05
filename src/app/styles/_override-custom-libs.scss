@@ -8,11 +8,11 @@
 
 
 .nvd3-svg svg text,
-.nvd3-svg .nvd3 text{
+.nvd3-svg .nvd3 text {
   font: $font-weight-base $font-size-sm $font-family-base;
   fill: $text-color;
 
-  .widget &{
+  .widget & {
     fill: $widget-color;
   }
 }
@@ -21,7 +21,7 @@
   font: $font-weight-bold $font-size-base $font-family-base;
 }
 
-.nvd3-svg  .nvd3.nv-noData {
+.nvd3-svg .nvd3.nv-noData {
   font-size: $font-size-lg;
   font-weight: $font-weight-bold;
 }
@@ -30,8 +30,8 @@
   stroke-opacity: 0;
 }
 
-.nvd3-svg .nv-controlsWrap{
-  .nv-legend-symbol{
+.nvd3-svg .nv-controlsWrap {
+  .nv-legend-symbol {
     fill: $white !important;
     stroke: $white !important;
   }
@@ -45,18 +45,18 @@
   fill-opacity: 0;
 }
 
-.nvd3-svg .nvd3 .nv-axis line{
+.nvd3-svg .nvd3 .nv-axis line {
   stroke: #000;
   stroke-opacity: .1;
 }
 
-.nvtooltip.xy-tooltip h3{
+.nvtooltip.xy-tooltip h3 {
   background-color: transparent;
   border: none;
   color: inherit;
 }
 
-.stat-widget header .nvd3.nv-multibar .nv-group{
+.stat-widget header .nvd3.nv-multibar .nv-group {
   fill-opacity: 1 !important;
 }
 
@@ -68,7 +68,7 @@
   fill-opacity: .95;
 }
 
-.nvd3-svg .nvd3 .nv-axis path.domain{
+.nvd3-svg .nvd3 .nv-axis path.domain {
   display: none;
 }
 
@@ -96,18 +96,19 @@
 }
 
 .nvtooltip.xy-tooltip {
-    font-size: $font-size-base;
-    text-align: center;
+  font-size: $font-size-base;
+  text-align: center;
 }
 
-.nvd3-svg .nvd3 .nv-axis line.zero{
+.nvd3-svg .nvd3 .nv-axis line.zero {
   display: none;
 }
 
 /*!
  * Bootstrap-select
  */
-.bootstrap-select .btn:focus, .bootstrap-select > .btn.dropdown-toggle:focus{
+.bootstrap-select .btn:focus,
+.bootstrap-select>.btn.dropdown-toggle:focus {
   outline: none !important;
 }
 
@@ -117,7 +118,7 @@
 
 .bootstrap-select {
   width: auto !important;
-    z-index: 1;
+  z-index: 1;
 
   &.show .dropdown-menu.inner {
     display: block;
@@ -129,7 +130,7 @@
   }
 }
 
-body .bootstrap-select > select {
+body .bootstrap-select>select {
   width: 0 !important;
   height: 0 !important;
 }
@@ -199,7 +200,7 @@ html[dir="rtl"] .select2-search input {
  * Switchery
  */
 
-.switchery{
+.switchery {
   background-color: transparent !important;
 }
 
@@ -220,13 +221,14 @@ html[dir="rtl"] .select2-search input {
 }
 
 .glyphicon-comment:before {
-  content:"\E111";
+  content: "\E111";
 }
 
 /***********************************/
 /**        Awesome Checkbox       **/
 /***********************************/
-.abc-checkbox label, .abc-radio label{
+.abc-checkbox label,
+.abc-radio label {
   &::before {
     background: none;
     border-color: #aaa;
@@ -243,6 +245,7 @@ html[dir="rtl"] .select2-search input {
 
 .table td,
 .table th {
+
   .abc-checkbox label::before,
   .abc-checkbox label::after {
     left: -5px;
@@ -255,8 +258,8 @@ html[dir="rtl"] .select2-search input {
   left: -17px;
 }
 
-.abc-checkbox-dark input[type="checkbox"]:checked + label{
-  &::after{
+.abc-checkbox-dark input[type="checkbox"]:checked+label {
+  &::after {
     color: $gray-300;
   }
 }
@@ -264,22 +267,25 @@ html[dir="rtl"] .select2-search input {
 /***********************************/
 /**        Select2       **/
 /***********************************/
-.select2-container--bootstrap .select2-search--dropdown .select2-search__field{
+.select2-container--bootstrap .select2-search--dropdown .select2-search__field {
   padding-left: 28px;
 }
 
-.select2-container--bootstrap .select2-results .select2-results__option{
+.select2-container--bootstrap .select2-results .select2-results__option {
   color: $gray-800;
 }
 
 /**
 * datetime
 **/
-.input-group.date, .input-group.timepicker {
+.input-group.date,
+.input-group.timepicker {
   width: auto;
   box-sizing: border-box;
+
   .input-group-addon {
     padding: 0.6rem;
+
     i {
       height: 13px;
       width: 13px;
@@ -289,6 +295,7 @@ html[dir="rtl"] .select2-search input {
 
 .datepicker.datepicker-dropdown {
   margin-top: 20px;
+
   &.datepicker-orient-top {
     margin-top: 14px;
   }
@@ -302,10 +309,12 @@ html[dir="rtl"] .select2-search input {
   height: auto;
 }
 
-.bootstrap-select, .input-group-btn:not(first-child) .bootstrap-select {
+.bootstrap-select,
+.input-group-btn:not(first-child) .bootstrap-select {
   &.btn-group.open {
     z-index: 5;
   }
+
   .btn.dropdown-toggle {
     padding-left: 10px;
     box-sizing: border-box;
@@ -320,7 +329,7 @@ html[dir="rtl"] .select2-search input {
     z-index: 3;
   }
 
-  .dropdown-menu > li > a {
+  .dropdown-menu>li>a {
     display: block;
     width: 100%; // For `<button>`s
     padding: 3px 20px;
@@ -462,19 +471,19 @@ html[dir="rtl"] .select2-search input {
   .datatable-pager {
     font-size: $font-size-sm;
 
-    .pager > li {
-      > a {
+    .pager>li {
+      >a {
         padding: $pagination-padding-y $pagination-padding-x;
         color: $text-color;
         text-decoration: none;
       }
 
-      &.active > a {
+      &.active>a {
         background-color: $pagination-active-bg;
         border-radius: $border-radius;
       }
 
-      &.disabled > a {
+      &.disabled>a {
         color: $text-muted;
       }
     }
@@ -502,5 +511,11 @@ html[dir="rtl"] .select2-search input {
 
   tag:hover {
     box-shadow: none !important;
+  }
+}
+
+apx-chart.transparent-bg {
+  .apexcharts-canvas {
+    background-color: transparent !important;
   }
 }

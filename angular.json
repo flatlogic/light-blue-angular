@@ -35,8 +35,6 @@
               "node_modules/rickshaw/rickshaw.min.js",
               "node_modules/moment/min/moment.min.js",
               "node_modules/fullcalendar/dist/fullcalendar.js",
-              "node_modules/skycons/skycons.js",
-              "node_modules/dropzone/dist/dropzone.js",
               "node_modules/parsleyjs/dist/parsley.js",
               "node_modules/jasny-bootstrap/dist/js/jasny-bootstrap.min.js",
               "node_modules/markdown/lib/markdown.js",
@@ -60,8 +58,8 @@
               "node_modules/jquery-flot/jquery.flot.js",
               "node_modules/jquery-flot/jquery.flot.time.js",
               "node_modules/jquery.flot.animator/jquery.flot.animator.min.js",
-              "node_modules/morris.js/morris.js",
-              "node_modules/twitter-bootstrap-wizard/jquery.bootstrap.wizard.js"
+              "node_modules/twitter-bootstrap-wizard/jquery.bootstrap.wizard.js",
+              "node_modules/apexcharts/dist/apexcharts.min.js"
             ]
           },
           "configurations": {

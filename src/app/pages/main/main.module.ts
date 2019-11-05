@@ -40,6 +40,7 @@ import { YearsMapWidgetComponent } from './widgets/years-map-widget/years-map-wi
 import { FakeWorldData } from './widgets/years-map-widget/fake-world-data.service';
 import { AnalyticsService } from './analytics/analytics.service';
 import { NewWidgetModule } from '../../layout/new-widget/widget.module';
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 export const routes = [
   { path: '', redirectTo: 'visits', pathMatch: 'full' },
@@ -83,7 +84,8 @@ export const routes = [
     JqSparklineModule,
     MapaelLayersMapModule,
     NewWidgetModule,
-    SkyconsModule
+    SkyconsModule,
+    NgApexchartsModule
   ],
   providers: [FakeWorldData, AnalyticsService]
 })
