@@ -514,8 +514,13 @@ html[dir="rtl"] .select2-search input {
   }
 }
 
-apx-chart.transparent-bg {
-  .apexcharts-canvas {
-    background-color: transparent !important;
+apx-chart {
+  .apexcharts-tooltip {
+    color: initial;
+  }
+  &.transparent-bg {
+    .apexcharts-canvas {
+      background-color: transparent !important;
+    }
   }
 }

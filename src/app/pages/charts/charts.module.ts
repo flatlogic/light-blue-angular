@@ -13,13 +13,7 @@ import { OverviewComponent } from './overview/overview';
 import { EasyPieComponent } from './easy-pie/easy-pie';
 import { NewWidgetModule } from '../../layout/new-widget/widget.module';
 import { AlertModule, ProgressbarModule } from 'ngx-bootstrap';
-import { BarsChartComponent } from './flot/components/bars-chart/bars-chart';
-import { BarsStackedChartComponent } from './flot/components/bars-stacked-chart/bars-stacked-chart';
-import { DonutChartComponent } from './flot/components/donut-chart/donut-chart';
-import { LineChartComponent } from './flot/components/line-chart/line-chart';
 import { MarkersChartComponent } from './flot/components/markers-chart/markers-chart';
-import { PieChartComponent } from './flot/components/pie-chart/pie-chart';
-import { TrackingChartComponent } from './flot/components/tracking-chart/tracking-chart';
 import { MorrisJsModule } from 'angular-morris-js';
 import { NgApexchartsModule } from 'ng-apexcharts';
 
@@ -53,13 +47,7 @@ export const routes = [
     MorrisComponent,
     SparklineComponent,
     EasyPieComponent,
-    BarsChartComponent,
-    BarsStackedChartComponent,
-    DonutChartComponent,
-    LineChartComponent,
     MarkersChartComponent,
-    PieChartComponent,
-    TrackingChartComponent
   ]
 })
 export class ChartsModule {

@@ -11,7 +11,16 @@
       [collapse]="true"
       [customHeader]="true"
     >
-      <line-chart></line-chart>
+      <apx-chart class="chart-inner transparent-bg"
+              [series]="apexOptions5.series" 
+              [stroke]="apexOptions5.stroke"
+              [chart]="apexOptions5.chart" 
+              [colors]="apexOptions5.colors"
+              [legend]="apexOptions5.legend"
+              [xaxis]="apexOptions5.xaxis"
+              [yaxis]="apexOptions5.yaxis"
+              [tooltip]="apexOptions5.tooltip"
+      ></apx-chart>
       <p class="fs-mini text-muted">
         Flot is a <span class="fw-semi-bold">pure</span>
         JavaScript plotting library for jQuery, with a
@@ -63,7 +72,17 @@
       [customHeader]="true"
     >
       <div class="mt mb">
-        <tracking-chart></tracking-chart>
+        <apx-chart class="chart-inner transparent-bg"
+            [series]="apexOptions6.series" 
+            [stroke]="apexOptions6.stroke"
+            [chart]="apexOptions6.chart" 
+            [colors]="apexOptions6.colors"
+            [legend]="apexOptions6.legend"
+            [xaxis]="apexOptions6.xaxis"
+            [yaxis]="apexOptions6.yaxis"
+            [grid]="apexOptions6.grid"
+            [tooltip]="apexOptions6.tooltip"
+          ></apx-chart>
       </div>
       <p class="fs-mini text-muted">
         Flot charts can be customized easily due to its
@@ -97,7 +116,18 @@
       [customHeader]="true"
     >
       <div class="mt mb">
-        <bars-chart></bars-chart>
+        <apx-chart class="chart-inner transparent-bg"
+               [chart]="apexOptions4.chart" 
+               [plotOptions]="apexOptions4.plotOptions"
+               [dataLabels]="apexOptions4.dataLabels"
+               [stroke]="apexOptions4.stroke"
+               [series]="apexOptions4.series" 
+               [xaxis]="apexOptions4.xaxis"
+               [colors]="apexOptions4.colors"
+               [legend]="apexOptions4.legend"
+               [tooltip]="apexOptions4.tooltip"
+               [grid]="apexOptions4.grid"
+           ></apx-chart>
       </div>
       <p class="fs-mini text-muted">
         Flot is a pure JavaScript plotting library for jQuery,
@@ -114,7 +144,13 @@
       [customHeader]="true"
     >
       <div class="mt mb">
-        <pie-chart></pie-chart>
+        <apx-chart class="chart-inner transparent-bg"
+               [chart]="apexOptions7.chart" 
+               [series]="apexOptions7.series" 
+               [labels]="apexOptions7.labels" 
+               [legend]="apexOptions7.legend"
+               [colors]="apexOptions7.colors"
+        ></apx-chart>
       </div>
       <p class="fs-mini text-muted">
         Labels can be hidden if the slice is less than a
@@ -128,7 +164,13 @@
       [collapse]="true"
       [customHeader]="true"
     >
-      <donut-chart></donut-chart>
+      <apx-chart class="chart-inner transparent-bg"
+               [chart]="apexOptions8.chart" 
+               [series]="apexOptions8.series" 
+               [labels]="apexOptions8.labels" 
+               [legend]="apexOptions8.legend"
+               [colors]="apexOptions8.colors"
+        ></apx-chart>
     </widget>
   </div>
   <div class="col-12">
@@ -140,7 +182,13 @@
       [customHeader]="true"
     >
       <div class="mt mb">
-        <bars-stacked-chart></bars-stacked-chart>
+        <apx-chart class="chart-inner transparent-bg"
+               [chart]="apexOptions9.chart" 
+               [series]="apexOptions9.series" 
+               [plotOptions]="apexOptions9.plotOptions" 
+               [colors]="apexOptions9.colors"
+               [dataLabels]="apexOptions9.dataLabels"
+        ></apx-chart>
       </div>
     </widget>
   </div>
