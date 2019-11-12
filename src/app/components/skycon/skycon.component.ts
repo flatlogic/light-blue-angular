@@ -1,5 +1,5 @@
 import { Component, ViewChild, OnChanges, OnInit, Input, ElementRef, OnDestroy } from '@angular/core';
-import { Skycons } from 'skycons';
+import * as Skycons from 'skycons';
 
 @Component({
   selector: 'skycon',
@@ -13,10 +13,8 @@ export class SkyconComponent implements OnChanges, OnInit, OnDestroy {
   @Input() public width: string = '40px';
   @Input() public playing: boolean = true;
 
-  private icon: any = new Skycons();
+  private icon: any = new (Skycons(window))();
   private initialized: boolean = false;
-
-  constructor() { }
 
   @ViewChild('canvas', { static: true }) public canvas: ElementRef<HTMLCanvasElement>;
 
@@ -28,6 +26,7 @@ export class SkyconComponent implements OnChanges, OnInit, OnDestroy {
   public ngOnInit(): void {
     if (!this.initialized) {
       this.initIcon();
+      this.initialized = true;
     }
   }
 

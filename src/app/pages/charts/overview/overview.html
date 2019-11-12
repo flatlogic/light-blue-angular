@@ -52,15 +52,15 @@
             <div class="progress-bar progress-xs bg-gray" style="width: 60%;" data-width="60%"></div>
           </div>
           <p class="fs-mini text-muted mb-lg">
-                            <span class="circle bg-success text-white">
-                                <i class="fa fa-circle"></i>
-                            </span>
+            <span class="circle bg-success text-white">
+              <i class="fa fa-circle"></i>
+            </span>
             &nbsp;
             Target <span class="fw-semi-bold">820</span> users
             is <span class="fw-semi-bold">96%</span> reached.
           </p>
-          <div rickshaw-chart [series]="series" [height]="130"
-               [realtime]="true" [random]="random" [seriesData]="seriesData" class="chart-overflow-bottom"></div>
+          <div rickshaw-chart [series]="series" [height]="130" [realtime]="true" [random]="random"
+            [seriesData]="seriesData" class="chart-overflow-bottom"></div>
         </div>
       </section>
     </div>
@@ -77,16 +77,9 @@
           </div>
         </header>
         <div class="widget-body">
-            <apx-chart class="chart-inner transparent-bg"
-              [series]="apexOptions3.series" 
-              [stroke]="apexOptions3.stroke"
-              [chart]="apexOptions3.chart" 
-              [colors]="apexOptions3.colors"
-              [legend]="apexOptions3.legend"
-              [xaxis]="apexOptions3.xaxis"
-              [yaxis]="apexOptions3.yaxis"
-              [tooltip]="apexOptions3.tooltip"
-          ></apx-chart>
+          <apx-chart class="chart-inner transparent-bg" [series]="apexOptions3.series" [stroke]="apexOptions3.stroke"
+            [chart]="apexOptions3.chart" [colors]="apexOptions3.colors" [legend]="apexOptions3.legend"
+            [xaxis]="apexOptions3.xaxis" [yaxis]="apexOptions3.yaxis" [tooltip]="apexOptions3.tooltip"></apx-chart>
           <div class="chart-tooltip" id="flot-main-tooltip" style="opacity: 0"></div>
           <p class="fs-mini text-muted">
             Flot is a <span class="fw-semi-bold">pure</span> JavaScript plotting library for jQuery, with a
@@ -101,8 +94,8 @@
                   <h6 class="name text-muted m-0 fs-mini">Overall Values</h6>
                 </div>
                 <div class="stat-item stat-item-mini-chart">
-                  <div class="sparkline" jq-sparkline [data]="[9,12,14,15,10,14,20]"
-                       [options]="{type: 'bar', barColor: '#f0b518', height: '30px', barWidth: 6, barSpacing: 2}"></div>
+                  <div style="height: 30px; width: 54px;" echarts [options]="echartBarChartData3">
+                  </div>
                 </div>
               </div>
             </div>
@@ -113,8 +106,8 @@
                   <h6 class="name text-muted m-0 fs-mini">Overall Values</h6>
                 </div>
                 <div class="stat-item stat-item-mini-chart">
-                  <div class="sparkline" jq-sparkline [data]="[9,12,14,15,10,14,20]"
-                       [options]="{type: 'bar', barColor: '#FFA587', height: '30px', barWidth: 6, barSpacing: 2}"></div>
+                  <div style="height: 30px; width: 54px;" echarts [options]="echartBarChartData4">
+                  </div>
                 </div>
               </div>
             </div>
@@ -167,8 +160,9 @@
               <p class="fs-mini text-muted">
                 Each example displayed below takes just 1 line of HTML or javascript to generate.
               </p>
-              <div jq-sparkline [data]="sparklinePieData" [options]="sparklinePieOptions"
-                   class="chart-overflow-bottom mb-0 text-center"></div>
+              <div style="height: 100px;" class="chart-overflow-bottom mb-0 text-center" echarts
+                [options]="echartPieChartData">
+              </div>
             </div>
           </section>
         </div>
@@ -183,7 +177,9 @@
               </div>
             </header>
             <div class="widget-body">
-              <div #sparklineLineChart class="chart-overflow-bottom mb-0 text-center"></div>
+              <div style="height: 200px;" class="chart-overflow-bottom mb-0 text-center" echarts
+                [options]="echartLineChartData2">
+              </div>
             </div>
           </section>
         </div>
@@ -203,7 +199,8 @@
         </header>
         <div class="widget-body">
           <p class="fs-mini text-muted">
-            This project is an attempt to build re-usable charts and chart components for <span class="fw-semi-bold">d3.js</span>
+            This project is an attempt to build re-usable charts and chart components for <span
+              class="fw-semi-bold">d3.js</span>
             without
             taking away the power that d3.js gives you.
           </p>
@@ -234,21 +231,14 @@
             where options is an object containing some of the following configuration options.
           </p>
           <div style="height: 343px;">
-              <ngx-charts-area-chart
-                [scheme]="ngxAreaChartData.colorScheme"
-                [results]="ngxAreaChartData.results"
-                [gradient]="ngxAreaChartData.gradient"
-                [xAxis]="ngxAreaChartData.showXAxis"
-                [yAxis]="ngxAreaChartData.showYAxis"
-                [legend]="ngxAreaChartData.showLegend"
-                [showXAxisLabel]="ngxAreaChartData.showXAxisLabel"
-                [showYAxisLabel]="ngxAreaChartData.showYAxisLabel"
-                [xAxisLabel]="ngxAreaChartData.xAxisLabel"
-                [yAxisLabel]="ngxAreaChartData.yAxisLabel"
-                [autoScale]="ngxAreaChartData.autoScale"
-                [xAxisTickFormatting]="ngxAreaChartData.xAxisTickFormatting">
-              </ngx-charts-area-chart>
-            </div>
+            <ngx-charts-area-chart [scheme]="ngxAreaChartData.colorScheme" [results]="ngxAreaChartData.results"
+              [gradient]="ngxAreaChartData.gradient" [xAxis]="ngxAreaChartData.showXAxis"
+              [yAxis]="ngxAreaChartData.showYAxis" [legend]="ngxAreaChartData.showLegend"
+              [showXAxisLabel]="ngxAreaChartData.showXAxisLabel" [showYAxisLabel]="ngxAreaChartData.showYAxisLabel"
+              [xAxisLabel]="ngxAreaChartData.xAxisLabel" [yAxisLabel]="ngxAreaChartData.yAxisLabel"
+              [autoScale]="ngxAreaChartData.autoScale" [xAxisTickFormatting]="ngxAreaChartData.xAxisTickFormatting">
+            </ngx-charts-area-chart>
+          </div>
         </div>
       </section>
     </div>
@@ -271,22 +261,14 @@
             where options is an object containing some of the following configuration options.
           </p>
           <div style="height: 343px;">
-              <ngx-charts-line-chart
-                [scheme]="ngxLineChartData.colorScheme"
-                [results]="ngxLineChartData.results"
-                [gradient]="ngxLineChartData.gradient"
-                [xAxis]="ngxLineChartData.showXAxis"
-                [yAxis]="ngxLineChartData.showYAxis"
-                [legend]="ngxLineChartData.showLegend"
-                [showXAxisLabel]="ngxLineChartData.showXAxisLabel"
-                [showYAxisLabel]="ngxLineChartData.showYAxisLabel"
-                [xAxisLabel]="ngxLineChartData.xAxisLabel"
-                [yAxisLabel]="ngxLineChartData.yAxisLabel"
-                [autoScale]="ngxLineChartData.autoScale"
-                [xAxisTickFormatting]="ngxLineChartData.xAxisTickFormatting"
-                >
-              </ngx-charts-line-chart>
-            </div>
+            <ngx-charts-line-chart [scheme]="ngxLineChartData.colorScheme" [results]="ngxLineChartData.results"
+              [gradient]="ngxLineChartData.gradient" [xAxis]="ngxLineChartData.showXAxis"
+              [yAxis]="ngxLineChartData.showYAxis" [legend]="ngxLineChartData.showLegend"
+              [showXAxisLabel]="ngxLineChartData.showXAxisLabel" [showYAxisLabel]="ngxLineChartData.showYAxisLabel"
+              [xAxisLabel]="ngxLineChartData.xAxisLabel" [yAxisLabel]="ngxLineChartData.yAxisLabel"
+              [autoScale]="ngxLineChartData.autoScale" [xAxisTickFormatting]="ngxLineChartData.xAxisTickFormatting">
+            </ngx-charts-line-chart>
+          </div>
         </div>
       </section>
     </div>
@@ -320,8 +302,9 @@
           </div>
           <p class="text-muted fs-mini">
             <span class="fw-semi-bold">17% higher</span> than last month</p>
-          <div jq-sparkline [data]="sparklineCompositeData" [options]="sparklineCompositeOptions"
-               class="chart-overflow-bottom"></div>
+          <div style="height: 100px;" class="chart-overflow-bottom" echarts
+            [options]="echartAreaChartData2">
+          </div>
         </div>
       </section>
     </div>
@@ -338,18 +321,11 @@
           </div>
         </header>
         <div class="widget-body">
-          <apx-chart class="chart-inner transparent-bg"
-               [chart]="apexOptions4.chart" 
-               [plotOptions]="apexOptions4.plotOptions"
-               [dataLabels]="apexOptions4.dataLabels"
-               [stroke]="apexOptions4.stroke"
-               [series]="apexOptions4.series" 
-               [xaxis]="apexOptions4.xaxis"
-               [colors]="apexOptions4.colors"
-               [legend]="apexOptions4.legend"
-               [tooltip]="apexOptions4.tooltip"
-               [grid]="apexOptions4.grid"
-           ></apx-chart>
+          <apx-chart class="chart-inner transparent-bg" [chart]="apexOptions4.chart"
+            [plotOptions]="apexOptions4.plotOptions" [dataLabels]="apexOptions4.dataLabels"
+            [stroke]="apexOptions4.stroke" [series]="apexOptions4.series" [xaxis]="apexOptions4.xaxis"
+            [colors]="apexOptions4.colors" [legend]="apexOptions4.legend" [tooltip]="apexOptions4.tooltip"
+            [grid]="apexOptions4.grid"></apx-chart>
           <p class="fs-mini text-muted">
             Flot is a <span class="fw-semi-bold">pure</span> JavaScript plotting library for jQuery, with a
             focus on simple usage, attractive looks and interactive features.
@@ -371,17 +347,12 @@
         </header>
         <div class="widget-body">
           <div style="height: 180px;">
-              <ngx-charts-pie-chart
-                [scheme]="ngxDoughnutChartData.colorScheme"
-                [results]="ngxDoughnutChartData.results"
-                [gradient]="ngxDoughnutChartData.gradient"
-                [legend]="ngxDoughnutChartData.showLegend"
-                [labels]="ngxDoughnutChartData.showLabels"
-                [explodeSlices]="ngxDoughnutChartData.expllodeSlices"
-                [doughnut]="ngxDoughnutChartData.doughnut"
-              >
-              </ngx-charts-pie-chart>       
-          </div> 
+            <ngx-charts-pie-chart [scheme]="ngxDoughnutChartData.colorScheme" [results]="ngxDoughnutChartData.results"
+              [gradient]="ngxDoughnutChartData.gradient" [legend]="ngxDoughnutChartData.showLegend"
+              [labels]="ngxDoughnutChartData.showLabels" [explodeSlices]="ngxDoughnutChartData.expllodeSlices"
+              [doughnut]="ngxDoughnutChartData.doughnut">
+            </ngx-charts-pie-chart>
+          </div>
           <p class="fs-mini text-muted">
             Donuts a great for representing some parted information like traffice sources,
             disk partitions, etc.

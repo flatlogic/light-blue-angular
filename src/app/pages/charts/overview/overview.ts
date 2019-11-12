@@ -1,7 +1,14 @@
-import { Component, ElementRef, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 import { apexOptions3, apexOptions4 } from '../../../utils/apex-charts.data';
 import { ngxAreaChartData, ngxLineChartData, ngxDoughnutChartData } from '../../../utils/ngx-charts.data';
+import {
+  echartBarChartData3,
+  echartBarChartData4,
+  echartPieChartData,
+  echartLineChartData2,
+  echartAreaChartData2
+} from '../../../utils/echarts.data';
 
 declare let jQuery: any;
 declare let Rickshaw: any;
@@ -15,7 +22,6 @@ declare let nv: any;
   encapsulation: ViewEncapsulation.None
 })
 export class OverviewComponent implements OnInit {
-  @ViewChild('sparklineLineChart', { static: true }) sparklineLineChart: ElementRef;
 
   public apexOptions3: any = apexOptions3;
   public apexOptions4: any = apexOptions4;
@@ -24,15 +30,17 @@ export class OverviewComponent implements OnInit {
   public ngxLineChartData: any = ngxLineChartData;
   public ngxDoughnutChartData: any = ngxDoughnutChartData;
 
+  public echartBarChartData3: any = echartBarChartData3;
+  public echartBarChartData4: any = echartBarChartData4;
+  public echartPieChartData: any = echartPieChartData;
+  public echartLineChartData2: any = echartLineChartData2;
+  public echartAreaChartData2: any = echartAreaChartData2;
+
   seriesData: Array<any> = [[], []];
   random: any;
   series: Array<any>;
   flotBarsData: Array<any>;
   flotBarsOptions: any;
-  sparklineCompositeData: Array<any>;
-  sparklineCompositeOptions: Array<any>;
-  sparklinePieData: Array<any>;
-  sparklinePieOptions: any;
   nvd31Chart: any;
   nvd31Data: any;
   nvd32Chart: any;
@@ -165,56 +173,8 @@ export class OverviewComponent implements OnInit {
     });
   }
 
-  initSparklineLine() {
-    jQuery(this.sparklineLineChart.nativeElement).sparkline([1, 2, 4, 2, 3, 7], {
-      width: '100%',
-      height: '100px',
-      lineColor: '#ffc247',
-      fillColor: false,
-      highlightLineColor: '#8fe5d4',
-      spotColor: '#8fe5d4',
-      minSpotColor: '#ffc247',
-      maxSpotColor: '#ffc247',
-      spotRadius: 2,
-      lineWidth: 2
-    });
-  }
-
   ngOnInit(): void {
-    this.initSparklineLine();
     this.applyRickshawData();
-
-    this.sparklineCompositeData = [
-      [2, 4, 6, 2, 7, 5, 3, 7, 8, 3, 6],
-      [5, 3, 7, 8, 3, 6, 2, 4, 6, 2, 7]
-    ];
-    this.sparklineCompositeOptions = [{
-      width: '99%',
-      fillColor: '#ddd',
-      height: '100px',
-      lineColor: 'transparent',
-      spotColor: '#c0d0f0',
-      minSpotColor: null,
-      maxSpotColor: null,
-      highlightSpotColor: '#ddd',
-      highlightLineColor: '#ddd'
-    }, {
-      lineColor: 'transparent',
-      spotColor: '#c0d0f0',
-      fillColor: 'rgba(192, 208, 240, 0.76)',
-      minSpotColor: null,
-      maxSpotColor: null,
-      highlightSpotColor: '#ddd',
-      highlightLineColor: '#ddd'
-    }];
-
-    this.sparklinePieData = [2, 5];
-    this.sparklinePieOptions = {
-      type: 'pie',
-      width: '100px',
-      height: '100px',
-      sliceColors: ['#17CBE1', '#1DE3FF']
-    };
 
     this.applyNvd3Data();
 

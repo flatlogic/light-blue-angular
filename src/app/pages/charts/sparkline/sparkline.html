@@ -5,16 +5,12 @@
 <h1 class="page-title">Sparkline</h1>
 <div class="row">
   <div class="col-12 col-lg-6 col-xl-5">
-    <widget
-      [title]="'<h5>Sparkline <span class=fw-semi-bold>Bar Chart</span></h5>'"
-      [close]="true"
-      [collapse]="true"
-      [customHeader]="true"
-    >
+    <widget [title]="'<h5>Sparkline <span class=fw-semi-bold>Bar Chart</span></h5>'" [close]="true" [collapse]="true"
+      [customHeader]="true">
       <p class="fs-mini text-muted">
         Each example displayed below takes just 1 line of HTML or javascript to generate.
       </p>
-      <div class="chart-overflow-bottom" #sparkline1></div>
+      <div style="height: 200px;" class="chart-overflow-bottom" echarts [options]="echartBarChartData"></div>
       <div class="stats-row text-muted mt-xlg">
         <div class="stat-item">
           <h6 class="name">ARR ($)</h6>
@@ -33,7 +29,7 @@
           <p class="value">0.1634</p>
         </div>
       </div>
-      <hr/>
+      <hr />
       <div class="d-flex justify-content-between">
         <small>
           <span class="badge badge-warning">Profit</span> Legend Item Emulation
@@ -45,16 +41,12 @@
     </widget>
   </div>
   <div class="col-12 col-lg-6 col-xl-4">
-    <widget
-      [title]="'<h5>Sparkline <span class=fw-semi-bold>Pie Chart</span></h5>'"
-      [close]="true"
-      [collapse]="true"
-      [customHeader]="true"
-    >
+    <widget [title]="'<h5>Sparkline <span class=fw-semi-bold>Pie Chart</span></h5>'" [close]="true" [collapse]="true"
+      [customHeader]="true">
       <p class="fs-mini text-muted">
         Each example displayed below takes just 1 line of HTML or javascript to generate.
       </p>
-      <div class="text-center" #sparkline2></div>
+      <div style="height: 200px;" echarts [options]="echartPieChartData"></div>
       <alert class="text-muted" [type]="'white'" [isOpen]="true" [dismissible]="true">
         <h5>Sales Report</h5>
         <progressbar class="progress-xs" type="secondary" [value]="16"></progressbar>
@@ -65,12 +57,8 @@
     </widget>
   </div>
   <div class="col-12 col-lg-6 col-xl-3">
-    <widget
-      [title]="'<h5>Area <span class=fw-semi-bold>Sparkline</span></h5>'"
-      [close]="true"
-      [collapse]="true"
-      [customHeader]="true"
-    >
+    <widget [title]="'<h5>Area <span class=fw-semi-bold>Sparkline</span></h5>'" [close]="true" [collapse]="true"
+      [customHeader]="true">
       <p class="fs-mini text-muted">
         Each example displayed below takes just 1 line of HTML or javascript to generate.
       </p>
@@ -87,35 +75,45 @@
       <p class="text-muted fs-mini">
         <span class="fw-semi-bold">17% higher</span> than last month
       </p>
-      <div class="chart-overflow-bottom" #sparkline3></div>
+      <div 
+        style="height: 200px;" 
+        class="chart-overflow-bottom" 
+        echarts 
+        [options]="echartAreaChartData"
+        >
+      </div>
     </widget>
   </div>
 </div>
 <div class="row">
   <div class="col-12 col-lg-7 col-xl-9">
-    <widget
-      [title]="'<h5>Sparkline <span class=fw-semi-bold>Line Chart</span></h5>'"
-      [close]="true"
-      [collapse]="true"
-      [customHeader]="true"
-    >
+    <widget [title]="'<h5>Sparkline <span class=fw-semi-bold>Line Chart</span></h5>'" [close]="true" [collapse]="true"
+      [customHeader]="true">
       <p class="fs-mini text-muted">
         Each example displayed below takes just 1 line of HTML or javascript to generate.
       </p>
-      <div class="chart-overflow-bottom" #sparkline4></div>
+      <div 
+        style="height: 200px;" 
+        class="chart-overflow-bottom" 
+        echarts 
+        [options]="echartLineChartData"
+        >
+      </div>
     </widget>
   </div>
   <div class="col-12 col-lg-5 col-xl-3">
-    <widget
-      [title]="'<h5>Sparkline <span class=fw-semi-bold>Pie Chart</span></h5>'"
-      [close]="true"
-      [collapse]="true"
-      [customHeader]="true"
-    >
+    <widget [title]="'<h5>Sparkline <span class=fw-semi-bold>Pie Chart</span></h5>'" [close]="true" [collapse]="true"
+      [customHeader]="true">
       <p class="fs-mini text-muted">
         Each example displayed below takes just 1 line of HTML or javascript to generate.
       </p>
-      <div class="text-center" #sparkline5></div>
+      <div 
+        style="height: 100px;" 
+        class="chart-overflow-bottom" 
+        echarts 
+        [options]="echartPieChartData2"
+        >
+      </div>
       <p class="mt">Possible actions:</p>
       <div class="btn-group">
         <button class="btn btn-light">Yoga</button>
@@ -125,14 +123,10 @@
     </widget>
   </div>
   <div class="col-12 col-lg-6">
-    <widget
-      [title]="'<h5>Sparkline <span class=fw-semi-bold>Pie Chart</span></h5>'"
-      [close]="true"
-      [collapse]="true"
-      [customHeader]="true"
-    >
+    <widget [title]="'<h5>Sparkline <span class=fw-semi-bold>Pie Chart</span></h5>'" [close]="true" [collapse]="true"
+      [customHeader]="true">
       <div class="input-group input-group-transparent">
-        <input class="form-control" type="text" size="16" placeholder="Filter By Period: MM/DD/YYY"/>
+        <input class="form-control" type="text" size="16" placeholder="Filter By Period: MM/DD/YYY" />
         <div class="input-group-append bg-white" slot="append">
           <span class="input-group-text"><i class="fa fa-search"></i></span>
         </div>
@@ -140,20 +134,28 @@
       <p class="fs-mini text-muted mt">
         Each example displayed below takes just 1 line of HTML or javascript to generate.
       </p>
-      <div class="chart-overflow-bottom" #sparkline6></div>
+      <div 
+        style="height: 100px;" 
+        class="chart-overflow-bottom" 
+        echarts 
+        [options]="echartBarChartData2"
+        >
+      </div>
     </widget>
   </div>
   <div class="col-12 col-lg-6">
-    <widget
-      [title]="'<h5>Sparkline <span class=fw-semi-bold>Line Chart</span></h5>'"
-      [close]="true"
-      [collapse]="true"
-      [customHeader]="true"
-    >
+    <widget [title]="'<h5>Sparkline <span class=fw-semi-bold>Line Chart</span></h5>'" [close]="true" [collapse]="true"
+      [customHeader]="true">
       <p class="fs-mini text-muted">
         Each example displayed below takes just 1 line of HTML or javascript to generate.
       </p>
-      <div class="chart-overflow-bottom" #sparkline7></div>
+      <div 
+        style="height: 200px;" 
+        class="chart-overflow-bottom" 
+        echarts 
+        [options]="echartLineChartData2"
+        >
+      </div>
     </widget>
   </div>
 </div>
