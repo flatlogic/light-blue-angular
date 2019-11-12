@@ -18,7 +18,23 @@
           one function: <code>Morris.Line(options)</code>,
           where options is an object containing some of the following configuration options.
         </p>
-        <div class="text-center" #morrisLineChart [ngStyle]="{ height: '343px' }"></div>
+        <div class="text-center" style="height: 343px;">
+          <ngx-charts-line-chart
+            [scheme]="ngxLineChartData.colorScheme"
+            [results]="ngxLineChartData.results"
+            [gradient]="ngxLineChartData.gradient"
+            [xAxis]="ngxLineChartData.showXAxis"
+            [yAxis]="ngxLineChartData.showYAxis"
+            [legend]="ngxLineChartData.showLegend"
+            [showXAxisLabel]="ngxLineChartData.showXAxisLabel"
+            [showYAxisLabel]="ngxLineChartData.showYAxisLabel"
+            [xAxisLabel]="ngxLineChartData.xAxisLabel"
+            [yAxisLabel]="ngxLineChartData.yAxisLabel"
+            [autoScale]="ngxLineChartData.autoScale"
+            [xAxisTickFormatting]="ngxLineChartData.xAxisTickFormatting"
+            >
+          </ngx-charts-line-chart>
+        </div>
       </div>
     </widget>
   </div>
@@ -36,7 +52,22 @@
           just one function: <code>Morris.Line(options)</code>,
           where options is an object containing some of the following configuration options.
         </p>
-        <div class="text-center" #morrisAreaChart [ngStyle]="{ height: '343px' }"></div>
+        <div class="text-center" style="height: 343px;">
+          <ngx-charts-area-chart
+            [scheme]="ngxAreaChartData.colorScheme"
+            [results]="ngxAreaChartData.results"
+            [gradient]="ngxAreaChartData.gradient"
+            [xAxis]="ngxAreaChartData.showXAxis"
+            [yAxis]="ngxAreaChartData.showYAxis"
+            [legend]="ngxAreaChartData.showLegend"
+            [showXAxisLabel]="ngxAreaChartData.showXAxisLabel"
+            [showYAxisLabel]="ngxAreaChartData.showYAxisLabel"
+            [xAxisLabel]="ngxAreaChartData.xAxisLabel"
+            [yAxisLabel]="ngxAreaChartData.yAxisLabel"
+            [autoScale]="ngxAreaChartData.autoScale"
+            [xAxisTickFormatting]="ngxAreaChartData.xAxisTickFormatting">
+          </ngx-charts-area-chart>
+        </div>
       </div>
     </widget>
   </div>
@@ -48,7 +79,21 @@
       [customHeader]="true"
     >
       <div>
-        <div class="text-center" #morrisBarChart [ngStyle]="{ height: '260px' }"></div>
+        <div class="text-center" style="height: 260px;">
+            <ngx-charts-bar-vertical
+              [scheme]="ngxVerticalBarChartData.colorScheme"
+              [results]="ngxVerticalBarChartData.results"
+              [gradient]="ngxVerticalBarChartData.gradient"
+              [xAxis]="ngxVerticalBarChartData.showXAxis"
+              [yAxis]="ngxVerticalBarChartData.showYAxis"
+              [legend]="ngxVerticalBarChartData.showLegend"
+              [showXAxisLabel]="ngxVerticalBarChartData.showXAxisLabel"
+              [showYAxisLabel]="ngxVerticalBarChartData.showYAxisLabel"
+              [xAxisLabel]="ngxVerticalBarChartData.xAxisLabel"
+              [yAxisLabel]="ngxVerticalBarChartData.yAxisLabel"
+              [yAxisTickFormatting]="ngxVerticalBarChartData.yAxisTickFormatting">
+            </ngx-charts-bar-vertical>
+          </div>
         <p class="fs-mini text-muted">
           Bar charts are also commonly referred to as a
           column charts. If you was trying to compare
@@ -69,7 +114,18 @@
       [customHeader]="true"
     >
       <div>
-        <div class="text-center" #morrisDonutChart [ngStyle]="{ height: '180px' }"></div>
+        <div class="text-center" style="height: 180px;">
+            <ngx-charts-pie-chart
+              [scheme]="ngxDoughnutChartData.colorScheme"
+              [results]="ngxDoughnutChartData.results"
+              [gradient]="ngxDoughnutChartData.gradient"
+              [legend]="ngxDoughnutChartData.showLegend"
+              [labels]="ngxDoughnutChartData.showLabels"
+              [explodeSlices]="ngxDoughnutChartData.expllodeSlices"
+              [doughnut]="ngxDoughnutChartData.doughnut"
+            >
+            </ngx-charts-pie-chart>       
+        </div> 
         <p class="fs-mini text-muted">
           Donuts a great for representing some parted information
           like traffice sources, disk partitions,
@@ -88,7 +144,22 @@
       [customHeader]="true"
     >
       <div>
-        <div class="text-center" #morrisBar2Chart [ngStyle]="{ height: '180px' }"></div>
+        <div class="text-center" style="height: 180px;">
+          <ngx-charts-bar-vertical-2d
+            [scheme]="ngxGroupedVerticalBarChartData.colorScheme"
+            [results]="ngxGroupedVerticalBarChartData.results"
+            [gradient]="ngxGroupedVerticalBarChartData.gradient"
+            [xAxis]="ngxGroupedVerticalBarChartData.showXAxis"
+            [yAxis]="ngxGroupedVerticalBarChartData.showYAxis"
+            [legend]="ngxGroupedVerticalBarChartData.showLegend"
+            [showXAxisLabel]="ngxGroupedVerticalBarChartData.showXAxisLabel"
+            [showYAxisLabel]="ngxGroupedVerticalBarChartData.showYAxisLabel"
+            [xAxisLabel]="ngxGroupedVerticalBarChartData.xAxisLabel"
+            [yAxisLabel]="ngxGroupedVerticalBarChartData.yAxisLabel"
+            [yAxisTickFormatting]="ngxGroupedVerticalBarChartData.yAxisTickFormatting"
+          >
+          </ngx-charts-bar-vertical-2d>
+        </div>
         <p class="fs-mini text-muted">
           This is generally a good chart to choose for
           all comparison based analysis but if you were to
@@ -109,7 +180,23 @@
       [customHeader]="true"
     >
       <div>
-        <div class="text-center" #morrisStackedChart [ngStyle]="{ height: '200px' }"></div>
+        <div class="text-center" style="height: 200px;">
+          <ngx-charts-bar-vertical-stacked
+              [scheme]="ngxStackedVerticalBarChartData.colorScheme"
+              [results]="ngxStackedVerticalBarChartData.results"
+              [gradient]="ngxStackedVerticalBarChartData.gradient"
+              [xAxis]="ngxStackedVerticalBarChartData.showXAxis"
+              [yAxis]="ngxStackedVerticalBarChartData.showYAxis"
+              [legend]="ngxStackedVerticalBarChartData.showLegend"
+              [showXAxisLabel]="ngxStackedVerticalBarChartData.showXAxisLabel"
+              [showYAxisLabel]="ngxStackedVerticalBarChartData.showYAxisLabel"
+              [xAxisLabel]="ngxStackedVerticalBarChartData.xAxisLabel"
+              [yAxisLabel]="ngxStackedVerticalBarChartData.yAxisLabel"
+              [yAxisTickFormatting]="ngxStackedVerticalBarChartData.yAxisTickFormatting"
+            >
+            </ngx-charts-bar-vertical-stacked>
+        </div>
+
         <p class="fs-mini text-muted">
           Stacked charts are excellent to track some dynamics
           within declared categories. An example of this

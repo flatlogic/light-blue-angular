@@ -13,10 +13,9 @@ import { OverviewComponent } from './overview/overview';
 import { EasyPieComponent } from './easy-pie/easy-pie';
 import { NewWidgetModule } from '../../layout/new-widget/widget.module';
 import { AlertModule, ProgressbarModule } from 'ngx-bootstrap';
-import { MarkersChartComponent } from './flot/components/markers-chart/markers-chart';
 import { MorrisJsModule } from 'angular-morris-js';
 import { NgApexchartsModule } from 'ng-apexcharts';
-
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 export const routes = [
   { path: '', redirectTo: 'overview', pathMatch: 'full' },
@@ -39,15 +38,15 @@ export const routes = [
     AlertModule.forRoot(),
     ProgressbarModule.forRoot(),
     MorrisJsModule,
-    NgApexchartsModule
+    NgApexchartsModule,
+    NgxChartsModule
   ],
   declarations: [
     OverviewComponent,
     FlotComponent,
     MorrisComponent,
     SparklineComponent,
-    EasyPieComponent,
-    MarkersChartComponent,
+    EasyPieComponent
   ]
 })
 export class ChartsModule {

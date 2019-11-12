@@ -233,13 +233,22 @@
             The public API is terribly simple. It's just one function: <code>Morris.Line(options)</code>,
             where options is an object containing some of the following configuration options.
           </p>
-          <div 
-            mk-morris-js 
-            [data]="morris2Config.data" 
-            [options]="morris2Config.options" 
-            [style.height.px]="343"
-            type="Area"
-          ></div>
+          <div style="height: 343px;">
+              <ngx-charts-area-chart
+                [scheme]="ngxAreaChartData.colorScheme"
+                [results]="ngxAreaChartData.results"
+                [gradient]="ngxAreaChartData.gradient"
+                [xAxis]="ngxAreaChartData.showXAxis"
+                [yAxis]="ngxAreaChartData.showYAxis"
+                [legend]="ngxAreaChartData.showLegend"
+                [showXAxisLabel]="ngxAreaChartData.showXAxisLabel"
+                [showYAxisLabel]="ngxAreaChartData.showYAxisLabel"
+                [xAxisLabel]="ngxAreaChartData.xAxisLabel"
+                [yAxisLabel]="ngxAreaChartData.yAxisLabel"
+                [autoScale]="ngxAreaChartData.autoScale"
+                [xAxisTickFormatting]="ngxAreaChartData.xAxisTickFormatting">
+              </ngx-charts-area-chart>
+            </div>
         </div>
       </section>
     </div>
@@ -261,13 +270,23 @@
             The public API is terribly simple. It's just one function: <code>Morris.Line(options)</code>,
             where options is an object containing some of the following configuration options.
           </p>
-          <div 
-            mk-morris-js 
-            [data]="morris1Config.data" 
-            [options]="morris1Config.options" 
-            [style.height.px]="343"
-            type="Line"
-          ></div>
+          <div style="height: 343px;">
+              <ngx-charts-line-chart
+                [scheme]="ngxLineChartData.colorScheme"
+                [results]="ngxLineChartData.results"
+                [gradient]="ngxLineChartData.gradient"
+                [xAxis]="ngxLineChartData.showXAxis"
+                [yAxis]="ngxLineChartData.showYAxis"
+                [legend]="ngxLineChartData.showLegend"
+                [showXAxisLabel]="ngxLineChartData.showXAxisLabel"
+                [showYAxisLabel]="ngxLineChartData.showYAxisLabel"
+                [xAxisLabel]="ngxLineChartData.xAxisLabel"
+                [yAxisLabel]="ngxLineChartData.yAxisLabel"
+                [autoScale]="ngxLineChartData.autoScale"
+                [xAxisTickFormatting]="ngxLineChartData.xAxisTickFormatting"
+                >
+              </ngx-charts-line-chart>
+            </div>
         </div>
       </section>
     </div>
@@ -351,13 +370,18 @@
           </div>
         </header>
         <div class="widget-body">
-          <div 
-            mk-morris-js 
-            [data]="morris3Config.data" 
-            [options]="morris3Config.options" 
-            [style.height.px]="180"
-            type="Donut"
-          ></div>
+          <div style="height: 180px;">
+              <ngx-charts-pie-chart
+                [scheme]="ngxDoughnutChartData.colorScheme"
+                [results]="ngxDoughnutChartData.results"
+                [gradient]="ngxDoughnutChartData.gradient"
+                [legend]="ngxDoughnutChartData.showLegend"
+                [labels]="ngxDoughnutChartData.showLabels"
+                [explodeSlices]="ngxDoughnutChartData.expllodeSlices"
+                [doughnut]="ngxDoughnutChartData.doughnut"
+              >
+              </ngx-charts-pie-chart>       
+          </div> 
           <p class="fs-mini text-muted">
             Donuts a great for representing some parted information like traffice sources,
             disk partitions, etc.

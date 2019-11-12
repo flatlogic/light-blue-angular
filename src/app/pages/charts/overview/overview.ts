@@ -1,7 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 
-import { MorrisonConfig } from './morrison-config.interface';
 import { apexOptions3, apexOptions4 } from '../../../utils/apex-charts.data';
+import { ngxAreaChartData, ngxLineChartData, ngxDoughnutChartData } from '../../../utils/ngx-charts.data';
 
 declare let jQuery: any;
 declare let Rickshaw: any;
@@ -17,8 +17,12 @@ declare let nv: any;
 export class OverviewComponent implements OnInit {
   @ViewChild('sparklineLineChart', { static: true }) sparklineLineChart: ElementRef;
 
-  public apexOptions3 = apexOptions3;
-  public apexOptions4 = apexOptions4;
+  public apexOptions3: any = apexOptions3;
+  public apexOptions4: any = apexOptions4;
+
+  public ngxAreaChartData: any = ngxAreaChartData;
+  public ngxLineChartData: any = ngxLineChartData;
+  public ngxDoughnutChartData: any = ngxDoughnutChartData;
 
   seriesData: Array<any> = [[], []];
   random: any;
@@ -29,9 +33,6 @@ export class OverviewComponent implements OnInit {
   sparklineCompositeOptions: Array<any>;
   sparklinePieData: Array<any>;
   sparklinePieOptions: any;
-  morris1Config: MorrisonConfig;
-  morris2Config: MorrisonConfig;
-  morris3Config: MorrisonConfig;
   nvd31Chart: any;
   nvd31Data: any;
   nvd32Chart: any;
@@ -216,56 +217,6 @@ export class OverviewComponent implements OnInit {
     };
 
     this.applyNvd3Data();
-
-    this.morris1Config = {
-      data: [
-        { y: '2006', a: 100, b: 90 },
-        { y: '2007', a: 75, b: 65 },
-        { y: '2008', a: 50, b: 40 },
-        { y: '2009', a: 75, b: 65 },
-        { y: '2010', a: 50, b: 40 },
-        { y: '2011', a: 75, b: 65 },
-        { y: '2012', a: 100, b: 90 }
-      ],
-      options: {
-        resize: true,
-        xkey: 'y',
-        ykeys: ['a', 'b'],
-        labels: ['Series A', 'Series B'],
-        lineColors: ['#8fe5d4', '#ffebb2']
-      }
-    };
-
-    this.morris2Config = {
-      data: [
-        { y: '2006', a: 100, b: 90 },
-        { y: '2007', a: 75, b: 65 },
-        { y: '2008', a: 50, b: 40 },
-        { y: '2009', a: 75, b: 65 },
-        { y: '2010', a: 50, b: 40 },
-        { y: '2011', a: 75, b: 65 },
-        { y: '2012', a: 100, b: 90 }
-      ],
-      options: {
-        resize: true,
-        xkey: 'y',
-        ykeys: ['a', 'b'],
-        labels: ['Series A', 'Series B'],
-        lineColors: ['#f5b868', '#f55d5d'],
-        lineWidth: 0
-      }
-    };
-
-    this.morris3Config = {
-      data: [
-        { label: 'Download Sales', value: 12 },
-        { label: 'In-Store Sales', value: 30 },
-        { label: 'Mail-Order Sales', value: 20 }
-      ],
-      options: {
-        colors: ['#ff9592', '#ffcf94', '#e6e6e6']
-      }
-    };
 
     jQuery('.easy-pie-chart-md').easyPieChart({
       barColor: '#8fe5d4',
