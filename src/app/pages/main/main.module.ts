@@ -1,9 +1,3 @@
-import 'jquery-flot/jquery.flot.js';
-import 'jquery.flot.animator/jquery.flot.animator';
-import 'jquery-flot/jquery.flot.pie.js';
-import 'jquery-flot/jquery.flot.selection.js';
-import 'jquery-flot/jquery.flot.resize.js';
-import 'flot.dashes/jquery.flot.dashes';
 import 'jquery.animate-number/jquery.animateNumber.js';
 import 'jQuery-Mapael/js/jquery.mapael.js';
 import 'jQuery-Mapael/js/maps/usa_states';
