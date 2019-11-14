@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 
 import { WidgetModule } from '../../layout/widget/widget.module';
 import { Nvd3ChartModule } from '../../components/nvd3/nvd3.module';
-import { JqSparklineModule } from '../../components/sparkline/sparkline.module';
 import { RickshawChartModule } from '../../components/rickshaw/rickshaw.module';
 import { MorrisComponent } from './morris/morris';
 import { FlotComponent } from './flot/flot';
@@ -31,7 +30,6 @@ export const routes = [
     CommonModule,
     WidgetModule,
     Nvd3ChartModule,
-    JqSparklineModule,
     RickshawChartModule,
     RouterModule.forChild(routes),
     NewWidgetModule,

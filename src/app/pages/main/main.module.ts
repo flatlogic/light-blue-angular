@@ -23,7 +23,6 @@ import { MarketStatsWidgetComponent } from './visits/market-stats-widget/market-
 import { WidgetsComponent } from './widgets/widgets.component';
 import { LiveTileModule } from '../../components/tile/tile.module';
 import { SkyconsModule } from '../../components/skycon/skycon.module';
-import { JqSparklineModule } from '../../components/sparkline/sparkline.module';
 import { MapaelLayersMapModule } from '../../components/mapael/mapael.module';
 import { ChangesChartWidgetComponent } from './widgets/changes-chart-widget/changes-chart-widget.component';
 import { NasdaqWidgetComponent } from './widgets/nasdaq-widget/nasdaq-widget.component';
@@ -72,7 +71,6 @@ export const routes = [
     LiveTileModule,
     WidgetModule,
     RickshawChartModule,
-    JqSparklineModule,
     MapaelLayersMapModule,
     NewWidgetModule,
     SkyconsModule,

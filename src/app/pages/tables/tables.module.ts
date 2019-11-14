@@ -9,7 +9,6 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { Ng2TableModule } from 'ng2-table';
 import { WidgetModule } from '../../layout/widget/widget.module';
 import { UtilsModule } from '../../layout/utils/utils.module';
-import { JqSparklineModule } from '../../components/sparkline/sparkline.module';
 import { TablesBasicComponent } from './basic/tables-basic.component';
 import { TablesDynamicComponent } from './dynamic/tables-dynamic.component';
 import { SearchPipe } from './dynamic/pipes/search-pipe';
@@ -30,7 +29,6 @@ export const routes = [
   ],
   imports: [
     CommonModule,
-    JqSparklineModule,
     FormsModule,
     AlertModule.forRoot(),
     TooltipModule.forRoot(),
