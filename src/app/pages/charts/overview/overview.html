@@ -59,8 +59,12 @@
             Target <span class="fw-semi-bold">820</span> users
             is <span class="fw-semi-bold">96%</span> reached.
           </p>
-          <div rickshaw-chart [series]="series" [height]="130" [realtime]="true" [random]="random"
-            [seriesData]="seriesData" class="chart-overflow-bottom"></div>
+            <div
+              style="height: 130px;"
+              echarts
+              [options]="echartDynamicAreaData"
+              [merge]="echartDynamicAreaDataUpdate">
+            </div>
         </div>
       </section>
     </div>

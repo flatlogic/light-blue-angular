@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, AfterViewInit, OnDestroy } from '@angular/core';
 
 import { apexOptions3, apexOptions4 } from '../../../utils/apex-charts.data';
 import { ngxAreaChartData, ngxLineChartData, ngxDoughnutChartData } from '../../../utils/ngx-charts.data';
@@ -7,7 +7,8 @@ import {
   echartBarChartData4,
   echartPieChartData,
   echartLineChartData2,
-  echartAreaChartData2
+  echartAreaChartData2,
+  echartDynamicAreaData
 } from '../../../utils/echarts.data';
 
 declare let jQuery: any;
@@ -21,8 +22,7 @@ declare let nv: any;
   styleUrls: ['./overview.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class OverviewComponent implements OnInit {
-
+export class OverviewComponent implements OnInit, AfterViewInit, OnDestroy {
   public apexOptions3: any = apexOptions3;
   public apexOptions4: any = apexOptions4;
 
@@ -35,6 +35,10 @@ export class OverviewComponent implements OnInit {
   public echartPieChartData: any = echartPieChartData;
   public echartLineChartData2: any = echartLineChartData2;
   public echartAreaChartData2: any = echartAreaChartData2;
+  public echartDynamicAreaData: any = echartDynamicAreaData;
+  public echartDynamicAreaDataUpdate: any;
+
+  private interval: any;
 
   seriesData: Array<any> = [[], []];
   random: any;
@@ -287,5 +291,26 @@ export class OverviewComponent implements OnInit {
       },
       colors: ['#a7beff', '#ace5d1', '#ffd7de']
     };
+  }
+
+  public ngAfterViewInit(): void {
+    this.interval = setInterval(() => {
+      const data1: any = this.echartDynamicAreaData.series[0].data;
+      const data2: any = this.echartDynamicAreaData.series[1].data;
+      data1.shift();
+      data1.push(Math.round(Math.random() * 1000));
+      data2.shift();
+      data2.push(parseFloat((Math.random() * 10 + 5).toFixed(1)) - 0);
+      this.echartDynamicAreaDataUpdate = {
+        series: [
+          { data: data1 },
+          { data: data2 }
+        ]
+      };
+    }, 3000);
+  }
+
+  public ngOnDestroy(): void {
+    if (this.interval) { clearInterval(this.interval); }
   }
 }

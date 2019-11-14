@@ -198,9 +198,9 @@
         </div>
         <div class="chart">
           <apx-chart class="chart-inner transparent-bg"
-            [series]="apexOptions1.series" 
+            [series]="apexOptions1.series"
             [stroke]="apexOptions1.stroke"
-            [chart]="apexOptions1.chart" 
+            [chart]="apexOptions1.chart"
             [colors]="apexOptions1.colors"
             [legend]="apexOptions1.legend"
             [xaxis]="apexOptions1.xaxis"
@@ -256,9 +256,9 @@
         </div>
         <div class="chart">
           <apx-chart class="chart-inner transparent-bg"
-            [series]="apexOptions2.series" 
+            [series]="apexOptions2.series"
             [stroke]="apexOptions2.stroke"
-            [chart]="apexOptions2.chart" 
+            [chart]="apexOptions2.chart"
             [colors]="apexOptions2.colors"
             [legend]="apexOptions2.legend"
             [xaxis]="apexOptions2.xaxis"
@@ -517,7 +517,7 @@
               355 <span class="fw-semi-bold">USD</span>
             </div>
             <p>Last Sale 354.94 USD</p>
-            <div class="chart" nasdaq-sparkline-widget>
+            <div class="chart" nasdaq-widget [options]="echartLineChartData3">
             </div>
           </div>
         </section>
@@ -673,7 +673,12 @@
   </div>
   <div class="col-lg-4 col-12">
     <section class="widget text-white">
-      <div class="widget-body" realtime-traffic-widget>
+      <div
+        class="widget-body"
+        realtime-traffic-widget
+        [options]="echartDynamicAreaData2"
+        [merge]="echartDynamicAreaDataUpdate"
+      >
       </div>
     </section>
   </div>
@@ -715,7 +720,8 @@
     </section>
   </div>
   <div class="col-lg-3 col-12">
-    <section widget class="widget widget-chart-changes" changes-chart-widget>
+    <section widget class="widget widget-chart-changes" changes-chart-widget
+    [mainData]="echartLineBarData" [changesData]="echartBarChartData5">
     </section>
   </div>
   <div class="col-lg-3 col-12">

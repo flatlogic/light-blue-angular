@@ -329,13 +329,6 @@ export const echartBarChartData4: any = {
 
 export const echartAreaChartData2: any = {
   tooltip: {
-    // trigger: 'axis',
-    // axisPointer: {
-    //   type: 'cross',
-    //   label: {
-    //     backgroundColor: '#6a7985'
-    //   }
-    // }
   },
   legend: {
     show: false
@@ -370,6 +363,552 @@ export const echartAreaChartData2: any = {
       areaStyle: {},
       data: [99, 75, 80, 84, 33, 66, 22],
       color: '#a7b6d2'
+    }
+  ]
+};
+
+export const echartBarChartData5: any = {
+  grid: {
+    top: '0',
+    right: '0',
+    bottom: '0',
+    left: '0',
+  },
+  color: ['#64bd63'],
+  tooltip: {},
+  xAxis: {
+    type: 'category',
+    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+    show: false
+  },
+  yAxis: {
+    type: 'value',
+    show: false
+  },
+  series: [{
+    type: 'bar',
+    barWidth: '50%',
+    data: [9, 12, 14, 15, 10, 14, 20]
+  }]
+};
+
+export const echartLineBarData: any = {
+  grid: {
+    left: '0',
+    right: '0',
+    bottom: '0',
+    top: '0'
+  },
+  tooltip: {
+    trigger: 'axis'
+  },
+  toolbox: {
+
+  },
+  legend: {
+    show: false
+  },
+  xAxis: [
+    {
+      type: 'category',
+      data: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31],
+      axisPointer: {
+        type: 'shadow'
+      },
+      show: false
+    }
+  ],
+  yAxis: [
+    {
+      type: 'value',
+      show: false
+    },
+    {
+      type: 'value',
+      show: false
+    }
+  ],
+  series: [
+
+    {
+      name: 'Actives',
+      type: 'bar',
+      data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 35.6, 2.0, 2.2, 3.3, 4.5, 6.3, 10.2, 20.3, 25.6, 40.7, 28.7,
+        26.4, 9.0, 5.9, 2.6, 2.2, 3.3, 4.5, 6.3, 10.2, 20.3, 2.6, 5.9, 9.0, 26.4],
+      itemStyle: { color: '#7bd47a' }
+    },
+    {
+      name: 'Passives',
+      type: 'line',
+      yAxisIndex: 1,
+      data: [2.0, 2.2, 3.3, 4.5, 6.3, 10.2, 20.3, 2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 35.6, 40.7, 35.6, 2.0,
+        2.2, 3.3, 4.5, 6.3, 10.2, 20.3, 25.6, 70.7, 28.7, 26.4, 9.0, 5.9, 2.6, 2.2, 3.3, 4.5],
+      itemStyle: { color: '#b6dfb3' }
+    }
+  ]
+};
+
+export const echartLineChartData3: any = {
+  color: ['#4ebfbb'],
+  grid: {
+    top: '20%',
+    right: '5%',
+    bottom: '0',
+    left: '5%',
+  },
+  tooltip: {
+    trigger: 'axis'
+  },
+  legend: {
+    show: false
+  },
+  xAxis: {
+    type: 'category',
+    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+    boundaryGap: false,
+    show: false
+  },
+  yAxis: {
+    type: 'value',
+    show: false
+  },
+  series: [{
+    data: [4, 6, 5, 7, 5],
+    type: 'line'
+  }]
+};
+
+export const echartBarChartData6: any = {
+  grid: {
+    top: '0',
+    right: '0',
+    bottom: '0',
+    left: '0',
+  },
+  color: ['#618fb0'],
+  tooltip: {},
+  xAxis: {
+    type: 'category',
+    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+    show: false
+  },
+  yAxis: {
+    type: 'value',
+    show: false
+  },
+  series: [{
+    type: 'bar',
+    barWidth: '90%',
+    data: [13, 14, 16, 15, 4, 14, 20]
+  }]
+};
+
+export const echartBarChartData7: any = {
+  grid: {
+    top: '0',
+    right: '0',
+    bottom: '0',
+    left: '0',
+  },
+  color: ['#999'],
+  tooltip: {},
+  xAxis: {
+    type: 'category',
+    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+    show: false
+  },
+  yAxis: {
+    type: 'value',
+    show: false
+  },
+  series: [{
+    type: 'bar',
+    barWidth: '90%',
+    data: [14, 12, 16, 11, 17, 19, 16]
+  }]
+};
+
+export const echartBarChartData8: any = {
+  grid: {
+    top: '0',
+    right: '0',
+    bottom: '0',
+    left: '0',
+  },
+  color: ['#f0b518'],
+  tooltip: {},
+  xAxis: {
+    type: 'category',
+    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+    show: false
+  },
+  yAxis: {
+    type: 'value',
+    show: false
+  },
+  series: [{
+    type: 'bar',
+    barWidth: '90%',
+    data: [11, 17, 19, 16, 14, 12, 16]
+  }]
+};
+
+export const echartBarChartData9: any = {
+  grid: {
+    top: '0',
+    right: '0',
+    bottom: '0',
+    left: '0',
+  },
+  color: ['#e5603b'],
+  tooltip: {},
+  xAxis: {
+    type: 'category',
+    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+    show: false
+  },
+  yAxis: {
+    type: 'value',
+    show: false
+  },
+  series: [{
+    type: 'bar',
+    barWidth: '90%',
+    data: [13, 14, 20, 16, 15, 4, 14]
+  }]
+};
+
+export const echartBarChartData10: any = {
+  grid: {
+    top: '0',
+    right: '0',
+    bottom: '0',
+    left: '0',
+  },
+  color: ['#618fb0'],
+  tooltip: {},
+  xAxis: {
+    type: 'category',
+    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+    show: false
+  },
+  yAxis: {
+    type: 'value',
+    show: false
+  },
+  series: [{
+    type: 'bar',
+    barWidth: '90%',
+    data: [16, 15, 4, 14, 13, 14, 20]
+  }]
+};
+
+export const echartDynamicAreaData: any = {
+  grid: {
+    top: '0',
+    right: '0',
+    bottom: '0',
+    left: '0',
+  },
+  color: ['#1ac7e0', '#17a2b8'],
+  tooltip: {
+  },
+  legend: {
+    show: false
+  },
+  toolbox: {
+    show: false
+  },
+  dataZoom: {
+    show: false,
+    start: 0,
+    end: 100
+  },
+  xAxis: [
+    {
+      type: 'category',
+      show: false,
+      boundaryGap: false,
+      data: (function () {
+        let now = new Date();
+        const res = [];
+        let len = 10;
+        while (len--) {
+          res.push(10 - len - 1);
+        }
+        return res;
+      })()
+    },
+    {
+      type: 'category',
+      boundaryGap: false,
+      show: false,
+      data: (function () {
+        const res = [];
+        let len = 10;
+        while (len--) {
+          res.push(10 - len - 1);
+        }
+        return res;
+      })()
+    }
+  ],
+  yAxis: [
+    {
+      type: 'value',
+      scale: true,
+      name: 'Price',
+      max: 30,
+      min: 0,
+      boundaryGap: false,
+      show: false,
+    },
+    {
+      type: 'value',
+      scale: true,
+      name: 'Quantity',
+      max: 1200,
+      min: 0,
+      boundaryGap: false,
+      show: false,
+    }
+  ],
+  series: [
+    {
+      name: 'Queue',
+      type: 'line',
+      xAxisIndex: 1,
+      yAxisIndex: 1,
+      data: (function () {
+        const res = [];
+        let len = 10;
+        while (len--) {
+          res.push(Math.round(Math.random() * 1000));
+        }
+        return res;
+      })(),
+      areaStyle: { color: '#1ac7e0' }
+    },
+    {
+      name: 'Latest price',
+      type: 'line',
+      data: (function () {
+        const res = [];
+        let len = 0;
+        while (len < 10) {
+          res.push((parseFloat((Math.random() * 10 + 5).toFixed(1)) - 0));
+          len++;
+        }
+        return res;
+      })(),
+      areaStyle: { color: '#17a2b8' }
+    }
+  ]
+};
+
+export const echartDynamicAreaData2: any = {
+  grid: {
+    top: '0',
+    right: '0',
+    bottom: '0',
+    left: '0',
+  },
+  color: ['#666666', '#343434'],
+  tooltip: {
+  },
+  legend: {
+    show: false
+  },
+  toolbox: {
+    show: false
+  },
+  dataZoom: {
+    show: false,
+    start: 0,
+    end: 100
+  },
+  xAxis: [
+    {
+      type: 'category',
+      show: false,
+      boundaryGap: false,
+      data: (function () {
+        let now = new Date();
+        const res = [];
+        let len = 10;
+        while (len--) {
+          res.push(10 - len - 1);
+        }
+        return res;
+      })()
+    },
+    {
+      type: 'category',
+      boundaryGap: false,
+      show: false,
+      data: (function () {
+        const res = [];
+        let len = 10;
+        while (len--) {
+          res.push(10 - len - 1);
+        }
+        return res;
+      })()
+    }
+  ],
+  yAxis: [
+    {
+      type: 'value',
+      scale: true,
+      name: 'Price',
+      max: 30,
+      min: 0,
+      boundaryGap: false,
+      show: false,
+    },
+    {
+      type: 'value',
+      scale: true,
+      name: 'Quantity',
+      max: 1200,
+      min: 0,
+      boundaryGap: false,
+      show: false,
+    }
+  ],
+  series: [
+    {
+      name: 'Uploads',
+      type: 'line',
+      xAxisIndex: 1,
+      yAxisIndex: 1,
+      data: (function () {
+        const res = [];
+        let len = 10;
+        while (len--) {
+          res.push(parseInt(Math.round(Math.random() * 1000).toFixed(0), 10));
+        }
+        return res;
+      })(),
+      areaStyle: { color: '#666666' }
+    },
+    {
+      name: 'Downloads',
+      type: 'line',
+      data: (function () {
+        const res = [];
+        let len = 0;
+        while (len < 10) {
+          res.push((parseInt((Math.random() * 10 + 5).toFixed(0), 10) - 0));
+          len++;
+        }
+        return res;
+      })(),
+      areaStyle: { color: '#343434' }
+    }
+  ]
+};
+
+
+export const echartDynamicAreaData3: any = {
+  grid: {
+    top: '0',
+    right: '0',
+    bottom: '0',
+    left: '0',
+  },
+  color: ['#F7653F', '#F7D9C5'],
+  tooltip: {
+  },
+  legend: {
+    show: false
+  },
+  toolbox: {
+    show: false
+  },
+  dataZoom: {
+    show: false,
+    start: 0,
+    end: 100
+  },
+  xAxis: [
+    {
+      type: 'category',
+      show: false,
+      boundaryGap: false,
+      data: (function () {
+        let now = new Date();
+        const res = [];
+        let len = 10;
+        while (len--) {
+          res.push(10 - len - 1);
+        }
+        return res;
+      })()
+    },
+    {
+      type: 'category',
+      boundaryGap: false,
+      show: false,
+      data: (function () {
+        const res = [];
+        let len = 10;
+        while (len--) {
+          res.push(10 - len - 1);
+        }
+        return res;
+      })()
+    }
+  ],
+  yAxis: [
+    {
+      type: 'value',
+      scale: true,
+      name: 'Price',
+      max: 30,
+      min: 0,
+      boundaryGap: false,
+      show: false,
+    },
+    {
+      type: 'value',
+      scale: true,
+      name: 'Quantity',
+      max: 1200,
+      min: 0,
+      boundaryGap: false,
+      show: false,
+    }
+  ],
+  series: [
+    {
+      name: 'Apple',
+      type: 'line',
+      xAxisIndex: 1,
+      yAxisIndex: 1,
+      data: (function () {
+        const res = [];
+        let len = 10;
+        while (len--) {
+          res.push(parseInt(Math.round(Math.random() * 1000).toFixed(0), 10));
+        }
+        return res;
+      })(),
+      areaStyle: { color: '#F7653F' }
+    },
+    {
+      name: 'Google',
+      type: 'line',
+      data: (function () {
+        const res = [];
+        let len = 0;
+        while (len < 10) {
+          res.push((parseInt((Math.random() * 10 + 5).toFixed(0), 10) - 0));
+          len++;
+        }
+        return res;
+      })(),
+      areaStyle: { color: '#F7D9C5' }
     }
   ]
 };

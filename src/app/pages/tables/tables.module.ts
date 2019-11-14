@@ -4,7 +4,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { AlertModule, TooltipModule } from 'ngx-bootstrap';
-import { ButtonsModule, BsDropdownModule, PaginationModule  } from 'ngx-bootstrap';
+import { ButtonsModule, BsDropdownModule, PaginationModule } from 'ngx-bootstrap';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { Ng2TableModule } from 'ng2-table';
 import { WidgetModule } from '../../layout/widget/widget.module';
@@ -13,11 +13,12 @@ import { JqSparklineModule } from '../../components/sparkline/sparkline.module';
 import { TablesBasicComponent } from './basic/tables-basic.component';
 import { TablesDynamicComponent } from './dynamic/tables-dynamic.component';
 import { SearchPipe } from './dynamic/pipes/search-pipe';
+import { NgxEchartsModule } from 'ngx-echarts';
 
 export const routes = [
-  {path: '', redirectTo: 'basic', pathMatch: 'full'},
-  {path: 'basic', component: TablesBasicComponent},
-  {path: 'dynamic', component: TablesDynamicComponent},
+  { path: '', redirectTo: 'basic', pathMatch: 'full' },
+  { path: 'basic', component: TablesBasicComponent },
+  { path: 'dynamic', component: TablesDynamicComponent },
 ];
 
 @NgModule({
@@ -40,9 +41,10 @@ export const routes = [
     UtilsModule,
     Ng2TableModule,
     NgxDatatableModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    NgxEchartsModule
   ],
-  schemas:  [ CUSTOM_ELEMENTS_SCHEMA ]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class TablesModule {
   static routes = routes;

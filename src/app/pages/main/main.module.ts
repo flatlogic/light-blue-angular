@@ -26,13 +26,14 @@ import { SkyconsModule } from '../../components/skycon/skycon.module';
 import { JqSparklineModule } from '../../components/sparkline/sparkline.module';
 import { MapaelLayersMapModule } from '../../components/mapael/mapael.module';
 import { ChangesChartWidgetComponent } from './widgets/changes-chart-widget/changes-chart-widget.component';
-import { NasdaqSparklineWidgetComponent } from './widgets/nasdaq-sparkline-widget/nasdaq-sparkline-widget.component';
+import { NasdaqWidgetComponent } from './widgets/nasdaq-widget/nasdaq-widget.component';
 import { RealtimeTrafficWidgetComponent } from './widgets/realtime-traffic-widget/realtime-traffic-widget.component';
 import { YearsMapWidgetComponent } from './widgets/years-map-widget/years-map-widget.component';
 import { FakeWorldData } from './widgets/years-map-widget/fake-world-data.service';
 import { AnalyticsService } from './analytics/analytics.service';
 import { NewWidgetModule } from '../../layout/new-widget/widget.module';
 import { NgApexchartsModule } from 'ng-apexcharts';
+import { NgxEchartsModule } from 'ngx-echarts';
 
 export const routes = [
   { path: '', redirectTo: 'visits', pathMatch: 'full' },
@@ -54,7 +55,7 @@ export const routes = [
     MarketStatsWidgetComponent,
     WidgetsComponent,
     ChangesChartWidgetComponent,
-    NasdaqSparklineWidgetComponent,
+    NasdaqWidgetComponent,
     RealtimeTrafficWidgetComponent,
     YearsMapWidgetComponent
   ],
@@ -75,7 +76,8 @@ export const routes = [
     MapaelLayersMapModule,
     NewWidgetModule,
     SkyconsModule,
-    NgApexchartsModule
+    NgApexchartsModule,
+    NgxEchartsModule
   ],
   providers: [FakeWorldData, AnalyticsService]
 })
