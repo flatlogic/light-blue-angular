@@ -51,7 +51,8 @@
               "node_modules/jvectormap-world/jquery-jvectormap-world-mill-en.js",
               "node_modules/magnific-popup/dist/jquery.magnific-popup.min.js",
               "node_modules/twitter-bootstrap-wizard/jquery.bootstrap.wizard.js",
-              "node_modules/apexcharts/dist/apexcharts.min.js"
+              "node_modules/apexcharts/dist/apexcharts.min.js",
+              "node_modules/highcharts/highcharts.js"
             ]
           },
           "configurations": {

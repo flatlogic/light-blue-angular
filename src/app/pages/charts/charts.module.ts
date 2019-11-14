@@ -14,6 +14,7 @@ import { AlertModule, ProgressbarModule } from 'ngx-bootstrap';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { NgxEchartsModule } from 'ngx-echarts';
+import { HighchartsChartModule } from 'highcharts-angular';
 
 export const routes = [
   { path: '', redirectTo: 'overview', pathMatch: 'full' },
@@ -35,7 +36,8 @@ export const routes = [
     ProgressbarModule.forRoot(),
     NgApexchartsModule,
     NgxChartsModule,
-    NgxEchartsModule
+    NgxEchartsModule,
+    HighchartsChartModule
   ],
   declarations: [
     OverviewComponent,

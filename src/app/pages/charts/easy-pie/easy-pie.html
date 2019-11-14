@@ -5,13 +5,29 @@
 </ol>
 <h1 class="page-title">Visual - <span class="fw-semi-bold">Charts</span></h1>
 <div class="row">
+  <div class="col-12">
+      <widget [title]="'<h5>Easy Pie Charts</h5>'" [close]="true" [collapse]="true" [customHeader]="true">
+        <div class="text-center">
+          <div class="easy-pie-chart-md mb-lg" id="easy-pie1" data-percent="73">
+            73
+          </div>
+          <highcharts-chart style="width: 100%; display: block" [Highcharts]="Highcharts" [constructorType]="'stockChart'"
+            [options]="chartOptions">
+          </highcharts-chart>
+        </div>
+        <p class="fs-mini text-muted">
+          Easy pie chart is a jQuery plugin that uses the canvas
+          element to render simple pie charts for single values.
+          These charts are highly customizable, very easy to
+          implement, scale to the resolution of the display of
+          the client to provide sharp charts even on retina displays.
+        </p>
+      </widget>
+  </div>
+</div>
+<div class="row">
   <div class="col-12 col-md-6 col-lg-4">
-    <widget
-      [title]="'<h5>Easy Pie Charts</h5>'"
-      [close]="true"
-      [collapse]="true"
-      [customHeader]="true"
-    >
+    <widget [title]="'<h5>Easy Pie Charts</h5>'" [close]="true" [collapse]="true" [customHeader]="true">
       <div class="text-center">
         <div class="easy-pie-chart-md mb-lg" id="easy-pie1" data-percent="73">
           73
@@ -27,12 +43,7 @@
     </widget>
   </div>
   <div class="col-12 col-md-6 col-lg-4">
-    <widget
-      [title]="'<h5>Easy Pie Charts</h5>'"
-      [close]="true"
-      [collapse]="true"
-      [customHeader]="true"
-    >
+    <widget [title]="'<h5>Easy Pie Charts</h5>'" [close]="true" [collapse]="true" [customHeader]="true">
       <div class="text-center">
         <div class="easy-pie-chart-lg mb-lg" id="easy-pie2" data-percent="22">
           22
@@ -46,12 +57,7 @@
     </widget>
   </div>
   <div class="col-12 col-md-6 col-lg-4">
-    <widget
-      [title]="'<h5>Easy Pie Charts</h5>'"
-      [close]="true"
-      [collapse]="true"
-      [customHeader]="true"
-    >
+    <widget [title]="'<h5>Easy Pie Charts</h5>'" [close]="true" [collapse]="true" [customHeader]="true">
       <p class="fw-mini text-muted">
         Ok, but <span class="fw-semi-bold">when to use pie chart?</span> Pie
         charts are mostly used to show how much individual shares — such as
@@ -62,12 +68,12 @@
           43
         </div>
       </div>
-      <hr/>
+      <hr />
       <div class="row">
         <div class="col-3">
-              <span class="widget-icon">
-                <i class="fi flaticon-like text-primary"></i>
-              </span>
+          <span class="widget-icon">
+            <i class="fi flaticon-like text-primary"></i>
+          </span>
         </div>
         <div class="col-9">
           <div class="text-muted">
