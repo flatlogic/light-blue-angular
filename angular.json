@@ -11,9 +11,6 @@
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
-            "customWebpackConfig": {
-              "path": "./extra-webpack.config.js"
-            },
             "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -32,7 +29,6 @@
               "node_modules/webpack-raphael/raphael-min.js",
               "node_modules/d3/d3.min.js",
               "node_modules/nvd3/build/nv.d3.min.js",
-              "node_modules/rickshaw/rickshaw.min.js",
               "node_modules/moment/min/moment.min.js",
               "node_modules/fullcalendar/dist/fullcalendar.js",
               "node_modules/parsleyjs/dist/parsley.js",

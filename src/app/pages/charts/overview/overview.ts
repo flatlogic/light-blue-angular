@@ -12,7 +12,6 @@ import {
 } from '../../../utils/echarts.data';
 
 declare let jQuery: any;
-declare let Rickshaw: any;
 declare let d3: any;
 declare let nv: any;
 
@@ -77,24 +76,6 @@ export class OverviewComponent implements OnInit, AfterViewInit, OnDestroy {
     [6, 28],
     [7, 31]
   ];
-
-  applyRickshawData(): void {
-    this.random = new Rickshaw.Fixtures.RandomData(30);
-    for (let i = 0; i < 30; i++) {
-      this.random.addData(this.seriesData);
-    }
-    this.series = [
-      {
-        color: '#17a2b8',
-        data: this.seriesData[0],
-        name: 'Uploads'
-      }, {
-        color: '#1ac7e0',
-        data: this.seriesData[1],
-        name: 'Downloads'
-      }
-    ];
-  }
 
   applyNvd3Data(): void {
     /* Inspired by Lee Byron's test data generator. */
@@ -178,8 +159,6 @@ export class OverviewComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.applyRickshawData();
-
     this.applyNvd3Data();
 
     jQuery('.easy-pie-chart-md').easyPieChart({

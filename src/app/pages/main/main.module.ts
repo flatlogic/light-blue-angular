@@ -17,7 +17,6 @@ import { TaskComponent } from './analytics/components/task/task';
 import { CalendarModule } from './visits/calendar/calendar.module';
 import { VisitsComponent } from './visits/visits.component';
 import { UtilsModule } from '../../layout/utils/utils.module';
-import { RickshawChartModule } from '../../components/rickshaw/rickshaw.module';
 import { GeoLocationsWidgetDirective } from './visits/geo-locations-widget/geo-locations-widget.directive';
 import { MarketStatsWidgetComponent } from './visits/market-stats-widget/market-stats-widget.component';
 import { WidgetsComponent } from './widgets/widgets.component';
@@ -67,10 +66,8 @@ export const routes = [
     BsDropdownModule.forRoot(),
     CalendarModule,
     UtilsModule,
-    RickshawChartModule,
     LiveTileModule,
     WidgetModule,
-    RickshawChartModule,
     MapaelLayersMapModule,
     NewWidgetModule,
     SkyconsModule,
