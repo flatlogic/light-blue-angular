@@ -82,6 +82,44 @@ export const echartPieChartData: any = {
   }]
 };
 
+export const echartPieChartData3: any = {
+  color: ['#ffc247', '#f55d5d', '#9964e3'],
+  tooltip: {},
+  series: [{
+    type: 'pie',
+    radius: ['60%', '100%'],
+    label: {
+      show: false,
+      normal: {
+        show: true,
+        position: 'inside'
+      },
+      emphasis: {
+          show: true,
+          textStyle: {
+              fontSize: '20',
+              fontWeight: 'bold'
+          }
+      }
+    },
+    hoverAnimation: false,
+    data: [
+      {
+        name: 'SMX',
+        value: Math.round(Math.random() * 100)
+      },
+      {
+        name: 'Direct',
+        value: Math.round(Math.random() * 100)
+      },
+      {
+        name: 'Networks',
+        value: Math.round(Math.random() * 100)
+      },
+    ]
+  }]
+};
+
 export const echartAreaChartData: any = {
   tooltip: {
     trigger: 'axis',

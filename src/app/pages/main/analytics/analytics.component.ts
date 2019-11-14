@@ -1,8 +1,7 @@
-import {Component, ViewChild, ElementRef, ViewEncapsulation, OnInit} from '@angular/core';
+import { Component, ViewEncapsulation, OnInit} from '@angular/core';
 import mock from './mock';
-import {AnalyticsService} from './analytics.service';
-
-declare let jQuery: any;
+import { AnalyticsService } from './analytics.service';
+import { echartPieChartData3, echartAreaChartData } from '../../../utils/echarts.data';
 
 @Component({
   selector: 'analytics',
@@ -15,6 +14,8 @@ export class AnalyticsComponent implements OnInit {
   month = this.now.getMonth() + 1;
   year = this.now.getFullYear();
   mock = mock;
+  public echartPieChartData3: any = echartPieChartData3;
+  public echartAreaChartData: any = echartAreaChartData;
 
   calendarEvents: Array<Array<any>> = [
     [
@@ -46,8 +47,6 @@ export class AnalyticsComponent implements OnInit {
     ]
   ];
 
-  @ViewChild('chartContainer', {static: true}) chartContainer: ElementRef;
-  @ViewChild('chartLegend', {static: true}) chartLegend: ElementRef;
 
   trends: Array<any> = [
     {
@@ -65,12 +64,6 @@ export class AnalyticsComponent implements OnInit {
     this.trends.map(t => {
       t.data = this.getRandomData();
     });
-
-    this.analyticsService.onReceiveDataSuccess.subscribe(event => {
-      if (event) {
-        this.initChart();
-      }
-    });
   }
 
   getRandomData() {
@@ -80,27 +73,6 @@ export class AnalyticsComponent implements OnInit {
       arr.push(+Math.random().toFixed(1) * 10);
     }
     return arr;
-  }
-
-  initChart() {
-    jQuery.plot($(this.chartContainer.nativeElement), this.analyticsService.revenue, {
-      series: {
-        pie: {
-          innerRadius: 0.8,
-          show: true,
-          fill: 0.5,
-        },
-      },
-      colors: ['#ffc247', '#f55d5d', '#9964e3'],
-      legend: {
-        noColumns: 1,
-        container: $(this.chartLegend.nativeElement),
-        labelBoxBorderColor: '#ffffff',
-      },
-      grid: {
-        color: '#fff'
-      }
-    });
   }
 
   ngOnInit() {

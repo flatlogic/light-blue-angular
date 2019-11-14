@@ -7,7 +7,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { AnalyticsComponent } from './analytics/analytics.component';
-import { MainChartComponent } from './analytics/components/main-chart/main-chart.component';
 import { BigStatComponent } from './analytics/components/big-stat/big-stat.component';
 import { WidgetModule } from '../../layout/widget/widget.module';
 import { BsDropdownModule, ProgressbarModule } from 'ngx-bootstrap';
@@ -44,7 +43,6 @@ export const routes = [
   declarations: [
     // Components / Directives/ Pipes
     AnalyticsComponent,
-    MainChartComponent,
     BigStatComponent,
     TaskContainerComponent,
     TaskComponent,
