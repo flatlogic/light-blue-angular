@@ -395,34 +395,6 @@ html[dir="rtl"] .select2-search input {
   color: $text-color;
 }
 
-//  Easy Pie Chart
-
-.easy-pie-chart-md,
-.easy-pie-chart-lg {
-  position: relative;
-  display: inline-block;
-  text-align: center;
-}
-
-.easy-pie-chart-md canvas,
-.easy-pie-chart-lg canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.easy-pie-chart-md {
-  line-height: 120px;
-  height: 120px;
-  width: 120px;
-}
-
-.easy-pie-chart-lg {
-  line-height: 140px;
-  height: 140px;
-  width: 140px;
-}
-
 
 ////// Wizard //////
 

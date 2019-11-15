@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { WidgetModule } from '../../layout/widget/widget.module';
-import { Nvd3ChartModule } from '../../components/nvd3/nvd3.module';
 import { MorrisComponent } from './morris/morris';
 import { FlotComponent } from './flot/flot';
 import { SparklineComponent } from './sparkline/sparkline';
@@ -29,7 +28,6 @@ export const routes = [
   imports: [
     CommonModule,
     WidgetModule,
-    Nvd3ChartModule,
     RouterModule.forChild(routes),
     NewWidgetModule,
     AlertModule.forRoot(),
