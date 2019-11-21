@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import {
   ngxLineChartData,
   ngxAreaChartData,
@@ -9,10 +9,11 @@ import {
 } from '../../../utils/ngx-charts.data';
 
 @Component({
-  selector: 'morris',
-  templateUrl: './morris.html'
+  selector: 'app-ngx-charts',
+  templateUrl: './ngx-charts.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class MorrisComponent {
+export class NgxChartsComponent {
   public ngxLineChartData: any = ngxLineChartData;
   public ngxAreaChartData: any = ngxAreaChartData;
   public ngxVerticalBarChartData: any = ngxVerticalBarChartData;

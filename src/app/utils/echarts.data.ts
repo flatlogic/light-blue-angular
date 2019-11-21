@@ -19,7 +19,7 @@ export const echartBarChartData: any = {
     type: 'bar',
     data: Array.from({ length: 20 }).map((x: undefined, i: number) => ({
       value: (Math.sin(i / 5) * (i / 5 - 10) + i / 6) * 5,
-      itemStyle: { color: '#feebb2' }
+      itemStyle: { color: '#db4912' }
     })),
     animationDelay: function (idx) {
       return idx * 10;
@@ -29,7 +29,7 @@ export const echartBarChartData: any = {
     type: 'bar',
     data: Array.from({ length: 20 }).map((x: undefined, i: number) => ({
       value: (Math.cos(i / 5) * (i / 5 - 10) + i / 6) * 5,
-      itemStyle: { color: '#f59f9f' }
+      itemStyle: { color: '#f0af03' }
     })),
     animationDelay: function (idx) {
       return idx * 10 + 100;
@@ -56,53 +56,66 @@ export const echartPieChartData: any = {
     data: [
       {
         name: 'Motorola Startac',
-        value: Math.round(Math.random() * 100_000)
+        value: Math.round(Math.random() * 100_000),
+        itemStyle: { color: '#8cbf26' }
       },
       {
         name: 'Nokia 1011',
-        value: Math.round(Math.random() * 100_000)
+        value: Math.round(Math.random() * 100_000),
+        itemStyle: { color: '#4e85bd' }
       },
       {
         name: 'Sony Ericsson W880I',
-        value: Math.round(Math.random() * 100_000)
+        value: Math.round(Math.random() * 100_000),
+        itemStyle: { color: '#db4912' }
       },
       {
         name: 'Motorola RAZR V3',
-        value: Math.round(Math.random() * 100_000)
+        value: Math.round(Math.random() * 100_000),
+        itemStyle: { color: '#f0af03' }
       },
       {
         name: 'Nokia N95 ',
-        value: Math.round(Math.random() * 100_000)
+        value: Math.round(Math.random() * 100_000),
+        itemStyle: { color: '#57b955' }
       },
       {
         name: 'Blackberry 7230 ',
-        value: Math.round(Math.random() * 100_000)
+        value: Math.round(Math.random() * 100_000),
+        itemStyle: { color: '#4ebfbb' }
       }
     ]
   }]
 };
 
 export const echartPieChartData3: any = {
-  color: ['#ffc247', '#f55d5d', '#9964e3'],
-  tooltip: {},
+  color: ['#db4912', '#f0af03', '#57b955'],
+  tooltip: {
+    trigger: 'item'
+  },
+  legend: {
+    orient: 'vertical',
+    right: '0',
+    top: '25%',
+    data: ['SMX', 'Direct', 'Networks'],
+    textStyle: {
+      color: '#ffffff'
+    }
+  },
   series: [{
     type: 'pie',
-    radius: ['60%', '100%'],
+    radius: ['50%', '70%'],
+    center: ['25%', '50%'],
     label: {
-      show: false,
+      show: false
+    },
+    labelLine: {
       normal: {
-        show: true,
-        position: 'inside'
-      },
-      emphasis: {
-          show: true,
-          textStyle: {
-              fontSize: '20',
-              fontWeight: 'bold'
-          }
+        show: false
       }
     },
     hoverAnimation: false,
+    avoidLabelOverlap: false,
     data: [
       {
         name: 'SMX',
@@ -121,6 +134,13 @@ export const echartPieChartData3: any = {
 };
 
 export const echartAreaChartData: any = {
+  color: ['#8cbf26', '#4e85bd', '#db4912', '#f0af03', '#57b955'],
+  grid: {
+    top: '0',
+    right: '0',
+    bottom: '0',
+    left: '0',
+  },
   tooltip: {
     trigger: 'axis',
     axisPointer: {
@@ -134,12 +154,6 @@ export const echartAreaChartData: any = {
     show: false
   },
   toolbox: {
-  },
-  grid: {
-    left: '5%',
-    right: '5%',
-    bottom: '5%',
-    top: '0'
   },
   xAxis: [
     {
@@ -158,7 +172,6 @@ export const echartAreaChartData: any = {
   series: [
     {
       type: 'line',
-      areaStyle: {},
       data: [120, 132, 101, 134, 90, 230, 210]
     },
     {
@@ -168,30 +181,21 @@ export const echartAreaChartData: any = {
     },
     {
       type: 'line',
-      areaStyle: {},
       data: [150, 232, 201, 154, 190, 330, 410]
     },
     {
       type: 'line',
-      areaStyle: { normal: {} },
       data: [320, 332, 301, 334, 390, 330, 320]
     },
     {
       type: 'line',
-      label: {
-        normal: {
-          show: true,
-          position: 'top'
-        }
-      },
-      areaStyle: { normal: {} },
-      data: [820, 932, 901, 934, 1290, 1330, 1320]
+      data: [420, 432, 401, 434, 490, 430, 420]
     }
   ]
 };
 
 export const echartLineChartData: any = {
-  color: ['#d1dcff'],
+  color: ['#4e85bd'],
   grid: {
     top: '0',
     right: '0',
@@ -220,12 +224,13 @@ export const echartLineChartData: any = {
   series: [{
     data: [820, 932, 901, 934, 1290, 1330, 1320],
     type: 'line',
-    areaStyle: { color: '#d1dcff' }
+    areaStyle: { color: '#4e85bd' }
   }]
 };
 
 export const echartPieChartData2: any = {
   tooltip: {},
+  color: ['#8cbf26', '#4ebfbb'],
   legend: {
     show: false
   },
@@ -250,7 +255,7 @@ export const echartPieChartData2: any = {
 };
 
 export const echartBarChartData2: any = {
-  color: ['#b7b3ff'],
+  color: ['#8cbf26'],
   grid: {
     top: '0',
     right: '0',
@@ -283,7 +288,7 @@ export const echartBarChartData2: any = {
 };
 
 export const echartLineChartData2: any = {
-  color: ['#587ef2'],
+  color: ['#4ebfbb'],
   tooltip: {
     trigger: 'axis',
     axisPointer: {
@@ -322,7 +327,7 @@ export const echartBarChartData3: any = {
     bottom: '0',
     left: '0',
   },
-  color: ['#f0b518'],
+  color: ['#f0af03'],
   tooltip: {},
   xAxis: {
     type: 'category',
@@ -347,7 +352,7 @@ export const echartBarChartData4: any = {
     bottom: '0',
     left: '0',
   },
-  color: ['#ffa587'],
+  color: ['#db4912'],
   tooltip: {},
   xAxis: {
     type: 'category',
@@ -394,13 +399,13 @@ export const echartAreaChartData2: any = {
       type: 'line',
       areaStyle: {},
       data: [82, 93, 75, 20, 71, 55, 33],
-      color: '#dddddd'
+      color: '#4e85bd '
     },
     {
       type: 'line',
       areaStyle: {},
       data: [99, 75, 80, 84, 33, 66, 22],
-      color: '#a7b6d2'
+      color: '#4ebfbb'
     }
   ]
 };
@@ -648,7 +653,7 @@ export const echartDynamicAreaData: any = {
     bottom: '0',
     left: '0',
   },
-  color: ['#1ac7e0', '#17a2b8'],
+  color: ['#4e85bd', '#8cbf26'],
   tooltip: {
   },
   legend: {
@@ -725,7 +730,7 @@ export const echartDynamicAreaData: any = {
         }
         return res;
       })(),
-      areaStyle: { color: '#1ac7e0' }
+      areaStyle: { color: '#4e85bd' }
     },
     {
       name: 'Latest price',
@@ -739,7 +744,7 @@ export const echartDynamicAreaData: any = {
         }
         return res;
       })(),
-      areaStyle: { color: '#17a2b8' }
+      areaStyle: { color: '#8cbf26' }
     }
   ]
 };
@@ -855,7 +860,7 @@ export const echartDynamicAreaData3: any = {
     bottom: '0',
     left: '0',
   },
-  color: ['#F7653F', '#F7D9C5'],
+  color: ['#db4912', '#fff'],
   tooltip: {
   },
   legend: {
@@ -932,7 +937,7 @@ export const echartDynamicAreaData3: any = {
         }
         return res;
       })(),
-      areaStyle: { color: '#F7653F' }
+      areaStyle: { color: '#db4912' }
     },
     {
       name: 'Google',
@@ -946,7 +951,7 @@ export const echartDynamicAreaData3: any = {
         }
         return res;
       })(),
-      areaStyle: { color: '#F7D9C5' }
+      areaStyle: { color: '#fff' }
     }
   ]
 };

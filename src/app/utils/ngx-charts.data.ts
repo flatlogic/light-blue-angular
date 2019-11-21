@@ -1,15 +1,11 @@
 export const ngxLineChartData = {
   colorScheme: {
-    domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
+    domain: ['#8cbf26', '#db4912', '#f0af03', '#57b955']
   },
   gradient: false,
   showXAxis: true,
   showYAxis: true,
   showLegend: false,
-  showXAxisLabel: true,
-  showYAxisLabel: true,
-  xAxisLabel: 'Country',
-  yAxisLabel: 'Population',
   autoScale: true,
   xAxisTickFormatting: (value: string) => new Date(value).toISOString().split('T')[0],
   results: [
@@ -143,16 +139,12 @@ export const ngxLineChartData = {
 
 export const ngxAreaChartData = {
   colorScheme: {
-    domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
+    domain: ['#8cbf26', '#db4912', '#f0af03', '#57b955']
   },
   gradient: false,
   showXAxis: true,
   showYAxis: true,
   showLegend: false,
-  showXAxisLabel: true,
-  showYAxisLabel: true,
-  xAxisLabel: 'Country',
-  yAxisLabel: 'Population',
   autoScale: true,
   xAxisTickFormatting: (value: string) => new Date(value).toISOString().split('T')[0],
   results: [
@@ -286,16 +278,12 @@ export const ngxAreaChartData = {
 
 export const ngxVerticalBarChartData = {
   colorScheme: {
-    domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
+    domain: ['#57b955', '#db4912', '#f0af03']
   },
   gradient: false,
   showXAxis: true,
   showYAxis: true,
   showLegend: false,
-  showXAxisLabel: true,
-  showYAxisLabel: true,
-  xAxisLabel: 'Country',
-  yAxisLabel: 'Population',
   yAxisTickFormatting: (value: number) => `${value / 1_000_000}M`,
   results: [
     {
@@ -315,7 +303,7 @@ export const ngxVerticalBarChartData = {
 
 export const ngxDoughnutChartData = {
   colorScheme: {
-    domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
+    domain: ['#57b955', '#db4912', '#f0af03']
   },
   gradient: false,
   showLegend: false,
@@ -340,16 +328,12 @@ export const ngxDoughnutChartData = {
 
 export const ngxGroupedVerticalBarChartData = {
   colorScheme: {
-    domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
+    domain: ['#4e85bd', '#57b955']
   },
   gradient: false,
   showXAxis: true,
   showYAxis: true,
   showLegend: false,
-  showXAxisLabel: true,
-  showYAxisLabel: true,
-  xAxisLabel: 'Country',
-  yAxisLabel: 'Population',
   yAxisTickFormatting: (value: number) => `${value / 1_000_000}M`,
   results: [
     {
@@ -398,16 +382,12 @@ export const ngxGroupedVerticalBarChartData = {
 
 export const ngxStackedVerticalBarChartData = {
   colorScheme: {
-    domain: ['#a7beff', '#e2e1ff', '#fff8e3', '#ffd7de']
+    domain: ['#4e85bd', '#4ebfbb']
   },
   gradient: false,
   showXAxis: true,
   showYAxis: true,
   showLegend: false,
-  showXAxisLabel: true,
-  showYAxisLabel: true,
-  xAxisLabel: 'Country',
-  yAxisLabel: 'Population',
   yAxisTickFormatting: (value: number) => `${value / 1_000_000}M`,
   results: [
     {

@@ -1,5 +1,5 @@
-import { Component, ViewEncapsulation, AfterViewInit, OnDestroy } from '@angular/core';
-import { ApexOptions } from 'ng-apexcharts';
+import { Component, ViewEncapsulation, AfterViewInit, OnDestroy, ViewChildren, QueryList } from '@angular/core';
+import { ApexOptions, ChartComponent } from 'ng-apexcharts';
 
 import { apexOptions1, apexOptions2 } from '../../../utils/apex-charts.data';
 import { echartLineBarData, echartDynamicAreaData2, echartBarChartData5, echartLineChartData3 } from '../../../utils/echarts.data';
@@ -13,6 +13,7 @@ import { echartLineBarData, echartDynamicAreaData2, echartBarChartData5, echartL
 export class WidgetsComponent implements AfterViewInit, OnDestroy {
   public apexOptions1: ApexOptions = apexOptions1;
   public apexOptions2: ApexOptions = apexOptions2;
+  @ViewChildren(ChartComponent) public apexchartsList: QueryList<ChartComponent>;
   public echartDynamicAreaData2: any = echartDynamicAreaData2;
   public echartDynamicAreaDataUpdate: any;
   public echartBarChartData5: any = echartBarChartData5;
@@ -40,5 +41,8 @@ export class WidgetsComponent implements AfterViewInit, OnDestroy {
 
   public ngOnDestroy(): void {
     if (this.interval) { clearInterval(this.interval); }
+    this.apexchartsList.forEach((c: ChartComponent) => {
+      if (Boolean(c)) { c.destroy(); }
+    });
   }
 }

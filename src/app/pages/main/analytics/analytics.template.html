@@ -43,7 +43,10 @@
             <widget class="h-100 mb-0" [title]="'Revenue Breakdown'" [close]="true"
               [fetchingData]="analyticsService.isReceiving">
               <div class="row">
-                <div style="height: 200px; width: 100%;" echarts [options]="echartPieChartData3">
+                <div 
+                  style="height: 150px; width: 100%;" 
+                  echarts 
+                  [options]="echartPieChartData3">
                 </div>
               </div>
             </widget>

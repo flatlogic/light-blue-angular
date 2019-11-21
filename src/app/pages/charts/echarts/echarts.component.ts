@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import {
   echartBarChartData,
   echartPieChartData,
@@ -10,10 +10,11 @@ import {
 } from '../../../utils/echarts.data';
 
 @Component({
-  selector: 'sparkline',
-  templateUrl: './sparkline.html'
+  selector: 'app-echarts',
+  templateUrl: './echarts.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SparklineComponent {
+export class EchartsComponent {
   public echartBarChartData: any = echartBarChartData;
   public echartPieChartData: any = echartPieChartData;
   public echartAreaChartData: any = echartAreaChartData;

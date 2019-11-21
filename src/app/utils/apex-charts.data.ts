@@ -5,11 +5,14 @@ export const apexOptions1: ApexOptions = {
     { name: 'Visitors', data: lineChartDataRandomizer(25, 5) },
     { name: 'Charts', data: lineChartDataRandomizer(25, 4) }
   ],
-  colors: ['#777', '#dd5826'],
+  colors: ['#4ebfbb', '#db4912'],
   chart: {
     type: 'line',
     height: '200px',
-    background: 'transparent'
+    background: 'transparent',
+    toolbar: {
+      show: false
+    }
   },
   stroke: {
     width: 2
@@ -51,11 +54,14 @@ export const apexOptions2: ApexOptions = {
     { name: 'Controllers', data: lineChartDataRandomizer(25, 5) },
     { name: 'Scopes', data: lineChartDataRandomizer(25, 3) }
   ],
-  colors: ['#777', '#f0b518'],
+  colors: ['#8cbf26', '#f0af03'],
   chart: {
     type: 'line',
-    height: '340px',
-    background: 'transparent'
+    height: '200px',
+    background: 'transparent',
+    toolbar: {
+      show: false
+    }
   },
   stroke: {
     width: 2
@@ -133,11 +139,14 @@ export const apexOptions3 = {
       ]
     }
   ],
-  colors: ['#ffdb6f', '#ffaa73', '#ffc247'],
+  colors: ['#4ebfbb', '#f0af03', '#db4912'],
   chart: {
     type: 'line',
-    height: '260px',
-    background: 'transparent'
+    height: '280px',
+    background: 'transparent',
+    toolbar: {
+      show: false
+    }
   },
   stroke: {
     width: 2
@@ -152,6 +161,11 @@ export const apexOptions3 = {
     },
     axisTicks: {
       show: false
+    },
+    labels: {
+      style: {
+        colors: '#fff'
+      }
     }
   },
   yaxis: {
@@ -161,17 +175,26 @@ export const apexOptions3 = {
     },
     axisTicks: {
       show: false
+    },
+    labels: {
+      style: {
+        color: '#fff'
+      }
     }
   },
   tooltip: {
-    enabled: false
+    enabled: true
   }
 };
 
-export const apexOptions4: ApexOptions = {
+export const apexOptions4 = {
   chart: {
     height: '260px',
-    type: 'bar'
+    type: 'bar',
+    background: 'transparent',
+    toolbar: {
+      show: false
+    }
   },
   plotOptions: {
     bar: {
@@ -202,19 +225,34 @@ export const apexOptions4: ApexOptions = {
     }
   ],
   xaxis: {
-    categories: ['Jen', 'Feb', 'Mar', 'Apr', 'May']
+    categories: ['Jen', 'Feb', 'Mar', 'Apr', 'May'],
+    labels: {
+      style: {
+        colors: '#fff'
+      }
+    }
   },
-  colors: ['#a7beff', '#ace5d1', '#ffd7de'],
+  yaxis: {
+    labels: {
+      style: {
+        color: '#fff'
+      }
+    }
+  },
+  colors: ['#4ebfbb', '#57b955', '#db4912'],
   legend: {
     show: true,
-    position: 'right',
-    floating: true
+    position: 'bottom',
+    floating: false,
+    labels: {
+      colors: '#fff'
+    }
   },
   tooltip: {
     enabled: false
   },
   grid: {
-    borderColor: '#56606b'
+    borderColor: '#fff'
   }
 };
 
@@ -259,11 +297,14 @@ export const apexOptions5 = {
       ]
     }
   ],
-  colors: ['#fff8e3', '#ffebb2', '#ffc247'],
+  colors: ['#4ebfbb', '#4e85bd', '#57b955'],
   chart: {
     type: 'line',
     height: '250px',
-    background: 'transparent'
+    background: 'transparent',
+    toolbar: {
+      show: false
+    }
   },
   stroke: {
     width: 2
@@ -278,6 +319,11 @@ export const apexOptions5 = {
     },
     axisTicks: {
       show: false
+    },
+    labels: {
+      style: {
+        colors: '#fff'
+      }
     }
   },
   yaxis: {
@@ -287,10 +333,15 @@ export const apexOptions5 = {
     },
     axisTicks: {
       show: false
+    },
+    labels: {
+      style: {
+        color: '#fff'
+      }
     }
   },
   tooltip: {
-    enabled: false
+    enabled: true
   }
 };
 
@@ -311,17 +362,23 @@ export const apexOptions6 = {
         .map((value: number) => ([value, Math.cos(value)]))
     }
   ],
-  colors: ['#8fe5d4', '#ffd7de'],
+  colors: ['#db4912', '#57b955'],
   chart: {
     type: 'line',
-    height: '340px',
-    background: 'transparent'
+    height: '380px',
+    background: 'transparent',
+    toolbar: {
+      show: false
+    }
   },
   stroke: {
     width: 2,
   },
   legend: {
-    show: true
+    show: true,
+    labels: {
+      colors: '#fff'
+    }
   },
   xaxis: {
     min: 1,
@@ -362,39 +419,53 @@ export const apexOptions6 = {
   }
 };
 
-export const apexOptions7: ApexOptions = {
+export const apexOptions7 = {
   chart: {
     type: 'pie',
-    height: '200px'
+    height: '200px',
+    toolbar: {
+      show: false
+    }
   },
   labels: ['Rolex', 'Tissot', 'Orient', 'Other'],
   series: Array.from(Array(4), () => Math.floor(Math.random() * 100) + 1),
   legend: {
-    show: false
+    show: true,
+    position: 'right',
+    labels: {
+      colors: '#fff'
+    }
   },
-  colors: ['#ffd7de', '#8fe5d4', '#ace5d1', '#ffebb2', '#fff8e3']
+  colors: ['#8cbf26', '#f0af03', '#57b955', '#4ebfbb', '#4e85bd']
 };
 
-export const apexOptions8: ApexOptions = {
+export const apexOptions8 = {
   chart: {
     type: 'donut',
-    height: '150px'
+    height: '150px',
+    toolbar: {
+      show: false
+    }
   },
   labels: ['Rolex', 'Tissot', 'Orient', 'Other'],
   series: Array.from(Array(4), () => Math.floor(Math.random() * 100) + 1),
   legend: {
-    position: 'right'
+    show: true,
+    position: 'right',
+    labels: {
+      colors: '#fff'
+    }
   },
-  colors: ['#ffd7de', '#8fe5d4', '#ace5d1', '#ffebb2', '#fff8e3']
+  colors: ['#8cbf26', '#f0af03', '#57b955', '#4ebfbb', '#4e85bd']
 };
 
-export const apexOptions9: ApexOptions = {
+export const apexOptions9 = {
   chart: {
     height: '200px',
     type: 'bar',
     stacked: true,
     toolbar: {
-      show: true
+      show: false
     }
   },
   plotOptions: {
@@ -403,22 +474,55 @@ export const apexOptions9: ApexOptions = {
       columnWidth: '55%'
     },
   },
+  legend: {
+    labels: {
+      colors: '#fff'
+    }
+  },
   series: [{
-    name: 'PRODUCT A',
+    name: 'Product A',
     data: [22, 33, 41, 67, 22, 43, 73, 23, 33]
   }, {
-    name: 'PRODUCT B',
+    name: 'Product B',
     data: [13, 23, 20, 8, 13, 27, 11, 23, 22]
   }, {
-    name: 'PRODUCT C',
+    name: 'Product C',
     data: [11, 17, 15, 15, 21, 14, 22, 32, 33]
   }, {
-    name: 'PRODUCT D',
+    name: 'Product D',
     data: [21, 7, 25, 13, 22, 8, 15, 3, 22]
   }],
-  colors: ['#E5E5FF', '#C0BDFF', '#D7E0FF'],
+  colors: ['#8cbf26', '#f0af03', '#57b955', '#4ebfbb'],
   dataLabels: {
     enabled: false
+  },
+  xaxis: {
+    axisBorder: {
+      show: true,
+      color: '#fff'
+    },
+    axisTicks: {
+      show: false
+    },
+    labels: {
+      style: {
+        colors: '#fff'
+      }
+    }
+  },
+  yaxis: {
+    axisBorder: {
+      show: true,
+      color: '#fff',
+    },
+    axisTicks: {
+      show: false
+    },
+    labels: {
+      style: {
+        color: '#fff'
+      }
+    }
   }
 };
 

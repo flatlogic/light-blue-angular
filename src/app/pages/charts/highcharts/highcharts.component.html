@@ -1,0 +1,87 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">YOU ARE HERE</li>
+  <li class="breadcrumb-item">Charts</li>
+  <li class="active breadcrumb-item">Highcharts</li>
+</ol>
+<h1 class="page-title">Visual - <span class="fw-semi-bold">Highcharts</span></h1>
+<div class="row">
+  <div class="col-12">
+    <widget [title]="'<h5>Highcharts stocks chart</h5>'" [close]="true" [collapse]="true" [customHeader]="true">
+      <div class="text-center">
+        <highcharts-chart 
+          style="width: 100%; display: block" 
+          [Highcharts]="Highstock" 
+          constructorType="stockChart"
+          [options]="highchartsOptions1"
+          [runOutsideAngular]="true">
+        </highcharts-chart>
+      </div>
+    </widget>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 col-lg-6">
+    <widget [title]="'<h5>Highcharts Pie Chart</h5>'" [close]="true" [collapse]="true" [customHeader]="true">
+      <div class="text-center">
+        <highcharts-chart 
+          style="width: 100%; display: block" 
+          [Highcharts]="Highcharts" 
+          [options]="highchartsOptions2"
+          [runOutsideAngular]="true">
+        </highcharts-chart>
+      </div>
+    </widget>
+  </div>
+  <div class="col-12 col-lg-6">
+    <widget [title]="'<h5>Highcharts area</h5>'" [close]="true" [collapse]="true" [customHeader]="true">
+      <div class="text-center">
+        <highcharts-chart 
+          style="width: 100%; display: block" 
+          [Highcharts]="Highcharts" 
+          [options]="highchartsOptions3"
+          [runOutsideAngular]="true">
+        </highcharts-chart>
+      </div>
+    </widget>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 col-lg-6">
+    <widget [title]="'<h5>Highcharts Sunburst Chart</h5>'" [close]="true" [collapse]="true" [customHeader]="true">
+      <div class="text-center">
+        <highcharts-chart 
+          style="width: 100%; display: block" 
+          [Highcharts]="Highcharts" 
+          [options]="highchartsOptions4"
+          [runOutsideAngular]="true">
+        </highcharts-chart>
+      </div>
+    </widget>
+  </div>
+  <div class="col-12 col-lg-6">
+    <widget [title]="'<h5>Highcharts Bar Chart</h5>'" [close]="true" [collapse]="true" [customHeader]="true">
+      <div class="text-center">
+        <highcharts-chart 
+          style="width: 100%; display: block" 
+          [Highcharts]="Highcharts" 
+          [options]="highchartsOptions6"
+          [runOutsideAngular]="true">
+        </highcharts-chart>
+      </div>
+    </widget>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <widget [title]="'<h5>Highcharts Line Charts</h5>'" [close]="true" [collapse]="true" [customHeader]="true">
+      <div class="text-center">
+        <highcharts-chart 
+          style="width: 100%; display: block" 
+          [Highcharts]="Highcharts" 
+          [options]="highchartsOptions5"
+          [runOutsideAngular]="true">
+        </highcharts-chart>
+      </div>
+    </widget>
+  </div>
+</div>

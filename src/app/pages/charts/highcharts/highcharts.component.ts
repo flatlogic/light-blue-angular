@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import * as Highstock from 'highcharts/highstock';
 import * as Highcharts from 'highcharts';
@@ -20,13 +20,12 @@ import {
   highchartsOptions6
 } from '../../../utils/highcharts.data';
 
-declare let jQuery: any;
-
 @Component({
-  selector: 'easy-pie',
-  templateUrl: './easy-pie.html'
+  selector: 'app-highcharts',
+  templateUrl: './highcharts.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class EasyPieComponent{
+export class HighchartsComponent {
   Highstock = Highstock;
   Highcharts = Highcharts;
   highchartsOptions1 = highchartsOptions1;

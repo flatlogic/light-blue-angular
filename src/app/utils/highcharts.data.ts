@@ -4,6 +4,9 @@ export const highchartsOptions1: Highstock.Options = {
   navigator: {
     enabled: false
   },
+  credits: {
+    enabled: false
+  },
   rangeSelector: {
     enabled: false,
     buttonTheme: {
@@ -16,7 +19,7 @@ export const highchartsOptions1: Highstock.Options = {
   xAxis: {
     labels: {
       style: {
-        color: 'white'
+        color: '#fff'
       }
     }
   },
@@ -31,20 +34,20 @@ export const highchartsOptions1: Highstock.Options = {
     },
     backgroundColor: 'transparent',
     style: {
-      color: 'white'
-    }
+      color: '#fff'
+    },
   },
   title: {
     text: 'AAPL Stock Price',
     style: {
-      color: 'white'
+      color: '#fff'
     }
   },
 
   legend: {
     enabled: true,
     itemStyle: {
-      color: 'white'
+      color: '#fff'
     }
   },
 
@@ -53,7 +56,7 @@ export const highchartsOptions1: Highstock.Options = {
       showInLegend: true
     }
   },
-
+    colors: ['#4ebfbb', '#fff', '#57b955'],
   series: [
     {
       type: 'ohlc',
@@ -161,6 +164,10 @@ export const highchartsOptions2 = {
     type: 'variablepie',
     backgroundColor: 'transparent'
   },
+  colors: ['#8cbf26', '#4e85bd', '#db4912', '#f0af03', '#57b955', '#fff', '#4ebfbb'],
+  credits: {
+    enabled: false
+  },
   accessibility: {
     exporting: {
       enabled: false
@@ -183,7 +190,7 @@ export const highchartsOptions2 = {
     zMin: 0,
     name: 'countries',
     label: {
-      style: { color: 'white' }
+      style: { color: '#fff' }
     },
     data: [{
       name: 'Spain',
@@ -222,6 +229,10 @@ export const highchartsOptions3 = {
     type: 'area',
     backgroundColor: 'transparent',
   },
+  colors: ['#8cbf26', '#4e85bd', '#db4912', '#f0af03', '#57b955'],
+  credits: {
+    enabled: false
+  },
   title: {
     style: {
       display: 'none'
@@ -237,11 +248,19 @@ export const highchartsOptions3 = {
     tickmarkPlacement: 'on',
     title: {
       enabled: false
+    },
+    labels: {
+      style: {
+        color: '#fff'
+      }
     }
   },
   yAxis: {
     labels: {
-      format: '{value}%'
+      format: '{value}%',
+      style: {
+        color: '#fff'
+      }
     },
     title: {
       enabled: false
@@ -287,13 +306,22 @@ export const highchartsOptions3 = {
   }, {
     name: 'Oceania',
     data: [2, 2, 2, 6, 13, 30, 46]
-  }]
+  }],
+  legend: {
+    itemStyle: {
+      color: '#fff'
+    }
+  }
 };
 
 export const highchartsOptions4 = {
   chart: {
     height: '90%',
     backgroundColor: 'transparent'
+  },
+  colors: ['#8cbf26', '#4e85bd', '#db4912', '#f0af03', '#57b955', '#4ebfbb'],
+  credits: {
+    enabled: false
   },
   title: {
     style: {
@@ -1727,9 +1755,13 @@ export const highchartsOptions5 = {
   chart: {
     backgroundColor: 'transparent'
   },
+  colors: ['#4e85bd'],
+  credits: {
+    enabled: false
+  },
   legend: {
     itemStyle: {
-      color: 'white'
+      color: '#fff'
     }
   },
   title: {
@@ -1744,14 +1776,14 @@ export const highchartsOptions5 = {
     type: 'datetime',
     labels: {
       style: {
-        color: 'white'
+        color: '#fff'
       }
     }
   },
   yAxis: {
     labels: {
       style: {
-        color: 'white'
+        color: '#fff'
       }
     }
   },
@@ -1767,9 +1799,13 @@ export const highchartsOptions6 = {
     type: 'bar',
     backgroundColor: 'transparent'
   },
+  colors: ['#4ebfbb', '#57b955'],
+  credits: {
+    enabled: false
+  },
   legend: {
     itemStyle: {
-      color: 'white'
+      color: '#fff'
     }
   },
   title: {
@@ -1780,7 +1816,7 @@ export const highchartsOptions6 = {
   accessibility: {
     point: {
       descriptionFormatter: function (point) {
-        var index = point.index + 1,
+        let index = point.index + 1,
           category = point.category,
           val = Math.abs(point.y),
           series = point.series.name;
@@ -1801,7 +1837,7 @@ export const highchartsOptions6 = {
     labels: {
       step: 1,
       style: {
-        color: 'white'
+        color: '#fff'
       }
     },
     accessibility: {
@@ -1821,7 +1857,7 @@ export const highchartsOptions6 = {
     labels: {
       step: 1,
       style: {
-        color: 'white'
+        color: '#fff'
       }
     },
     accessibility: {
@@ -1837,7 +1873,7 @@ export const highchartsOptions6 = {
         return Math.abs(this.value) + '%';
       },
       style: {
-        color: 'white'
+        color: '#fff'
       }
     },
     accessibility: {

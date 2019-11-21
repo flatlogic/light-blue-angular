@@ -3,11 +3,11 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { WidgetModule } from '../../layout/widget/widget.module';
-import { MorrisComponent } from './morris/morris';
-import { FlotComponent } from './flot/flot';
-import { SparklineComponent } from './sparkline/sparkline';
+import { NgxChartsComponent } from './ngx-charts/ngx-charts.component';
+import { ApexchartsComponent } from './apexcharts/apexcharts.component';
+import { EchartsComponent } from './echarts/echarts.component';
 import { OverviewComponent } from './overview/overview';
-import { EasyPieComponent } from './easy-pie/easy-pie';
+import { HighchartsComponent } from './highcharts/highcharts.component';
 import { NewWidgetModule } from '../../layout/new-widget/widget.module';
 import { AlertModule, ProgressbarModule } from 'ngx-bootstrap';
 import { NgApexchartsModule } from 'ng-apexcharts';
@@ -18,10 +18,10 @@ import { HighchartsChartModule } from 'highcharts-angular';
 export const routes = [
   { path: '', redirectTo: 'overview', pathMatch: 'full' },
   { path: 'overview', component: OverviewComponent },
-  { path: 'flot', component: FlotComponent },
-  { path: 'morris', component: MorrisComponent },
-  { path: 'sparkline', component: SparklineComponent },
-  { path: 'easy-pie', component: EasyPieComponent },
+  { path: 'apexcharts', component: ApexchartsComponent },
+  { path: 'ngx-charts', component: NgxChartsComponent },
+  { path: 'echarts', component: EchartsComponent },
+  { path: 'highcharts', component: HighchartsComponent },
 ];
 
 @NgModule({
@@ -39,10 +39,10 @@ export const routes = [
   ],
   declarations: [
     OverviewComponent,
-    FlotComponent,
-    MorrisComponent,
-    SparklineComponent,
-    EasyPieComponent
+    ApexchartsComponent,
+    NgxChartsComponent,
+    EchartsComponent,
+    HighchartsComponent
   ]
 })
 export class ChartsModule {

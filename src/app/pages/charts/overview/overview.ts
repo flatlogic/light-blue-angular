@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, AfterViewInit, OnDestroy } from '@angular/core';
+import { Component, ViewEncapsulation, AfterViewInit, OnDestroy, ViewChildren, QueryList } from '@angular/core';
 import * as Highcharts from 'highcharts';
 
 import { apexOptions3, apexOptions4 } from '../../../utils/apex-charts.data';
@@ -16,6 +16,7 @@ import {
   highchartsOptions5
 } from '../../../utils/highcharts.data';
 import { ngxGroupedVerticalBarChartData } from '../../../utils/ngx-charts.data';
+import { ChartComponent } from 'ng-apexcharts';
 
 @Component({
   selector: '[charts-overview]',
@@ -26,6 +27,7 @@ import { ngxGroupedVerticalBarChartData } from '../../../utils/ngx-charts.data';
 export class OverviewComponent implements AfterViewInit, OnDestroy {
   public apexOptions3: any = apexOptions3;
   public apexOptions4: any = apexOptions4;
+  @ViewChildren(ChartComponent) public apexchartsList: QueryList<ChartComponent>;
 
   public ngxAreaChartData: any = ngxAreaChartData;
   public ngxLineChartData: any = ngxLineChartData;
@@ -65,5 +67,8 @@ export class OverviewComponent implements AfterViewInit, OnDestroy {
 
   public ngOnDestroy(): void {
     if (this.interval) { clearInterval(this.interval); }
+    this.apexchartsList.forEach((c: ChartComponent) => {
+      if (Boolean(c)) { c.destroy(); }
+    });
   }
 }

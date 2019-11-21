@@ -1,20 +1,23 @@
 <ol class="breadcrumb">
   <li class="breadcrumb-item">YOU ARE HERE</li>
-  <li class="active breadcrumb-item">Flot</li>
+  <li class="active breadcrumb-item">Apex charts</li>
 </ol>
-<h1 class="page-title">Flot</h1>
+<h1 class="page-title">Apex Charts</h1>
 <div class="row">
   <div class="col-12 col-lg-6 col-xl-5">
-    <widget [title]="'<h5>Flot <span class=fw-semi-bold>Stacked Line Chart</span></h5>'" [close]="true"
+    <widget [title]="'<h5>Apex <span class=fw-semi-bold>Mixed Chart</span></h5>'" [close]="true"
       [collapse]="true" [customHeader]="true">
-      <apx-chart class="chart-inner transparent-bg" [series]="apexOptions5.series" [stroke]="apexOptions5.stroke"
-        [chart]="apexOptions5.chart" [colors]="apexOptions5.colors" [legend]="apexOptions5.legend"
-        [xaxis]="apexOptions5.xaxis" [yaxis]="apexOptions5.yaxis" [tooltip]="apexOptions5.tooltip"></apx-chart>
-      <p class="fs-mini text-muted">
-        Flot is a <span class="fw-semi-bold">pure</span>
-        JavaScript plotting library for jQuery, with a
-        focus on simple usage, attractive looks and interactive features.
-      </p>
+      <apx-chart 
+        class="chart-inner transparent-bg" 
+        [series]="apexOptions5.series" 
+        [stroke]="apexOptions5.stroke"
+        [chart]="apexOptions5.chart" 
+        [colors]="apexOptions5.colors" 
+        [legend]="apexOptions5.legend"
+        [xaxis]="apexOptions5.xaxis" 
+        [yaxis]="apexOptions5.yaxis" 
+        [tooltip]="apexOptions5.tooltip">
+      </apx-chart>
       <h5 class="mt">Interactive <span class="fw-semi-bold">Sparklines</span></h5>
       <div class="row mt">
         <div class="col-12 col-md-6">
@@ -41,71 +44,60 @@
           </div>
         </div>
       </div>
-      <p class="fs-mini text-muted">
-        This jQuery plugin generates sparklines
-        (small inline charts) directly in the browser using
-        data supplied either inline in the HTML, or via javascript.
-      </p>
     </widget>
   </div>
   <div class="col-12 col-lg-6 col-xl-7">
-    <widget [title]="'<h5>Flot <span class=fw-semi-bold>Tracking</span></h5>'" [close]="true" [collapse]="true"
+    <widget [title]="'<h5>Apex <span class=fw-semi-bold>Line chart</span></h5>'" [close]="true" [collapse]="true"
       [customHeader]="true">
       <div class="mt mb">
-        <apx-chart class="chart-inner transparent-bg" [series]="apexOptions6.series" [stroke]="apexOptions6.stroke"
-          [chart]="apexOptions6.chart" [colors]="apexOptions6.colors" [legend]="apexOptions6.legend"
-          [xaxis]="apexOptions6.xaxis" [yaxis]="apexOptions6.yaxis" [grid]="apexOptions6.grid"
-          [tooltip]="apexOptions6.tooltip"></apx-chart>
+        <apx-chart 
+          class="chart-inner transparent-bg" 
+          [series]="apexOptions6.series" 
+          [stroke]="apexOptions6.stroke"
+          [chart]="apexOptions6.chart" 
+          [colors]="apexOptions6.colors" 
+          [legend]="apexOptions6.legend"
+          [xaxis]="apexOptions6.xaxis" 
+          [yaxis]="apexOptions6.yaxis" 
+          [grid]="apexOptions6.grid"
+          [tooltip]="apexOptions6.tooltip">
+        </apx-chart>
       </div>
-      <p class="fs-mini text-muted">
-        Flot charts can be customized easily due to its
-        <span class="fw-semi-bold">powerful API</span>.
-        But if you meet any troubles, you are always welcome to
-        contact us to integrate the business
-        logic into <span class="fw-semi-bold">SING Admin Dashboard</span>.
-      </p>
     </widget>
   </div>
   <div class="col-12 col-lg-7">
-    <widget [title]="'<h5>Flot <span class=fw-semi-bold>Bars</span></h5>'" [close]="true" [collapse]="true"
+    <widget [title]="'<h5>Apex <span class=fw-semi-bold>Bars</span></h5>'" [close]="true" [collapse]="true"
       [customHeader]="true">
       <div class="mt mb">
         <apx-chart class="chart-inner transparent-bg" [chart]="apexOptions4.chart"
           [plotOptions]="apexOptions4.plotOptions" [dataLabels]="apexOptions4.dataLabels" [stroke]="apexOptions4.stroke"
-          [series]="apexOptions4.series" [xaxis]="apexOptions4.xaxis" [colors]="apexOptions4.colors"
+          [series]="apexOptions4.series" [xaxis]="apexOptions4.xaxis" [yaxis]="apexOptions4.yaxis" [colors]="apexOptions4.colors"
           [legend]="apexOptions4.legend" [tooltip]="apexOptions4.tooltip" [grid]="apexOptions4.grid"></apx-chart>
       </div>
-      <p class="fs-mini text-muted">
-        Flot is a pure JavaScript plotting library for jQuery,
-        with a focus on simple usage, attractive looks and interactive features.
-      </p>
     </widget>
   </div>
   <div class="col-12 col-lg-5">
-    <widget class="mb-xlg" [title]="'<h5>Flot <span class=fw-semi-bold>Pie Chart</span></h5>'" [close]="true"
+    <widget class="mb-xlg" [title]="'<h5>Apex <span class=fw-semi-bold>Pie Chart</span></h5>'" [close]="true"
       [collapse]="true" [customHeader]="true">
       <div class="mt mb">
         <apx-chart class="chart-inner transparent-bg" [chart]="apexOptions7.chart" [series]="apexOptions7.series"
           [labels]="apexOptions7.labels" [legend]="apexOptions7.legend" [colors]="apexOptions7.colors"></apx-chart>
       </div>
-      <p class="fs-mini text-muted">
-        Labels can be hidden if the slice is less than a
-        given percentage of the pie (19% in this case).
-      </p>
     </widget>
-    <widget class="mb-xlg" [title]="'<h5>Flot <span class=fw-semi-bold>Donut Chart</span></h5>'" [close]="true"
+    <widget class="mb-xlg" [title]="'<h5>Apex <span class=fw-semi-bold>Donut Chart</span></h5>'" [close]="true"
       [collapse]="true" [customHeader]="true">
       <apx-chart class="chart-inner transparent-bg" [chart]="apexOptions8.chart" [series]="apexOptions8.series"
         [labels]="apexOptions8.labels" [legend]="apexOptions8.legend" [colors]="apexOptions8.colors"></apx-chart>
     </widget>
   </div>
   <div class="col-12">
-    <widget class="mb-xlg" [title]="'<h5>Flot <span class=fw-semi-bold>Bars Stacked</span></h5>'" [close]="true"
+    <widget class="mb-xlg" [title]="'<h5>Apex <span class=fw-semi-bold>Bars Stacked</span></h5>'" [close]="true"
       [collapse]="true" [customHeader]="true">
       <div class="mt mb">
         <apx-chart class="chart-inner transparent-bg" [chart]="apexOptions9.chart" [series]="apexOptions9.series"
           [plotOptions]="apexOptions9.plotOptions" [colors]="apexOptions9.colors"
-          [dataLabels]="apexOptions9.dataLabels"></apx-chart>
+          [dataLabels]="apexOptions9.dataLabels" [legend]="apexOptions9.legend"
+          [xaxis]="apexOptions9.xaxis" [yaxis]="apexOptions9.yaxis"></apx-chart>
       </div>
     </widget>
   </div>
