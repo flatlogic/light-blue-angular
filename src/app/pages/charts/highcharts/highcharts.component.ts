@@ -2,13 +2,13 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import * as Highstock from 'highcharts/highstock';
 import * as Highcharts from 'highcharts';
-const IndicatorsCore = require('highcharts/indicators/indicators');
+import IndicatorsCore from 'highcharts/indicators/indicators';
 IndicatorsCore(Highstock);
-const IndicatorZigZag = require('highcharts/indicators/zigzag');
+import IndicatorZigZag from 'highcharts/indicators/zigzag';
 IndicatorZigZag(Highstock);
-const variablepie = require('highcharts/modules/variable-pie');
+import variablepie from 'highcharts/modules/variable-pie';
 variablepie(Highcharts);
-const sunburst = require('highcharts/modules/sunburst');
+import sunburst from 'highcharts/modules/sunburst';
 sunburst(Highcharts);
 
 import {

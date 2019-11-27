@@ -1,7 +1,4 @@
 import 'jquery.animate-number/jquery.animateNumber.js';
-import 'jQuery-Mapael/js/jquery.mapael.js';
-import 'jQuery-Mapael/js/maps/usa_states';
-import 'jQuery-Mapael/js/maps/world_countries.js';
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -16,12 +13,10 @@ import { TaskComponent } from './analytics/components/task/task';
 import { CalendarModule } from './visits/calendar/calendar.module';
 import { VisitsComponent } from './visits/visits.component';
 import { UtilsModule } from '../../layout/utils/utils.module';
-import { GeoLocationsWidgetDirective } from './visits/geo-locations-widget/geo-locations-widget.directive';
 import { MarketStatsWidgetComponent } from './visits/market-stats-widget/market-stats-widget.component';
 import { WidgetsComponent } from './widgets/widgets.component';
 import { LiveTileModule } from '../../components/tile/tile.module';
 import { SkyconsModule } from '../../components/skycon/skycon.module';
-import { MapaelLayersMapModule } from '../../components/mapael/mapael.module';
 import { ChangesChartWidgetComponent } from './widgets/changes-chart-widget/changes-chart-widget.component';
 import { NasdaqWidgetComponent } from './widgets/nasdaq-widget/nasdaq-widget.component';
 import { RealtimeTrafficWidgetComponent } from './widgets/realtime-traffic-widget/realtime-traffic-widget.component';
@@ -47,7 +42,6 @@ export const routes = [
     TaskContainerComponent,
     TaskComponent,
     VisitsComponent,
-    GeoLocationsWidgetDirective,
     MarketStatsWidgetComponent,
     WidgetsComponent,
     ChangesChartWidgetComponent,
@@ -66,7 +60,6 @@ export const routes = [
     UtilsModule,
     LiveTileModule,
     WidgetModule,
-    MapaelLayersMapModule,
     NewWidgetModule,
     SkyconsModule,
     NgApexchartsModule,
