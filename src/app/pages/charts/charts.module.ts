@@ -46,5 +46,4 @@ export const routes = [
   ]
 })
 export class ChartsModule {
-  static routes = routes;
 }

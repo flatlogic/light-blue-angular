@@ -1,13 +1,11 @@
-import {Component, OnInit} from '@angular/core';
-declare let jQuery: any;
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: '[typography]',
   templateUrl: './typography.template.html',
   styleUrls: ['./typography.style.scss'],
-  preserveWhitespaces: true
+  preserveWhitespaces: true,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TypographyComponent {
-  constructor() {
-  }
 }
