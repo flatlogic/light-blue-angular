@@ -1,6 +1,6 @@
-import * as Highstock from 'highcharts/highstock';
+import { Options } from 'highcharts/highstock';
 
-export const highchartsOptions1: Highstock.Options = {
+export const highchartsOptions1: Options = {
   navigator: {
     enabled: false
   },
@@ -56,7 +56,7 @@ export const highchartsOptions1: Highstock.Options = {
       showInLegend: true
     }
   },
-    colors: ['#4ebfbb', '#fff', '#57b955'],
+  colors: ['#4ebfbb', '#fff', '#57b955'],
   series: [
     {
       type: 'ohlc',
