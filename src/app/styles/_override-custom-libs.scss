@@ -369,32 +369,6 @@ html[dir="rtl"] .select2-search input {
   }
 }
 
-/***********************************/
-/**       magnific-popup      **/
-/***********************************/
-
-.mfp-zoom-out-cur .mfp-image-holder .mfp-content .mfp-figure .mfp-close {
-  cursor: pointer;
-}
-
-/*         Flot        */
-
-.chart-tooltip {
-  position: fixed;
-  padding: $spacer/2 $spacer;
-  color: $gray-600;
-  font-size: $font-size-mini;
-  background-color: $white;
-}
-
-.legendColorBox div {
-  border-radius: 50%;
-}
-
-.legendLabel {
-  color: $text-color;
-}
-
 
 ////// Wizard //////
 

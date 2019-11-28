@@ -1,5 +1,7 @@
-@import "../../../../../node_modules/magnific-popup/dist/magnific-popup";
+@import "~photoswipe/dist/photoswipe.css";
+@import "~photoswipe/dist/default-skin/default-skin.css";
 @import "../../../styles/helpers";
+
 
 
 @mixin bs3-make-row($gutter: $grid-gutter-width) {

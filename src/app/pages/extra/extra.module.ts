@@ -1,6 +1,4 @@
 import 'jquery-ui/ui/draggable.js';
-import 'magnific-popup/dist/jquery.magnific-popup.min.js';
-import 'shufflejs/dist/shuffle.js';
 
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';

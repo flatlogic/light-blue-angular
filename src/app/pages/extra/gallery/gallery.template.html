@@ -7,39 +7,87 @@
 <div>
   <div class="clearfix mb-lg">
     <div class="btn-group m-b-20">
-        <span class="btn btn-default" [ngClass]="{'active': activeGroup == 'all'}"
-              (click)="activeGroupSelected('all')">All</span>
-        <span class="btn btn-default" [ngClass]="{'active': activeGroup == 'nature'}"
-              (click)="activeGroupSelected('nature')">Nature</span>
-        <span class="btn btn-default" [ngClass]="{'active': activeGroup == 'people'}"
-              (click)="activeGroupSelected('people')">People</span>
-        <span class="btn btn-default" [ngClass]="{'active': activeGroup == 'space'}"
-              (click)= "activeGroupSelected('space')">Space</span>
+      <span class="btn btn-default" [ngClass]="{'active': activeGroup == 'all'}"
+        (click)="activeGroupSelected('all')">All</span>
+      <span class="btn btn-default" [ngClass]="{'active': activeGroup == 'nature'}"
+        (click)="activeGroupSelected('nature')">Nature</span>
+      <span class="btn btn-default" [ngClass]="{'active': activeGroup == 'people'}"
+        (click)="activeGroupSelected('people')">People</span>
+      <span class="btn btn-default" [ngClass]="{'active': activeGroup == 'space'}"
+        (click)="activeGroupSelected('space')">Space</span>
     </div>
     <div class="float-right m-b-20">
       <div class="btn-group">
-                <span class="btn btn-default" [ngClass]="{'active': order == false}"
-                      (click)="orderSelected(false)"><i class="fa fa-sort-numeric-asc"></i></span>
-                <span class="btn btn-default"  [ngClass]="{'active': order == true}"
-                      (click)="orderSelected(true)"><i class="fa fa-sort-numeric-desc"></i></span>
+        <span class="btn btn-default" [ngClass]="{'active': order == false}" (click)="orderSelected(false)"><i
+            class="fa fa-sort-numeric-asc"></i></span>
+        <span class="btn btn-default" [ngClass]="{'active': order == true}" (click)="orderSelected(true)"><i
+            class="fa fa-sort-numeric-desc"></i></span>
       </div>
     </div>
   </div>
-  <div class="bs3-row gallery" id="magnific">
-    <div *ngFor="let item of items"
-         class="bs3-col-md-6 bs3-col-lg-3 bs3-col-12 gallery-item" attr.data-title="{{ item.name }}" attr.data-groups="{{ item.groups[0] }}">
+  <div class="bs3-row gallery" id="magnific" #gallery>
+    <div *ngFor="let item of items; index as i" class="bs3-col-md-6 bs3-col-lg-3 bs3-col-12 gallery-item"
+      attr.data-title="{{ item.name }}" attr.data-groups="{{ item.groups[0] }}">
       <figure class="figure img-thumbnail">
-        <a href="{{item.src}}"><img class="figure-img" src="{{item.src}}" alt="..."></a>
+        <a (click)="onItemClick(i)"><img class="figure-img" src="{{item.src}}" alt="..."></a>
         <figcaption class="figure-caption">
           <h6 class="mt-0 mb-xs">{{item.name}}</h6>
           <ul class="post-links">
             <li><button class="btn-link">{{item.date}}</button></li>
-            <li><button class="btn-link"><span class="text-danger"><i class="fa {{item.like ? 'fa-heart' : 'fa-heart-o'}}"></i> Like</span></button></li>
+            <li><button class="btn-link"><span class="text-danger"><i
+                    class="fa {{item.like ? 'fa-heart' : 'fa-heart-o'}}"></i> Like</span></button></li>
             <li><button class="btn-link">Details</button></li>
           </ul>
         </figcaption>
       </figure>
     </div>
     <div class="bs3-col-md-6 bs3-col-lg-3 bs3-col-12 js-shuffle-sizer"></div>
+  </div>
+</div>
+
+
+<div #pswp class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+  <!-- Background of PhotoSwipe. 
+         It's a separate element, as animating opacity is faster than rgba(). -->
+  <div class="pswp__bg"></div>
+  <!-- Slides wrapper with overflow:hidden. -->
+  <div class="pswp__scroll-wrap">
+    <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+    <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+    <div class="pswp__ui pswp__ui--hidden">
+      <div class="pswp__top-bar">
+        <!--  Controls are self-explanatory. Order can be changed. -->
+        <div class="pswp__counter"></div>
+        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+        <button class="pswp__button pswp__button--share" title="Share"></button>
+        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+        <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+        <!-- element will get class pswp__preloader--active when preloader is running -->
+        <div class="pswp__preloader">
+          <div class="pswp__preloader__icn">
+            <div class="pswp__preloader__cut">
+              <div class="pswp__preloader__donut"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+        <div class="pswp__share-tooltip"></div>
+      </div>
+      <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+      </button>
+      <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+      </button>
+      <div class="pswp__caption">
+        <div class="pswp__caption__center"></div>
+      </div>
+    </div>
   </div>
 </div>
