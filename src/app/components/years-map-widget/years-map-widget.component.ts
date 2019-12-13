@@ -1,14 +1,13 @@
-import { Component, AfterViewInit, OnDestroy, NgZone, ElementRef, ViewChild, ChangeDetectionStrategy } from '@angular/core';
+import { Component, AfterViewInit, OnDestroy, NgZone, ElementRef, ViewChild, ChangeDetectionStrategy, Input } from '@angular/core';
 import { useTheme, create, color } from '@amcharts/amcharts4/core';
 import { MapChart, MapPolygonSeries, projections, ZoomControl } from '@amcharts/amcharts4/maps';
 import am4themes_animated from '@amcharts/amcharts4/themes/animated';
 import am4geodata_worldLow from '@amcharts/amcharts4-geodata/worldLow';
 useTheme(am4themes_animated);
-
-import { FakeWorldData } from './fake-world-data.service';
+import { fakeWorldData } from './fake-world-data';
 
 @Component({
-  selector: '[years-map-widget]',
+  selector: 'years-map-widget',
   templateUrl: './years-map-widget.template.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
@@ -17,12 +16,14 @@ export class YearsMapWidgetComponent implements AfterViewInit, OnDestroy {
   selectedYear: number;
   fakeWorldData: any;
 
+  @Input() public height: string = 'initial';
+
   public map: MapChart;
   @ViewChild('map', { static: false }) public mapRef: ElementRef<HTMLElement>;
   public polygonSeries: MapPolygonSeries;
 
-  constructor(fakeWorld: FakeWorldData, private zone: NgZone) {
-    this.fakeWorldData = fakeWorld.getFakeWorldData();
+  constructor(private zone: NgZone) {
+    this.fakeWorldData = fakeWorldData;
     this.selectedYear = 2014;
   }
 
@@ -54,7 +55,7 @@ export class YearsMapWidgetComponent implements AfterViewInit, OnDestroy {
       map.zoomControl = new ZoomControl();
       map.zoomControl.align = 'left';
       map.zoomControl.valign = 'bottom';
-      map.zoomControl.dy = -50;
+      map.zoomControl.dy = -100;
       map.zoomControl.minusButton.background.fill = color('#000');
       map.zoomControl.minusButton.background.fillOpacity = 0.24;
       map.zoomControl.minusButton.background.stroke = color('#ccc');

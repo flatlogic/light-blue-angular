@@ -20,12 +20,11 @@ import { SkyconsModule } from '../../components/skycon/skycon.module';
 import { ChangesChartWidgetComponent } from './widgets/changes-chart-widget/changes-chart-widget.component';
 import { NasdaqWidgetComponent } from './widgets/nasdaq-widget/nasdaq-widget.component';
 import { RealtimeTrafficWidgetComponent } from './widgets/realtime-traffic-widget/realtime-traffic-widget.component';
-import { YearsMapWidgetComponent } from './widgets/years-map-widget/years-map-widget.component';
-import { FakeWorldData } from './widgets/years-map-widget/fake-world-data.service';
 import { AnalyticsService } from './analytics/analytics.service';
 import { NewWidgetModule } from '../../layout/new-widget/widget.module';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { NgxEchartsModule } from 'ngx-echarts';
+import { YearsMapModule } from '../../components/years-map-widget/year-map.module';
 
 export const routes = [
   { path: '', redirectTo: 'visits', pathMatch: 'full' },
@@ -46,8 +45,7 @@ export const routes = [
     WidgetsComponent,
     ChangesChartWidgetComponent,
     NasdaqWidgetComponent,
-    RealtimeTrafficWidgetComponent,
-    YearsMapWidgetComponent
+    RealtimeTrafficWidgetComponent
   ],
   imports: [
     CommonModule,
@@ -63,9 +61,10 @@ export const routes = [
     NewWidgetModule,
     SkyconsModule,
     NgApexchartsModule,
-    NgxEchartsModule
+    NgxEchartsModule,
+    YearsMapModule
   ],
-  providers: [FakeWorldData, AnalyticsService]
+  providers: [AnalyticsService]
 })
 export class MainModule {
   static routes = routes;

@@ -59,7 +59,6 @@
     "jquery-slimscroll": "1.3.8",
     "jquery-ui": "git://github.com/jquery/jquery-ui.git#1.11.4",
     "jquery.animate-number": "0.0.14",
-    "jvectormap": "2.0.4",
     "line-awesome": "1.2.1",
     "markdown": "0.5.0",
     "messenger": "git+https://github.com/HubSpot/messenger.git#v1.4.2",
@@ -90,13 +89,12 @@
   },
   "napa": {
     "twitter-bootstrap-wizard": "git://github.com/VinceG/twitter-bootstrap-wizard.git#62a9aca8cc61fdb496c4bf7b92e1ff70c698667e",
-    "jvectormap-world": "http://jvectormap.com/js/jquery-jvectormap-world-mill-en.js",
     "bootstrap_calendar": "https://github.com/xero/bootstrap_calendar.git#1.0.1",
     "jquery.nestable": "https://github.com/dbushell/Nestable.git#4f93032cfafe2002f24ed6bd7dc1510931498503"
   },
   "devDependencies": {
-    "@angular-builders/custom-webpack": "08.4.0",
-    "@angular-devkit/build-angular": "0.803.19",
+    "@angular-builders/custom-webpack": "8.4.1",
+    "@angular-devkit/build-angular": "0.803.20",
     "@angular/cli": "8.3.19",
     "@angular/compiler-cli": "8.2.14",
     "@angular/language-service": "8.2.14",

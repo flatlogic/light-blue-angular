@@ -16,12 +16,8 @@
             "main": "src/main.ts",
             "tsConfig": "src/tsconfig.app.json",
             "polyfills": "src/polyfills.ts",
-            "assets": [
-              "src/assets"
-            ],
-            "styles": [
-              "src/app/styles/application.scss"
-            ],
+            "assets": ["src/assets"],
+            "styles": ["src/app/styles/application.scss"],
             "scripts": [
               "node_modules/jquery/dist/jquery.js",
               "node_modules/popper.js/dist/umd/popper.js",
@@ -42,8 +38,6 @@
               "node_modules/jquery-ui/ui/mouse.js",
               "node_modules/jquery-ui/ui/sortable.js",
               "node_modules/jquery-ui/ui/draggable.js",
-              "node_modules/jvectormap/jquery-jvectormap.min.js",
-              "node_modules/jvectormap-world/jquery-jvectormap-world-mill-en.js",
               "node_modules/twitter-bootstrap-wizard/jquery.bootstrap.wizard.js"
             ]
           },
@@ -111,12 +105,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "src/tsconfig.app.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["src/tsconfig.app.json"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }

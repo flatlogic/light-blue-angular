@@ -197,16 +197,9 @@
           </div>
         </div>
         <div class="chart">
-          <apx-chart class="chart-inner transparent-bg"
-            [series]="apexOptions1.series"
-            [stroke]="apexOptions1.stroke"
-            [chart]="apexOptions1.chart"
-            [colors]="apexOptions1.colors"
-            [legend]="apexOptions1.legend"
-            [xaxis]="apexOptions1.xaxis"
-            [yaxis]="apexOptions1.yaxis"
-            [grid]="apexOptions1.grid"
-          ></apx-chart>
+          <apx-chart class="chart-inner transparent-bg" [series]="apexOptions1.series" [stroke]="apexOptions1.stroke"
+            [chart]="apexOptions1.chart" [colors]="apexOptions1.colors" [legend]="apexOptions1.legend"
+            [xaxis]="apexOptions1.xaxis" [yaxis]="apexOptions1.yaxis" [grid]="apexOptions1.grid"></apx-chart>
         </div>
       </div>
     </section>
@@ -255,16 +248,9 @@
           </div>
         </div>
         <div class="chart">
-          <apx-chart class="chart-inner transparent-bg"
-            [series]="apexOptions2.series"
-            [stroke]="apexOptions2.stroke"
-            [chart]="apexOptions2.chart"
-            [colors]="apexOptions2.colors"
-            [legend]="apexOptions2.legend"
-            [xaxis]="apexOptions2.xaxis"
-            [yaxis]="apexOptions2.yaxis"
-            [grid]="apexOptions2.grid"
-          ></apx-chart>
+          <apx-chart class="chart-inner transparent-bg" [series]="apexOptions2.series" [stroke]="apexOptions2.stroke"
+            [chart]="apexOptions2.chart" [colors]="apexOptions2.colors" [legend]="apexOptions2.legend"
+            [xaxis]="apexOptions2.xaxis" [yaxis]="apexOptions2.yaxis" [grid]="apexOptions2.grid"></apx-chart>
         </div>
       </div>
     </section>
@@ -603,7 +589,8 @@
 <div class="row">
   <div class="col-lg-4 col-12">
     <section class="widget">
-      <div class="widget-body mt-0" years-map-widget>
+      <div class="widget-body mt-0">
+        <years-map-widget height="400px"></years-map-widget>
       </div>
     </section>
   </div>
@@ -673,12 +660,8 @@
   </div>
   <div class="col-lg-4 col-12">
     <section class="widget text-white">
-      <div
-        class="widget-body"
-        realtime-traffic-widget
-        [options]="echartDynamicAreaData2"
-        [merge]="echartDynamicAreaDataUpdate"
-      >
+      <div class="widget-body" realtime-traffic-widget [options]="echartDynamicAreaData2"
+        [merge]="echartDynamicAreaDataUpdate">
       </div>
     </section>
   </div>
@@ -720,8 +703,8 @@
     </section>
   </div>
   <div class="col-lg-3 col-12">
-    <section widget class="widget widget-chart-changes" changes-chart-widget
-    [mainData]="echartLineBarData" [changesData]="echartBarChartData5">
+    <section widget class="widget widget-chart-changes" changes-chart-widget [mainData]="echartLineBarData"
+      [changesData]="echartBarChartData5">
     </section>
   </div>
   <div class="col-lg-3 col-12">

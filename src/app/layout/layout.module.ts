@@ -1,8 +1,8 @@
-import { NgModule }      from '@angular/core';
-import { FormsModule }      from '@angular/forms';
-import { CommonModule }  from '@angular/common';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
-import {ButtonsModule, BsDropdownModule, AlertModule, ProgressbarModule} from 'ngx-bootstrap';
+import { ButtonsModule, BsDropdownModule, AlertModule, ProgressbarModule } from 'ngx-bootstrap';
 
 import { ROUTES } from './layout.routes';
 
