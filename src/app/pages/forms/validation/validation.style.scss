@@ -4,18 +4,24 @@
 /**            PARSLEY            **/
 /***********************************/
 
-
-input.parsley-error{
-  border-color: theme-color('danger');
+input.parsley-error {
+  border-color: theme-color("danger");
 }
 
-.parsley-errors-list{
+.parsley-errors-list {
   font-size: $small-font-size;
   padding-left: 0;
   margin-bottom: 5px;
 
-  li{
+  li {
     list-style: none;
-    color: theme-color('danger');
+    color: theme-color("danger");
   }
+}
+
+.error {
+  font-size: 85%;
+  padding-left: 0;
+  margin-bottom: 5px;
+  color: #db4912;
 }

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
@@ -19,10 +19,10 @@ import { EditorModule } from '@tinymce/tinymce-angular';
 import { DropzoneModule } from 'ngx-dropzone-wrapper';
 
 export const routes = [
-  {path: '', redirectTo: 'elements', pathMatch: 'full'},
-  {path: 'elements', component: ElementsComponent},
-  {path: 'validation', component: ValidationComponent},
-  {path: 'wizard', component: WizardComponent}
+  { path: '', redirectTo: 'elements', pathMatch: 'full' },
+  { path: 'elements', component: ElementsComponent },
+  { path: 'validation', component: ValidationComponent },
+  { path: 'wizard', component: WizardComponent }
 ];
 
 @NgModule({
@@ -35,6 +35,7 @@ export const routes = [
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     TextMaskModule,
     TooltipModule.forRoot(),
     AlertModule.forRoot(),
