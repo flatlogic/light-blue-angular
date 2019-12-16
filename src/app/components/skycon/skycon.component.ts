@@ -1,10 +1,11 @@
-import { Component, ViewChild, OnChanges, OnInit, Input, ElementRef, OnDestroy } from '@angular/core';
+import { Component, ViewChild, OnChanges, OnInit, Input, ElementRef, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
 import * as Skycons from 'skycons';
 
 @Component({
   selector: 'skycon',
   templateUrl: './skycon.component.html',
-  styleUrls: ['./skycon.component.scss']
+  styleUrls: ['./skycon.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SkyconComponent implements OnChanges, OnInit, OnDestroy {
   @Input() public color: string = 'white';

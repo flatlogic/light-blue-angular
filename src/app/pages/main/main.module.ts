@@ -15,7 +15,6 @@ import { VisitsComponent } from './visits/visits.component';
 import { UtilsModule } from '../../layout/utils/utils.module';
 import { MarketStatsWidgetComponent } from './visits/market-stats-widget/market-stats-widget.component';
 import { WidgetsComponent } from './widgets/widgets.component';
-import { LiveTileModule } from '../../components/tile/tile.module';
 import { SkyconsModule } from '../../components/skycon/skycon.module';
 import { ChangesChartWidgetComponent } from './widgets/changes-chart-widget/changes-chart-widget.component';
 import { NasdaqWidgetComponent } from './widgets/nasdaq-widget/nasdaq-widget.component';
@@ -25,6 +24,7 @@ import { NewWidgetModule } from '../../layout/new-widget/widget.module';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { YearsMapModule } from '../../components/years-map-widget/year-map.module';
+import { SwiperConfigInterface, SwiperModule, SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 
 export const routes = [
   { path: '', redirectTo: 'visits', pathMatch: 'full' },
@@ -32,6 +32,11 @@ export const routes = [
   { path: 'visits', component: VisitsComponent, pathMatch: 'full' },
   { path: 'widgets', component: WidgetsComponent, pathMatch: 'full' }
 ];
+
+const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
+  direction: 'horizontal',
+  slidesPerView: 'auto'
+};
 
 @NgModule({
   declarations: [
@@ -56,16 +61,21 @@ export const routes = [
     BsDropdownModule.forRoot(),
     CalendarModule,
     UtilsModule,
-    LiveTileModule,
     WidgetModule,
     NewWidgetModule,
     SkyconsModule,
     NgApexchartsModule,
     NgxEchartsModule,
-    YearsMapModule
+    YearsMapModule,
+    SwiperModule
   ],
-  providers: [AnalyticsService]
+  providers: [
+    AnalyticsService,
+    {
+      provide: SWIPER_CONFIG,
+      useValue: DEFAULT_SWIPER_CONFIG
+    }
+  ]
 })
 export class MainModule {
-  static routes = routes;
 }

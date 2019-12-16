@@ -1,9 +1,10 @@
-import { Component, Output, EventEmitter, Renderer2, ElementRef } from '@angular/core';
+import { Component, Output, EventEmitter, Renderer2, ElementRef, ChangeDetectionStrategy } from '@angular/core';
 import {LoginService} from '../../pages/login/login.service';
 
 @Component({
   selector: '[navbar]',
-  templateUrl: './navbar.template.html'
+  templateUrl: './navbar.template.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Navbar {
   @Output() changeSidebarPosition = new EventEmitter();

@@ -1,5 +1,6 @@
-import { Component, ViewEncapsulation, AfterViewInit, OnDestroy, ViewChildren, QueryList } from '@angular/core';
+import { Component, ViewEncapsulation, AfterViewInit, OnDestroy, ViewChildren, QueryList, ChangeDetectionStrategy } from '@angular/core';
 import { ApexOptions, ChartComponent } from 'ng-apexcharts';
+import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 
 import { apexOptions1, apexOptions2 } from '../../../utils/apex-charts.data';
 import { echartLineBarData, echartDynamicAreaData2, echartBarChartData5, echartLineChartData3 } from '../../../utils/echarts.data';
@@ -8,7 +9,8 @@ import { echartLineBarData, echartDynamicAreaData2, echartBarChartData5, echartL
   selector: 'widgets',
   templateUrl: './widgets.template.html',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./widgets.style.scss']
+  styleUrls: ['./widgets.style.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class WidgetsComponent implements AfterViewInit, OnDestroy {
   public apexOptions1: ApexOptions = apexOptions1;
@@ -19,6 +21,52 @@ export class WidgetsComponent implements AfterViewInit, OnDestroy {
   public echartBarChartData5: any = echartBarChartData5;
   public echartLineBarData: any = echartLineBarData;
   public echartLineChartData3: any = echartLineChartData3;
+
+  public verticalSwiperConfig: SwiperConfigInterface = {
+    direction: 'vertical',
+    keyboard: false,
+    mousewheel: false,
+    scrollbar: false,
+    navigation: false,
+    pagination: false,
+    speed: 750,
+    loop: true,
+    autoplay: true,
+    slidesPerView: 'auto'
+  };
+
+  public verticalFlipSwiperConfig: SwiperConfigInterface = {
+    effect: 'flip',
+    direction: 'vertical',
+    flipEffect: {
+      slideShadows: false
+    },
+    keyboard: false,
+    mousewheel: false,
+    scrollbar: false,
+    navigation: false,
+    pagination: false,
+    speed: 750,
+    loop: true,
+    autoplay: true,
+    slidesPerView: 1
+  };
+
+  public horizontalFlipSwiperConfig: SwiperConfigInterface = {
+    effect: 'flip',
+    flipEffect: {
+      slideShadows: false
+    },
+    keyboard: false,
+    mousewheel: false,
+    scrollbar: false,
+    navigation: false,
+    pagination: false,
+    speed: 600,
+    loop: true,
+    autoplay: true,
+    slidesPerView: 1
+  };
 
   private interval: any;
 

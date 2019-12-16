@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, AfterViewInit, OnDestroy, ViewChildren, QueryList } from '@angular/core';
+import { Component, ViewEncapsulation, AfterViewInit, OnDestroy, ViewChildren, QueryList, ChangeDetectionStrategy } from '@angular/core';
 import * as Highcharts from 'highcharts';
 
 import { apexOptions3, apexOptions4 } from '../../../utils/apex-charts.data';
@@ -22,7 +22,8 @@ import { ChartComponent } from 'ng-apexcharts';
   selector: '[charts-overview]',
   templateUrl: './overview.html',
   styleUrls: ['./overview.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class OverviewComponent implements AfterViewInit, OnDestroy {
   public apexOptions3: any = apexOptions3;

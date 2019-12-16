@@ -72,6 +72,7 @@
     "ngx-chips": "2.1.0",
     "ngx-dropzone-wrapper": "8.0.0",
     "ngx-echarts": "4.2.2",
+    "ngx-swiper-wrapper": "^8.0.2",
     "ngx-toastr": "11.2.1",
     "ngx-trend": "4.0.1",
     "parsleyjs": "2.9.1",
