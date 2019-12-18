@@ -1,6 +1,6 @@
 {
   "name": "light-blue",
-  "version": "4.0.0",
+  "version": "7.1.2",
   "description": "Light Blue - Angular 4 & React Dashboard",
   "scripts": {
     "install": "napa",
