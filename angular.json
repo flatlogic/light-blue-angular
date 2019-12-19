@@ -23,7 +23,6 @@
               "node_modules/popper.js/dist/umd/popper.js",
               "node_modules/bootstrap/dist/js/bootstrap.js",
               "node_modules/webpack-raphael/raphael-min.js",
-              "node_modules/parsleyjs/dist/parsley.js",
               "node_modules/jasny-bootstrap/dist/js/jasny-bootstrap.min.js",
               "node_modules/markdown/lib/markdown.js",
               "node_modules/bootstrap-markdown/js/bootstrap-markdown.js",
@@ -37,8 +36,7 @@
               "node_modules/jquery-ui/ui/widget.js",
               "node_modules/jquery-ui/ui/mouse.js",
               "node_modules/jquery-ui/ui/sortable.js",
-              "node_modules/jquery-ui/ui/draggable.js",
-              "node_modules/twitter-bootstrap-wizard/jquery.bootstrap.wizard.js"
+              "node_modules/jquery-ui/ui/draggable.js"
             ]
           },
           "configurations": {

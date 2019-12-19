@@ -8,15 +8,13 @@ import { Autosize } from 'ng-autosize';
 import { Select2Module } from 'ng2-select2';
 import { WidgetModule } from '../../layout/widget/widget.module';
 import { TextMaskModule } from 'angular2-text-mask';
-/* tslint:disable */
-import { BootstrapWizardModule } from '../../components/wizard/wizard.module';
 import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';
-/* tslint:enable */
 import { ElementsComponent } from './elements/elements.component';
 import { ValidationComponent } from './validation/validation.component';
 import { WizardComponent } from './wizard/wizard.component';
 import { EditorModule } from '@tinymce/tinymce-angular';
 import { DropzoneModule } from 'ngx-dropzone-wrapper';
+import { NgWizardModule, NgWizardConfig, THEME } from 'ng-wizard';
 
 export const routes = [
   { path: '', redirectTo: 'elements', pathMatch: 'full' },
@@ -24,6 +22,10 @@ export const routes = [
   { path: 'validation', component: ValidationComponent },
   { path: 'wizard', component: WizardComponent }
 ];
+
+const wizardConfig: NgWizardConfig = {
+  theme: THEME.default
+};
 
 @NgModule({
   declarations: [
@@ -41,12 +43,12 @@ export const routes = [
     AlertModule.forRoot(),
     BsDropdownModule.forRoot(),
     WidgetModule,
-    BootstrapWizardModule,
     NKDatetimeModule,
     Select2Module,
     RouterModule.forChild(routes),
     EditorModule,
-    DropzoneModule
+    DropzoneModule,
+    NgWizardModule.forRoot(wizardConfig)
   ]
 })
 export class FormModule {
