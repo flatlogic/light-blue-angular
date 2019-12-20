@@ -417,17 +417,29 @@ Enjoy!
             <div class="form-group row">
               <label class="col-md-4 col-form-label" for="default-select">Default select</label>
               <div class="col-md-8 ">
-                <select2 id="default-select"
-                         (valueChanged)="select2Changed($event)"
-                         [data]="getSelect2DefaultList()" [options]="select2Options" [width]="250"></select2>
-                <p *ngIf="selected" class="help-block mb-0">Selected value in select 2: <b>{{selected}}</b>.</p>
+            <ng-select 
+              id="default-select" 
+              style="width: 250px;"
+              [items]="defaultOptions"
+              bindLabel="text"
+              bindValue="id"
+              (change)="onValueChange($event)"
+            >
+          </ng-select>
+                <p *ngIf="selected" class="help-block mb-0">Selected value in ng-select: <b>{{selected}}</b>.</p>
               </div>
             </div>
             <div class="form-group row">
               <label class="col-md-4 col-form-label" for="grouped-select">Select with search & groups</label>
               <div class="col-md-8 ">
-                <select2 id="grouped-select"
-                         [data]="getSelect2GroupedList()" [options]="select2Options" [width]="250"></select2>
+                <ng-select
+                  id="grouped-select"
+                  style="width: 250px;"
+                  [items]="groupedOptions"
+                  bindValue="label"
+                  groupBy="group"
+                >
+                </ng-select>
               </div>
             </div>
           </fieldset>
