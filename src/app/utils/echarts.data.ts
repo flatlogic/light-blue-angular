@@ -137,9 +137,9 @@ export const echartAreaChartData: any = {
   color: ['#8cbf26', '#4e85bd', '#db4912', '#f0af03', '#57b955'],
   grid: {
     top: '0',
-    right: '0',
-    bottom: '0',
-    left: '0',
+    right: '7',
+    bottom: '1',
+    left: '7',
   },
   tooltip: {
     trigger: 'axis',
@@ -159,8 +159,21 @@ export const echartAreaChartData: any = {
     {
       type: 'category',
       boundaryGap: false,
-      show: false,
-      data: ['Gaz', 'Uaz', 'Lada', 'Volga', 'Zil', 'Mosckvich', 'Zhiguli']
+      show: true,
+      data: ['Draco', 'Ron', 'Hermione', 'Harry', 'Fred', 'George', 'Oliver'],
+      axisLine: {
+        lineStyle: {
+          color: '#ffffff'
+        }
+      },
+      axisLabel: {
+        inside: true,
+        rotate: 90
+      },
+      axisTick: {
+        show: true,
+        inside: true
+      }
     }
   ],
   yAxis: [
