@@ -17,7 +17,7 @@
   "private": true,
   "dependencies": {
     "@agm/core": "1.1.0",
-    "@amcharts/amcharts4": "4.7.5",
+    "@amcharts/amcharts4": "4.7.20",
     "@amcharts/amcharts4-geodata": "4.1.9",
     "@angular/animations": "8.2.14",
     "@angular/common": "8.2.14",

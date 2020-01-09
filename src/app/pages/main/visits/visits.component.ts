@@ -9,7 +9,7 @@ import {
   ViewChild,
   ElementRef
 } from '@angular/core';
-import { useTheme, create, color, Circle } from '@amcharts/amcharts4/core';
+import { useTheme, create, color, Circle, MouseCursorStyle } from '@amcharts/amcharts4/core';
 import { MapChart, MapPolygonSeries, projections, ZoomControl, MapImageSeries } from '@amcharts/amcharts4/maps';
 import am4themes_animated from '@amcharts/amcharts4/themes/animated';
 import am4geodata_usaHigh from '@amcharts/amcharts4-geodata/usaHigh';
@@ -67,27 +67,29 @@ export class VisitsComponent implements OnInit, AfterViewInit, OnDestroy {
       const polygonSeries = map.series.push(new MapPolygonSeries());
       polygonSeries.useGeodata = true;
       map.homeZoomLevel = 1.2;
+      map.chartContainer.wheelable = false;
+      map.seriesContainer.draggable = false;
+      map.seriesContainer.events.disableType('doublehit');
+      map.chartContainer.background.events.disableType('doublehit');
 
       map.zoomControl = new ZoomControl();
       map.zoomControl.align = 'left';
       map.zoomControl.valign = 'bottom';
       map.zoomControl.dy = -20;
+
       map.zoomControl.minusButton.background.fill = color('#000');
       map.zoomControl.minusButton.background.fillOpacity = 0.24;
-      map.zoomControl.minusButton.background.stroke = color('#ccc');
+      map.zoomControl.minusButton.background.stroke = null;
       map.zoomControl.plusButton.background.fill = color('#000');
       map.zoomControl.plusButton.background.fillOpacity = 0.24;
-      map.zoomControl.plusButton.background.stroke = color('#ccc');
+      map.zoomControl.plusButton.background.stroke = null;
       map.zoomControl.plusButton.label.fill = color('#fff');
       map.zoomControl.plusButton.label.fontWeight = '600';
       map.zoomControl.plusButton.label.fontSize = 16;
       map.zoomControl.minusButton.label.fill = color('#fff');
       map.zoomControl.minusButton.label.fontWeight = '600';
       map.zoomControl.minusButton.label.fontSize = 16;
-      const plusButtonHoverState = map.zoomControl.plusButton.background.states.create('hover');
-      plusButtonHoverState.properties.fillOpacity = 0.24;
-      const minusButtonHoverState = map.zoomControl.minusButton.background.states.create('hover');
-      minusButtonHoverState.properties.fillOpacity = 0.24;
+      map.zoomControl.cursorOverStyle = MouseCursorStyle.pointer;
 
       const polygonTemplate = polygonSeries.mapPolygons.template;
       polygonTemplate.tooltipText = '{name}';
