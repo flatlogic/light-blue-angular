@@ -104,37 +104,6 @@
   display: none;
 }
 
-/*!
- * Bootstrap-select
- */
-.bootstrap-select .btn:focus,
-.bootstrap-select>.btn.dropdown-toggle:focus {
-  outline: none !important;
-}
-
-.selectpicker.form-control {
-  height: auto;
-}
-
-.bootstrap-select {
-  width: auto !important;
-  z-index: 1;
-
-  &.show .dropdown-menu.inner {
-    display: block;
-  }
-
-  &.show {
-    z-index: 3;
-    display: inline-block !important;
-  }
-}
-
-body .bootstrap-select>select {
-  width: 0 !important;
-  height: 0 !important;
-}
-
 /**
  * Switchery
  */
@@ -192,82 +161,6 @@ body .bootstrap-select>select {
 .abc-checkbox-dark input[type="checkbox"]:checked+label {
   &::after {
     color: $gray-300;
-  }
-}
-
-/**
- * Bootstrap select
- */
-
-.selectpicker.form-control {
-  height: auto;
-}
-
-.bootstrap-select,
-.input-group-btn:not(first-child) .bootstrap-select {
-  &.btn-group.open {
-    z-index: 5;
-  }
-
-  .btn.dropdown-toggle {
-    padding-left: 10px;
-    box-sizing: border-box;
-
-    &:after {
-      margin-right: 0;
-      margin-left: 0;
-    }
-  }
-
-  .dropdown-menu {
-    z-index: 3;
-  }
-
-  .dropdown-menu>li>a {
-    display: block;
-    width: 100%; // For `<button>`s
-    padding: 3px 20px;
-    clear: both;
-    font-weight: $font-weight-thin;
-    line-height: $line-height-base;
-    color: $text-color;
-    text-align: inherit; // For `<button>`s
-    white-space: nowrap; // prevent links from randomly breaking onto new lines
-    background: none; // For `<button>`s
-    border: 0; // For `<button>`s
-
-    @include hover-focus {
-      color: $dropdown-link-hover-color;
-      text-decoration: none;
-      background-color: $dropdown-link-hover-bg;
-    }
-
-    // Active state
-    &.active {
-      @include plain-hover-focus {
-        color: $dropdown-link-active-color;
-        text-decoration: none;
-        background-color: $dropdown-link-active-bg;
-        outline: 0;
-      }
-    }
-
-    // Disabled state
-    //
-    // Gray out text and ensure the hover/focus state remains gray
-    &.disabled {
-      @include plain-hover-focus {
-        color: $dropdown-link-disabled-color;
-      }
-
-      // Nuke hover/focus effects
-      @include hover-focus {
-        text-decoration: none;
-        cursor: $cursor-disabled;
-        background-color: transparent;
-        background-image: none; // Remove CSS gradient
-      }
-    }
   }
 }
 
@@ -354,6 +247,7 @@ body .bootstrap-select>select {
   }
 }
 
+/////////APEXCHARTS////////////////
 apx-chart {
 
   .apexcharts-tooltip,
@@ -371,4 +265,96 @@ apx-chart {
 ///////// Ngx-charts ///////
 .axis .tick text {
   fill: white;
+}
+
+
+/////////////NG-SELECT///////
+ng-select {
+  .ng-select-container {
+    background-color: rgba(0, 0, 0, 0.24) !important;
+    border: none !important;
+  }
+
+  & .ng-select-container,
+  & .ng-input input,
+  & .ng-dropdown-panel .ng-dropdown-panel-items .ng-option,
+  & .ng-dropdown-panel .ng-dropdown-panel-items .ng-option-disabled,
+  & .ng-dropdown-panel .ng-dropdown-panel-items .ng-option-selected,
+  & .ng-dropdown-panel .ng-dropdown-panel-items .ng-option-marked,
+  & .ng-select-container .ng-clear-wrapper {
+    color: $white-dark!important;
+  }
+
+  & .ng-arrow {
+    border-color: $white-dark transparent transparent !important;
+  }
+
+
+  .ng-dropdown-panel {
+    border: none;
+    background: none;
+
+    .ng-dropdown-panel-items {
+      .ng-option {
+
+        &,
+        &-disabled {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        &-selected,
+        &-marked {
+          background-color: $blue !important;
+        }
+      }
+    }
+  }
+}
+
+ng-select.danger {
+  .ng-select-container {
+    cursor: pointer !important;
+    background-color: $red !important;
+  }
+
+  &.ng-select-opened .ng-select-container,
+  &:hover .ng-select-container {
+    background-color: #b83d0f !important;
+  }
+}
+
+ng-select.warning {
+  .ng-select-container {
+    cursor: pointer !important;
+    background-color: $yellow !important;
+  }
+
+  &.ng-select-opened .ng-select-container,
+  &:hover .ng-select-container {
+    background-color: #ca9303 !important;
+  }
+}
+
+ng-select.success {
+  .ng-select-container {
+    cursor: pointer !important;
+    background-color: $green !important;
+  }
+
+  &.ng-select-opened .ng-select-container,
+  &:hover .ng-select-container {
+    background-color: #46a444 !important;
+  }
+}
+
+ng-select.primary {
+  .ng-select-container {
+    cursor: pointer !important;
+    background-color: $blue !important;
+  }
+
+  &.ng-select-opened .ng-select-container,
+  &:hover .ng-select-container {
+    background-color: #3e72a7 !important;
+  }
 }

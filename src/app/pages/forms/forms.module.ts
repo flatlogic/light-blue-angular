@@ -3,18 +3,21 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { TooltipModule, AlertModule, BsDropdownModule } from 'ngx-bootstrap';
+import { AlertModule } from 'ngx-bootstrap/alert';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { Autosize } from 'ng-autosize';
-import { WidgetModule } from '../../layout/widget/widget.module';
 import { TextMaskModule } from 'angular2-text-mask';
 import { NKDatetimeModule } from 'ngx-datetime';
-import { ElementsComponent } from './elements/elements.component';
-import { ValidationComponent } from './validation/validation.component';
-import { WizardComponent } from './wizard/wizard.component';
 import { EditorModule } from '@tinymce/tinymce-angular';
 import { DropzoneModule } from 'ngx-dropzone-wrapper';
 import { NgWizardModule, NgWizardConfig, THEME } from 'ng-wizard';
 import { NgSelectModule } from '@ng-select/ng-select';
+
+import { WidgetModule } from '../../layout/widget/widget.module';
+import { ElementsComponent } from './elements/elements.component';
+import { ValidationComponent } from './validation/validation.component';
+import { WizardComponent } from './wizard/wizard.component';
 
 export const routes = [
   { path: '', redirectTo: 'elements', pathMatch: 'full' },
@@ -52,5 +55,4 @@ const wizardConfig: NgWizardConfig = {
   ]
 })
 export class FormModule {
-  static routes = routes;
 }
