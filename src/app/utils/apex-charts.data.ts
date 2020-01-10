@@ -45,6 +45,10 @@ export const apexOptions1: ApexOptions = {
     }
   },
   grid: {
+    padding: {
+      left: 0,
+      right: 0
+    },
     show: false
   }
 };
@@ -94,6 +98,10 @@ export const apexOptions2: ApexOptions = {
     }
   },
   grid: {
+    padding: {
+      right: 0,
+      left: 0
+    },
     show: false
   }
 };
