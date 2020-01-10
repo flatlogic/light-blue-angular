@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
 import { NgWizardConfig, THEME, NgWizardService } from 'ng-wizard';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { countries } from './countries';
 
 @Component({
   selector: '[forms-wizard]',
@@ -18,6 +19,10 @@ export class WizardComponent implements OnInit {
       showPreviousButton: false
     }
   };
+
+  public countries: string[] = countries;
+
+
 
   public form: FormGroup;
   public firstStepSubmited: boolean = false;
