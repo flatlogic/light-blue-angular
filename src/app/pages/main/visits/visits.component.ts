@@ -90,6 +90,10 @@ export class VisitsComponent implements OnInit, AfterViewInit, OnDestroy {
       map.zoomControl.minusButton.label.fontWeight = '600';
       map.zoomControl.minusButton.label.fontSize = 16;
       map.zoomControl.cursorOverStyle = MouseCursorStyle.pointer;
+      let plusButtonHoverState = map.zoomControl.plusButton.background.states.create('hover');
+      plusButtonHoverState.properties.fill = color('#ccc');
+      let minusButtonHoverState = map.zoomControl.minusButton.background.states.create('hover');
+      minusButtonHoverState.properties.fill = color('#ccc');
 
       const polygonTemplate = polygonSeries.mapPolygons.template;
       polygonTemplate.tooltipText = '{name}';
