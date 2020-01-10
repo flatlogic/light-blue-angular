@@ -94,9 +94,8 @@ export const echartPieChartData3: any = {
     trigger: 'item'
   },
   legend: {
-    orient: 'vertical',
-    right: '0',
-    top: '25%',
+    bottom: 0,
+    left: 'center',
     data: ['SMX', 'Direct', 'Networks'],
     textStyle: {
       color: '#ffffff'
@@ -104,8 +103,8 @@ export const echartPieChartData3: any = {
   },
   series: [{
     type: 'pie',
-    radius: ['50%', '70%'],
-    center: ['25%', '50%'],
+    radius: ['40%', '60%'],
+    center: ['50%', '40%'],
     label: {
       show: false
     },
@@ -137,9 +136,9 @@ export const echartAreaChartData: any = {
   color: ['#8cbf26', '#4e85bd', '#db4912', '#f0af03', '#57b955'],
   grid: {
     top: '0',
-    right: '7',
+    right: '1',
     bottom: '1',
-    left: '7',
+    left: '0',
   },
   tooltip: {
     trigger: 'axis',
@@ -167,13 +166,15 @@ export const echartAreaChartData: any = {
         }
       },
       axisLabel: {
-        inside: true,
-        rotate: 90
+        show: false,
+        // inside: true,
+        // rotate: 90
       },
       axisTick: {
         show: true,
         inside: true
-      }
+      },
+      zlevel: 1
     }
   ],
   yAxis: [
