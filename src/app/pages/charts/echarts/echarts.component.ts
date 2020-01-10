@@ -12,6 +12,7 @@ import {
 @Component({
   selector: 'app-echarts',
   templateUrl: './echarts.component.html',
+  styleUrls: ['./echarts.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EchartsComponent {
