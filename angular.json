@@ -16,15 +16,18 @@
             "main": "src/main.ts",
             "tsConfig": "src/tsconfig.app.json",
             "polyfills": "src/polyfills.ts",
-            "assets": ["src/assets"],
-            "styles": ["src/app/styles/application.scss"],
+            "assets": [
+              "src/assets"
+            ],
+            "styles": [
+              "src/app/styles/application.scss",
+              "node_modules/ngx-markdown-editor/assets/highlight.js/agate.min.css"
+            ],
             "scripts": [
               "node_modules/jquery/dist/jquery.js",
               "node_modules/popper.js/dist/umd/popper.js",
               "node_modules/bootstrap/dist/js/bootstrap.js",
               "node_modules/jasny-bootstrap/dist/js/jasny-bootstrap.min.js",
-              "node_modules/markdown/lib/markdown.js",
-              "node_modules/bootstrap-markdown/js/bootstrap-markdown.js",
               "node_modules/bootstrap-slider/dist/bootstrap-slider.js",
               "node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js",
               "node_modules/bootstrap-timepicker/js/bootstrap-timepicker.min.js",
@@ -32,7 +35,9 @@
               "node_modules/jquery-ui/ui/widget.js",
               "node_modules/jquery-ui/ui/mouse.js",
               "node_modules/jquery-ui/ui/sortable.js",
-              "node_modules/jquery-ui/ui/draggable.js"
+              "node_modules/jquery-ui/ui/draggable.js",
+              "node_modules/ngx-markdown-editor/assets/highlight.js/highlight.min.js",
+              "node_modules/ngx-markdown-editor/assets/marked.min.js"
             ]
           },
           "configurations": {
@@ -99,8 +104,12 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["src/tsconfig.app.json"],
-            "exclude": ["**/node_modules/**"]
+            "tsConfig": [
+              "src/tsconfig.app.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }

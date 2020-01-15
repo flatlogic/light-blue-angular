@@ -3,7 +3,7 @@ import {
   ViewEncapsulation,
   OnInit
 } from '@angular/core';
-import { defaultData, groupedData, simpleOptions, fromOneToThree, fromFourToSix, fromSevenToTen } from './elements.data';
+import { defaultData, groupedData, simpleOptions, fromOneToThree, fromFourToSix, fromSevenToTen, defaultMarkdownEditorContent } from './elements.data';
 import { NgOption } from '@ng-select/ng-select';
 declare const jQuery: any;
 
@@ -48,8 +48,9 @@ export class ElementsComponent implements OnInit {
 
   public defaultOptions: NgOption[] = defaultData;
   public groupedOptions: NgOption[] = groupedData;
-  public color: string = '#f0b518'
-
+  public color: string = '#f0b518';
+  public markdownEditorContent: string = defaultMarkdownEditorContent;
+  public selectedItem: string;
   public readonly typesDropdownOptions: string[] = ['Another type', 'Type one', 'Next type'];
   public selecetedType = this.typesDropdownOptions[0];
   public readonly simpleOptions: NgOption[] = simpleOptions;
@@ -60,10 +61,8 @@ export class ElementsComponent implements OnInit {
   public selectedNumber: NgOption = fromOneToThree[0];
   public selectedNumber2: NgOption = fromFourToSix[0];
   public selectedNumber3: NgOption = fromSevenToTen[0];
-  public test: string;
 
   ngOnInit(): void {
-    jQuery('#markdown-editor').markdown();
     jQuery('.js-slider').slider();
   }
 

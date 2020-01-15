@@ -365,3 +365,15 @@ ng-select.primary {
     background-color: initial !important;
   }
 }
+
+//////////////NGX_MARKDOWN_EDITOR////////////////
+md-editor {
+  .md-editor-container {
+    .preview-container {
+      background-color: #ffffff;
+      .preview-panel {
+        color: #000000;
+      }
+    }
+  }
+}

@@ -54,3 +54,18 @@ export const fromSevenToTen: NgOption[] = [
   { index: 8, label: 'Ku' },
   { index: 9, label: 'Ju' }
 ];
+
+export const defaultMarkdownEditorContent: string = `
+### How are you?
+
+I have bellow task for you :
+
+Select from this text...
+Click the bold on THIS WORD and make THESE ONE italic
+Link GOOGLE to google.com
+Test to insert image (and try to tab after write the image description)
+Test Preview
+And ending here... Click "List"
+
+Enjoy!
+`;
