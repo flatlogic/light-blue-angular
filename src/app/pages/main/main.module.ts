@@ -1,5 +1,3 @@
-import 'jquery.animate-number/jquery.animateNumber.js';
-
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
@@ -25,6 +23,7 @@ import { NgApexchartsModule } from 'ng-apexcharts';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { YearsMapModule } from '../../components/years-map-widget/year-map.module';
 import { SwiperConfigInterface, SwiperModule, SWIPER_CONFIG } from 'ngx-swiper-wrapper';
+import { CountUpModule } from 'ngx-countup';
 
 export const routes = [
   { path: '', redirectTo: 'visits', pathMatch: 'full' },
@@ -67,7 +66,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     NgApexchartsModule,
     NgxEchartsModule,
     YearsMapModule,
-    SwiperModule
+    SwiperModule,
+    CountUpModule
   ],
   providers: [
     AnalyticsService,

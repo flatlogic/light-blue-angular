@@ -14,6 +14,7 @@ import { MapChart, MapPolygonSeries, projections, ZoomControl, MapImageSeries } 
 import am4themes_animated from '@amcharts/amcharts4/themes/animated';
 import am4geodata_usaHigh from '@amcharts/amcharts4-geodata/usaHigh';
 
+
 import { echartDynamicAreaData3 } from '../../../utils/echarts.data';
 
 useTheme(am4themes_animated);
@@ -31,6 +32,10 @@ export class VisitsComponent implements OnInit, AfterViewInit, OnDestroy {
   public echartDynamicAreaData3: any = echartDynamicAreaData3;
   public echartDynamicAreaDataUpdate: any;
   public map: MapChart;
+  public countUpOptions = {
+    separator: ' '
+  };
+
   @ViewChild('map', { static: false }) public mapRef: ElementRef<HTMLElement>;
 
   private interval: any;
