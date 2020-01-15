@@ -16,9 +16,7 @@ declare const jQuery: any;
 })
 export class ElementsComponent implements OnInit {
   date: Date = new Date(2016, 5, 10);
-  colorOptions: Object = { color: '#f0b518' };
   selected: any;
-
   phoneMask = {
     mask: ['(', /[1-9]/, /\d/, /\d/, ')',
       ' ', /\d/, /\d/, /\d/,
@@ -50,6 +48,7 @@ export class ElementsComponent implements OnInit {
 
   public defaultOptions: NgOption[] = defaultData;
   public groupedOptions: NgOption[] = groupedData;
+  public color: string = '#f0b518'
 
   public readonly typesDropdownOptions: string[] = ['Another type', 'Type one', 'Next type'];
   public selecetedType = this.typesDropdownOptions[0];
@@ -66,7 +65,6 @@ export class ElementsComponent implements OnInit {
   ngOnInit(): void {
     jQuery('#markdown-editor').markdown();
     jQuery('.js-slider').slider();
-    jQuery('#colorpicker').colorpicker(this.colorOptions);
   }
 
   unmask(event) {

@@ -789,8 +789,8 @@ Enjoy!
                   Colorpicker plugin for Twitter Bootstrap, originally written by Stefan Petre
                 </span>
               </label>
-              <div id="colorpicker" class="input-group input-group-transparent">
-                <input type="text" value="" class="form-control input-transparent" id="colorpickeri" />
+              <div class="input-group input-group-transparent">
+                <input [(colorPicker)]="color" [value]="color" autocomplete="off" cpPosition="bottom" type="text" value="" class="form-control input-transparent" id="colorpickeri" />
                 <span class="input-group-addon">
                   <i></i>
                 </span>

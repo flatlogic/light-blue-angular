@@ -13,6 +13,7 @@ import { EditorModule } from '@tinymce/tinymce-angular';
 import { DropzoneModule } from 'ngx-dropzone-wrapper';
 import { NgWizardModule, NgWizardConfig, THEME } from 'ng-wizard';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { ColorPickerModule } from 'ngx-color-picker';
 
 import { WidgetModule } from '../../layout/widget/widget.module';
 import { ElementsComponent } from './elements/elements.component';
@@ -51,7 +52,8 @@ const wizardConfig: NgWizardConfig = {
     EditorModule,
     DropzoneModule,
     NgWizardModule.forRoot(wizardConfig),
-    NgSelectModule
+    NgSelectModule,
+    ColorPickerModule
   ]
 })
 export class FormModule {

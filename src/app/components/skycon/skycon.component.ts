@@ -21,13 +21,11 @@ export class SkyconComponent implements OnChanges, OnInit, OnDestroy {
 
   public ngOnChanges(): void {
     this.initIcon();
-    this.initialized = true;
   }
 
   public ngOnInit(): void {
     if (!this.initialized) {
       this.initIcon();
-      this.initialized = true;
     }
   }
 
@@ -40,5 +38,6 @@ export class SkyconComponent implements OnChanges, OnInit, OnDestroy {
     this.icon.color = this.color;
     this.icon.set(this.canvas.nativeElement, this.weather);
     this.playing ? this.icon.play() : this.icon.pause();
+    this.initialized = true;
   }
 }
