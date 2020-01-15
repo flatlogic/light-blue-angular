@@ -79,5 +79,5 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
  */
 
 /* ngx-markdown-editor */
-// import 'brace';
-// import 'brace/mode/markdown';
+import 'brace';
+import 'brace/mode/markdown';
