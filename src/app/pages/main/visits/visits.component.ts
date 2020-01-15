@@ -9,6 +9,7 @@ import {
   ViewChild,
   ElementRef
 } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { useTheme, create, color, Circle, MouseCursorStyle } from '@amcharts/amcharts4/core';
 import { MapChart, MapPolygonSeries, projections, ZoomControl, MapImageSeries } from '@amcharts/amcharts4/maps';
 import am4themes_animated from '@amcharts/amcharts4/themes/animated';
@@ -16,6 +17,7 @@ import am4geodata_usaHigh from '@amcharts/amcharts4-geodata/usaHigh';
 
 
 import { echartDynamicAreaData3 } from '../../../utils/echarts.data';
+import { getRandomInt } from '../../../utils/randomizer';
 
 useTheme(am4themes_animated);
 
@@ -27,6 +29,11 @@ useTheme(am4themes_animated);
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class VisitsComponent implements OnInit, AfterViewInit, OnDestroy {
+  private interval: any;
+  private progressBarValueSource1: BehaviorSubject<number> = new BehaviorSubject(0);
+  private progressBarValueSource2: BehaviorSubject<number> = new BehaviorSubject(0);
+  private progressBarValueSource3: BehaviorSubject<number> = new BehaviorSubject(0);
+
   month: any;
   year: any;
   public echartDynamicAreaData3: any = echartDynamicAreaData3;
@@ -35,10 +42,11 @@ export class VisitsComponent implements OnInit, AfterViewInit, OnDestroy {
   public countUpOptions = {
     separator: ' '
   };
+  public progressBarValue1$: Observable<number> = this.progressBarValueSource1.asObservable();
+  public progressBarValue2$: Observable<number> = this.progressBarValueSource2.asObservable();
+  public progressBarValue3$: Observable<number> = this.progressBarValueSource3.asObservable();
 
   @ViewChild('map', { static: false }) public mapRef: ElementRef<HTMLElement>;
-
-  private interval: any;
 
   constructor(private zone: NgZone) {
   }
@@ -50,6 +58,12 @@ export class VisitsComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   public ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.progressBarValueSource1.next(getRandomInt());
+      this.progressBarValueSource2.next(getRandomInt());
+      this.progressBarValueSource3.next(getRandomInt());
+    });
+
     this.interval = setInterval(() => {
       const data1: any = this.echartDynamicAreaData3.series[0].data;
       const data2: any = this.echartDynamicAreaData3.series[1].data;

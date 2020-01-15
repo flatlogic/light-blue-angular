@@ -58,9 +58,8 @@
                 45.6 KB
               </td>
               <td class="width-150">
-                <div class="bg-gray-lighter progress progress-sm">
-                  <div progress-animate class="progress-bar progress-sm bg-success js-progress-animate"
-                    style="width: 0;" data-width="29%"></div>
+                <div class="progress progress-sm">
+                    <progressbar class="bg-gray-lighter" type="success" [animate]="true" [value]="progressbarValue1$ | async" [max]="100"></progressbar>
                 </div>
               </td>
             </tr>
@@ -93,9 +92,8 @@
                 15.3 MB
               </td>
               <td class="width-150">
-                <div class="bg-gray-lighter progress progress-sm">
-                  <div progress-animate class="progress-bar progress-sm bg-warning js-progress-animate"
-                    style="width: 0;" data-width="33%"></div>
+                <div class="progress progress-sm">
+                    <progressbar class="bg-gray-lighter" type="warning" [animate]="true" [value]="progressbarValue2$ | async" [max]="100"></progressbar>
                 </div>
               </td>
             </tr>
@@ -130,9 +128,8 @@
                 49.0 KB
               </td>
               <td class="width-150">
-                <div class="bg-gray-lighter progress progress-sm">
-                  <div progress-animate class="progress-bar progress-sm progress-bar-gray js-progress-animate"
-                    style="width: 0;" data-width="38%"></div>
+                <div class="progress progress-sm">
+                    <progressbar class="bg-gray-lighter" [animate]="true" [value]="progressbarValue3$ | async" [max]="100"></progressbar>
                 </div>
               </td>
             </tr>
@@ -165,9 +162,8 @@
                 69.1 KB
               </td>
               <td class="width-150">
-                <div class="bg-gray-lighter progress progress-sm">
-                  <div progress-animate class="progress-bar progress-sm bg-danger js-progress-animate" style="width: 0;"
-                    data-width="17%"></div>
+                <div class="progress progress-sm">                  
+                    <progressbar class="bg-gray-lighter" type="danger" [animate]="true" [value]="progressbarValue4$ | async" [max]="100"></progressbar>
                 </div>
               </td>
             </tr>
@@ -200,9 +196,8 @@
                 2.3 MB
               </td>
               <td class="width-150">
-                <div class="bg-gray-lighter progress progress-sm">
-                  <div progress-animate class="progress-bar progress-sm bg-primary js-progress-animate"
-                    style="width: 0;" data-width="41%"></div>
+                <div class="progress progress-sm">
+                    <progressbar class="bg-gray-lighter" [animate]="true" [value]="progressbarValue5$ | async" [max]="100"></progressbar>
                 </div>
               </td>
             </tr>

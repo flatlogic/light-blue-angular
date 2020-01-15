@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ToastrModule} from 'ngx-toastr';
 
 import { ROUTES } from './app.routes';
-import { CheckAllService } from './layout/utils/directives/check-all.service';
+import { CheckAllService } from './layout/utils/services/check-all.service';
 import { AppComponent } from './app.component';
 import { ErrorComponent } from './pages/error/error.component';
 import {LoginService} from './pages/login/login.service';

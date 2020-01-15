@@ -47,7 +47,7 @@
             <h6 class="name">Foreign Visits</h6>
             <p class="description deemphasize">Some Cool Text</p>
             <div class="bg-white progress progress-xs">
-              <div progress-animate class="progress-bar bg-primary" style="width: 60%;" data-width="60%"></div>
+              <progressbar [animate]="true" [value]="progressBarValue1$ | async" [max]="100"></progressbar>
             </div>
           </div>
           <div class="col-md-3 col-12 text-center">
@@ -61,7 +61,7 @@
             <h6 class="name">Local Visits</h6>
             <p class="description deemphasize">P. to C. Conversion</p>
             <div class="bg-white progress progress-xs">
-              <div progress-animate class="progress-bar bg-danger" style="width: 39%;" data-width="39%"></div>
+              <progressbar type="danger" [animate]="true" [value]="progressBarValue2$ | async" [max]="100"></progressbar>
             </div>
           </div>
           <div class="col-md-3 col-12 text-center">
@@ -75,7 +75,7 @@
             <h6 class="name">Sound Frequencies</h6>
             <p class="description deemphasize">Average Bitrate</p>
             <div class="bg-white progress progress-xs">
-              <div progress-animate class="progress-bar bg-success" style="width: 80%;" data-width="80%"></div>
+              <progressbar type="success" [animate]="true" [value]="progressBarValue3$ | async" [max]="100"></progressbar>
             </div>
           </div>
           <div class="col-md-3 col-12 text-center">

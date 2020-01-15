@@ -10,7 +10,6 @@ import { TaskContainerComponent } from './analytics/components/task-container/ta
 import { TaskComponent } from './analytics/components/task/task';
 import { CalendarModule } from './visits/calendar/calendar.module';
 import { VisitsComponent } from './visits/visits.component';
-import { UtilsModule } from '../../layout/utils/utils.module';
 import { MarketStatsWidgetComponent } from './visits/market-stats-widget/market-stats-widget.component';
 import { WidgetsComponent } from './widgets/widgets.component';
 import { SkyconsModule } from '../../components/skycon/skycon.module';
@@ -59,7 +58,6 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     TrendModule,
     BsDropdownModule.forRoot(),
     CalendarModule,
-    UtilsModule,
     WidgetModule,
     NewWidgetModule,
     SkyconsModule,
