@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewEncapsulation, ViewChild } from '@angular/core';
 import { DatatableComponent } from '@swimlane/ngx-datatable';
 import { tableData } from './tables-dynamic.data';
-declare let jQuery: any;
 
 const PEOPLE = [
   {
@@ -309,14 +308,6 @@ export class TablesDynamicComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const searchInput = jQuery('#table-search-input, #search-countries');
-    searchInput
-      .focus((e) => {
-      jQuery(e.target).closest('.input-group').addClass('focus');
-    })
-      .focusout((e) => {
-      jQuery(e.target).closest('.input-group').removeClass('focus');
-    });
     this.onChangeTable(this.config);
   }
 
