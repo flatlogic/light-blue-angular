@@ -1,11 +1,9 @@
 import {
   Component,
-  ViewEncapsulation,
-  OnInit
+  ViewEncapsulation
 } from '@angular/core';
 import { defaultData, groupedData, simpleOptions, fromOneToThree, fromFourToSix, fromSevenToTen, defaultMarkdownEditorContent } from './elements.data';
 import { NgOption } from '@ng-select/ng-select';
-declare const jQuery: any;
 
 @Component({
   selector: '[elements]',
@@ -14,7 +12,7 @@ declare const jQuery: any;
   encapsulation: ViewEncapsulation.None,
   preserveWhitespaces: true
 })
-export class ElementsComponent implements OnInit {
+export class ElementsComponent {
   date: Date = new Date(2016, 5, 10);
   selected: any;
   phoneMask = {
@@ -61,10 +59,6 @@ export class ElementsComponent implements OnInit {
   public selectedNumber: NgOption = fromOneToThree[0];
   public selectedNumber2: NgOption = fromFourToSix[0];
   public selectedNumber3: NgOption = fromSevenToTen[0];
-
-  ngOnInit(): void {
-    jQuery('.js-slider').slider();
-  }
 
   unmask(event) {
     return event.replace(/\D+/g, '');

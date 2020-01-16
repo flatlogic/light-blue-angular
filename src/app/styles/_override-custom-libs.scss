@@ -282,7 +282,7 @@ ng-select {
   & .ng-dropdown-panel .ng-dropdown-panel-items .ng-option-selected,
   & .ng-dropdown-panel .ng-dropdown-panel-items .ng-option-marked,
   & .ng-select-container .ng-clear-wrapper {
-    color: $white-dark!important;
+    color: $white-dark !important;
   }
 
   & .ng-arrow {
@@ -371,9 +371,88 @@ md-editor {
   .md-editor-container {
     .preview-container {
       background-color: #ffffff;
+
       .preview-panel {
         color: #000000;
       }
     }
   }
+}
+
+///////////////NG5-SLIDER/////////////////
+ng5-slider.ng5-slider {
+  margin: 12px !important;
+
+  .ng5-slider-pointer {
+    outline: none;
+    top: -12px;
+    width: 26px;
+    height: 26px;
+    background-color: #ffffff;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 3px rgba(0, 0, 0, 0.5);
+    border: 0px solid transparent;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &.vertical {
+    .ng5-slider-pointer {
+      left: -11px !important;
+    }
+  }
+
+  .ng5-slider-selection {
+    background: $blue;
+  }
+
+  &.danger {
+    .ng5-slider-selection {
+      background: $red;
+    }
+  }
+
+  &.warning {
+    .ng5-slider-selection {
+      background: $yellow;
+    }
+  }
+
+  &.success {
+    .ng5-slider-selection {
+      background: $green;
+    }
+  }
+
+  &.inverse {
+    .ng5-slider-selection {
+      background: $gray-700;
+    }
+  }
+
+  .ng5-slider-bubble.ng5-slider-combined {
+    display: none;
+  }
+
+  .ng5-slider-bubble.ng5-slider-model-value,
+  .ng5-slider-bubble.ng5-slider-model-high {
+    display: none;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 0.25rem;
+    font-size: 12px;
+    z-index: 10;
+  }
+
+  // .ng5-slider-pointer.ng5-slider-active~.ng5-slider-bubble.ng5-slider-model-value
+  &:hover {
+
+    .ng5-slider-bubble.ng5-slider-model-value,
+    .ng5-slider-bubble.ng5-slider-model-high {
+      display: initial;
+      opacity: 1 !important;
+    }
+  }
+
 }

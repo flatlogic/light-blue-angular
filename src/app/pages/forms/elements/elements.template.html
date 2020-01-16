@@ -836,24 +836,69 @@
             <p>Sing extends Bootstrap Slider and provides different color options:</p>
             <form>
               <div class="mb-sm">
-                <input class="js-slider" id="slider-ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0"
-                  data-slider-max="20" data-slider-step="1" data-slider-value="14" />
+                <ng5-slider [value]="14" [options]="{
+                      floor: 0, 
+                      ceil: 20, 
+                      animate: false, 
+                      handleDimension: 26, 
+                      barDimension: 210,
+                      showSelectionBar: true,
+                      hideLimitLabels: true,
+                      hidePointerLabels: false
+                    }">
+                </ng5-slider>
               </div>
               <div class="slider-danger mb-sm">
-                <input class="js-slider" id="slider-ex2" data-slider-id='ex2Slider' type="text" data-slider-min="0"
-                  data-slider-max="20" data-slider-step="1" data-slider-value="18" />
+                <ng5-slider class="danger" [value]="18" [options]="{
+                    floor: 0, 
+                    ceil: 20, 
+                    animate: false, 
+                    handleDimension: 26, 
+                    barDimension: 210,
+                    showSelectionBar: true,
+                    hideLimitLabels: true,
+                    hidePointerLabels: false
+                  }">
+                </ng5-slider>
               </div>
               <div class="slider-warning mb-sm">
-                <input class="js-slider" id="slider-ex3" data-slider-id='ex3Slider' type="text" data-slider-min="0"
-                  data-slider-max="20" data-slider-step="1" data-slider-value="7" />
+                <ng5-slider class="warning" [value]="7" [options]="{
+                    floor: 0, 
+                    ceil: 20, 
+                    animate: false, 
+                    handleDimension: 26, 
+                    barDimension: 210,
+                    showSelectionBar: true,
+                    hideLimitLabels: true,
+                    hidePointerLabels: false
+                  }">
+                </ng5-slider>
               </div>
               <div class="slider-success mb-sm">
-                <input class="js-slider" id="slider-ex4" data-slider-id='ex4Slider' type="text" data-slider-min="0"
-                  data-slider-max="20" data-slider-step="1" data-slider-value="11" />
+                <ng5-slider class="success" [value]="11" [options]="{
+                    floor: 0, 
+                    ceil: 20, 
+                    animate: false, 
+                    handleDimension: 26, 
+                    barDimension: 210,
+                    showSelectionBar: true,
+                    hideLimitLabels: true,
+                    hidePointerLabels: false
+                  }">
+                </ng5-slider>
               </div>
               <div class="slider-inverse mb-sm">
-                <input class="js-slider" id="slider-ex5" data-slider-id='ex5Slider' type="text" data-slider-min="0"
-                  data-slider-max="20" data-slider-step="1" data-slider-value="4" />
+                <ng5-slider class="inverse" [value]="4" [options]="{
+                    floor: 0, 
+                    ceil: 20, 
+                    animate: false, 
+                    handleDimension: 26, 
+                    barDimension: 210,
+                    showSelectionBar: true,
+                    hideLimitLabels: true,
+                    hidePointerLabels: false
+                  }">
+                </ng5-slider>
               </div>
             </form>
           </div>
@@ -863,36 +908,67 @@
               attribute does the thing.</p>
             <form>
               <div class="row">
-                <div class="col-md-8 col-md-offset-2 ">
-                  <span class="">
-                    <input class="js-slider" id="slider-ex6" data-slider-orientation="vertical"
-                      data-slider-id='ex6Slider' type="text" data-slider-min="0" data-slider-max="20"
-                      data-slider-step="1" data-slider-value="14" />
-                  </span>
-                  &nbsp;&nbsp;&nbsp;&nbsp;
-                  <span class="slider-inverse">
-                    <input class="js-slider" id="slider-ex7" data-slider-orientation="vertical"
-                      data-slider-id='ex7Slider' type="text" data-slider-min="0" data-slider-max="20"
-                      data-slider-step="1" data-slider-value="18" />
-                  </span>
-                  &nbsp;&nbsp;&nbsp;&nbsp;
-                  <span class="">
-                    <input class="js-slider" id="slider-ex8" data-slider-orientation="vertical"
-                      data-slider-id='ex8Slider' type="text" data-slider-min="0" data-slider-max="20"
-                      data-slider-step="1" data-slider-value="7" />
-                  </span>
-                  &nbsp;&nbsp;&nbsp;&nbsp;
-                  <span class="slider-inverse">
-                    <input class="js-slider" id="slider-ex9" data-slider-orientation="vertical"
-                      data-slider-id='ex9Slider' type="text" data-slider-min="0" data-slider-max="20"
-                      data-slider-step="1" data-slider-value="11" />
-                  </span>
-                  &nbsp;&nbsp;&nbsp;&nbsp;
-                  <span class="">
-                    <input class="js-slider" id="slider-ex10" data-slider-orientation="vertical"
-                      data-slider-id='ex10Slider' type="text" data-slider-min="0" data-slider-max="20"
-                      data-slider-step="1" data-slider-value="4" />
-                  </span>
+                <div class="col-md-8 col-md-offset-2" style="height: 210px; margin-bottom: 10px;">
+                  <ng5-slider [value]="14" [options]="{
+                    floor: 0, 
+                    ceil: 20, 
+                    animate: false, 
+                    handleDimension: 26, 
+                    barDimension: 210,
+                    showSelectionBar: true,
+                    hideLimitLabels: true,
+                    hidePointerLabels: false,
+                    vertical: true
+                  }">
+                  </ng5-slider>
+                  <ng5-slider class="inverse" [value]="18" [options]="{
+                    floor: 0, 
+                    ceil: 20, 
+                    animate: false, 
+                    handleDimension: 26, 
+                    barDimension: 210,
+                    showSelectionBar: true,
+                    hideLimitLabels: true,
+                    hidePointerLabels: false,
+                    vertical: true
+                  }">
+                  </ng5-slider>
+                  <ng5-slider [value]="7" [options]="{
+                    floor: 0, 
+                    ceil: 20, 
+                    animate: false, 
+                    handleDimension: 26, 
+                    barDimension: 210,
+                    showSelectionBar: true,
+                    hideLimitLabels: true,
+                    hidePointerLabels: false,
+                    vertical: true
+                  }">
+                  </ng5-slider>
+                  <ng5-slider class="inverse" [value]="11" [options]="{
+                    floor: 0, 
+                    ceil: 20, 
+                    animate: false, 
+                    handleDimension: 26, 
+                    barDimension: 210,
+                    showSelectionBar: true,
+                    hideLimitLabels: true,
+                    hidePointerLabels: false,
+                    vertical: true
+                  }">
+                  </ng5-slider>
+                  <ng5-slider [value]="4" [options]="{
+                    floor: 0, 
+                    ceil: 20, 
+                    animate: false, 
+                    handleDimension: 26, 
+                    barDimension: 210,
+                    showSelectionBar: true,
+                    hideLimitLabels: true,
+                    hidePointerLabels: false,
+                    vertical: true
+                  }">
+                  </ng5-slider>
                 </div>
               </div>
             </form>
@@ -902,10 +978,17 @@
             <p>Range selector, options specified via <strong>data-slider-value</strong> attribute as
               an array. Price range selector:</p>
             <form>
-              <span class="slider-warning">
-                <input class="js-slider" id="slider-ex11" data-slider-id='ex11Slider' type="text" data-slider-min="0"
-                  data-slider-max="2000" data-slider-step="1" data-slider-value='[200,1547]' /> &nbsp;
-              </span>
+              <ng5-slider class="warning" [value]="200" [highValue]="1547" [options]="{
+                floor: 0, 
+                ceil: 2000, 
+                animate: false, 
+                handleDimension: 26, 
+                barDimension: 210,
+                showSelectionBar: true,
+                hideLimitLabels: true,
+                hidePointerLabels: false
+              }">
+              </ng5-slider>
             </form>
           </div>
         </div>

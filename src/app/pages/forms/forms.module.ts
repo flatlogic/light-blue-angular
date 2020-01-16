@@ -15,6 +15,7 @@ import { NgWizardModule, NgWizardConfig, THEME } from 'ng-wizard';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { ColorPickerModule } from 'ngx-color-picker';
 import { LMarkdownEditorModule } from 'ngx-markdown-editor';
+import { Ng5SliderModule } from 'ng5-slider';
 
 import { WidgetModule } from '../../layout/widget/widget.module';
 import { ElementsComponent } from './elements/elements.component';
@@ -55,7 +56,8 @@ const wizardConfig: NgWizardConfig = {
     NgWizardModule.forRoot(wizardConfig),
     NgSelectModule,
     ColorPickerModule,
-    LMarkdownEditorModule
+    LMarkdownEditorModule,
+    Ng5SliderModule
   ]
 })
 export class FormModule {
