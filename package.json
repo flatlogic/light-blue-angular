@@ -97,7 +97,7 @@
     "@angularclass/hmr": "2.1.3",
     "@types/echarts": "4.4.2",
     "@types/jquery": "3.3.31",
-    "@types/node": "6.0.118",
+    "@types/node": "13.1.7",
     "@types/photoswipe": "4.0.29",
     "@types/validator": "12.0.1",
     "codelyzer": "5.2.0",
