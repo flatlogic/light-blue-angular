@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { InboxComponent } from './inbox.component';
@@ -17,6 +17,7 @@ export const routes = [
 @NgModule({
     imports: [
         FormsModule,
+        ReactiveFormsModule,
         CommonModule,
         RouterModule.forChild(routes) ],
     declarations: [
