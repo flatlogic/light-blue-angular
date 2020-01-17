@@ -1,0 +1,22 @@
+<span class="icon"></span>
+<div class="row">
+  <div class="col-12">
+    <div *ngIf="title" ngClass="title" [class]="options?.titleClass" [attr.aria-label]="title">
+      {{ title }}
+    </div>
+    <div *ngIf="message && options?.enableHtml" ngClass="message" role="alert" aria-live="polite"
+      [class]="options?.messageClass" [innerHTML]="message">
+    </div>
+    <div *ngIf="message && !options?.enableHtml" ngClass="message" role="alert" aria-live="polite"
+      [class]="options?.messageClass" [attr.aria-label]="message">
+      {{ message }}
+    </div>
+    <div class="buttons" *ngIf="options?.closeButton">
+      <button (click)="onRetry()" class="cancel" type="button">Retry now</button>
+      <button (click)="onCancel()" class="cancel" type="button">Cancel</button>
+    </div>
+  </div>
+</div>
+<div *ngIf="options?.progressBar">
+  <div class="toast-progress" [style.width.%]="width"></div>
+</div>

@@ -67,9 +67,7 @@ $body-bg-light: lighten($body-bg, 3%);
 
 $bg-gradient-color-1: #414e60;
 $bg-gradient-color-2: #94a3b1;
-$bg-messenger-color: rgba(51,51,51,0.3);
-$bg-messenger-bit-color: rgba(26,26,26,0.3);
-$bg-messenger-bit-hover-color: rgba(13,13,13,0.3);
+
 
 // Typography
 // -------------------------
@@ -171,7 +169,6 @@ $tabs-widget-active-item-hover-bg: rgba(darken($widget-bg-color, 10%), 0.4);
 
 $location-selector-bg: $bg-addition;
 $location-selector-border-color: #eee;
-$messenger-spinner-bg: $white;
 
 $calendar-border: rgba($white, 0.33);
 

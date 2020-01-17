@@ -3,7 +3,7 @@
   <li class="breadcrumb-item active">UI Notifications</li>
 </ol>
 <h1 class="page-title">Messages - <span class="fw-semi-bold">Notifications</span></h1>
-<section class="widget" messenger-demo widget>
+<section class="widget" widget>
   <header>
     <h6>
       Messenger
@@ -22,20 +22,20 @@
         <p>There are few position options available for notifications. You can click any of them
           to change notifications position:</p>
         <div class="location-selector">
-          <div class="bit top left" data-position="top left"></div>
-          <div class="bit top right" data-position="top right"></div>
-          <div class="bit top" data-position="top"></div>
-          <div class="bit bottom left" data-position="bottom left"></div>
-          <div class="bit bottom right" data-position="bottom right"></div>
-          <div class="bit bottom" data-position="bottom"></div>
+          <div class="bit top left" (click)="setPosition(ToastPosition.topLeft)"></div>
+          <div class="bit top right" (click)="setPosition(ToastPosition.topRight)"></div>
+          <div class="bit top" (click)="setPosition(ToastPosition.topCenter)"></div>
+          <div class="bit bottom left" (click)="setPosition(ToastPosition.bottomLeft)"></div>
+          <div class="bit bottom right" (click)="setPosition(ToastPosition.bottomRight)"></div>
+          <div class="bit bottom" (click)="setPosition(ToastPosition.bottomCenter)"></div>
         </div>
       </div>
       <div class="col-lg-4 col-12">
         <h5 class="m-t-1">Notification Types</h5>
         <p>Different types of notifications for lost of use cases. Custom classes are also supported.</p>
-        <p><a class="btn btn-info" id="show-info-message" href="#">Info Message</a></p>
-        <p><a class="btn btn-danger" id="show-error-message" href="#">Error + Retry Message</a></p>
-        <p><a class="btn btn-success" id="show-success-message" href="#">Success Message</a></p>
+        <p><a (click)="launchTermonuclearWar($event)" class="btn btn-info" id="show-info-message" href="#">Info Message</a></p>
+        <p><a class="btn btn-danger" (click)="destroyAliensWithError($event)" id="show-error-message" href="#">Error + Retry Message</a></p>
+        <p><a class="btn btn-success" (click)="showSuccessMessage($event)" id="show-success-message" href="#">Success Message</a></p>
       </div>
       <div class="col-lg-4 col-12">
         <h5 class="m-t-1">Dead Simple Usage</h5>
