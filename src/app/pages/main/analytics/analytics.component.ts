@@ -1,7 +1,9 @@
-import { Component, ViewEncapsulation, OnInit} from '@angular/core';
+import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 import mock from './mock';
 import { AnalyticsService } from './analytics.service';
 import { echartPieChartData3, echartAreaChartData } from '../../../utils/echarts.data';
+import { CalendarEvent } from 'angular-calendar';
+import { calendarEvents } from '../../../utils/calendar-events.data';
 
 @Component({
   selector: 'analytics',
@@ -17,35 +19,8 @@ export class AnalyticsComponent implements OnInit {
   public echartPieChartData3: any = echartPieChartData3;
   public echartAreaChartData: any = echartAreaChartData;
 
-  calendarEvents: Array<Array<any>> = [
-    [
-      '2/' + this.month + '/' + this.year,
-      'The flower bed',
-      '#',
-      '#5d8fc2',
-      'Contents here'
-    ],
-    [
-      '5/' + this.month + '/' + this.year,
-      'Stop world water pollution',
-      '#',
-      '#f0b518',
-      'Have a kick off meeting with .inc company'
-    ],
-    [
-      '18/' + this.month + '/' + this.year,
-      'Light Blue 2.2 release',
-      '#',
-      '#64bd63',
-      'Some contents here'
-    ],
-    [
-      '29/' + this.month + '/' + this.year,
-      'A link',
-      'http://www.flatlogic.com',
-      '#dd5826',
-    ]
-  ];
+  public viewDate: Date = new Date();
+  public calendarEvents: CalendarEvent[] = [...calendarEvents];
 
 
   trends: Array<any> = [
@@ -77,5 +52,13 @@ export class AnalyticsComponent implements OnInit {
 
   ngOnInit() {
     this.analyticsService.receiveDataRequest();
+  }
+
+  public onEventClick({ event, sourceEvent }: { event: CalendarEvent; sourceEvent: MouseEvent | KeyboardEvent; }): void {
+    if (Array.isArray(event.actions)) {
+      event.actions.forEach(a => {
+        a.onClick({ event, sourceEvent });
+      });
+    }
   }
 }

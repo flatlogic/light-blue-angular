@@ -35,3 +35,20 @@
     margin: 5% 10%;
   }
 }
+
+.calendar-navigation {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12.6px;
+
+  .date {
+    padding: 3px 0;
+  }
+
+  .prev,
+  .next {
+    padding: 3px 2rem;
+    cursor: pointer;
+  }
+
+}

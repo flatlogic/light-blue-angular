@@ -52,7 +52,7 @@
           </div>
           <div class="col-md-3 col-12 text-center">
             <span class="status rounded rounded-lg bg-body-light text-dark">
-              <small><span [countUp]="75" [options]="countUpOptions">0</span>%</small>              
+              <small><span [countUp]="75" [options]="countUpOptions">0</span>%</small>
             </span>
           </div>
         </div>
@@ -61,12 +61,13 @@
             <h6 class="name">Local Visits</h6>
             <p class="description deemphasize">P. to C. Conversion</p>
             <div class="bg-white progress progress-xs">
-              <progressbar type="danger" [animate]="true" [value]="progressBarValue2$ | async" [max]="100"></progressbar>
+              <progressbar type="danger" [animate]="true" [value]="progressBarValue2$ | async" [max]="100">
+              </progressbar>
             </div>
           </div>
           <div class="col-md-3 col-12 text-center">
             <span class="status rounded rounded-lg bg-body-light text-dark">
-              <small><span [countUp]="84" [options]="countUpOptions">0</span>%</small>              
+              <small><span [countUp]="84" [options]="countUpOptions">0</span>%</small>
             </span>
           </div>
         </div>
@@ -75,12 +76,13 @@
             <h6 class="name">Sound Frequencies</h6>
             <p class="description deemphasize">Average Bitrate</p>
             <div class="bg-white progress progress-xs">
-              <progressbar type="success" [animate]="true" [value]="progressBarValue3$ | async" [max]="100"></progressbar>
+              <progressbar type="success" [animate]="true" [value]="progressBarValue3$ | async" [max]="100">
+              </progressbar>
             </div>
           </div>
           <div class="col-md-3 col-12 text-center">
             <span class="status rounded rounded-lg bg-body-light text-dark">
-              <small><span [countUp]="92" [options]="countUpOptions">0</span>%</small>              
+              <small><span [countUp]="92" [options]="countUpOptions">0</span>%</small>
             </span>
           </div>
         </div>
@@ -329,11 +331,8 @@
           </tbody>
         </table>
       </div>
-      <div class="widget-body mt-5 chart-overflow-bottom" 
-        market-stats-widget 
-        height="130px" 
-        [options]="echartDynamicAreaData3"
-        [merge]="echartDynamicAreaDataUpdate">
+      <div class="widget-body mt-5 chart-overflow-bottom" market-stats-widget height="130px"
+        [options]="echartDynamicAreaData3" [merge]="echartDynamicAreaDataUpdate">
       </div>
     </section>
   </div>
@@ -347,35 +346,15 @@
         </div>
       </header>
       <div class="widget-body p-0">
-        <calendar class="bg-gray-light" [events]="[
-                [
-                        '2/'+month+'/'+year,
-                    'The flower bed',
-                    '#',
-                    '#5d8fc2',
-                    'Contents here'
-                ],
-                [
-                        '5/'+month+'/'+year,
-                    'Stop world water pollution',
-                    '#',
-                    '#f0b518',
-                    'Have a kick off meeting with .inc company'
-                ],
-                [
-                        '18/'+month+'/'+year,
-                    'Light Blue 2.2 release',
-                    '#',
-                    '#64bd63',
-                    'Some contents here'
-                ],
-                [
-                        '29/'+month+'/'+year,
-                    'A link',
-                    'http://www.flatlogic.com',
-                    '#dd5826'
-                ]
-            ]"></calendar>
+        <div class="calendar-navigation">
+          <div class="prev" mwlCalendarPreviousView view="month" [(viewDate)]="viewDate">
+            <i class="icon-arrow-left la la-arrow-left"></i></div>
+          <div class="date">{{viewDate | date: 'LLLL yyyy'}}</div>
+          <div class="next" mwlCalendarNextView view="month" [(viewDate)]="viewDate">
+            <i class="icon-arrow-right la la-arrow-right"></i></div>
+        </div>
+        <mwl-calendar-month-view [viewDate]="viewDate" [events]="events" (eventClicked)="onEventClick($event)">
+        </mwl-calendar-month-view>
         <div class="list-group fs-mini">
           <button class="list-group-item text-left text-ellipsis">
             <span class="badge badge-pill badge-warning float-right">6:45</span>

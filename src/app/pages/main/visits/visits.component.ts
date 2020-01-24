@@ -7,20 +7,23 @@ import {
   NgZone,
   ChangeDetectionStrategy,
   ViewChild,
-  ElementRef
+  ElementRef,
+  ChangeDetectorRef
 } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { useTheme, create, color, Circle, MouseCursorStyle } from '@amcharts/amcharts4/core';
 import { MapChart, MapPolygonSeries, projections, ZoomControl, MapImageSeries } from '@amcharts/amcharts4/maps';
 import am4themes_animated from '@amcharts/amcharts4/themes/animated';
 import am4geodata_usaHigh from '@amcharts/amcharts4-geodata/usaHigh';
+import { CalendarEvent } from 'angular-calendar';
 
 
 import { echartDynamicAreaData3 } from '../../../utils/echarts.data';
 import { getRandomInt } from '../../../utils/randomizer';
+import { calendarEvents } from '../../../utils/calendar-events.data';
+import {citySeries as citySeriesData} from '../../../utils/city-series.data';
 
 useTheme(am4themes_animated);
-
 @Component({
   selector: 'visits',
   templateUrl: './visits.template.html',
@@ -45,13 +48,15 @@ export class VisitsComponent implements OnInit, AfterViewInit, OnDestroy {
   public progressBarValue1$: Observable<number> = this.progressBarValueSource1.asObservable();
   public progressBarValue2$: Observable<number> = this.progressBarValueSource2.asObservable();
   public progressBarValue3$: Observable<number> = this.progressBarValueSource3.asObservable();
+  public viewDate: Date = new Date();
+  public events: CalendarEvent[] = [...calendarEvents];
 
   @ViewChild('map', { static: false }) public mapRef: ElementRef<HTMLElement>;
 
-  constructor(private zone: NgZone) {
+  constructor(private zone: NgZone, private cdr: ChangeDetectorRef) {
   }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     const now = new Date();
     this.month = now.getMonth() + 1;
     this.year = now.getFullYear();
@@ -77,6 +82,7 @@ export class VisitsComponent implements OnInit, AfterViewInit, OnDestroy {
           { data: data2 }
         ]
       };
+      this.cdr.markForCheck();
     }, 3000);
 
     this.zone.runOutsideAngular(() => {
@@ -124,74 +130,7 @@ export class VisitsComponent implements OnInit, AfterViewInit, OnDestroy {
       polygonTemplate.strokeOpacity = 0.4;
 
       const citySeries = map.series.push(new MapImageSeries());
-      citySeries.data = [
-        {
-          latitude: 40.717079,
-          longitude: -74.00116,
-          size: 6,
-          tooltip: 'New York',
-        },
-        {
-          latitude: 33.145235,
-          longitude: -83.811834,
-          size: 7,
-          tooltip: 'Oconee National Forest',
-        },
-        {
-          latitude: 37.792032,
-          longitude: -122.394613,
-          size: 4,
-          tooltip: 'San Francisco',
-        },
-        {
-          latitude: 26.935080,
-          longitude: -80.851766,
-          size: 9,
-          tooltip: 'Lake Okeechobee',
-        },
-        {
-          latitude: 36.331308,
-          longitude: -83.336050,
-          size: 4,
-          tooltip: 'Grainger County',
-        },
-        {
-          latitude: 36.269356,
-          longitude: -76.587477,
-          size: 8,
-          tooltip: 'Chowan County',
-        },
-        {
-          latitude: 30.700644,
-          longitude: -95.145249,
-          size: 6,
-          tooltip: 'Lake Livingston',
-        },
-        {
-          latitude: 34.546708,
-          longitude: -90.211471,
-          size: 5,
-          tooltip: 'Tunica County',
-        },
-        {
-          latitude: 32.628599,
-          longitude: -103.675115,
-          size: 5,
-          tooltip: 'Lea County',
-        },
-        {
-          latitude: 40.456692,
-          longitude: -83.522688,
-          size: 5,
-          tooltip: 'Union County',
-        },
-        {
-          latitude: 33.844630,
-          longitude: -118.157483,
-          size: 6,
-          tooltip: 'Lakewood Mutual',
-        }
-      ];
+      citySeries.data = citySeriesData;
       citySeries.dataFields.value = 'size';
 
       const city = citySeries.mapImages.template;
@@ -212,12 +151,20 @@ export class VisitsComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   public ngOnDestroy(): void {
-    if (this.interval) { clearInterval(this.interval); }
+    if (Boolean(this.interval)) { clearInterval(this.interval); }
 
     this.zone.runOutsideAngular(() => {
       if (Boolean(this.map)) {
         this.map.dispose();
       }
     });
+  }
+
+  public onEventClick({ event, sourceEvent }: { event: CalendarEvent; sourceEvent: MouseEvent | KeyboardEvent; }): void {
+    if (Array.isArray(event.actions)) {
+      event.actions.forEach(a => {
+        a.onClick({ event, sourceEvent });
+      });
+    }
   }
 }

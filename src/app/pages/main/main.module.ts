@@ -8,7 +8,6 @@ import { BsDropdownModule, ProgressbarModule } from 'ngx-bootstrap';
 import { TrendModule } from 'ngx-trend';
 import { TaskContainerComponent } from './analytics/components/task-container/task-container.component';
 import { TaskComponent } from './analytics/components/task/task';
-import { CalendarModule } from './visits/calendar/calendar.module';
 import { VisitsComponent } from './visits/visits.component';
 import { MarketStatsWidgetComponent } from './visits/market-stats-widget/market-stats-widget.component';
 import { WidgetsComponent } from './widgets/widgets.component';
@@ -23,6 +22,9 @@ import { NgxEchartsModule } from 'ngx-echarts';
 import { YearsMapModule } from '../../components/years-map-widget/year-map.module';
 import { SwiperConfigInterface, SwiperModule, SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { CountUpModule } from 'ngx-countup';
+import { CalendarModule as AngularCalendarModule, DateAdapter, CalendarDateFormatter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { CustomDateFormatter } from './visits/custom-date-formatter.service';
 
 export const routes = [
   { path: '', redirectTo: 'visits', pathMatch: 'full' },
@@ -57,7 +59,6 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ProgressbarModule.forRoot(),
     TrendModule,
     BsDropdownModule.forRoot(),
-    CalendarModule,
     WidgetModule,
     NewWidgetModule,
     SkyconsModule,
@@ -65,13 +66,21 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     NgxEchartsModule,
     YearsMapModule,
     SwiperModule,
-    CountUpModule
+    CountUpModule,
+    AngularCalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory
+    })
   ],
   providers: [
     AnalyticsService,
     {
       provide: SWIPER_CONFIG,
       useValue: DEFAULT_SWIPER_CONFIG
+    },
+    {
+      provide: CalendarDateFormatter,
+      useClass: CustomDateFormatter
     }
   ]
 })

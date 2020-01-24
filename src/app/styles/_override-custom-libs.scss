@@ -354,3 +354,112 @@ ng5-slider.ng5-slider {
   }
 
 }
+
+/////////angular-calendar////////
+mwl-calendar-month-view {
+  .cal-day-number {
+    font-size: 12.6px !important;
+    color: #ffffff !important;
+    opacity: 1 !important;
+  }
+
+  .cal-out-month .cal-cell-top,
+  .cal-cell-top .cal-day-badge,
+  .cal-out-month .cal-events {
+    display: none;
+  }
+
+  .cal-month-view,
+  mwl-calendar-month-view-header .cal-cell-row .cal-cell:hover,
+  .cal-cell-row:hover,
+  mwl-calendar-month-cell.cal-day-cell.cal-today,
+  mwl-calendar-month-cell.cal-day-cell:hover {
+    background-color: transparent !important;
+  }
+
+  .cal-month-view {
+    margin-bottom: 10px;
+  }
+
+  mwl-calendar-month-cell.cal-day-cell {
+    .cal-day-number {
+      cursor: pointer;
+    }
+  }
+
+  mwl-calendar-month-cell.cal-day-cell.cal-today,
+  mwl-calendar-month-cell.cal-has-events {
+    .cal-day-number {
+      font-weight: 700;
+    }
+  }
+
+  .cal-month-view .cal-cell-row,
+  .cal-month-view .cal-cell-row mwl-calendar-month-cell,
+  .cal-month-view .cal-cell-row mwl-calendar-month-cell .cal-cell-top {
+    min-height: 40px;
+  }
+
+  .cal-days,
+  .cal-cell-row,
+  .cal-month-view .cal-cell-row mwl-calendar-month-cell {
+    border: none !important;
+  }
+
+  .cal-days {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .cal-month-view .cal-cell-row mwl-calendar-month-cell,
+  mwl-calendar-month-view-header .cal-cell {
+    outline: none;
+  }
+
+  mwl-calendar-month-cell.cal-has-events {
+    .cal-day-number {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+}
+
+.cal-events {
+  margin: 0 0 0 10px !important;
+  flex-direction: row-reverse;
+
+  .cal-event {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+.cal-tooltip {
+  border-radius: $border-radius-base;
+
+  &-inner {
+    padding: 0;
+
+    .popover-title {
+      border-radius: $border-radius-base $border-radius-base 0 0;
+    }
+
+    .popover-title,
+    .popover-body {
+      color: $text-color !important;
+    }
+  }
+}

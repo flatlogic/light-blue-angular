@@ -43,10 +43,7 @@
             <widget class="h-100 mb-0" [title]="'Revenue Breakdown'" [close]="true"
               [fetchingData]="analyticsService.isReceiving">
               <div class="row">
-                <div 
-                  style="height: 150px; width: 100%;" 
-                  echarts 
-                  [options]="echartPieChartData3">
+                <div style="height: 150px; width: 100%;" echarts [options]="echartPieChartData3">
                 </div>
               </div>
             </widget>
@@ -182,7 +179,16 @@
         <div class="last-side-element col-12 col-md-6 col-xl-12">
           <section class="mb-5 pt-0 widget" widget>
             <div class="widget-body p-0 mt-0">
-              <calendar [events]="calendarEvents" [white]="true"></calendar>
+              <div class="calendar-navigation">
+                <div class="prev" mwlCalendarPreviousView view="month" [(viewDate)]="viewDate">
+                  <i class="icon-arrow-left la la-arrow-left"></i></div>
+                <div class="date">{{viewDate | date: 'LLLL yyyy'}}</div>
+                <div class="next" mwlCalendarNextView view="month" [(viewDate)]="viewDate">
+                  <i class="icon-arrow-right la la-arrow-right"></i></div>
+              </div>
+              <mwl-calendar-month-view [viewDate]="viewDate" [events]="calendarEvents"
+                (eventClicked)="onEventClick($event)">
+              </mwl-calendar-month-view>
             </div>
           </section>
         </div>

@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'inbox',
@@ -6,7 +6,7 @@ import { Component, AfterViewInit } from '@angular/core';
   styleUrls: ['./inbox.style.scss']
 })
 
-export class InboxComponent implements AfterViewInit {
+export class InboxComponent implements AfterViewInit, OnDestroy {
   mailListShow: boolean = true;
   mailFormShow: boolean = false;
   mailDetailShow: boolean = false;
@@ -15,9 +15,16 @@ export class InboxComponent implements AfterViewInit {
   repliedMessage: any;
 
   public showAlert: boolean = false;
+  public timer: any;
 
   public ngAfterViewInit(): void {
-    setTimeout(() => { this.onShowAlert(); }, 3000);
+    this.timer = setTimeout(() => { this.onShowAlert(); }, 3000);
+  }
+
+  public ngOnDestroy(): void {
+    if (Boolean(this.timer)) {
+      clearTimeout(this.timer);
+    }
   }
 
   public onShowAlert(): void {

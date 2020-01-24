@@ -39,6 +39,7 @@
     "@swimlane/ngx-charts": "12.1.0",
     "@swimlane/ngx-datatable": "16.0.2",
     "@tinymce/tinymce-angular": "3.3.1",
+    "angular-calendar": "0.28.2",
     "angular2-text-mask": "9.0.0",
     "animate.css": "3.7.2",
     "apexcharts": "3.13.1",
@@ -47,6 +48,7 @@
     "bootstrap-datepicker": "1.9.0",
     "brace": "0.11.1",
     "core-js": "3.4.0",
+    "date-fns": "2.9.0",
     "echarts": "4.6.0",
     "font-awesome": "4.7.0",
     "glyphicons-halflings": "1.9.1",
@@ -85,7 +87,6 @@
     "zone.js": "~0.9.1"
   },
   "napa": {
-    "bootstrap_calendar": "https://github.com/xero/bootstrap_calendar.git#1.0.1",
     "jquery.nestable": "https://github.com/dbushell/Nestable.git#4f93032cfafe2002f24ed6bd7dc1510931498503"
   },
   "devDependencies": {
