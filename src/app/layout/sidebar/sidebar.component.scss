@@ -1,0 +1,17 @@
+.side-nav {
+  a.accordion-toggle {
+    position: relative;
+    &:before {
+      position: absolute;
+      right: 5px;
+      content: "\f107";
+      font: normal normal normal 14px/1 FontAwesome;
+      transform: rotate(0deg);
+      transition: transform 300ms linear;
+    }
+
+    &.open:before {
+     transform: rotate(180deg);
+    }
+  }
+}

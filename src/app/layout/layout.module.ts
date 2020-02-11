@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 import { ButtonsModule, BsDropdownModule, AlertModule, ProgressbarModule } from 'ngx-bootstrap';
-
+import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { ROUTES } from './layout.routes';
 
 import { Layout } from './layout.component';
@@ -18,7 +18,8 @@ import { Navbar } from './navbar/navbar.component';
     ButtonsModule.forRoot(),
     BsDropdownModule.forRoot(),
     AlertModule.forRoot(),
-    ProgressbarModule.forRoot()
+    ProgressbarModule.forRoot(),
+    CollapseModule.forRoot()
   ],
   declarations: [Layout, Sidebar, Navbar]
 })
