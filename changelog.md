@@ -1,6 +1,11 @@
-# Change Log
-All notable changes to this project will be documented in this file.
+# Changelog
 
-## v7.1.2
+## [7.1.2]
+
+### Updated
+
 - updated readme
+
+### Fixed
+
 - fixed line-awesome style path
