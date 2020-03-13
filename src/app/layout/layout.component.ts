@@ -8,7 +8,6 @@ import {
   NavigationError
 } from '@angular/router';
 
-declare let Raphael: any;
 
 
 @Component({
@@ -22,9 +21,6 @@ export class Layout {
   @ViewChild('routerComponent', {static: true}) routerComponent: ElementRef;
 
   constructor(private el: ElementRef, private renderer: Renderer, private router: Router, private ngZone: NgZone) {
-    Raphael.prototype.safari = function (): any {
-      return;
-    };
     router.events.subscribe((event: RouterEvent) => {
       setTimeout(() => {
         this._navigationInterceptor(event);
