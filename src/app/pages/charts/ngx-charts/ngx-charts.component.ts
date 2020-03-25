@@ -6,7 +6,7 @@ import {
   ngxDoughnutChartData,
   ngxGroupedVerticalBarChartData,
   ngxStackedVerticalBarChartData
-} from '../../../utils/ngx-charts.data';
+} from '../../../utils/data/ngx-charts.data';
 
 @Component({
   selector: 'app-ngx-charts',

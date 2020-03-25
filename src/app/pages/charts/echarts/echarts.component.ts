@@ -7,7 +7,7 @@ import {
   echartPieChartData2,
   echartBarChartData2,
   echartLineChartData2
-} from '../../../utils/echarts.data';
+} from '../../../utils/data/echarts.data';
 
 @Component({
   selector: 'app-echarts',

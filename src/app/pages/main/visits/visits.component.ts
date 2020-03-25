@@ -18,10 +18,10 @@ import am4geodata_usaHigh from '@amcharts/amcharts4-geodata/usaHigh';
 import { CalendarEvent } from 'angular-calendar';
 
 
-import { echartDynamicAreaData3 } from '../../../utils/echarts.data';
-import { getRandomInt } from '../../../utils/randomizer';
-import { calendarEvents } from '../../../utils/calendar-events.data';
-import {citySeries as citySeriesData} from '../../../utils/city-series.data';
+import { echartDynamicAreaData3 } from '../../../utils/data/echarts.data';
+import { getRandomInt } from '../../../utils/functions/randomizer';
+import { calendarEvents } from '../../../utils/data/calendar-events.data';
+import {citySeries as citySeriesData} from '../../../utils/data/city-series.data';
 
 useTheme(am4themes_animated);
 @Component({

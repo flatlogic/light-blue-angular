@@ -18,7 +18,7 @@ import {
   highchartsOptions4,
   highchartsOptions5,
   highchartsOptions6
-} from '../../../utils/highcharts.data';
+} from '../../../utils/data/highcharts.data';
 
 @Component({
   selector: 'app-highcharts',

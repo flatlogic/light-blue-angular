@@ -1,9 +1,9 @@
 import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 import mock from './mock';
 import { AnalyticsService } from './analytics.service';
-import { echartPieChartData3, echartAreaChartData } from '../../../utils/echarts.data';
+import { echartPieChartData3, echartAreaChartData } from '../../../utils/data/echarts.data';
 import { CalendarEvent } from 'angular-calendar';
-import { calendarEvents } from '../../../utils/calendar-events.data';
+import { calendarEvents } from '../../../utils/data/calendar-events.data';
 
 @Component({
   selector: 'analytics',

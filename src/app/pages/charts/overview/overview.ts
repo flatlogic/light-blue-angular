@@ -1,8 +1,8 @@
 import { Component, ViewEncapsulation, AfterViewInit, OnDestroy, ViewChildren, QueryList, ChangeDetectionStrategy } from '@angular/core';
 import * as Highcharts from 'highcharts';
 
-import { apexOptions3, apexOptions4 } from '../../../utils/apex-charts.data';
-import { ngxAreaChartData, ngxLineChartData, ngxDoughnutChartData } from '../../../utils/ngx-charts.data';
+import { apexOptions3, apexOptions4 } from '../../../utils/data/apex-charts.data';
+import { ngxAreaChartData, ngxLineChartData, ngxDoughnutChartData } from '../../../utils/data/ngx-charts.data';
 import {
   echartBarChartData3,
   echartBarChartData4,
@@ -11,11 +11,11 @@ import {
   echartAreaChartData2,
   echartDynamicAreaData,
   echartBarChartData
-} from '../../../utils/echarts.data';
+} from '../../../utils/data/echarts.data';
 import {
   highchartsOptions5
-} from '../../../utils/highcharts.data';
-import { ngxGroupedVerticalBarChartData } from '../../../utils/ngx-charts.data';
+} from '../../../utils/data/highcharts.data';
+import { ngxGroupedVerticalBarChartData } from '../../../utils/data/ngx-charts.data';
 import { ChartComponent } from 'ng-apexcharts';
 
 @Component({

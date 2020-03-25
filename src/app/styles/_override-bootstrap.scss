@@ -343,7 +343,7 @@ legend {
   border-radius: $border-radius-lg;
 
   & > li > a {
-    color: $white;
+    color: $white !important;
     font-weight: $font-weight-base;
   }
 }

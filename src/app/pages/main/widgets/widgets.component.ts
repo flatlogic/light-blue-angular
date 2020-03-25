@@ -2,8 +2,8 @@ import { Component, ViewEncapsulation, AfterViewInit, OnDestroy, ViewChildren, Q
 import { ApexOptions, ChartComponent } from 'ng-apexcharts';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 
-import { apexOptions1, apexOptions2 } from '../../../utils/apex-charts.data';
-import { echartLineBarData, echartDynamicAreaData2, echartBarChartData5, echartLineChartData3 } from '../../../utils/echarts.data';
+import { apexOptions1, apexOptions2 } from '../../../utils/data/apex-charts.data';
+import { echartLineBarData, echartDynamicAreaData2, echartBarChartData5, echartLineChartData3 } from '../../../utils/data/echarts.data';
 
 @Component({
   selector: 'widgets',

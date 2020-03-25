@@ -1,0 +1,56 @@
+<ng-template [ngIf]="!closed">
+  <header
+    *ngIf="title || titleTpl || controlsTpl || reloadControl || fullscreenControl || collapseControl || closeControl">
+    <h5 *ngIf="title && !titleTpl" class="title">{{title}}</h5>
+    <ng-template [ngIf]="titleTpl">
+      <div class="title">
+        <ng-container *ngTemplateOutlet="titleTpl"></ng-container>
+      </div>
+    </ng-template>
+    <div *ngIf="!controlsTpl && (reloadControl || fullscreenControl || collapseControl || closeControl)"
+      class="widget-controls">
+      <a *ngIf="reloadControl" (click)="onReload()" tooltip="Reload" [placement]="tooltipPosition"
+        [isDisabled]="!showTooltip">
+        <i class="la la-refresh"></i>
+      </a>
+      <a *ngIf="fullscreenControl && !fullscreened" tooltip="Fullscreen" [placement]="tooltipPosition"
+        [isDisabled]="!showTooltip" (click)="onFullscreenMode()">
+        <i class="glyphicon glyphicon-resize-full"></i>
+      </a>
+      <a *ngIf="fullscreenControl && fullscreened" tooltip="Restore" [placement]="tooltipPosition"
+        [isDisabled]="!showTooltip" (click)="onExitFullscreenMode()">
+        <i class="glyphicon glyphicon-resize-small"></i>
+      </a>
+      <a *ngIf="collapseControl && !collapsed" tooltip="Collapse" [placement]="tooltipPosition"
+        [isDisabled]="!showTooltip" (click)="onCollapse()">
+        <i class="la la-angle-down"></i>
+      </a>
+      <a *ngIf="collapseControl && collapsed" tooltip="Expand" [placement]="tooltipPosition" [isDisabled]="!showTooltip"
+        (click)="onExpand()">
+        <i class="la la-angle-up"></i>
+      </a>
+      <a *ngIf="closeControl" tooltip="Close" [placement]="tooltipPosition" [isDisabled]="!showTooltip"
+        (click)="onClose()">
+        <i class="la la-remove"></i>
+      </a>
+    </div>
+    <ng-template [ngIf]="controlsTpl">
+      <div class="widget-controls">
+        <ng-container *ngTemplateOutlet="controlsTpl"></ng-container>
+      </div>
+    </ng-template>
+  </header>
+  <div class="widget-body" [ngClass]="bodyClass">
+    <ng-container *ngIf="loading">
+      <ng-template [ngIf]="loaderTpl">
+        <ng-container *ngTemplateOutlet="loaderTpl"></ng-container>
+      </ng-template>
+      <div *ngIf="!loaderTpl" style="text-align: center;">
+        Loading...
+      </div>
+    </ng-container>
+    <div class="widget-content" [@slideUpDown]="collapseAnimationState" [class.fetching-data]="loading">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</ng-template>

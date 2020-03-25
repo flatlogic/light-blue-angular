@@ -5,9 +5,9 @@ import {
   echartBarChartData8,
   echartBarChartData9,
   echartBarChartData10
-} from '../../../utils/echarts.data';
+} from '../../../utils/data/echarts.data';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { getRandomInt } from '../../../utils/randomizer';
+import { getRandomInt } from '../../../utils/functions/randomizer';
 
 @Component({
   selector: '[tables-basic]',

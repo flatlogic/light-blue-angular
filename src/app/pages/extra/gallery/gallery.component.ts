@@ -9,7 +9,6 @@ import { GalleryItem, galleryItems, photoswipeItems } from './gallery-items';
 @Component({
   selector: '[extra-gallery]',
   templateUrl: './gallery.template.html',
-  encapsulation: ViewEncapsulation.None,
   styleUrls: ['./gallery.style.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })

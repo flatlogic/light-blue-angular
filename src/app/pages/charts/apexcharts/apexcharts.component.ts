@@ -1,8 +1,8 @@
 import { Component, ViewChildren, QueryList, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
 import { ChartComponent } from 'ng-apexcharts';
 
-import { apexOptions4, apexOptions5, apexOptions6, apexOptions7, apexOptions8, apexOptions9 } from '../../../utils/apex-charts.data';
-import { echartBarChartData3, echartBarChartData4 } from '../../../utils/echarts.data';
+import { apexOptions4, apexOptions5, apexOptions6, apexOptions7, apexOptions8, apexOptions9 } from '../../../utils/data/apex-charts.data';
+import { echartBarChartData3, echartBarChartData4 } from '../../../utils/data/echarts.data';
 
 @Component({
   selector: 'app-apexcharts',
