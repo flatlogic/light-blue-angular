@@ -163,54 +163,58 @@
 </div>
 <div class="row">
   <div class="col-lg-6 col-12">
-    <section class="widget widget-chart-stats-simple" widget>
-      <header>
-        <div class="row">
-          <div class="col-3">
-            <h6>
-              Total Sales
-            </h6>
-            <p class="value5">
-              January, 2014
-            </p>
-          </div>
-          <div class="col-3">
-            <h5>
-              <small class="text-white">Best</small>
-            </h5>
-            <p class="value6 fs-sm">
-              March, 2013 + 1
-            </p>
-          </div>
-        </div>
-        <div class="widget-controls">
-          <a href="#"><i class="la la-cog"></i></a>
-          <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-        </div>
-      </header>
-      <div class="widget-body">
-        <div class="chart-stats">
-          <p class="text-muted fs-mini mt-xs">
-            <i class="fa fa-map-marker fa-5x pull-left"></i>
-            <span class="fw-semi-bold">Jess:</span> Seems like statically it's getting impossible to achieve any sort of
-            results in nearest future. The only thing we can hope for is pressing one of these two buttons:
-          </p>
-          <div class="btn-toolbar">
-            <button class="btn btn-xs btn-success">Accept</button>
-            <button class="btn btn-xs btn-default">Reject</button>
-          </div>
-        </div>
-        <div class="chart">
-          <apx-chart class="chart-inner transparent-bg" [series]="apexOptions1.series" [stroke]="apexOptions1.stroke"
-            [chart]="apexOptions1.chart" [colors]="apexOptions1.colors" [legend]="apexOptions1.legend"
-            [xaxis]="apexOptions1.xaxis" [yaxis]="apexOptions1.yaxis" [grid]="apexOptions1.grid"></apx-chart>
-        </div>
+    <section 
+      class="widget-chart-stats-simple" 
+      widgster 
+      [reloadControl]="false"
+      [fullscreenControl]="false" 
+      [collapseControl]="false"
+    >
+    <div class="row" *widgsterTitle>
+      <div class="col-3">
+        <h6>
+          Total Sales
+        </h6>
+        <p class="value5">
+          January, 2014
+        </p>
       </div>
+      <div class="col-3">
+        <h5>
+          <small class="text-white">Best</small>
+        </h5>
+        <p class="value6 fs-sm">
+          March, 2013 + 1
+        </p>
+      </div>
+    </div>
+    <div class="chart-stats">
+      <p class="text-muted fs-mini mt-xs">
+        <i class="fa fa-map-marker fa-5x pull-left"></i>
+        <span class="fw-semi-bold">Jess:</span> Seems like statically it's getting impossible to achieve any sort of
+        results in nearest future. The only thing we can hope for is pressing one of these two buttons:
+      </p>
+      <div class="btn-toolbar">
+        <button class="btn btn-xs btn-success">Accept</button>
+        <button class="btn btn-xs btn-default">Reject</button>
+      </div>
+    </div>
+    <div class="chart">
+      <apx-chart class="chart-inner transparent-bg" [series]="apexOptions1.series" [stroke]="apexOptions1.stroke"
+        [chart]="apexOptions1.chart" [colors]="apexOptions1.colors" [legend]="apexOptions1.legend"
+        [xaxis]="apexOptions1.xaxis" [yaxis]="apexOptions1.yaxis" [grid]="apexOptions1.grid"></apx-chart>
+    </div>
     </section>
   </div>
   <div class="col-lg-6 col-12">
-    <section class="widget widget-chart-stats-simple" widget>
-      <header>
+    <section 
+      class="widget-chart-stats-simple" 
+      widgster 
+      [reloadControl]="false"
+      [fullscreenControl]="false" 
+      [collapseControl]="false"
+    >
+      <ng-container *widgsterTitle>
         <h6 class="mb-0">
           <span class="fw-semi-bold">Budget</span>&nbsp;<span class="badge badge-pill badge-danger">2017</span>
         </h6>
@@ -219,57 +223,60 @@
           <a href="#"><i class="la la-cog"></i></a>
           <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
         </div>
-      </header>
-      <div class="widget-body">
-        <div class="chart-stats">
-          <div class="row">
-            <div class="col-md-5">
-              <div class="clearfix m-t-1">
-                <h6 class="pull-left text-muted mb-xs">
-                  Income
-                </h6>
-                <p class="pull-right h6 mb-xs">
-                  <span class="fw-semi-bold">$14,595</span>
-                </p>
-              </div>
-              <div class="clearfix">
-                <h6 class="pull-left m-0 text-muted">
-                  Recent
-                </h6>
-                <p class="pull-right">
-                  <span class="fw-semi-bold">$7,647</span>
-                </p>
-              </div>
+      </ng-container>
+      <div class="chart-stats">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="clearfix m-t-1">
+              <h6 class="pull-left text-muted mb-xs">
+                Income
+              </h6>
+              <p class="pull-right h6 mb-xs">
+                <span class="fw-semi-bold">$14,595</span>
+              </p>
             </div>
-            <div class="col-md-3 text-right m-t-1">
-              <h6 class="text-muted mb-xs">Inqueries</h6>
-              <p class="fw-semi-bold">73 at 14am</p>
-            </div>
-            <div class="col-md-4 text-right m-t-1">
-              <h6 class="text-muted mb-xs">Last Updated</h6>
-              <p class="fw-semi-bold">23.06.2013</p>
+            <div class="clearfix">
+              <h6 class="pull-left m-0 text-muted">
+                Recent
+              </h6>
+              <p class="pull-right">
+                <span class="fw-semi-bold">$7,647</span>
+              </p>
             </div>
           </div>
+          <div class="col-md-3 text-right m-t-1">
+            <h6 class="text-muted mb-xs">Inqueries</h6>
+            <p class="fw-semi-bold">73 at 14am</p>
+          </div>
+          <div class="col-md-4 text-right m-t-1">
+            <h6 class="text-muted mb-xs">Last Updated</h6>
+            <p class="fw-semi-bold">23.06.2013</p>
+          </div>
         </div>
-        <div class="chart">
-          <apx-chart class="chart-inner transparent-bg" [series]="apexOptions2.series" [stroke]="apexOptions2.stroke"
-            [chart]="apexOptions2.chart" [colors]="apexOptions2.colors" [legend]="apexOptions2.legend"
-            [xaxis]="apexOptions2.xaxis" [yaxis]="apexOptions2.yaxis" [grid]="apexOptions2.grid"></apx-chart>
-        </div>
+      </div>
+      <div class="chart">
+        <apx-chart class="chart-inner transparent-bg" [series]="apexOptions2.series" [stroke]="apexOptions2.stroke"
+          [chart]="apexOptions2.chart" [colors]="apexOptions2.colors" [legend]="apexOptions2.legend"
+          [xaxis]="apexOptions2.xaxis" [yaxis]="apexOptions2.yaxis" [grid]="apexOptions2.grid"></apx-chart>
       </div>
     </section>
   </div>
 </div>
 <div class="row">
   <div class="col-lg-4 col-12">
-    <section widget class="widget">
-      <header>
-        <div class="widget-controls">
+    <section 
+      class="widget-chart-stats-simple" 
+      widgster 
+      [reloadControl]="false"
+      [fullscreenControl]="false" 
+      [collapseControl]="false"
+      bodyClass="mt-0"
+      footerClass="bg-widget-transparent"
+    >
+        <div *widgsterTitle class="widget-controls">
           <a href="#"><i class="la la-refresh"></i></a>
           <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
         </div>
-      </header>
-      <div class="widget-body mt-0">
         <div class="widget-top-overflow widget-padding-md clearfix bg-warning text-white">
           <h3 class="mt-lg mb-lg">Sing - <span class="fw-semi-bold">Next Generation</span> Admin Dashboard
             Template</h3>
@@ -288,107 +295,97 @@
         <p class="text-light fs-mini m">Lots of cool stuff is happening around you. Just calm down for a sec and listen.
           Colors, sounds,
           thoughts, ideas. </p>
-      </div>
-      <footer class="bg-widget-transparent">
-        <ul class="post-links">
-          <li><a href="#">1 hour</a></li>
-          <li><a href="#"><span class="text-danger"><i class="fa fa-heart"></i> Like</span></a></li>
-          <li><a href="#">Comment</a></li>
-        </ul>
-        <ul class="post-comments mt mb-0">
-          <li>
-            <span class="thumb-xs avatar pull-left mr-sm">
-              <img class="rounded-circle" src="assets/img/people/a1.jpg" alt="...">
-            </span>
-            <div class="comment-body">
-              <h6 class="author fs-sm fw-semi-bold">Ignacio Abad <small>6 mins ago</small></h6>
-              <p class="fs-mini">Hey, have you heard anything about that?</p>
-            </div>
-          </li>
-          <li>
-            <span class="thumb-xs avatar pull-left mr-sm">
-              <img class="rounded-circle" src="assets/img/avatar.png" alt="...">
-            </span>
-            <div class="comment-body">
-              <input class="form-control input-transparent form-control-sm" type="text"
-                placeholder="Write your comment...">
-            </div>
-          </li>
-        </ul>
-      </footer>
+          <ng-container *widgsterFooter>
+            <ul class="post-links">
+              <li><a href="#">1 hour</a></li>
+              <li><a href="#"><span class="text-danger"><i class="fa fa-heart"></i> Like</span></a></li>
+              <li><a href="#">Comment</a></li>
+            </ul>
+            <ul class="post-comments mt mb-0">
+              <li>
+                <span class="thumb-xs avatar pull-left mr-sm">
+                  <img class="rounded-circle" src="assets/img/people/a1.jpg" alt="...">
+                </span>
+                <div class="comment-body">
+                  <h6 class="author fs-sm fw-semi-bold">Ignacio Abad <small>6 mins ago</small></h6>
+                  <p class="fs-mini">Hey, have you heard anything about that?</p>
+                </div>
+              </li>
+              <li>
+                <span class="thumb-xs avatar pull-left mr-sm">
+                  <img class="rounded-circle" src="assets/img/avatar.png" alt="...">
+                </span>
+                <div class="comment-body">
+                  <input class="form-control input-transparent form-control-sm" type="text"
+                    placeholder="Write your comment...">
+                </div>
+              </li>
+            </ul>
+          </ng-container>
     </section>
   </div>
   <div class="col-lg-4 col-12">
-    <section class="widget">
-      <header>
-        <div class="widget-controls">
-          <a href="#"><i class="la la-refresh"></i></a>
-          <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-        </div>
-      </header>
-      <div class="widget-body mt-0">
-        <div class="widget-top-overflow text-white">
-          <img src="assets/img/pictures/17.jpg">
-          <ul class="tags text-white pull-right">
-            <li><a href="#">design</a></li>
-            <li><a href="#">white</a></li>
-          </ul>
-        </div>
-        <div class="post-user mt-3">
-          <span class="thumb pull-left mr mt-n-sm">
-            <img class="rounded-circle" src="assets/img/people/a6.jpg" alt="...">
-          </span>
-          <h6 class="mb-xs"><span class="fw-semi-bold">Maryna</span> Nilson</h6>
-          <p class="fs-mini text-muted"><time>25 mins</time> &nbsp; <i class="fa fa-map-marker"></i> &nbsp; near
-            Amsterdam</p>
-        </div>
-        <p class="text-light fs-mini m">Lots of cool stuff is happening around you. Just calm down for a sec and listen.
-          Colors, sounds,
-          thoughts, ideas. </p>
-      </div>
-      <footer class="bg-widget-transparent">
-        <ul class="post-links no-separator">
-          <li><a href="#"><span class="text-danger"><i class="fa fa-heart"></i> 427</span></a></li>
-          <li><a href="#"><i class="glyphicon glyphicon-comment"></i> 98</a></li>
-        </ul>
-      </footer>
+    <section 
+      widgster 
+      [fullscreenControl]="false" 
+      [collapseControl]="false"
+      bodyClass="mt-0"
+      footerClass="bg-widget-transparent"
+    >
+    <div class="widget-top-overflow text-white">
+      <img src="assets/img/pictures/17.jpg">
+      <ul class="tags text-white pull-right">
+        <li><a href="#">design</a></li>
+        <li><a href="#">white</a></li>
+      </ul>
+    </div>
+    <div class="post-user mt-3">
+      <span class="thumb pull-left mr mt-n-sm">
+        <img class="rounded-circle" src="assets/img/people/a6.jpg" alt="...">
+      </span>
+      <h6 class="mb-xs"><span class="fw-semi-bold">Maryna</span> Nilson</h6>
+      <p class="fs-mini text-muted"><time>25 mins</time> &nbsp; <i class="fa fa-map-marker"></i> &nbsp; near
+        Amsterdam</p>
+    </div>
+    <p class="text-light fs-mini m">Lots of cool stuff is happening around you. Just calm down for a sec and listen.
+      Colors, sounds,
+      thoughts, ideas. </p>
+      <ul *widgsterFooter class="post-links no-separator">
+        <li><a href="#"><span class="text-danger"><i class="fa fa-heart"></i> 427</span></a></li>
+        <li><a href="#"><i class="glyphicon glyphicon-comment"></i> 98</a></li>
+      </ul>
     </section>
   </div>
   <div class="col-lg-4 col-12">
-    <section widget class="widget">
-      <header>
-        <div class="widget-controls">
-          <a href="#"><i class="la la-refresh"></i></a>
-          <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-        </div>
-      </header>
-      <div class="widget-body">
-        <div class="post-user mt-n-xs">
-          <span class="thumb pull-left mr mt-n-sm">
-            <img class="rounded-circle" src="assets/img/people/a2.jpg" alt="...">
-          </span>
-          <h6 class="mb-xs mt-xs">Jess <span class="fw-semi-bold">@jessica</span></h6>
-          <p class="fs-mini text-muted"><time>25 mins</time> &nbsp; <i class="fa fa-map-marker"></i> &nbsp; near
-            Amsterdam</p>
-        </div>
-        <div class="widget-middle-overflow widget-padding-md clearfix bg-danger text-white">
-          <h3 class="mt-lg mb-lg">Sing - <span class="fw-semi-bold">Next Generation</span> Admin Dashboard
-            Template</h3>
-          <ul class="tags text-white pull-right">
-            <li><a href="#">design</a></li>
-          </ul>
-        </div>
-        <p class="text-light fs-mini mt-sm">Lots of cool stuff is happening around you. Just calm down for a sec and
-          listen. Colors, sounds,
-          thoughts, ideas. </p>
-      </div>
-      <footer class="bg-widget-transparent">
-        <ul class="post-links">
-          <li><a href="#">1 hour</a></li>
-          <li><a href="#"><span class="text-danger"><i class="fa fa-heart"></i> Like</span></a></li>
-          <li><a href="#">Comment</a></li>
-        </ul>
-      </footer>
+    <section 
+      widgster 
+      [fullscreenControl]="false" 
+      [collapseControl]="false"
+      footerClass="bg-widget-transparent"
+    >
+    <div class="post-user mt-n-xs">
+      <span class="thumb pull-left mr mt-n-sm">
+        <img class="rounded-circle" src="assets/img/people/a2.jpg" alt="...">
+      </span>
+      <h6 class="mb-xs mt-xs">Jess <span class="fw-semi-bold">@jessica</span></h6>
+      <p class="fs-mini text-muted"><time>25 mins</time> &nbsp; <i class="fa fa-map-marker"></i> &nbsp; near
+        Amsterdam</p>
+    </div>
+    <div class="widget-middle-overflow widget-padding-md clearfix bg-danger text-white">
+      <h3 class="mt-lg mb-lg">Sing - <span class="fw-semi-bold">Next Generation</span> Admin Dashboard
+        Template</h3>
+      <ul class="tags text-white pull-right">
+        <li><a href="#">design</a></li>
+      </ul>
+    </div>
+    <p class="text-light fs-mini mt-sm">Lots of cool stuff is happening around you. Just calm down for a sec and
+      listen. Colors, sounds,
+      thoughts, ideas. </p>
+      <ul *widgsterFooter class="post-links">
+        <li><a href="#">1 hour</a></li>
+        <li><a href="#"><span class="text-danger"><i class="fa fa-heart"></i> Like</span></a></li>
+        <li><a href="#">Comment</a></li>
+      </ul>
     </section>
   </div>
 </div>
@@ -707,9 +704,19 @@
     </section>
   </div>
   <div class="col-lg-3 col-12">
-    <section widget class="widget widget-chart-changes" changes-chart-widget [mainData]="echartLineBarData"
+    <section 
+      widgster 
+      class="widget-chart-changes"
+      [reloadControl]="false"
+      [fullscreenControl]="false" 
+      [collapseControl]="false"
+      [closeControl]="false"
+      bodyClass="mt-0"
+    >
+    <section changes-chart-widget [mainData]="echartLineBarData"
       [changesData]="echartBarChartData5">
     </section>
+  </section>
   </div>
   <div class="col-lg-3 col-12">
     <section class="widget widget-padding-lg bg-primary text-white">
