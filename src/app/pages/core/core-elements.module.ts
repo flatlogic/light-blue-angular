@@ -7,6 +7,7 @@ import { WidgetModule } from '../../layout/widget/widget.module';
 import { TypographyComponent } from './typography/typography.component';
 import { ColorsComponent } from './colors/colors.component';
 import { GridComponent } from './grid/grid.component';
+import { WidgsterModule } from '../../components/widgster/widgster.module';
 
 export const routes = [
   { path: '', redirectTo: 'typography', pathMatch: 'full' },
@@ -26,7 +27,8 @@ export const routes = [
     CommonModule,
     FormsModule,
     RouterModule.forChild(routes),
-    WidgetModule
+    WidgetModule,
+    WidgsterModule
   ]
 })
 export class CoreElementsModule {
