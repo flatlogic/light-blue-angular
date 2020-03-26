@@ -5,12 +5,10 @@
 <h1 class="page-title">Ngx Charts</h1>
 <div class="row">
   <div class="col-12 col-lg-6">
-    <widget
-      [title]="'<h5> Ngx <span class=fw-semi-bold>Line Chart</span></h5>'"
-      [close]="true"
-      [collapse]="true"
-      [customHeader]="true"
-    >
+    <section widgster [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Ngx <span class=fw-semi-bold>Line Chart</span>
+      </h5>
       <div>
         <div class="text-center" style="height: 343px;">
           <ngx-charts-line-chart
@@ -30,15 +28,13 @@
           </ngx-charts-line-chart>
         </div>
       </div>
-    </widget>
+    </section>
   </div>
   <div class="col-12 col-lg-6">
-    <widget
-      [title]="'<h5> Ngx <span class=fw-semi-bold>Area Chart</span></h5>'"
-      [close]="true"
-      [collapse]="true"
-      [customHeader]="true"
-    >
+    <section widgster [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Ngx <span class=fw-semi-bold>Area Chart</span>
+      </h5>
       <div>
         <div class="text-center" style="height: 343px;">
           <ngx-charts-area-chart
@@ -57,15 +53,13 @@
           </ngx-charts-area-chart>
         </div>
       </div>
-    </widget>
+    </section>
   </div>
   <div class="col-12 col-lg-5">
-    <widget
-      [title]="'<h5> Ngx <span class=fw-semi-bold>Bar Chart</span></h5>'"
-      [close]="true"
-      [collapse]="true"
-      [customHeader]="true"
-    >
+    <section widgster [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Ngx <span class=fw-semi-bold>Bar Chart</span>
+      </h5>
       <div>
         <div class="text-center" style="height: 260px;">
             <ngx-charts-bar-vertical
@@ -90,18 +84,17 @@
           really couldn&apos;t be easier.
         </p>
       </div>
-    </widget>
+    </section>
   </div>
   <div class="col-12 col-lg-3">
-    <widget
-      [title]="'<h5> Ngx <span class=fw-semi-bold>Donut Chart</span></h5>'"
-      [close]="true"
-      [collapse]="true"
-      [customHeader]="true"
-    >
+    <section widgster [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Ngx <span class=fw-semi-bold>Donut Chart</span>
+      </h5>
       <div>
         <div class="text-center" style="height: 180px;">
             <ngx-charts-pie-chart
+              *ngIf="ngxDoughnutChartData"
               [scheme]="ngxDoughnutChartData.colorScheme"
               [results]="ngxDoughnutChartData.results"
               [gradient]="ngxDoughnutChartData.gradient"
@@ -118,15 +111,13 @@
           etc. This really couldn&apos;t be easier.
         </p>
       </div>
-    </widget>
+    </section>
   </div>
   <div class="col-12 col-lg-4">
-    <widget
-      [title]="'<h5> Ngx <span class=fw-semi-bold>Bar Chart 2</span></h5>'"
-      [close]="true"
-      [collapse]="true"
-      [customHeader]="true"
-    >
+    <section widgster [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Ngx <span class=fw-semi-bold>Bar Chart 2</span>
+      </h5>
       <div>
         <div class="text-center" style="height: 243px;">
           <ngx-charts-bar-vertical-2d
@@ -152,15 +143,13 @@
           really couldn&apos;t be easier.
         </p>
       </div>
-    </widget>
+    </section>
   </div>
   <div class="col-12">
-    <widget
-      [title]="'<h5> Ngx <span class=fw-semi-bold>Stacked Bar Chart</span></h5>'"
-      [close]="true"
-      [collapse]="true"
-      [customHeader]="true"
-    >
+    <section widgster [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Ngx <span class=fw-semi-bold>Stacked Bar Chart</span>
+      </h5>
       <div>
         <div class="text-center" style="height: 200px;">
           <ngx-charts-bar-vertical-stacked
@@ -185,6 +174,6 @@
           can be seen above.
         </p>
       </div>
-    </widget>
+    </section>
   </div>
 </div>

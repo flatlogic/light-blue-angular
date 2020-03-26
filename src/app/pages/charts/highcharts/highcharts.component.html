@@ -6,82 +6,81 @@
 <h1 class="page-title">Visual - <span class="fw-semi-bold">Highcharts</span></h1>
 <div class="row">
   <div class="col-12">
-    <widget [title]="'<h5>Highcharts stocks chart</h5>'" [close]="true" [collapse]="true" [customHeader]="true">
+    <section widgster [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Highcharts stocks chart
+      </h5>
       <div class="text-center">
-        <highcharts-chart 
-          style="width: 100%; display: block" 
-          [Highcharts]="Highstock" 
-          constructorType="stockChart"
-          [options]="highchartsOptions1"
-          [runOutsideAngular]="true">
+        <highcharts-chart *ngIf="highchartsOptions1" style="width: 100%; display: block" [Highcharts]="Highstock" constructorType="stockChart"
+          [options]="highchartsOptions1" [runOutsideAngular]="true">
         </highcharts-chart>
       </div>
-    </widget>
+    </section>
   </div>
 </div>
 <div class="row">
   <div class="col-12 col-lg-6">
-    <widget [title]="'<h5>Highcharts Pie Chart</h5>'" [close]="true" [collapse]="true" [customHeader]="true">
+    <section widgster [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Highcharts Pie Chart
+      </h5>
       <div class="text-center">
-        <highcharts-chart 
-          style="width: 100%; display: block" 
-          [Highcharts]="Highcharts" 
-          [options]="highchartsOptions2"
-          [runOutsideAngular]="true">
+        <highcharts-chart style="width: 100%; display: block" *ngIf="highchartsOptions2" [Highcharts]="Highcharts"
+          [options]="highchartsOptions2" [runOutsideAngular]="true">
         </highcharts-chart>
       </div>
-    </widget>
+    </section>
   </div>
   <div class="col-12 col-lg-6">
-    <widget [title]="'<h5>Highcharts area</h5>'" [close]="true" [collapse]="true" [customHeader]="true">
+    <section widgster [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Highcharts area
+      </h5>
       <div class="text-center">
-        <highcharts-chart 
-          style="width: 100%; display: block" 
-          [Highcharts]="Highcharts" 
-          [options]="highchartsOptions3"
-          [runOutsideAngular]="true">
+        <highcharts-chart *ngIf="highchartsOptions3" style="width: 100%; display: block" [Highcharts]="Highcharts"
+          [options]="highchartsOptions3" [runOutsideAngular]="true">
         </highcharts-chart>
       </div>
-    </widget>
+    </section>
   </div>
 </div>
 <div class="row">
   <div class="col-12 col-lg-6">
-    <widget [title]="'<h5>Highcharts Sunburst Chart</h5>'" [close]="true" [collapse]="true" [customHeader]="true">
+    <section widgster [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Highcharts Sunburst Chart
+      </h5>
       <div class="text-center">
-        <highcharts-chart 
-          style="width: 100%; display: block" 
-          [Highcharts]="Highcharts" 
-          [options]="highchartsOptions4"
-          [runOutsideAngular]="true">
+        <highcharts-chart style="width: 100%; display: block" *ngIf="highchartsOptions4" [Highcharts]="Highcharts"
+          [options]="highchartsOptions4" [runOutsideAngular]="true">
         </highcharts-chart>
       </div>
-    </widget>
+    </section>
   </div>
   <div class="col-12 col-lg-6">
-    <widget [title]="'<h5>Highcharts Bar Chart</h5>'" [close]="true" [collapse]="true" [customHeader]="true">
+    <section widgster [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Highcharts Bar Chart
+      </h5>
       <div class="text-center">
-        <highcharts-chart 
-          style="width: 100%; display: block" 
-          [Highcharts]="Highcharts" 
-          [options]="highchartsOptions6"
-          [runOutsideAngular]="true">
+        <highcharts-chart style="width: 100%; display: block" *ngIf="highchartsOptions6" [Highcharts]="Highcharts"
+          [options]="highchartsOptions6" [runOutsideAngular]="true">
         </highcharts-chart>
       </div>
-    </widget>
+    </section>
   </div>
 </div>
 <div class="row">
   <div class="col-12">
-    <widget [title]="'<h5>Highcharts Line Charts</h5>'" [close]="true" [collapse]="true" [customHeader]="true">
+    <section widgster [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Highcharts Line Charts
+      </h5>
       <div class="text-center">
-        <highcharts-chart 
-          style="width: 100%; display: block" 
-          [Highcharts]="Highcharts" 
-          [options]="highchartsOptions5"
-          [runOutsideAngular]="true">
+        <highcharts-chart style="width: 100%; display: block" *ngIf="highchartsOptions5" [Highcharts]="Highcharts"
+          [options]="highchartsOptions5" [runOutsideAngular]="true">
         </highcharts-chart>
       </div>
-    </widget>
+    </section>
   </div>
 </div>

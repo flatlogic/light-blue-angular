@@ -5,8 +5,10 @@
 <h1 class="page-title">Echarts</h1>
 <div class="row">
   <div class="col-12 col-lg-6 col-xl-5">
-    <widget [title]="'<h5>Echarts <span class=fw-semi-bold>Bar Chart</span></h5>'" [close]="true" [collapse]="true"
-      [customHeader]="true">
+    <section widgster [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Echarts <span class=fw-semi-bold>Bar Chart</span>
+      </h5>
       <div style="height: 220px;" class="chart-overflow-bottom" echarts [options]="echartBarChartData"></div>
       <div class="stats-row text-muted mt-xlg">
         <div class="stat-item">
@@ -35,11 +37,13 @@
           <span class="badge badge-danger">Loss</span> Legend Item Emulation
         </small>
       </div>
-    </widget>
+    </section>
   </div>
   <div class="col-12 col-lg-6 col-xl-4">
-    <widget [title]="'<h5>Echarts <span class=fw-semi-bold>Pie Chart</span></h5>'" [close]="true" [collapse]="true"
-      [customHeader]="true">
+    <section widgster [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Echarts <span class=fw-semi-bold>Pie Chart</span>
+      </h5>
       <div style="height: 200px;" echarts [options]="echartPieChartData"></div>
       <alert class="text-muted" [type]="'white'" [isOpen]="true" [dismissible]="true">
         <h5>Sales Report</h5>
@@ -48,11 +52,13 @@
           <small>Prev year quota achievement 16%. Should work harder!</small>
         </p>
       </alert>
-    </widget>
+    </section>
   </div>
   <div class="col-12 col-lg-6 col-xl-3">
-    <widget [title]="'<h5>Mixed <span class=fw-semi-bold>Echarts</span></h5>'" [close]="true" [collapse]="true"
-      [customHeader]="true">
+    <section widgster [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Mixed <span class=fw-semi-bold>Echarts</span>
+      </h5>
       <div class="stats-row text-muted mt">
         <div class="stat-item">
           <h6 class="name">Overall Growth</h6>
@@ -73,13 +79,15 @@
         [options]="echartAreaChartData"
         >
       </div>
-    </widget>
+    </section>
   </div>
 </div>
 <div class="row">
   <div class="col-12 col-lg-7 col-xl-9">
-    <widget [title]="'<h5>Echarts <span class=fw-semi-bold>Area Chart</span></h5>'" [close]="true" [collapse]="true"
-      [customHeader]="true">
+    <section widgster [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Echarts <span class=fw-semi-bold>Area Chart</span>
+      </h5>
       <div 
         style="height: 200px;" 
         class="chart-overflow-bottom" 
@@ -87,11 +95,13 @@
         [options]="echartLineChartData"
         >
       </div>
-    </widget>
+    </section>
   </div>
   <div class="col-12 col-lg-5 col-xl-3">
-    <widget [title]="'<h5>Echarts <span class=fw-semi-bold>Pie Chart</span></h5>'" [close]="true" [collapse]="true"
-      [customHeader]="true">
+    <section widgster [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Echarts <span class=fw-semi-bold>Pie Chart</span>
+      </h5>
       <div 
         style="height: 120px;" 
         class="chart-overflow-bottom" 
@@ -107,11 +117,13 @@
           <button class="btn btn-light">Dancing</button>
         </div>
       </div>
-    </widget>
+    </section>
   </div>
   <div class="col-12 col-lg-6">
-    <widget [title]="'<h5>Echarts <span class=fw-semi-bold>Bar Chart</span></h5>'" [close]="true" [collapse]="true"
-      [customHeader]="true">
+    <section widgster [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Echarts <span class=fw-semi-bold>Bar Chart</span>
+      </h5>
       <div class="input-group input-group-transparent">
         <input class="form-control" type="text" size="16" placeholder="Filter By Period: MM/DD/YYY" />
         <div class="input-group-append bg-white" slot="append">
@@ -125,11 +137,13 @@
         [options]="echartBarChartData2"
         >
       </div>
-    </widget>
+    </section>
   </div>
   <div class="col-12 col-lg-6">
-    <widget [title]="'<h5>Echarts <span class=fw-semi-bold>Line Chart</span></h5>'" [close]="true" [collapse]="true"
-      [customHeader]="true">
+    <section widgster [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Echarts <span class=fw-semi-bold>Line Chart</span>
+      </h5>
       <div 
         style="height: 200px;" 
         class="chart-overflow-bottom" 
@@ -137,6 +151,6 @@
         [options]="echartLineChartData2"
         >
       </div>
-    </widget>
+    </section>
   </div>
 </div>

@@ -14,6 +14,7 @@ import { NgApexchartsModule } from 'ng-apexcharts';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { HighchartsChartModule } from 'highcharts-angular';
+import { WidgsterModule } from '../../components/widgster/widgster.module';
 
 export const routes = [
   { path: '', redirectTo: 'overview', pathMatch: 'full' },
@@ -35,7 +36,8 @@ export const routes = [
     NgApexchartsModule,
     NgxChartsModule,
     NgxEchartsModule,
-    HighchartsChartModule
+    HighchartsChartModule,
+    WidgsterModule
   ],
   declarations: [
     OverviewComponent,

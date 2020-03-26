@@ -32,7 +32,7 @@ export class OverviewComponent implements AfterViewInit, OnDestroy {
 
   public ngxAreaChartData: any = ngxAreaChartData;
   public ngxLineChartData: any = ngxLineChartData;
-  public ngxDoughnutChartData: any = ngxDoughnutChartData;
+  public ngxDoughnutChartData: any;
 
   public echartBarChartData3: any = echartBarChartData3;
   public echartBarChartData4: any = echartBarChartData4;
@@ -43,13 +43,14 @@ export class OverviewComponent implements AfterViewInit, OnDestroy {
   public echartDynamicAreaDataUpdate: any;
   echartBarChartData = echartBarChartData;
 
-  Highcharts = Highcharts;
-  highchartsOptions5 = highchartsOptions5;
-  ngxGroupedVerticalBarChartData = ngxGroupedVerticalBarChartData;
+  public Highcharts = Highcharts;
+  public highchartsOptions5: any;
+  public ngxGroupedVerticalBarChartData = ngxGroupedVerticalBarChartData;
 
   private interval: any;
 
   public ngAfterViewInit(): void {
+    this.init();
     this.interval = setInterval(() => {
       const data1: any = this.echartDynamicAreaData.series[0].data;
       const data2: any = this.echartDynamicAreaData.series[1].data;
@@ -71,5 +72,11 @@ export class OverviewComponent implements AfterViewInit, OnDestroy {
     this.apexchartsList.forEach((c: ChartComponent) => {
       if (Boolean(c)) { c.destroy(); }
     });
+  }
+
+  private init(): void {
+    // some charts can't calculate correct width
+    this.highchartsOptions5 = highchartsOptions5;
+    this.ngxDoughnutChartData = ngxDoughnutChartData;
   }
 }

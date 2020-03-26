@@ -5,8 +5,10 @@
 <h1 class="page-title">Apex Charts</h1>
 <div class="row">
   <div class="col-12 col-lg-6 col-xl-5">
-    <widget [title]="'<h5>Apex <span class=fw-semi-bold>Mixed Chart</span></h5>'" [close]="true"
-      [collapse]="true" [customHeader]="true">
+    <section widgster [fullscreenControl]="false" [collapseControl]="false">
+      <h5 *widgsterTitle>
+        Apex <span class=fw-semi-bold>Mixed Chart</span>
+      </h5>
       <apx-chart 
         class="chart-inner transparent-bg" 
         [series]="apexOptions5.series" 
@@ -44,11 +46,13 @@
           </div>
         </div>
       </div>
-    </widget>
+    </section>
   </div>
   <div class="col-12 col-lg-6 col-xl-7">
-    <widget [title]="'<h5>Apex <span class=fw-semi-bold>Line chart</span></h5>'" [close]="true" [collapse]="true"
-      [customHeader]="true">
+    <section widgster [fullscreenControl]="false" [collapseControl]="false">
+      <h5 *widgsterTitle>
+        Apex <span class=fw-semi-bold>Line chart</span>
+      </h5>
       <div class="mt mb">
         <apx-chart 
           class="chart-inner transparent-bg" 
@@ -63,42 +67,48 @@
           [tooltip]="apexOptions6.tooltip">
         </apx-chart>
       </div>
-    </widget>
+    </section>
   </div>
   <div class="col-12 col-lg-7">
-    <widget [title]="'<h5>Apex <span class=fw-semi-bold>Bars</span></h5>'" [close]="true" [collapse]="true"
-      [customHeader]="true">
+    <section widgster [fullscreenControl]="false" [collapseControl]="false">
+      <h5 *widgsterTitle>
+        Apex <span class=fw-semi-bold>Bars</span>
+      </h5>
       <div class="mt mb">
         <apx-chart class="chart-inner transparent-bg" [chart]="apexOptions4.chart"
           [plotOptions]="apexOptions4.plotOptions" [dataLabels]="apexOptions4.dataLabels" [stroke]="apexOptions4.stroke"
           [series]="apexOptions4.series" [xaxis]="apexOptions4.xaxis" [yaxis]="apexOptions4.yaxis" [colors]="apexOptions4.colors"
           [legend]="apexOptions4.legend" [tooltip]="apexOptions4.tooltip" [grid]="apexOptions4.grid"></apx-chart>
       </div>
-    </widget>
+    </section>
   </div>
   <div class="col-12 col-lg-5">
-    <widget class="mb-xlg" [title]="'<h5>Apex <span class=fw-semi-bold>Pie Chart</span></h5>'" [close]="true"
-      [collapse]="true" [customHeader]="true">
+    <section widgster [fullscreenControl]="false" [collapseControl]="false">
+      <h5 *widgsterTitle>
+        Apex <span class=fw-semi-bold>Pie Chart</span>
+      </h5>
       <div class="mt mb">
         <apx-chart class="chart-inner transparent-bg" [chart]="apexOptions7.chart" [series]="apexOptions7.series"
           [labels]="apexOptions7.labels" [legend]="apexOptions7.legend" [colors]="apexOptions7.colors"></apx-chart>
       </div>
-    </widget>
-    <widget class="mb-xlg" [title]="'<h5>Apex <span class=fw-semi-bold>Donut Chart</span></h5>'" [close]="true"
-      [collapse]="true" [customHeader]="true">
+    </section>
+    <section widgster [fullscreenControl]="false" [collapseControl]="false">
+      <h5 *widgsterTitle>
+        Apex <span class=fw-semi-bold>Donut Chart</span>
+      </h5>
       <apx-chart class="chart-inner transparent-bg" [chart]="apexOptions8.chart" [series]="apexOptions8.series"
         [labels]="apexOptions8.labels" [legend]="apexOptions8.legend" [colors]="apexOptions8.colors"></apx-chart>
-    </widget>
+    </section>
   </div>
   <div class="col-12">
-    <widget class="mb-xlg" [title]="'<h5>Apex <span class=fw-semi-bold>Bars Stacked</span></h5>'" [close]="true"
-      [collapse]="true" [customHeader]="true">
-      <div class="mt mb">
-        <apx-chart class="chart-inner transparent-bg" [chart]="apexOptions9.chart" [series]="apexOptions9.series"
+    <section widgster [fullscreenControl]="false" [collapseControl]="false">
+      <h5 *widgsterTitle>
+        Apex <span class=fw-semi-bold>Bars Stacked</span>
+      </h5>
+      <apx-chart class="chart-inner transparent-bg" [chart]="apexOptions9.chart" [series]="apexOptions9.series"
           [plotOptions]="apexOptions9.plotOptions" [colors]="apexOptions9.colors"
           [dataLabels]="apexOptions9.dataLabels" [legend]="apexOptions9.legend"
           [xaxis]="apexOptions9.xaxis" [yaxis]="apexOptions9.yaxis"></apx-chart>
-      </div>
-    </widget>
+    </section>
   </div>
 </div>
