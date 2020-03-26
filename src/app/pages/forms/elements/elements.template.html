@@ -5,992 +5,893 @@
 <h1 class="page-title">Form - <span class="fw-semi-bold">Inputs & Controls</span></h1>
 <div class="row">
   <div class="col-lg-6">
-    <section class="widget" widget>
-      <header>
-        <h6>
-          Inputs
-        </h6>
-        <div class="widget-controls">
-          <a href="#"><i class="la la-cog"></i></a>
-          <a href="#"><i class="la la-refresh"></i></a>
-          <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-        </div>
-      </header>
-      <div class="widget-body">
-        <form class="form-horizontal" role="form">
-          <fieldset>
-            <legend><strong>Horizontal</strong> form</legend>
-            <div class="form-group row">
-              <label for="normal-field" class="col-md-4  col-form-label text-md-right">Normal field</label>
-              <div class="col-md-7 ">
-                <input type="text" id="normal-field" class="form-control input-transparent"
-                  placeholder="May have placeholder">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="hint-field" class="col-md-4 col-form-label text-md-right">
-                Label hint
-                <span class="help-block">Some help text</span>
-              </label>
-              <div class="col-md-7 ">
-                <input type="text" id="hint-field" class="form-control input-transparent">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-md-4  col-form-label text-md-right" for="tooltip-enabled">Tooltip enabled</label>
-              <div class="col-md-7 ">
-                <input type="text" id="tooltip-enabled" class="form-control input-transparent" placement="top"
-                  tooltip="Some explanation text here" placeholder="Hover over me..">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-md-4  col-form-label text-md-right" for="disabled-input">Disabled input</label>
-              <div class="col-md-7 ">
-                <input type="text" id="disabled-input" class="form-control input-transparent" disabled="disabled"
-                  value="Default value">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-md-4  col-form-label text-md-right" for="max-length">Max length</label>
-              <div class="col-md-7 ">
-                <input type="text" id="max-length" maxlength="3" class="form-control input-transparent"
-                  placeholder="Max length 3 characters" placement="top"
-                  tooltip="You cannot write more than 3 characters.">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-md-4  col-form-label text-md-right" for="prepended-input">Prepended input</label>
-              <div class="col-md-7 ">
-                <div class="input-group input-group-transparent">
-                  <span class="input-group-addon">
-                    <i class="fa fa-user"></i>
-                  </span>
-                  <input id="prepended-input" class="form-control input-transparent" size="16" type="text"
-                    placeholder="Username">
-                </div>
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-md-4  col-form-label text-md-right" for="password-field">Password</label>
-              <div class="col-md-7 ">
-                <div class="input-group input-group-transparent">
-                  <span class="input-group-addon">
-                    <i class="fa fa-lock"></i>
-                  </span>
-                  <input type="password" class="form-control input-transparent" id="password-field"
-                    placeholder="Password">
-                </div>
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-md-4  col-form-label text-md-right" for="appended-input">Appended input</label>
-              <div class="col-md-7 ">
-                <div class="input-group input-group-transparent">
-                  <input id="appended-input" class="form-control input-transparent" size="16" type="text">
-                  <span class="input-group-addon">
-                    .00
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-md-4  col-form-label text-md-right" for="combined-input">Combined</label>
-              <div class="col-md-7 ">
-                <div class="input-group input-group-transparent">
-                  <span class="input-group-addon">
-                    $
-                  </span>
-                  <input id="combined-input" class="form-control input-transparent" size="16" type="text">
-                  <span class="input-group-addon">
-                    .00
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-md-4  col-form-label text-md-right" for="transparent-input">
-                Append Transparent
-              </label>
-              <div class="col-md-7 ">
-                <div class="input-group input-group-transparent">
-                  <input id="transparent-input" class="form-control input-transparent" type="text">
-                  <span class="input-group-addon">
-                    <i class="fa fa-camera"></i>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </fieldset>
-          <div class="form-actions">
-            <div class="text-center">
-              <button type="submit" class="btn btn-primary">Save Changes</button>
-              <button type="button" class="btn btn-inverse ml-xs">Cancel</button>
+    <section widgster [fullscreenControl]="false" [collapseControl]="false">
+      <h6 *widgsterTitle>
+        Inputs
+      </h6>
+      <form class="form-horizontal" role="form">
+        <fieldset>
+          <legend><strong>Horizontal</strong> form</legend>
+          <div class="form-group row">
+            <label for="normal-field" class="col-md-4  col-form-label text-md-right">Normal field</label>
+            <div class="col-md-7 ">
+              <input type="text" id="normal-field" class="form-control input-transparent"
+                placeholder="May have placeholder">
             </div>
           </div>
-        </form>
-      </div>
+          <div class="form-group row">
+            <label for="hint-field" class="col-md-4 col-form-label text-md-right">
+              Label hint
+              <span class="help-block">Some help text</span>
+            </label>
+            <div class="col-md-7 ">
+              <input type="text" id="hint-field" class="form-control input-transparent">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-4  col-form-label text-md-right" for="tooltip-enabled">Tooltip enabled</label>
+            <div class="col-md-7 ">
+              <input type="text" id="tooltip-enabled" class="form-control input-transparent" placement="top"
+                tooltip="Some explanation text here" placeholder="Hover over me..">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-4  col-form-label text-md-right" for="disabled-input">Disabled input</label>
+            <div class="col-md-7 ">
+              <input type="text" id="disabled-input" class="form-control input-transparent" disabled="disabled"
+                value="Default value">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-4  col-form-label text-md-right" for="max-length">Max length</label>
+            <div class="col-md-7 ">
+              <input type="text" id="max-length" maxlength="3" class="form-control input-transparent"
+                placeholder="Max length 3 characters" placement="top"
+                tooltip="You cannot write more than 3 characters.">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-4  col-form-label text-md-right" for="prepended-input">Prepended input</label>
+            <div class="col-md-7 ">
+              <div class="input-group input-group-transparent">
+                <span class="input-group-addon">
+                  <i class="fa fa-user"></i>
+                </span>
+                <input id="prepended-input" class="form-control input-transparent" size="16" type="text"
+                  placeholder="Username">
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-4  col-form-label text-md-right" for="password-field">Password</label>
+            <div class="col-md-7 ">
+              <div class="input-group input-group-transparent">
+                <span class="input-group-addon">
+                  <i class="fa fa-lock"></i>
+                </span>
+                <input type="password" class="form-control input-transparent" id="password-field"
+                  placeholder="Password">
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-4  col-form-label text-md-right" for="appended-input">Appended input</label>
+            <div class="col-md-7 ">
+              <div class="input-group input-group-transparent">
+                <input id="appended-input" class="form-control input-transparent" size="16" type="text">
+                <span class="input-group-addon">
+                  .00
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-4  col-form-label text-md-right" for="combined-input">Combined</label>
+            <div class="col-md-7 ">
+              <div class="input-group input-group-transparent">
+                <span class="input-group-addon">
+                  $
+                </span>
+                <input id="combined-input" class="form-control input-transparent" size="16" type="text">
+                <span class="input-group-addon">
+                  .00
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-4  col-form-label text-md-right" for="transparent-input">
+              Append Transparent
+            </label>
+            <div class="col-md-7 ">
+              <div class="input-group input-group-transparent">
+                <input id="transparent-input" class="form-control input-transparent" type="text">
+                <span class="input-group-addon">
+                  <i class="fa fa-camera"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <div class="form-actions">
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+            <button type="button" class="btn btn-inverse ml-xs">Cancel</button>
+          </div>
+        </div>
+      </form>
     </section>
   </div>
   <div class="col-lg-6">
-    <section class="widget" widget>
-      <header>
-        <h6>
-          Prepended and appended inputs
-        </h6>
-        <div class="widget-controls">
-          <a href="#"><i class="la la-cog"></i></a>
-          <a href="#"><i class="la la-refresh"></i></a>
-          <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-        </div>
-      </header>
-      <div class="widget-body">
-        <form role="form">
-          <fieldset>
-            <legend><strong>Default</strong> Form</legend>
-            <div class="row">
-              <div class="col-md-8 ">
-                <div class="form-group">
-                  <label for="search-input">Search type input</label>
-                  <div class="input-group input-group-transparent">
-                    <input type="text" class="form-control input-transparent" id="search-input">
-                    <span class="input-group-btn">
-                      <button type="button" class="btn btn-default">Search</button>
-                    </span>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="bar">Whole bar appended</label>
-                  <div class="input-group input-group-transparent">
-                    <input type="text" class="form-control input-transparent" id="bar">
-                    <div class="input-group-btn">
-                      <button type="button" class="btn btn-danger"><i class="fa fa-pencil"></i></button>
-                      <button type="button" class="btn btn-warning"><i class="fa fa-plus"></i></button>
-                      <button type="button" class="btn btn-success"><i class="fa fa-refresh"></i></button>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="dropdown-appended">Actions dropdown</label>
-                  <div class="input-group input-group-transparent">
-                    <input type="text" class="form-control input-transparent" id="dropdown-appended">
-                    <div class="input-group-btn" data-dropdown>
-                      <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">
-                        Action
-                      </button>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        <li class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Separated link</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="segmented-dropdown">Segmented dropdown</label>
-                  <div class="input-group input-group-transparent">
-                    <input id="segmented-dropdown" class="form-control input-transparent" type="text">
-                    <div class="input-group-btn" data-dropdown>
-                      <button class="btn btn-warning">Action</button>
-                      <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
-                      </button>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        <li class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Separated link</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <span class="help-block">Anything can be appended to the right</span>
-                </div>
-                <div class="form-group">
-                  <label for="type-dropdown-appended">Types dropdown</label>
-
-                  <div class="input-group input-group-transparent">
-                    <input type="text" class="form-control input-transparent" id="type-dropdown-appended">
-                    <div class="input-group-btn" dropdown>
-                      <button dropdownToggle id="phone-type" type="button" class="btn btn-primary dropdown-toggle"
-                        aria-controls="dropdown-basic">{{selecetedType}}<span class="caret"></span></button>
-                      <ul *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-basic">
-                        <li *ngFor="let option of typesDropdownOptions" role="menuitem"><a class="dropdown-item"
-                            (click)="onTypeChange($event, option)" href="#">{{option}}</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <p class="help-block">You can select some type of a field just right in the place.</p>
+    <section widgster [fullscreenControl]="false" [collapseControl]="false">
+      <h6 *widgsterTitle>
+        Prepended and appended inputs
+      </h6>
+      <form role="form">
+        <fieldset>
+          <legend><strong>Default</strong> Form</legend>
+          <div class="row">
+            <div class="col-md-8 ">
+              <div class="form-group">
+                <label for="search-input">Search type input</label>
+                <div class="input-group input-group-transparent">
+                  <input type="text" class="form-control input-transparent" id="search-input">
+                  <span class="input-group-btn">
+                    <button type="button" class="btn btn-default">Search</button>
+                  </span>
                 </div>
               </div>
+              <div class="form-group">
+                <label for="bar">Whole bar appended</label>
+                <div class="input-group input-group-transparent">
+                  <input type="text" class="form-control input-transparent" id="bar">
+                  <div class="input-group-btn">
+                    <button type="button" class="btn btn-danger"><i class="fa fa-pencil"></i></button>
+                    <button type="button" class="btn btn-warning"><i class="fa fa-plus"></i></button>
+                    <button type="button" class="btn btn-success"><i class="fa fa-refresh"></i></button>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="dropdown-appended">Actions dropdown</label>
+                <div class="input-group input-group-transparent">
+                  <input type="text" class="form-control input-transparent" id="dropdown-appended">
+                  <div class="input-group-btn" data-dropdown>
+                    <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                      Action
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Separated link</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="segmented-dropdown">Segmented dropdown</label>
+                <div class="input-group input-group-transparent">
+                  <input id="segmented-dropdown" class="form-control input-transparent" type="text">
+                  <div class="input-group-btn" data-dropdown>
+                    <button class="btn btn-warning">Action</button>
+                    <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Separated link</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <span class="help-block">Anything can be appended to the right</span>
+              </div>
+              <div class="form-group">
+                <label for="type-dropdown-appended">Types dropdown</label>
+
+                <div class="input-group input-group-transparent">
+                  <input type="text" class="form-control input-transparent" id="type-dropdown-appended">
+                  <div class="input-group-btn" dropdown>
+                    <button dropdownToggle id="phone-type" type="button" class="btn btn-primary dropdown-toggle"
+                      aria-controls="dropdown-basic">{{selecetedType}}<span class="caret"></span></button>
+                    <ul *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-basic">
+                      <li *ngFor="let option of typesDropdownOptions" role="menuitem"><a class="dropdown-item"
+                          (click)="onTypeChange($event, option)" href="#">{{option}}</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <p class="help-block">You can select some type of a field just right in the place.</p>
+              </div>
             </div>
-          </fieldset>
-          <div class="form-actions">
-            <button type="submit" class="btn btn-inverse mr-xs">Save Changes</button>
-            <button type="button" class="btn btn-default">Cancel</button>
           </div>
-        </form>
-      </div>
+        </fieldset>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-inverse mr-xs">Save Changes</button>
+          <button type="button" class="btn btn-default">Cancel</button>
+        </div>
+      </form>
     </section>
   </div>
 </div>
 <div class="row">
   <div class="col-lg-8 ">
-    <section class="widget" widget>
-      <header>
-        <h6>
-          Form <span class="fw-semi-bold">Options</span>
-        </h6>
-        <div class="widget-controls">
-          <a class="bg-gray-transparent" href="#"><i class="la la-cog text-white"></i></a>
-          <a href="#"><i class="la la-refresh"></i></a>
-          <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-        </div>
-      </header>
-      <div class="widget-body">
-        <form role="form">
-          <fieldset>
-            <legend>
-              Control sizing
-            </legend>
-            <p>
-              Set input heights using classes like <code>.input-lg</code> and <code>.input-sm</code>.
-              Also works with <code>type="search"</code> inputs and selects. For input groups use
-              <code>.input-group-lg</code> & <code>.input-group-sm</code>.
-            </p>
-            <br />
-            <div class="form-group">
-              <input type="text" class="form-control input-transparent form-control-lg" placeholder=".input-lg">
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control input-transparent" placeholder="default input">
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control input-transparent form-control-sm" placeholder=".input-sm">
-            </div>
-          </fieldset>
-        </form>
-      </div>
+    <section widgster [fullscreenControl]="false" [collapseControl]="false">
+      <h6 *widgsterTitle>
+        Form <span class="fw-semi-bold">Options</span>
+      </h6>
+      <form role="form">
+        <fieldset>
+          <legend>
+            Control sizing
+          </legend>
+          <p>
+            Set input heights using classes like <code>.input-lg</code> and <code>.input-sm</code>.
+            Also works with <code>type="search"</code> inputs and selects. For input groups use
+            <code>.input-group-lg</code> & <code>.input-group-sm</code>.
+          </p>
+          <br />
+          <div class="form-group">
+            <input type="text" class="form-control input-transparent form-control-lg" placeholder=".input-lg">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control input-transparent" placeholder="default input">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control input-transparent form-control-sm" placeholder=".input-sm">
+          </div>
+        </fieldset>
+      </form>
     </section>
   </div>
   <div class="col-lg-4 ">
-    <section class="widget" widget>
-      <header>
-        <h6>
-          Form <span class="fw-semi-bold">Options</span>
-        </h6>
-        <div class="widget-controls">
-          <a class="bg-gray-transparent" href="#"><i class="la la-cog text-white"></i></a>
-          <a href="#"><i class="la la-refresh"></i></a>
-          <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-        </div>
-      </header>
-      <div class="widget-body">
-        <form role="form">
-          <fieldset>
-            <legend>
-              Input Groups
-            </legend>
-            <p>
-              Different colors & sizes for any elements including input groups. Elements may be
-              easily styled with classes like <code>.bg-primary</code> or <code>.bg-transparent</code>
-            </p>
-            <br />
-            <div class="form-group">
-              <div class="input-group input-group-transparent">
-                <span class="input-group-addon">
-                  <i class="fa fa-github-alt"></i>
-                </span>
-                <input class="form-control input-transparent" size="16" type="text" placeholder="First Name">
-              </div>
+    <section widgster [fullscreenControl]="false" [collapseControl]="false">
+      <h6 *widgsterTitle>
+        Form <span class="fw-semi-bold">Options</span>
+      </h6>
+      <form role="form">
+        <fieldset>
+          <legend>
+            Input Groups
+          </legend>
+          <p>
+            Different colors & sizes for any elements including input groups. Elements may be
+            easily styled with classes like <code>.bg-primary</code> or <code>.bg-transparent</code>
+          </p>
+          <br />
+          <div class="form-group">
+            <div class="input-group input-group-transparent">
+              <span class="input-group-addon">
+                <i class="fa fa-github-alt"></i>
+              </span>
+              <input class="form-control input-transparent" size="16" type="text" placeholder="First Name">
             </div>
-            <div class="form-group">
-              <div class="input-group input-group-transparent input-group-lg">
-                <span class="input-group-addon">
-                  <i class="fa fa-bars"></i>
-                </span>
-                <input class="form-control input-transparent" size="16" type="text" placeholder="Username">
-              </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group input-group-transparent input-group-lg">
+              <span class="input-group-addon">
+                <i class="fa fa-bars"></i>
+              </span>
+              <input class="form-control input-transparent" size="16" type="text" placeholder="Username">
             </div>
-            <div class="form-group">
-              <div class="input-group input-group-transparent input-group-sm">
-                <input class="form-control input-transparent" size="16" type="text" placeholder="City">
-                <span class="input-group-addon bg-danger text-white">
-                  <i class="fa fa-code-fork"></i>
-                </span>
-              </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group input-group-transparent input-group-sm">
+              <input class="form-control input-transparent" size="16" type="text" placeholder="City">
+              <span class="input-group-addon bg-danger text-white">
+                <i class="fa fa-code-fork"></i>
+              </span>
             </div>
-          </fieldset>
-        </form>
-      </div>
+          </div>
+        </fieldset>
+      </form>
     </section>
   </div>
 </div>
 <div class="row">
   <div class="col-lg-6 ">
-    <section class="widget" widget>
-      <header>
-        <h6>
-          <i class="fa fa-font"></i>
+    <section widgster [fullscreenControl]="false" [collapseControl]="false">
+      <h6 *widgsterTitle>
+        <i class="fa fa-font"></i>
           Textareas
-        </h6>
-        <div class="widget-controls">
-          <a href="#"><i class="la la-cog"></i></a>
-          <a href="#"><i class="la la-refresh"></i></a>
-          <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-        </div>
-      </header>
-      <div class="widget-body">
-        <form class="form-horizontal" role="form">
-          <fieldset>
-            <legend>Small form</legend>
-            <div class="form-group row">
-              <label class="col-md-3  col-form-label text-md-right" for="default-textarea">Default textarea</label>
-              <div class="col-md-9 ">
-                <textarea rows="4" class="form-control input-transparent" id="default-textarea"></textarea>
-              </div>
+      </h6>
+      <form class="form-horizontal" role="form">
+        <fieldset>
+          <legend>Small form</legend>
+          <div class="form-group row">
+            <label class="col-md-3  col-form-label text-md-right" for="default-textarea">Default textarea</label>
+            <div class="col-md-9 ">
+              <textarea rows="4" class="form-control input-transparent" id="default-textarea"></textarea>
             </div>
-            <div class="form-group row">
-              <label class="col-md-3  col-form-label text-md-right" for="elastic-textarea">
-                Auto-growing textarea
-              </label>
-              <div class="col-md-9 ">
-                <textarea rows="3" class="autogrow form-control input-transparent transition-height"
-                  id="elastic-textarea" autosize placeholder="Try to add few new lines.."></textarea>
-              </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3  col-form-label text-md-right" for="elastic-textarea">
+              Auto-growing textarea
+            </label>
+            <div class="col-md-9 ">
+              <textarea rows="3" class="autogrow form-control input-transparent transition-height"
+                id="elastic-textarea" autosize placeholder="Try to add few new lines.."></textarea>
             </div>
-            <div class="form-group row">
-              <label class="col-md-3  col-form-label text-md-right">
-                Wysiwyg
-                <span class="help-block">
-                  With bottom toolbar appended
-                </span>
-              </label>
-              <div class="col-md-9 ">
-                <editor apiKey="test" [init]="{plugins: 'link'}"></editor>
-              </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3  col-form-label text-md-right">
+              Wysiwyg
+              <span class="help-block">
+                With bottom toolbar appended
+              </span>
+            </label>
+            <div class="col-md-9 ">
+              <editor apiKey="test" [init]="{plugins: 'link'}"></editor>
             </div>
-            <div class="form-group row">
-              <label class="col-md-3  col-form-label text-md-right" for="markdown-editor">
-                Markdown Editor
-              </label>
-              <div class="col-md-9 ">
-                <md-editor name="Content" [(ngModel)]="markdownEditorContent"></md-editor>
-              </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3  col-form-label text-md-right" for="markdown-editor">
+              Markdown Editor
+            </label>
+            <div class="col-md-9 ">
+              <md-editor name="Content" [(ngModel)]="markdownEditorContent"></md-editor>
             </div>
-          </fieldset>
-        </form>
-      </div>
+          </div>
+        </fieldset>
+      </form>
     </section>
   </div>
   <div class="col-lg-6 ">
-    <section class="widget" widget>
-      <header>
-        <h6>
-          <i class="fa fa-list-alt"></i>
-          Selects
-        </h6>
-        <div class="widget-controls">
-          <a href="#"><i class="la la-cog"></i></a>
-          <a href="#"><i class="la la-refresh"></i></a>
-          <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-        </div>
-      </header>
-      <div class="widget-body">
-        <form class="form-horizontal form-label-left" role="form">
-          <fieldset>
-            <legend>Default form with labels on left</legend>
-            <div class="form-group row">
-              <label class="col-md-4 col-form-label" for="default-select">Default select</label>
-              <div class="col-md-8 ">
-                <ng-select id="default-select" [searchable]="false" [items]="defaultOptions" bindLabel="text"
-                  bindValue="id" (change)="onValueChange($event)">
-                </ng-select>
-                <p *ngIf="selected" class="help-block mb-0">Selected value in ng-select: <b>{{selected}}</b>.</p>
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-md-4 col-form-label" for="grouped-select">Select with search & groups</label>
-              <div class="col-md-8 ">
-                <ng-select id="grouped-select" [items]="groupedOptions" bindValue="label" groupBy="group">
-                </ng-select>
-              </div>
-            </div>
-          </fieldset>
-          <fieldset>
-            <legend>Dropdown based colored selects</legend>
-            <div class="form-group row">
-              <label class="col-md-4  col-form-label" for="simple-select">Simple select</label>
-              <div class="col-md-8 ">
-                <ng-select name="selectedSimpleOption" [searchable]="false" [(ngModel)]="selectedSimpleOption"
-                  [items]="simpleOptions" id="simple-select">
-                </ng-select>
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-md-4  col-form-label" for="simple-red-select">
-                Colored ones
-                <span class="help-block">
-                  A bit of Japanese
-                </span>
-              </label>
-              <div class="col-md-8">
-                <ng-select class="danger" name="n1" [(ngModel)]="selectedNumber" [clearable]="false"
-                  [searchable]="false" [items]="fromOneToThree" style="display: inline-block; width: 75px;">
-                </ng-select>
-                &nbsp;
-                <ng-select class="warning" name="n2" [(ngModel)]="selectedNumber2" [clearable]="false"
-                  [searchable]="false" [items]="fromFourToSix" style="display: inline-block; width: 75px;">
-                </ng-select>
-                &nbsp;
-                <ng-select class="success" name="n3" [(ngModel)]="selectedNumber3" [clearable]="false"
-                  [searchable]="false" [items]="fromSevenToTen" style="display: inline-block; width: 75px;">
-                </ng-select>
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-md-4  col-form-label" for="simple-big-select">
-                Big One
-                <span class="help-block">
-                  Size can be controlled with <code>.btn-lg</code> & <code>.btn-sm</code>
-                </span>
-              </label>
-              <div class="col-md-8 ">
-                <ng-select [(ngModel)]="selectedItem" name="t1" [searchable]="false">
-                  <ng-option value="Fourth Item">Fourth Item</ng-option>
-                  <ng-option value="Fifth Item">Fifth Item</ng-option>
-                  <ng-option value="Sixth Item">Sixth Item</ng-option>
-                </ng-select>
-              </div>
-            </div>
-          </fieldset>
-        </form>
-      </div>
-    </section>
-  </div>
-</div>
-<div class="row">
-  <div class="col-lg-12 ">
-    <section class="widget" widget>
-      <header>
-        <h6>
-          Checkbox <strong>Controls</strong>
-        </h6>
-        <div class="widget-controls">
-          <a class="bg-gray-transparent" href="#"><i class="la la-cog text-white"></i></a>
-          <a href="#"><i class="la la-refresh"></i></a>
-          <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-        </div>
-      </header>
-      <div class="widget-body">
-        <form role="form">
-          <div class="row">
-            <div class="col-lg-4 ">
-              <fieldset>
-                <legend>
-                  Basic
-                </legend>
-                <p>
-                  Supports bootstrap brand colors: <code>.abc-checkbox-primary</code>, <code>.abc-checkbox-info</code>
-                  etc.
-                  Pure <abbr title="Cascading Style Sheet">css</abbr> solution with no javascript.
-                  Let your checkboxes shine!
-                </p>
-                <div class="form-check abc-checkbox">
-                  <input class="form-check-input" id="checkbox1" type="checkbox">
-                  <label class="form-check-label" for="checkbox1">
-                    Default
-                  </label>
-                </div>
-                <div class="form-check abc-checkbox abc-checkbox-primary">
-                  <input class="form-check-input" id="checkbox2" type="checkbox" checked>
-                  <label class="form-check-label" for="checkbox2">
-                    Primary
-                  </label>
-                </div>
-                <div class="form-check abc-checkbox abc-checkbox-success">
-                  <input class="form-check-input" id="checkbox3" type="checkbox">
-                  <label class="form-check-label" for="checkbox3">
-                    Success
-                  </label>
-                </div>
-                <div class="form-check abc-checkbox abc-checkbox-info">
-                  <input class="form-check-input" id="checkbox4" type="checkbox" checked>
-                  <label class="form-check-label" for="checkbox4">
-                    Info
-                  </label>
-                </div>
-                <div class="form-check abc-checkbox abc-checkbox-warning">
-                  <input class="form-check-input" id="checkbox5" type="checkbox">
-                  <label class="form-check-label" for="checkbox5">
-                    Warning
-                  </label>
-                </div>
-                <div class="form-check abc-checkbox abc-checkbox-danger">
-                  <input class="form-check-input" id="checkbox6" type="checkbox" checked>
-                  <label class="form-check-label" for="checkbox6">
-                    Check me out
-                  </label>
-                </div>
-              </fieldset>
-            </div>
-            <div class="col-lg-4 ">
-              <fieldset>
-                <legend>
-                  Circled
-                </legend>
-                <p>
-                  <code>.abc-checkbox-circle</code> for roundness. No more sad controls controls.
-                  Check out this brand-new rounded checkboxes!
-                </p>
-                <div class="form-check abc-checkbox abc-checkbox-circle">
-                  <input class="form-check-input" id="checkbox7" type="checkbox">
-                  <label class="form-check-label" for="checkbox7">
-                    Simply Rounded
-                  </label>
-                </div>
-                <div class="form-check abc-checkbox abc-checkbox-info abc-checkbox-circle">
-                  <input class="form-check-input" id="checkbox8" type="checkbox" checked>
-                  <label class="form-check-label" for="checkbox8">
-                    Me too
-                  </label>
-                </div>
-              </fieldset>
-            </div>
-            <div class="col-lg-4 ">
-              <fieldset>
-                <legend>
-                  Disabled
-                </legend>
-                <p>
-                  Disabled state also supported. Full stack checkbox functionality.
-                </p>
-                <div class=" form-check abc-checkbox">
-                  <input class="form-check-input" id="checkbox9" type="checkbox" disabled>
-                  <label class="form-check-label" for="checkbox9">
-                    Can't check this
-                  </label>
-                </div>
-                <div class="form-check abc-checkbox abc-checkbox-success">
-                  <input class="form-check-input" id="checkbox10" type="checkbox" disabled checked>
-                  <label class="form-check-label" for="checkbox10">
-                    This too
-                  </label>
-                </div>
-                <div class="form-check abc-checkbox abc-checkbox-warning abc-checkbox-circle">
-                  <input class="form-check-input" id="checkbox11" type="checkbox" disabled checked>
-                  <label class="form-check-label" for="checkbox11">
-                    And this
-                  </label>
-                </div>
-              </fieldset>
+    <section widgster [fullscreenControl]="false" [collapseControl]="false">
+      <h6 *widgsterTitle>
+        <i class="fa fa-list-alt"></i>
+        Selects
+      </h6>
+      <form class="form-horizontal form-label-left" role="form">
+        <fieldset>
+          <legend>Default form with labels on left</legend>
+          <div class="form-group row">
+            <label class="col-md-4 col-form-label" for="default-select">Default select</label>
+            <div class="col-md-8 ">
+              <ng-select id="default-select" [searchable]="false" [items]="defaultOptions" bindLabel="text"
+                bindValue="id" (change)="onValueChange($event)">
+              </ng-select>
+              <p *ngIf="selected" class="help-block mb-0">Selected value in ng-select: <b>{{selected}}</b>.</p>
             </div>
           </div>
-          <p class="fs-mini">Built with <a href="https://github.com/flatlogic/awesome-bootstrap-checkbox"
-              target="_blank">awesome-bootstrap-checkbox</a>.</p>
-        </form>
-      </div>
-    </section>
-  </div>
-</div>
-<div class="row">
-  <div class="col-lg-12 ">
-    <section class="widget" widget>
-      <header>
-        <h6>
-          Radio <strong>Controls</strong>
-        </h6>
-        <div class="widget-controls">
-          <a class="bg-gray-transparent" href="#"><i class="la la-cog text-white"></i></a>
-          <a href="#"><i class="la la-refresh"></i></a>
-          <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-        </div>
-      </header>
-      <div class="widget-body">
-        <form role="form">
-          <div class="row">
-            <div class="col-lg-4 ">
-              <fieldset>
-                <legend>
-                  Basic
-                </legend>
-                <p>
-                  Supports bootstrap brand colors: <code>.abc-radio-primary</code>, <code>.abc-radio-danger</code> etc.
-                  Pure css solution with no javascript. Let your radios shine!
-                </p>
-                <div class="row">
-                  <div class="col-md-6 ">
-                    <div class="form-check abc-radio">
-                      <input class="form-check-input" type="radio" name="radio1" id="radio1" value="option1" checked>
-                      <label class="form-check-label" for="radio1">
-                        Small
-                      </label>
-                    </div>
-                    <div class="form-check abc-radio">
-                      <input class="form-check-input" type="radio" name="radio1" id="radio2" value="option2">
-                      <label class="form-check-label" for="radio2">
-                        Big
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col-md-6 ">
-                    <div class="form-check abc-radio abc-radio-danger">
-                      <input class="form-check-input" type="radio" name="radio2" id="radio3" value="option1">
-                      <label class="form-check-label" for="radio3">
-                        Next
-                      </label>
-                    </div>
-                    <div class="form-check abc-radio abc-radio-danger">
-                      <input class="form-check-input" type="radio" name="radio2" id="radio4" value="option2" checked>
-                      <label class="form-check-label" for="radio4">
-                        One
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </fieldset>
-            </div>
-            <div class="col-lg-4 ">
-              <fieldset>
-                <legend>
-                  Disabled
-                </legend>
-                <p>
-                  Disabled state also supported. Full stack radios functionality.
-                </p>
-                <div class="form-check abc-radio">
-                  <input class="form-check-input" type="radio" name="radio3" id="radio5" value="option1" disabled>
-                  <label class="form-check-label" for="radio5">
-                    Next
-                  </label>
-                </div>
-                <div class="form-check abc-radio abc-radio-warning">
-                  <input class="form-check-input" type="radio" name="radio3" id="radio6" value="option2" checked
-                    disabled>
-                  <label class="form-check-label" for="radio6">
-                    One
-                  </label>
-                </div>
-              </fieldset>
-            </div>
-            <div class="col-lg-4 ">
-              <fieldset>
-                <legend>
-                  Cool iOS-like switches
-                </legend>
-                <p>
-                  Simple component that helps you turn your default HTML checkbox inputs into
-                  beautiful iOS 7 style switches in just few simple steps.
-                </p>
-                <div class="display-inline-block checkbox-ios">
-                  <label class="form-check-label" for="checkbox-ios1" class="switch">
-                    <input class="form-check-input" type="checkbox" class="ios" checked id="checkbox-ios1"><i></i>
-                  </label>
-                </div>
-                <div class="display-inline-block checkbox-ios ml">
-                  <label class="form-check-label" for="checkbox-ios2" class="switch">
-                    <input class="form-check-input" type="checkbox" class="ios" id="checkbox-ios2"><i></i>
-                  </label>
-                </div>
-              </fieldset>
+          <div class="form-group row">
+            <label class="col-md-4 col-form-label" for="grouped-select">Select with search & groups</label>
+            <div class="col-md-8 ">
+              <ng-select id="grouped-select" [items]="groupedOptions" bindValue="label" groupBy="group">
+              </ng-select>
             </div>
           </div>
-        </form>
-      </div>
-    </section>
-  </div>
-</div>
-<div class="row">
-  <div class="col-lg-6 col-12">
-    <section class="widget" widget>
-      <header>
-        <h6>
-          Pickers
-        </h6>
-        <div class="widget-controls">
-          <a class="bg-gray-transparent" href="#"><i class="la la-cog text-white"></i></a>
-          <a href="#"><i class="la la-refresh"></i></a>
-          <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-        </div>
-      </header>
-      <div class="widget-body">
-        <form role="form">
-          <fieldset>
-            <legend>
-              Date & Time
-            </legend>
-            <div class="form-group">
-              <label for="datetimepicker2i">
-                Time-enabled
-              </label>
-              <datetime [(ngModel)]="date" name="datetime" id="datetimepicker2i"
-                [timepicker]="{ icon: 'fa fa-clock-o' }" [datepicker]="{ icon: 'fa fa-calendar' }"></datetime>
+        </fieldset>
+        <fieldset>
+          <legend>Dropdown based colored selects</legend>
+          <div class="form-group row">
+            <label class="col-md-4  col-form-label" for="simple-select">Simple select</label>
+            <div class="col-md-8 ">
+              <ng-select name="selectedSimpleOption" [searchable]="false" [(ngModel)]="selectedSimpleOption"
+                [items]="simpleOptions" id="simple-select">
+              </ng-select>
             </div>
-          </fieldset>
-          <fieldset>
-            <legend>
-              Colors
-            </legend>
-            <div class="form-group">
-              <label for="colorpickeri">
-                Simple select
-                <span class="help-block">
-                  Colorpicker plugin for Twitter Bootstrap, originally written by Stefan Petre
-                </span>
-              </label>
-              <div class="input-group input-group-transparent">
-                <input [(colorPicker)]="color" [value]="color" autocomplete="off" cpPosition="bottom" type="text"
-                  value="" class="form-control input-transparent" id="colorpickeri" />
-                <span class="input-group-addon">
-                  <i></i>
-                </span>
-              </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-4  col-form-label" for="simple-red-select">
+              Colored ones
+              <span class="help-block">
+                A bit of Japanese
+              </span>
+            </label>
+            <div class="col-md-8">
+              <ng-select class="danger" name="n1" [(ngModel)]="selectedNumber" [clearable]="false"
+                [searchable]="false" [items]="fromOneToThree" style="display: inline-block; width: 75px;">
+              </ng-select>
+              &nbsp;
+              <ng-select class="warning" name="n2" [(ngModel)]="selectedNumber2" [clearable]="false"
+                [searchable]="false" [items]="fromFourToSix" style="display: inline-block; width: 75px;">
+              </ng-select>
+              &nbsp;
+              <ng-select class="success" name="n3" [(ngModel)]="selectedNumber3" [clearable]="false"
+                [searchable]="false" [items]="fromSevenToTen" style="display: inline-block; width: 75px;">
+              </ng-select>
             </div>
-          </fieldset>
-        </form>
-      </div>
-    </section>
-  </div>
-  <div class="col-lg-6 col-12">
-    <section class="widget" widget>
-      <header>
-        <h6>
-          Input <strong>Masks</strong>
-        </h6>
-        <div class="widget-controls">
-          <a class="bg-gray-transparent" href="#"><i class="la la-cog text-white"></i></a>
-          <a href="#"><i class="la la-refresh"></i></a>
-          <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-        </div>
-      </header>
-      <div class="widget-body">
-        <form role="form" class="form-horizontal form-label-left">
-          <fieldset>
-            <legend>
-              Masked inputs
-            </legend>
-            <div class="form-group row">
-              <label class="form-control-label col-md-4 col-12" for="mask-phone">
-                Phone
-                <span class="help-block">(123) 456-7890</span>
-              </label>
-              <div class="col-md-7 col-12">
-                <input id="mask-phone" name="mask-phone" class="form-control input-transparent" [textMask]="phoneMask"
-                  [ngModel]="phoneValue" (ngModelChange)="phoneValue = unmask($event)" type="text" />
-              </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-4  col-form-label" for="simple-big-select">
+              Big One
+              <span class="help-block">
+                Size can be controlled with <code>.btn-lg</code> & <code>.btn-sm</code>
+              </span>
+            </label>
+            <div class="col-md-8 ">
+              <ng-select [(ngModel)]="selectedItem" name="t1" [searchable]="false">
+                <ng-option value="Fourth Item">Fourth Item</ng-option>
+                <ng-option value="Fifth Item">Fifth Item</ng-option>
+                <ng-option value="Sixth Item">Sixth Item</ng-option>
+              </ng-select>
             </div>
-            <div class="form-group row">
-              <label class="form-control-label col-md-4" for="mask-int-phone">
-                International Phone
-                <span class="help-block">+375 123 456 789</span>
-              </label>
-              <div class="col-md-7 col-12">
-                <input id="mask-int-phone" name="mask-phone-inter" class="form-control input-transparent"
-                  [textMask]="interPhoneMask" [ngModel]="interPhoneValue"
-                  (ngModelChange)="interPhoneValue = unmask($event)" type="text" />
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="form-control-label col-md-4 col-12" for="mask-date">
-                Date Format
-                <span class="help-block">07-03-2013</span>
-              </label>
-              <div class="col-md-7 col-12">
-                <input id="mask-date" name="mask-date" class="form-control input-transparent" [textMask]="dateMask"
-                  [(ngModel)]="dateValue" type="text" />
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="form-control-label col-md-4 col-12" for="mask-time">
-                Time
-                <span class="help-block">13:43</span>
-              </label>
-              <div class="col-md-7 col-12">
-                <input id="mask-time" name="mask-time" class="form-control input-transparent" [textMask]="timeMask"
-                  [(ngModel)]="timeValue" type="text" />
-              </div>
-            </div>
-          </fieldset>
-        </form>
-      </div>
+          </div>
+        </fieldset>
+      </form>
     </section>
   </div>
 </div>
 <div class="row">
   <div class="col-lg-12 ">
-    <section class="widget" widget>
-      <header>
-        <h6>
-          Sliders
-        </h6>
-        <div class="widget-controls">
-          <a class="bg-gray-transparent" href="#"><i class="la la-cog text-white"></i></a>
-          <a href="#"><i class="la la-refresh"></i></a>
-          <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-        </div>
-      </header>
-      <div class="widget-body">
+    <section widgster [fullscreenControl]="false" [collapseControl]="false">
+      <h6 *widgsterTitle>
+        Checkbox <strong>Controls</strong>
+      </h6>
+      <form role="form">
         <div class="row">
           <div class="col-lg-4 ">
-            <h4>Color Options</h4>
-            <p>Sing extends Bootstrap Slider and provides different color options:</p>
-            <form>
-              <div class="mb-sm">
-                <ng5-slider [value]="14" [options]="{
-                      floor: 0, 
-                      ceil: 20, 
-                      animate: false, 
-                      handleDimension: 26, 
-                      barDimension: 210,
-                      showSelectionBar: true,
-                      hideLimitLabels: true,
-                      hidePointerLabels: false
-                    }">
-                </ng5-slider>
+            <fieldset>
+              <legend>
+                Basic
+              </legend>
+              <p>
+                Supports bootstrap brand colors: <code>.abc-checkbox-primary</code>, <code>.abc-checkbox-info</code>
+                etc.
+                Pure <abbr title="Cascading Style Sheet">css</abbr> solution with no javascript.
+                Let your checkboxes shine!
+              </p>
+              <div class="form-check abc-checkbox">
+                <input class="form-check-input" id="checkbox1" type="checkbox">
+                <label class="form-check-label" for="checkbox1">
+                  Default
+                </label>
               </div>
-              <div class="slider-danger mb-sm">
-                <ng5-slider class="danger" [value]="18" [options]="{
-                    floor: 0, 
-                    ceil: 20, 
-                    animate: false, 
-                    handleDimension: 26, 
-                    barDimension: 210,
-                    showSelectionBar: true,
-                    hideLimitLabels: true,
-                    hidePointerLabels: false
-                  }">
-                </ng5-slider>
+              <div class="form-check abc-checkbox abc-checkbox-primary">
+                <input class="form-check-input" id="checkbox2" type="checkbox" checked>
+                <label class="form-check-label" for="checkbox2">
+                  Primary
+                </label>
               </div>
-              <div class="slider-warning mb-sm">
-                <ng5-slider class="warning" [value]="7" [options]="{
-                    floor: 0, 
-                    ceil: 20, 
-                    animate: false, 
-                    handleDimension: 26, 
-                    barDimension: 210,
-                    showSelectionBar: true,
-                    hideLimitLabels: true,
-                    hidePointerLabels: false
-                  }">
-                </ng5-slider>
+              <div class="form-check abc-checkbox abc-checkbox-success">
+                <input class="form-check-input" id="checkbox3" type="checkbox">
+                <label class="form-check-label" for="checkbox3">
+                  Success
+                </label>
               </div>
-              <div class="slider-success mb-sm">
-                <ng5-slider class="success" [value]="11" [options]="{
-                    floor: 0, 
-                    ceil: 20, 
-                    animate: false, 
-                    handleDimension: 26, 
-                    barDimension: 210,
-                    showSelectionBar: true,
-                    hideLimitLabels: true,
-                    hidePointerLabels: false
-                  }">
-                </ng5-slider>
+              <div class="form-check abc-checkbox abc-checkbox-info">
+                <input class="form-check-input" id="checkbox4" type="checkbox" checked>
+                <label class="form-check-label" for="checkbox4">
+                  Info
+                </label>
               </div>
-              <div class="slider-inverse mb-sm">
-                <ng5-slider class="inverse" [value]="4" [options]="{
-                    floor: 0, 
-                    ceil: 20, 
-                    animate: false, 
-                    handleDimension: 26, 
-                    barDimension: 210,
-                    showSelectionBar: true,
-                    hideLimitLabels: true,
-                    hidePointerLabels: false
-                  }">
-                </ng5-slider>
+              <div class="form-check abc-checkbox abc-checkbox-warning">
+                <input class="form-check-input" id="checkbox5" type="checkbox">
+                <label class="form-check-label" for="checkbox5">
+                  Warning
+                </label>
               </div>
-            </form>
+              <div class="form-check abc-checkbox abc-checkbox-danger">
+                <input class="form-check-input" id="checkbox6" type="checkbox" checked>
+                <label class="form-check-label" for="checkbox6">
+                  Check me out
+                </label>
+              </div>
+            </fieldset>
           </div>
           <div class="col-lg-4 ">
-            <h4>Slider Orientation</h4>
-            <p>Vertical orientation is also possible. Simply changing <strong>data-slider-orientation</strong>
-              attribute does the thing.</p>
-            <form>
+            <fieldset>
+              <legend>
+                Circled
+              </legend>
+              <p>
+                <code>.abc-checkbox-circle</code> for roundness. No more sad controls controls.
+                Check out this brand-new rounded checkboxes!
+              </p>
+              <div class="form-check abc-checkbox abc-checkbox-circle">
+                <input class="form-check-input" id="checkbox7" type="checkbox">
+                <label class="form-check-label" for="checkbox7">
+                  Simply Rounded
+                </label>
+              </div>
+              <div class="form-check abc-checkbox abc-checkbox-info abc-checkbox-circle">
+                <input class="form-check-input" id="checkbox8" type="checkbox" checked>
+                <label class="form-check-label" for="checkbox8">
+                  Me too
+                </label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="col-lg-4 ">
+            <fieldset>
+              <legend>
+                Disabled
+              </legend>
+              <p>
+                Disabled state also supported. Full stack checkbox functionality.
+              </p>
+              <div class=" form-check abc-checkbox">
+                <input class="form-check-input" id="checkbox9" type="checkbox" disabled>
+                <label class="form-check-label" for="checkbox9">
+                  Can't check this
+                </label>
+              </div>
+              <div class="form-check abc-checkbox abc-checkbox-success">
+                <input class="form-check-input" id="checkbox10" type="checkbox" disabled checked>
+                <label class="form-check-label" for="checkbox10">
+                  This too
+                </label>
+              </div>
+              <div class="form-check abc-checkbox abc-checkbox-warning abc-checkbox-circle">
+                <input class="form-check-input" id="checkbox11" type="checkbox" disabled checked>
+                <label class="form-check-label" for="checkbox11">
+                  And this
+                </label>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+        <p class="fs-mini">Built with <a href="https://github.com/flatlogic/awesome-bootstrap-checkbox"
+            target="_blank">awesome-bootstrap-checkbox</a>.</p>
+      </form>
+    </section>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12 ">
+    <section widgster [fullscreenControl]="false" [collapseControl]="false">
+      <h6 *widgsterTitle>
+        Radio <strong>Controls</strong>
+      </h6>
+      <form role="form">
+        <div class="row">
+          <div class="col-lg-4 ">
+            <fieldset>
+              <legend>
+                Basic
+              </legend>
+              <p>
+                Supports bootstrap brand colors: <code>.abc-radio-primary</code>, <code>.abc-radio-danger</code> etc.
+                Pure css solution with no javascript. Let your radios shine!
+              </p>
               <div class="row">
-                <div class="col-md-8 col-md-offset-2" style="height: 210px; margin-bottom: 10px;">
-                  <ng5-slider [value]="14" [options]="{
-                    floor: 0, 
-                    ceil: 20, 
-                    animate: false, 
-                    handleDimension: 26, 
-                    barDimension: 210,
-                    showSelectionBar: true,
-                    hideLimitLabels: true,
-                    hidePointerLabels: false,
-                    vertical: true
-                  }">
-                  </ng5-slider>
-                  <ng5-slider class="inverse" [value]="18" [options]="{
-                    floor: 0, 
-                    ceil: 20, 
-                    animate: false, 
-                    handleDimension: 26, 
-                    barDimension: 210,
-                    showSelectionBar: true,
-                    hideLimitLabels: true,
-                    hidePointerLabels: false,
-                    vertical: true
-                  }">
-                  </ng5-slider>
-                  <ng5-slider [value]="7" [options]="{
-                    floor: 0, 
-                    ceil: 20, 
-                    animate: false, 
-                    handleDimension: 26, 
-                    barDimension: 210,
-                    showSelectionBar: true,
-                    hideLimitLabels: true,
-                    hidePointerLabels: false,
-                    vertical: true
-                  }">
-                  </ng5-slider>
-                  <ng5-slider class="inverse" [value]="11" [options]="{
-                    floor: 0, 
-                    ceil: 20, 
-                    animate: false, 
-                    handleDimension: 26, 
-                    barDimension: 210,
-                    showSelectionBar: true,
-                    hideLimitLabels: true,
-                    hidePointerLabels: false,
-                    vertical: true
-                  }">
-                  </ng5-slider>
-                  <ng5-slider [value]="4" [options]="{
-                    floor: 0, 
-                    ceil: 20, 
-                    animate: false, 
-                    handleDimension: 26, 
-                    barDimension: 210,
-                    showSelectionBar: true,
-                    hideLimitLabels: true,
-                    hidePointerLabels: false,
-                    vertical: true
-                  }">
-                  </ng5-slider>
+                <div class="col-md-6 ">
+                  <div class="form-check abc-radio">
+                    <input class="form-check-input" type="radio" name="radio1" id="radio1" value="option1" checked>
+                    <label class="form-check-label" for="radio1">
+                      Small
+                    </label>
+                  </div>
+                  <div class="form-check abc-radio">
+                    <input class="form-check-input" type="radio" name="radio1" id="radio2" value="option2">
+                    <label class="form-check-label" for="radio2">
+                      Big
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-6 ">
+                  <div class="form-check abc-radio abc-radio-danger">
+                    <input class="form-check-input" type="radio" name="radio2" id="radio3" value="option1">
+                    <label class="form-check-label" for="radio3">
+                      Next
+                    </label>
+                  </div>
+                  <div class="form-check abc-radio abc-radio-danger">
+                    <input class="form-check-input" type="radio" name="radio2" id="radio4" value="option2" checked>
+                    <label class="form-check-label" for="radio4">
+                      One
+                    </label>
+                  </div>
                 </div>
               </div>
-            </form>
+            </fieldset>
           </div>
           <div class="col-lg-4 ">
-            <h4>Range Selector</h4>
-            <p>Range selector, options specified via <strong>data-slider-value</strong> attribute as
-              an array. Price range selector:</p>
-            <form>
-              <ng5-slider class="warning" [value]="200" [highValue]="1547" [options]="{
-                floor: 0, 
-                ceil: 2000, 
-                animate: false, 
-                handleDimension: 26, 
-                barDimension: 210,
-                showSelectionBar: true,
-                hideLimitLabels: true,
-                hidePointerLabels: false
-              }">
-              </ng5-slider>
-            </form>
+            <fieldset>
+              <legend>
+                Disabled
+              </legend>
+              <p>
+                Disabled state also supported. Full stack radios functionality.
+              </p>
+              <div class="form-check abc-radio">
+                <input class="form-check-input" type="radio" name="radio3" id="radio5" value="option1" disabled>
+                <label class="form-check-label" for="radio5">
+                  Next
+                </label>
+              </div>
+              <div class="form-check abc-radio abc-radio-warning">
+                <input class="form-check-input" type="radio" name="radio3" id="radio6" value="option2" checked
+                  disabled>
+                <label class="form-check-label" for="radio6">
+                  One
+                </label>
+              </div>
+            </fieldset>
           </div>
+          <div class="col-lg-4 ">
+            <fieldset>
+              <legend>
+                Cool iOS-like switches
+              </legend>
+              <p>
+                Simple component that helps you turn your default HTML checkbox inputs into
+                beautiful iOS 7 style switches in just few simple steps.
+              </p>
+              <div class="display-inline-block checkbox-ios">
+                <label class="form-check-label" for="checkbox-ios1" class="switch">
+                  <input class="form-check-input" type="checkbox" class="ios" checked id="checkbox-ios1"><i></i>
+                </label>
+              </div>
+              <div class="display-inline-block checkbox-ios ml">
+                <label class="form-check-label" for="checkbox-ios2" class="switch">
+                  <input class="form-check-input" type="checkbox" class="ios" id="checkbox-ios2"><i></i>
+                </label>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </form>
+    </section>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-6 col-12">
+    <section widgster [fullscreenControl]="false" [collapseControl]="false">
+      <h6 *widgsterTitle>
+        Pickers
+      </h6>
+      <form role="form">
+        <fieldset>
+          <legend>
+            Date & Time
+          </legend>
+          <div class="form-group">
+            <label for="datetimepicker2i">
+              Time-enabled
+            </label>
+            <datetime [(ngModel)]="date" name="datetime" id="datetimepicker2i"
+              [timepicker]="{ icon: 'fa fa-clock-o' }" [datepicker]="{ icon: 'fa fa-calendar' }"></datetime>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>
+            Colors
+          </legend>
+          <div class="form-group">
+            <label for="colorpickeri">
+              Simple select
+              <span class="help-block">
+                Colorpicker plugin for Twitter Bootstrap, originally written by Stefan Petre
+              </span>
+            </label>
+            <div class="input-group input-group-transparent">
+              <input [(colorPicker)]="color" [value]="color" autocomplete="off" cpPosition="bottom" type="text"
+                value="" class="form-control input-transparent" id="colorpickeri" />
+              <span class="input-group-addon">
+                <i></i>
+              </span>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </section>
+  </div>
+  <div class="col-lg-6 col-12">
+    <section widgster [fullscreenControl]="false" [collapseControl]="false">
+      <h6 *widgsterTitle>
+        Input <strong>Masks</strong>
+      </h6>
+      <form role="form" class="form-horizontal form-label-left">
+        <fieldset>
+          <legend>
+            Masked inputs
+          </legend>
+          <div class="form-group row">
+            <label class="form-control-label col-md-4 col-12" for="mask-phone">
+              Phone
+              <span class="help-block">(123) 456-7890</span>
+            </label>
+            <div class="col-md-7 col-12">
+              <input id="mask-phone" name="mask-phone" class="form-control input-transparent" [textMask]="phoneMask"
+                [ngModel]="phoneValue" (ngModelChange)="phoneValue = unmask($event)" type="text" />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="form-control-label col-md-4" for="mask-int-phone">
+              International Phone
+              <span class="help-block">+375 123 456 789</span>
+            </label>
+            <div class="col-md-7 col-12">
+              <input id="mask-int-phone" name="mask-phone-inter" class="form-control input-transparent"
+                [textMask]="interPhoneMask" [ngModel]="interPhoneValue"
+                (ngModelChange)="interPhoneValue = unmask($event)" type="text" />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="form-control-label col-md-4 col-12" for="mask-date">
+              Date Format
+              <span class="help-block">07-03-2013</span>
+            </label>
+            <div class="col-md-7 col-12">
+              <input id="mask-date" name="mask-date" class="form-control input-transparent" [textMask]="dateMask"
+                [(ngModel)]="dateValue" type="text" />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="form-control-label col-md-4 col-12" for="mask-time">
+              Time
+              <span class="help-block">13:43</span>
+            </label>
+            <div class="col-md-7 col-12">
+              <input id="mask-time" name="mask-time" class="form-control input-transparent" [textMask]="timeMask"
+                [(ngModel)]="timeValue" type="text" />
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </section>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12 ">
+    <section widgster [fullscreenControl]="false" [collapseControl]="false">
+      <h6 *widgsterTitle>
+        Sliders
+      </h6>
+      <div class="row">
+        <div class="col-lg-4 ">
+          <h4>Color Options</h4>
+          <p>Sing extends Bootstrap Slider and provides different color options:</p>
+          <form>
+            <div class="mb-sm">
+              <ng5-slider [value]="14" [options]="{
+                    floor: 0, 
+                    ceil: 20, 
+                    animate: false, 
+                    handleDimension: 26, 
+                    barDimension: 210,
+                    showSelectionBar: true,
+                    hideLimitLabels: true,
+                    hidePointerLabels: false
+                  }">
+              </ng5-slider>
+            </div>
+            <div class="slider-danger mb-sm">
+              <ng5-slider class="danger" [value]="18" [options]="{
+                  floor: 0, 
+                  ceil: 20, 
+                  animate: false, 
+                  handleDimension: 26, 
+                  barDimension: 210,
+                  showSelectionBar: true,
+                  hideLimitLabels: true,
+                  hidePointerLabels: false
+                }">
+              </ng5-slider>
+            </div>
+            <div class="slider-warning mb-sm">
+              <ng5-slider class="warning" [value]="7" [options]="{
+                  floor: 0, 
+                  ceil: 20, 
+                  animate: false, 
+                  handleDimension: 26, 
+                  barDimension: 210,
+                  showSelectionBar: true,
+                  hideLimitLabels: true,
+                  hidePointerLabels: false
+                }">
+              </ng5-slider>
+            </div>
+            <div class="slider-success mb-sm">
+              <ng5-slider class="success" [value]="11" [options]="{
+                  floor: 0, 
+                  ceil: 20, 
+                  animate: false, 
+                  handleDimension: 26, 
+                  barDimension: 210,
+                  showSelectionBar: true,
+                  hideLimitLabels: true,
+                  hidePointerLabels: false
+                }">
+              </ng5-slider>
+            </div>
+            <div class="slider-inverse mb-sm">
+              <ng5-slider class="inverse" [value]="4" [options]="{
+                  floor: 0, 
+                  ceil: 20, 
+                  animate: false, 
+                  handleDimension: 26, 
+                  barDimension: 210,
+                  showSelectionBar: true,
+                  hideLimitLabels: true,
+                  hidePointerLabels: false
+                }">
+              </ng5-slider>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-4 ">
+          <h4>Slider Orientation</h4>
+          <p>Vertical orientation is also possible. Simply changing <strong>data-slider-orientation</strong>
+            attribute does the thing.</p>
+          <form>
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2" style="height: 210px; margin-bottom: 10px;">
+                <ng5-slider [value]="14" [options]="{
+                  floor: 0, 
+                  ceil: 20, 
+                  animate: false, 
+                  handleDimension: 26, 
+                  barDimension: 210,
+                  showSelectionBar: true,
+                  hideLimitLabels: true,
+                  hidePointerLabels: false,
+                  vertical: true
+                }">
+                </ng5-slider>
+                <ng5-slider class="inverse" [value]="18" [options]="{
+                  floor: 0, 
+                  ceil: 20, 
+                  animate: false, 
+                  handleDimension: 26, 
+                  barDimension: 210,
+                  showSelectionBar: true,
+                  hideLimitLabels: true,
+                  hidePointerLabels: false,
+                  vertical: true
+                }">
+                </ng5-slider>
+                <ng5-slider [value]="7" [options]="{
+                  floor: 0, 
+                  ceil: 20, 
+                  animate: false, 
+                  handleDimension: 26, 
+                  barDimension: 210,
+                  showSelectionBar: true,
+                  hideLimitLabels: true,
+                  hidePointerLabels: false,
+                  vertical: true
+                }">
+                </ng5-slider>
+                <ng5-slider class="inverse" [value]="11" [options]="{
+                  floor: 0, 
+                  ceil: 20, 
+                  animate: false, 
+                  handleDimension: 26, 
+                  barDimension: 210,
+                  showSelectionBar: true,
+                  hideLimitLabels: true,
+                  hidePointerLabels: false,
+                  vertical: true
+                }">
+                </ng5-slider>
+                <ng5-slider [value]="4" [options]="{
+                  floor: 0, 
+                  ceil: 20, 
+                  animate: false, 
+                  handleDimension: 26, 
+                  barDimension: 210,
+                  showSelectionBar: true,
+                  hideLimitLabels: true,
+                  hidePointerLabels: false,
+                  vertical: true
+                }">
+                </ng5-slider>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-4 ">
+          <h4>Range Selector</h4>
+          <p>Range selector, options specified via <strong>data-slider-value</strong> attribute as
+            an array. Price range selector:</p>
+          <form>
+            <ng5-slider class="warning" [value]="200" [highValue]="1547" [options]="{
+              floor: 0, 
+              ceil: 2000, 
+              animate: false, 
+              handleDimension: 26, 
+              barDimension: 210,
+              showSelectionBar: true,
+              hideLimitLabels: true,
+              hidePointerLabels: false
+            }">
+            </ng5-slider>
+          </form>
         </div>
       </div>
     </section>
@@ -998,90 +899,72 @@
 </div>
 <div class="row">
   <div class="col-lg-6 ">
-    <section class="widget" widget>
-      <header>
-        <h6>
-          Simple <strong>file uploads</strong>
-        </h6>
-        <div class="widget-controls">
-          <a class="bg-gray-transparent" href="#"><i class="la la-cog text-white"></i></a>
-          <a href="#"><i class="la la-refresh"></i></a>
-          <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-        </div>
-      </header>
-      <div class="widget-body">
-        <form class="form-horizontal" role="form">
-          <fieldset>
-            <blockquote class="blockquote text-right">
-              <p>The man who is really serious, with the urge to find out what truth is, has no style at all. He lives
-                only in what is.</p>
-              <footer class="blockquote-footer">Bruce Lee</footer>
-            </blockquote>
-            <div class="form-group row">
-              <label class="col-form-label col-md-4 text-md-right" for="fileupload1">
-                File input widget
-              </label>
-              <div class="col-md-8 ">
-                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                  <div class="form-control input-transparent" data-trigger="fileinput">
-                    <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                    <span class="fileinput-filename"></span>
-                  </div>
-                  <div class="input-group-btn">
-                    <button class="btn btn-default btn-file">
-                      <span class="fileinput-new">Select file</span>
-                      <span class="fileinput-exists">Change</span>
-                      <input name="..." type="file">
-                    </button>
-                    <button class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</button>
-                  </div>
+    <section widgster [fullscreenControl]="false" [collapseControl]="false">
+      <h6 *widgsterTitle>
+        Simple <strong>file uploads</strong>
+      </h6>
+      <form class="form-horizontal" role="form">
+        <fieldset>
+          <blockquote class="blockquote text-right">
+            <p>The man who is really serious, with the urge to find out what truth is, has no style at all. He lives
+              only in what is.</p>
+            <footer class="blockquote-footer">Bruce Lee</footer>
+          </blockquote>
+          <div class="form-group row">
+            <label class="col-form-label col-md-4 text-md-right" for="fileupload1">
+              File input widget
+            </label>
+            <div class="col-md-8 ">
+              <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                <div class="form-control input-transparent" data-trigger="fileinput">
+                  <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                  <span class="fileinput-filename"></span>
                 </div>
-                <span class="help-block">Awesome file input plugin allows you to create a visually appealing file or
-                  image inputs.</span>
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-form-label col-md-4 text-md-right">
-                Image upload widget
-              </label>
-              <div class="col-md-8 ">
-                <div class="fileinput fileinput-new" data-provides="fileinput">
-                  <div class="fileinput-new thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;">
-                    <img alt="..."
-                      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTEiIGhlaWdodD0iMTQxIj48cmVjdCB3aWR0aD0iMTkxIiBoZWlnaHQ9IjE0MSIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9Ijk1LjUiIHk9IjcwLjUiIHN0eWxlPSJmaWxsOiNhYWE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6MTJweDtmb250LWZhbWlseTpBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZjtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4xOTF4MTQxPC90ZXh0Pjwvc3ZnPg==">
-                  </div>
-                  <div class="fileinput-preview fileinput-exists thumbnail"
-                    style="max-width: 200px; max-height: 150px;"></div>
-                  <div>
-                    <span class="btn btn-default btn-file"><span class="fileinput-new">Select image</span><span
-                        class="fileinput-exists">Change</span><input type="file" name="..."></span>
-                    <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
-                  </div>
+                <div class="input-group-btn">
+                  <button class="btn btn-default btn-file">
+                    <span class="fileinput-new">Select file</span>
+                    <span class="fileinput-exists">Change</span>
+                    <input name="..." type="file">
+                  </button>
+                  <button class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</button>
                 </div>
-                <span class="help-block">Showing a thumbnail instead of the filename when uploading an image.</span>
               </div>
+              <span class="help-block">Awesome file input plugin allows you to create a visually appealing file or
+                image inputs.</span>
             </div>
-          </fieldset>
-        </form>
-      </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-form-label col-md-4 text-md-right">
+              Image upload widget
+            </label>
+            <div class="col-md-8 ">
+              <div class="fileinput fileinput-new" data-provides="fileinput">
+                <div class="fileinput-new thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;">
+                  <img alt="..."
+                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTEiIGhlaWdodD0iMTQxIj48cmVjdCB3aWR0aD0iMTkxIiBoZWlnaHQ9IjE0MSIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9Ijk1LjUiIHk9IjcwLjUiIHN0eWxlPSJmaWxsOiNhYWE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6MTJweDtmb250LWZhbWlseTpBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZjtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4xOTF4MTQxPC90ZXh0Pjwvc3ZnPg==">
+                </div>
+                <div class="fileinput-preview fileinput-exists thumbnail"
+                  style="max-width: 200px; max-height: 150px;"></div>
+                <div>
+                  <span class="btn btn-default btn-file"><span class="fileinput-new">Select image</span><span
+                      class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                  <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                </div>
+              </div>
+              <span class="help-block">Showing a thumbnail instead of the filename when uploading an image.</span>
+            </div>
+          </div>
+        </fieldset>
+      </form>
     </section>
   </div>
   <div class="col-lg-6 ">
-    <section class="widget" widget>
-      <header>
-        <h6>
-          <strong>Drop</strong> Zone
-        </h6>
-        <div class="widget-controls">
-          <a class="bg-gray-transparent" href="#"><i class="la la-cog text-white"></i></a>
-          <a href="#"><i class="la la-refresh"></i></a>
-          <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-        </div>
-      </header>
-      <div class="widget-body">
-        <form [dropzone]="{url: 'https://httpbin.org/post'}" class="dropzone" action="#" id="my-awesome-dropzone">
-        </form>
-      </div>
+    <section widgster [fullscreenControl]="false" [collapseControl]="false">
+      <h6 *widgsterTitle>
+        <strong>Drop</strong> Zone
+      </h6>
+      <form [dropzone]="{url: 'https://httpbin.org/post'}" class="dropzone" action="#" id="my-awesome-dropzone">
+      </form>
     </section>
   </div>
 </div>

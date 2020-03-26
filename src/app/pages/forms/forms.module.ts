@@ -21,6 +21,7 @@ import { WidgetModule } from '../../layout/widget/widget.module';
 import { ElementsComponent } from './elements/elements.component';
 import { ValidationComponent } from './validation/validation.component';
 import { WizardComponent } from './wizard/wizard.component';
+import { WidgsterModule } from '../../components/widgster/widgster.module';
 
 export const routes = [
   { path: '', redirectTo: 'elements', pathMatch: 'full' },
@@ -57,7 +58,8 @@ const wizardConfig: NgWizardConfig = {
     NgSelectModule,
     ColorPickerModule,
     LMarkdownEditorModule,
-    Ng5SliderModule
+    Ng5SliderModule,
+    WidgsterModule
   ]
 })
 export class FormModule {

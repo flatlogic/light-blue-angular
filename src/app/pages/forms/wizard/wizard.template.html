@@ -5,20 +5,12 @@
 <h1 class="page-title">Form - <span class="fw-semi-bold">Wizards</span></h1>
 <div class="row">
   <div class="col-lg-8 col-12">
-    <section class="widget" widget>
-      <header>
-        <h5>
-          Wizard
-          <small>Tunable widget</small>
-        </h5>
-        <div class="widget-controls">
-          <a data-widgster="expand" title="Expand" href="#"><i class="la la-angle-up"></i></a>
-          <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
-          <a data-widgster="close" title="Close" href="#"><i class="la la-remove"></i></a>
-        </div>
-      </header>
-      <div class="widget-body">
-        <h5>Inpage <strong>Wizard</strong></h5>
+    <section widgster [fullscreenControl]="false" [collapseControl]="false">
+      <h5 *widgsterTitle>
+        Wizard
+        <small>Tunable widget</small>
+      </h5>
+      <h5>Inpage <strong>Wizard</strong></h5>
         <p>An example of complete wizard form in widget.</p>
         <form [formGroup]="form">
           <ng-wizard #wizard [config]="config">
@@ -72,11 +64,7 @@
                   <div class="form-group">
                     <label for="country-select">Destination Country</label>
 
-                    <ng-select 
-                      formControlName="country" 
-                      [items]="countries" 
-                      [virtualScroll]="true"
-                    >
+                    <ng-select formControlName="country" [items]="countries" [virtualScroll]="true">
                     </ng-select>
 
                     <span class="help-block">Please choose your country destination</span>
@@ -183,7 +171,6 @@
             </ng-wizard-step>
           </ng-wizard>
         </form>
-      </div>
     </section>
   </div>
 </div>
