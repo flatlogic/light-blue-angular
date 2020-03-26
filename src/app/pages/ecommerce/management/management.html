@@ -4,31 +4,23 @@
 </ol>
 <div class="page-top-line">
   <h1 class="page-title">Product - <span class="fw-semi-bold">Management</span></h1>
-  <alert
-    type="success"
-    class="promo-alert"
-    [ngClass]="{'show-alert': showAlert}"
-    [dismissible]="true"
-  >
+  <alert type="success" class="promo-alert" [ngClass]="{'show-alert': showAlert}" [dismissible]="true">
     This page is only available in <a class="text-white font-weight-bold" rel="noreferrer noopener"
-                                      href="https://flatlogic.com/admin-dashboards/light-blue-angular-node-js"
-                                      target="_blank">Light Blue Angular with Node.js</a> integration!
+      href="https://flatlogic.com/admin-dashboards/light-blue-angular-node-js" target="_blank">Light Blue Angular with
+      Node.js</a> integration!
   </alert>
 </div>
-<widget
-  [title]="'List of Products'"
-  [close]="true"
-  [fetchingData]="productsService.isReceiving"
+<section 
+  widgster 
+  [reloadControl]="false"
+  [fullscreenControl]="false" 
+  [collapseControl]="false"
+  [loading]="productsService.isReceiving"
 >
-  <button (click)="createNewProduct()" class="btn btn-success mb-3">Create Product</button>
-  <ngx-datatable
-    class="table table-striped table-hover"
-    [rows]="productsService.products"
-    [columnMode]="'force'"
-    [headerHeight]="50"
-    [footerHeight]="50"
-    [rowHeight]="'auto'"
-    [limit]="10">
+<h5 *widgsterTitle>List of Products</h5>
+<button (click)="createNewProduct()" class="btn btn-success mb-3">Create Product</button>
+  <ngx-datatable class="table table-striped table-hover" [rows]="productsService.products" [columnMode]="'force'"
+    [headerHeight]="50" [footerHeight]="50" [rowHeight]="'auto'" [limit]="10">
     <ngx-datatable-column name="id" cellClass="width-100" headerClass="width-100">
       <ng-template let-value="value" ngx-datatable-cell-template>
         {{value}}
@@ -36,7 +28,7 @@
     </ngx-datatable-column>
     <ngx-datatable-column name="img">
       <ng-template let-value="value" ngx-datatable-cell-template>
-        <img [src]="value" alt="..." class="image" title="image"/>
+        <img [src]="value" alt="..." class="image" title="image" />
       </ng-template>
     </ngx-datatable-column>
     <ngx-datatable-column name="title">
@@ -69,14 +61,10 @@
             <span class="d-none d-md-inline-block">Edit</span>
             <span class="d-md-none"><i class='la la-edit'></i></span>
           </button>
-          <button
-            [popover]="deletePopover"
-            [popoverContext]="row"
-            #pop="bs-popover"
-            placement="bottom"
-            class="btn btn-xs btn-danger"
-          >
-            <loader *ngIf="productsService.isDeleting && productsService.idToDelete === row.id; else deleteIcon" [size]="14"></loader>
+          <button [popover]="deletePopover" [popoverContext]="row" #pop="bs-popover" placement="bottom"
+            class="btn btn-xs btn-danger">
+            <loader *ngIf="productsService.isDeleting && productsService.idToDelete === row.id; else deleteIcon"
+              [size]="14"></loader>
             <ng-template #deleteIcon>
               <span class="d-none d-md-inline-block">Delete</span>
               <span class="d-md-none"><i class='la la-remove'></i></span>
@@ -101,4 +89,4 @@
       </ng-template>
     </ngx-datatable-column>
   </ngx-datatable>
-</widget>
+</section>

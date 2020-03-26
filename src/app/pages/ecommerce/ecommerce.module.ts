@@ -26,6 +26,7 @@ import {ProductEditComponent} from './management/components/product-edit/product
 import {LoaderModule} from '../../components/loader/loader.module';
 import {TagInputModule} from 'ngx-chips';
 import {FormsModule} from '@angular/forms';
+import { WidgsterModule } from '../../components/widgster/widgster.module';
 
 export const routes = [
   {path: 'product-grid', component: ProductGridComponent, pathMatch: 'full'},
@@ -66,7 +67,8 @@ export const routes = [
     AlertModule.forRoot(),
     LoaderModule,
     PopoverModule.forRoot(),
-    TagInputModule
+    TagInputModule,
+    WidgsterModule
   ],
   providers: [
     ProductsService
