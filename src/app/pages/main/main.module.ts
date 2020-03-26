@@ -25,6 +25,7 @@ import { CountUpModule } from 'ngx-countup';
 import { CalendarModule as AngularCalendarModule, DateAdapter, CalendarDateFormatter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { CustomDateFormatter } from './visits/custom-date-formatter.service';
+import { WidgsterModule } from '../../components/widgster/widgster.module';
 
 export const routes = [
   { path: '', redirectTo: 'visits', pathMatch: 'full' },
@@ -70,7 +71,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     AngularCalendarModule.forRoot({
       provide: DateAdapter,
       useFactory: adapterFactory
-    })
+    }),
+    WidgsterModule
   ],
   providers: [
     AnalyticsService,

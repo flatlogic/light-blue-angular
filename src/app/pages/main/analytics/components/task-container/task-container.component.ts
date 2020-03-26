@@ -6,7 +6,7 @@ import {Component, Input} from '@angular/core';
   templateUrl: './task-container.template.html'
 })
 export class TaskContainerComponent {
-  @Input('tasks') tasks: Array<any>;
+  @Input() tasks: Array<any>;
 
   get tasksCompletedLength() {
     return this.tasks.filter(t => t.completed).length;

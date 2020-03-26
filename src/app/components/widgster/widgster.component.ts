@@ -18,6 +18,7 @@ import { WidgsterControlsDirective } from './directives/widgster-controls.direct
 import { WidgsterLoaderDirective } from './directives/widgster-loader.directive';
 import { slideUpDownAnimation, SlideUpDownState } from './animations/slide-up-down.animation';
 import { WidgesterTooltipPosition } from './widgster-tooltip-position.type';
+import { WidgsterFooterDirective } from './directives/widgster-footer.directive';
 
 @Component({
   selector: '[widgster]',
@@ -32,10 +33,13 @@ export class WidgsterComponent implements OnChanges {
   @ContentChild(WidgsterTitleDirective, { static: false, read: TemplateRef }) public titleTpl: TemplateRef<any>;
   @ContentChild(WidgsterControlsDirective, { static: false, read: TemplateRef }) public controlsTpl: TemplateRef<any>;
   @ContentChild(WidgsterLoaderDirective, { static: false, read: TemplateRef }) public loaderTpl: TemplateRef<any>;
+  @ContentChild(WidgsterFooterDirective, {static: false, read: TemplateRef}) public footerTpl: TemplateRef<any>;
 
   @Input() public title: string;
   @Input() public loading: boolean = false;
   @Input() public bodyClass: string | string[];
+  @Input() public controlsClass: string | string[];
+  @Input() public footerClass: string | string[];
   @Input() public showTooltip: boolean = true;
   @Input() public tooltipPosition: WidgesterTooltipPosition = 'auto';
   @Input() public fullscreenZIndex: number = 10000;

@@ -8,7 +8,7 @@
       </div>
     </ng-template>
     <div *ngIf="!controlsTpl && (reloadControl || fullscreenControl || collapseControl || closeControl)"
-      class="widget-controls">
+      class="widget-controls" [ngClass]="controlsClass">
       <a *ngIf="reloadControl" (click)="onReload()" tooltip="Reload" [placement]="tooltipPosition"
         [isDisabled]="!showTooltip">
         <i class="la la-refresh"></i>
@@ -53,4 +53,9 @@
       <ng-content></ng-content>
     </div>
   </div>
+  <ng-template [ngIf]="footerTpl">
+    <footer class="widget-footer" [ngClass]="footerClass" [@slideUpDown]="collapseAnimationState" [class.fetching-data]="loading">
+      <ng-container *ngTemplateOutlet="footerTpl"></ng-container>
+    </footer>
+  </ng-template>
 </ng-template>

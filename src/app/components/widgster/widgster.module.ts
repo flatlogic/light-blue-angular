@@ -7,13 +7,15 @@ import { WidgsterComponent } from './widgster.component';
 import { WidgsterTitleDirective } from './directives/widgster-title.directive';
 import { WidgsterControlsDirective } from './directives/widgster-controls.directive';
 import { WidgsterLoaderDirective } from './directives/widgster-loader.directive';
+import { WidgsterFooterDirective } from './directives/widgster-footer.directive';
 
 @NgModule({
   declarations: [
     WidgsterComponent,
     WidgsterTitleDirective,
     WidgsterControlsDirective,
-    WidgsterLoaderDirective
+    WidgsterLoaderDirective,
+    WidgsterFooterDirective
   ],
   imports: [
     CommonModule,
@@ -24,7 +26,8 @@ import { WidgsterLoaderDirective } from './directives/widgster-loader.directive'
     WidgsterComponent,
     WidgsterTitleDirective,
     WidgsterControlsDirective,
-    WidgsterLoaderDirective
+    WidgsterLoaderDirective,
+    WidgsterFooterDirective
   ]
 })
 export class WidgsterModule { }

@@ -6,10 +6,6 @@
 /**          WIDGET               **/
 /**********************************/
 
-.widget-content {
-  overflow: hidden;
-}
-
 :host.widget {
   display: block;
   border-radius: $widget-border-radius;
