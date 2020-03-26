@@ -5,70 +5,47 @@
 <h1 class="page-title">Alerts</h1>
 <div class="row">
   <div class="col-12 col-md-8">
-    <widget
-      [title]="'<h5>Alert <span class=fw-semi-bold>Messages</span></h5>'"
-      [close]="true"
-      [collapse]="true"
-      [customHeader]="true"
-    >
+    <section widgster [reloadControl]="false" [fullscreenControl]="false">
+      <h5 *widgsterTitle>
+        Alert <span class=fw-semi-bold>Messages</span>
+      </h5>
       <p>Alerts are available for any length of text, as well as an optional dismiss button.</p>
-      <alert
-        *ngFor="let alert of alerts"
-        [attr.key]="alert.id"
-        [isOpen]="true"
-        [dismissible]="true"
-        [type]="alert.type"
-      >
+      <alert *ngFor="let alert of alerts" [attr.key]="alert.id" [isOpen]="true" [dismissible]="true"
+        [type]="alert.type">
         <span [innerHtml]="alert.msg"></span>
       </alert>
-    </widget>
+    </section>
   </div>
   <div class="col-12 col-md-8">
-    <widget
-      [title]="'<h5>Transparent <span class=fw-semi-bold>Alerts</span></h5>'"
-      [close]="true"
-      [collapse]="true"
-      [customHeader]="true"
-    >
+    <section widgster [reloadControl]="false" [fullscreenControl]="false">
+      <h5 *widgsterTitle>
+        Transparent <span class=fw-semi-bold>Alerts</span>
+      </h5>
       <p>Transparent alerts are available by adding <code>.alert-transparent</code> class.</p>
-      <alert
-        *ngFor="let alert of alerts"
-        [attr.key]="alert.id"
-        [isOpen]="true"
-        [dismissible]="true"
-        [type]="alert.type + ' alert-transparent'"
-      >
+      <alert *ngFor="let alert of alerts" [attr.key]="alert.id" [isOpen]="true" [dismissible]="true"
+        [type]="alert.type + ' alert-transparent'">
         <span [innerHtml]="alert.msg"></span>
       </alert>
-    </widget>
+    </section>
   </div>
   <div class="col-12 col-md-8">
-    <widget
-      [title]="'<h5>Rounded <span class=fw-semi-bold>Alerts</span></h5>'"
-      [close]="true"
-      [collapse]="true"
-      [customHeader]="true"
-    >
+    <section widgster [reloadControl]="false" [fullscreenControl]="false">
+      <h5 *widgsterTitle>
+        Rounded <span class=fw-semi-bold>Alerts</span>
+      </h5>
       <p>Rounded alerts are available by adding <code>.alert-rounded</code> class.</p>
-      <alert
-        [ngClass]="{ 'alert-rounded': true, 'alert-transparent': index % 2 === 0 }"
-        *ngFor="let alert of alerts; let i = index"
-        [attr.key]="alert.id"
-        [isOpen]="true"
-        [dismissible]="true"
-        [type]="alert.type + ' alert-rounded' + (i % 2 === 0 ? ' alert-transparent' : '')"
-      >
+      <alert [ngClass]="{ 'alert-rounded': true, 'alert-transparent': index % 2 === 0 }"
+        *ngFor="let alert of alerts; let i = index" [attr.key]="alert.id" [isOpen]="true" [dismissible]="true"
+        [type]="alert.type + ' alert-rounded' + (i % 2 === 0 ? ' alert-transparent' : '')">
         <span [innerHtml]="alert.msg"></span>
       </alert>
-    </widget>
+    </section>
   </div>
   <div class="col-12 col-md-8">
-    <widget
-      [title]="'<h5>Additional <span class=fw-semi-bold>Content</span></h5>'"
-      [close]="true"
-      [collapse]="true"
-      [customHeader]="true"
-    >
+    <section widgster [reloadControl]="false" [fullscreenControl]="false">
+      <h5 *widgsterTitle>
+        Additional <span class=fw-semi-bold>Content</span>
+      </h5>
       <p>
         Alerts can also contain additional HTML
         elements like headings, paragraphs and dividers.
@@ -82,7 +59,7 @@
           spacing within an alert works with this kind
           of content.
         </p>
-        <hr/>
+        <hr />
         <p class="mb-0">
           Whenever you need to, be sure to use margin utilities to keep things nice and tidy.
         </p>
@@ -97,6 +74,6 @@
           of content.
         </p>
       </alert>
-    </widget>
+    </section>
   </div>
 </div>

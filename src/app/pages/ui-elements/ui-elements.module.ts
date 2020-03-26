@@ -32,6 +32,7 @@ import { CardComponent } from './card/card';
 import { BadgeComponent } from './badge/badge';
 import { AlertsComponent } from './alerts/alerts';
 import { NewWidgetModule } from '../../layout/new-widget/widget.module';
+import { WidgsterModule } from '../../components/widgster/widgster.module';
 
 export const routes = [
   { path: '', redirectTo: 'components', pathMatch: 'full' },
@@ -84,7 +85,8 @@ export const routes = [
     CarouselModule.forRoot(),
     PopoverModule.forRoot(),
     ProgressbarModule.forRoot(),
-    ToastrModule
+    ToastrModule,
+    WidgsterModule
   ]
 })
 export class UiElementsModule {

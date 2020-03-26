@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, ViewEncapsulation, AfterViewInit} from '@angular/core';
 declare let jQuery: any;
 
 @Component({
@@ -7,7 +7,7 @@ declare let jQuery: any;
   encapsulation: ViewEncapsulation.None,
   styleUrls: ['./list-groups.style.scss']
 })
-export class ListGroupsComponent implements OnInit {
+export class ListGroupsComponent implements AfterViewInit {
   sortOptions: Object = {
     placeholder: 'list-group-item list-group-item-placeholder',
     forcePlaceholderSize: true
@@ -15,7 +15,7 @@ export class ListGroupsComponent implements OnInit {
   nest1Options: Object = { group: 1 };
   nest2Options: Object = { group: 1 };
 
-  ngOnInit(): void {
+  public ngAfterViewInit(): void {
     jQuery( '.list-group-sortable' ).sortable(this.sortOptions);
     jQuery( '#nestable1' ).nestable(this.nest1Options);
     jQuery( '#nestable2' ).nestable(this.nest2Options);
