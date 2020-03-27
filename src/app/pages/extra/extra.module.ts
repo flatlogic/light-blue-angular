@@ -18,6 +18,7 @@ import { TimeLineComponent } from './time-line/time-line.component';
 import { GalleryComponent } from './gallery/gallery.component';
 
 import { AgmCoreModule } from '@agm/core';
+import { WidgsterModule } from '../../components/widgster/widgster.module';
 
 export const routes = [
   { path: '', redirectTo: 'calendar', pathMatch: 'full' },
@@ -50,7 +51,8 @@ export const routes = [
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDe_oVpi9eRSN99G4o6TwVjJbFBNr58NxE'
     }),
-    FullCalendarModule
+    FullCalendarModule,
+    WidgsterModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

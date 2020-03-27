@@ -38,6 +38,7 @@ export class WidgsterComponent implements OnChanges {
 
   @Input() public title: string;
   @Input() public loading: boolean = false;
+  @Input() public titleClass: string | string[];
   @Input() public bodyClass: string | string[];
   @Input() public controlsClass: string | string[];
   @Input() public footerClass: string | string[];

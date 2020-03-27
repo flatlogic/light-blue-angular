@@ -1,5 +1,7 @@
   <header
-    *ngIf="title || titleTpl || controlsTpl || reloadControl || fullscreenControl || collapseControl || closeControl">
+    *ngIf="title || titleTpl || controlsTpl || reloadControl || fullscreenControl || collapseControl || closeControl"
+    [ngClass]="titleClass"
+  >
     <h5 *ngIf="title && !titleTpl" class="title">{{title}}</h5>
     <ng-template [ngIf]="titleTpl">
       <div class="title">
