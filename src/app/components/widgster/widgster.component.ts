@@ -10,7 +10,7 @@ import {
   SimpleChanges,
   HostBinding,
   Inject,
-  AfterContentInit
+  ViewContainerRef
 } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
@@ -30,7 +30,7 @@ import { WidgsterFooterDirective } from './directives/widgster-footer.directive'
   animations: [slideUpDownAnimation],
   host: { class: 'widget' }
 })
-export class WidgsterComponent implements OnChanges, AfterContentInit {
+export class WidgsterComponent implements OnChanges {
   @ContentChild(WidgsterTitleDirective, { static: false, read: TemplateRef }) public titleTpl: TemplateRef<any>;
   @ContentChild(WidgsterControlsDirective, { static: false, read: TemplateRef }) public controlsTpl: TemplateRef<any>;
   @ContentChild(WidgsterLoaderDirective, { static: false, read: TemplateRef }) public loaderTpl: TemplateRef<any>;
@@ -71,7 +71,7 @@ export class WidgsterComponent implements OnChanges, AfterContentInit {
   public closed: boolean = false;
   public collapseAnimationState: SlideUpDownState;
 
-  constructor(@Inject(DOCUMENT) private document: Document) {
+  constructor(@Inject(DOCUMENT) private document: Document, private vcr: ViewContainerRef) {
   }
 
   public ngOnChanges(changes: SimpleChanges): void {
@@ -91,10 +91,6 @@ export class WidgsterComponent implements OnChanges, AfterContentInit {
         }
       }
     }
-  }
-
-  public ngAfterContentInit(): void {
-    
   }
 
   public onClose(): void {

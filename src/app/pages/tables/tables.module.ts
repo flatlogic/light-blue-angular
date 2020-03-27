@@ -16,6 +16,7 @@ import { TablesBasicComponent } from './basic/tables-basic.component';
 import { TablesDynamicComponent } from './dynamic/tables-dynamic.component';
 import { SearchPipe } from './dynamic/pipes/search-pipe';
 import { NgxEchartsModule } from 'ngx-echarts';
+import { WidgsterModule } from '../../components/widgster/widgster.module';
 
 export const routes = [
   { path: '', redirectTo: 'basic', pathMatch: 'full' },
@@ -43,7 +44,8 @@ export const routes = [
     Ng2TableModule,
     NgxDatatableModule,
     RouterModule.forChild(routes),
-    NgxEchartsModule
+    NgxEchartsModule,
+    WidgsterModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

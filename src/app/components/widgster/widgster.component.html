@@ -1,4 +1,3 @@
-<ng-template [ngIf]="!closed">
   <header
     *ngIf="title || titleTpl || controlsTpl || reloadControl || fullscreenControl || collapseControl || closeControl">
     <h5 *ngIf="title && !titleTpl" class="title">{{title}}</h5>
@@ -40,7 +39,7 @@
       </div>
     </ng-template>
   </header>
-  <div class="widget-body" [ngClass]="bodyClass">
+  <div class="widget-content-wrapper" [@slideUpDown]="collapseAnimationState" >
     <ng-container *ngIf="loading">
       <ng-template [ngIf]="loaderTpl">
         <ng-container *ngTemplateOutlet="loaderTpl"></ng-container>
@@ -49,13 +48,14 @@
         Loading...
       </div>
     </ng-container>
-    <div class="widget-content" [@slideUpDown]="collapseAnimationState" [class.fetching-data]="loading">
-      <ng-content></ng-content>
+    <div class="widget-body" [ngClass]="bodyClass">
+      <div class="widget-content" [class.fetching-data]="loading">
+        <ng-content></ng-content>
+      </div>
     </div>
+    <ng-template [ngIf]="footerTpl">
+      <footer class="widget-footer" [ngClass]="footerClass" [class.fetching-data]="loading">
+        <ng-container *ngTemplateOutlet="footerTpl"></ng-container>
+      </footer>
+    </ng-template>
   </div>
-  <ng-template [ngIf]="footerTpl">
-    <footer class="widget-footer" [ngClass]="footerClass" [@slideUpDown]="collapseAnimationState" [class.fetching-data]="loading">
-      <ng-container *ngTemplateOutlet="footerTpl"></ng-container>
-    </footer>
-  </ng-template>
-</ng-template>

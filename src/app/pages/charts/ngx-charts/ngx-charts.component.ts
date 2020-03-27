@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, AfterViewInit } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import {
   ngxLineChartData,
   ngxAreaChartData,
@@ -13,16 +13,11 @@ import {
   templateUrl: './ngx-charts.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NgxChartsComponent implements AfterViewInit {
+export class NgxChartsComponent {
   public ngxLineChartData: any = ngxLineChartData;
   public ngxAreaChartData: any = ngxAreaChartData;
   public ngxVerticalBarChartData: any = ngxVerticalBarChartData;
-  public ngxDoughnutChartData: any;
+  public ngxDoughnutChartData: any = ngxDoughnutChartData;
   public ngxGroupedVerticalBarChartData: any = ngxGroupedVerticalBarChartData;
   public ngxStackedVerticalBarChartData: any = ngxStackedVerticalBarChartData;
-
-  public ngAfterViewInit(): void {
-    // chart fails to calculate correct width on init
-    this.ngxDoughnutChartData = ngxDoughnutChartData;
-  }
 }
