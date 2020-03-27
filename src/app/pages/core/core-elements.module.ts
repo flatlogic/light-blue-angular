@@ -3,7 +3,6 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { WidgetModule } from '../../layout/widget/widget.module';
 import { TypographyComponent } from './typography/typography.component';
 import { ColorsComponent } from './colors/colors.component';
 import { GridComponent } from './grid/grid.component';
@@ -27,7 +26,6 @@ export const routes = [
     CommonModule,
     FormsModule,
     RouterModule.forChild(routes),
-    WidgetModule,
     WidgsterModule
   ]
 })

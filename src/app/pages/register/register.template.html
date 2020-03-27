@@ -1,10 +1,6 @@
 <div class="container">
-  <widget
-    class="widget-auth mx-auto"
-    [title]="'<h3 class=mt-0>Create an account</h3>'"
-    [customHeader]="true"
-    bodyClass="mt-0"
-  >
+  <section class="widget-auth mx-auto" widgster [optionsControl]="false" [reloadControl]="false" [fullscreenControl]="false" [collapseControl]="false" [closeControl]="false" bodyClass="mt-0">
+    <h3 *widgsterTitle class=mt-0>Create an account</h3>
     <p class="widget-auth-info">
       Please fill all fields below
     </p>
@@ -62,8 +58,7 @@
       </div>
 
     </form>
-
-  </widget>
+  </section>
   <footer class="auth-footer">
     2019 &copy; Sing App Angular - Angular Admin Dashboard Template Made by <a href="https://flatlogic.com"
                                                                                target="_blank">Flatlogic</a>

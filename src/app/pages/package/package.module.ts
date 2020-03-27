@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { Package } from './package.component';
-import { WidgetModule } from '../../layout/widget/widget.module';
 import { WidgsterModule } from '../../components/widgster/widgster.module';
 
 export const routes = [
@@ -16,7 +15,6 @@ export const routes = [
   ],
   imports: [
     CommonModule,
-    WidgetModule,
     RouterModule.forChild(routes),
     WidgsterModule
   ]

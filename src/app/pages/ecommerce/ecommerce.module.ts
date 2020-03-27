@@ -19,7 +19,6 @@ import { DescriptionComponent } from './product-detail/components/description/de
 import { RatingComponent } from './product-detail/components/rating/rating.component';
 import { SliderComponent } from './product-detail/components/slider/slider.component';
 import {ManagementComponent} from './management/management';
-import {NewWidgetModule} from '../../layout/new-widget/widget.module';
 import {NgxDatatableModule} from '@swimlane/ngx-datatable';
 import {ProductsService} from './products.service';
 import {ProductEditComponent} from './management/components/product-edit/product-edit';
@@ -62,7 +61,6 @@ export const routes = [
     CollapseModule.forRoot(),
     CommonModule,
     RouterModule.forChild(routes),
-    NewWidgetModule,
     NgxDatatableModule,
     AlertModule.forRoot(),
     LoaderModule,

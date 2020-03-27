@@ -11,7 +11,6 @@ import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { Ng2TableModule } from 'ng2-table';
-import { WidgetModule } from '../../layout/widget/widget.module';
 import { TablesBasicComponent } from './basic/tables-basic.component';
 import { TablesDynamicComponent } from './dynamic/tables-dynamic.component';
 import { SearchPipe } from './dynamic/pipes/search-pipe';
@@ -40,7 +39,6 @@ export const routes = [
     BsDropdownModule.forRoot(),
     PaginationModule.forRoot(),
     ProgressbarModule,
-    WidgetModule,
     Ng2TableModule,
     NgxDatatableModule,
     RouterModule.forChild(routes),

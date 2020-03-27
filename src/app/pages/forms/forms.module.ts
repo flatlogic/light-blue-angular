@@ -17,7 +17,6 @@ import { ColorPickerModule } from 'ngx-color-picker';
 import { LMarkdownEditorModule } from 'ngx-markdown-editor';
 import { Ng5SliderModule } from 'ng5-slider';
 
-import { WidgetModule } from '../../layout/widget/widget.module';
 import { ElementsComponent } from './elements/elements.component';
 import { ValidationComponent } from './validation/validation.component';
 import { WizardComponent } from './wizard/wizard.component';
@@ -49,7 +48,6 @@ const wizardConfig: NgWizardConfig = {
     TooltipModule.forRoot(),
     AlertModule.forRoot(),
     BsDropdownModule.forRoot(),
-    WidgetModule,
     NKDatetimeModule,
     RouterModule.forChild(routes),
     EditorModule,

@@ -8,7 +8,6 @@ import { AgmCoreModule } from '@agm/core';
 
 import { MapsGoogleComponent } from './google/maps-google.component';
 import { MapsVectorComponent } from './vector/maps-vector.component';
-import { NewWidgetModule } from '../../layout/new-widget/widget.module';
 import { YearsMapModule } from '../../components/years-map-widget/year-map.module';
 import { WidgsterModule } from '../../components/widgster/widgster.module';
 
@@ -34,7 +33,6 @@ export const routes = [
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB7OXmzfQYua_1LEhRdqsoYzyJOPh9hGLg'
     }),
-    NewWidgetModule,
     YearsMapModule,
     WidgsterModule
   ]

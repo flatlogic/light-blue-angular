@@ -83,7 +83,6 @@
     "skycons": "1.0.0",
     "tslib": "1.10.0",
     "validator": "12.1.0",
-    "widgster": "1.0.0",
     "zone.js": "~0.9.1"
   },
   "napa": {

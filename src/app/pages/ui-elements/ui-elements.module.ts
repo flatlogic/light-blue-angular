@@ -17,7 +17,6 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { ToastrModule } from 'ngx-toastr';
 
-import { WidgetModule } from '../../layout/widget/widget.module';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { IconsComponent } from './icons/icons.component';
@@ -31,7 +30,6 @@ import { CarouselComponent } from './carousel/carousel';
 import { CardComponent } from './card/card';
 import { BadgeComponent } from './badge/badge';
 import { AlertsComponent } from './alerts/alerts';
-import { NewWidgetModule } from '../../layout/new-widget/widget.module';
 import { WidgsterModule } from '../../components/widgster/widgster.module';
 
 export const routes = [
@@ -73,14 +71,12 @@ export const routes = [
     FormsModule,
     RouterModule.forChild(routes),
     AlertModule.forRoot(),
-    WidgetModule,
     TooltipModule.forRoot(),
     ModalModule,
     ButtonsModule.forRoot(),
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
     AccordionModule.forRoot(),
-    NewWidgetModule,
     AlertModule.forRoot(),
     CarouselModule.forRoot(),
     PopoverModule.forRoot(),

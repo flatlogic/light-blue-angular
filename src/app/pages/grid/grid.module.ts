@@ -5,7 +5,6 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 import { GridComponent } from './grid.component';
 import { GridDemoDirective } from './grid-demo/grid-demo';
-import { WidgetModule } from '../../layout/widget/widget.module';
 import { WidgsterModule } from '../../components/widgster/widgster.module';
 import { LoaderModule } from '../../components/loader/loader.module';
 import { UtilsModule } from '../../utils/utils-module/utils.module';
@@ -18,7 +17,6 @@ export const routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    WidgetModule,
     WidgsterModule,
     LoaderModule,
     BsDropdownModule,

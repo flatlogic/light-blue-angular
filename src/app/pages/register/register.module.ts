@@ -4,9 +4,9 @@ import {NgModule} from '@angular/core';
 import {RouterModule} from '@angular/router';
 
 import {RegisterComponent} from './register.component';
-import {NewWidgetModule} from '../../layout/new-widget/widget.module';
 import {AlertModule} from 'ngx-bootstrap';
 import {RegisterService} from './register.service';
+import { WidgsterModule } from '../../components/widgster/widgster.module';
 
 export const routes = [
   {path: '', component: RegisterComponent, pathMatch: 'full'}
@@ -20,8 +20,8 @@ export const routes = [
     CommonModule,
     FormsModule,
     RouterModule.forChild(routes),
-    NewWidgetModule,
-    AlertModule.forRoot()
+    AlertModule.forRoot(),
+    WidgsterModule
   ],
   providers: [
     RegisterService

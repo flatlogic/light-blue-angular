@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { AnalyticsComponent } from './analytics/analytics.component';
 import { BigStatComponent } from './analytics/components/big-stat/big-stat.component';
-import { WidgetModule } from '../../layout/widget/widget.module';
 import { BsDropdownModule, ProgressbarModule } from 'ngx-bootstrap';
 import { TrendModule } from 'ngx-trend';
 import { TaskContainerComponent } from './analytics/components/task-container/task-container.component';
@@ -16,7 +15,6 @@ import { ChangesChartWidgetComponent } from './widgets/changes-chart-widget/chan
 import { NasdaqWidgetComponent } from './widgets/nasdaq-widget/nasdaq-widget.component';
 import { RealtimeTrafficWidgetComponent } from './widgets/realtime-traffic-widget/realtime-traffic-widget.component';
 import { AnalyticsService } from './analytics/analytics.service';
-import { NewWidgetModule } from '../../layout/new-widget/widget.module';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { YearsMapModule } from '../../components/years-map-widget/year-map.module';
@@ -56,12 +54,9 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    WidgetModule,
     ProgressbarModule.forRoot(),
     TrendModule,
     BsDropdownModule.forRoot(),
-    WidgetModule,
-    NewWidgetModule,
     SkyconsModule,
     NgApexchartsModule,
     NgxEchartsModule,
