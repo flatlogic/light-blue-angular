@@ -1,5 +1,5 @@
   <header
-    *ngIf="title || titleTpl || controlsTpl || reloadControl || fullscreenControl || collapseControl || closeControl"
+    *ngIf="title || titleTpl || controlsTpl || optionsControl || reloadControl || fullscreenControl || collapseControl || closeControl"
     [ngClass]="titleClass"
   >
     <h5 *ngIf="title && !titleTpl" class="title">{{title}}</h5>
@@ -8,8 +8,12 @@
         <ng-container *ngTemplateOutlet="titleTpl"></ng-container>
       </div>
     </ng-template>
-    <div *ngIf="!controlsTpl && (reloadControl || fullscreenControl || collapseControl || closeControl)"
+    <div *ngIf="!controlsTpl && (optionsControl || reloadControl || fullscreenControl || collapseControl || closeControl)"
       class="widget-controls" [ngClass]="controlsClass">
+      <a *ngIf="optionsControl" (click)="onOptions()" tooltip="Options" [placement]="tooltipPosition"
+        [isDisabled]="!showTooltip">
+        <i class="la la-cog"></i>
+      </a>
       <a *ngIf="reloadControl" (click)="onReload()" tooltip="Reload" [placement]="tooltipPosition"
         [isDisabled]="!showTooltip">
         <i class="la la-refresh"></i>

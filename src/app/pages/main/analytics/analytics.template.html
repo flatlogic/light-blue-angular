@@ -9,7 +9,7 @@
       <div class="row">
         <div class="col-12 col-sm-6 col-lg-3">
           <div class="pb-5 h-100">
-            <section class="h-100 mb-0" widgster [loading]="analyticsService.isReceiving" [reloadControl]="false"
+            <section class="h-100 mb-0" widgster [loading]="analyticsService.isReceiving" [optionsControl]="false" [reloadControl]="false"
               [fullscreenControl]="false" [collapseControl]="false">
               <h5 *widgsterTitle>Visits Today</h5>
               <div class="d-flex justify-content-between align-items-center mb-lg">
@@ -41,7 +41,7 @@
         </div>
         <div class="col-12 col-sm-6 col-lg-3">
           <div class="pb-5 h-100">
-            <section class="h-100 mb-0" widgster [loading]="analyticsService.isReceiving" [reloadControl]="false"
+            <section class="h-100 mb-0" widgster [loading]="analyticsService.isReceiving" [optionsControl]="false" [reloadControl]="false"
               [fullscreenControl]="false" [collapseControl]="false">
               <h5 *widgsterTitle>Revenue Breakdown</h5>
               <div class="row">
@@ -53,7 +53,7 @@
         </div>
         <div class="col-12 col-sm-6 col-lg-3">
           <div class="pb-5 h-100">
-            <section class="h-100 mb-0" widgster [loading]="analyticsService.isReceiving" [reloadControl]="false"
+            <section class="h-100 mb-0" widgster [loading]="analyticsService.isReceiving" [optionsControl]="false" [reloadControl]="false"
               [fullscreenControl]="false" [collapseControl]="false">
               <h5 *widgsterTitle>App Perfomance</h5>
               <p class="text-muted d-flex flex-wrap">
@@ -85,7 +85,7 @@
         </div>
         <div class="col-12 col-sm-6 col-lg-3">
           <div class="pb-5 h-100">
-            <section class="h-100 mb-0" widgster [loading]="analyticsService.isReceiving" [reloadControl]="false"
+            <section class="h-100 mb-0" widgster [loading]="analyticsService.isReceiving" [optionsControl]="false" [reloadControl]="false"
               [fullscreenControl]="false" [collapseControl]="false">
               <h5 *widgsterTitle>Server Overview</h5>
               <div class="d-flex align-items-center mb-sm">
@@ -122,7 +122,7 @@
           </div>
         </div>
         <div class="col-12">
-          <section widgster [loading]="analyticsService.isReceiving" [reloadControl]="false"
+          <section widgster [loading]="analyticsService.isReceiving" [optionsControl]="false" [reloadControl]="false"
             [fullscreenControl]="false">
             <h5 *widgsterTitle>Daily Line Chart</h5>
             <div style="height: 350px;" class="chart-overflow-bottom" echarts [options]="echartAreaChartData">

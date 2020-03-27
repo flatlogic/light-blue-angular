@@ -1,25 +1,27 @@
 <h1 class="page-title">Dashboard <small><small>The Lucky One</small></small></h1>
 <div class="row">
   <div class="col-lg-7 col-12">
-    <!-- minimal widget consist of .widget class. note bg-transparent - it can be any background like bg-gray,
-    bg-primary, bg-white -->
-    <section class="widget bg-transparent">
-      <!-- .widget-body is a mostly semantic class. may be a sibling to .widget>header or .widget>footer -->
-      <div class="widget-body">
-        <!-- for this particular example we also need to preload us map, as this is mapael's extension -->
-        <div class="map-wrapper">
-          <div class="stats">
-            <h6 class="mt-1">GEO-LOCATIONS</h6>
-            <p class="h3 m-0">
-              <span class="fw-normal" [countUp]="1656843" [options]="countUpOptions">0</span>
-              <i class="fa fa-map-marker mb-2"></i>
-            </p>
-          </div>
-          <div class="map">
-            <div #map style="width: 100%; height: 400px"></div>
-          </div>
-        </div>
+    <section 
+      class="bg-transparent" 
+      widgster 
+      [optionsControl]="false" 
+      [reloadControl]="false"
+      [fullscreenControl]="false" 
+      [collapseControl]="false"
+      [closeControl]="false"
+    >
+    <div class="map-wrapper">
+      <div class="stats">
+        <h6 class="mt-1">GEO-LOCATIONS</h6>
+        <p class="h3 m-0">
+          <span class="fw-normal" [countUp]="1656843" [options]="countUpOptions">0</span>
+          <i class="fa fa-map-marker mb-2"></i>
+        </p>
       </div>
+      <div class="map">
+        <div #map style="width: 100%; height: 400px"></div>
+      </div>
+    </div>
     </section>
   </div>
   <div class="col-lg-1"></div>
@@ -177,7 +179,7 @@
 </div>
 <div class="row">
   <div class="col-lg-4 col-12">
-    <section widgster [fullscreenControl]="false" [collapseControl]="false" bodyClass="p-0"
+    <section widgster [optionsControl]="false" [fullscreenControl]="false" [collapseControl]="false" bodyClass="p-0"
       footerClass="bg-widget-transparent mt">
       <h6 *widgsterTitle><span class="badge badge-danger">New</span> Messages</h6>
       <div class="list-group list-group-lg">
@@ -226,7 +228,7 @@
     </section>
   </div>
   <div class="col-lg-4 col-12">
-    <section widgster [reloadControl]="false" [fullscreenControl]="false" [collapseControl]="true">
+    <section widgster [reloadControl]="false" [optionsControl]="false" [collapseControl]="false" [fullscreenControl]="false" [collapseControl]="true">
       <h6 *widgsterTitle> Market <span class="fw-semi-bold">Stats</span> </h6>
       <h3>$720 Earned</h3>
       <p class="fs-mini text-muted mb mt-sm">
@@ -271,18 +273,13 @@
           </tbody>
         </table>
       </div>
-      <div class="mt-5 chart-overflow-bottom" market-stats-widget height="130px"
-        [options]="echartDynamicAreaData3" [merge]="echartDynamicAreaDataUpdate">
+      <div class="mt-5 chart-overflow-bottom" market-stats-widget height="130px" [options]="echartDynamicAreaData3"
+        [merge]="echartDynamicAreaDataUpdate">
       </div>
     </section>
   </div>
   <div class="col-lg-4 col-12">
-    <section 
-      widgster [reloadControl]="false" 
-      [fullscreenControl]="false" 
-      [collapseControl]="true"
-      bodyClass="p-0"
-    >
+    <section widgster [reloadControl]="false" [fullscreenControl]="false" [collapseControl]="false">
       <h6 *widgsterTitle>Calendar</h6>
       <div class="calendar-navigation">
         <div class="prev" mwlCalendarPreviousView view="month" [(viewDate)]="viewDate">

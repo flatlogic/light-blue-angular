@@ -5,68 +5,74 @@
 <h1 class="page-title">User - <span class="fw-semi-bold">Profile</span></h1>
 <div class="row profile">
   <div class="col-lg-6 col-12">
-    <section class="widget">
-      <div class="widget-body mt-0">
-        <div class="widget-top-overflow text-white">
-          <div class="height-250 overflow-hidden">
-            <img class="img-fluid" src="assets/img/pictures/19.jpg">
+    <section 
+      widgster 
+      [optionsControl]="false"
+      [reloadControl]="false" 
+      [fullscreenControl]="false" 
+      [collapseControl]="false" 
+      [closeControl]="false"
+      bodyClass=" mt-0"
+    >
+    <div class="widget-top-overflow text-white">
+      <div class="height-250 overflow-hidden">
+        <img class="img-fluid" src="assets/img/pictures/19.jpg">
+      </div>
+      <div class="btn-toolbar">
+        <button class="btn btn-outline-default btn-sm pull-right mb-2">
+          <i class="fa fa-twitter mr-xs"></i>
+          Follow
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-5 col-12 text-center">
+        <div class="post-user post-user-profile">
+          <div class="thumb-xl">
+            <img class="rounded-circle" src="assets/img/people/a5.jpg" alt="...">
           </div>
-          <div class="btn-toolbar">
-            <button class="btn btn-outline-default btn-sm pull-right mb-2">
-              <i class="fa fa-twitter mr-xs"></i>
-              Follow
-            </button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-5 col-12 text-center">
-            <div class="post-user post-user-profile">
-              <div class="thumb-xl">
-                <img class="rounded-circle" src="assets/img/people/a5.jpg" alt="...">
-              </div>
-              <h5 class="fw-normal">Adam <span class="fw-semi-bold">Johns</span></h5>
-              <p>UI/UX designer</p>
-              <a href="#" class="btn btn-danger btn-sm mt-sm">
-                &nbsp;Send
-                <i class="fa fa-envelope ml-xs"></i>&nbsp;
-              </a>
-              <ul class="contacts">
-                <li><i class="fa fa-lg fa-phone fa-fw mr-xs"></i><a href="#"> +375 29 555-55-55</a></li>
-                <li><i class="fa fa-lg fa-envelope fa-fw mr-xs"></i><a href="#"> psmith@example.com</a></li>
-                <li><i class="fa fa-lg fa-map-marker fa-fw mr-xs"></i><a href="#"> Minsk, Belarus</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-7 col-12">
-            <div class="stats-row stats-row-profile mt text-left">
-              <div class="stat-item">
-                <p class="value text-left">251</p>
-                <h6 class="name">Posts</h6>
-              </div>
-              <div class="stat-item">
-                <p class="value text-left">9.38%</p>
-                <h6 class="name">Conversion</h6>
-              </div>
-              <div class="stat-item">
-                <p class="value text-left">842</p>
-                <h6 class="name">Followers</h6>
-              </div>
-            </div>
-            <p class="text-left mt-lg">
-              <a href="#" class="badge badge-warning rounded-0"> UI/UX </a>
-              <a href="#" class="badge badge-danger rounded-0 ml-xs"> Web Design </a>
-              <a href="#" class="badge badge-default rounded-0 ml-xs"> Mobile Apps </a>
-            </p>
-            <p class="lead mt-lg">
-              My name is Adam Johns and here is my new Sing user profile page.
-            </p>
-            <p>
-              I love reading people's summaries page especially those who are in the same industry as me.
-              Sometimes it's much easier to find your concentration during the night.
-            </p>
-          </div>
+          <h5 class="fw-normal">Adam <span class="fw-semi-bold">Johns</span></h5>
+          <p>UI/UX designer</p>
+          <a href="#" class="btn btn-danger btn-sm mt-sm">
+            &nbsp;Send
+            <i class="fa fa-envelope ml-xs"></i>&nbsp;
+          </a>
+          <ul class="contacts">
+            <li><i class="fa fa-lg fa-phone fa-fw mr-xs"></i><a href="#"> +375 29 555-55-55</a></li>
+            <li><i class="fa fa-lg fa-envelope fa-fw mr-xs"></i><a href="#"> psmith@example.com</a></li>
+            <li><i class="fa fa-lg fa-map-marker fa-fw mr-xs"></i><a href="#"> Minsk, Belarus</a></li>
+          </ul>
         </div>
       </div>
+      <div class="col-md-7 col-12">
+        <div class="stats-row stats-row-profile mt text-left">
+          <div class="stat-item">
+            <p class="value text-left">251</p>
+            <h6 class="name">Posts</h6>
+          </div>
+          <div class="stat-item">
+            <p class="value text-left">9.38%</p>
+            <h6 class="name">Conversion</h6>
+          </div>
+          <div class="stat-item">
+            <p class="value text-left">842</p>
+            <h6 class="name">Followers</h6>
+          </div>
+        </div>
+        <p class="text-left mt-lg">
+          <a href="#" class="badge badge-warning rounded-0"> UI/UX </a>
+          <a href="#" class="badge badge-danger rounded-0 ml-xs"> Web Design </a>
+          <a href="#" class="badge badge-default rounded-0 ml-xs"> Mobile Apps </a>
+        </p>
+        <p class="lead mt-lg">
+          My name is Adam Johns and here is my new Sing user profile page.
+        </p>
+        <p>
+          I love reading people's summaries page especially those who are in the same industry as me.
+          Sometimes it's much easier to find your concentration during the night.
+        </p>
+      </div>
+    </div>
     </section>
   </div>
   <div class="col-lg-6 col-12">

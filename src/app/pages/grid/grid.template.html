@@ -14,7 +14,7 @@
 <h1 class="page-title">Grid - <span class="fw-semi-bold">Options</span></h1>
 <div class="row">
   <div class="col-lg-7 offset-xl-1 ">
-    <section widgster [reloadControl]="false" [fullscreenControl]="false" [collapseControl]="false"
+    <section widgster [optionsControl]="false" [reloadControl]="false" [fullscreenControl]="false" [collapseControl]="false"
       [closeControl]="false">
       <h5 *widgsterTitle>Draggable Grid &nbsp;<span class="badge badge-danger fw-normal">since 2.1</span></h5>
       <p>
@@ -40,12 +40,12 @@
 </div>
 <div class="row" grid-demo>
   <div class="col-lg-6  widget-container">
-    <section widgster #defaultWidgster [class.locked]="defaultWidgster.fullscreened" [loading]="defaultLoading" (reload)="onDefaultReload()" id="default-widget">
+    <section widgster [optionsControl]="false" #defaultWidgster [class.locked]="defaultWidgster.fullscreened" [loading]="defaultLoading" (reload)="onDefaultReload()" id="default-widget">
       <h6 *widgsterTitle>Default <span class="fw-semi-bold">Widget</span></h6>
       <p *ngFor="let data of defaultWidgetData$ | async" [ngClass]="data.class">{{data.value}}</p>
       <loader *widgsterLoader [size]="40"></loader>
     </section>
-    <section #sharesWidgster widgster [loading]="sharesLoading" (reload)="onSharesReload()" class="shares-widget"
+    <section #sharesWidgster widgster [optionsControl]="false" [loading]="sharesLoading" (reload)="onSharesReload()" class="shares-widget"
       id="shares-widget">
       <ng-container *widgsterControls>
         <a title="Reload" (click)="sharesWidgster.onReload(); $event.preventDefault()"><strong
@@ -107,6 +107,7 @@
     <section 
       widgster 
       style="min-height: 200px" 
+      [optionsControl]="false"
       [reloadControl]="false" 
       [fullscreenControl]="false" 
       [collapseControl]="false" 
@@ -121,7 +122,7 @@
     </section>
   </div>
   <div class="col-lg-6  widget-container">
-    <section class="widget" id="news-widget" widgster [fullscreenControl]="false" [loading]="newsLoading" (reload)="onNewsReload()">
+    <section class="widget" id="news-widget" widgster [optionsControl]="false" [fullscreenControl]="false" [loading]="newsLoading" (reload)="onNewsReload()">
       <ng-container *widgsterTitle>
         <h6>
           News <span class="badge badge-pill badge-success">17</span>
@@ -143,7 +144,7 @@
         </li>
       </ul>
     </section>
-    <section class="widget locked" widgster [reloadControl]="false" [fullscreenControl]="false" [collapsed]="true">
+    <section class="widget locked" widgster [optionsControl]="false" [reloadControl]="false" [fullscreenControl]="false" [collapsed]="true">
       <h6 *widgsterTitle>Collapsed by default & locked</h6>
       <blockquote>
         There are no limits. There are plateaus, but you must not stay there, you must go beyond
@@ -156,7 +157,7 @@
         <code>.widget</code>.</p>
       <p>To make it locked (prevent dragging) add <code>.locked</code> class.</p>
     </section>
-    <section class="widget bg-gray" #storyWidgster widgster [reloadControl]="false" [fullscreenControl]="false" [collapseControl]="false" [closeControl]="false">
+    <section class="widget bg-gray" #storyWidgster widgster [optionsControl]="false" [reloadControl]="false" [fullscreenControl]="false" [collapseControl]="false" [closeControl]="false">
       <div class="jumbotron handle bg-gray text-white mb-0">
         <div class="container">
           <h1>Draggable story!</h1>

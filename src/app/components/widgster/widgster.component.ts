@@ -9,8 +9,7 @@ import {
   OnChanges,
   SimpleChanges,
   HostBinding,
-  Inject,
-  ViewContainerRef
+  Inject
 } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
@@ -34,7 +33,7 @@ export class WidgsterComponent implements OnChanges {
   @ContentChild(WidgsterTitleDirective, { static: false, read: TemplateRef }) public titleTpl: TemplateRef<any>;
   @ContentChild(WidgsterControlsDirective, { static: false, read: TemplateRef }) public controlsTpl: TemplateRef<any>;
   @ContentChild(WidgsterLoaderDirective, { static: false, read: TemplateRef }) public loaderTpl: TemplateRef<any>;
-  @ContentChild(WidgsterFooterDirective, {static: false, read: TemplateRef}) public footerTpl: TemplateRef<any>;
+  @ContentChild(WidgsterFooterDirective, { static: false, read: TemplateRef }) public footerTpl: TemplateRef<any>;
 
   @Input() public title: string;
   @Input() public loading: boolean = false;
@@ -47,6 +46,7 @@ export class WidgsterComponent implements OnChanges {
   @Input() public fullscreenZIndex: number = 10000;
   @Input() public hideBodyOverflow: boolean = true;
 
+  @Input() public optionsControl: boolean = true;
   @Input() public reloadControl: boolean = true;
   @Input() public fullscreenControl: boolean = true;
   @Input() public collapseControl: boolean = true;
@@ -64,6 +64,7 @@ export class WidgsterComponent implements OnChanges {
   @HostBinding('style.z-index') public zIndex: string = this.fullscreened ? this.fullscreenZIndex.toString() : null;
   @HostBinding('style.display') public display: string;
 
+  @Output() public options: EventEmitter<void> = new EventEmitter();
   @Output() public reload: EventEmitter<void> = new EventEmitter();
   @Output() public close: EventEmitter<void> = new EventEmitter();
   @Output() public collapseModeChange: EventEmitter<boolean> = new EventEmitter();
@@ -72,7 +73,7 @@ export class WidgsterComponent implements OnChanges {
   public closed: boolean = false;
   public collapseAnimationState: SlideUpDownState;
 
-  constructor(@Inject(DOCUMENT) private document: Document, private vcr: ViewContainerRef) {
+  constructor(@Inject(DOCUMENT) private document: Document) {
   }
 
   public ngOnChanges(changes: SimpleChanges): void {
@@ -92,6 +93,10 @@ export class WidgsterComponent implements OnChanges {
         }
       }
     }
+  }
+
+  public onOptions(): void {
+    this.options.emit();
   }
 
   public onClose(): void {
