@@ -8,7 +8,6 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { Autosize } from 'ng-autosize';
 import { TextMaskModule } from 'angular2-text-mask';
-import { NKDatetimeModule } from 'ngx-datetime';
 import { EditorModule } from '@tinymce/tinymce-angular';
 import { DropzoneModule } from 'ngx-dropzone-wrapper';
 import { NgWizardModule, NgWizardConfig, THEME } from 'ng-wizard';
@@ -16,6 +15,8 @@ import { NgSelectModule } from '@ng-select/ng-select';
 import { ColorPickerModule } from 'ngx-color-picker';
 import { LMarkdownEditorModule } from 'ngx-markdown-editor';
 import { Ng5SliderModule } from 'ng5-slider';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { TimepickerModule } from 'ngx-bootstrap/timepicker';
 
 import { ElementsComponent } from './elements/elements.component';
 import { ValidationComponent } from './validation/validation.component';
@@ -48,7 +49,6 @@ const wizardConfig: NgWizardConfig = {
     TooltipModule.forRoot(),
     AlertModule.forRoot(),
     BsDropdownModule.forRoot(),
-    NKDatetimeModule,
     RouterModule.forChild(routes),
     EditorModule,
     DropzoneModule,
@@ -57,7 +57,9 @@ const wizardConfig: NgWizardConfig = {
     ColorPickerModule,
     LMarkdownEditorModule,
     Ng5SliderModule,
-    WidgsterModule
+    WidgsterModule,
+    BsDatepickerModule.forRoot(),
+    TimepickerModule.forRoot()
   ]
 })
 export class FormModule {

@@ -643,8 +643,8 @@
             <label for="datetimepicker2i">
               Time-enabled
             </label>
-            <datetime [(ngModel)]="date" name="datetime" id="datetimepicker2i"
-              [timepicker]="{ icon: 'fa fa-clock-o' }" [datepicker]="{ icon: 'fa fa-calendar' }"></datetime>
+            <input class="form-control input-transparent" bsDatepicker>
+            <timepicker></timepicker>
           </div>
         </fieldset>
         <fieldset>
