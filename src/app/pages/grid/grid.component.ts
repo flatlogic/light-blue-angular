@@ -90,4 +90,11 @@ export class GridComponent implements OnInit {
     this.newsLoading = true;
     this.newsWidgetDataSource.next(updatedNewsWidgetData);
   }
+
+  public onFullscreenMode(fullscreen: boolean): void {
+    this.options = {
+      ...this.options,
+      disabled: fullscreen
+    };
+  }
 }
