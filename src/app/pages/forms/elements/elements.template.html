@@ -156,11 +156,11 @@
                 <label for="dropdown-appended">Actions dropdown</label>
                 <div class="input-group input-group-transparent">
                   <input type="text" class="form-control input-transparent" id="dropdown-appended">
-                  <div class="input-group-btn" data-dropdown>
-                    <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                  <div class="input-group-btn" dropdown>
+                    <button class="btn btn-success dropdown-toggle" dropdownToggle>
                       Action
                     </button>
-                    <ul class="dropdown-menu">
+                    <ul *dropdownMenu class="dropdown-menu">
                       <li><a class="dropdown-item" href="#">Action</a></li>
                       <li><a class="dropdown-item" href="#">Another action</a></li>
                       <li><a class="dropdown-item" href="#">Something else here</a></li>
@@ -174,11 +174,11 @@
                 <label for="segmented-dropdown">Segmented dropdown</label>
                 <div class="input-group input-group-transparent">
                   <input id="segmented-dropdown" class="form-control input-transparent" type="text">
-                  <div class="input-group-btn" data-dropdown>
+                  <div class="input-group-btn" dropdown>
                     <button class="btn btn-warning">Action</button>
-                    <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+                    <button class="btn btn-warning dropdown-toggle" dropdownToggle>
                     </button>
-                    <ul class="dropdown-menu">
+                    <ul *dropdownMenu class="dropdown-menu">
                       <li><a class="dropdown-item" href="#">Action</a></li>
                       <li><a class="dropdown-item" href="#">Another action</a></li>
                       <li><a class="dropdown-item" href="#">Something else here</a></li>
@@ -295,7 +295,7 @@
     <section widgster [fullscreenControl]="false" [collapseControl]="false">
       <h6 *widgsterTitle>
         <i class="fa fa-font"></i>
-          Textareas
+        Textareas
       </h6>
       <form class="form-horizontal" role="form">
         <fieldset>
@@ -311,8 +311,8 @@
               Auto-growing textarea
             </label>
             <div class="col-md-9 ">
-              <textarea rows="3" class="autogrow form-control input-transparent transition-height"
-                id="elastic-textarea" autosize placeholder="Try to add few new lines.."></textarea>
+              <textarea rows="3" class="autogrow form-control input-transparent transition-height" id="elastic-textarea"
+                autosize placeholder="Try to add few new lines.."></textarea>
             </div>
           </div>
           <div class="form-group row">
@@ -382,8 +382,8 @@
               </span>
             </label>
             <div class="col-md-8">
-              <ng-select class="danger" name="n1" [(ngModel)]="selectedNumber" [clearable]="false"
-                [searchable]="false" [items]="fromOneToThree" style="display: inline-block; width: 75px;">
+              <ng-select class="danger" name="n1" [(ngModel)]="selectedNumber" [clearable]="false" [searchable]="false"
+                [items]="fromOneToThree" style="display: inline-block; width: 75px;">
               </ng-select>
               &nbsp;
               <ng-select class="warning" name="n2" [(ngModel)]="selectedNumber2" [clearable]="false"
@@ -594,8 +594,7 @@
                 </label>
               </div>
               <div class="form-check abc-radio abc-radio-warning">
-                <input class="form-check-input" type="radio" name="radio3" id="radio6" value="option2" checked
-                  disabled>
+                <input class="form-check-input" type="radio" name="radio3" id="radio6" value="option2" checked disabled>
                 <label class="form-check-label" for="radio6">
                   One
                 </label>
@@ -659,8 +658,8 @@
               </span>
             </label>
             <div class="input-group input-group-transparent">
-              <input [(colorPicker)]="color" [value]="color" autocomplete="off" cpPosition="bottom" type="text"
-                value="" class="form-control input-transparent" id="colorpickeri" />
+              <input [(colorPicker)]="color" [value]="color" autocomplete="off" cpPosition="bottom" type="text" value=""
+                class="form-control input-transparent" id="colorpickeri" />
               <span class="input-group-addon">
                 <i></i>
               </span>
@@ -739,10 +738,10 @@
           <form>
             <div class="mb-sm">
               <ng5-slider [value]="14" [options]="{
-                    floor: 0, 
-                    ceil: 20, 
-                    animate: false, 
-                    handleDimension: 26, 
+                    floor: 0,
+                    ceil: 20,
+                    animate: false,
+                    handleDimension: 26,
                     barDimension: 210,
                     showSelectionBar: true,
                     hideLimitLabels: true,
@@ -752,10 +751,10 @@
             </div>
             <div class="slider-danger mb-sm">
               <ng5-slider class="danger" [value]="18" [options]="{
-                  floor: 0, 
-                  ceil: 20, 
-                  animate: false, 
-                  handleDimension: 26, 
+                  floor: 0,
+                  ceil: 20,
+                  animate: false,
+                  handleDimension: 26,
                   barDimension: 210,
                   showSelectionBar: true,
                   hideLimitLabels: true,
@@ -765,10 +764,10 @@
             </div>
             <div class="slider-warning mb-sm">
               <ng5-slider class="warning" [value]="7" [options]="{
-                  floor: 0, 
-                  ceil: 20, 
-                  animate: false, 
-                  handleDimension: 26, 
+                  floor: 0,
+                  ceil: 20,
+                  animate: false,
+                  handleDimension: 26,
                   barDimension: 210,
                   showSelectionBar: true,
                   hideLimitLabels: true,
@@ -778,10 +777,10 @@
             </div>
             <div class="slider-success mb-sm">
               <ng5-slider class="success" [value]="11" [options]="{
-                  floor: 0, 
-                  ceil: 20, 
-                  animate: false, 
-                  handleDimension: 26, 
+                  floor: 0,
+                  ceil: 20,
+                  animate: false,
+                  handleDimension: 26,
                   barDimension: 210,
                   showSelectionBar: true,
                   hideLimitLabels: true,
@@ -791,10 +790,10 @@
             </div>
             <div class="slider-inverse mb-sm">
               <ng5-slider class="inverse" [value]="4" [options]="{
-                  floor: 0, 
-                  ceil: 20, 
-                  animate: false, 
-                  handleDimension: 26, 
+                  floor: 0,
+                  ceil: 20,
+                  animate: false,
+                  handleDimension: 26,
                   barDimension: 210,
                   showSelectionBar: true,
                   hideLimitLabels: true,
@@ -812,10 +811,10 @@
             <div class="row">
               <div class="col-md-8 col-md-offset-2" style="height: 210px; margin-bottom: 10px;">
                 <ng5-slider [value]="14" [options]="{
-                  floor: 0, 
-                  ceil: 20, 
-                  animate: false, 
-                  handleDimension: 26, 
+                  floor: 0,
+                  ceil: 20,
+                  animate: false,
+                  handleDimension: 26,
                   barDimension: 210,
                   showSelectionBar: true,
                   hideLimitLabels: true,
@@ -824,10 +823,10 @@
                 }">
                 </ng5-slider>
                 <ng5-slider class="inverse" [value]="18" [options]="{
-                  floor: 0, 
-                  ceil: 20, 
-                  animate: false, 
-                  handleDimension: 26, 
+                  floor: 0,
+                  ceil: 20,
+                  animate: false,
+                  handleDimension: 26,
                   barDimension: 210,
                   showSelectionBar: true,
                   hideLimitLabels: true,
@@ -836,10 +835,10 @@
                 }">
                 </ng5-slider>
                 <ng5-slider [value]="7" [options]="{
-                  floor: 0, 
-                  ceil: 20, 
-                  animate: false, 
-                  handleDimension: 26, 
+                  floor: 0,
+                  ceil: 20,
+                  animate: false,
+                  handleDimension: 26,
                   barDimension: 210,
                   showSelectionBar: true,
                   hideLimitLabels: true,
@@ -848,10 +847,10 @@
                 }">
                 </ng5-slider>
                 <ng5-slider class="inverse" [value]="11" [options]="{
-                  floor: 0, 
-                  ceil: 20, 
-                  animate: false, 
-                  handleDimension: 26, 
+                  floor: 0,
+                  ceil: 20,
+                  animate: false,
+                  handleDimension: 26,
                   barDimension: 210,
                   showSelectionBar: true,
                   hideLimitLabels: true,
@@ -860,10 +859,10 @@
                 }">
                 </ng5-slider>
                 <ng5-slider [value]="4" [options]="{
-                  floor: 0, 
-                  ceil: 20, 
-                  animate: false, 
-                  handleDimension: 26, 
+                  floor: 0,
+                  ceil: 20,
+                  animate: false,
+                  handleDimension: 26,
                   barDimension: 210,
                   showSelectionBar: true,
                   hideLimitLabels: true,
@@ -881,10 +880,10 @@
             an array. Price range selector:</p>
           <form>
             <ng5-slider class="warning" [value]="200" [highValue]="1547" [options]="{
-              floor: 0, 
-              ceil: 2000, 
-              animate: false, 
-              handleDimension: 26, 
+              floor: 0,
+              ceil: 2000,
+              animate: false,
+              handleDimension: 26,
               barDimension: 210,
               showSelectionBar: true,
               hideLimitLabels: true,
@@ -943,8 +942,8 @@
                   <img alt="..."
                     src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTEiIGhlaWdodD0iMTQxIj48cmVjdCB3aWR0aD0iMTkxIiBoZWlnaHQ9IjE0MSIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9Ijk1LjUiIHk9IjcwLjUiIHN0eWxlPSJmaWxsOiNhYWE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6MTJweDtmb250LWZhbWlseTpBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZjtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4xOTF4MTQxPC90ZXh0Pjwvc3ZnPg==">
                 </div>
-                <div class="fileinput-preview fileinput-exists thumbnail"
-                  style="max-width: 200px; max-height: 150px;"></div>
+                <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;">
+                </div>
                 <div>
                   <span class="btn btn-default btn-file"><span class="fileinput-new">Select image</span><span
                       class="fileinput-exists">Change</span><input type="file" name="..."></span>

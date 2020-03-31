@@ -27,16 +27,18 @@
               <button id="email-opened-reply" class="btn btn-sm btn-default" (click)="goToReply(mail)">
                 <i class="fa fa-reply"></i> Reply
               </button>
-              <button class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown">
-              </button>
-              <ul class="dropdown-menu float-right">
-                <li><a class="dropdown-item" href="#"><i class="fa fa-reply reply-btn"></i> Reply</a></li>
-                <li><a class="dropdown-item" href="#"><i class="fa fa-arrow-right reply-btn"></i> Forward</a></li>
-                <li><a class="dropdown-item" href="#"><i class="fa fa-print"></i> Print</a></li>
-                <li class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#"><i class="fa fa-ban"></i> Spam</a></li>
-                <li><a class="dropdown-item" href="#"><i class="glyphicon glyphicon-trash"></i> Delete</a></li>
-              </ul>
+              <ng-container dropdown>
+                <button dropdownToggle class="btn btn-sm btn-default dropdown-toggle">
+                </button>
+                <ul *dropdownMenu class="dropdown-menu float-right">
+                  <li><a class="dropdown-item" href="#"><i class="fa fa-reply reply-btn"></i> Reply</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fa fa-arrow-right reply-btn"></i> Forward</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fa fa-print"></i> Print</a></li>
+                  <li class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#"><i class="fa fa-ban"></i> Spam</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="glyphicon glyphicon-trash"></i> Delete</a></li>
+                </ul>
+              </ng-container>
             </div>
           </div>
           <time class="email-date float-right">
@@ -54,13 +56,14 @@
         <div class="row">
           <div class="col-sm-6">
             <hr *ngIf="mail.attachments">
-            <p  *ngIf="mail.attachments" class="details"><strong>{{mail.attachments.length}} attachments</strong> &nbsp;-&nbsp; <a href="#">Download all attachments</a>
+            <p *ngIf="mail.attachments" class="details"><strong>{{mail.attachments.length}} attachments</strong>
+              &nbsp;-&nbsp; <a href="#">Download all attachments</a>
               &nbsp;&nbsp;&nbsp;<a href="#">View all Images</a></p>
             <section *ngFor="let attachment of mail.attachments; let i = index" class="attachment">
               <img class="img-fluid" src="{{attachment}}" alt="">
               <h5 class="title">some-cool-image{{i + 1}}.jpg</h5>
               <p class="details">
-                568K  &nbsp;&nbsp;
+                568K &nbsp;&nbsp;
                 <a href="#">View</a> &nbsp;&nbsp;
                 <a href="#">Download</a>
               </p>

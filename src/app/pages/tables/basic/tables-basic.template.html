@@ -52,7 +52,8 @@
             </td>
             <td class="width-150">
               <div class="progress progress-sm">
-                  <progressbar class="bg-gray-lighter" type="success" [animate]="true" [value]="progressbarValue1$ | async" [max]="100"></progressbar>
+                <progressbar class="bg-gray-lighter" type="success" [animate]="true"
+                  [value]="progressbarValue1$ | async" [max]="100"></progressbar>
               </div>
             </td>
           </tr>
@@ -86,7 +87,8 @@
             </td>
             <td class="width-150">
               <div class="progress progress-sm">
-                  <progressbar class="bg-gray-lighter" type="warning" [animate]="true" [value]="progressbarValue2$ | async" [max]="100"></progressbar>
+                <progressbar class="bg-gray-lighter" type="warning" [animate]="true"
+                  [value]="progressbarValue2$ | async" [max]="100"></progressbar>
               </div>
             </td>
           </tr>
@@ -122,7 +124,8 @@
             </td>
             <td class="width-150">
               <div class="progress progress-sm">
-                  <progressbar class="bg-gray-lighter" [animate]="true" [value]="progressbarValue3$ | async" [max]="100"></progressbar>
+                <progressbar class="bg-gray-lighter" [animate]="true" [value]="progressbarValue3$ | async" [max]="100">
+                </progressbar>
               </div>
             </td>
           </tr>
@@ -155,8 +158,9 @@
               69.1 KB
             </td>
             <td class="width-150">
-              <div class="progress progress-sm">                  
-                  <progressbar class="bg-gray-lighter" type="danger" [animate]="true" [value]="progressbarValue4$ | async" [max]="100"></progressbar>
+              <div class="progress progress-sm">
+                <progressbar class="bg-gray-lighter" type="danger" [animate]="true" [value]="progressbarValue4$ | async"
+                  [max]="100"></progressbar>
               </div>
             </td>
           </tr>
@@ -190,7 +194,8 @@
             </td>
             <td class="width-150">
               <div class="progress progress-sm">
-                  <progressbar class="bg-gray-lighter" [animate]="true" [value]="progressbarValue5$ | async" [max]="100"></progressbar>
+                <progressbar class="bg-gray-lighter" [animate]="true" [value]="progressbarValue5$ | async" [max]="100">
+                </progressbar>
               </div>
             </td>
           </tr>
@@ -202,11 +207,11 @@
           <button class="btn btn-default btn-sm mr-2">
             Send to ...
           </button>
-          <div class="btn-group" data-dropdown>
-            <button class="btn btn-sm btn-inverse dropdown-toggle" data-toggle="dropdown">
+          <div class="btn-group" dropdown>
+            <button class="btn btn-sm btn-inverse dropdown-toggle" dropdownToggle>
               &nbsp; Clear &nbsp;
             </button>
-            <ul class="dropdown-menu dropdown-menu-right">
+            <ul *dropdownMenu class="dropdown-menu dropdown-menu-right">
               <li><a class="dropdown-item" href="#">Clear</a></li>
               <li><a class="dropdown-item" href="#">Move ...</a></li>
               <li><a class="dropdown-item" href="#">Something else here</a></li>
@@ -227,103 +232,103 @@
         Table <span class="fw-semi-bold">Styles</span>
       </h6>
       <h3>Stripped <span class="fw-semi-bold">Table</span></h3>
-        <p>Each row is highlighted. You will never lost there. Just <code>.table-striped</code> it.</p>
-        <table class="table table-striped">
+      <p>Each row is highlighted. You will never lost there. Just <code>.table-striped</code> it.</p>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>
+              <div class="form-check abc-checkbox">
+                <input class="form-check-input" id="checkbox1" type="checkbox" check-all>
+                <label class="form-check-label" for="checkbox1"></label>
+              </div>
+            </th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Info</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="form-check abc-checkbox">
+                <input class="form-check-input" id="checkbox2" type="checkbox">
+                <label class="form-check-label" for="checkbox2"></label>
+              </div>
+            </td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td><span class="badge badge-danger">Online</span></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="form-check abc-checkbox">
+                <input class="form-check-input" id="checkbox3" type="checkbox">
+                <label class="form-check-label" for="checkbox3"></label>
+              </div>
+            </td>
+            <td>Jacob <span class="badge badge-warning text-gray-dark">ALERT!</span></td>
+            <td>Thornton</td>
+            <td><span class="badge bg-gray text-white">Away</span></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="form-check abc-checkbox">
+                <input class="form-check-input" id="checkbox4" type="checkbox">
+                <label class="form-check-label" for="checkbox4"></label>
+              </div>
+            </td>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td><span class="badge badge-danger">Construct</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <br><br>
+      <h3>Hover <span class="fw-semi-bold">Table</span></h3>
+      <p>Trace only what's really important. <code>.table-hover</code> is made for it.</p>
+      <div class="table-responsive">
+        <table class="table table-hover">
           <thead>
             <tr>
-              <th>
-                <div class="form-check abc-checkbox">
-                  <input class="form-check-input" id="checkbox1" type="checkbox" check-all>
-                  <label class="form-check-label" for="checkbox1"></label>
-                </div>
-              </th>
+              <th>#</th>
               <th>First Name</th>
               <th>Last Name</th>
-              <th>Info</th>
+              <th>Email</th>
+              <th>Status</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>
-                <div class="form-check abc-checkbox">
-                  <input class="form-check-input" id="checkbox2" type="checkbox">
-                  <label class="form-check-label" for="checkbox2"></label>
-                </div>
-              </td>
+              <td>1</td>
               <td>Mark</td>
               <td>Otto</td>
-              <td><span class="badge badge-danger">Online</span></td>
+              <td><a href="#">ottoto@example.com</a></td>
+              <td><span class="badge badge-pill bg-gray-light text-gray">Pending</span></td>
             </tr>
             <tr>
-              <td>
-                <div class="form-check abc-checkbox">
-                  <input class="form-check-input" id="checkbox3" type="checkbox">
-                  <label class="form-check-label" for="checkbox3"></label>
-                </div>
-              </td>
-              <td>Jacob <span class="badge badge-warning text-gray-dark">ALERT!</span></td>
+              <td>2</td>
+              <td>Jacob</td>
               <td>Thornton</td>
-              <td><span class="badge bg-gray text-white">Away</span></td>
+              <td><a href="#">fat.thor@example.com</a></td>
+              <td><span class="badge badge-pill bg-gray-light text-gray-light">Unconfirmed</span></td>
             </tr>
             <tr>
-              <td>
-                <div class="form-check abc-checkbox">
-                  <input class="form-check-input" id="checkbox4" type="checkbox">
-                  <label class="form-check-label" for="checkbox4"></label>
-                </div>
-              </td>
+              <td>3</td>
               <td>Larry</td>
               <td>the Bird</td>
-              <td><span class="badge badge-danger">Construct</span></td>
+              <td><a href="#">larry@example.com</a></td>
+              <td><span class="badge badge-pill bg-gray-light text-gray">New</span></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Peter</td>
+              <td>Horadnia</td>
+              <td><a href="#">peter@example.com</a></td>
+              <td><span class="badge badge-pill bg-gray-light text-gray-light">Active</span></td>
             </tr>
           </tbody>
         </table>
-        <br><br>
-        <h3>Hover <span class="fw-semi-bold">Table</span></h3>
-        <p>Trace only what's really important. <code>.table-hover</code> is made for it.</p>
-        <div class="table-responsive">
-          <table class="table table-hover">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Email</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td><a href="#">ottoto@example.com</a></td>
-                <td><span class="badge badge-pill bg-gray-light text-gray">Pending</span></td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td><a href="#">fat.thor@example.com</a></td>
-                <td><span class="badge badge-pill bg-gray-light text-gray-light">Unconfirmed</span></td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td><a href="#">larry@example.com</a></td>
-                <td><span class="badge badge-pill bg-gray-light text-gray">New</span></td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>Peter</td>
-                <td>Horadnia</td>
-                <td><a href="#">peter@example.com</a></td>
-                <td><span class="badge badge-pill bg-gray-light text-gray-light">Active</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      </div>
     </section>
   </div>
   <div class="col-lg-6 col-12">
@@ -332,16 +337,116 @@
         Table <span class="fw-semi-bold">Styles</span>
       </h6>
       <h3>Bordered <span class="fw-semi-bold">Table</span></h3>
-        <p>Each row is highlighted. You will never lost there. That's how
-          all of us learned in school the table should look like. Just add
-          <code>.table-bordered</code> to it.</p>
-        <table class="table table-bordered table-lg mt-lg mb-0">
-          <thead>
+      <p>Each row is highlighted. You will never lost there. That's how
+        all of us learned in school the table should look like. Just add
+        <code>.table-bordered</code> to it.</p>
+      <table class="table table-bordered table-lg mt-lg mb-0">
+        <thead>
+          <tr>
+            <th>
+              <div class="form-check abc-checkbox">
+                <input class="form-check-input" id="checkbox10" type="checkbox" check-all>
+                <label class="form-check-label" for="checkbox10"></label>
+              </div>
+            </th>
+            <th>Product</th>
+            <th class="text-right">Price</th>
+            <th class="text-center">Sales</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="form-check abc-checkbox">
+                <input class="form-check-input" id="checkbox11" type="checkbox">
+                <label class="form-check-label" for="checkbox11"></label>
+              </div>
+            </td>
+            <td>On the Road</td>
+            <td class="text-right">$25 224.2</td>
+            <td class="text-center">
+              <div style="display: inline-block; height: 20px; width: 34px;" class="sparkline" echarts
+                [options]="echartBarChartData6"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="form-check abc-checkbox">
+                <input class="form-check-input" id="checkbox12" type="checkbox">
+                <label class="form-check-label" for="checkbox12"></label>
+              </div>
+            </td>
+            <td>HP Core i7</td>
+            <td class="text-right">$87 346.1</td>
+            <td class="text-center">
+              <div style="display: inline-block; height: 20px; width: 34px;" class="sparkline" echarts
+                [options]="echartBarChartData7"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="form-check abc-checkbox">
+                <input class="form-check-input" id="checkbox13" type="checkbox">
+                <label class="form-check-label" for="checkbox13"></label>
+              </div>
+            </td>
+            <td>Let's Dance</td>
+            <td class="text-right">$57 944.6</td>
+            <td class="text-center">
+              <div style="display: inline-block; height: 20px; width: 34px;" class="sparkline" echarts
+                [options]="echartBarChartData8"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="form-check abc-checkbox">
+                <input class="form-check-input" id="checkbox14" type="checkbox">
+                <label class="form-check-label" for="checkbox14"></label>
+              </div>
+            </td>
+            <td>Air Pro</td>
+            <td class="text-right">$118 533.1</td>
+            <td class="text-center">
+              <div style="display: inline-block; height: 20px; width: 34px;" class="sparkline" echarts
+                [options]="echartBarChartData9"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="form-check abc-checkbox">
+                <input class="form-check-input" id="checkbox15" type="checkbox">
+                <label class="form-check-label" for="checkbox15"></label>
+              </div>
+            </td>
+            <td>Version Control</td>
+            <td class="text-right">$72 854.5</td>
+            <td class="text-center">
+              <div style="display: inline-block; height: 20px; width: 34px;" class="sparkline" echarts
+                [options]="echartBarChartData10"></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section widgster [reloadControl]="false" [fullscreenControl]="false" [collapseControl]="false">
+      <h6 *widgsterTitle>
+        Table <span class="fw-semi-bold">Styles</span>
+      </h6>
+      <h3>Overflow <span class="fw-semi-bold">Table</span></h3>
+      <p>
+        Add any non-bordered .table within a widget for a seamless design.
+        Awesome look for no cost.
+        Just wrap the table with simple css class <code>.widget-table-overflow</code> inside
+        of widget
+      </p>
+      <div class="widget-table-overflow">
+        <table class="table table-striped table-lg mt-lg mb-0">
+          <thead class="no-bd">
             <tr>
               <th>
                 <div class="form-check abc-checkbox">
-                  <input class="form-check-input" id="checkbox10" type="checkbox" check-all>
-                  <label class="form-check-label" for="checkbox10"></label>
+                  <input class="form-check-input" id="checkbox210" type="checkbox" check-all>
+                  <label class="form-check-label" for="checkbox210"></label>
                 </div>
               </th>
               <th>Product</th>
@@ -353,8 +458,8 @@
             <tr>
               <td>
                 <div class="form-check abc-checkbox">
-                  <input class="form-check-input" id="checkbox11" type="checkbox">
-                  <label class="form-check-label" for="checkbox11"></label>
+                  <input class="form-check-input" id="checkbox211" type="checkbox">
+                  <label class="form-check-label" for="checkbox211"></label>
                 </div>
               </td>
               <td>On the Road</td>
@@ -367,8 +472,8 @@
             <tr>
               <td>
                 <div class="form-check abc-checkbox">
-                  <input class="form-check-input" id="checkbox12" type="checkbox">
-                  <label class="form-check-label" for="checkbox12"></label>
+                  <input class="form-check-input" id="checkbox212" type="checkbox">
+                  <label class="form-check-label" for="checkbox212"></label>
                 </div>
               </td>
               <td>HP Core i7</td>
@@ -381,8 +486,8 @@
             <tr>
               <td>
                 <div class="form-check abc-checkbox">
-                  <input class="form-check-input" id="checkbox13" type="checkbox">
-                  <label class="form-check-label" for="checkbox13"></label>
+                  <input class="form-check-input" id="checkbox213" type="checkbox">
+                  <label class="form-check-label" for="checkbox213"></label>
                 </div>
               </td>
               <td>Let's Dance</td>
@@ -395,8 +500,8 @@
             <tr>
               <td>
                 <div class="form-check abc-checkbox">
-                  <input class="form-check-input" id="checkbox14" type="checkbox">
-                  <label class="form-check-label" for="checkbox14"></label>
+                  <input class="form-check-input" id="checkbox214" type="checkbox">
+                  <label class="form-check-label" for="checkbox214"></label>
                 </div>
               </td>
               <td>Air Pro</td>
@@ -409,8 +514,8 @@
             <tr>
               <td>
                 <div class="form-check abc-checkbox">
-                  <input class="form-check-input" id="checkbox15" type="checkbox">
-                  <label class="form-check-label" for="checkbox15"></label>
+                  <input class="form-check-input" id="checkbox215" type="checkbox">
+                  <label class="form-check-label" for="checkbox215"></label>
                 </div>
               </td>
               <td>Version Control</td>
@@ -422,107 +527,7 @@
             </tr>
           </tbody>
         </table>
-    </section>
-    <section widgster [reloadControl]="false" [fullscreenControl]="false" [collapseControl]="false">
-      <h6 *widgsterTitle>
-        Table <span class="fw-semi-bold">Styles</span>
-      </h6>
-      <h3>Overflow <span class="fw-semi-bold">Table</span></h3>
-        <p>
-          Add any non-bordered .table within a widget for a seamless design.
-          Awesome look for no cost.
-          Just wrap the table with simple css class <code>.widget-table-overflow</code> inside
-          of widget
-        </p>
-        <div class="widget-table-overflow">
-          <table class="table table-striped table-lg mt-lg mb-0">
-            <thead class="no-bd">
-              <tr>
-                <th>
-                  <div class="form-check abc-checkbox">
-                    <input class="form-check-input" id="checkbox210" type="checkbox" check-all>
-                    <label class="form-check-label" for="checkbox210"></label>
-                  </div>
-                </th>
-                <th>Product</th>
-                <th class="text-right">Price</th>
-                <th class="text-center">Sales</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <div class="form-check abc-checkbox">
-                    <input class="form-check-input" id="checkbox211" type="checkbox">
-                    <label class="form-check-label" for="checkbox211"></label>
-                  </div>
-                </td>
-                <td>On the Road</td>
-                <td class="text-right">$25 224.2</td>
-                <td class="text-center">
-                  <div style="display: inline-block; height: 20px; width: 34px;" class="sparkline" echarts
-                    [options]="echartBarChartData6"></div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="form-check abc-checkbox">
-                    <input class="form-check-input" id="checkbox212" type="checkbox">
-                    <label class="form-check-label" for="checkbox212"></label>
-                  </div>
-                </td>
-                <td>HP Core i7</td>
-                <td class="text-right">$87 346.1</td>
-                <td class="text-center">
-                  <div style="display: inline-block; height: 20px; width: 34px;" class="sparkline" echarts
-                    [options]="echartBarChartData7"></div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="form-check abc-checkbox">
-                    <input class="form-check-input" id="checkbox213" type="checkbox">
-                    <label class="form-check-label" for="checkbox213"></label>
-                  </div>
-                </td>
-                <td>Let's Dance</td>
-                <td class="text-right">$57 944.6</td>
-                <td class="text-center">
-                  <div style="display: inline-block; height: 20px; width: 34px;" class="sparkline" echarts
-                    [options]="echartBarChartData8"></div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="form-check abc-checkbox">
-                    <input class="form-check-input" id="checkbox214" type="checkbox">
-                    <label class="form-check-label" for="checkbox214"></label>
-                  </div>
-                </td>
-                <td>Air Pro</td>
-                <td class="text-right">$118 533.1</td>
-                <td class="text-center">
-                  <div style="display: inline-block; height: 20px; width: 34px;" class="sparkline" echarts
-                    [options]="echartBarChartData9"></div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="form-check abc-checkbox">
-                    <input class="form-check-input" id="checkbox215" type="checkbox">
-                    <label class="form-check-label" for="checkbox215"></label>
-                  </div>
-                </td>
-                <td>Version Control</td>
-                <td class="text-right">$72 854.5</td>
-                <td class="text-center">
-                  <div style="display: inline-block; height: 20px; width: 34px;" class="sparkline" echarts
-                    [options]="echartBarChartData10"></div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      </div>
     </section>
   </div>
 </div>

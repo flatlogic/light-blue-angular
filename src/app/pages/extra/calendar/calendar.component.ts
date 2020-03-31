@@ -39,6 +39,7 @@ export class CalendarComponent implements OnInit, AfterViewInit, OnDestroy {
   public currentDate: Date = new Date();
   public currentEvent: EventApi;
   public eventForm: FormGroup;
+  public view: string = 'dayGridMonth';
   private draggable: Draggable;
 
   constructor(private fb: FormBuilder) { }
@@ -197,8 +198,8 @@ export class CalendarComponent implements OnInit, AfterViewInit, OnDestroy {
     draggedEl.parentNode.removeChild(draggedEl);
   }
 
-  public changeView(view: string): void {
-    this.calendarApi.changeView(view);
+  public changeView(): void {
+    this.calendarApi.changeView(this.view);
   }
 
   public prev(): void {

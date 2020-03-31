@@ -37,28 +37,32 @@
       </div>
     </div>
     <div class="col-lg-9 col-xl-8 col-12">
-      <section class="widget-calendar" widgster [optionsControl]="false" [reloadControl]="false" [fullscreenControl]="false" [collapseControl]="false" [closeControl]="false">
+      <section class="widget-calendar" widgster [optionsControl]="false" [reloadControl]="false"
+        [fullscreenControl]="false" [collapseControl]="false" [closeControl]="false">
         <ng-container *widgsterTitle>
           <div class="btn-group ">
             <button class="btn btn-default" (click)="prev()"><i class="fa fa-angle-left"></i></button>
             <button class="btn btn-default" (click)="next()"><i class="fa fa-angle-right"></i></button>
           </div>
-          <div class="btn-group pull-right" data-toggle="buttons">
-            <label class="btn btn-default active" (click)="changeView('dayGridMonth')">
-              <input type="radio" name="view" value="month"> Month
+          <div class="btn-group pull-right">
+            <label btnRadio="dayGridMonth" [(ngModel)]="view" class="btn btn-default"
+              (ngModelChange)="changeView($event)">
+              Month
             </label>
-            <label class="btn btn-default" (click)="changeView('timeGridWeek')">
-              <input type="radio" name="view" value="agendaWeek"> Week
+            <label btnRadio="timeGridWeek" [(ngModel)]="view" class="btn btn-default"
+              (ngModelChange)="changeView($event)">
+              Week
             </label>
-            <label class="btn btn-default" (click)="changeView('timeGridDay')">
-              <input type="radio" name="view" value="agendaDay"> Day
+            <label btnRadio="timeGridDay" [(ngModel)]="view" class="btn btn-default"
+              (ngModelChange)="changeView($event)">
+              Day
             </label>
           </div>
         </ng-container>
-        <full-calendar #calendar (eventClick)="onEventClick($event)" (select)="onSelect($event)"
-            (drop)="onDrop($event)" defaultView="dayGridMonth" [events]="events" [eventLimit]="2" [editable]="true"
-            [droppable]="true" [selectable]="true" [selectHelper]="true" [header]="null" [plugins]="calendarPlugins">
-          </full-calendar>
+        <full-calendar #calendar (eventClick)="onEventClick($event)" (select)="onSelect($event)" (drop)="onDrop($event)"
+          defaultView="dayGridMonth" [events]="events" [eventLimit]="2" [editable]="true" [droppable]="true"
+          [selectable]="true" [selectHelper]="true" [header]="null" [plugins]="calendarPlugins">
+        </full-calendar>
       </section>
     </div>
   </div>

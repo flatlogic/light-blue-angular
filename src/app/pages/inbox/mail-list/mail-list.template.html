@@ -17,11 +17,11 @@
     <div class="row">
       <div class="col-sm-6">
         <div class="btn-toolbar">
-          <div class="btn-group mr">
-            <a class="btn btn-default dropdown-toggle" href="#" data-toggle="dropdown">
+          <div class="btn-group mr" dropdown>
+            <a dropdownToggle class="btn btn-default dropdown-toggle" href="#" (click)="$event.preventDefault()">
               Select
             </a>
-            <ul class="dropdown-menu">
+            <ul *dropdownMenu class="dropdown-menu">
               <li><a class="dropdown-item" (click)="selectAll()">All</a></li>
               <li><a class="dropdown-item" (click)="unselectAll()">None</a></li>
               <li class="dropdown-divider"></li>
@@ -29,11 +29,11 @@
               <li><a class="dropdown-item" (click)="selectUnread()">Unread</a></li>
             </ul>
           </div>
-          <div class="btn-group">
-            <a class="btn btn-default dropdown-toggle" href="#" data-toggle="dropdown">
+          <div class="btn-group" dropdown>
+            <a dropdownToggle class="btn btn-default dropdown-toggle" href="#" (click)="$event.preventDefault()">
               Actions
             </a>
-            <ul class="dropdown-menu">
+            <ul *dropdownMenu class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Reply</a></li>
               <li><a class="dropdown-item" href="#">Forward</a></li>
               <li><a class="dropdown-item" href="#">Archive</a></li>

@@ -1,7 +1,7 @@
-<nav sidebar id="sidebar" class="sidebar nav-collapse collapse"></nav>
+<nav sidebar id="sidebar" class="sidebar nav-collapse collapse" [class.show]="showMobileMenu"></nav>
 <div class="wrap">
   <header navbar (changeSidebarPosition)="sidebarPosition($event)" (changeSidebarDisplay)="sidebarDisplay($event)"
-          (openSidebar)="openSidebar()" class="page-header"></header>
+    (openSidebar)="openSidebar()" class="page-header"></header>
   <main id="content" class="content view-animate fade-up" role="main">
     <div class="loading-overlay" #spinnerElement>
       <div class="sk-fading-circle">
@@ -24,7 +24,7 @@
     </div>
     <footer class="content-footer">
       Light Blue Angular - Admin Angular 8 Template made by <a href="https://flatlogic.com" rel="nofollow"
-                                                               target="_blank">Flatlogic</a>
+        target="_blank">Flatlogic</a>
     </footer>
   </main>
 </div>

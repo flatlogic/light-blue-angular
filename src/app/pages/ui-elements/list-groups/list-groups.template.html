@@ -12,7 +12,7 @@
   <ul [sortablejs]="items" [sortablejsOptions]="itemsOptions" class="list-group list-group-sortable mt-lg">
     <li *ngFor="let item of items" class="list-group-item">
       <i class="fa fa-sort"></i>
-      <a href="#" class="close flex-last ml-auto" data-dismiss="alert" aria-hidden="true">&times;</a>
+      <a href="#" class="close flex-last ml-auto" aria-hidden="true">&times;</a>
       &nbsp;&nbsp;&nbsp; {{item.index}} &nbsp;&nbsp;&nbsp;
       {{item.name}}
     </li>

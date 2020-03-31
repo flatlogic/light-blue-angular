@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, ViewChild, AfterViewInit, ElementRef, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ViewChild, AfterViewInit, ElementRef, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
 
 import Shuffle, { ShuffleOptions } from 'shufflejs';
 import * as PhotoSwipe from 'photoswipe';

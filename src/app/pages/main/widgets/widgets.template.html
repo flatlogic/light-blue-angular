@@ -76,55 +76,54 @@
   <div class="col-lg-3 col-md-6 col-12">
     <section widgster [optionsControl]="false" [reloadControl]="false" [fullscreenControl]="false"
       [collapseControl]="false" [closeControl]="false" bodyClass="mt-0 clearfix">
-      <swiper [config]="verticalFlipSwiperConfig"
-          style="height: 104px; overflow: hidden; width: 100%; display: block;">
-          <div class="swiper-slide" style="overflow: hidden; height: 104px;">
-            <div class="row flex-nowrap">
-              <div class="col-3">
-                <span class="widget-icon">
-                  <i class="fi flaticon-notebook-4 text-warning"></i>
-                </span>
-              </div>
-              <div class="col-9">
-                <h6 class="m-0">ORDERS</h6>
-                <p class="h2 m-0 fw-normal">82,765</p>
-              </div>
+      <swiper [config]="verticalFlipSwiperConfig" style="height: 104px; overflow: hidden; width: 100%; display: block;">
+        <div class="swiper-slide" style="overflow: hidden; height: 104px;">
+          <div class="row flex-nowrap">
+            <div class="col-3">
+              <span class="widget-icon">
+                <i class="fi flaticon-notebook-4 text-warning"></i>
+              </span>
             </div>
-            <div class="row flex-nowrap">
-              <div class="col-6">
-                <h6 class="m-0">Avg. Time</h6>
-                <p class="value5">2:56</p>
-              </div>
-              <div class="col-6">
-                <h6 class="m-0">Last Week</h6>
-                <p class="value5">374</p>
-              </div>
+            <div class="col-9">
+              <h6 class="m-0">ORDERS</h6>
+              <p class="h2 m-0 fw-normal">82,765</p>
             </div>
           </div>
-          <div class="swiper-slide" style="overflow: hidden; height: 104px;">
-            <div class="row flex-nowrap">
-              <div class="col-3">
-                <span class="widget-icon">
-                  <i class="fi flaticon-shuffle text-warning"></i>
-                </span>
-              </div>
-              <div class="col-9">
-                <h6 class="m-0">PICKED ORDERS</h6>
-                <p class="h2 m-0 fw-normal">13.8%</p>
-              </div>
+          <div class="row flex-nowrap">
+            <div class="col-6">
+              <h6 class="m-0">Avg. Time</h6>
+              <p class="value5">2:56</p>
             </div>
-            <div class="row flex-nowrap">
-              <div class="col-6">
-                <h6 class="m-0">Basic</h6>
-                <p class="value5">3,692</p>
-              </div>
-              <div class="col-6">
-                <h6 class="m-0">Advanced</h6>
-                <p class="value5">1,441</p>
-              </div>
+            <div class="col-6">
+              <h6 class="m-0">Last Week</h6>
+              <p class="value5">374</p>
             </div>
           </div>
-        </swiper>
+        </div>
+        <div class="swiper-slide" style="overflow: hidden; height: 104px;">
+          <div class="row flex-nowrap">
+            <div class="col-3">
+              <span class="widget-icon">
+                <i class="fi flaticon-shuffle text-warning"></i>
+              </span>
+            </div>
+            <div class="col-9">
+              <h6 class="m-0">PICKED ORDERS</h6>
+              <p class="h2 m-0 fw-normal">13.8%</p>
+            </div>
+          </div>
+          <div class="row flex-nowrap">
+            <div class="col-6">
+              <h6 class="m-0">Basic</h6>
+              <p class="value5">3,692</p>
+            </div>
+            <div class="col-6">
+              <h6 class="m-0">Advanced</h6>
+              <p class="value5">1,441</p>
+            </div>
+          </div>
+        </div>
+      </swiper>
     </section>
   </div>
   <div class="col-lg-3 col-md-6 col-12">
@@ -202,10 +201,6 @@
           <span class="fw-semi-bold">Budget</span>&nbsp;<span class="badge badge-pill badge-danger">2017</span>
         </h6>
         <span class="text-muted fs-mini">monthly report will be available in <a href="#">6 hours</a></span>
-        <div class="widget-controls">
-          <a href="#"><i class="la la-cog"></i></a>
-          <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-        </div>
       </ng-container>
       <div class="chart-stats">
         <div class="row">
@@ -249,10 +244,6 @@
   <div class="col-lg-4 col-12">
     <section class="widget-chart-stats-simple" widgster [optionsControl]="false" [fullscreenControl]="false"
       [collapseControl]="false" bodyClass="mt-0" footerClass="bg-widget-transparent">
-      <div *widgsterTitle class="widget-controls">
-        <a href="#"><i class="la la-refresh"></i></a>
-        <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-      </div>
       <div class="widget-top-overflow widget-padding-md clearfix bg-warning text-white">
         <h3 class="mt-lg mb-lg">Sing - <span class="fw-semi-bold">Next Generation</span> Admin Dashboard
           Template</h3>
@@ -328,7 +319,8 @@
     </section>
   </div>
   <div class="col-lg-4 col-12">
-    <section widgster [fullscreenControl]="false" [optionsControl]="false" [collapseControl]="false" footerClass="bg-widget-transparent">
+    <section widgster [fullscreenControl]="false" [optionsControl]="false" [collapseControl]="false"
+      footerClass="bg-widget-transparent">
       <div class="post-user mt-n-xs">
         <span class="thumb pull-left mr mt-n-sm">
           <img class="rounded-circle" src="assets/img/people/a2.jpg" alt="...">
@@ -357,7 +349,8 @@
 </div>
 <div class="row">
   <div class="col-lg-6 col-12">
-    <section widgster [reloadControl]="false" [closeControl]="false" [fullscreenControl]="false" [optionsControl]="false" [collapseControl]="false" bodyClass="mt-0">
+    <section widgster [reloadControl]="false" [closeControl]="false" [fullscreenControl]="false"
+      [optionsControl]="false" [collapseControl]="false" bodyClass="mt-0">
       <div class="widget-image text-white">
         <img src="assets/img/pictures/18.jpg">
         <h4 class="title">
@@ -408,7 +401,8 @@
     </section>
     <div class="row">
       <div class="col-md-6 col-12">
-        <section class="p-0 text-center" widgster [reloadControl]="false" [closeControl]="false" [fullscreenControl]="false" [optionsControl]="false" [collapseControl]="false">
+        <section class="p-0 text-center" widgster [reloadControl]="false" [closeControl]="false"
+          [fullscreenControl]="false" [optionsControl]="false" [collapseControl]="false">
           <div class="row m-0">
             <div class="col-5 bg-danger btlr bblr">
               <skycon class="mt display-block" weather="clear-day" color="white" width="62px" height="62px"></skycon>
@@ -440,7 +434,8 @@
         </section>
       </div>
       <div class="col-md-6 col-12">
-        <section class="p-0 text-center" widgster [reloadControl]="false" [closeControl]="false" [fullscreenControl]="false" [optionsControl]="false" [collapseControl]="false">
+        <section class="p-0 text-center" widgster [reloadControl]="false" [closeControl]="false"
+          [fullscreenControl]="false" [optionsControl]="false" [collapseControl]="false">
           <div class="row m-0">
             <div class="col-7 bg-success btlr bblr">
               <p class="value0 text-white mt-sm mr-n-xs">
@@ -461,7 +456,8 @@
   <div class="col-lg-6 col-12">
     <div class="row">
       <div class="col-md-6 col-12">
-        <section class="widget-chart-simple widget-sm" widgster [reloadControl]="false" [closeControl]="false" [fullscreenControl]="false" [optionsControl]="false" [collapseControl]="false" bodyClass="mt-0">
+        <section class="widget-chart-simple widget-sm" widgster [reloadControl]="false" [closeControl]="false"
+          [fullscreenControl]="false" [optionsControl]="false" [collapseControl]="false" bodyClass="mt-0">
           <h6 *widgsterTitle class="mb-xs fw-normal">
             Nasdaq
           </h6>
@@ -469,12 +465,13 @@
             355 <span class="fw-semi-bold">USD</span>
           </div>
           <p>Last Sale 354.94 USD</p>
-            <div class="chart" nasdaq-widget [options]="echartLineChartData3">
-            </div>
+          <div class="chart" nasdaq-widget [options]="echartLineChartData3">
+          </div>
         </section>
       </div>
       <div class="col-md-6 col-12">
-        <section class="widget-sm bg-success text-white" widgster [reloadControl]="false" [closeControl]="false" [fullscreenControl]="false" [optionsControl]="false" [collapseControl]="false" bodyClass="mt-0">
+        <section class="widget-sm bg-success text-white" widgster [reloadControl]="false" [closeControl]="false"
+          [fullscreenControl]="false" [optionsControl]="false" [collapseControl]="false" bodyClass="mt-0">
           <p class="mb-xs"><i class="fa fa-comments fa-2x"></i></p>
           <h5>
             Lots of <span class="fw-semi-bold">possibilities</span> to customize your
@@ -493,21 +490,23 @@
     </div>
     <div class="row">
       <div class="col-md-6 col-12">
-        <section class="widget-sm bg-primary text-white" widgster [reloadControl]="false" [closeControl]="false" [fullscreenControl]="false" [optionsControl]="false" [collapseControl]="false" bodyClass="mt-0">
+        <section class="widget-sm bg-primary text-white" widgster [reloadControl]="false" [closeControl]="false"
+          [fullscreenControl]="false" [optionsControl]="false" [collapseControl]="false" bodyClass="mt-0">
           <p class="mb-xs"><i class="fa fa-arrow-circle-up fa-3x opacity-50"></i></p>
-            <p class="text-light mb"><time>10 June</time></p>
-            <h3>
-              Lots of <span class="fw-semi-bold">new</span> amazing possibilities
-            </h3>
-            <p class="fs-mini mt">
-              <span class="fw-semi-bold">214</span> likes
-              &nbsp;
-              <span class="fw-semi-bold">96</span> comments
-            </p>
+          <p class="text-light mb"><time>10 June</time></p>
+          <h3>
+            Lots of <span class="fw-semi-bold">new</span> amazing possibilities
+          </h3>
+          <p class="fs-mini mt">
+            <span class="fw-semi-bold">214</span> likes
+            &nbsp;
+            <span class="fw-semi-bold">96</span> comments
+          </p>
         </section>
       </div>
       <div class="col-md-6 col-12">
-        <section class="widget-sm" widgster [reloadControl]="false" [closeControl]="false" [fullscreenControl]="false" [optionsControl]="false" [collapseControl]="false">
+        <section class="widget-sm" widgster [reloadControl]="false" [closeControl]="false" [fullscreenControl]="false"
+          [optionsControl]="false" [collapseControl]="false">
           <h6 *widgsterTitle>Server <span class="fw-semi-bold">Overview</span></h6>
           <div class="clearfix fs-mini">
             <span class="pull-right m-0 fw-semi-bold">CPU</span>
@@ -545,16 +544,17 @@
 </div>
 <div class="row">
   <div class="col-lg-4 col-12">
-    <section widgster [reloadControl]="false" [closeControl]="false" [fullscreenControl]="false" [optionsControl]="false" [collapseControl]="false" bodyClass="mt-0">
+    <section widgster [reloadControl]="false" [closeControl]="false" [fullscreenControl]="false"
+      [optionsControl]="false" [collapseControl]="false" bodyClass="mt-0">
       <years-map-widget height="400px"></years-map-widget>
     </section>
   </div>
   <div class="col-lg-4 col-12">
-    <section widgster [reloadControl]="false" [closeControl]="false" [fullscreenControl]="false" [optionsControl]="false" [collapseControl]="false" bodyClass="mt-0" footerClass="bg-widget-transparent">
-      <h6  *widgsterTitle>Recent <span class="fw-semi-bold">Chats</span></h6>
+    <section widgster [reloadControl]="false" [closeControl]="false" [fullscreenControl]="false"
+      [optionsControl]="false" [collapseControl]="false" bodyClass="mt-0" footerClass="bg-widget-transparent">
+      <h6 *widgsterTitle>Recent <span class="fw-semi-bold">Chats</span></h6>
       <div class="widget-middle-overflow">
-        <ul class="list-group widget-chat-list-group"
-          data-ui-options="{ height: '287px', size: '4px', borderRadius: '1px', opacity: .3 }">
+        <ul class="list-group widget-chat-list-group">
           <li class="list-group-item">
             <span class="thumb">
               <img class="rounded-circle" src="assets/img/people/a6.jpg" alt="...">
@@ -608,16 +608,17 @@
     </section>
   </div>
   <div class="col-lg-4 col-12">
-    <section  class="text-white" widgster [reloadControl]="false" [closeControl]="false" [fullscreenControl]="false" [optionsControl]="false" [collapseControl]="false">
-      <div realtime-traffic-widget [options]="echartDynamicAreaData2"
-      [merge]="echartDynamicAreaDataUpdate">
-    </div>
+    <section class="text-white" widgster [reloadControl]="false" [closeControl]="false" [fullscreenControl]="false"
+      [optionsControl]="false" [collapseControl]="false">
+      <div realtime-traffic-widget [options]="echartDynamicAreaData2" [merge]="echartDynamicAreaDataUpdate">
+      </div>
     </section>
   </div>
 </div>
 <div class="row">
   <div class="col-lg-3 col-12">
-    <section  class="widget-padding-lg" widgster [reloadControl]="false" [closeControl]="false" [fullscreenControl]="false" [optionsControl]="false" [collapseControl]="false" bodyClass="mt-0 clearfix">
+    <section class="widget-padding-lg" widgster [reloadControl]="false" [closeControl]="false"
+      [fullscreenControl]="false" [optionsControl]="false" [collapseControl]="false" bodyClass="mt-0 clearfix">
       <swiper [config]="verticalSwiperConfig" style="height: 313px; overflow: hidden; width: 100%; display: block;">
         <div class="swiper-slide" style="overflow: hidden;">
           <h3>Basic & <span class="fw-semi-bold">Advanced</span> Features</h3>
@@ -642,8 +643,7 @@
           </div>
           <div class="widget-footer-bottom">
             <p>Attention to what's really important</p>
-            <button class="btn btn-inverse btn-block mt"><span
-                class="fw-semi-bold text-warning">Ready?</span></button>
+            <button class="btn btn-inverse btn-block mt"><span class="fw-semi-bold text-warning">Ready?</span></button>
           </div>
         </div>
       </swiper>
@@ -657,7 +657,8 @@
     </section>
   </div>
   <div class="col-lg-3 col-12">
-    <section  class="widget-padding-lg bg-primary text-white" widgster [reloadControl]="false" [closeControl]="false" [fullscreenControl]="false" [optionsControl]="false" [collapseControl]="false" bodyClass="mt-0 clearfix">
+    <section class="widget-padding-lg bg-primary text-white" widgster [reloadControl]="false" [closeControl]="false"
+      [fullscreenControl]="false" [optionsControl]="false" [collapseControl]="false" bodyClass="mt-0 clearfix">
       <swiper [config]="verticalSwiperConfig" style="height: 313px; overflow: hidden; width: 100%; display: block;">
         <div class="swiper-slide" style="overflow: hidden;">
           <p class="h4 mt-xs">
@@ -695,16 +696,9 @@
   <div class="col-lg-3 col-12">
     <swiper [config]="horizontalFlipSwiperConfig" style="height: 373px; width: 100%; display: block;">
       <div class="swiper-slide" style="overflow: hidden;">
-        <section  
-          class="widget-padding-lg widget-md" 
-          widgster 
-          [reloadControl]="false" 
-          [closeControl]="false" 
-          [fullscreenControl]="false" 
-          [optionsControl]="false" 
-          [collapseControl]="false" 
-          bodyClass="mt-0 widget-body-container"
-        >
+        <section class="widget-padding-lg widget-md" widgster [reloadControl]="false" [closeControl]="false"
+          [fullscreenControl]="false" [optionsControl]="false" [collapseControl]="false"
+          bodyClass="mt-0 widget-body-container">
           <div class="text-center">
             <i class="fa fa-child text-warning fa-5x"></i>
           </div>
@@ -716,25 +710,18 @@
         </section>
       </div>
       <div class="swiper-slide" style="overflow: hidden;">
-        <section  
-          class="widget-padding-lg widget-md" 
-          widgster 
-          [reloadControl]="false" 
-          [closeControl]="false" 
-          [fullscreenControl]="false" 
-          [optionsControl]="false" 
-          [collapseControl]="false" 
-          bodyClass="mt-0 widget-body-container"
-        >
-        <div class="text-center">
-          <i class="fa fa-globe text-primary fa-5x"></i>
-        </div>
-        <h3 class="fw-normal">Join The Web Now!</h3>
-        <div class="widget-footer-bottom">
-          <div class="mb-sm">Cutting-edge tech and design delivered</div>
-          <p><button class="btn btn-default btn-block">Join now!</button></p>
-        </div>
-      </section>
+        <section class="widget-padding-lg widget-md" widgster [reloadControl]="false" [closeControl]="false"
+          [fullscreenControl]="false" [optionsControl]="false" [collapseControl]="false"
+          bodyClass="mt-0 widget-body-container">
+          <div class="text-center">
+            <i class="fa fa-globe text-primary fa-5x"></i>
+          </div>
+          <h3 class="fw-normal">Join The Web Now!</h3>
+          <div class="widget-footer-bottom">
+            <div class="mb-sm">Cutting-edge tech and design delivered</div>
+            <p><button class="btn btn-default btn-block">Join now!</button></p>
+          </div>
+        </section>
       </div>
     </swiper>
   </div>

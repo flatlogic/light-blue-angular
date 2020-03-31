@@ -15,6 +15,7 @@ import {
   templateUrl: './layout.template.html'
 })
 export class Layout {
+  public showMobileMenu: boolean = false;
   sidebarState: boolean = true;
   @ViewChild('spinnerElement', { static: true }) spinnerElement: ElementRef;
   @ViewChild('routerComponent', { static: true }) routerComponent: ElementRef;
@@ -109,9 +110,11 @@ export class Layout {
     if (this.sidebarState) {
       this.renderer.setStyle(this.el.nativeElement
         .querySelector('.content'), 'margin-top', sidebarHeight + 'px');
+      this.showMobileMenu = true;
     } else {
       this.renderer.setStyle(this.el.nativeElement
         .querySelector('.content'), 'margin-top', '0px');
+      this.showMobileMenu = false;
     }
 
     this.sidebarState = !this.sidebarState;
