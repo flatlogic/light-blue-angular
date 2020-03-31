@@ -10,7 +10,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
-import { Ng2TableModule } from 'ng2-table';
+// import { Ng2TableModule } from 'ng2-table';
 import { TablesBasicComponent } from './basic/tables-basic.component';
 import { TablesDynamicComponent } from './dynamic/tables-dynamic.component';
 import { SearchPipe } from './dynamic/pipes/search-pipe';
@@ -39,7 +39,7 @@ export const routes = [
     BsDropdownModule.forRoot(),
     PaginationModule.forRoot(),
     ProgressbarModule,
-    Ng2TableModule,
+    // Ng2TableModule,
     NgxDatatableModule,
     RouterModule.forChild(routes),
     NgxEchartsModule,
