@@ -4,7 +4,6 @@
   "description": "Light Blue - Angular 4 & React Dashboard",
   "scripts": {
     "analyze": "npm run build:stats && webpack-bundle-analyzer dist/stats.json --port 4201",
-    "install": "napa",
     "ng": "ng",
     "start": "ng serve",
     "start:backend": "ng serve --configuration backend",
@@ -83,9 +82,6 @@
     "validator": "13.0.0",
     "zone.js": "~0.10.3"
   },
-  "napa": {
-    "jquery.nestable": "https://github.com/dbushell/Nestable.git#4f93032cfafe2002f24ed6bd7dc1510931498503"
-  },
   "devDependencies": {
     "@angular-builders/custom-webpack": "8.4.1",
     "@angular-devkit/build-angular": "0.803.24",
@@ -102,7 +98,6 @@
     "@types/validator": "12.0.1",
     "codelyzer": "5.2.2",
     "metrojs": "0.9.77",
-    "napa": "3.0.0",
     "terser-webpack-plugin": "2.2.1",
     "ts-node": "~8.8.1",
     "tslint": "6.1.0",
