@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Observable, ReplaySubject } from 'rxjs';
 import { delay, startWith, tap } from 'rxjs/operators';
+import { Options } from 'sortablejs';
+
 import {
   DefaultWidgedData,
   initialDefaultWidgetData,
@@ -15,8 +17,6 @@ import {
   updatedNewsWidgetData
 } from './grid.data';
 
-declare let jQuery: any;
-
 const TIMEOUT: number = 1000;
 
 @Component({
@@ -26,19 +26,12 @@ const TIMEOUT: number = 1000;
   styleUrls: ['./grid.style.scss']
 })
 export class GridComponent implements OnInit {
-  sortOptions: Object = {
-    connectWith: '.widget-container',
-    handle: 'header, .handle',
-    cursor: 'move',
-    iframeFix: false,
-    items: '.widget:not(.locked)',
-    opacity: 0.8,
-    helper: 'original',
-    revert: true,
-    forceHelperSize: true,
-    placeholder: 'widget widget-placeholder',
-    forcePlaceholderSize: true,
-    tolerance: 'pointer'
+  public options: Options = {
+    animation: 150,
+    filter: '.locked',
+    draggable: '.widget',
+    ghostClass: 'widget-placeholder',
+    group: 'group'
   };
 
   public defaultWidgetData$: Observable<DefaultWidgedData[]>;
@@ -76,8 +69,6 @@ export class GridComponent implements OnInit {
       startWith(initialNewsWidgetData),
       tap(() => { this.newsLoading = false; })
     );
-
-    jQuery('.widget-container').sortable(this.sortOptions);
   }
 
   public onDefaultReload(): void {

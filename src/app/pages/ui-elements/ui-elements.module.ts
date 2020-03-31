@@ -16,6 +16,7 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { ToastrModule } from 'ngx-toastr';
+import { SortablejsModule } from 'ngx-sortablejs';
 
 import { ButtonsComponent } from './buttons/buttons.component';
 import { NotificationsComponent } from './notifications/notifications.component';
@@ -82,7 +83,8 @@ export const routes = [
     PopoverModule.forRoot(),
     ProgressbarModule.forRoot(),
     ToastrModule,
-    WidgsterModule
+    WidgsterModule,
+    SortablejsModule
   ]
 })
 export class UiElementsModule {

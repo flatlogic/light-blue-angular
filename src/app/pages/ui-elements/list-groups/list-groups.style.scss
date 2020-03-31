@@ -1,4 +1,4 @@
-body{
+body {
   overflow-x: visible;
 }
 
@@ -82,13 +82,13 @@ body{
   color: $text-color;
 
   &:focus,
-  &:active{
+  &:active {
     outline: 0;
   }
 }
 
 .dd-item > button:before {
-  content: '+';
+  content: "+";
   display: block;
   position: absolute;
   width: 100%;
@@ -97,7 +97,7 @@ body{
 }
 
 .dd-item > button[data-action="collapse"]:before {
-  content: '-';
+  content: "-";
 }
 
 .dd-placeholder,
@@ -117,10 +117,32 @@ body{
   background-size: 60px 60px;
   background-position: 0 0, 30px 30px;
 
-  background-image: -moz-linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff),
-  -moz-linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff);
-  background-image: linear-gradient(45deg, #FFF 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #FFF 75%, #FFF),
-  linear-gradient(45deg, #FFF 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #FFF 75%, #FFF);
+  background-image: -moz-linear-gradient(
+      45deg,
+      #fff 25%,
+      transparent 25%,
+      transparent 75%,
+      #fff 75%,
+      #fff
+    ),
+    -moz-linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff
+          75%, #fff);
+  background-image: linear-gradient(
+      45deg,
+      #fff 25%,
+      rgba(0, 0, 0, 0) 25%,
+      rgba(0, 0, 0, 0) 75%,
+      #fff 75%,
+      #fff
+    ),
+    linear-gradient(
+      45deg,
+      #fff 25%,
+      rgba(0, 0, 0, 0) 25%,
+      rgba(0, 0, 0, 0) 75%,
+      #fff 75%,
+      #fff
+    );
 }
 
 .dd-dragel {
@@ -134,8 +156,8 @@ body{
 }
 
 .dd-dragel .dd-handle {
-  -webkit-box-shadow: 2px 4px 6px 0 rgba(0, 0, 0, .1);
-  box-shadow: 2px 4px 6px 0 rgba(0, 0, 0, .1);
+  -webkit-box-shadow: 2px 4px 6px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 4px 6px 0 rgba(0, 0, 0, 0.1);
 }
 
 /**
@@ -156,7 +178,6 @@ body{
   .dd + .dd {
     margin-left: 2%;
   }
-
 }
 
 .dd-hover > .dd-handle {
@@ -215,7 +236,7 @@ body{
 }
 
 .dd3-handle:before {
-  content: '≡';
+  content: "≡";
   display: block;
   position: absolute;
   left: 0;
@@ -236,22 +257,22 @@ body{
 /**      LIST GROUP SORTABLE      **/
 /***********************************/
 
-.list-group-sortable{
-  > .list-group-item{
+.list-group-sortable {
+  > .list-group-item {
     margin-bottom: 0;
     border-radius: $border-radius;
 
-    + .list-group-item{
+    + .list-group-item {
       margin-top: $spacer/2;
     }
   }
 
-  > .list-group-item-placeholder{
+  > .list-group-item-placeholder {
     border: 1px dashed $gray-600;
     background-color: $bg-addition;
   }
 
-  &:last-of-type > .list-group-item:last-child{
+  &:last-of-type > .list-group-item:last-child {
     border-bottom: 1px solid $list-group-border-color;
   }
 }

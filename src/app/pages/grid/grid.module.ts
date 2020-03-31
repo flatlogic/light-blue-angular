@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { SortablejsModule } from 'ngx-sortablejs';
 
 import { GridComponent } from './grid.component';
 import { WidgsterModule } from '../../components/widgster/widgster.module';
@@ -19,10 +20,9 @@ export const routes = [
     WidgsterModule,
     LoaderModule,
     BsDropdownModule,
-    UtilsModule
+    UtilsModule,
+    SortablejsModule
   ],
   declarations: [GridComponent]
 })
-export class GridModule {
-  static routes = routes;
-}
+export class GridModule { }

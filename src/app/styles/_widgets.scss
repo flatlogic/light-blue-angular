@@ -14,21 +14,20 @@
   border-radius: $border-radius-base;
 }
 
-
 /***********************************/
 /**          FEED                 **/
 /**********************************/
 
-.feed{
+.feed {
   height: 100%;
   //overflow-y: auto;
   position: relative;
 
-  .wrapper{
+  .wrapper {
     position: relative;
   }
 
-  .vertical-line{
+  .vertical-line {
     height: 100%;
     width: 2px;
     background: $feed-item-line-color;
@@ -37,10 +36,10 @@
   }
 }
 
-.feed-item{
+.feed-item {
   @include clearfix;
   padding-right: 6px;
-  .icon{
+  .icon {
     position: relative;
     z-index: 1;
     background: $feed-item-bg;
@@ -53,7 +52,7 @@
     border-radius: 20px;
     font-size: 16px;
 
-    img{
+    img {
       position: relative;
       top: -2px;
       width: 26px;
@@ -62,16 +61,16 @@
   }
 }
 
-.feed-item + .feed-item{
+.feed-item + .feed-item {
   margin-top: 10px;
 }
 
-.feed-item-body{
+.feed-item-body {
   padding-top: 3px;
   margin-left: 40px;
   vertical-align: bottom;
 
-  .time{
+  .time {
     font-size: $font-size-sm;
     line-height: 1.5em;
     color: $text-muted;
@@ -82,29 +81,28 @@
 /**          FILEUPLOAD          **/
 /**********************************/
 
-.fileupload-progress.fade{
-
-  &.in{
-    .progress{
+.fileupload-progress.fade {
+  &.in {
+    .progress {
       margin-top: 20px;
       margin-bottom: 5px;
     }
 
-    .progress-extended{
+    .progress-extended {
       margin-bottom: 10px;
     }
   }
 
-  .progress{
+  .progress {
     margin: 0;
   }
 }
 
-.template-upload video{
+.template-upload video {
   max-width: 200px;
 }
 
-form.dropzone{
+form.dropzone {
   border: 2px dashed $dropzone-color;
   margin-top: 10px;
   font-size: 40px;
@@ -117,12 +115,11 @@ form.dropzone{
 
   @include clearfix;
 
-  i{
+  i {
     margin-top: 20px;
     padding-right: 10%;
   }
 }
-
 
 /***********************/
 /*    Notifications    */
@@ -133,40 +130,49 @@ form.dropzone{
   height: 220px;
   border: 1px dashed $location-selector-border-color;
   background-color: $location-selector-bg;
-  position: relative; }
+  position: relative;
+}
 .location-selector .bit {
   background-color: darken($location-selector-bg, 10%);
-  @include transition(background-color .15s ease-in-out);
+  @include transition(background-color 0.15s ease-in-out);
   cursor: pointer;
-  position: absolute; }
+  position: absolute;
+}
 .location-selector .bit:hover {
-  background-color: darken($location-selector-bg, 15%);; }
-.location-selector .bit.top, .location-selector .bit.bottom {
+  background-color: darken($location-selector-bg, 15%);
+}
+.location-selector .bit.top,
+.location-selector .bit.bottom {
   height: 25%;
   width: 40%;
-  margin: 0 30%; }
+  margin: 0 30%;
+}
 .location-selector .bit.top {
-  top: 0; }
+  top: 0;
+}
 .location-selector .bit.bottom {
-  bottom: 0; }
-.location-selector .bit.right, .location-selector .bit.left {
+  bottom: 0;
+}
+.location-selector .bit.right,
+.location-selector .bit.left {
   height: 20%;
   width: 20%;
   margin-left: 0;
-  margin-right: 0; }
+  margin-right: 0;
+}
 .location-selector .bit.right {
-  right: 0; }
+  right: 0;
+}
 .location-selector .bit.left {
-  left: 0; }
-
+  left: 0;
+}
 
 /***********************************/
 /**          BOXES               **/
 /**********************************/
 
-
 /*boxes*/
-.box{
+.box {
   border-radius: $border-radius-base;
 
   padding: 5px;
@@ -175,13 +181,14 @@ form.dropzone{
   background: $widget-bg-color;
   color: $widget-color;
 
-  .description{
+  .description {
     font-weight: normal;
     text-align: center;
     margin: 10px -5px;
   }
 
-  .icon, .big-text{
+  .icon,
+  .big-text {
     margin-top: 15px;
     font-size: 36px;
     line-height: 36px;
@@ -194,40 +201,38 @@ form.dropzone{
 /**          CHARTS               **/
 /**********************************/
 
-
-.large .pie-chart{
+.large .pie-chart {
   height: 212px;
 }
 
-.xlarge .pie-chart{
+.xlarge .pie-chart {
   height: 298px;
 }
 
-.pie-chart{
+.pie-chart {
   position: relative;
 
-  .total{
+  .total {
     text-align: center;
     position: absolute;
     left: 0;
     top: 50%;
   }
 
-  .visits{
+  .visits {
     font-weight: $font-weight-base;
     color: $widget-header-color;
     font-size: $font-size-lg;
   }
 }
 
-.pie-chart-footer{
-
-  .controls{
+.pie-chart-footer {
+  .controls {
     margin-top: 16px;
     width: 100%;
   }
 
-  .control{
+  .control {
     @include box-sizing(content-box);
     background: $bg-addition;
     text-align: center;
@@ -240,28 +245,28 @@ form.dropzone{
 
     margin-left: 0.5%;
 
-    float:left;
+    float: left;
 
-    &:first-child{
+    &:first-child {
       border-bottom-left-radius: $border-radius-base;
       margin-left: 0;
     }
 
-    &:last-child{
+    &:last-child {
       border-bottom-right-radius: $border-radius-base;
     }
 
-    &.disabled{
+    &.disabled {
       border-top: 3px solid transparent !important;
     }
 
-    .key{
+    .key {
       font-size: $font-size-sm;
       font-weight: normal;
       margin: 0;
     }
 
-    .value{
+    .value {
       font-size: $font-size-lg;
       font-weight: bold;
       margin-bottom: 5px;
@@ -269,22 +274,23 @@ form.dropzone{
   }
 }
 
-.visits-chart{
+.visits-chart {
   height: 200px;
 }
 
-.visits-info{
-  margin: $widget-padding-vertical (-$widget-padding-horizontal) (-$widget-padding-vertical);
+.visits-info {
+  margin: $widget-padding-vertical (-$widget-padding-horizontal)
+    (-$widget-padding-vertical);
   padding-top: 18px;
   padding-bottom: 3px;
   border: none;
   text-align: center;
 
-  .key{
-    color: $widget-header-color
+  .key {
+    color: $widget-header-color;
   }
 
-  .value{
+  .value {
     margin-top: 16px;
     margin-bottom: 16px;
     font-size: $font-size-lg;
@@ -292,8 +298,9 @@ form.dropzone{
 }
 
 /* disable bootstrap 3 border-box for tooltips */
-.jqstooltip{
-  &, *{
+.jqstooltip {
+  &,
+  * {
     @include box-sizing(content-box);
   }
 }
@@ -302,22 +309,22 @@ form.dropzone{
 /**          CHAT                 **/
 /**********************************/
 
-.chat-messages{
+.chat-messages {
   padding-right: 15px; //some space for scroll
 }
 
-.chat-footer{
+.chat-footer {
   height: 40px;
   @include box-sizing(border-box);
   padding-top: 10px;
-  input{
+  input {
     margin-bottom: 0;
   }
 }
 
-.chat-message{
+.chat-message {
   @include clearfix;
-  .icon{
+  .icon {
     position: relative;
     z-index: 1;
     text-align: center;
@@ -327,7 +334,7 @@ form.dropzone{
     vertical-align: middle;
     border-radius: 53px;
 
-    img{
+    img {
       position: relative;
       top: -2px;
       width: 50px;
@@ -335,7 +342,7 @@ form.dropzone{
     }
   }
 
-  .time{
+  .time {
     font-size: $font-size-sm;
     line-height: 1.5em;
     text-align: center;
@@ -343,11 +350,11 @@ form.dropzone{
   }
 }
 
-.chat-message + .chat-message{
+.chat-message + .chat-message {
   margin-top: 10px;
 }
 
-.chat-message-body{
+.chat-message-body {
   margin-left: 63px;
   padding: 8px 10px;
   background: $bg-addition;
@@ -356,13 +363,13 @@ form.dropzone{
 
   border-radius: $border-radius-base;
 
-  &.on-left{
+  &.on-left {
     margin-left: 0;
     margin-right: 63px;
     border-left: none;
     border-right: 2px solid darken($widget-bg-color, 10%);
 
-    .arrow{
+    .arrow {
       left: auto;
       right: -7px;
 
@@ -370,12 +377,13 @@ form.dropzone{
       border-left: 5px solid darken($widget-bg-color, 10%);
     }
 
-    .sender, .text{
+    .sender,
+    .text {
       text-align: right;
     }
   }
 
-  .arrow{
+  .arrow {
     display: block;
     position: absolute;
     top: 21px;
@@ -393,38 +401,36 @@ form.dropzone{
 /**          STATS-ACTIVITY       **/
 /**********************************/
 
-.overall-stats{
-
-  li{
+.overall-stats {
+  li {
     margin-top: 12px;
   }
 
-  .key{
+  .key {
     line-height: 18px;
     margin-left: 5px;
   }
 
-  .icon{
+  .icon {
     text-align: center;
   }
 
-  .value{
+  .value {
     text-align: right;
   }
 }
 
-
-.server-stats{
+.server-stats {
   margin-top: -3px;
   margin-bottom: 2px;
-  li{
+  li {
     margin-bottom: 10px;
-    &:last-child{
+    &:last-child {
       margin-bottom: 0;
     }
   }
 
-  .progress{
+  .progress {
     margin-bottom: 0;
   }
 }
@@ -433,37 +439,36 @@ form.dropzone{
 /**           ICON LIST           **/
 /***********************************/
 
-.icon-list{
+.icon-list {
   margin-top: $spacer;
 }
 
-.icon-list-item{
+.icon-list-item {
   height: 32px;
   font-size: 14px;
   line-height: 32px;
-  > a{
+  > a {
     color: $widget-color;
     text-decoration: none;
   }
 
-
   .glyphicon,
-  .fa{
+  .fa {
     width: 32px;
     margin-right: 10px;
   }
 
-  &:hover{
+  &:hover {
     .glyphicon,
-    .fa{
+    .fa {
       font-size: 28px;
     }
 
-    .fa{
+    .fa {
       vertical-align: -5px;
     }
 
-    .glyphicon{
+    .glyphicon {
       vertical-align: -6px;
     }
   }
@@ -473,22 +478,22 @@ form.dropzone{
 /**      LIST GROUP SORTABLE      **/
 /***********************************/
 
-.list-group-sortable{
-  > .list-group-item{
+.list-group-sortable {
+  > .list-group-item {
     margin-bottom: 0;
     border-radius: $border-radius-base;
 
-    + .list-group-item{
+    + .list-group-item {
       margin-top: $spacer/2;
     }
   }
 
-  > .list-group-item-placeholder{
+  > .list-group-item-placeholder {
     border: 1px dashed $gray-light;
-    background-color: rgba($widget-bg-color, .25);
+    background-color: rgba($widget-bg-color, 0.25);
   }
 
-  &:last-of-type > .list-group-item:last-child{
+  &:last-of-type > .list-group-item:last-child {
     border-bottom: 1px solid $list-group-border;
   }
 }
@@ -571,7 +576,7 @@ form.dropzone{
 }
 
 .dd-item > button:before {
-  content: '+';
+  content: "+";
   display: block;
   position: absolute;
   width: 100%;
@@ -580,7 +585,7 @@ form.dropzone{
 }
 
 .dd-item > button[data-action="collapse"]:before {
-  content: '-';
+  content: "-";
 }
 
 .dd-placeholder,
@@ -588,20 +593,44 @@ form.dropzone{
   margin: 5px 0;
   padding: 0;
   min-height: 30px;
-  background: rgba($widget-bg-color, .2);
-  border: 1px dashed rgba(white, .6);
+  background: rgba($widget-bg-color, 0.2);
+  border: 1px dashed rgba(white, 0.6);
   box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
 
 .dd-empty {
-  border: 1px dashed rgba(white, .6);
+  border: 1px dashed rgba(white, 0.6);
   border-radius: $border-radius-base;
   min-height: 100px;
   background-size: 60px 60px;
   background-position: 0 0, 30px 30px;
-  background-image: -moz-linear-gradient(45deg, rgba(255,255,255,.75) 25%, transparent 25%, transparent 75%, rgba(255,255,255,.75) 75%, rgba(255,255,255,.75)),-moz-linear-gradient(45deg, rgba(255,255,255,.75) 25%, transparent 25%, transparent 75%, rgba(255,255,255,.75) 75%, rgba(255,255,255,.75));
-  background-image: linear-gradient(45deg, rgba(255,255,255,.75) 25%,rgba(0, 0, 0, 0) 25%,rgba(0, 0, 0, 0) 75%,rgba(255,255,255,.75) 75%,rgba(255,255,255,.75)),linear-gradient(45deg, rgba(255,255,255,.75) 25%,rgba(0, 0, 0, 0) 25%,rgba(0, 0, 0, 0) 75%,rgba(255,255,255,.75) 75%,rgba(255,255,255,.75));
+  background-image: -moz-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.75) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(255, 255, 255, 0.75) 75%,
+      rgba(255, 255, 255, 0.75)
+    ),
+    -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.75) 25%, transparent 25%, transparent
+          75%, rgba(255, 255, 255, 0.75) 75%, rgba(255, 255, 255, 0.75));
+  background-image: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.75) 25%,
+      rgba(0, 0, 0, 0) 25%,
+      rgba(0, 0, 0, 0) 75%,
+      rgba(255, 255, 255, 0.75) 75%,
+      rgba(255, 255, 255, 0.75)
+    ),
+    linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.75) 25%,
+      rgba(0, 0, 0, 0) 25%,
+      rgba(0, 0, 0, 0) 75%,
+      rgba(255, 255, 255, 0.75) 75%,
+      rgba(255, 255, 255, 0.75)
+    );
 }
 
 .dd-dragel {
@@ -615,8 +644,8 @@ form.dropzone{
 }
 
 .dd-dragel .dd-handle {
-  -webkit-box-shadow: 2px 4px 6px 0 rgba(0, 0, 0, .1);
-  box-shadow: 2px 4px 6px 0 rgba(0, 0, 0, .1);
+  -webkit-box-shadow: 2px 4px 6px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 4px 6px 0 rgba(0, 0, 0, 0.1);
 }
 
 /**
@@ -637,7 +666,6 @@ form.dropzone{
   .dd + .dd {
     margin-left: 2%;
   }
-
 }
 
 .dd-hover > .dd-handle {
@@ -700,7 +728,7 @@ form.dropzone{
 }
 
 .dd3-handle:before {
-  content: '≡';
+  content: "≡";
   display: block;
   position: absolute;
   left: 0;
