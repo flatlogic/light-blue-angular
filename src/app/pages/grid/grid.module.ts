@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 import { GridComponent } from './grid.component';
-import { GridDemoDirective } from './grid-demo/grid-demo';
 import { WidgsterModule } from '../../components/widgster/widgster.module';
 import { LoaderModule } from '../../components/loader/loader.module';
 import { UtilsModule } from '../../utils/utils-module/utils.module';
@@ -22,7 +21,7 @@ export const routes = [
     BsDropdownModule,
     UtilsModule
   ],
-  declarations: [GridComponent, GridDemoDirective]
+  declarations: [GridComponent]
 })
 export class GridModule {
   static routes = routes;
