@@ -12,7 +12,7 @@
       <p>Alerts are available for any length of text, as well as an optional dismiss button.</p>
       <alert *ngFor="let alert of alerts" [attr.key]="alert.id" [isOpen]="true" [dismissible]="true"
         [type]="alert.type">
-        <span [innerHtml]="alert.msg"></span>
+        <span [innerHtml]="alert.msg | sanitize"></span>
       </alert>
     </section>
   </div>
@@ -24,7 +24,7 @@
       <p>Transparent alerts are available by adding <code>.alert-transparent</code> class.</p>
       <alert *ngFor="let alert of alerts" [attr.key]="alert.id" [isOpen]="true" [dismissible]="true"
         [type]="alert.type + ' alert-transparent'">
-        <span [innerHtml]="alert.msg"></span>
+        <span [innerHtml]="alert.msg | sanitize"></span>
       </alert>
     </section>
   </div>
@@ -37,7 +37,7 @@
       <alert *ngFor="let alert of alerts; let i = index" class="alert-rounded" [class.alert-transparent]="i % 2 === 0"
         [attr.key]="alert.id" [isOpen]="true" [dismissible]="true"
         [type]="alert.type + ' alert-rounded' + (i % 2 === 0 ? ' alert-transparent' : '')">
-        <span [innerHtml]="alert.msg"></span>
+        <span [innerHtml]="alert.msg | sanitize"></span>
       </alert>
     </section>
   </div>

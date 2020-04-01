@@ -10,6 +10,7 @@ import { MailFormComponent } from './mail-form/mail-form.component';
 import { MailDetailComponent } from './mail-detail/mail-detail.component';
 import { SearchPipe } from './mail-list/pipes/search-pipe';
 import { FoldersPipe } from './mail-list/pipes/folders-pipe';
+import { UtilsModule } from '../../utils/utils-module/utils.module';
 
 export const routes = [
   { path: '', component: InboxComponent, pathMatch: 'full' }
@@ -21,7 +22,8 @@ export const routes = [
     ReactiveFormsModule,
     CommonModule,
     RouterModule.forChild(routes),
-    BsDropdownModule
+    BsDropdownModule,
+    UtilsModule
   ],
   declarations: [
     InboxComponent,

@@ -30,6 +30,7 @@ import { AppInterceptor } from './app.interceptor';
 import { AppConfig } from './app.config';
 import { CancelLaunchToastComponent } from './pages/ui-elements/notifications/toasts/cancel-launch/cancel-launch-toast.component';
 import { RetryDestroyingToastComponent } from './pages/ui-elements/notifications/toasts/retry-destroying/retry-destroying-toast.component';
+import { UtilsModule } from './utils/utils-module/utils.module';
 
 const APP_PROVIDERS = [
   CheckAllService,
@@ -69,7 +70,8 @@ const APP_PROVIDERS = [
     TabsModule.forRoot(),
     AccordionModule.forRoot(),
     CarouselModule.forRoot(),
-    PaginationModule.forRoot()
+    PaginationModule.forRoot(),
+    UtilsModule
   ],
   providers: [
     APP_PROVIDERS,

@@ -26,6 +26,7 @@ import { AnalyticsService } from './analytics/analytics.service';
 import { YearsMapModule } from '../../components/years-map-widget/year-map.module';
 import { CustomDateFormatter } from './visits/custom-date-formatter.service';
 import { WidgsterModule } from '../../components/widgster/widgster.module';
+import { UtilsModule } from '../../utils/utils-module/utils.module';
 
 export const routes = [
   { path: '', redirectTo: 'visits', pathMatch: 'full' },
@@ -69,7 +70,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     }),
     WidgsterModule,
     ProgressbarModule,
-    BsDropdownModule
+    BsDropdownModule,
+    UtilsModule
   ],
   providers: [
     AnalyticsService,

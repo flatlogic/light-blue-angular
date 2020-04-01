@@ -5,7 +5,7 @@
       {{ title }}
     </div>
     <div *ngIf="message && options?.enableHtml" ngClass="message" role="alert" aria-live="polite"
-      [class]="options?.messageClass" [innerHTML]="message">
+      [class]="options?.messageClass" [innerHTML]="message | sanitize">
     </div>
     <div *ngIf="message && !options?.enableHtml" ngClass="message" role="alert" aria-live="polite"
       [class]="options?.messageClass" [attr.aria-label]="message">

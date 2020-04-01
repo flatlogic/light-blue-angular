@@ -47,7 +47,7 @@
         </div>
       </div>
       <div class="email-body">
-        <div class="email-body" [innerHTML]="mail.body"></div>
+        <div class="email-body" [innerHTML]="mail.body | sanitize"></div>
       </div>
       <div *ngIf="!mail.body" class="email-body">
         {{mail.subject}}
