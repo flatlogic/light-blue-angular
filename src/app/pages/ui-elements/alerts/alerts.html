@@ -34,8 +34,8 @@
         Rounded <span class=fw-semi-bold>Alerts</span>
       </h5>
       <p>Rounded alerts are available by adding <code>.alert-rounded</code> class.</p>
-      <alert [ngClass]="{ 'alert-rounded': true, 'alert-transparent': index % 2 === 0 }"
-        *ngFor="let alert of alerts; let i = index" [attr.key]="alert.id" [isOpen]="true" [dismissible]="true"
+      <alert *ngFor="let alert of alerts; let i = index" class="alert-rounded" [class.alert-transparent]="i % 2 === 0"
+        [attr.key]="alert.id" [isOpen]="true" [dismissible]="true"
         [type]="alert.type + ' alert-rounded' + (i % 2 === 0 ? ' alert-transparent' : '')">
         <span [innerHtml]="alert.msg"></span>
       </alert>

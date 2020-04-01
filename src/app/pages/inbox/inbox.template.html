@@ -17,15 +17,18 @@
           Inbox
         </a>
       </li>
-      <li class="nav-item" [class.active]="currentFolderName === 'Starred'"><a class="nav-link" (click)="setFolderName('Starred')">Starred</a></li>
-      <li class="nav-item" [class.active]="currentFolderName === 'Sent Mail'"><a class="nav-link" (click)="setFolderName('Sent Mail')">Sent Mail</a></li>
+      <li class="nav-item" [class.active]="currentFolderName === 'Starred'"><a class="nav-link"
+          (click)="setFolderName('Starred')">Starred</a></li>
+      <li class="nav-item" [class.active]="currentFolderName === 'Sent Mail'"><a class="nav-link"
+          (click)="setFolderName('Sent Mail')">Sent Mail</a></li>
       <li class="nav-item" [class.active]="currentFolderName === 'Draft'">
         <a class="nav-link" (click)="setFolderName('Draft')">
           <span class="badge badge-pill badge-danger float-right">3</span>
           Draft
         </a>
       </li>
-      <li class="nav-item" [class.active]="currentFolderName === 'Trash'"><a class="nav-link" (click)="setFolderName('Trash')">Trash</a></li>
+      <li class="nav-item" [class.active]="currentFolderName === 'Trash'"><a class="nav-link"
+          (click)="setFolderName('Trash')">Trash</a></li>
     </ul>
     <h6 class="mt">QUICK VIEW</h6>
     <ul class="nav nav-pills flex-column nav-stacked nav-email-folders mb-lg fs-mini">
@@ -41,6 +44,6 @@
     class="col-lg-9 col-xl-10 col-12"></div>
   <div *ngIf="mailFormShow" mail-form (backToMailList)="changeEmailComponents('mailList')" [message]="repliedMessage"
     class="col-lg-9 col-xl-10 col-12"></div>
-  <div *ngIf="mailDetailShow" mail-detail [mail]="currentMail" (replyMessage)="handleComposeBtn($event)"
+  <div *ngIf="mailDetailShow" mail-detail [mail]="currentMail" (replyMessage)="handleComposeBtn()"
     (backToMailList)="changeEmailComponents('mailList')" class="col-lg-9 col-xl-10 col-12"></div>
 </div>

@@ -5,19 +5,15 @@
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
-    "module": "es2015",
+    "module": "esnext",
     "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "es5",
-    "types": [],
-    "typeRoots": ["node_modules/@types"],
-    "lib": ["es2018", "dom"],
-    "paths": {
-      "@angular/*": ["node_modules/@angular/*"]
-    }
+    "lib": ["es2018", "dom"]
   },
-  "exclude": ["dist"],
-  "include": ["node_modules/ng-autosize/**/*.ts", "**/*.ts"]
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
+  }
 }

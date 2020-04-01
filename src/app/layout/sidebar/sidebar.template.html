@@ -59,8 +59,8 @@
     </ul>
   </li>
   <li class="accordion-group panel" [routerLinkActive]="['active']">
-    <a (click)="sidebarBehavior($event, 'uiCollapsed')" [class.open]="sidebarState.uiCollapsed" class="accordion-toggle"
-      aria-controls="ui-collapse"><i class="fi flaticon-layers"></i> <span class="name">UI
+    <a (click)="sidebarBehavior($event, 'uiCollapsed')" [class.open]="!sidebarState.uiCollapsed"
+      class="accordion-toggle" aria-controls="ui-collapse"><i class="fi flaticon-layers"></i> <span class="name">UI
         Elements</span></a>
     <ul id="ui-collapse" class="accordion-body" [attr.aria-expanded]="sidebarState.uiCollapsed"
       [collapse]="sidebarState.uiCollapsed" [isAnimated]="true">
