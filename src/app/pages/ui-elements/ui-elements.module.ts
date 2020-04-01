@@ -2,19 +2,18 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-
+import { ToastrModule } from 'ngx-toastr';
+import { SortablejsModule } from 'ngx-sortablejs';
 import { AlertModule } from 'ngx-bootstrap/alert';
-import { CarouselModule } from 'ngx-bootstrap/carousel';
-import { PopoverModule } from 'ngx-bootstrap/popover';
-import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { ModalModule } from 'ngx-bootstrap/modal';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
-import { ModalModule } from 'ngx-bootstrap/modal';
-import { ToastrModule } from 'ngx-toastr';
-import { SortablejsModule } from 'ngx-sortablejs';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { PopoverModule } from 'ngx-bootstrap/popover';
+import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
 
 import { ButtonsComponent } from './buttons/buttons.component';
 import { NotificationsComponent } from './notifications/notifications.component';
@@ -69,22 +68,19 @@ export const routes = [
     CommonModule,
     FormsModule,
     RouterModule.forChild(routes),
-    AlertModule.forRoot(),
-    TooltipModule.forRoot(),
-    ModalModule,
-    ButtonsModule.forRoot(),
-    BsDropdownModule.forRoot(),
-    TabsModule.forRoot(),
-    AccordionModule.forRoot(),
-    AlertModule.forRoot(),
-    CarouselModule.forRoot(),
-    PopoverModule.forRoot(),
-    ProgressbarModule.forRoot(),
     ToastrModule,
     WidgsterModule,
-    SortablejsModule
+    SortablejsModule,
+    AlertModule,
+    TooltipModule,
+    ModalModule,
+    ButtonsModule,
+    BsDropdownModule,
+    TabsModule,
+    AccordionModule,
+    CarouselModule,
+    PopoverModule,
+    ProgressbarModule
   ]
 })
-export class UiElementsModule {
-  static routes = routes;
-}
+export class UiElementsModule { }

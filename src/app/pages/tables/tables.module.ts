@@ -2,15 +2,15 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
-
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+// import { Ng2TableModule } from 'ng2-table';
 import { AlertModule } from 'ngx-bootstrap/alert';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
-import { NgxDatatableModule } from '@swimlane/ngx-datatable';
-// import { Ng2TableModule } from 'ng2-table';
+
 import { TablesBasicComponent } from './basic/tables-basic.component';
 import { TablesDynamicComponent } from './dynamic/tables-dynamic.component';
 import { SearchPipe } from './dynamic/pipes/search-pipe';
@@ -33,20 +33,18 @@ export const routes = [
   imports: [
     CommonModule,
     FormsModule,
-    AlertModule.forRoot(),
-    TooltipModule.forRoot(),
-    ButtonsModule.forRoot(),
-    BsDropdownModule.forRoot(),
-    PaginationModule.forRoot(),
-    ProgressbarModule,
     // Ng2TableModule,
     NgxDatatableModule,
     RouterModule.forChild(routes),
     NgxEchartsModule,
-    WidgsterModule
+    WidgsterModule,
+    AlertModule,
+    TooltipModule,
+    ButtonsModule,
+    BsDropdownModule,
+    PaginationModule,
+    ProgressbarModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class TablesModule {
-  static routes = routes;
-}
+export class TablesModule { }

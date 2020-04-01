@@ -1,10 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { TrendModule } from 'ngx-trend';
+import { NgxEchartsModule } from 'ngx-echarts';
+import { NgApexchartsModule } from 'ng-apexcharts';
+import { SwiperConfigInterface, SwiperModule, SWIPER_CONFIG } from 'ngx-swiper-wrapper';
+import { CountUpModule } from 'ngx-countup';
+import { CalendarModule as AngularCalendarModule, DateAdapter, CalendarDateFormatter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+
 import { AnalyticsComponent } from './analytics/analytics.component';
 import { BigStatComponent } from './analytics/components/big-stat/big-stat.component';
-import { BsDropdownModule, ProgressbarModule } from 'ngx-bootstrap';
-import { TrendModule } from 'ngx-trend';
 import { TaskContainerComponent } from './analytics/components/task-container/task-container.component';
 import { TaskComponent } from './analytics/components/task/task';
 import { VisitsComponent } from './visits/visits.component';
@@ -15,13 +23,7 @@ import { ChangesChartWidgetComponent } from './widgets/changes-chart-widget/chan
 import { NasdaqWidgetComponent } from './widgets/nasdaq-widget/nasdaq-widget.component';
 import { RealtimeTrafficWidgetComponent } from './widgets/realtime-traffic-widget/realtime-traffic-widget.component';
 import { AnalyticsService } from './analytics/analytics.service';
-import { NgApexchartsModule } from 'ng-apexcharts';
-import { NgxEchartsModule } from 'ngx-echarts';
 import { YearsMapModule } from '../../components/years-map-widget/year-map.module';
-import { SwiperConfigInterface, SwiperModule, SWIPER_CONFIG } from 'ngx-swiper-wrapper';
-import { CountUpModule } from 'ngx-countup';
-import { CalendarModule as AngularCalendarModule, DateAdapter, CalendarDateFormatter } from 'angular-calendar';
-import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { CustomDateFormatter } from './visits/custom-date-formatter.service';
 import { WidgsterModule } from '../../components/widgster/widgster.module';
 
@@ -54,9 +56,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    ProgressbarModule.forRoot(),
     TrendModule,
-    BsDropdownModule.forRoot(),
     SkyconsModule,
     NgApexchartsModule,
     NgxEchartsModule,
@@ -67,7 +67,9 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
       provide: DateAdapter,
       useFactory: adapterFactory
     }),
-    WidgsterModule
+    WidgsterModule,
+    ProgressbarModule,
+    BsDropdownModule
   ],
   providers: [
     AnalyticsService,
@@ -81,5 +83,4 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     }
   ]
 })
-export class MainModule {
-}
+export class MainModule { }

@@ -2,9 +2,9 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { AlertModule } from 'ngx-bootstrap/alert';
 
 import { Login } from './login.component';
-import {AlertModule} from 'ngx-bootstrap';
 import { WidgsterModule } from '../../components/widgster/widgster.module';
 
 export const routes = [
@@ -19,10 +19,8 @@ export const routes = [
     CommonModule,
     FormsModule,
     RouterModule.forChild(routes),
-    AlertModule.forRoot(),
-    WidgsterModule
+    WidgsterModule,
+    AlertModule
   ]
 })
-export class LoginModule {
-  static routes = routes;
-}
+export class LoginModule { }

@@ -2,10 +2,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-
-import { AlertModule } from 'ngx-bootstrap/alert';
-import { TooltipModule } from 'ngx-bootstrap/tooltip';
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { Autosize } from 'ng-autosize';
 import { TextMaskModule } from 'angular2-text-mask';
 import { EditorModule } from '@tinymce/tinymce-angular';
@@ -15,7 +11,10 @@ import { NgSelectModule } from '@ng-select/ng-select';
 import { ColorPickerModule } from 'ngx-color-picker';
 import { LMarkdownEditorModule } from 'ngx-markdown-editor';
 import { Ng5SliderModule } from 'ng5-slider';
-import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { AlertModule } from 'ngx-bootstrap/alert';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { DatepickerModule } from 'ngx-bootstrap/datepicker';
 import { TimepickerModule } from 'ngx-bootstrap/timepicker';
 
 import { ElementsComponent } from './elements/elements.component';
@@ -46,9 +45,6 @@ const wizardConfig: NgWizardConfig = {
     FormsModule,
     ReactiveFormsModule,
     TextMaskModule,
-    TooltipModule.forRoot(),
-    AlertModule.forRoot(),
-    BsDropdownModule.forRoot(),
     RouterModule.forChild(routes),
     EditorModule,
     DropzoneModule,
@@ -58,9 +54,11 @@ const wizardConfig: NgWizardConfig = {
     LMarkdownEditorModule,
     Ng5SliderModule,
     WidgsterModule,
-    BsDatepickerModule.forRoot(),
-    TimepickerModule.forRoot()
+    TooltipModule,
+    AlertModule,
+    BsDropdownModule,
+    DatepickerModule,
+    TimepickerModule
   ]
 })
-export class FormModule {
-}
+export class FormModule { }

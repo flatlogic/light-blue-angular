@@ -19,6 +19,4 @@ export const routes = [
     WidgsterModule
   ]
 })
-export class PackageModule {
-  static routes = routes;
-}
+export class PackageModule { }

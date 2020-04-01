@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { NgApexchartsModule } from 'ng-apexcharts';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { NgxEchartsModule } from 'ngx-echarts';
+import { HighchartsChartModule } from 'highcharts-angular';
+import { AlertModule } from 'ngx-bootstrap/alert';
+import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
 
 import { NgxChartsComponent } from './ngx-charts/ngx-charts.component';
 import { ApexchartsComponent } from './apexcharts/apexcharts.component';
 import { EchartsComponent } from './echarts/echarts.component';
 import { OverviewComponent } from './overview/overview';
 import { HighchartsComponent } from './highcharts/highcharts.component';
-import { AlertModule, ProgressbarModule } from 'ngx-bootstrap';
-import { NgApexchartsModule } from 'ng-apexcharts';
-import { NgxChartsModule } from '@swimlane/ngx-charts';
-import { NgxEchartsModule } from 'ngx-echarts';
-import { HighchartsChartModule } from 'highcharts-angular';
 import { WidgsterModule } from '../../components/widgster/widgster.module';
 
 export const routes = [
@@ -27,13 +28,13 @@ export const routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    AlertModule.forRoot(),
-    ProgressbarModule.forRoot(),
     NgApexchartsModule,
     NgxChartsModule,
     NgxEchartsModule,
     HighchartsChartModule,
-    WidgsterModule
+    WidgsterModule,
+    AlertModule,
+    ProgressbarModule
   ],
   declarations: [
     OverviewComponent,

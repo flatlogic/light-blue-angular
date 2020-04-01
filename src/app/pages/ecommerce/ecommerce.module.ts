@@ -1,9 +1,15 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-
-import {ButtonsModule, BsDropdownModule, CollapseModule, AlertModule, PopoverModule} from 'ngx-bootstrap';
+import { FormsModule } from '@angular/forms';
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { TagInputModule } from 'ngx-chips';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { AlertModule } from 'ngx-bootstrap/alert';
+import { PopoverModule } from 'ngx-bootstrap/popover';
 
 import { ProductGridComponent } from './product-grid/product-grid.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
@@ -18,21 +24,18 @@ import { PSectionComponent } from './product-detail/components/p-section/p-secti
 import { DescriptionComponent } from './product-detail/components/description/description.component';
 import { RatingComponent } from './product-detail/components/rating/rating.component';
 import { SliderComponent } from './product-detail/components/slider/slider.component';
-import {ManagementComponent} from './management/management';
-import {NgxDatatableModule} from '@swimlane/ngx-datatable';
-import {ProductsService} from './products.service';
-import {ProductEditComponent} from './management/components/product-edit/product-edit';
-import {LoaderModule} from '../../components/loader/loader.module';
-import {TagInputModule} from 'ngx-chips';
-import {FormsModule} from '@angular/forms';
+import { ManagementComponent } from './management/management';
+import { ProductsService } from './products.service';
+import { ProductEditComponent } from './management/components/product-edit/product-edit';
+import { LoaderModule } from '../../components/loader/loader.module';
 import { WidgsterModule } from '../../components/widgster/widgster.module';
 
 export const routes = [
-  {path: 'product-grid', component: ProductGridComponent, pathMatch: 'full'},
-  {path: 'product', component: ProductDetailComponent, pathMatch: 'full'},
-  {path: 'product/:id', component: ProductDetailComponent, pathMatch: 'full'},
-  {path: 'management', component: ManagementComponent, pathMatch: 'full'},
-  {path: 'management/:id', component: ProductEditComponent, pathMatch: 'full'},
+  { path: 'product-grid', component: ProductGridComponent, pathMatch: 'full' },
+  { path: 'product', component: ProductDetailComponent, pathMatch: 'full' },
+  { path: 'product/:id', component: ProductDetailComponent, pathMatch: 'full' },
+  { path: 'management', component: ManagementComponent, pathMatch: 'full' },
+  { path: 'management/:id', component: ProductEditComponent, pathMatch: 'full' },
 ];
 
 @NgModule({
@@ -56,22 +59,20 @@ export const routes = [
   imports: [
     FormsModule,
     Ng2CarouselamosModule,
-    ButtonsModule.forRoot(),
-    BsDropdownModule.forRoot(),
-    CollapseModule.forRoot(),
     CommonModule,
     RouterModule.forChild(routes),
     NgxDatatableModule,
-    AlertModule.forRoot(),
     LoaderModule,
-    PopoverModule.forRoot(),
     TagInputModule,
-    WidgsterModule
+    WidgsterModule,
+    ButtonsModule,
+    BsDropdownModule,
+    CollapseModule,
+    AlertModule,
+    PopoverModule
   ],
   providers: [
     ProductsService
   ]
 })
-export class EcommerceModule {
-  public static routes = routes;
-}
+export class EcommerceModule { }

@@ -29,5 +29,4 @@ export const routes = [
     WidgsterModule
   ]
 })
-export class CoreElementsModule {
-}
+export class CoreElementsModule { }

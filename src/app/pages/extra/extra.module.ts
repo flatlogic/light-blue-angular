@@ -2,13 +2,13 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { AlertModule } from 'ngx-bootstrap/alert';
-import { TooltipModule } from 'ngx-bootstrap/tooltip';
-import { ButtonsModule } from 'ngx-bootstrap/buttons';
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import { ModalModule } from 'ngx-bootstrap/modal';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { AgmCoreModule } from '@agm/core';
+import { AlertModule } from 'ngx-bootstrap/alert';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 import { CalendarComponent } from './calendar/calendar.component';
 import { InvoiceComponent } from './invoice/invoice.component';
@@ -40,19 +40,17 @@ export const routes = [
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forChild(routes),
-    AlertModule.forRoot(),
-    TooltipModule.forRoot(),
-    ModalModule,
-    ButtonsModule.forRoot(),
-    BsDropdownModule.forRoot(),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDe_oVpi9eRSN99G4o6TwVjJbFBNr58NxE'
     }),
     FullCalendarModule,
-    WidgsterModule
+    WidgsterModule,
+    AlertModule,
+    TooltipModule,
+    ModalModule,
+    ButtonsModule,
+    BsDropdownModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class ExtraModule {
-  static routes = routes;
-}
+export class ExtraModule { }

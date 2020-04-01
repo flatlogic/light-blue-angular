@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { SortablejsModule } from 'ngx-sortablejs';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 import { GridComponent } from './grid.component';
 import { WidgsterModule } from '../../components/widgster/widgster.module';
@@ -19,9 +19,9 @@ export const routes = [
     RouterModule.forChild(routes),
     WidgsterModule,
     LoaderModule,
-    BsDropdownModule,
     UtilsModule,
-    SortablejsModule
+    SortablejsModule,
+    BsDropdownModule
   ],
   declarations: [GridComponent]
 })
