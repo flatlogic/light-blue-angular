@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation, ViewChild } from '@angular/core';
-import { DatatableComponent } from '@swimlane/ngx-datatable';
+import { DatatableComponent, ColumnMode } from '@swimlane/ngx-datatable';
 import { tableData } from './tables-dynamic.data';
 
 const PEOPLE = [
@@ -278,16 +278,18 @@ export class TablesDynamicComponent implements OnInit {
   people: any[] = PEOPLE;
   peopleTemp: any[] = [...PEOPLE];
 
-  @ViewChild(DatatableComponent, {static: true}) table: DatatableComponent;
+  public columnMode: typeof ColumnMode = ColumnMode;
+
+  @ViewChild(DatatableComponent, { static: true }) table: DatatableComponent;
 
   rows: Array<any> = [];
   columns: Array<any> = [
-    {title: 'Name', name: 'name'},
-    {title: 'Position', name: 'position', sort: false},
-    {title: 'Office', name: 'office', sort: 'asc'},
-    {title: 'Extn.', name: 'ext', sort: ''},
-    {title: 'Start date', name: 'startDate'},
-    {title: 'Salary ($)', name: 'salary'}
+    { title: 'Name', name: 'name' },
+    { title: 'Position', name: 'position', sort: false },
+    { title: 'Office', name: 'office', sort: 'asc' },
+    { title: 'Extn.', name: 'ext', sort: '' },
+    { title: 'Start date', name: 'startDate' },
+    { title: 'Salary ($)', name: 'salary' }
   ];
   page: number = 1;
   itemsPerPage: number = 10;
@@ -297,8 +299,8 @@ export class TablesDynamicComponent implements OnInit {
 
   config: any = {
     paging: true,
-    sorting: {columns: this.columns},
-    filtering: {filterString: '', columnName: 'position'}
+    sorting: { columns: this.columns },
+    filtering: { filterString: '', columnName: 'position' }
   };
 
   ng2TableData: Array<any> = tableData;
@@ -359,7 +361,7 @@ export class TablesDynamicComponent implements OnInit {
     return filteredData;
   }
 
-  onChangeTable(config: any, page: any = {page: this.page, itemsPerPage: this.itemsPerPage}): any {
+  onChangeTable(config: any, page: any = { page: this.page, itemsPerPage: this.itemsPerPage }): any {
     if (config.filtering) {
       Object.assign(this.config.filtering, config.filtering);
     }
@@ -377,7 +379,7 @@ export class TablesDynamicComponent implements OnInit {
     const val = event.target.value.toLowerCase();
 
     // filter our data
-    const temp = this.peopleTemp.filter(function(d) {
+    const temp = this.peopleTemp.filter(function (d) {
       return d.name.toLowerCase().indexOf(val) !== -1 || !val;
     });
 

@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, Input, EventEmitter, OnDestroy } from '@angular/core';
-import { AbstractControl, FormControl } from '@angular/forms';
+import { FormControl } from '@angular/forms';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
@@ -238,7 +238,7 @@ export class MailListComponent implements OnInit, OnDestroy {
   @Input() folderName: any;
   public mails: Mail[] = [...MAILS];
   public searchText: string = '';
-  public checkAll: AbstractControl = new FormControl(false);
+  public checkAll: FormControl = new FormControl(false);
 
   private destroySource: Subject<boolean> = new Subject();
 
@@ -267,7 +267,7 @@ export class MailListComponent implements OnInit, OnDestroy {
     }));
 
     if (this.mails.length === this.mails.filter((m: Mail) => m.selected).length) {
-      this.checkAll.setValue(true, { emit: false });
+      this.checkAll.setValue(true, { emitEvent: false });
     }
   }
 
@@ -283,7 +283,7 @@ export class MailListComponent implements OnInit, OnDestroy {
       ...m,
       selected: true
     }));
-    this.checkAll.setValue(true, { emit: false });
+    this.checkAll.setValue(true, { emitEvent: false });
   }
 
   public unselectAll(): void {
@@ -291,7 +291,7 @@ export class MailListComponent implements OnInit, OnDestroy {
       ...m,
       selected: false
     }));
-    this.checkAll.setValue(false, { emit: false });
+    this.checkAll.setValue(false, { emitEvent: false });
   }
 
   public selectRead(): void {
@@ -317,7 +317,7 @@ export class MailListComponent implements OnInit, OnDestroy {
 
   public deleteEmails(): void {
     this.mails = this.mails.filter((m: Mail) => !m.selected);
-    this.checkAll.setValue(false, { emit: false });
+    this.checkAll.setValue(false, { emitEvent: false });
   }
 
   public markSelectedAsUnread(): void {

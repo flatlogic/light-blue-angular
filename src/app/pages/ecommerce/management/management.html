@@ -14,8 +14,8 @@
   [loading]="productsService.isReceiving">
   <h5 *widgsterTitle>List of Products</h5>
   <button (click)="createNewProduct()" class="btn btn-success mb-3">Create Product</button>
-  <ngx-datatable class="table table-striped table-hover" [rows]="productsService.products" [columnMode]="'force'"
-    [headerHeight]="50" [footerHeight]="50" [rowHeight]="'auto'" [limit]="10">
+  <ngx-datatable class="table table-striped table-hover" [rows]="productsService.products"
+    [columnMode]="columnMode.force" [headerHeight]="50" [footerHeight]="50" [rowHeight]="'auto'" [limit]="10">
     <ngx-datatable-column name="id" cellClass="width-100" headerClass="width-100">
       <ng-template let-value="value" ngx-datatable-cell-template>
         {{value}}

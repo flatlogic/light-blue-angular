@@ -22,8 +22,8 @@
       </div>
     </div>
     <div>
-      <ngx-datatable class="table table-striped table-hover" [rows]="people" [columnMode]="'force'" [headerHeight]="50"
-        [footerHeight]="50" [rowHeight]="'auto'" [limit]="8">
+      <ngx-datatable class="table table-striped table-hover" [rows]="people" [columnMode]="columnMode.force"
+        [headerHeight]="50" [footerHeight]="50" [rowHeight]="'auto'" [limit]="8">
         <ngx-datatable-column name="ID">
           <ng-template let-value="value" ngx-datatable-cell-template>
             {{value}}

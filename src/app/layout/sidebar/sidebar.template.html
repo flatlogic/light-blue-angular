@@ -186,12 +186,12 @@
 <div class="sidebar-alerts">
   <alert [dismissible]="true" type="transparent">
     <span class="text-white fw-semi-bold">Sales Report</span> <br>
-    <progressbar class="progress-xs mt-1 mb-0" type="primary" value="16"></progressbar>
+    <progressbar class="progress-xs mt-1 mb-0" [value]="16"></progressbar>
     <small>Calculating x-axis bias... 65%</small>
   </alert>
   <alert [dismissible]="true" type="transparent">
     <span class="text-white fw-semi-bold">Personal Responsibility</span> <br>
-    <progressbar class="progress-xs mt-1 mb-0" type="danger" value="23"></progressbar>
+    <progressbar class="progress-xs mt-1 mb-0" type="danger" [value]="23"></progressbar>
     <small>Provide required notes</small>
   </alert>
 </div>
