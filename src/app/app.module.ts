@@ -78,10 +78,6 @@ const APP_PROVIDERS = [
     {
       provide: HTTP_INTERCEPTORS, useClass: AppInterceptor, multi: true
     }
-  ],
-  entryComponents: [
-    CancelLaunchToastComponent,
-    RetryDestroyingToastComponent
   ]
 })
 export class AppModule { }
