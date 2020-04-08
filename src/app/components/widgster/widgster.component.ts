@@ -41,7 +41,7 @@ export class WidgsterComponent implements OnChanges {
   @Input() public bodyClass: string | string[];
   @Input() public controlsClass: string | string[];
   @Input() public footerClass: string | string[];
-  @Input() public showTooltip: boolean = true;
+  @Input() public showTooltip: boolean = false;
   @Input() public tooltipPosition: WidgesterTooltipPosition = 'auto';
   @Input() public fullscreenZIndex: number = 10000;
   @Input() public hideBodyOverflow: boolean = true;

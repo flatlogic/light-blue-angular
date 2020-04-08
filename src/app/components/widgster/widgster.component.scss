@@ -1,6 +1,6 @@
-@import '~bootstrap/scss/bootstrap';
-@import '../../styles/mixins';
-@import '../../styles/variables';
+@import "~bootstrap/scss/bootstrap";
+@import "../../styles/mixins";
+@import "../../styles/variables";
 
 /***********************************/
 /**          WIDGET               **/
@@ -37,7 +37,7 @@
     @include box-shadow(none);
   }
 
-  &>header {
+  & > header {
     position: relative;
     background: none;
     color: $widget-header-color;
@@ -50,34 +50,24 @@
       margin: 0;
     }
   }
-  
+
   .widget-content-wrapper {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-  
     .widget-body {
-      width: 100%;
       margin-top: 15px;
 
-      .widget-content {
-        width: 100%;
-        padding: 0;
-        margin: 0;
-      }
-  
       &.p-0 {
-        margin: $widget-padding-vertical (-$widget-padding-horizontal) (-$widget-padding-vertical);
+        margin: $widget-padding-vertical (-$widget-padding-horizontal)
+          (-$widget-padding-vertical);
       }
-  
+
       .fetching-data {
         height: 0;
         opacity: 0;
       }
     }
-  
-    &>footer {
-      margin: $spacer/2 (-$widget-padding-horizontal) (-$widget-padding-vertical);
+
+    & > footer {
+      margin: $spacer (-$widget-padding-horizontal) (-$widget-padding-vertical);
       padding: 10px 20px;
       border-bottom-left-radius: $widget-border-radius;
       border-bottom-right-radius: $widget-border-radius;
@@ -108,12 +98,12 @@
     border-bottom-left-radius: $border-radius-base;
     border-bottom-right-radius: $border-radius-base;
 
-    .table>thead>tr>th,
-    .table>thead>tr>td,
-    .table>tbody>tr>th,
-    .table>tbody>tr>td,
-    .table>tfoot>tr>th,
-    .table>tfoot>tr>td {
+    .table > thead > tr > th,
+    .table > thead > tr > td,
+    .table > tbody > tr > th,
+    .table > tbody > tr > td,
+    .table > tfoot > tr > th,
+    .table > tfoot > tr > td {
       &:first-child {
         padding-left: $widget-padding-horizontal;
       }
@@ -130,12 +120,12 @@
     border-top-right-radius: $widget-border-radius;
     overflow: hidden;
 
-    >img {
+    > img {
       border-top-left-radius: $widget-border-radius;
       border-top-right-radius: $widget-border-radius;
     }
 
-    >.btn-toolbar {
+    > .btn-toolbar {
       position: absolute;
       top: 0;
       right: 0;
@@ -155,13 +145,13 @@
     margin-left: (-$widget-padding-horizontal);
     margin-right: (-$widget-padding-horizontal);
 
-    >img {
+    > img {
       max-width: 100%;
     }
   }
 
   .widget-overflow {
-    margin: (-$widget-padding-vertical) (-$widget-padding-horizontal)
+    margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);
   }
 
   .widget-icon {
@@ -178,13 +168,13 @@
     margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);
     border-radius: $border-radius;
 
-    >img {
+    > img {
       max-width: 100%;
       border-radius: $border-radius $border-radius 0 0;
       transition: transform 0.15s ease;
     }
 
-    &:hover>img {
+    &:hover > img {
       transform: scale(1.1, 1.1);
     }
 
@@ -231,7 +221,7 @@
 }
 
 .widget-padding-lg {
-  padding: $widget-padding-vertical*2 $widget-padding-horizontal*2;
+  padding: $widget-padding-vertical * 2 $widget-padding-horizontal * 2;
 }
 
 .widget-controls {
@@ -244,7 +234,7 @@
 
   &.widget-controls-hover {
     opacity: 0;
-    @include transition(opacity .15s);
+    @include transition(opacity 0.15s);
   }
 
   &.left {
@@ -252,23 +242,23 @@
     right: auto;
   }
 
-  >a,
-  >span {
+  > a,
+  > span {
     padding: 1px 4px;
     border-radius: 4px;
     color: $widget-controls-color;
-    @include transition(color .15s ease-in-out);
+    @include transition(color 0.15s ease-in-out);
 
-    >.fa {
+    > .fa {
       vertical-align: middle;
     }
 
-    >.glyphicon {
+    > .glyphicon {
       vertical-align: -1px;
     }
   }
 
-  >a:hover {
+  > a:hover {
     color: $widget-controls-hover-color;
     text-decoration: none;
   }

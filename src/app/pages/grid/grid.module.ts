@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { SortablejsModule } from 'ngx-sortablejs';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
 import { GridComponent } from './grid.component';
 import { WidgsterModule } from '../../components/widgster/widgster.module';
@@ -21,7 +22,8 @@ export const routes = [
     LoaderModule,
     UtilsModule,
     SortablejsModule,
-    BsDropdownModule
+    BsDropdownModule,
+    TooltipModule
   ],
   declarations: [GridComponent]
 })

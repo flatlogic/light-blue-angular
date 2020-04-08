@@ -1,4 +1,4 @@
-@import '../../../styles/helpers';
+@import "../../../styles/helpers";
 
 .analytics-page {
   .visits-element {
@@ -8,7 +8,8 @@
   }
 
   .requests-table {
-    td, th {
+    td,
+    th {
       font-weight: $font-weight-normal;
     }
 
@@ -64,22 +65,4 @@
       margin-bottom: 1.4rem;
     }
   }
-}
-
-.calendar-navigation {
-  padding-top: 10px;
-  display: flex;
-  justify-content: space-between;
-  font-size: 12.6px;
-
-  .date {
-    padding: 3px 0;
-  }
-
-  .prev,
-  .next {
-    padding: 3px 2rem;
-    cursor: pointer;
-  }
-
 }

@@ -43,7 +43,6 @@
 
 .table td,
 .table th {
-
   .abc-checkbox label::before,
   .abc-checkbox label::after {
     left: -5px;
@@ -56,12 +55,11 @@
   left: -17px;
 }
 
-.abc-checkbox-dark input[type="checkbox"]:checked+label {
+.abc-checkbox-dark input[type="checkbox"]:checked + label {
   &::after {
     color: $gray-300;
   }
 }
-
 
 ////// Wizard //////
 
@@ -102,19 +100,19 @@
   .datatable-pager {
     font-size: $font-size-sm;
 
-    .pager>li {
-      >a {
+    .pager > li {
+      > a {
         padding: $pagination-padding-y $pagination-padding-x;
         color: $text-color;
         text-decoration: none;
       }
 
-      &.active>a {
+      &.active > a {
         background-color: $pagination-active-bg;
         border-radius: $border-radius;
       }
 
-      &.disabled>a {
+      &.disabled > a {
         color: $text-muted;
       }
     }
@@ -132,7 +130,6 @@
 /////// NG2 TAG INPUT ///////
 
 .ng2-tag-input {
-
   &__text-input {
     color: $text-color;
     background-color: transparent;
@@ -147,7 +144,6 @@
 
 /////////APEXCHARTS////////////////
 apx-chart {
-
   .apexcharts-tooltip,
   .apexcharts-menu {
     color: initial;
@@ -164,7 +160,6 @@ apx-chart {
 .axis .tick text {
   fill: white;
 }
-
 
 /////////////NG-SELECT///////
 ng-select {
@@ -187,14 +182,12 @@ ng-select {
     border-color: $white-dark transparent transparent !important;
   }
 
-
   .ng-dropdown-panel {
     border: none;
     background: none;
 
     .ng-dropdown-panel-items {
       .ng-option {
-
         &,
         &-disabled {
           background-color: rgba(0, 0, 0, 0.8);
@@ -287,7 +280,8 @@ ng5-slider.ng5-slider {
     width: 26px;
     height: 26px;
     background-color: #ffffff;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2),
+      0 1px 3px rgba(0, 0, 0, 0.5);
     border: 0px solid transparent;
 
     &::after {
@@ -345,17 +339,32 @@ ng5-slider.ng5-slider {
 
   // .ng5-slider-pointer.ng5-slider-active~.ng5-slider-bubble.ng5-slider-model-value
   &:hover {
-
     .ng5-slider-bubble.ng5-slider-model-value,
     .ng5-slider-bubble.ng5-slider-model-high {
       display: initial;
       opacity: 1 !important;
     }
   }
-
 }
 
 /////////angular-calendar////////
+.calendar-navigation {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12.6px;
+  margin-bottom: 0.5rem;
+
+  .date {
+    padding: 3px 0;
+  }
+
+  .prev,
+  .next {
+    padding: 3px 1rem;
+    cursor: pointer;
+  }
+}
+
 mwl-calendar-month-view {
   .cal-day-number {
     font-size: 12.6px !important;
@@ -375,6 +384,14 @@ mwl-calendar-month-view {
   mwl-calendar-month-cell.cal-day-cell.cal-today,
   mwl-calendar-month-cell.cal-day-cell:hover {
     background-color: transparent !important;
+  }
+
+  mwl-calendar-month-cell .cal-cell-top {
+    display: flex;
+    justify-content: center;
+    .cal-day-number {
+      margin-right: 0;
+    }
   }
 
   .cal-month-view {
@@ -397,7 +414,7 @@ mwl-calendar-month-view {
   .cal-month-view .cal-cell-row,
   .cal-month-view .cal-cell-row mwl-calendar-month-cell,
   .cal-month-view .cal-cell-row mwl-calendar-month-cell .cal-cell-top {
-    min-height: 40px;
+    min-height: 30px;
   }
 
   .cal-days,
@@ -422,7 +439,7 @@ mwl-calendar-month-view {
       position: relative;
 
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         width: 30px;
         height: 30px;
@@ -437,9 +454,10 @@ mwl-calendar-month-view {
   }
 }
 
-.cal-events {
+.cal-month-view .cal-events {
   margin: 0 0 0 10px !important;
-  flex-direction: row-reverse;
+  align-items: unset;
+  justify-content: center;
 
   .cal-event {
     width: 6px;

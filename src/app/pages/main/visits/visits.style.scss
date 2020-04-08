@@ -18,7 +18,7 @@
   }
 
   @include media-breakpoint-down(lg) {
-    .description+.progress {
+    .description + .progress {
       margin-bottom: 0;
     }
   }
@@ -36,19 +36,11 @@
   }
 }
 
-.calendar-navigation {
-  display: flex;
-  justify-content: space-between;
-  font-size: 12.6px;
-
-  .date {
-    padding: 3px 0;
-  }
-
-  .prev,
-  .next {
-    padding: 3px 2rem;
-    cursor: pointer;
-  }
-
+/***********************/
+/*    Part: Calendar   */
+/***********************/
+mwl-calendar-month-view .cal-month-view {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }

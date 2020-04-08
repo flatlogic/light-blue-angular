@@ -14,7 +14,7 @@
 <div class="row">
   <div class="col-lg-7 offset-xl-1 ">
     <section widgster [optionsControl]="false" [reloadControl]="false" [fullscreenControl]="false"
-      [collapseControl]="false" [closeControl]="false">
+      [collapseControl]="false" [closeControl]="false" [showTooltip]="true">
       <h5 *widgsterTitle>Draggable Grid &nbsp;<span class="badge badge-danger fw-normal">since 2.1</span></h5>
       <p>
         <strong>Widgster</strong> is a plugin that allows to easily implement basic widget functions that
@@ -41,18 +41,18 @@
   <div class="col-lg-6  widget-container" sortablejs [sortablejsOptions]="options">
     <section widgster [optionsControl]="false" #defaultWidgster [class.locked]="defaultWidgster.fullscreened"
       [loading]="defaultLoading" (reload)="onDefaultReload()" id="default-widget"
-      (fullscreenModeChange)="onFullscreenMode($event)">
+      (fullscreenModeChange)="onFullscreenMode($event)" [showTooltip]="true">
       <h6 *widgsterTitle>Default <span class="fw-semi-bold">Widget</span></h6>
       <p *ngFor="let data of defaultWidgetData$ | async" [ngClass]="data.class">{{data.value}}</p>
       <loader *widgsterLoader [size]="40"></loader>
     </section>
     <section #sharesWidgster widgster [optionsControl]="false" [loading]="sharesLoading" (reload)="onSharesReload()"
-      class="shares-widget" id="shares-widget" (fullscreenModeChange)="onFullscreenMode($event)">
+      class="shares-widget" id="shares-widget" (fullscreenModeChange)="onFullscreenMode($event)" [showTooltip]="true">
       <ng-container *widgsterControls>
-        <a title="Reload" (click)="sharesWidgster.onReload(); $event.preventDefault()"><strong
-            class="text-gray-light">Reload</strong></a>
-        <a title="Close" (click)="sharesWidgster.onClose(); $event.preventDefault()"><strong
-            class="text-gray-light">Close</strong></a>
+        <a title="Reload" (click)="sharesWidgster.onReload(); $event.preventDefault()"><strong class="text-gray-light"
+            tooltip="Reload">Reload</strong></a>
+        <a title="Close" (click)="sharesWidgster.onClose(); $event.preventDefault()"><strong class="text-gray-light"
+            tooltip="Close">Close</strong></a>
       </ng-container>
       <h6 *widgsterTitle>
         <span class="badge badge-primary"><i class="fa fa-facebook"></i></span> &nbsp;
@@ -74,14 +74,15 @@
       </div>
     </section>
     <section #autoloadWidgster widgster [loading]="autoloadLoading" (reload)="onAutoloadReload()" id="autoload-widget"
-      (fullscreenModeChange)="onFullscreenMode($event)">
+      (fullscreenModeChange)="onFullscreenMode($event)" [showTooltip]="true">
       <h6 *widgsterTitle>Autoload <span class="fw-semi-bold">Widget</span></h6>
       <ng-container *widgsterControls>
         <span>
           <i class="fa fa-spinner fa-lg fade mr-xs"></i>
         </span>
         <ng-container *ngIf="!autoloadLoading" dropdown>
-          <a href="#" (click)="$event.preventDefault()" class="dropdown-toggle no-caret" dropdownToggle>
+          <a href="#" (click)="$event.preventDefault()" class="dropdown-toggle no-caret" dropdownToggle
+            tooltip="Options">
             <i class="la la-cog"></i>
           </a>
           <ul *dropdownMenu class="dropdown-menu dropdown-menu-right">
@@ -108,7 +109,7 @@
     </section>
     <section widgster style="min-height: 200px" [optionsControl]="false" [reloadControl]="false"
       [fullscreenControl]="false" [collapseControl]="false" [closeControl]="false"
-      (fullscreenModeChange)="onFullscreenMode($event)">
+      (fullscreenModeChange)="onFullscreenMode($event)" [showTooltip]="true">
       <h6 *widgsterTitle>Custom <span class="fw-semi-bold">Loader</span></h6>
       <div class="loader animated fadeIn handle">
         <span class="spinner">
@@ -119,7 +120,8 @@
   </div>
   <div class="col-lg-6  widget-container" sortablejs [sortablejsOptions]="options">
     <section class="widget" id="news-widget" widgster [optionsControl]="false" [fullscreenControl]="false"
-      [loading]="newsLoading" (reload)="onNewsReload()" (fullscreenModeChange)="onFullscreenMode($event)">
+      [loading]="newsLoading" (reload)="onNewsReload()" (fullscreenModeChange)="onFullscreenMode($event)"
+      [showTooltip]="true">
       <ng-container *widgsterTitle>
         <h6>
           News <span class="badge badge-pill badge-success">17</span>
@@ -142,7 +144,7 @@
       </ul>
     </section>
     <section class="widget locked" widgster [optionsControl]="false" [reloadControl]="false" [fullscreenControl]="false"
-      [collapsed]="true">
+      [collapsed]="true" [showTooltip]="true">
       <h6 *widgsterTitle>Collapsed by default & locked</h6>
       <blockquote>
         There are no limits. There are plateaus, but you must not stay there, you must go beyond
@@ -157,7 +159,7 @@
     </section>
     <section class="widget bg-gray" #storyWidgster widgster [optionsControl]="false" [reloadControl]="false"
       [fullscreenControl]="false" [collapseControl]="false" [closeControl]="false"
-      (fullscreenModeChange)="onFullscreenMode($event)">
+      (fullscreenModeChange)="onFullscreenMode($event)" [showTooltip]="true">
       <div class="jumbotron handle bg-gray text-white mb-0">
         <div class="container">
           <h1>Draggable story!</h1>
