@@ -909,50 +909,17 @@
               only in what is.</p>
             <footer class="blockquote-footer">Bruce Lee</footer>
           </blockquote>
-          <div class="form-group row">
-            <label class="col-form-label col-md-4 text-md-right" for="fileupload1">
-              File input widget
-            </label>
-            <div class="col-md-8 ">
-              <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                <div class="form-control input-transparent" data-trigger="fileinput">
-                  <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                  <span class="fileinput-filename"></span>
-                </div>
-                <div class="input-group-btn">
-                  <button class="btn btn-default btn-file">
-                    <span class="fileinput-new">Select file</span>
-                    <span class="fileinput-exists">Change</span>
-                    <input name="..." type="file">
-                  </button>
-                  <button class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</button>
-                </div>
-              </div>
-              <span class="help-block">Awesome file input plugin allows you to create a visually appealing file or
-                image inputs.</span>
-            </div>
-          </div>
-          <div class="form-group row">
-            <label class="col-form-label col-md-4 text-md-right">
-              Image upload widget
-            </label>
-            <div class="col-md-8 ">
-              <div class="fileinput fileinput-new" data-provides="fileinput">
-                <div class="fileinput-new thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;">
-                  <img alt="..."
-                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTEiIGhlaWdodD0iMTQxIj48cmVjdCB3aWR0aD0iMTkxIiBoZWlnaHQ9IjE0MSIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9Ijk1LjUiIHk9IjcwLjUiIHN0eWxlPSJmaWxsOiNhYWE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6MTJweDtmb250LWZhbWlseTpBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZjtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4xOTF4MTQxPC90ZXh0Pjwvc3ZnPg==">
-                </div>
-                <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;">
-                </div>
-                <div>
-                  <span class="btn btn-default btn-file"><span class="fileinput-new">Select image</span><span
-                      class="fileinput-exists">Change</span><input type="file" name="..."></span>
-                  <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
-                </div>
-              </div>
-              <span class="help-block">Showing a thumbnail instead of the filename when uploading an image.</span>
-            </div>
-          </div>
+          <file-input>
+            <file-input-label>File input widget</file-input-label>
+            <file-input-hint>Awesome file input plugin allows you to create a visually appealing file or
+              image inputs.</file-input-hint>
+            <input type="file" fileInput>
+          </file-input>
+          <file-input [preview]="true" selectCaption="Select Image">
+            <file-input-label>Image upload widget</file-input-label>
+            <file-input-hint>Showing a thumbnail instead of the filename when uploading an image.</file-input-hint>
+            <input type="file" fileInput>
+          </file-input>
         </fieldset>
       </form>
     </section>

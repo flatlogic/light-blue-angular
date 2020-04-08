@@ -1,0 +1,54 @@
+<div class="form-group row">
+  <label *ngIf="label" class="col-form-label col-md-4 text-md-right">
+    <ng-content select="file-input-label"></ng-content>
+  </label>
+  <div class="col-md-8 ">
+    <div class="fileinput fileinput-new input-group" [class.input-group]="!preview">
+      <div class="input-wrapper">
+        <ng-content select="[fileInput]"></ng-content>
+      </div>
+      <ng-container *ngIf="!preview; else previewTemplate">
+        <div class="form-control input-transparent">
+          <ng-container *ngIf="fileName$ | async as fileName">
+            <i class="glyphicon glyphicon-file fileinput-exists"></i>
+            <span class="fileinput-filename">{{fileName}}</span>
+          </ng-container>
+        </div>
+        <div class="input-group-btn">
+          <button *ngIf="!(fileName$ | async); else changeButtonsTemplate" (click)="onSelect()" type="button"
+            class="btn btn-default btn-file">{{selectCaption}}</button>
+        </div>
+      </ng-container>
+    </div>
+    <div *ngIf="hint" class="help-block">
+      <ng-content select="file-input-hint"></ng-content>
+    </div>
+  </div>
+</div>
+
+<ng-template #previewTemplate>
+  <div *ngIf="!(file$ | async)  && !(fileName$ | async); else filePreviewTemplate" class="fileinput-new thumbnail"
+    data-trigger="fileinput" style="width: 200px; height: 150px;">
+    <img alt="..."
+      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTEiIGhlaWdodD0iMTQxIj48cmVjdCB3aWR0aD0iMTkxIiBoZWlnaHQ9IjE0MSIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9Ijk1LjUiIHk9IjcwLjUiIHN0eWxlPSJmaWxsOiNhYWE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6MTJweDtmb250LWZhbWlseTpBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZjtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4xOTF4MTQxPC90ZXh0Pjwvc3ZnPg==">
+  </div>
+  <button *ngIf="!(fileName$ | async); else changeButtonsTemplate" (click)="onSelect()" type="button"
+    class="btn btn-default btn-file">{{selectCaption}}</button>
+</ng-template>
+
+<ng-template #filePreviewTemplate>
+  <ng-container *ngIf="file$ | async as file; else fileNamePreviewTemplate">
+    <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;">
+      <img [src]="file" alt="" style="max-width: 200px; max-height: 150px;">
+    </div>
+  </ng-container>
+  <ng-template #fileNamePreviewTemplate>
+    <div *ngIf="fileName$ | async as fileName" class="fileinput-preview fileinput-exists thumbnail"
+      style="max-width: 200px; max-height: 150px; line-height: 10px;">{{fileName}}</div>
+  </ng-template>
+</ng-template>
+
+<ng-template #changeButtonsTemplate>
+  <button (click)="onChange()" type="button" class="btn btn-default btn-file">{{changeCaption}}</button>
+  <button (click)="onRemove()" type="button" class="btn btn-default fileinput-exists">{{removeCaption}}</button>
+</ng-template>

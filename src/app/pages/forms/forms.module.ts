@@ -21,6 +21,7 @@ import { ElementsComponent } from './elements/elements.component';
 import { ValidationComponent } from './validation/validation.component';
 import { WizardComponent } from './wizard/wizard.component';
 import { WidgsterModule } from '../../components/widgster/widgster.module';
+import { FileInputModule } from '../../components/file-input/file-input.module';
 
 export const routes = [
   { path: '', redirectTo: 'elements', pathMatch: 'full' },
@@ -58,7 +59,8 @@ const wizardConfig: NgWizardConfig = {
     AlertModule,
     BsDropdownModule,
     DatepickerModule,
-    TimepickerModule
+    TimepickerModule,
+    FileInputModule
   ]
 })
 export class FormModule { }
