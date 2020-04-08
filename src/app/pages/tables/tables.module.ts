@@ -4,6 +4,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 // import { Ng2TableModule } from 'ng2-table';
+import { TableModule } from 'ngx-easy-table';
 import { AlertModule } from 'ngx-bootstrap/alert';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
@@ -34,6 +35,7 @@ export const routes = [
     CommonModule,
     FormsModule,
     // Ng2TableModule,
+    TableModule,
     NgxDatatableModule,
     RouterModule.forChild(routes),
     NgxEchartsModule,
