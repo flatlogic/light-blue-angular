@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation, ViewChild } from '@angular/core';
 import { DatatableComponent, ColumnMode } from '@swimlane/ngx-datatable';
 import { tableData } from './tables-dynamic.data';
+import { Columns, Config, DefaultConfig, APIDefinition, API } from 'ngx-easy-table';
 
 const PEOPLE = [
   {
@@ -280,17 +281,27 @@ export class TablesDynamicComponent implements OnInit {
 
   public columnMode: typeof ColumnMode = ColumnMode;
 
+  public configuration: Config;
+  public columns: Columns[] = [
+    { key: 'name', title: 'Name' },
+    { key: 'position', title: 'Position' },
+    { key: 'office', title: 'Office' },
+    { key: 'ext', title: 'Extn.' },
+    { key: 'startDate', title: 'Start date' },
+    { key: 'salary', title: 'Salary' }
+  ];
+
   @ViewChild(DatatableComponent, { static: true }) table: DatatableComponent;
 
   rows: Array<any> = [];
-  columns: Array<any> = [
+ /*  columnss: Array<any> = [
     { title: 'Name', name: 'name' },
     { title: 'Position', name: 'position', sort: false },
     { title: 'Office', name: 'office', sort: 'asc' },
     { title: 'Extn.', name: 'ext', sort: '' },
     { title: 'Start date', name: 'startDate' },
     { title: 'Salary ($)', name: 'salary' }
-  ];
+  ]; */
   page: number = 1;
   itemsPerPage: number = 10;
   maxSize: number = 5;
@@ -311,6 +322,11 @@ export class TablesDynamicComponent implements OnInit {
 
   ngOnInit(): void {
     this.onChangeTable(this.config);
+
+    this.configuration = { ...DefaultConfig };
+    this.configuration.searchEnabled = true;
+    this.configuration.orderEnabled = true;
+    this.configuration.threeWaySort = true;
   }
 
   changePage(page: any, data: Array<any> = this.ng2TableData): Array<any> {
@@ -388,4 +404,10 @@ export class TablesDynamicComponent implements OnInit {
     // Whenever the filter changes, always go back to the first page
     this.table.offset = 0;
   }
+
+  /* filter(value: string) {
+    this.easyTable.apiEvent({
+      type: API.onGlobalSearch, value: value,
+    });
+  } */
 }

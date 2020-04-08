@@ -51,3 +51,135 @@
     content: ">";
   }
 }
+
+.ngx-table {
+  position: relative;
+
+  &__header-cell {
+    padding: 0.75rem;
+  }
+
+  &__header-title {
+    color: #fff;
+    display: flex;
+    font-weight: 600;
+    justify-content: space-between;
+    text-transform: uppercase;
+  }
+
+  &__sort-header {
+    border-top: 1px solid #d6dee5;
+  
+    >.ng-star-inserted {
+      padding: 0.75rem;
+
+      label {
+        margin: 0;
+      }
+    }
+  }
+
+  &__header-search {
+    background-clip: padding-box;
+    border-radius: 0.3rem;
+    border: 1px solid #c1ccd3;
+    color: #636c72;
+    line-height: 1.5;
+    padding: 0.5rem 0.75rem;
+    width: 100%;
+  }
+}
+
+tbody {
+  tr.ng-star-inserted {
+    border-top: 1px solid $table-border-color;
+    height: 43px;
+    width: auto;
+    
+    &:nth-of-type(odd) {
+      background-color: rgba(0,0,0,0.05);
+    }
+
+    td {
+      border-top: 1px solid #d6dee5;
+      padding: .75rem;
+      vertical-align: top;
+    }
+  }
+}
+
+.ngx-pagination-wrapper {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.ngx-pagination {
+  display: flex;
+  height: 31px;
+  width: auto;
+
+  >.ng-star-inserted {
+    background-color: hsla(0,0%,100%,.1);
+    border-radius: .3rem;
+    color: $text-color;
+    cursor: pointer;
+    display: block;
+    font-family: Open Sans,sans-serif;
+    font-weight: 400;
+    line-height: 1.25;
+    margin: 0 2px;
+    padding: $pagination-padding-y $pagination-padding-x;
+    text-decoration: none;
+
+    &.current {
+      background-color: transparent;
+    }
+
+    & .show-for-sr {
+      clip: rect(0,0,0,0);
+      height: 1px;
+      overflow: hidden;
+      position: absolute;
+      width: 1px;
+    }
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  .pagination-previous.disabled::before, .pagination-previous a::before {
+    content: "<";
+  }
+
+  .pagination-next.disabled::after, .pagination-next a::after {
+    content: ">";
+  }
+
+  .small-screen {
+    display: none;
+  }
+}
+
+.ngx-pagination-range {
+  display: none;
+}
+
+
+.ngx-icon {
+  border: .2rem solid #fff;
+  border-bottom: 0;
+  border-right: 0;
+  cursor: pointer;
+  display: inline-block;
+  height: .65em;
+  width: .65em;
+}
+
+.ngx-icon-arrow-down {
+  transform: translate(-50%,-75%) rotate(225deg);
+}
+
+.ngx-icon-arrow-up {
+  transform: translate(-50%,-25%) rotate(45deg);
+}
