@@ -20,28 +20,25 @@
   transition: all ease 0.2s;
   -webkit-transition: all ease 0.2s;
   border-radius: 20px;
-  box-shadow: inset 0 0 1px rgba(0, 0, 0, .5);
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.5);
 }
 
 .switch i:before {
   display: block;
-  content: '';
+  content: "";
   width: 30px;
   height: 30px;
   padding: 1px;
   border-radius: 20px;
   background: white;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, .5);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-.switch :checked+i {
+.switch :checked + i {
   padding-right: 0;
   padding-left: 20px;
   background: rgb(100, 189, 99);
 }
-
-
-
 
 /**
  * Jasny Bootstrap
@@ -55,15 +52,28 @@
     background-color: $thumbnail-bg;
     border: $thumbnail-border-width solid $thumbnail-border-color;
     border-radius: $thumbnail-border-radius;
-    transition: all .2s ease-in-out;
-    @include box-shadow(0 1px 2px rgba(0, 0, 0, .075));
+    transition: all 0.2s ease-in-out;
+    @include box-shadow(0 1px 2px rgba(0, 0, 0, 0.075));
+    margin-bottom: 5px;
   }
 }
 
-.fileinput-preview.fileinput-exists {
+.fileinput .fileinput-preview.fileinput-exists {
   border: 1px solid $input-border-color;
   border-radius: $border-radius;
   padding: 5px;
+}
+
+.fileinput > button:first-of-type {
+  margin-right: 5px;
+}
+
+.fileinput .thumbnail {
+  display: inline-block;
+  margin-bottom: 5px;
+  overflow: hidden;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .fileinput.input-group {
@@ -86,31 +96,31 @@
 
 .form-group.has-warning .fileinput {
   .fileinput-preview {
-    color: theme-color('warning');
+    color: theme-color("warning");
   }
 
   .thumbnail {
-    border-color: theme-color('warning');
+    border-color: theme-color("warning");
   }
 }
 
 .form-group.has-error .fileinput {
   .fileinput-preview {
-    color: theme-color('danger');
+    color: theme-color("danger");
   }
 
   .thumbnail {
-    border-color: theme-color('danger');
+    border-color: theme-color("danger");
   }
 }
 
 .form-group.has-success .fileinput {
   .fileinput-preview {
-    color: theme-color('success');
+    color: theme-color("success");
   }
 
   .thumbnail {
-    border-color: theme-color('success');
+    border-color: theme-color("success");
   }
 }
 
@@ -119,7 +129,6 @@
   left: 2px;
   padding: 1px 6px;
 }
-
 
 /**
  * Dropzone
@@ -138,18 +147,18 @@
   display: block;
   border: 1px solid $table-border-color;
 
-  >.md-header,
+  > .md-header,
   .md-footer {
     display: block;
     padding: 6px 4px;
     background: $gray-light;
   }
 
-  >.md-header {
+  > .md-header {
     margin: 0;
   }
 
-  >.md-preview {
+  > .md-preview {
     margin-left: -1px;
     margin-right: -1px;
     padding: $padding-base-vertical $padding-base-horizontal;
@@ -158,7 +167,7 @@
     min-height: 10px;
   }
 
-  >textarea {
+  > textarea {
     font-family: $font-family-monospace;
     font-size: $font-size-base;
     outline: 0;
@@ -224,10 +233,11 @@ $slider-handle-size: 26px;
 
     .slider-handle {
       margin-left: -$slider-handle-size/2;
-      margin-top: -$slider-handle-size*3/8;
+      margin-top: -$slider-handle-size * 3/8;
 
       &.triangle {
-        border-width: 0 $slider-line-height/2 $slider-line-height/2 $slider-line-height/2;
+        border-width: 0 $slider-line-height/2 $slider-line-height/2
+          $slider-line-height/2;
         width: 0;
         height: 0;
         border-bottom-color: #0480be;
@@ -256,11 +266,12 @@ $slider-handle-size: 26px;
     }
 
     .slider-handle {
-      margin-left: -$slider-handle-size*3/8;
+      margin-left: -$slider-handle-size * 3/8;
       margin-top: -$slider-handle-size/2;
 
       &.triangle {
-        border-width: $slider-line-height/2 0 $slider-line-height/2 $slider-line-height/2;
+        border-width: $slider-line-height/2 0 $slider-line-height/2
+          $slider-line-height/2;
         width: 1px;
         height: 1px;
         border-left-color: #0480be;
@@ -298,31 +309,31 @@ $slider-handle-size: 26px;
   cursor: pointer;
   @include gradient-y(#eee, #f8f8f8);
 
-  @include box-shadow(inset 0 1px 2px rgba(0, 0, 0, .1));
+  @include box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.1));
   border-radius: $border-radius;
 }
 
 .slider-selection {
   position: absolute;
-  background-color: theme-color('primary');
-  @include box-shadow(inset 0 -1px 0 rgba(0, 0, 0, .15));
+  background-color: theme-color("primary");
+  @include box-shadow(inset 0 -1px 0 rgba(0, 0, 0, 0.15));
   box-sizing: border-box;
   border-radius: $border-radius;
 
   .slider-danger & {
-    background-color: theme-color('danger');
+    background-color: theme-color("danger");
   }
 
   .slider-success & {
-    background-color: theme-color('success');
+    background-color: theme-color("success");
   }
 
   .slider-warning & {
-    background-color: theme-color('warning');
+    background-color: theme-color("warning");
   }
 
   .slider-info & {
-    background-color: theme-color('info');
+    background-color: theme-color("info");
   }
 
   .slider-inverse & {
@@ -335,7 +346,10 @@ $slider-handle-size: 26px;
   width: $slider-handle-size;
   height: $slider-handle-size;
   background-color: $white;
-  @include box-shadow(inset 0 1px 0 rgba(255, 255, 255, .2), 0 1px 3px rgba(0, 0, 0, .5));
+  @include box-shadow(
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    0 1px 3px rgba(0, 0, 0, 0.5)
+  );
   border: 0px solid transparent;
 
   &:focus {
@@ -359,7 +373,6 @@ $slider-handle-size: 26px;
   overflow: hidden;
   resize: none;
 }
-
 
 /**
 * datetime
