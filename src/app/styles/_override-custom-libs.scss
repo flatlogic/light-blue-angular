@@ -61,13 +61,16 @@
   }
 }
 
-////// Wizard //////
-
+/***********************************/
+/**            Wizard             **/
+/***********************************/
 .form-wizard .tab-content .tab-pane {
   padding: 0;
 }
 
-/////// NGX Datatable ///////
+/***********************************/
+/**         NGX Datatable         **/
+/***********************************/
 
 .ngx-datatable {
   width: 100%;
@@ -127,7 +130,9 @@
   }
 }
 
-/////// NG2 TAG INPUT ///////
+/***********************************/
+/**         NG2 TAG INPUT         **/
+/***********************************/
 
 .ng2-tag-input {
   &__text-input {
@@ -142,7 +147,9 @@
   }
 }
 
-/////////APEXCHARTS////////////////
+/***********************************/
+/**          APEXCHARTS           **/
+/***********************************/
 apx-chart {
   .apexcharts-tooltip,
   .apexcharts-menu {
@@ -156,12 +163,16 @@ apx-chart {
   }
 }
 
-///////// Ngx-charts ///////
+/***********************************/
+/**          Ngx-charts           **/
+/***********************************/
 .axis .tick text {
   fill: white;
 }
 
-/////////////NG-SELECT///////
+/***********************************/
+/**           NG-SELECT           **/
+/***********************************/
 ng-select {
   .ng-select-container {
     background-color: rgba(0, 0, 0, 0.24) !important;
@@ -250,14 +261,18 @@ ng-select.primary {
   }
 }
 
-//////////////COLOR PICKER////////
+/***********************************/
+/**         COLOR PICKER          **/
+/***********************************/
 .color-picker {
   .box {
     background-color: initial !important;
   }
 }
 
-//////////////NGX_MARKDOWN_EDITOR////////////////
+/***********************************/
+/**      NGX MARKDOWN EDITOR      **/
+/***********************************/
 md-editor {
   .md-editor-container {
     .preview-container {
@@ -270,7 +285,9 @@ md-editor {
   }
 }
 
-///////////////NG5-SLIDER/////////////////
+/***********************************/
+/**      NGX MARKDOWN EDITOR      **/
+/***********************************/
 ng5-slider.ng5-slider {
   margin: 12px !important;
 
@@ -347,7 +364,9 @@ ng5-slider.ng5-slider {
   }
 }
 
-/////////angular-calendar////////
+/***********************************/
+/**       angular-calendar        **/
+/***********************************/
 .calendar-navigation {
   display: flex;
   justify-content: space-between;
@@ -480,4 +499,11 @@ mwl-calendar-month-view {
       color: $text-color !important;
     }
   }
+}
+
+/***********************************/
+/**           dropzone            **/
+/***********************************/
+.dropzone .dz-preview .dz-image {
+  border-radius: 0 !important;
 }
