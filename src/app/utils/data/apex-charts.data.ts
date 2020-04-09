@@ -444,7 +444,10 @@ export const apexOptions7 = {
       colors: '#fff'
     }
   },
-  colors: ['#8cbf26', '#f0af03', '#57b955', '#4ebfbb', '#4e85bd']
+  colors: ['#8cbf26', '#f0af03', '#57b955', '#4ebfbb', '#4e85bd'],
+  stroke: {
+    width: 0
+  }
 };
 
 export const apexOptions8 = {
@@ -464,7 +467,10 @@ export const apexOptions8 = {
       colors: '#fff'
     }
   },
-  colors: ['#8cbf26', '#f0af03', '#57b955', '#4ebfbb', '#4e85bd']
+  colors: ['#8cbf26', '#f0af03', '#57b955', '#4ebfbb', '#4e85bd'],
+  stroke: {
+    width: 0
+  }
 };
 
 export const apexOptions9 = {
