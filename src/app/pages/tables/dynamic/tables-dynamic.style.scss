@@ -52,6 +52,10 @@
   }
 }
 
+.ngx-container {
+  overflow-x: auto;
+}
+
 .ngx-table {
   position: relative;
 
@@ -60,7 +64,8 @@
   }
 
   &__header-title {
-    color: #fff;
+    color: rgba(244,244,245,.6);
+    cursor: pointer;
     display: flex;
     font-weight: 600;
     justify-content: space-between;
@@ -68,7 +73,7 @@
   }
 
   &__sort-header {
-    border-top: 1px solid #d6dee5;
+    border-top: 1px solid #040620;
   
     >.ng-star-inserted {
       padding: 0.75rem;
@@ -81,27 +86,33 @@
 
   &__header-search {
     background-clip: padding-box;
+    background-color: #040620;
     border-radius: 0.3rem;
-    border: 1px solid #c1ccd3;
+    border: 0;
     color: #636c72;
     line-height: 1.5;
     padding: 0.5rem 0.75rem;
     width: 100%;
+
+    &:focus {
+      outline: 0;
+    }
   }
 }
 
 tbody {
+  color: rgba(244,244,245,.6);
+
   tr.ng-star-inserted {
-    border-top: 1px solid $table-border-color;
+    border-top: 1px solid #040620;
     height: 43px;
-    width: auto;
     
     &:nth-of-type(odd) {
       background-color: rgba(0,0,0,0.05);
     }
 
     td {
-      border-top: 1px solid #d6dee5;
+      border-top: 1px solid #040620;
       padding: .75rem;
       vertical-align: top;
     }
@@ -116,12 +127,11 @@ tbody {
 .ngx-pagination {
   display: flex;
   height: 31px;
-  width: auto;
 
   >.ng-star-inserted {
     background-color: hsla(0,0%,100%,.1);
     border-radius: .3rem;
-    color: $text-color;
+    color: rgba(244,244,245,.6);
     cursor: pointer;
     display: block;
     font-family: Open Sans,sans-serif;
@@ -167,19 +177,20 @@ tbody {
 
 
 .ngx-icon {
-  border: .2rem solid #fff;
-  border-bottom: 0;
-  border-right: 0;
-  cursor: pointer;
-  display: inline-block;
-  height: .65em;
-  width: .65em;
+  font-family: 'Line Awesome Free';
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 900;
 }
 
 .ngx-icon-arrow-down {
-  transform: translate(-50%,-75%) rotate(225deg);
+  &::after {
+    content: "\f107";
+  }
 }
 
 .ngx-icon-arrow-up {
-  transform: translate(-50%,-25%) rotate(45deg);
+  &::after {
+    content: "\f106";
+  }
 }
