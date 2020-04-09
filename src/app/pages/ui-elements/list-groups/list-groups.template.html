@@ -53,12 +53,10 @@
         <ol class="dd-list" [sortablejs]="sharedList2" [sortablejsOptions]="sharedListOptions">
           <li *ngFor="let item of sharedList2" class="dd-item">
             <div class="dd-handle">{{item.name}}</div>
-            <ol *ngIf="item.list.length > 0" class="dd-list" [sortablejs]="item.list"
-              [sortablejsOptions]="sharedListOptions">
+            <ol class="dd-list" [sortablejs]="item.list" [sortablejsOptions]="sharedListOptions">
               <li *ngFor="let subItem of item.list" class="dd-item">
                 <div class="dd-handle">{{subItem.name}}</div>
-                <ol *ngIf="subItem.list.length > 0" class="dd-list" class="dd-list" [sortablejs]="subItem.list"
-                  [sortablejsOptions]="sharedListOptions">
+                <ol class="dd-list" class="dd-list" [sortablejs]="subItem.list" [sortablejsOptions]="sharedListOptions">
                   <li *ngFor="let subSubItem of subItem.list" class="dd-item">
                     <div class="dd-handle">{{subSubItem.name}}</div>
                   </li>

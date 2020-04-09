@@ -31,7 +31,6 @@ export class ListGroupsComponent {
   public sharedListOptions: Options = {
     group: 'shared',
     animation: 150,
-    ghostClass: 'dd-placeholder',
     fallbackOnBody: true,
     invertSwap: true
   };
