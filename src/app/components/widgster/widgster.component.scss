@@ -14,10 +14,10 @@
   background: $widget-bg-color;
   margin-bottom: $widget-mb;
   position: relative;
-  min-height: 150px;
+  min-height: 115px !important;
 
   &.collapsed {
-    min-height: unset;
+    min-height: unset !important;
   }
 
   &:hover .widget-controls-hover {

@@ -21,7 +21,7 @@
   }
 }
 a:link {
-  color:inherit;
+  color: inherit;
 }
 /***********************************/
 /**          SIDEBAR             **/
@@ -66,13 +66,13 @@ a:link {
   li {
     list-style: none;
 
-    i[class*=fi] {
+    i[class*="fi"] {
       width: 16px;
       margin-right: 10px;
       float: left;
       line-height: 20px;
       font-size: 14px;
-      opacity: .4;
+      opacity: 0.4;
       text-align: right;
     }
 
@@ -83,7 +83,7 @@ a:link {
 
     a {
       color: inherit;
-      @include transition(background-color .2s);
+      @include transition(background-color 0.2s);
       text-decoration: none;
       display: flex;
       align-items: center;
@@ -96,7 +96,7 @@ a:link {
         float: right;
         margin-right: -8px;
         opacity: 1;
-        @include transition-transform(.3s ease-in-out);
+        @include transition-transform(0.3s ease-in-out);
       }
 
       &.collapsed .fa-angle-down {
@@ -110,7 +110,7 @@ a:link {
           content: "\f107";
           position: absolute;
           right: 7px;
-          @include transition(transform .3s ease-in-out)
+          @include transition(transform 0.3s ease-in-out);
         }
 
         &.collapsed:before {
@@ -122,10 +122,9 @@ a:link {
         margin-left: auto;
       }
     }
-
   }
 
-  & li.active>a {
+  & li.active > a {
     font-weight: 700;
   }
 
@@ -137,7 +136,6 @@ a:link {
   }
 
   .panel-collapse {
-
     //second level menu
     li a {
       padding: 4px 20px;
@@ -155,14 +153,13 @@ a:link {
     }
 
     .panel-collapse {
-
       //third level
-      .panel-collapse>li a {
+      .panel-collapse > li a {
         //fourth level
         padding-left: 70px;
       }
 
-      >li a {
+      > li a {
         padding-left: 60px;
       }
     }
@@ -173,8 +170,8 @@ a:link {
     border: none;
     border-radius: 0;
 
-    &>ul {
-      padding: .25rem 0;
+    & > ul {
+      padding: 0.25rem 0;
     }
   }
 }
@@ -183,9 +180,9 @@ a:link {
   list-style: none;
   padding: 10px 20px;
 
-  >li {
-    >a {
-      color: rgba($sidebar-color, .8);
+  > li {
+    > a {
+      color: rgba($sidebar-color, 0.8);
       text-decoration: none;
       font-weight: normal;
 
@@ -212,11 +209,11 @@ a:link {
 
       .circle-o {
         top: 1px;
-        left: 1px
+        left: 1px;
       }
     }
 
-    +li {
+    + li {
       margin-top: $spacer/2;
     }
   }
@@ -236,7 +233,7 @@ a:link {
       font-size: 16px;
       text-shadow: none;
       opacity: 1;
-      color: rgba($sidebar-color, .9);
+      color: rgba($sidebar-color, 0.9);
     }
   }
 
@@ -254,7 +251,7 @@ a:link {
   font-weight: $font-weight-thin;
 
   .action-link {
-    color: rgba($sidebar-color, .85);
+    color: rgba($sidebar-color, 0.85);
     float: right;
     margin-right: 12px;
     margin-top: -1px;
@@ -288,7 +285,6 @@ a:link {
 }
 
 .sidebar-hidden {
-
   .sidebar,
   .logo {
     display: none;
@@ -323,8 +319,6 @@ a:link {
 /**          CONTENT              **/
 /**********************************/
 
-
-
 /*main content*/
 .wrap {
   margin-left: $sidebar-width + 15px;
@@ -341,7 +335,7 @@ a:link {
 .content {
   position: relative;
   padding: 25px 2.5641%;
-  @include transition(margin-top .35s ease, opacity .2s);
+  @include transition(margin-top 0.35s ease, opacity 0.2s);
   max-width: none;
   width: auto;
   opacity: 1;
@@ -357,13 +351,11 @@ a:link {
 
   .content-footer {
     margin-bottom: 30px;
-    position: absolute;
-    bottom: -15px;
     color: $text-muted;
   }
 }
 
-.sidebar+.wrap {
+.sidebar + .wrap {
   @media (max-width: 767px) {
     margin-left: 0;
     margin-right: 0;
@@ -373,7 +365,6 @@ a:link {
 /***********************************/
 /**          WIDGET               **/
 /**********************************/
-
 
 .widget {
   display: block;
@@ -406,7 +397,7 @@ a:link {
     @include box-shadow(none);
   }
 
-  &>header {
+  & > header {
     position: relative;
     background: none;
     color: $widget-header-color;
@@ -424,7 +415,8 @@ a:link {
     margin-top: 15px;
 
     &.p-0 {
-      margin: $widget-padding-vertical (-$widget-padding-horizontal) (-$widget-padding-vertical);
+      margin: $widget-padding-vertical (-$widget-padding-horizontal)
+        (-$widget-padding-vertical);
     }
 
     .fetching-data {
@@ -433,7 +425,7 @@ a:link {
     }
   }
 
-  &>footer {
+  & > footer {
     margin: $spacer/2 (-$widget-padding-horizontal) (-$widget-padding-vertical);
     padding: 10px 20px;
     border-bottom-left-radius: $widget-border-radius;
@@ -464,12 +456,12 @@ a:link {
     border-bottom-left-radius: $border-radius-base;
     border-bottom-right-radius: $border-radius-base;
 
-    .table>thead>tr>th,
-    .table>thead>tr>td,
-    .table>tbody>tr>th,
-    .table>tbody>tr>td,
-    .table>tfoot>tr>th,
-    .table>tfoot>tr>td {
+    .table > thead > tr > th,
+    .table > thead > tr > td,
+    .table > tbody > tr > th,
+    .table > tbody > tr > td,
+    .table > tfoot > tr > th,
+    .table > tfoot > tr > td {
       &:first-child {
         padding-left: $widget-padding-horizontal;
       }
@@ -486,12 +478,12 @@ a:link {
     border-top-right-radius: $widget-border-radius;
     overflow: hidden;
 
-    >img {
+    > img {
       border-top-left-radius: $widget-border-radius;
       border-top-right-radius: $widget-border-radius;
     }
 
-    >.btn-toolbar {
+    > .btn-toolbar {
       position: absolute;
       top: 0;
       right: 0;
@@ -511,13 +503,13 @@ a:link {
     margin-left: (-$widget-padding-horizontal);
     margin-right: (-$widget-padding-horizontal);
 
-    >img {
+    > img {
       max-width: 100%;
     }
   }
 
   .widget-overflow {
-    margin: (-$widget-padding-vertical) (-$widget-padding-horizontal)
+    margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);
   }
 
   .widget-icon {
@@ -534,13 +526,13 @@ a:link {
     margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);
     border-radius: $border-radius;
 
-    >img {
+    > img {
       max-width: 100%;
       border-radius: $border-radius $border-radius 0 0;
       transition: transform 0.15s ease;
     }
 
-    &:hover>img {
+    &:hover > img {
       transform: scale(1.1, 1.1);
     }
 
@@ -587,7 +579,7 @@ a:link {
 }
 
 .widget-padding-lg {
-  padding: $widget-padding-vertical*2 $widget-padding-horizontal*2;
+  padding: $widget-padding-vertical * 2 $widget-padding-horizontal * 2;
 }
 
 .widget-controls {
@@ -600,7 +592,7 @@ a:link {
 
   &.widget-controls-hover {
     opacity: 0;
-    @include transition(opacity .15s);
+    @include transition(opacity 0.15s);
   }
 
   &.left {
@@ -608,23 +600,23 @@ a:link {
     right: auto;
   }
 
-  >a,
-  >span {
+  > a,
+  > span {
     padding: 1px 4px;
     border-radius: 4px;
     color: $widget-controls-color;
-    @include transition(color .15s ease-in-out);
+    @include transition(color 0.15s ease-in-out);
 
-    >.fa {
+    > .fa {
       vertical-align: middle;
     }
 
-    >.glyphicon {
+    > .glyphicon {
       vertical-align: -1px;
     }
   }
 
-  >a:hover {
+  > a:hover {
     color: $widget-controls-hover-color;
     text-decoration: none;
   }
@@ -635,7 +627,6 @@ a:link {
 /**********************************/
 
 .page-header {
-
   border: none;
   margin: 15px 2.5641% 0;
   padding: 0;
@@ -660,9 +651,9 @@ a:link {
     flex-direction: row;
   }
 
-  .navbar-nav.nav li.dropdown.open>.dropdown-toggle,
-  .navbar-nav.nav li.dropdown.active>.dropdown-toggle,
-  .navbar-nav.nav li.dropdown.open.active>.dropdown-toggle {
+  .navbar-nav.nav li.dropdown.open > .dropdown-toggle,
+  .navbar-nav.nav li.dropdown.active > .dropdown-toggle,
+  .navbar-nav.nav li.dropdown.open.active > .dropdown-toggle {
     background-color: transparent;
     color: $text-transparent;
 
@@ -672,20 +663,20 @@ a:link {
     }
   }
 
-  .navbar-nav.nav>li>a:focus,
-  .navbar-nav.nav>li>a:hover,
-  .navbar-nav.nav>.active>a,
-  .navbar-nav.nav>.active>a:hover,
-  .navbar-nav.nav>.active>a:focus {
+  .navbar-nav.nav > li > a:focus,
+  .navbar-nav.nav > li > a:hover,
+  .navbar-nav.nav > .active > a,
+  .navbar-nav.nav > .active > a:hover,
+  .navbar-nav.nav > .active > a:focus {
     color: $white;
   }
 
-  .nav>li {
+  .nav > li {
     position: relative;
     background: none;
     float: left;
 
-    &>a {
+    & > a {
       color: $header-link-color;
       width: 40px;
       padding: 0;
@@ -728,19 +719,24 @@ a:link {
       height: 38px;
       width: 1px;
       margin: 0 20px;
-      background: linear-gradient(rgba($text-transparent, 0), $text-transparent, rgba($gray-300, 0));
+      background: linear-gradient(
+        rgba($text-transparent, 0),
+        $text-transparent,
+        rgba($gray-300, 0)
+      );
     }
   }
 
   .search-query {
     color: $widget-color;
     border: none;
-    background: $header-search-query-bg-image 5px 5px no-repeat transparentize($text-transparent, .1);
+    background: $header-search-query-bg-image 5px 5px no-repeat
+      transparentize($text-transparent, 0.1);
     padding-top: 7px;
     padding-bottom: 7px;
     padding-left: 26px;
     @include placeholder($header-search-query-placeholder-color);
-    @include transition(width .2s);
+    @include transition(width 0.2s);
     width: 200px;
     min-height: 30px !important;
 
@@ -763,7 +759,6 @@ a:link {
     }
 
     .dropdown-menu {
-
       .see-all,
       .details,
       .sender {
@@ -775,9 +770,9 @@ a:link {
   }
 
   // Menu position and menu carets
-  .navbar-nav>li>.dropdown-menu {
+  .navbar-nav > li > .dropdown-menu {
     &:after {
-      content: '';
+      content: "";
       display: inline-block;
       border-left: 6px solid transparent;
       border-right: 6px solid transparent;
@@ -789,8 +784,8 @@ a:link {
   }
 
   // Right aligned menus need alt position
-  .navbar-nav.float-right>li>.dropdown-menu,
-  .navbar-nav.nav>li>.dropdown-menu.float-right {
+  .navbar-nav.float-right > li > .dropdown-menu,
+  .navbar-nav.nav > li > .dropdown-menu.float-right {
     &:before {
       left: auto;
       right: 12px;
@@ -819,7 +814,7 @@ a:link {
 
   small {
     margin-left: $spacer / 2;
-    color: rgba($page-title-color, .7);
+    color: rgba($page-title-color, 0.7);
   }
 }
 
@@ -836,7 +831,7 @@ a:link {
 
 .notifications {
   margin: 6px 20px 6px 35px;
-  @include transition(margin-top .2s ease);
+  @include transition(margin-top 0.2s ease);
 
   .alert {
     width: 265px;
@@ -886,7 +881,7 @@ a:link {
     border-bottom-color: $popover-bg;
   }
 
-  >li>a {
+  > li > a {
     color: $header-dropdown-primary-color;
     padding: 8px 10px;
     @include clearfix();
@@ -895,11 +890,9 @@ a:link {
   .see-all {
     padding: 5px 10px;
   }
-
 }
 
 .dropdown-item {
-
   &:hover,
   &:focus {
     background-color: $header-dropdown-item-hover;
@@ -920,7 +913,8 @@ a:link {
     margin-top: 7px;
   }
 
-  .sender {}
+  .sender {
+  }
 
   .text {
     font-size: $font-size-sm;
@@ -938,7 +932,7 @@ a:link {
   color: $header-dropdown-primary-color;
 }
 
-.navbar-nav>li>.support {
+.navbar-nav > li > .support {
   &:before {
     border-bottom: none;
   }
@@ -947,7 +941,7 @@ a:link {
     border-bottom-color: $popover-bg;
   }
 
-  >li>a {
+  > li > a {
     color: $header-dropdown-primary-color;
     padding: 5px 10px;
   }
@@ -962,7 +956,6 @@ a:link {
 }
 
 .dropdown-item {
-
   &:hover,
   &:focus {
     background-color: $header-dropdown-item-hover;
@@ -970,7 +963,6 @@ a:link {
 }
 
 .support-ticket {
-
   .picture {
     float: left;
     text-align: center;
@@ -986,7 +978,7 @@ a:link {
 /**          SETTINGS             **/
 /**********************************/
 
-.navbar-nav.nav>li>.settings {
+.navbar-nav.nav > li > .settings {
   border-radius: $border-radius-base !important;
   color: $header-dropdown-primary-color;
   font-size: $font-size-sm;
@@ -1019,14 +1011,13 @@ a:link {
   font-weight: normal;
 }
 
-.setting+.setting {
+.setting + .setting {
   margin-top: 5px;
 }
 
 /***********************************/
 /**          ACCOUNT             **/
 /**********************************/
-
 
 .account {
   width: 180px;
@@ -1035,7 +1026,7 @@ a:link {
   color: $header-dropdown-primary-color;
 }
 
-.navbar .nav>li>.account {
+.navbar .nav > li > .account {
   &:before {
     border-bottom: none;
   }
@@ -1045,7 +1036,7 @@ a:link {
   }
 }
 
-.account>li>a {
+.account > li > a {
   color: $header-dropdown-primary-color;
 
   &:hover,
@@ -1054,7 +1045,6 @@ a:link {
     color: $header-dropdown-primary-color;
   }
 }
-
 
 .account-picture {
   padding: 5px 10px;
@@ -1066,17 +1056,16 @@ a:link {
   }
 }
 
-.account>li>a {
+.account > li > a {
   padding: 7px 10px;
 }
 
 .dropdown .dropdown-menu.show {
-
   &.messages,
   &.support,
   &.settings,
   &.account {
-    background-color: rgba(51, 51, 51, .85);
+    background-color: rgba(51, 51, 51, 0.85);
 
     &:after {
       visibility: hidden;
@@ -1090,7 +1079,7 @@ a:link {
 /* Custom behavior. For overridden bootstrap btns see bootstrap-override */
 
 .btn-transparent {
-  background: transparentize($text-transparent, .2);
+  background: transparentize($text-transparent, 0.2);
   color: $widget-header-color;
   text-shadow: none;
   @include box-shadow(none);
@@ -1102,10 +1091,10 @@ a:link {
 
   &.active {
     color: $widget-header-color;
-    background: rgba($widget-bg-color, .55);
+    background: rgba($widget-bg-color, 0.55);
 
     &:hover {
-      background: rgba($widget-bg-color, .55);
+      background: rgba($widget-bg-color, 0.55);
     }
   }
 
@@ -1169,7 +1158,7 @@ a:link {
 }
 
 .controls .bootstrap-select.btn-group {
-  &[class*='span'] {
+  &[class*="span"] {
     float: none;
     display: inline-block;
     margin-left: 0;
@@ -1190,23 +1179,25 @@ a:link {
 .form-actions {
   padding: 17px 20px 18px;
   background-color: $bg-addition;
-  @include clearfix(); // Adding clearfix to allow for .float-right button containers
+  @include clearfix(
+
+  ); // Adding clearfix to allow for .float-right button containers
 }
 
 /***********************************/
 /**          ICONS                **/
 /**********************************/
 
-.icons>section {
+.icons > section {
   margin-top: 20px;
 }
 
 .the-icons li,
-.fontawesome-icon-list>div {
+.fontawesome-icon-list > div {
   line-height: 40px;
 
   i {
-    @include transition(font-size .2s);
+    @include transition(font-size 0.2s);
   }
 
   &:hover i {
@@ -1239,18 +1230,17 @@ a:link {
     border-radius: 0 0 $border-radius-base $border-radius-base;
   }
 
-
   .nav-tabs {
     border-bottom: none;
   }
 
-  .nav>.nav-item>.nav-link {
+  .nav > .nav-item > .nav-link {
     padding-top: 10px;
     padding-bottom: 10px;
     color: $widget-header-color;
   }
 
-  .nav>.nav-item>.nav-link.active {
+  .nav > .nav-item > .nav-link.active {
     border-color: transparent;
     background: $widget-bg-color;
     margin-bottom: -1px;
@@ -1261,11 +1251,11 @@ a:link {
     }
   }
 
-  .nav>.nav-item {
+  .nav > .nav-item {
     margin-bottom: 1px;
   }
 
-  .nav>.nav-item>.nav-link:not(.active) {
+  .nav > .nav-item > .nav-link:not(.active) {
     background: $widget-bg-color;
     border-bottom: none;
 
@@ -1275,7 +1265,7 @@ a:link {
     }
   }
 
-  .nav>.nav-item:first-child>.nav-link {
+  .nav > .nav-item:first-child > .nav-link {
     border-left: none;
   }
 }
@@ -1304,7 +1294,6 @@ a:link {
 /**            MODALS            **/
 /**********************************/
 
-
 .modal img {
   max-width: 100%;
 }
@@ -1326,7 +1315,6 @@ a:link {
 /**********************************/
 
 .table th {
-
   .widget & {
     color: $widget-header-color;
   }
@@ -1347,12 +1335,11 @@ a:link {
   $i: 1;
 
   @each $color in $colors {
-
     tbody tr:nth-child(#{$i}n) {
       color: #{$color};
     }
 
-    $i: $i+1;
+    $i: $i + 1;
   }
 }
 
@@ -1385,7 +1372,7 @@ a:link {
   transition-timing-function: ease-in-out;
 }
 
-.table-editable td.editor input[type=text] {
+.table-editable td.editor input[type="text"] {
   color: $widget-header-color;
   display: block;
   width: 100%;
@@ -1451,7 +1438,6 @@ a:link {
 }
 
 .sources-table {
-
   td,
   th {
     text-align: center;
@@ -1469,20 +1455,20 @@ a:link {
 .widget-container {
   min-height: 30px;
 
-  .widget:not(.fullscreened)>header {
+  .widget:not(.fullscreened) > header {
     cursor: move;
   }
 }
 
 .widget-placeholder {
-  background: rgba($widget-bg-color, .2);
-  border: 1px dashed rgba(white, .6);
+  background: rgba($widget-bg-color, 0.2);
+  border: 1px dashed rgba(white, 0.6);
   margin: -1px -1px ($widget-mb - 1px) -1px;
 }
 
 .list-group-item-placeholder {
-  background: rgba($widget-bg-color, .2);
-  border: 1px dashed rgba(white, .6);
+  background: rgba($widget-bg-color, 0.2);
+  border: 1px dashed rgba(white, 0.6);
   margin: -1px;
 }
 
@@ -1495,7 +1481,7 @@ a:link {
 }
 
 .well-white {
-  background: rgba(255, 255, 255, .2);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .margin-top {
@@ -1514,30 +1500,31 @@ a:link {
   display: none !important;
 }
 
-.hidden-phone-landscape {}
+.hidden-phone-landscape {
+}
 
 .background-danger {
-  background: theme-color('danger');
+  background: theme-color("danger");
   color: white;
 }
 
 .background-warning {
-  background: theme-color('warning');
+  background: theme-color("warning");
   color: white;
 }
 
 .background-success {
-  background: theme-color('success');
+  background: theme-color("success");
   color: white;
 }
 
 .background-primary {
-  background: theme-color('primary');
+  background: theme-color("primary");
   color: white;
 }
 
 .background-info {
-  background: theme-color('info');
+  background: theme-color("info");
   color: white;
 }
 
@@ -1570,7 +1557,6 @@ a:link {
 .show {
   display: block !important;
 }
-
 
 /***********************/
 /*        Loader       */
@@ -1608,7 +1594,7 @@ a:link {
   }
 
   opacity: 1;
-  @include transition(opacity .2s ease-out);
+  @include transition(opacity 0.2s ease-out);
 
   &.hiding {
     opacity: 0;
@@ -1650,7 +1636,6 @@ ol.text-list {
   list-style: decimal;
 }
 
-
 ////// Loader animation ////////
 
 .loading-overlay {
@@ -1667,10 +1652,11 @@ ol.text-list {
 
 .loading-overlay,
 .router-component {
-  transition: opacity .3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .router-component {
+  height: 100%;
   opacity: 1;
 }
 
@@ -1689,7 +1675,7 @@ ol.text-list {
   }
 
   & .sk-circle:before {
-    content: '';
+    content: "";
     display: block;
     margin: 0 auto;
     width: 15%;
@@ -1823,7 +1809,6 @@ ol.text-list {
 }
 
 @-webkit-keyframes sk-circleFadeDelay {
-
   0%,
   39%,
   100% {
@@ -1836,7 +1821,6 @@ ol.text-list {
 }
 
 @keyframes sk-circleFadeDelay {
-
   0%,
   39%,
   100% {
@@ -1860,7 +1844,7 @@ ol.text-list {
   display: inline-block;
   padding-right: 1.25rem;
 
-  &+.stat-item {
+  & + .stat-item {
     padding-left: 1.25rem;
     border-left: 1px solid $hr-border-color;
   }
@@ -1879,8 +1863,6 @@ ol.text-list {
   }
 }
 
-
-
 //////////////////UPDATED SIDEBAR/////////////////
 .side-nav {
   accordion {
@@ -1895,7 +1877,6 @@ ol.text-list {
           padding: 0;
           width: 100%;
           border-radius: 0.3rem;
-
 
           .panel-title {
             width: 100%;
@@ -1943,8 +1924,6 @@ ol.text-list {
             }
           }
 
-
-
           a.active {
             font-weight: 700;
           }
@@ -1984,4 +1963,3 @@ ol.text-list {
     }
   }
 }
-
