@@ -47,7 +47,8 @@
       <loader *widgsterLoader [size]="40"></loader>
     </section>
     <section #sharesWidgster widgster [optionsControl]="false" [loading]="sharesLoading" (reload)="onSharesReload()"
-      class="shares-widget" id="shares-widget" (fullscreenModeChange)="onFullscreenMode($event)" [showTooltip]="true">
+      class="shares-widget" id="shares-widget" (fullscreenModeChange)="onFullscreenMode($event)" [showTooltip]="true"
+      bodyClass="p-0">
       <ng-container *widgsterControls>
         <a title="Reload" (click)="sharesWidgster.onReload(); $event.preventDefault()"><strong class="text-gray-light"
             tooltip="Reload">Reload</strong></a>
@@ -58,19 +59,18 @@
         <span class="badge badge-primary"><i class="fa fa-facebook"></i></span> &nbsp;
         Latest <span class="fw-semi-bold">Shares</span>
       </h6>
-      <div class="widget-body p-0">
-        <div class="list-group list-group-lg">
-          <a *ngFor="let share of sharesWidgetData$ | async" href="#" class="list-group-item" [ngClass]="share.class">
-            <span class="thumb-sm mr">
-              <img class="rounded-circle" [src]="share.icon" alt="...">
-            </span>
-            <div>
-              <h6 class="m-0">{{share.name}}</h6>
-              <small class="text-muted">{{share.time}}</small>
-            </div>
-            <i class="fa fa-circle ml-auto" [ngClass]="share.iconClass"></i>
-          </a>
-        </div>
+      <loader *widgsterLoader [size]="40"></loader>
+      <div class="list-group list-group-lg">
+        <a *ngFor="let share of sharesWidgetData$ | async" href="#" class="list-group-item" [ngClass]="share.class">
+          <span class="thumb-sm mr">
+            <img class="rounded-circle" [src]="share.icon" alt="...">
+          </span>
+          <div>
+            <h6 class="m-0">{{share.name}}</h6>
+            <small class="text-muted">{{share.time}}</small>
+          </div>
+          <i class="fa fa-circle ml-auto" [ngClass]="share.iconClass"></i>
+        </a>
       </div>
     </section>
     <section #autoloadWidgster widgster [loading]="autoloadLoading" (reload)="onAutoloadReload()" id="autoload-widget"
@@ -105,17 +105,14 @@
 
         </ng-container>
       </ng-container>
+      <loader *widgsterLoader [size]="40"></loader>
       <div [innerHTML]="autoloadWidgetData$ | async | sanitize"></div>
     </section>
     <section widgster style="min-height: 200px" [optionsControl]="false" [reloadControl]="false"
       [fullscreenControl]="false" [collapseControl]="false" [closeControl]="false"
-      (fullscreenModeChange)="onFullscreenMode($event)" [showTooltip]="true">
+      (fullscreenModeChange)="onFullscreenMode($event)" [showTooltip]="true" [loading]="true">
       <h6 *widgsterTitle>Custom <span class="fw-semi-bold">Loader</span></h6>
-      <div class="loader animated fadeIn handle">
-        <span class="spinner">
-          <i class="fa fa-spinner fa-spin"></i>
-        </span>
-      </div>
+      <loader *widgsterLoader></loader>
     </section>
   </div>
   <div class="col-lg-6  widget-container" sortablejs [sortablejsOptions]="options">
@@ -128,6 +125,7 @@
         </h6>
         <span class="text-muted">spinning refresh button & close prompt</span>
       </ng-container>
+      <loader *widgsterLoader [size]="40"></loader>
       <ul class="news-list list-group stretchable">
         <li *ngFor="let newsItem of newWidgetData$ | async" class="list-group-item" [ngClass]="newsItem.class">
           <span class="icon text-white" [ngClass]="newsItem.iconClass">
@@ -146,6 +144,7 @@
     <section class="widget locked" widgster [optionsControl]="false" [reloadControl]="false" [fullscreenControl]="false"
       [collapsed]="true" [showTooltip]="true">
       <h6 *widgsterTitle>Collapsed by default & locked</h6>
+      <loader *widgsterLoader [size]="40"></loader>
       <blockquote>
         There are no limits. There are plateaus, but you must not stay there, you must go beyond
         them. If it kills you, it kills you. A man must constantly exceed his level.
@@ -160,6 +159,7 @@
     <section class="widget bg-gray" #storyWidgster widgster [optionsControl]="false" [reloadControl]="false"
       [fullscreenControl]="false" [collapseControl]="false" [closeControl]="false"
       (fullscreenModeChange)="onFullscreenMode($event)" [showTooltip]="true">
+      <loader *widgsterLoader [size]="40"></loader>
       <div class="jumbotron handle bg-gray text-white mb-0">
         <div class="container">
           <h1>Draggable story!</h1>
