@@ -404,10 +404,4 @@ export class TablesDynamicComponent implements OnInit {
     // Whenever the filter changes, always go back to the first page
     this.table.offset = 0;
   }
-
-  /* filter(value: string) {
-    this.easyTable.apiEvent({
-      type: API.onGlobalSearch, value: value,
-    });
-  } */
 }

@@ -74,7 +74,7 @@
 
   &__sort-header {
     border-top: 1px solid #040620;
-  
+
     >.ng-star-inserted {
       padding: 0.75rem;
 
@@ -106,7 +106,7 @@ tbody {
   tr.ng-star-inserted {
     border-top: 1px solid #040620;
     height: 43px;
-    
+
     &:nth-of-type(odd) {
       background-color: rgba(0,0,0,0.05);
     }
@@ -140,6 +140,10 @@ tbody {
     margin: 0 2px;
     padding: $pagination-padding-y $pagination-padding-x;
     text-decoration: none;
+
+    >.ng-star-inserted {
+      color: rgba(244,244,245,.6);
+    }
 
     &.current {
       background-color: transparent;
