@@ -135,10 +135,10 @@ export const echartPieChartData3: any = {
 export const echartAreaChartData: any = {
   color: ['#8cbf26', '#4e85bd', '#db4912', '#f0af03', '#57b955'],
   grid: {
-    top: '0',
-    right: '1',
-    bottom: '1',
-    left: '0',
+    top: 45,
+    right: 45,
+    bottom: 45,
+    left: 45,
   },
   tooltip: {
     trigger: 'axis',
@@ -158,17 +158,11 @@ export const echartAreaChartData: any = {
     {
       type: 'category',
       boundaryGap: false,
-      show: true,
       data: ['Draco', 'Ron', 'Hermione', 'Harry', 'Fred', 'George', 'Oliver'],
       axisLine: {
         lineStyle: {
           color: '#ffffff'
         }
-      },
-      axisLabel: {
-        show: false,
-        // inside: true,
-        // rotate: 90
       },
       axisTick: {
         show: true,
@@ -180,7 +174,11 @@ export const echartAreaChartData: any = {
   yAxis: [
     {
       type: 'value',
-      show: false
+      axisLine: {
+        lineStyle: {
+          color: '#ffffff'
+        }
+      }
     }
   ],
   series: [
@@ -210,12 +208,6 @@ export const echartAreaChartData: any = {
 
 export const echartLineChartData: any = {
   color: ['#4e85bd'],
-  grid: {
-    top: '0',
-    right: '0',
-    bottom: '0',
-    left: '0',
-  },
   tooltip: {
     trigger: 'axis',
     axisPointer: {
@@ -228,12 +220,23 @@ export const echartLineChartData: any = {
   xAxis: {
     type: 'category',
     data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-    boundaryGap: false,
-    show: false
+    axisLine: {
+      lineStyle: {
+        color: '#fff'
+      }
+    },
+    name: 'Day',
+    nameLocation: 'center',
+    nameGap: 30
   },
   yAxis: {
     type: 'value',
-    show: false
+    axisLine: {
+      lineStyle: {
+        color: '#fff'
+      }
+    },
+    name: 'Good deeds'
   },
   series: [{
     data: [820, 932, 901, 934, 1290, 1330, 1320],
@@ -271,10 +274,10 @@ export const echartPieChartData2: any = {
 export const echartBarChartData2: any = {
   color: ['#8cbf26'],
   grid: {
-    top: '0',
-    right: '0',
-    bottom: '0',
-    left: '0',
+    top: 50,
+    right: 50,
+    bottom: 50,
+    left: 50,
   },
   tooltip: {
     trigger: 'axis',
@@ -286,15 +289,25 @@ export const echartBarChartData2: any = {
     {
       type: 'category',
       data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-      show: false
+      axisLine: {
+        lineStyle: {
+          color: '#fff'
+        }
+      },
+      name: 'Day',
     }
   ],
   yAxis: [{
     type: 'value',
-    show: false
+    axisLine: {
+      lineStyle: {
+        color: '#fff'
+      }
+    },
+    name: 'Steps'
   }],
   series: [{
-    name: 'Minerals',
+    name: 'Steps',
     type: 'bar',
     barWidth: '60%',
     data: [10, 52, 200, 334, 390, 330, 220]
@@ -313,20 +326,32 @@ export const echartLineChartData2: any = {
     }
   },
   grid: {
-    top: '0',
-    right: '0',
-    bottom: '0',
-    left: '0',
+    top: 30,
+    right: 30,
+    bottom: 50,
+    left: 50
   },
   xAxis: {
     type: 'category',
     data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
     boundaryGap: false,
-    show: false
+    axisLine: {
+      lineStyle: {
+        color: '#fff'
+      }
+    },
+    name: 'Day',
+    nameLocation: 'center',
+    nameGap: 30
   },
   yAxis: {
     type: 'value',
-    show: false
+    axisLine: {
+      lineStyle: {
+        color: '#fff'
+      }
+    },
+    name: 'Profit'
   },
   series: [{
     data: [820, 932, 901, 934, 1290, 1330, 1320],
