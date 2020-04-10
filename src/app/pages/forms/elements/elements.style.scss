@@ -64,7 +64,7 @@
   padding: 5px;
 }
 
-.fileinput > div > button:first-of-type {
+.fileinput:not(.input-group) > div > button:first-of-type {
   margin-right: 5px;
 }
 
