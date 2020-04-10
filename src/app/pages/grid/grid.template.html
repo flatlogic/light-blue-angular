@@ -121,7 +121,7 @@
   <div class="col-lg-6  widget-container" sortablejs [sortablejsOptions]="options">
     <section class="widget" id="news-widget" widgster [optionsControl]="false" [fullscreenControl]="false"
       [loading]="newsLoading" (reload)="onNewsReload()" (fullscreenModeChange)="onFullscreenMode($event)"
-      [showTooltip]="true">
+      [showTooltip]="true" bodyClass="p-0">
       <ng-container *widgsterTitle>
         <h6>
           News <span class="badge badge-pill badge-success">17</span>

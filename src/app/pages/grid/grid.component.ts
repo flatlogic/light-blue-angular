@@ -51,23 +51,23 @@ export class GridComponent implements OnInit {
   ngOnInit(): void {
     this.defaultWidgetData$ = this.defaultWidgetDataSource.asObservable().pipe(
       delay(TIMEOUT),
-      startWith(initialDefaultWidgetData),
-      tap(() => { this.defaultLoading = false; })
+      tap(() => { this.defaultLoading = false; }),
+      startWith(initialDefaultWidgetData)
     );
     this.sharesWidgetData$ = this.sharesWidgetDataSource.asObservable().pipe(
       delay(TIMEOUT),
-      startWith(initialSharesWidgetData),
-      tap(() => { this.sharesLoading = false; })
+      tap(() => { this.sharesLoading = false; }),
+      startWith(initialSharesWidgetData)
     );
     this.autoloadWidgetData$ = this.autolaodWidgetDataSource.asObservable().pipe(
       delay(TIMEOUT),
-      startWith(initialAutoloadWidgetData),
-      tap(() => { this.autoloadLoading = false; })
+      tap(() => { this.autoloadLoading = false; }),
+      startWith(initialAutoloadWidgetData)
     );
     this.newWidgetData$ = this.newsWidgetDataSource.asObservable().pipe(
       delay(TIMEOUT),
-      startWith(initialNewsWidgetData),
-      tap(() => { this.newsLoading = false; })
+      tap(() => { this.newsLoading = false; }),
+      startWith(initialNewsWidgetData)
     );
   }
 

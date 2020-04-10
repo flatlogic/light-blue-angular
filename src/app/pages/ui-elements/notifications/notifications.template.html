@@ -24,22 +24,28 @@
     <div class="col-lg-4 col-12">
       <h5 class="m-t-1">Notification Types</h5>
       <p>Different types of notifications for lost of use cases. Custom classes are also supported.</p>
-      <p><a (click)="launchTermonuclearWar($event)" class="btn btn-info" id="show-info-message" href="#">Info Message</a></p>
-      <p><a class="btn btn-danger" (click)="destroyAliensWithError($event)" id="show-error-message" href="#">Error + Retry Message</a></p>
-      <p><a class="btn btn-success" (click)="showSuccessMessage($event)" id="show-success-message" href="#">Success Message</a></p>
+      <p><a (click)="launchTermonuclearWar($event)" class="btn btn-info" id="show-info-message" href="#">Info
+          Message</a></p>
+      <p><a class="btn btn-danger" (click)="destroyAliensWithError($event)" id="show-error-message" href="#">Error +
+          Retry Message</a></p>
+      <p><a class="btn btn-success" (click)="showSuccessMessage($event)" id="show-success-message" href="#">Success
+          Message</a></p>
     </div>
     <div class="col-lg-4 col-12">
       <h5 class="m-t-1">Dead Simple Usage</h5>
-      <p>Just few lines of code to instantiate a notifications object. Does not require passing any options:</p>
-      <pre><code>Messenger().post("Thanks for checking out Messenger!");</code></pre>
-      <p>More complex example:</p>
+      <p>Just few lines of code to inject toastr service and use it:</p>
       <pre>
         <code>
-Messenger().post( {{ '{' }}
-message: 'There was an explosion while processing your request.',
-type: 'error',
-showCloseButton: true
-{{ '}' }});
+          import {{'{'}} ToastrService {{'}'}} from 'ngx-toastr';
+
+          @Component({{'{'}}...{{'}'}})
+          export class YourComponent {{'{'}}
+            constructor(private toastr: ToastrService) {{'{'}}{{'}'}}
+
+            showSuccess() {{'{'}}
+              this.toastr.success('Hello world!', 'Toastr fun!');
+            {{'}'}}
+          {{'}'}}
         </code>
       </pre>
     </div>
