@@ -3,7 +3,7 @@
     position: relative;
     &:before {
       position: absolute;
-      right: 5px;
+      right: 10px;
       content: "\f107";
       font: normal normal normal 14px/1 FontAwesome;
       transform: rotate(0deg);
@@ -11,7 +11,7 @@
     }
 
     &.open:before {
-     transform: rotate(180deg);
+      transform: rotate(180deg);
     }
   }
 }
