@@ -4,34 +4,34 @@
 /**          Post Links           **/
 /***********************************/
 
-.post-links{
+.post-links {
   margin-bottom: 0;
   font-size: $font-size-sm;
   padding-left: 0;
   @include clearfix();
-  > li{
+  > li {
     float: left;
     list-style: none;
 
-    + li{
-      &:before{
+    + li {
+      &:before {
         color: #999;
         content: "\25cf";
         padding: 0 8px;
       }
     }
-    > a{
+    > a {
       text-decoration: none;
       color: $text-muted;
-      &:hover{
+      &:hover {
         color: $text-muted;
       }
     }
   }
 
-  &.no-separator > li + li{
+  &.no-separator > li + li {
     margin-left: 12px;
-    &:before{
+    &:before {
       content: normal;
     }
   }
@@ -41,12 +41,12 @@
 /**          Post Comments           **/
 /***********************************/
 
-.post-comments{
+.post-comments {
   font-size: $font-size-sm;
   padding-left: 0;
   @include clearfix();
 
-  .post-links + &{
+  .post-links + & {
     margin-top: $spacer / 2;
   }
 
@@ -56,34 +56,34 @@
     list-style: none;
     @include clearfix();
 
-    &:last-child{
+    &:last-child {
       padding-bottom: 0;
     }
   }
 
-  p:last-child{
+  p:last-child {
     margin-bottom: 0;
   }
 
-  .avatar{
+  .avatar {
     margin-top: 1px;
   }
 
-  .author{
+  .author {
     margin-top: 0;
     margin-bottom: 2px;
     color: #7ca9dd;
   }
 
-  .comment-body{
+  .comment-body {
     overflow: auto;
   }
 
-  h6.author > small{
+  h6.author > small {
     font-size: 11px;
   }
 
-  .widget > footer &{
+  .widget > footer & {
     margin-left: -$widget-padding-horizontal;
     margin-right: -$widget-padding-horizontal;
   }
@@ -93,7 +93,7 @@
 /**           Time Line           **/
 /***********************************/
 
-.timeline{
+.timeline {
   position: relative;
   min-height: 100%;
   list-style: none;
@@ -104,13 +104,13 @@
   > li {
     @include clearfix();
 
-    + li{
+    + li {
       margin-top: 30px;
     }
   }
 
   /* the time line :) */
-  &:before{
+  &:before {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -120,12 +120,11 @@
     margin-left: -4px;
     background-color: $widget-bg-color;
 
-    @include media-breakpoint-up(lg){
+    @include media-breakpoint-up(lg) {
       left: 50%;
       margin-left: -4px;
     }
   }
-
 }
 
 .event {
@@ -139,24 +138,24 @@
     float: right;
     width: 68%;
 
-    &:before{
+    &:before {
       right: 100%;
       content: " ";
       height: 0;
       width: 0;
       position: absolute;
-      border: 10px solid rgba(0,0,0,0);
+      border: 10px solid rgba(0, 0, 0, 0);
       border-right-color: $widget-bg-color;
       top: 15px;
     }
   }
 
-  .post-comments{
+  .post-comments {
     margin-left: -20px;
     margin-right: -20px;
   }
 
-  > footer{
+  > footer {
     margin: 20px -20px 0;
     padding: 10px 20px;
     border-bottom-left-radius: $border-radius;
@@ -165,62 +164,61 @@
 
     @include clearfix();
 
-    .thumb{
+    .thumb {
       margin-left: 10px;
     }
   }
 
-  @include media-breakpoint-up(lg){
+  @include media-breakpoint-up(lg) {
     .timeline & {
       width: 45%;
     }
 
-    .timeline > li.on-left &{
+    .timeline > li.on-left & {
       float: left;
-      &:before{
+      &:before {
         right: auto;
         left: 100%;
-        border-right-color: rgba(0,0,0,0);
+        border-right-color: rgba(0, 0, 0, 0);
         border-left-color: $widget-bg-color;
       }
     }
   }
 }
 
-.event-time{
-  .timeline &{
+.event-time {
+  .timeline & {
     float: left;
     width: 18%;
     margin-top: 5px;
     text-align: right;
 
-    > .date{
+    > .date {
       display: block;
       font-size: $font-size-larger;
     }
 
-    > .time{
+    > .time {
       display: block;
       font-size: $font-size-lg;
       font-weight: $font-weight-normal;
     }
   }
 
-  @include media-breakpoint-up(lg){
-    .timeline &{
+  @include media-breakpoint-up(lg) {
+    .timeline & {
       width: 46%;
     }
 
-    .timeline > li.on-left &{
-
+    .timeline > li.on-left & {
       float: right;
       text-align: left;
     }
   }
 }
 
-.event-icon{
-  .timeline &{
+.event-icon {
+  .timeline & {
     position: absolute;
     left: 24%;
     width: 50px;
@@ -232,25 +230,40 @@
     border-radius: 50%;
     text-align: center;
 
-    &.event-icon-danger{ background-color: theme-color('danger'); border-color: lighten(theme-color('danger'), 7%)}
-    &.event-icon-warning{ background-color: theme-color('warning'); border-color: lighten(theme-color('warning'), 7%)}
-    &.event-icon-success{ background-color: theme-color('success'); border-color: lighten(theme-color('success'), 7%)}
-    &.event-icon-info{ background-color: theme-color('info'); border-color: lighten(theme-color('info'), 7%)}
-    &.event-icon-primary{ background-color: theme-color('primary'); border-color: lighten(theme-color('primary'), 7%)}
+    &.event-icon-danger {
+      background-color: theme-color("danger");
+      border-color: lighten(theme-color("danger"), 7%);
+    }
+    &.event-icon-warning {
+      background-color: theme-color("warning");
+      border-color: lighten(theme-color("warning"), 7%);
+    }
+    &.event-icon-success {
+      background-color: theme-color("success");
+      border-color: lighten(theme-color("success"), 7%);
+    }
+    &.event-icon-info {
+      background-color: theme-color("info");
+      border-color: lighten(theme-color("info"), 7%);
+    }
+    &.event-icon-primary {
+      background-color: theme-color("primary");
+      border-color: lighten(theme-color("primary"), 7%);
+    }
 
     &.event-icon-danger,
     &.event-icon-warning,
     &.event-icon-success,
     &.event-icon-info,
-    &.event-icon-primary{
+    &.event-icon-primary {
       color: $white;
     }
 
-    @include media-breakpoint-up(lg){
+    @include media-breakpoint-up(lg) {
       left: 50%;
     }
 
-    > img{
+    > img {
       width: 36px;
       height: 36px;
       margin-top: -4px;
@@ -258,35 +271,34 @@
   }
 }
 
-.event-heading{
+.event-heading {
   margin: 0 0 2px;
   font-weight: $font-weight-semi-bold;
   > a {
     text-decoration: none;
     color: #7ca9dd;
   }
-  > small{
+  > small {
     font-weight: $font-weight-semi-bold;
-    > a{
+    > a {
       text-decoration: none;
       color: $text-muted;
     }
   }
 }
 
-.event-map{
+.event-map {
   display: block;
   height: 200px;
   margin: 0 -20px -20px;
   overflow: visible !important;
 }
 
-.event-image{
+.event-image {
   margin: 0 -20px -20px;
   max-height: 260px;
   overflow: hidden;
-  > img{
+  > a > img {
     max-width: 100%;
   }
 }
-
