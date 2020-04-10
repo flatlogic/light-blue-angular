@@ -186,7 +186,7 @@ export const apexOptions3 = {
     },
     labels: {
       style: {
-        color: '#fff'
+        colors: '#fff'
       }
     }
   },
@@ -243,7 +243,7 @@ export const apexOptions4 = {
   yaxis: {
     labels: {
       style: {
-        color: '#fff'
+        colors: '#fff'
       }
     }
   },
@@ -344,7 +344,7 @@ export const apexOptions5 = {
     },
     labels: {
       style: {
-        color: '#fff'
+        colors: '#fff'
       }
     }
   },
@@ -534,7 +534,7 @@ export const apexOptions9 = {
     },
     labels: {
       style: {
-        color: '#fff'
+        colors: '#fff'
       }
     }
   }
