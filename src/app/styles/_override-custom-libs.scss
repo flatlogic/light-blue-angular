@@ -507,3 +507,10 @@ mwl-calendar-month-view {
 .dropzone .dz-preview .dz-image {
   border-radius: 0 !important;
 }
+
+/***********************************/
+/**         fullcalendar          **/
+/***********************************/
+.fc-day.fc-today {
+  background-color: $widget-bg-color !important;
+}
