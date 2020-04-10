@@ -16,6 +16,13 @@ export const highchartsOptions1: Options = {
       display: 'none'
     }
   },
+  yAxis: {
+    labels: {
+      style: {
+        color: '#fff'
+      }
+    }
+  },
   xAxis: {
     labels: {
       style: {
@@ -1782,6 +1789,11 @@ export const highchartsOptions5 = {
   },
   yAxis: {
     labels: {
+      style: {
+        color: '#fff'
+      }
+    },
+    title: {
       style: {
         color: '#fff'
       }
