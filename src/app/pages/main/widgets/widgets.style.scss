@@ -394,6 +394,27 @@
   text-align: center;
 }
 
+.sign-up-widget {
+  .widget-content-wrapper {
+    height: 100%;
+  }
+
+  .footer {
+    margin-bottom: 1rem;
+    width: 87%;
+  }
+}
+
+.join-widget {
+  .widget-content-wrapper {
+    height: 100%;
+  }
+}
+
+.widget-title {
+  text-align: center;
+}
+
 /***********************************/
 /**           Map             **/
 /***********************************/
