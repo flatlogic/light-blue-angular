@@ -94,8 +94,8 @@ export const echartPieChartData3: any = {
     trigger: 'item'
   },
   legend: {
-    bottom: 0,
-    left: 'center',
+    top: 'top',
+    right: 'right',
     data: ['SMX', 'Direct', 'Networks'],
     textStyle: {
       color: '#ffffff'
@@ -103,8 +103,8 @@ export const echartPieChartData3: any = {
   },
   series: [{
     type: 'pie',
-    radius: ['40%', '60%'],
-    center: ['50%', '40%'],
+    radius: ['50%', '70%'],
+    center: ['31%', '45%'],
     label: {
       show: false
     },
