@@ -135,10 +135,10 @@ export const echartPieChartData3: any = {
 export const echartAreaChartData: any = {
   color: ['#8cbf26', '#4e85bd', '#db4912', '#f0af03', '#57b955'],
   grid: {
-    top: 45,
-    right: 45,
-    bottom: 45,
-    left: 45,
+    top: '10',
+    right: '10',
+    bottom: '10',
+    left: '10',
   },
   tooltip: {
     trigger: 'axis',
@@ -158,12 +158,8 @@ export const echartAreaChartData: any = {
     {
       type: 'category',
       boundaryGap: false,
+      show: false,
       data: ['Draco', 'Ron', 'Hermione', 'Harry', 'Fred', 'George', 'Oliver'],
-      axisLine: {
-        lineStyle: {
-          color: '#ffffff'
-        }
-      },
       axisTick: {
         show: true,
         inside: true
@@ -174,11 +170,7 @@ export const echartAreaChartData: any = {
   yAxis: [
     {
       type: 'value',
-      axisLine: {
-        lineStyle: {
-          color: '#ffffff'
-        }
-      }
+      show: false
     }
   ],
   series: [
