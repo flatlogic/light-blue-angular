@@ -86,13 +86,20 @@
 
   &__header-search {
     background-clip: padding-box;
-    background-color: #040620;
+    background-color: rgba(0, 0, 0, 0.24);
     border-radius: 0.3rem;
     border: 0;
-    color: #636c72;
+    color: rgba(244,244,245,.6);
     line-height: 1.5;
     padding: 0.5rem 0.75rem;
     width: 100%;
+
+    &::-webkit-input-placeholder {
+      color: rgba(244,244,245,.6);
+    }
+    &::-moz-placeholder {
+      color: rgba(244,244,245,.6);
+    }
 
     &:focus {
       outline: 0;
