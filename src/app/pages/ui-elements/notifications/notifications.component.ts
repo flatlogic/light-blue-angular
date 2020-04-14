@@ -6,6 +6,7 @@ import { ToastPosition } from './toast-position.enum';
 import { CancelLaunchToastComponent } from './toasts/cancel-launch/cancel-launch-toast.component';
 import { RetryDestroyingToastComponent } from './toasts/retry-destroying/retry-destroying-toast.component';
 import { RetryAction } from './toasts/retry-destroying/retry-action.enum';
+import { SuccessToastComponent } from './toasts/suceess/success-toast.component';
 
 @Component({
   selector: '[ui-components]',
@@ -82,7 +83,7 @@ export class NotificationsComponent implements AfterViewInit {
       {
         closeButton: false,
         positionClass: this.position,
-        toastComponent: CancelLaunchToastComponent,
+        toastComponent: SuccessToastComponent,
         timeOut: this.timeOut,
         tapToDismiss: false
       }

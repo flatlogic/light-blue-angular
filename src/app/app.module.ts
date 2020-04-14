@@ -31,6 +31,7 @@ import { AppConfig } from './app.config';
 import { CancelLaunchToastComponent } from './pages/ui-elements/notifications/toasts/cancel-launch/cancel-launch-toast.component';
 import { RetryDestroyingToastComponent } from './pages/ui-elements/notifications/toasts/retry-destroying/retry-destroying-toast.component';
 import { UtilsModule } from './utils/utils-module/utils.module';
+import {SuccessToastComponent} from './pages/ui-elements/notifications/toasts/suceess/success-toast.component';
 
 const APP_PROVIDERS = [
   CheckAllService,
@@ -45,7 +46,8 @@ const APP_PROVIDERS = [
     AppComponent,
     ErrorComponent,
     CancelLaunchToastComponent,
-    RetryDestroyingToastComponent
+    SuccessToastComponent,
+    RetryDestroyingToastComponent,
   ],
   imports: [
     BrowserModule,

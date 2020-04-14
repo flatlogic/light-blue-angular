@@ -34,19 +34,21 @@
     <div class="col-lg-4 col-12">
       <h5 class="m-t-1">Dead Simple Usage</h5>
       <p>Just few lines of code to inject toastr service and use it:</p>
-      <pre>
-        <code>
-          import {{'{'}} ToastrService {{'}'}} from 'ngx-toastr';
+      <pre style="padding: 0 0 0 0.5rem">
+<code>
+import {{'{'}} ToastrService {{'}'}} from 'ngx-toastr';
 
-          @Component({{'{'}}...{{'}'}})
-          export class YourComponent {{'{'}}
-            constructor(private toastr: ToastrService) {{'{'}}{{'}'}}
+@Component({{'{'}}...{{'}'}})
+export class YourComponent {{'{'}}
+  constructor(private toastr: ToastrService) {{'{'}}{{'}'}}
 
-            showSuccess() {{'{'}}
-              this.toastr.success('Hello world!', 'Toastr fun!');
-            {{'}'}}
-          {{'}'}}
-        </code>
+  showSuccess() {{'{'}}
+    this.toastr.success(
+      'Hello world!', 'Toastr fun!'
+    );
+  {{'}'}}
+{{'}'}}
+</code>
       </pre>
     </div>
   </div>
