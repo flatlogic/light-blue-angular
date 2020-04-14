@@ -25,7 +25,7 @@
     </section>
   </div>
   <div class="col-lg-6 col-12">
-    <section widgster [optionsControl]="false" [fullscreenControl]="false" [reloadControl]="false">
+    <section class="realtime-echarts" widgster [optionsControl]="false" [fullscreenControl]="false" [reloadControl]="false">
       <h5 *widgsterTitle>
         Realtime <span class="fw-semi-bold">Echarts</span>
       </h5>
@@ -33,7 +33,7 @@
       <div class="bg-gray-lighter progress progress-xs">
         <div class="progress-bar progress-xs bg-gray" style="width: 60%;" data-width="60%"></div>
       </div>
-      <p class="fs-mini text-muted mb-lg realtime-echarts-history">
+      <p class="fs-mini text-muted mb-lg">
         <span class="circle bg-success text-white">
           <i class="fa fa-circle"></i>
         </span>
@@ -41,7 +41,7 @@
         Target <span class="fw-semi-bold">820</span> users
         is <span class="fw-semi-bold">96%</span> reached.
       </p>
-      <div class="chart-overflow-bottom realtime-echarts-diagram" echarts [options]="echartDynamicAreaData"
+      <div style="height: 225px;" class="chart-overflow-bottom" echarts [options]="echartDynamicAreaData"
         [merge]="echartDynamicAreaDataUpdate">
       </div>
     </section>
@@ -168,11 +168,11 @@
 </div>
 <div class="row">
   <div class="col-12 col-lg-6 col-xl-3">
-    <section widgster [optionsControl]="false" [fullscreenControl]="false" [reloadControl]="false">
+    <section class="area-chart" widgster [optionsControl]="false" [fullscreenControl]="false" [reloadControl]="false">
       <h5 *widgsterTitle>
         Echarts <span class="fw-semi-bold">Area Chart</span>
       </h5>
-      <div class="stats-row mt area-chart-history">
+      <div class="stats-row mt">
         <div class="stat-item">
           <h6 class="na  me">Overall Growth</h6>
           <p class="value">43.75%</p>
@@ -184,7 +184,7 @@
       </div>
       <p class="text-muted fs-mini">
         <span class="fw-semi-bold">17% higher</span> than last month</p>
-      <div style="height: 190px;" class="chart-overflow-bottom area-chart-diagram" echarts [options]="echartAreaChartData2">
+      <div style="height: 190px;" class="chart-overflow-bottom" echarts [options]="echartAreaChartData2">
       </div>
     </section>
   </div>
