@@ -200,6 +200,12 @@ export const echartAreaChartData: any = {
 
 export const echartLineChartData: any = {
   color: ['#4e85bd'],
+  grid: {
+    top: '50',
+    right: '50',
+    bottom: '50',
+    left: '85',
+  },
   tooltip: {
     trigger: 'axis',
     axisPointer: {
