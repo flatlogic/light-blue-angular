@@ -4,6 +4,10 @@
 /**         Search Result         **/
 /***********************************/
 
+.search-result {
+  padding-top: 1rem;
+}
+
 .search-result-categories{
   > .nav-item > .nav-link {
     color: $text-color;
