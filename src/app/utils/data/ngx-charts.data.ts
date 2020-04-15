@@ -7,7 +7,7 @@ export const ngxLineChartData = {
   showYAxis: true,
   showLegend: false,
   autoScale: true,
-  xAxisTickFormatting: (value: string) => new Date(value).toISOString().split('T')[0],
+  xAxisTickFormatting: (value: string) => new Date(value).toDateString().slice(3, 10),
   results: [
     {
       'name': 'Qatar',
@@ -146,7 +146,7 @@ export const ngxAreaChartData = {
   showYAxis: true,
   showLegend: false,
   autoScale: true,
-  xAxisTickFormatting: (value: string) => new Date(value).toISOString().split('T')[0],
+  xAxisTickFormatting: (value: string) => new Date(value).toDateString().slice(3, 10),
   results: [
     {
       'name': 'Qatar',
