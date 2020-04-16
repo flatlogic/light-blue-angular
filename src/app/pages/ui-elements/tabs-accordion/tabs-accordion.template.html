@@ -152,8 +152,7 @@
       <accordion-group [isOpen]="true" #g1>
         <div accordion-heading>
           Collapsible Group Item
-          <i *ngIf="g1.isOpen" class="la la-angle-up float-right"></i>
-          <i *ngIf="!g1.isOpen" class="la la-angle-down float-right"></i>
+          <i class="la la-angle-down float-right" [ngClass]="{'opened':g1.isOpen}"></i>
         </div>
         <div>
           Get base styles and flexible support for collapsible components like accordions and navigation.
@@ -163,8 +162,7 @@
       <accordion-group #g2>
         <div accordion-heading>
           Random from the Web
-          <i *ngIf="g2.isOpen" class="la la-angle-up float-right"></i>
-          <i *ngIf="!g2.isOpen" class="la la-angle-down float-right"></i>
+          <i class="la la-angle-down float-right" [ngClass]="{'opened':g2.isOpen}"></i>
         </div>
         <div>
           <p><span class="fw-semi-bold">Light Blue</span> - is a next generation admin template based on the latest
@@ -180,8 +178,7 @@
       <accordion-group #g3>
         <div accordion-heading>
           Check It
-          <i *ngIf="g3.isOpen" class="la la-angle-up float-right"></i>
-          <i *ngIf="!g3.isOpen" class="la la-angle-down float-right"></i>
+          <i class="la la-angle-down float-right" [ngClass]="{'opened':g3.isOpen}"></i>
         </div>
         <div>
           Why don't use Lore Ipsum? I think if some one says don't use lore ipsum it's very controversial point. I think
@@ -195,8 +192,7 @@
       <accordion-group #g4>
         <div accordion-heading>
           Collapsible Group Item
-          <i *ngIf="g4.isOpen" class="la la-angle-up float-right"></i>
-          <i *ngIf="!g4.isOpen" class="la la-angle-down float-right"></i>
+          <i class="la la-angle-down float-right" [ngClass]="{'opened':g4.isOpen}"></i>
         </div>
         Get base styles and flexible support for collapsible components like accordions and navigation.
         Using the collapse plugin, we built a simple accordion by extending the panel component.
@@ -204,8 +200,7 @@
       <accordion-group #g5>
         <div accordion-heading>
           Normal Text Insertion
-          <i *ngIf="g5.isOpen" class="la la-angle-up float-right"></i>
-          <i *ngIf="!g5.isOpen" class="la la-angle-down float-right"></i>
+          <i class="la la-angle-down float-right" [ngClass]="{'opened':g5.isOpen}"></i>
         </div>
         <p>Why don't use Lore Ipsum? I think if some one says don't use lore ipsum it's very
           controversial point. I think the opposite actually. Everyone knows what is lore ipsum
@@ -217,8 +212,7 @@
       <accordion-group #g6>
         <div accordion-heading>
           Check It
-          <i *ngIf="g6.isOpen" class="la la-angle-up float-right"></i>
-          <i *ngIf="!g6.isOpen" class="la la-angle-down float-right"></i>
+          <i class="la la-angle-down float-right" [ngClass]="{'opened':g6.isOpen}"></i>
         </div>
         Why don't use Lore Ipsum? I think if some one says don't use lore ipsum it's very controversial point. I think
         the opposite actually.

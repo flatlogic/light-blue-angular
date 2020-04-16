@@ -13,7 +13,7 @@ import {
   echartBarChartData
 } from '../../../utils/data/echarts.data';
 import {
-  highchartsOptions5
+  smallHighchartsOptions5
 } from '../../../utils/data/highcharts.data';
 import { ngxGroupedVerticalBarChartData } from '../../../utils/data/ngx-charts.data';
 import { ChartComponent } from 'ng-apexcharts';
@@ -44,7 +44,7 @@ export class OverviewComponent implements AfterViewInit, OnDestroy {
   echartBarChartData = echartBarChartData;
 
   public Highcharts = Highcharts;
-  public highchartsOptions5: any = highchartsOptions5;
+  public smallHighchartsOptions5: any = smallHighchartsOptions5;
   public ngxGroupedVerticalBarChartData = ngxGroupedVerticalBarChartData;
 
   private interval: any;

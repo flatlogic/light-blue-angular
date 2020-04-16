@@ -175,6 +175,17 @@ export const highchartsOptions2 = {
   credits: {
     enabled: false
   },
+  plotOptions: {
+    variablepie: {
+      borderColor: null,
+      dataLabels: {
+        style: {
+          color: '#fff',
+          textOutline: null
+        }
+      }
+    }
+  },
   accessibility: {
     exporting: {
       enabled: false
@@ -1766,25 +1777,24 @@ export const highchartsOptions5 = {
   credits: {
     enabled: false
   },
-  legend: {
-    itemStyle: {
-      color: '#fff'
-    }
-  },
   title: {
     style: {
       display: 'none'
     }
   },
-  tooltip: {
-    valueDecimals: 2
+  legend: {
+    enabled: false
   },
   xAxis: {
-    type: 'datetime',
+    show: false,
     labels: {
+      step: 2,
       style: {
         color: '#fff'
       }
+    },
+    title: {
+      text: null
     }
   },
   yAxis: {
@@ -1794,16 +1804,28 @@ export const highchartsOptions5 = {
       }
     },
     title: {
-      style: {
-        color: '#fff'
-      }
+      text: null
     }
   },
   series: [{
     data: getData(100),
-    lineWidth: 2,
-    name: 'Hourly data points'
+    lineWidth: 2
   }]
+};
+
+export const smallHighchartsOptions5 = {
+  ...highchartsOptions5,
+  xAxis: {
+    show: false,
+    labels: {
+      style: {
+        color: '#fff'
+      }
+    },
+    title: {
+      text: null
+    }
+  }
 };
 
 export const highchartsOptions6 = {

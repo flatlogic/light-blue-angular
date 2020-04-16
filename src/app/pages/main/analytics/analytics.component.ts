@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 import mock from './mock';
 import { AnalyticsService } from './analytics.service';
-import { echartPieChartData3, echartAreaChartData } from '../../../utils/data/echarts.data';
+import {echartPieChartData3, echartDailyLineChartData} from '../../../utils/data/echarts.data';
 import { CalendarEvent } from 'angular-calendar';
 import { calendarEvents } from '../../../utils/data/calendar-events.data';
 
@@ -17,7 +17,7 @@ export class AnalyticsComponent implements OnInit {
   year = this.now.getFullYear();
   mock = mock;
   public echartPieChartData3: any = echartPieChartData3;
-  public echartAreaChartData: any = echartAreaChartData;
+  public echartDailyLineChartData: any = echartDailyLineChartData;
 
   public viewDate: Date = new Date();
   public calendarEvents: CalendarEvent[] = [...calendarEvents];

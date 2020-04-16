@@ -104,7 +104,7 @@ export const echartPieChartData3: any = {
   series: [{
     type: 'pie',
     radius: ['50%', '70%'],
-    center: ['31%', '45%'],
+    center: ['31%', '38%'],
     label: {
       show: false
     },
@@ -135,10 +135,10 @@ export const echartPieChartData3: any = {
 export const echartAreaChartData: any = {
   color: ['#8cbf26', '#4e85bd', '#db4912', '#f0af03', '#57b955'],
   grid: {
-    top: '10',
-    right: '10',
-    bottom: '10',
-    left: '10',
+    top: '0',
+    right: '0',
+    bottom: '0',
+    left: '0',
   },
   tooltip: {
     trigger: 'axis',
@@ -198,13 +198,87 @@ export const echartAreaChartData: any = {
   ]
 };
 
+export const echartDailyLineChartData: any = {
+  color: ['#8cbf26', '#4e85bd', '#db4912', '#f0af03', '#57b955'],
+  grid: {
+    top: 45,
+    right: 45,
+    bottom: 45,
+    left: 45,
+  },
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: {
+      type: 'cross',
+      label: {
+        backgroundColor: '#6a7985'
+      }
+    }
+  },
+  legend: {
+    show: false
+  },
+  toolbox: {
+  },
+  xAxis: [
+    {
+      type: 'category',
+      boundaryGap: false,
+      axisLine: {
+        lineStyle: {
+          color: '#ffffff'
+        }
+      },
+      data: ['Draco', 'Ron', 'Hermione', 'Harry', 'Fred', 'George', 'Oliver'],
+      axisTick: {
+        show: true,
+        inside: true
+      },
+      zlevel: 1
+    }
+  ],
+  yAxis: [
+    {
+      type: 'value',
+      axisLine: {
+        lineStyle: {
+          color: '#ffffff'
+        }
+      }
+    }
+  ],
+  series: [
+    {
+      type: 'line',
+      data: [120, 132, 101, 134, 90, 230, 210]
+    },
+    {
+      type: 'line',
+      areaStyle: {},
+      data: [220, 182, 191, 234, 290, 330, 310]
+    },
+    {
+      type: 'line',
+      data: [150, 232, 201, 154, 190, 330, 410]
+    },
+    {
+      type: 'line',
+      data: [320, 332, 301, 334, 390, 330, 320]
+    },
+    {
+      type: 'line',
+      data: [420, 432, 401, 434, 490, 430, 420]
+    }
+  ]
+};
+
 export const echartLineChartData: any = {
   color: ['#4e85bd'],
   grid: {
     top: '50',
-    right: '50',
+    right: '20',
     bottom: '50',
-    left: '85',
+    left: '50',
   },
   tooltip: {
     trigger: 'axis',

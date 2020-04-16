@@ -28,3 +28,13 @@ accordion {
     background: transparent;
   }
 }
+
+i.la.la-angle-down.float-right {
+  transform: rotate(0deg);
+  transition: transform 300ms linear;
+}
+
+i.la.la-angle-down.float-right.opened {
+  transform: rotate(180deg);
+  transition: transform 300ms linear;
+}

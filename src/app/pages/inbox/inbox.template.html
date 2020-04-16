@@ -9,7 +9,7 @@
 <h1 class="page-title">Email - <span class="fw-semi-bold">Inbox</span></h1>
 <div class="row">
   <div class="col-lg-3 col-xl-2 col-12">
-    <a class="btn btn-danger btn-block" href="#" id="compose-btn" (click)="handleComposeBtn()">Compose</a>
+    <a class="btn btn-danger btn-block" id="compose-btn" (click)="handleComposeBtn()">Compose</a>
     <ul class="nav nav-pills flex-column nav-stacked nav-email-folders mt" id="folders-list">
       <li class="nav-item" [class.active]="currentFolderName === 'Inbox'">
         <a class="nav-link" (click)="setFolderName('Inbox')">
