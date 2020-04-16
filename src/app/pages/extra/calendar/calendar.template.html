@@ -37,7 +37,7 @@
       </div>
     </div>
     <div class="col-lg-9 col-xl-8 col-12">
-      <section style="height: auto;" class="widget-calendar" widgster [optionsControl]="false" [reloadControl]="false"
+      <section class="widget-calendar" widgster [optionsControl]="false" [reloadControl]="false"
         [fullscreenControl]="false" [collapseControl]="false" [closeControl]="false">
         <ng-container *widgsterTitle>
           <div class="btn-group ">
@@ -58,7 +58,7 @@
         </ng-container>
         <full-calendar #calendar (eventClick)="onEventClick($event)" (select)="onSelect($event)" (drop)="onDrop($event)"
           defaultView="dayGridMonth" [events]="events" [eventLimit]="2" [editable]="true" [droppable]="true"
-          [selectable]="true" [selectHelper]="true" [header]="null" [plugins]="calendarPlugins">
+          [selectable]="true" [selectHelper]="true" [height]="'auto'" [header]="null" [plugins]="calendarPlugins">
         </full-calendar>
       </section>
     </div>
