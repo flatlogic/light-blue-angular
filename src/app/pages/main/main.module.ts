@@ -1,92 +1,88 @@
-import 'jquery-flot/jquery.flot.js';
-import 'jquery.flot.animator/jquery.flot.animator';
-import 'jquery-flot/jquery.flot.pie.js';
-import 'jquery-flot/jquery.flot.selection.js';
-import 'jquery-flot/jquery.flot.resize.js';
-import 'flot.dashes/jquery.flot.dashes';
-import 'jquery.animate-number/jquery.animateNumber.js';
-import 'jQuery-Mapael/js/jquery.mapael.js';
-import 'jQuery-Mapael/js/maps/usa_states';
-import 'jQuery-Mapael/js/maps/world_countries.js';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { TrendModule } from 'ngx-trend';
+import { NgxEchartsModule } from 'ngx-echarts';
+import { NgApexchartsModule } from 'ng-apexcharts';
+import { SwiperConfigInterface, SwiperModule, SWIPER_CONFIG } from 'ngx-swiper-wrapper';
+import { CountUpModule } from 'ngx-countup';
+import { CalendarModule as AngularCalendarModule, DateAdapter, CalendarDateFormatter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {RouterModule} from '@angular/router';
-import {AnalyticsComponent} from './analytics/analytics.component';
-import {MainChartComponent} from './analytics/components/main-chart/main-chart.component';
-import {BigStatComponent} from './analytics/components/big-stat/big-stat.component';
-import {WidgetModule} from '../../layout/widget/widget.module';
-import {BsDropdownModule, ProgressbarModule} from 'ngx-bootstrap';
-import {TrendModule} from 'ngx-trend';
-import {TaskContainerComponent} from './analytics/components/task-container/task-container.component';
-import {TaskComponent} from './analytics/components/task/task';
-import {CalendarModule} from './visits/calendar/calendar.module';
-import {VisitsComponent} from './visits/visits.component';
-import {UtilsModule} from '../../layout/utils/utils.module';
-import {RickshawChartModule} from '../../components/rickshaw/rickshaw.module';
-import {GeoLocationsWidgetDirective} from './visits/geo-locations-widget/geo-locations-widget.directive';
-import {MarketStatsWidgetComponent} from './visits/market-stats-widget/market-stats-widget.component';
-import {WidgetsComponent} from './widgets/widgets.component';
-import {LiveTileModule} from '../../components/tile/tile.module';
-import {SkyconsModule} from '../../components/skycon/skycon.module';
-import {FlotChartModule} from '../../components/flot/flot.module';
-import {JqSparklineModule} from '../../components/sparkline/sparkline.module';
-import {MapaelLayersMapModule} from '../../components/mapael/mapael.module';
-import {ChangesChartWidgetComponent} from './widgets/changes-chart-widget/changes-chart-widget.component';
-import {FlotChartWidgetComponent} from './widgets/flot-chart-widget/flot-chart-widget.component';
-import {NasdaqSparklineWidgetComponent} from './widgets/nasdaq-sparkline-widget/nasdaq-sparkline-widget.component';
-import {RealtimeTrafficWidgetComponent} from './widgets/realtime-traffic-widget/realtime-traffic-widget.component';
-import {YearsMapWidgetComponent} from './widgets/years-map-widget/years-map-widget.component';
-import {FakeWorldData} from './widgets/years-map-widget/fake-world-data.service';
-import {AnalyticsService} from "./analytics/analytics.service";
-import {NewWidgetModule} from "../../layout/new-widget/widget.module";
+import { AnalyticsComponent } from './analytics/analytics.component';
+import { BigStatComponent } from './analytics/components/big-stat/big-stat.component';
+import { TaskContainerComponent } from './analytics/components/task-container/task-container.component';
+import { TaskComponent } from './analytics/components/task/task';
+import { VisitsComponent } from './visits/visits.component';
+import { MarketStatsWidgetComponent } from './visits/market-stats-widget/market-stats-widget.component';
+import { WidgetsComponent } from './widgets/widgets.component';
+import { SkyconsModule } from '../../components/skycon/skycon.module';
+import { ChangesChartWidgetComponent } from './widgets/changes-chart-widget/changes-chart-widget.component';
+import { NasdaqWidgetComponent } from './widgets/nasdaq-widget/nasdaq-widget.component';
+import { RealtimeTrafficWidgetComponent } from './widgets/realtime-traffic-widget/realtime-traffic-widget.component';
+import { AnalyticsService } from './analytics/analytics.service';
+import { YearsMapModule } from '../../components/years-map-widget/year-map.module';
+import { CustomDateFormatter } from './visits/custom-date-formatter.service';
+import { WidgsterModule } from '../../components/widgster/widgster.module';
+import { UtilsModule } from '../../utils/utils-module/utils.module';
 
 export const routes = [
-  {path: '', redirectTo: 'visits', pathMatch: 'full'},
-  {path: 'analytics', component: AnalyticsComponent, pathMatch: 'full'},
-  {path: 'visits', component: VisitsComponent, pathMatch: 'full'},
-  {path: 'widgets', component: WidgetsComponent, pathMatch: 'full'}
+  { path: '', redirectTo: 'visits', pathMatch: 'full' },
+  { path: 'analytics', component: AnalyticsComponent, pathMatch: 'full' },
+  { path: 'visits', component: VisitsComponent, pathMatch: 'full' },
+  { path: 'widgets', component: WidgetsComponent, pathMatch: 'full' }
 ];
+
+const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
+  direction: 'horizontal',
+  slidesPerView: 'auto'
+};
 
 @NgModule({
   declarations: [
     // Components / Directives/ Pipes
     AnalyticsComponent,
-    MainChartComponent,
     BigStatComponent,
     TaskContainerComponent,
     TaskComponent,
     VisitsComponent,
-    GeoLocationsWidgetDirective,
     MarketStatsWidgetComponent,
     WidgetsComponent,
     ChangesChartWidgetComponent,
-    FlotChartWidgetComponent,
-    NasdaqSparklineWidgetComponent,
-    RealtimeTrafficWidgetComponent,
-    YearsMapWidgetComponent
+    NasdaqWidgetComponent,
+    RealtimeTrafficWidgetComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    WidgetModule,
-    ProgressbarModule.forRoot(),
     TrendModule,
-    BsDropdownModule.forRoot(),
-    CalendarModule,
-    UtilsModule,
-    RickshawChartModule,
-    LiveTileModule,
     SkyconsModule,
-    WidgetModule,
-    FlotChartModule,
-    RickshawChartModule,
-    JqSparklineModule,
-    MapaelLayersMapModule,
-    NewWidgetModule
+    NgApexchartsModule,
+    NgxEchartsModule,
+    YearsMapModule,
+    SwiperModule,
+    CountUpModule,
+    AngularCalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory
+    }),
+    WidgsterModule,
+    ProgressbarModule,
+    BsDropdownModule,
+    UtilsModule
   ],
-  providers: [FakeWorldData, AnalyticsService]
+  providers: [
+    AnalyticsService,
+    {
+      provide: SWIPER_CONFIG,
+      useValue: DEFAULT_SWIPER_CONFIG
+    },
+    {
+      provide: CalendarDateFormatter,
+      useClass: CustomDateFormatter
+    }
+  ]
 })
-export class MainModule {
-  static routes = routes;
-}
+export class MainModule { }

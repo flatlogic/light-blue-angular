@@ -1,4 +1,4 @@
-@import '../../../styles/helpers';
+@import "../../../styles/helpers";
 
 .analytics-page {
   .visits-element {
@@ -8,7 +8,8 @@
   }
 
   .requests-table {
-    td, th {
+    td,
+    th {
       font-weight: $font-weight-normal;
     }
 
@@ -52,12 +53,6 @@
         max-width: 1 / 3 * 100%;
       }
     }
-  }
-
-  .sparkline-wrapper {
-    display: flex;
-    justify-content: center;
-    min-width: calc(100% - 150px);
   }
 
   .analytics-notifications {

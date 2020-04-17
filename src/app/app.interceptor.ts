@@ -1,7 +1,7 @@
-import {Injectable} from '@angular/core';
-import {Observable} from 'rxjs/Observable';
-import {HttpEvent, HttpInterceptor, HttpHandler, HttpRequest} from '@angular/common/http';
-import {AppConfig} from './app.config';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { HttpEvent, HttpInterceptor, HttpHandler, HttpRequest } from '@angular/common/http';
+import { AppConfig } from './app.config';
 
 @Injectable()
 export class AppInterceptor implements HttpInterceptor {
@@ -14,7 +14,7 @@ export class AppInterceptor implements HttpInterceptor {
   }
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    req = req.clone({url: this.config.baseURLApi + req.url});
+    req = req.clone({ url: this.config.baseURLApi + req.url });
 
     const token: string = localStorage.getItem('token');
     if (token) {

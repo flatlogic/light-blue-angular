@@ -1,9 +1,17 @@
 <div class="container">
-  <widget
-    [title]="'<h3 class=mt-0>Login to your Web App</h3>'"
-    [customHeader]="true"
+  <section 
     class="widget-auth mx-auto"
+    widgster 
+    [optionsControl]="false"
+    [reloadControl]="false"
+    [fullscreenControl]="false" 
+    [collapseControl]="false"
+    [closeControl]="false"
+    titleClass="mt-0"
   >
+    <h3 *widgsterTitle>
+      Login to your Web App
+    </h3>
     <p class="widget-auth-info">
       Use your email to sign in.
     </p>
@@ -63,7 +71,7 @@
         </div>
       </div>
     </form>
-  </widget>
+  </section>
 </div>
 <footer class="auth-footer">
   2019 &copy; Sing App - React Admin Dashboard Template.

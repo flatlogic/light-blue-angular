@@ -1,6 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {Product, ProductsService} from '../../../products.service';
-import {ActivatedRoute, Router} from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Product, ProductsService } from '../../../products.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { TagModel } from 'ngx-chips/core/accessor';
 
 @Component({
   selector: 'product-edit',
@@ -13,7 +14,7 @@ export class ProductEditComponent implements OnInit {
     public productsService: ProductsService,
     private router: Router,
     private route: ActivatedRoute
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     const newProduct = new Product(-1);
@@ -34,7 +35,7 @@ export class ProductEditComponent implements OnInit {
   }
 
   get product(): Product {
-    return this.findProduct(this.getId()) || {technology: []};
+    return this.findProduct(this.getId()) || { technology: [] };
   }
 
   goBack() {
@@ -49,9 +50,13 @@ export class ProductEditComponent implements OnInit {
     return parseInt(this.route.params['value'].id, 10) || -1;
   }
 
-  updateTechnology(value, type) {
+  updateTechnology(model: TagModel, type) {
     const technology = this.product.technology;
-    type === 'add' ? technology.push(value) : technology.splice(technology.indexOf(value), 1);
+    if (typeof model === 'string') {
+      type === 'add' ? technology.push(model) : technology.splice(technology.indexOf(model), 1);
+    } else {
+      type === 'add' ? technology.push(model.value) : technology.splice(technology.indexOf(model.value), 1);
+    }
     this.updateProductProperty(technology, 'technology');
   }
 

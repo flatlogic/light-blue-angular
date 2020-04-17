@@ -2,213 +2,12 @@
  * override custom libs styles. This files is not required for core sing functionality and may be removed
  */
 
-/***********************/
-/*         NvD3        */
-/***********************/
-
-
-.nvd3-svg svg text,
-.nvd3-svg .nvd3 text{
-  font: $font-weight-base $font-size-sm $font-family-base;
-  fill: $text-color;
-
-  .widget &{
-    fill: $widget-color;
-  }
-}
-
-.nvd3-svg svg .title {
-  font: $font-weight-bold $font-size-base $font-family-base;
-}
-
-.nvd3-svg  .nvd3.nv-noData {
-  font-size: $font-size-lg;
-  font-weight: $font-weight-bold;
-}
-
-.nvd3-svg .nvd3 .nv-axis path.domain {
-  stroke-opacity: 0;
-}
-
-.nvd3-svg .nv-controlsWrap{
-  .nv-legend-symbol{
-    fill: $white !important;
-    stroke: $white !important;
-  }
-}
-
-.nvd3-svg .nvd3 .nv-axis .zero line {
-  stroke-opacity: 0.1;
-}
-
-.nvd3-svg .nvd3 .nv-legend .disabled circle {
-  fill-opacity: 0;
-}
-
-.nvd3-svg .nvd3 .nv-axis line{
-  stroke: #000;
-  stroke-opacity: .1;
-}
-
-.nvtooltip.xy-tooltip h3{
-  background-color: transparent;
-  border: none;
-  color: inherit;
-}
-
-.stat-widget header .nvd3.nv-multibar .nv-group{
-  fill-opacity: 1 !important;
-}
-
-.nvd3-svg .nvd3.nv-stackedarea path.nv-area {
-  fill-opacity: .8;
-}
-
-.nvd3-svg .nvd3.nv-stackedarea path.nv-area.hover {
-  fill-opacity: .95;
-}
-
-.nvd3-svg .nvd3 .nv-axis path.domain{
-  display: none;
-}
-
-
-.nvtooltip.xy-tooltip {
-  padding: 5px;
-  position: absolute;
-  background-color: rgba($widget-bg-color, .6);
-  color: $widget-color;
-  border: none;
-  z-index: 10000;
-
-  font-family: inherit;
-
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-
-  -moz-border-radius: 0;
-  border-radius: 0;
-
-  transition: none;
-  -moz-transition: none;
-  -webkit-transition: none;
-}
-
-.nvtooltip.xy-tooltip {
-    font-size: $font-size-base;
-    text-align: center;
-}
-
-.nvd3-svg .nvd3 .nv-axis line.zero{
-  display: none;
-}
-
-/*!
- * Bootstrap-select
- */
-.bootstrap-select .btn:focus, .bootstrap-select > .btn.dropdown-toggle:focus{
-  outline: none !important;
-}
-
-.selectpicker.form-control {
-  height: auto;
-}
-
-.bootstrap-select {
-  width: auto !important;
-    z-index: 1;
-
-  &.show .dropdown-menu.inner {
-    display: block;
-  }
-
-  &.show {
-    z-index: 3;
-    display: inline-block !important;
-  }
-}
-
-body .bootstrap-select > select {
-  width: 0 !important;
-  height: 0 !important;
-}
-
-/***********************/
-/*     Select 2        */
-/***********************/
-
-.select2-container .select2-choice abbr {
-  background: url('../../assets/select2/select2.png') right top no-repeat;
-}
-
-.select2-container .select2-choice .select2-arrow b {
-  background: url('../../assets/select2/select2.png') no-repeat 0 1px;
-}
-
-.select2-search input {
-  display: none;
-}
-
-html[dir="rtl"] .select2-search input {
-  display: none;
-}
-
-.select2-search-choice-close {
-  background: url('../../assets/select2/select2.png') right top no-repeat;
-}
-
-.select2-search input.select2-active {
-  background: #fff url('../../assets/select2/select2-spinner.gif') no-repeat 100%;
-  background: url('../../assets/select2/select2-spinner.gif') no-repeat 100%, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, #fff), color-stop(0.99, #eee));
-  background: url('../../assets/select2/select2-spinner.gif') no-repeat 100%, -webkit-linear-gradient(center bottom, #fff 85%, #eee 99%);
-  background: url('../../assets/select2/select2-spinner.gif') no-repeat 100%, -moz-linear-gradient(center bottom, #fff 85%, #eee 99%);
-  background: url('../../assets/select2/select2-spinner.gif') no-repeat 100%, linear-gradient(to bottom, #fff 85%, #eee 99%) 0 0;
-}
-
-.select2-more-results.select2-active {
-  background: #f4f4f4 url('../../assets/select2/select2-spinner.gif') no-repeat 100%;
-}
-
-.select2-container-multi .select2-choices .select2-search-field input.select2-active {
-  background: #fff url('../../assets/select2/select2-spinner.gif') no-repeat 100% !important;
-}
-
-/**
- * Make Simple Select2's selects be the same height with the rest of the inputs
- */
-
-.select2-container .select2-selection.select2-selection--single {
-  height: $input-height;
-  padding: $padding-base-vertical $padding-base-horizontal;
-}
-
-/**
- * Make Multi Select2's choices match Bootstrap 3's default button styles.
- */
-
-.select2-container-multi .select2-choices .select2-search-choice {
-  background: $btn-inverse-bg;
-}
-
-.widget .actions .bootstrap-select .dropdown-toggle {
-  padding: 5px 20px 5px 15px;
-}
-
 /**
  * Switchery
  */
 
-.switchery{
+.switchery {
   background-color: transparent !important;
-}
-
-/**
- * Rickshaw
- */
-
-.rickshaw_graph .detail .x_label {
-  color: $gray-300;
 }
 
 /***********************************/
@@ -220,13 +19,14 @@ html[dir="rtl"] .select2-search input {
 }
 
 .glyphicon-comment:before {
-  content:"\E111";
+  content: "\E111";
 }
 
 /***********************************/
 /**        Awesome Checkbox       **/
 /***********************************/
-.abc-checkbox label, .abc-radio label{
+.abc-checkbox label,
+.abc-radio label {
   &::before {
     background: none;
     border-color: #aaa;
@@ -255,181 +55,22 @@ html[dir="rtl"] .select2-search input {
   left: -17px;
 }
 
-.abc-checkbox-dark input[type="checkbox"]:checked + label{
-  &::after{
+.abc-checkbox-dark input[type="checkbox"]:checked + label {
+  &::after {
     color: $gray-300;
   }
 }
 
 /***********************************/
-/**        Select2       **/
+/**            Wizard             **/
 /***********************************/
-.select2-container--bootstrap .select2-search--dropdown .select2-search__field{
-  padding-left: 28px;
-}
-
-.select2-container--bootstrap .select2-results .select2-results__option{
-  color: $gray-800;
-}
-
-/**
-* datetime
-**/
-.input-group.date, .input-group.timepicker {
-  width: auto;
-  box-sizing: border-box;
-  .input-group-addon {
-    padding: 0.6rem;
-    i {
-      height: 13px;
-      width: 13px;
-    }
-  }
-}
-
-.datepicker.datepicker-dropdown {
-  margin-top: 20px;
-  &.datepicker-orient-top {
-    margin-top: 14px;
-  }
-}
-
-/**
- * Bootstrap select
- */
-
-.selectpicker.form-control {
-  height: auto;
-}
-
-.bootstrap-select, .input-group-btn:not(first-child) .bootstrap-select {
-  &.btn-group.open {
-    z-index: 5;
-  }
-  .btn.dropdown-toggle {
-    padding-left: 10px;
-    box-sizing: border-box;
-
-    &:after {
-      margin-right: 0;
-      margin-left: 0;
-    }
-  }
-
-  .dropdown-menu {
-    z-index: 3;
-  }
-
-  .dropdown-menu > li > a {
-    display: block;
-    width: 100%; // For `<button>`s
-    padding: 3px 20px;
-    clear: both;
-    font-weight: $font-weight-thin;
-    line-height: $line-height-base;
-    color: $text-color;
-    text-align: inherit; // For `<button>`s
-    white-space: nowrap; // prevent links from randomly breaking onto new lines
-    background: none; // For `<button>`s
-    border: 0; // For `<button>`s
-
-    @include hover-focus {
-      color: $dropdown-link-hover-color;
-      text-decoration: none;
-      background-color: $dropdown-link-hover-bg;
-    }
-
-    // Active state
-    &.active {
-      @include plain-hover-focus {
-        color: $dropdown-link-active-color;
-        text-decoration: none;
-        background-color: $dropdown-link-active-bg;
-        outline: 0;
-      }
-    }
-
-    // Disabled state
-    //
-    // Gray out text and ensure the hover/focus state remains gray
-    &.disabled {
-      @include plain-hover-focus {
-        color: $dropdown-link-disabled-color;
-      }
-
-      // Nuke hover/focus effects
-      @include hover-focus {
-        text-decoration: none;
-        cursor: $cursor-disabled;
-        background-color: transparent;
-        background-image: none; // Remove CSS gradient
-      }
-    }
-  }
-}
-
-/***********************************/
-/**       magnific-popup      **/
-/***********************************/
-
-.mfp-zoom-out-cur .mfp-image-holder .mfp-content .mfp-figure .mfp-close {
-  cursor: pointer;
-}
-
-/*         Flot        */
-
-.chart-tooltip {
-  position: fixed;
-  padding: $spacer/2 $spacer;
-  color: $gray-600;
-  font-size: $font-size-mini;
-  background-color: $white;
-}
-
-.legendColorBox div {
-  border-radius: 50%;
-}
-
-.legendLabel {
-  color: $text-color;
-}
-
-//  Easy Pie Chart
-
-.easy-pie-chart-md,
-.easy-pie-chart-lg {
-  position: relative;
-  display: inline-block;
-  text-align: center;
-}
-
-.easy-pie-chart-md canvas,
-.easy-pie-chart-lg canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.easy-pie-chart-md {
-  line-height: 120px;
-  height: 120px;
-  width: 120px;
-}
-
-.easy-pie-chart-lg {
-  line-height: 140px;
-  height: 140px;
-  width: 140px;
-}
-
-
-////// Wizard //////
-
 .form-wizard .tab-content .tab-pane {
   padding: 0;
 }
 
-/////// NGX Datatable ///////
+/***********************************/
+/**         NGX Datatable         **/
+/***********************************/
 
 .ngx-datatable {
   width: 100%;
@@ -489,10 +130,11 @@ html[dir="rtl"] .select2-search input {
   }
 }
 
-/////// NG2 TAG INPUT ///////
+/***********************************/
+/**         NG2 TAG INPUT         **/
+/***********************************/
 
 .ng2-tag-input {
-
   &__text-input {
     color: $text-color;
     background-color: transparent;
@@ -503,4 +145,372 @@ html[dir="rtl"] .select2-search input {
   tag:hover {
     box-shadow: none !important;
   }
+}
+
+/***********************************/
+/**          APEXCHARTS           **/
+/***********************************/
+apx-chart {
+  .apexcharts-tooltip,
+  .apexcharts-menu {
+    color: initial;
+  }
+
+  &.transparent-bg {
+    .apexcharts-canvas {
+      background-color: transparent !important;
+    }
+  }
+}
+
+/***********************************/
+/**          Ngx-charts           **/
+/***********************************/
+.axis .tick text {
+  fill: white;
+}
+
+/***********************************/
+/**           NG-SELECT           **/
+/***********************************/
+ng-select {
+  .ng-select-container {
+    background-color: rgba(0, 0, 0, 0.24) !important;
+    border: none !important;
+  }
+
+  & .ng-select-container,
+  & .ng-input input,
+  & .ng-dropdown-panel .ng-dropdown-panel-items .ng-option,
+  & .ng-dropdown-panel .ng-dropdown-panel-items .ng-option-disabled,
+  & .ng-dropdown-panel .ng-dropdown-panel-items .ng-option-selected,
+  & .ng-dropdown-panel .ng-dropdown-panel-items .ng-option-marked,
+  & .ng-select-container .ng-clear-wrapper {
+    color: $white-dark !important;
+  }
+
+  & .ng-arrow {
+    border-color: $white-dark transparent transparent !important;
+  }
+
+  .ng-dropdown-panel {
+    border: none;
+    background: none;
+
+    .ng-dropdown-panel-items {
+      .ng-option {
+        &,
+        &-disabled {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        &-selected,
+        &-marked {
+          background-color: $blue !important;
+        }
+      }
+    }
+  }
+}
+
+ng-select.danger {
+  .ng-select-container {
+    cursor: pointer !important;
+    background-color: $red !important;
+  }
+
+  &.ng-select-opened .ng-select-container,
+  &:hover .ng-select-container {
+    background-color: #b83d0f !important;
+  }
+}
+
+ng-select.warning {
+  .ng-select-container {
+    cursor: pointer !important;
+    background-color: $yellow !important;
+  }
+
+  &.ng-select-opened .ng-select-container,
+  &:hover .ng-select-container {
+    background-color: #ca9303 !important;
+  }
+}
+
+ng-select.success {
+  .ng-select-container {
+    cursor: pointer !important;
+    background-color: $green !important;
+  }
+
+  &.ng-select-opened .ng-select-container,
+  &:hover .ng-select-container {
+    background-color: #46a444 !important;
+  }
+}
+
+ng-select.primary {
+  .ng-select-container {
+    cursor: pointer !important;
+    background-color: $blue !important;
+  }
+
+  &.ng-select-opened .ng-select-container,
+  &:hover .ng-select-container {
+    background-color: #3e72a7 !important;
+  }
+}
+
+/***********************************/
+/**         COLOR PICKER          **/
+/***********************************/
+.color-picker {
+  .box {
+    background-color: initial !important;
+  }
+}
+
+/***********************************/
+/**      NGX MARKDOWN EDITOR      **/
+/***********************************/
+md-editor {
+  .md-editor-container {
+    .preview-container {
+      background-color: #ffffff;
+
+      .preview-panel {
+        color: #000000;
+      }
+    }
+  }
+}
+
+/***********************************/
+/**      NGX MARKDOWN EDITOR      **/
+/***********************************/
+ng5-slider.ng5-slider {
+  margin: 12px !important;
+
+  .ng5-slider-pointer {
+    outline: none;
+    top: -12px;
+    width: 26px;
+    height: 26px;
+    background-color: #ffffff;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2),
+      0 1px 3px rgba(0, 0, 0, 0.5);
+    border: 0px solid transparent;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &.vertical {
+    .ng5-slider-pointer {
+      left: -11px !important;
+    }
+  }
+
+  .ng5-slider-selection {
+    background: $blue;
+  }
+
+  &.danger {
+    .ng5-slider-selection {
+      background: $red;
+    }
+  }
+
+  &.warning {
+    .ng5-slider-selection {
+      background: $yellow;
+    }
+  }
+
+  &.success {
+    .ng5-slider-selection {
+      background: $green;
+    }
+  }
+
+  &.inverse {
+    .ng5-slider-selection {
+      background: $gray-700;
+    }
+  }
+
+  .ng5-slider-bubble.ng5-slider-combined {
+    display: none;
+  }
+
+  .ng5-slider-bubble.ng5-slider-model-value,
+  .ng5-slider-bubble.ng5-slider-model-high {
+    display: none;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 0.25rem;
+    font-size: 12px;
+    z-index: 10;
+  }
+
+  // .ng5-slider-pointer.ng5-slider-active~.ng5-slider-bubble.ng5-slider-model-value
+  &:hover {
+    .ng5-slider-bubble.ng5-slider-model-value,
+    .ng5-slider-bubble.ng5-slider-model-high {
+      display: initial;
+      opacity: 1 !important;
+    }
+  }
+}
+
+/***********************************/
+/**       angular-calendar        **/
+/***********************************/
+.calendar-navigation {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12.6px;
+  margin-bottom: 0.5rem;
+
+  .date {
+    padding: 3px 0;
+  }
+
+  .prev,
+  .next {
+    padding: 3px 1rem;
+    cursor: pointer;
+  }
+}
+
+mwl-calendar-month-view {
+  .cal-day-number {
+    font-size: 12.6px !important;
+    color: #ffffff !important;
+    opacity: 1 !important;
+  }
+
+  .cal-out-month .cal-cell-top,
+  .cal-cell-top .cal-day-badge,
+  .cal-out-month .cal-events {
+    display: none;
+  }
+
+  .cal-month-view,
+  mwl-calendar-month-view-header .cal-cell-row .cal-cell:hover,
+  .cal-cell-row:hover,
+  mwl-calendar-month-cell.cal-day-cell.cal-today,
+  mwl-calendar-month-cell.cal-day-cell:hover {
+    background-color: transparent !important;
+  }
+
+  mwl-calendar-month-cell .cal-cell-top {
+    display: flex;
+    justify-content: center;
+    .cal-day-number {
+      margin-right: 0;
+    }
+  }
+
+  .cal-month-view {
+    margin-bottom: 10px;
+  }
+
+  mwl-calendar-month-cell.cal-day-cell {
+    .cal-day-number {
+      cursor: pointer;
+    }
+  }
+
+  mwl-calendar-month-cell.cal-day-cell.cal-today,
+  mwl-calendar-month-cell.cal-has-events {
+    .cal-day-number {
+      font-weight: 700;
+    }
+  }
+
+  .cal-month-view .cal-cell-row,
+  .cal-month-view .cal-cell-row mwl-calendar-month-cell,
+  .cal-month-view .cal-cell-row mwl-calendar-month-cell .cal-cell-top {
+    min-height: 30px;
+  }
+
+  .cal-days,
+  .cal-cell-row,
+  .cal-month-view .cal-cell-row mwl-calendar-month-cell {
+    border: none !important;
+  }
+
+  .cal-days {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .cal-month-view .cal-cell-row mwl-calendar-month-cell,
+  mwl-calendar-month-view-header .cal-cell {
+    outline: none;
+  }
+
+  mwl-calendar-month-cell.cal-has-events {
+    .cal-day-number {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+}
+
+.cal-month-view .cal-events {
+  margin: 0 0 0 10px !important;
+  align-items: unset;
+  justify-content: center;
+
+  .cal-event {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+.cal-tooltip {
+  border-radius: $border-radius-base;
+
+  &-inner {
+    padding: 0;
+
+    .popover-title {
+      border-radius: $border-radius-base $border-radius-base 0 0;
+    }
+
+    .popover-title,
+    .popover-body {
+      color: $text-color !important;
+    }
+  }
+}
+
+/***********************************/
+/**           dropzone            **/
+/***********************************/
+.dropzone .dz-preview .dz-image {
+  border-radius: 0 !important;
+}
+
+/***********************************/
+/**         fullcalendar          **/
+/***********************************/
+.fc-day.fc-today {
+  background-color: $widget-bg-color !important;
 }

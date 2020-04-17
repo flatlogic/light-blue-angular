@@ -4,9 +4,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { ProfileComponent } from './profile.component';
+import { WidgsterModule } from '../../components/widgster/widgster.module';
 
 export const routes = [
-  {path: '', component: ProfileComponent, pathMatch: 'full'}
+  { path: '', component: ProfileComponent, pathMatch: 'full' }
 ];
 
 @NgModule({
@@ -18,8 +19,7 @@ export const routes = [
     CommonModule,
     FormsModule,
     RouterModule.forChild(routes),
+    WidgsterModule
   ]
 })
-export class ProfileModule {
-  static routes = routes;
-}
+export class ProfileModule { }

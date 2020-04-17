@@ -5,12 +5,10 @@
 <h1 class="page-title">Buttons - <span class="fw-semi-bold">Styles</span></h1>
 <div class="row">
   <div class="col-md-6 col-12">
-    <widget
-      [title]="'<h5>Color <span class=fw-semi-bold>Options</span></h5>'"
-      [close]="true"
-      [collapse]="true"
-      [customHeader]="true"
-    >
+    <section widgster [optionsControl]="false" [reloadControl]="false" [fullscreenControl]="false">
+      <h5 *widgsterTitle>
+        Color <span class=fw-semi-bold>Options</span>
+      </h5>
       <p class="fs-mini text-muted">
         Use any of the available button classes to quickly create a styled button.
         Semantically distinguishable beauty.
@@ -41,32 +39,28 @@
           Inverse
         </button>
       </p>
-    </widget>
+    </section>
   </div>
   <div class="col-md-6 col-12">
-    <widget
-      [title]="'<h5>Size <span class=fw-semi-bold>Variants</span></h5>'"
-      [close]="true"
-      [collapse]="true"
-      [customHeader]="true"
-    >
+    <section widgster [optionsControl]="false" [reloadControl]="false" [fullscreenControl]="false">
+      <h5 *widgsterTitle>
+        Size <span class=fw-semi-bold>Variants</span>
+      </h5>
       <p class="fs-mini text-muted">
         Fancy larger or smaller buttons? Four separate sizes available for all use cases: from
         tiny 10px button to large one.
       </p>
-        <button type="button" class="btn btn-default btn-lg">Large button</button>
-        <button type="button" class="btn btn-primary">Default button</button>
-        <button type="button" class="btn btn-info btn-sm">Small button</button>
-        <button type="button" class="btn btn-success btn-xs">Tiny button</button>
-    </widget>
+      <button type="button" class="btn btn-default btn-lg">Large button</button>
+      <button type="button" class="btn btn-primary">Default button</button>
+      <button type="button" class="btn btn-info btn-sm">Small button</button>
+      <button type="button" class="btn btn-success btn-xs">Tiny button</button>
+    </section>
   </div>
   <div class="col-md-6 col-12">
-    <widget
-      [title]="'<h5><span class=fw-semi-bold>Buttons</span></h5>'"
-      [close]="true"
-      [collapse]="true"
-      [customHeader]="true"
-    >
+    <section widgster [optionsControl]="false" [reloadControl]="false" [fullscreenControl]="false">
+      <h5 *widgsterTitle>
+        <span class=fw-semi-bold>Buttons</span>
+      </h5>
       <p class="fs-mini text-muted">
         In need of a button, but not the hefty background colors they bring? Use property to remove all background
         images and colors on any button.
@@ -97,15 +91,13 @@
           Inverse
         </button>
       </p>
-    </widget>
+    </section>
   </div>
   <div class="col-md-6 col-12">
-    <widget
-      [title]="'<h5>Color <span class=fw-semi-bold>Options</span></h5>'"
-      [close]="true"
-      [collapse]="true"
-      [customHeader]="true"
-    >
+    <section widgster [optionsControl]="false" [reloadControl]="false" [fullscreenControl]="false">
+      <h5 *widgsterTitle>
+        Color <span class=fw-semi-bold>Options</span>
+      </h5>
       <p class="fs-mini text-muted">
         Use any of the available button properties to quickly create a styled button.
         Semantically distinguishable beauty. Use
@@ -137,15 +129,13 @@
           Inverse
         </button>
       </p>
-    </widget>
+    </section>
   </div>
   <div class="col-md-6 col-12">
-    <widget
-      [title]="'<h5>Block <span class=fw-semi-bold>Buttons</span></h5>'"
-      [close]="true"
-      [collapse]="true"
-      [customHeader]="true"
-    >
+    <section widgster [optionsControl]="false" [reloadControl]="false" [fullscreenControl]="false">
+      <h5 *widgsterTitle>
+        Block <span class=fw-semi-bold>Buttons</span>
+      </h5>
       <p class="fs-mini text-muted">
         Create block level buttons - those that span the full width
         of a parent— by adding <code>.btn-block</code>.
@@ -155,23 +145,23 @@
         <button type="button" class="btn btn-info btn-block">Block Button</button>
       </p>
       <p>
-        <button type="button" class="btn btn-default btn-block">Show Menu &nbsp;&nbsp;&nbsp;<i class="fa fa-bars"></i></button>
+        <button type="button" class="btn btn-default btn-block">Show Menu &nbsp;&nbsp;&nbsp;<i
+            class="fa fa-bars"></i></button>
       </p>
       <p>
-        <button type="button" class="btn btn-primary btn-block"><i class="fa fa-facebook"></i> Login mit Facebook</button>
+        <button type="button" class="btn btn-primary btn-block"><i class="fa fa-facebook"></i> Login mit
+          Facebook</button>
       </p>
       <p>
         <button type="button" class="btn btn-warning btn-block">Are you sure?</button>
       </p>
-    </widget>
+    </section>
   </div>
   <div class="col-md-6 col-12">
-    <widget
-      [title]="'<h5>Disabled <span class=fw-semi-bold>Buttons</span></h5>'"
-      [close]="true"
-      [collapse]="true"
-      [customHeader]="true"
-    >
+    <section widgster [optionsControl]="false" [reloadControl]="false" [fullscreenControl]="false">
+      <h5 *widgsterTitle>
+        Disabled <span class=fw-semi-bold>Buttons</span>
+      </h5>
       <p class="fs-mini text-muted">
         Make buttons look unclickable by fading them back 50%.
         Add the <code>.disabled</code> class to <code>&lt;a&gt;</code> buttons.
@@ -184,15 +174,13 @@
         <a href="#" class="btn btn-success btn-sm disabled" role="button">Primary link</a>
         <a href="#" class="btn btn-default btn-sm disabled" role="button">Link</a>
       </p>
-    </widget>
+    </section>
   </div>
   <div class="col-md-6 col-12">
-    <widget
-      [title]="'<h5>Button <span class=fw-semi-bold>Groups</span></h5>'"
-      [close]="true"
-      [collapse]="true"
-      [customHeader]="true"
-    >
+    <section widgster [optionsControl]="false" [reloadControl]="false" [fullscreenControl]="false">
+      <h5 *widgsterTitle>
+        Button <span class=fw-semi-bold>Groups</span>
+      </h5>
       <p class="fs-mini text-muted">
         Group a series of buttons together on a single line with the button group.
         Add on optional JavaScript radio and checkbox style behavior with Bootstrap buttons plugin.
@@ -217,15 +205,13 @@
       <div class="btn-group">
         <button type="button" class="btn btn-default">8</button>
       </div>
-    </widget>
+    </section>
   </div>
   <div class="col-md-6 col-12">
-    <widget
-      [title]="'<h5>Button <span class=fw-semi-bold>Dropdowns</span></h5>'"
-      [close]="true"
-      [collapse]="true"
-      [customHeader]="true"
-    >
+    <section widgster [optionsControl]="false" [reloadControl]="false" [fullscreenControl]="false">
+      <h5 *widgsterTitle>
+        Button <span class=fw-semi-bold>Dropdowns</span>
+      </h5>
       <p class="fs-mini text-muted">
         Add dropdown menus to nearly anything with this simple plugin, including the buttons,
         navbar, tabs, and pills.
@@ -285,15 +271,13 @@
           </ul>
         </div>
       </div>
-    </widget>
+    </section>
   </div>
 </div>
-<widget
-  [title]="'<h6>Button <span class=fw-semi-bold>Options</span></h6>'"
-  [close]="true"
-  [collapse]="true"
-  [customHeader]="true"
->
+<section widgster [optionsControl]="false" [reloadControl]="false" [fullscreenControl]="false">
+  <h5 *widgsterTitle>
+    Button <span class=fw-semi-bold>Options</span>
+  </h5>
   <div class="row">
     <div class="col-xl-4 col-12">
       <h4>
@@ -370,7 +354,8 @@
         Use with <span class="fw-semi-bold">Icons</span>
       </h4>
       <p class="fs-mini text-muted">
-        Fontawesome and Glyph- icons may be used in buttons, button groups for a toolbar, navigation, or prepended form inputs.
+        Fontawesome and Glyph- icons may be used in buttons, button groups for a toolbar, navigation, or prepended form
+        inputs.
         Let your buttons shine!
       </p>
       <p class="text-center">
@@ -397,12 +382,12 @@
           <span class="text-info">Globe</span>
         </button>
         <button class="btn btn-inverse width-100 mb-xs" role="button">
-                              <span class="circle bg-white">
-                                  <i class="fa fa-map-marker text-gray"></i>
-                              </span>
+          <span class="circle bg-white">
+            <i class="fa fa-map-marker text-gray"></i>
+          </span>
           Map
         </button>
       </p>
     </div>
   </div>
-</widget>
+</section>

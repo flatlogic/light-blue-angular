@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
-import { SkyconDirective } from './scycon.directive';
+
+import { SkyconComponent } from './skycon.component';
 
 @NgModule({
   declarations: [
-    SkyconDirective
+    SkyconComponent
   ],
   exports: [
-    SkyconDirective
+    SkyconComponent
   ]
 })
 export class SkyconsModule {

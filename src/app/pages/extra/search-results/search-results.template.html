@@ -5,22 +5,22 @@
 <h1 class="page-title">Matching - <span class="fw-semi-bold">Results</span></h1>
 <div class="clearfix">
   <div class="btn-toolbar">
-    <div class="btn-group">
-      <button data-toggle="dropdown" class="btn dropdown-toggle btn-default">
+    <div class="btn-group" dropdown>
+      <button dropdownToggle class="btn dropdown-toggle btn-default">
         Popular <span class="caret"></span>
       </button>
-      <ul class="dropdown-menu">
+      <ul *dropdownMenu class="dropdown-menu">
         <li><a class="dropdown-item" href="#">All</a></li>
         <li><a class="dropdown-item" href="#">Popular</a></li>
         <li><a class="dropdown-item" href="#">Interesting</a></li>
         <li><a class="dropdown-item" href="#">Latest</a></li>
       </ul>
     </div>
-    <div class="btn-group ml-xs">
-      <button data-toggle="dropdown" class="btn dropdown-toggle btn-default">
+    <div dropdown class="btn-group ml-xs">
+      <button dropdownToggle class="btn dropdown-toggle btn-default">
         All Time <span class="caret"></span>
       </button>
-      <ul class="dropdown-menu">
+      <ul *dropdownMenu class="dropdown-menu">
         <li><a class="dropdown-item" href="#">Last 24h</a></li>
         <li><a class="dropdown-item" href="#">Last Month</a></li>
         <li><a class="dropdown-item" href="#">Last Year</a></li>
@@ -33,7 +33,7 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-lg-3 order-lg-2">
+  <div class="search-result col-lg-3 order-lg-2">
     <h5>Results <span class="fw-semi-bold">Filtering</span></h5>
     <p class="fs-mini">Listed content is categorized by the following groups:</p>
     <ul class="nav nav-pills nav-stacked flex-column search-result-categories mt">
@@ -44,9 +44,9 @@
         </a>
       </li>
       <li class="nav-item"><a class="nav-link" href="#">
-        Latest Pictures
-        <span class="badge badge-pill badge-default float-right">9</span>
-      </a></li>
+          Latest Pictures
+          <span class="badge badge-pill badge-default float-right">9</span>
+        </a></li>
       <li class="nav-item"><a class="nav-link" href="#">tags of Day</a></li>
       <li class="nav-item">
         <a class="nav-link" href="#">

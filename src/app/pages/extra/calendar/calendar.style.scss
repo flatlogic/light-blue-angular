@@ -1,4 +1,6 @@
-@import "../../../../../node_modules/fullcalendar/dist/fullcalendar";
+@import '~@fullcalendar/core/main';
+@import '~@fullcalendar/daygrid/main';
+@import '~@fullcalendar/timegrid/main';
 @import "../../../styles/helpers";
 
 /**************************/
@@ -17,10 +19,6 @@
   color: $text-color;
 }
 
-.fc-today{
-  background-color: #fff1b8;
-}
-
 a.fc-event{
   height: auto;
   line-height: $line-height-base;
@@ -35,6 +33,7 @@ a.fc-event{
 }
 
 .calendar-controls{
+  margin-bottom: 35px;
   .btn{
     font-size: $font-size-mini;
   }

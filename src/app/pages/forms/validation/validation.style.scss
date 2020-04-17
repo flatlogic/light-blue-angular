@@ -1,21 +1,8 @@
 @import "../../../styles/helpers";
 
-/***********************************/
-/**            PARSLEY            **/
-/***********************************/
-
-
-input.parsley-error{
-  border-color: theme-color('danger');
-}
-
-.parsley-errors-list{
-  font-size: $small-font-size;
+.error {
+  font-size: 85%;
   padding-left: 0;
   margin-bottom: 5px;
-
-  li{
-    list-style: none;
-    color: theme-color('danger');
-  }
+  color: #db4912;
 }

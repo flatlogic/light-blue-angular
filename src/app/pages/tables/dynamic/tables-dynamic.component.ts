@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation, ViewChild } from '@angular/core';
-import { DatatableComponent } from '@swimlane/ngx-datatable';
+import { DatatableComponent, ColumnMode } from '@swimlane/ngx-datatable';
 import { tableData } from './tables-dynamic.data';
-declare let jQuery: any;
+import { Columns, Config, DefaultConfig, APIDefinition, API } from 'ngx-easy-table';
 
 const PEOPLE = [
   {
@@ -279,17 +279,29 @@ export class TablesDynamicComponent implements OnInit {
   people: any[] = PEOPLE;
   peopleTemp: any[] = [...PEOPLE];
 
-  @ViewChild(DatatableComponent, {static: true}) table: DatatableComponent;
+  public columnMode: typeof ColumnMode = ColumnMode;
+
+  public configuration: Config;
+  public columns: Columns[] = [
+    { key: 'name', title: 'Name' },
+    { key: 'position', title: 'Position' },
+    { key: 'office', title: 'Office' },
+    { key: 'ext', title: 'Extn.' },
+    { key: 'startDate', title: 'Start date' },
+    { key: 'salary', title: 'Salary' }
+  ];
+
+  @ViewChild(DatatableComponent, { static: true }) table: DatatableComponent;
 
   rows: Array<any> = [];
-  columns: Array<any> = [
-    {title: 'Name', name: 'name'},
-    {title: 'Position', name: 'position', sort: false},
-    {title: 'Office', name: 'office', sort: 'asc'},
-    {title: 'Extn.', name: 'ext', sort: ''},
-    {title: 'Start date', name: 'startDate'},
-    {title: 'Salary ($)', name: 'salary'}
-  ];
+ /*  columnss: Array<any> = [
+    { title: 'Name', name: 'name' },
+    { title: 'Position', name: 'position', sort: false },
+    { title: 'Office', name: 'office', sort: 'asc' },
+    { title: 'Extn.', name: 'ext', sort: '' },
+    { title: 'Start date', name: 'startDate' },
+    { title: 'Salary ($)', name: 'salary' }
+  ]; */
   page: number = 1;
   itemsPerPage: number = 10;
   maxSize: number = 5;
@@ -298,8 +310,8 @@ export class TablesDynamicComponent implements OnInit {
 
   config: any = {
     paging: true,
-    sorting: {columns: this.columns},
-    filtering: {filterString: '', columnName: 'position'}
+    sorting: { columns: this.columns },
+    filtering: { filterString: '', columnName: 'position' }
   };
 
   ng2TableData: Array<any> = tableData;
@@ -309,15 +321,12 @@ export class TablesDynamicComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const searchInput = jQuery('#table-search-input, #search-countries');
-    searchInput
-      .focus((e) => {
-      jQuery(e.target).closest('.input-group').addClass('focus');
-    })
-      .focusout((e) => {
-      jQuery(e.target).closest('.input-group').removeClass('focus');
-    });
     this.onChangeTable(this.config);
+
+    this.configuration = { ...DefaultConfig };
+    this.configuration.searchEnabled = true;
+    this.configuration.orderEnabled = true;
+    this.configuration.threeWaySort = true;
   }
 
   changePage(page: any, data: Array<any> = this.ng2TableData): Array<any> {
@@ -368,7 +377,7 @@ export class TablesDynamicComponent implements OnInit {
     return filteredData;
   }
 
-  onChangeTable(config: any, page: any = {page: this.page, itemsPerPage: this.itemsPerPage}): any {
+  onChangeTable(config: any, page: any = { page: this.page, itemsPerPage: this.itemsPerPage }): any {
     if (config.filtering) {
       Object.assign(this.config.filtering, config.filtering);
     }
@@ -386,7 +395,7 @@ export class TablesDynamicComponent implements OnInit {
     const val = event.target.value.toLowerCase();
 
     // filter our data
-    const temp = this.peopleTemp.filter(function(d) {
+    const temp = this.peopleTemp.filter(function (d) {
       return d.name.toLowerCase().indexOf(val) !== -1 || !val;
     });
 

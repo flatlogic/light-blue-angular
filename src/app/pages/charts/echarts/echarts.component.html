@@ -1,0 +1,131 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">YOU ARE HERE</li>
+  <li class="active breadcrumb-item">Echarts</li>
+</ol>
+<h1 class="page-title">Echarts</h1>
+<div class="row">
+  <div class="col-12 col-lg-6 col-xl-5">
+    <section widgster [optionsControl]="false" [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Echarts <span class=fw-semi-bold>Bar Chart</span>
+      </h5>
+      <div style="height: 220px;" class="chart-overflow-bottom" echarts [options]="echartBarChartData"></div>
+      <div class="stats-row text-muted mt-xlg">
+        <div class="stat-item">
+          <h6 class="name">ARR ($)</h6>
+          <p class="value">4 375 800</p>
+        </div>
+        <div class="stat-item">
+          <h6 class="name">MRR ($)</h6>
+          <p class="value">863 425</p>
+        </div>
+        <div class="stat-item">
+          <h6 class="name">TTN ($)</h6>
+          <p class="value">5 634 100</p>
+        </div>
+        <div class="stat-item">
+          <h6 class="name">MRR / ARR </h6>
+          <p class="value">0.1634</p>
+        </div>
+      </div>
+      <hr />
+      <div class="d-flex justify-content-between">
+        <small>
+          <span class="badge badge-warning">Profit</span> Legend Item Emulation
+        </small>
+        <small>
+          <span class="badge badge-danger">Loss</span> Legend Item Emulation
+        </small>
+      </div>
+    </section>
+  </div>
+  <div class="col-12 col-lg-6 col-xl-4">
+    <section widgster [optionsControl]="false" [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Echarts <span class=fw-semi-bold>Pie Chart</span>
+      </h5>
+      <div style="height: 200px;" echarts [options]="echartPieChartData"></div>
+      <alert class="text-muted" [type]="'white'" [isOpen]="true" [dismissible]="true">
+        <h5>Sales Report</h5>
+        <progressbar class="progress-xs" [value]="16"></progressbar>
+        <p class="text-muted">
+          <small>Prev year quota achievement 16%. Should work harder!</small>
+        </p>
+      </alert>
+    </section>
+  </div>
+  <div class="col-12 col-lg-6 col-xl-3">
+    <section style="overflow: hidden" widgster [optionsControl]="false" [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Mixed <span class=fw-semi-bold>Echarts</span>
+      </h5>
+      <div class="stats-row text-muted mt">
+        <div class="stat-item">
+          <h6 class="name">Overall Growth</h6>
+          <p class="value">43.75%</p>
+        </div>
+        <div class="stat-item">
+          <h6 class="name">Montly</h6>
+          <p class="value">86.34%</p>
+        </div>
+      </div>
+      <p class="text-muted fs-mini">
+        <span class="fw-semi-bold">17% higher</span> than last month
+      </p>
+      <div style="height: 200px;" class="chart-overflow-bottom" echarts [options]="echartAreaChartData">
+      </div>
+    </section>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 col-lg-7 col-xl-9">
+    <section widgster [optionsControl]="false" [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Echarts <span class=fw-semi-bold>Area Chart</span>
+      </h5>
+      <div style="height: 350px;" class="chart-overflow-bottom" echarts [options]="echartLineChartData">
+      </div>
+    </section>
+  </div>
+  <div class="col-12 col-lg-5 col-xl-3">
+    <section widgster [optionsControl]="false" [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Echarts <span class=fw-semi-bold>Pie Chart</span>
+      </h5>
+      <div style="height: 270px;" class="chart-overflow-bottom" echarts [options]="echartPieChartData2">
+      </div>
+      <p class="mt">Possible actions:</p>
+      <div class="buttons">
+        <div class="btn-group">
+          <button class="btn btn-light">Yoga</button>
+          <button class="btn btn-light">Coffee</button>
+          <button class="btn btn-light">Dancing</button>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="col-12 col-lg-6">
+    <section widgster [optionsControl]="false" [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Echarts <span class=fw-semi-bold>Bar Chart</span>
+      </h5>
+      <div class="input-group input-group-transparent">
+        <input class="form-control" type="text" size="16" placeholder="Filter By Period: MM/DD/YYY" />
+        <div class="input-group-append bg-white" slot="append">
+          <span class="input-group-text"><i class="fa fa-search"></i></span>
+        </div>
+      </div>
+      <div style="height: 320px;" class="chart-overflow-bottom" echarts [options]="echartBarChartData2">
+      </div>
+    </section>
+  </div>
+  <div class="col-12 col-lg-6">
+    <section widgster [optionsControl]="false" [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Echarts <span class=fw-semi-bold>Line Chart</span>
+      </h5>
+      <div style="height: 350px;" class="chart-overflow-bottom" echarts [options]="echartLineChartData2">
+      </div>
+    </section>
+  </div>
+</div>

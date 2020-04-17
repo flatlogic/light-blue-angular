@@ -4,361 +4,219 @@
   <li class="breadcrumb-item active">Overview</li>
 </ol>
 <h1 class="page-title">Visual - <span class="fw-semi-bold">Charts</span></h1>
-<div data-ng-controller="ChartsDemoController">
-  <div class="row">
-    <div class="col-lg-7 col-12">
-      <section class="widget" widget>
-        <header>
-          <h5>
-            <span class="fw-semi-bold">D3</span> Charts
-          </h5>
-          <div class="widget-controls">
-            <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-          </div>
-        </header>
-        <div class="widget-body">
-          <p class="fs-mini text-muted">
-            This is a very young collection of components, with the goal of keeping these components
-            very customizeable.
-          </p>
-          <div nvd3-chart [chart]="nvd32Chart" [datum]="nvd32Data">
-            <svg></svg>
-          </div>
-        </div>
-      </section>
-    </div>
-    <div class="col-lg-5 col-12">
-      <section class="widget" widget>
-        <header>
-          <h5>
-            Realtime <span class="fw-semi-bold">Rickshaw</span>
-          </h5>
-          <div class="widget-controls">
-            <a data-widgster="expand" title="Expand" href="#"><i class="la la-angle-up"></i></a>
-            <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
-            <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-          </div>
-        </header>
-        <div class="widget-body">
-          <p class="fs-mini text-muted mb-lg">
-            Rickshaw provides the elements you need to create interactive graphs: renderers, legends,
-            hovers, range selectors, etc. You put the pieces together.
-            It's all based on <span class="fw-semi-bold">d3</span> underneath, so graphs are drawn with standard SVG and
-            styled with CSS.
-            Customize all you like with techniques you already know.
-          </p>
-          <h5>720 Users</h5>
-          <div class="bg-gray-lighter progress progress-xs">
-            <div class="progress-bar progress-xs bg-gray" style="width: 60%;" data-width="60%"></div>
-          </div>
-          <p class="fs-mini text-muted mb-lg">
-                            <span class="circle bg-success text-white">
-                                <i class="fa fa-circle"></i>
-                            </span>
-            &nbsp;
-            Target <span class="fw-semi-bold">820</span> users
-            is <span class="fw-semi-bold">96%</span> reached.
-          </p>
-          <div rickshaw-chart [series]="series" [height]="130"
-               [realtime]="true" [random]="random" [seriesData]="seriesData" class="chart-overflow-bottom"></div>
-        </div>
-      </section>
-    </div>
-    <div class="col-lg-6 col-xl-5 col-12">
-      <section class="widget" widget>
-        <header>
-          <h5>
-            Flot <span class="fw-semi-bold">Charts</span>
-          </h5>
-          <div class="widget-controls">
-            <a data-widgster="expand" title="Expand" href="#"><i class="la la-angle-up"></i></a>
-            <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
-            <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-          </div>
-        </header>
-        <div class="widget-body">
-          <div class="mt mb" id="flot-main" style="width: 100%; height: 260px;" flot-chart-animator
-               [data]="[{
-                        label: 'Traffic',
-                        data: data3,
-                        lines: {
-                            fill: .3,
-                            lineWidth: 0
-                        },
-                        color:['#ffdb6f']
-                    },{
-                        label: 'Traffic',
-                        data: data2,
-                        lines: {
-                            fill: 0.6,
-                            lineWidth: 0
-                        },
-                        color:['#ffaa73']
-                    },{
-                        label: 'Traffic',
-                        data: data1,
-                        animator: {steps: 60, duration: 1000, start:0},
-                        lines: {lineWidth:2},
-                        shadowSize:0,
-                        color: '#ffc247'
-                }]"></div>
-          <div class="chart-tooltip" id="flot-main-tooltip" style="opacity: 0"></div>
-          <p class="fs-mini text-muted">
-            Flot is a <span class="fw-semi-bold">pure</span> JavaScript plotting library for jQuery, with a
-            focus on simple usage, attractive looks and interactive features.
-          </p>
-          <h5 class="mt">Interactive <span class="fw-semi-bold">Sparklines</span></h5>
-          <div class="row mt">
-            <div class="col-md-6 col-12">
-              <div class="stats-row">
-                <div class="stat-item">
-                  <p class="value5 fw-thin">34 567</p>
-                  <h6 class="name text-muted m-0 fs-mini">Overall Values</h6>
-                </div>
-                <div class="stat-item stat-item-mini-chart">
-                  <div class="sparkline" jq-sparkline [data]="[9,12,14,15,10,14,20]"
-                       [options]="{type: 'bar', barColor: '#f0b518', height: '30px', barWidth: 6, barSpacing: 2}"></div>
-                </div>
-              </div>
+<div class="row">
+  <div class="col-lg-6 col-12">
+    <section widgster [optionsControl]="false" [fullscreenControl]="false" [collapseControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        <span class="fw-semi-bold">Ngx</span> Charts
+      </h5>
+      <p class="fs-mini text-muted">
+        This is a very young collection of components, with the goal of keeping these components
+        very customizeable.
+      </p>
+      <div style="height: 250px;">
+        <ngx-charts-bar-vertical-2d [scheme]="ngxGroupedVerticalBarChartData.colorScheme"
+          [results]="ngxGroupedVerticalBarChartData.results" [gradient]="ngxGroupedVerticalBarChartData.gradient"
+          [xAxis]="ngxGroupedVerticalBarChartData.showXAxis" [yAxis]="ngxGroupedVerticalBarChartData.showYAxis"
+          [legend]="ngxGroupedVerticalBarChartData.showLegend"
+          [yAxisTickFormatting]="ngxGroupedVerticalBarChartData.yAxisTickFormatting">
+        </ngx-charts-bar-vertical-2d>
+      </div>
+    </section>
+  </div>
+  <div class="col-lg-6 col-12">
+    <section class="realtime-echarts" widgster [optionsControl]="false" [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Realtime <span class="fw-semi-bold">Echarts</span>
+      </h5>
+      <h5>720 Users</h5>
+      <div class="bg-gray-lighter progress progress-xs">
+        <div class="progress-bar progress-xs bg-gray" style="width: 60%;" data-width="60%"></div>
+      </div>
+      <p class="fs-mini text-muted mb-lg">
+        <span class="circle bg-success text-white">
+          <i class="fa fa-circle"></i>
+        </span>
+        &nbsp;
+        Target <span class="fw-semi-bold">820</span> users
+        is <span class="fw-semi-bold">96%</span> reached.
+      </p>
+      <div style="height: 225px;" class="chart-overflow-bottom" echarts [options]="echartDynamicAreaData"
+        [merge]="echartDynamicAreaDataUpdate">
+      </div>
+    </section>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-6 col-12">
+    <section widgster [optionsControl]="false" [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Apex <span class="fw-semi-bold">Charts</span>
+      </h5>
+      <apx-chart class="chart-inner transparent-bg" [series]="apexOptions3.series" [stroke]="apexOptions3.stroke"
+        [chart]="apexOptions3.chart" [colors]="apexOptions3.colors" [legend]="apexOptions3.legend"
+        [xaxis]="apexOptions3.xaxis" [yaxis]="apexOptions3.yaxis" [tooltip]="apexOptions3.tooltip">
+      </apx-chart>
+      <div class="chart-tooltip" id="flot-main-tooltip" style="opacity: 0"></div>
+      <h5 class="mt">Interactive <span class="fw-semi-bold">Sparklines</span></h5>
+      <div class="row mt">
+        <div class="col-md-6 col-12">
+          <div class="stats-row">
+            <div class="stat-item">
+              <p class="value5 fw-thin">34 567</p>
+              <h6 class="name text-muted m-0 fs-mini">Overall Values</h6>
             </div>
-            <div class="col-md-6 col-12">
-              <div class="stats-row">
-                <div class="stat-item">
-                  <p class="value5 fw-thin">34 567</p>
-                  <h6 class="name text-muted m-0 fs-mini">Overall Values</h6>
-                </div>
-                <div class="stat-item stat-item-mini-chart">
-                  <div class="sparkline" jq-sparkline [data]="[9,12,14,15,10,14,20]"
-                       [options]="{type: 'bar', barColor: '#FFA587', height: '30px', barWidth: 6, barSpacing: 2}"></div>
-                </div>
+            <div class="stat-item stat-item-mini-chart">
+              <div style="height: 30px; width: 54px;" echarts [options]="echartBarChartData3">
               </div>
             </div>
           </div>
-
-          <p class="fs-mini text-muted">
-            This jQuery plugin generates sparklines (small inline charts) directly in the browser using
-            data supplied either inline in the HTML, or via javascript.
-          </p>
         </div>
-      </section>
-    </div>
-    <div class="col-lg-3 col-xl-7 col-12">
-      <div class="row">
-        <div class="col-lg-7 col-12">
-          <section class="widget" widget>
-            <header>
-              <h5>
-                Easy <span class="fw-semi-bold">Pie Charts</span>
-              </h5>
-              <div class="widget-controls">
-                <a data-widgster="expand" title="Expand" href="#"><i class="la la-angle-up"></i></a>
-                <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
-                <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-              </div>
-            </header>
-            <div class="widget-body clearfix">
-              <div class="text-center">
-                <div class="easy-pie-chart-md mb-lg" data-percent="73">73</div>
-              </div>
-              <p class="fs-mini text-muted">
-                Easy pie chart is a jQuery plugin that uses the canvas element to render simple pie charts
-                for single values. These charts are highly customizable, very easy to implement, scale to
-                the resolution of the display of the client to provide sharp charts even on retina displays.
-              </p>
+        <div class="col-md-6 col-12">
+          <div class="stats-row">
+            <div class="stat-item">
+              <p class="value5 fw-thin">34 567</p>
+              <h6 class="name text-muted m-0 fs-mini">Overall Values</h6>
             </div>
-          </section>
-        </div>
-        <div class="col-lg-5 col-12">
-          <section class="widget" widget>
-            <header>
-              <h5>
-                Sparkline <span class="fw-semi-bold">Pie Charts</span>
-              </h5>
-              <div class="widget-controls">
-                <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+            <div class="stat-item stat-item-mini-chart">
+              <div style="height: 30px; width: 54px;" echarts [options]="echartBarChartData4">
               </div>
-            </header>
-            <div class="widget-body">
-              <p class="fs-mini text-muted">
-                Each example displayed below takes just 1 line of HTML or javascript to generate.
-              </p>
-              <div jq-sparkline [data]="sparklinePieData" [options]="sparklinePieOptions"
-                   class="chart-overflow-bottom mb-0 text-center"></div>
             </div>
-          </section>
-        </div>
-        <div class="col-12">
-          <section class="widget" widget>
-            <header>
-              <h5>
-                Sparkline <span class="fw-semi-bold">Line Charts</span>
-              </h5>
-              <div class="widget-controls">
-                <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-              </div>
-            </header>
-            <div class="widget-body">
-              <div #sparklineLineChart class="chart-overflow-bottom mb-0 text-center"></div>
-            </div>
-          </section>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   </div>
-  <div class="row">
-    <div class="col-12">
-      <section class="widget" widget>
-        <header>
-          <h5>
-            <span class="fw-semi-bold">D3</span> Charts
-          </h5>
-          <div class="widget-controls">
-            <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-          </div>
-        </header>
-        <div class="widget-body">
-          <p class="fs-mini text-muted">
-            This project is an attempt to build re-usable charts and chart components for <span class="fw-semi-bold">d3.js</span>
-            without
-            taking away the power that d3.js gives you.
-          </p>
-          <div nvd3-chart [chart]="nvd31Chart" [datum]="nvd31Data">
-            <svg></svg>
-          </div>
-        </div>
-      </section>
-    </div>
+  <div class="col-lg-6 col-12">
+    <section widgster [optionsControl]="false" [fullscreenControl]="false" [reloadControl]="false" bodyClass="clearfix">
+      <h5 *widgsterTitle>
+        Highcharts <span class="fw-semi-bold">Line Chart</span>
+      </h5>
+      <div class="text-center">
+        <highcharts-chart *ngIf="smallHighchartsOptions5" style="display: block; width: 100%;" [Highcharts]="Highcharts"
+          [options]="smallHighchartsOptions5">
+        </highcharts-chart>
+      </div>
+    </section>
   </div>
-  <div class="row">
-    <div class="col-lg-6 col-12">
-      <section class="widget" widget>
-        <header>
-          <h5>
-            Morris <span class="fw-semi-bold">Area Charts</span>
-          </h5>
-          <div class="widget-controls">
-            <a data-widgster="expand" title="Expand" href="#"><i class="la la-angle-up"></i></a>
-            <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
-            <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-          </div>
-        </header>
-        <div class="widget-body">
-          <p class="fs-mini text-muted">
-            Good-looking charts shouldn't be difficult.
-            The public API is terribly simple. It's just one function: <code>Morris.Line(options)</code>,
-            where options is an object containing some of the following configuration options.
-          </p>
-          <div morris-chart [type]="'area'" [height]="343" [options]="morris2Options">
-          </div>
-        </div>
-      </section>
-    </div>
-    <div class="col-lg-6 col-12">
-      <section class="widget" widget>
-        <header>
-          <h5>
-            Morris <span class="fw-semi-bold">Line Charts</span>
-          </h5>
-          <div class="widget-controls">
-            <a data-widgster="expand" title="Expand" href="#"><i class="la la-angle-up"></i></a>
-            <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
-            <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-          </div>
-        </header>
-        <div class="widget-body">
-          <p class="fs-mini text-muted">
-            Good-looking charts shouldn't be difficult.
-            The public API is terribly simple. It's just one function: <code>Morris.Line(options)</code>,
-            where options is an object containing some of the following configuration options.
-          </p>
-          <div morris-chart [type]="'line'" [height]="343" [options]="morris1Options">
-          </div>
-        </div>
-      </section>
-    </div>
+</div>
+<div class="row">
+  <div class="col-md-3 col-12">
+    <section widgster [optionsControl]="false" [fullscreenControl]="false" [reloadControl]="false" [collapseControl]="false">
+      <h5 *widgsterTitle>
+        Echarts <span class="fw-semi-bold">Pie Chart</span>
+      </h5>
+      <div style="height: 200px;" class="chart-overflow-bottom mb-0 text-center" echarts [options]="echartPieChartData">
+      </div>
+    </section>
   </div>
-  <div class="row">
-    <div class="col-12 col-lg-6 col-xl-3">
-      <section class="widget" widget>
-        <header>
-          <h5>
-            Area <span class="fw-semi-bold">Sparkline</span>
-          </h5>
-          <div class="widget-controls">
-            <a data-widgster="expand" title="Expand" href="#"><i class="la la-angle-up"></i></a>
-            <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
-            <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-          </div>
-        </header>
-        <div class="widget-body">
-          <p class="fs-mini text-muted">
-            Each example displayed below takes just 1 line of HTML or javascript to generate.
-          </p>
-          <div class="stats-row mt">
-            <div class="stat-item">
-              <h6 class="name">Overall Growth</h6>
-              <p class="value">43.75%</p>
-            </div>
-            <div class="stat-item">
-              <h6 class="name">Montly</h6>
-              <p class="value">86.34%</p>
-            </div>
-          </div>
-          <p class="text-muted fs-mini">
-            <span class="fw-semi-bold">17% higher</span> than last month</p>
-          <div jq-sparkline [data]="sparklineCompositeData" [options]="sparklineCompositeOptions"
-               class="chart-overflow-bottom"></div>
+  <div class="col-md-9 col-12">
+    <section widgster [optionsControl]="false" [fullscreenControl]="false" [reloadControl]="false" [collapseControl]="false">
+      <h5 *widgsterTitle>
+        Echarts <span class="fw-semi-bold">Line Chart</span>
+      </h5>
+      <div style="height: 200px;" class="chart-overflow-bottom mb-0 text-center" echarts
+        [options]="echartLineChartData2">
+      </div>
+    </section>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <section widgster [optionsControl]="false" [fullscreenControl]="false" [reloadControl]="false" [collapseControl]="false">
+      <h5 *widgsterTitle>
+        <span class="fw-semi-bold">Ehcarts</span> Bar Chart
+      </h5>
+      <div style="height: 220px;" class="chart-overflow-bottom" echarts [options]="echartBarChartData">
+      </div>
+    </section>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-6 col-12">
+    <section widgster [optionsControl]="false" [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Ngx <span class="fw-semi-bold">Area Charts</span>
+      </h5>
+      <div style="height: 343px;">
+        <ngx-charts-area-chart [scheme]="ngxAreaChartData.colorScheme" [results]="ngxAreaChartData.results"
+          [gradient]="ngxAreaChartData.gradient" [xAxis]="ngxAreaChartData.showXAxis"
+          [yAxis]="ngxAreaChartData.showYAxis" [legend]="ngxAreaChartData.showLegend"
+          [showXAxisLabel]="ngxAreaChartData.showXAxisLabel" [showYAxisLabel]="ngxAreaChartData.showYAxisLabel"
+          [xAxisLabel]="ngxAreaChartData.xAxisLabel" [yAxisLabel]="ngxAreaChartData.yAxisLabel"
+          [autoScale]="ngxAreaChartData.autoScale" [xAxisTickFormatting]="ngxAreaChartData.xAxisTickFormatting">
+        </ngx-charts-area-chart>
+      </div>
+    </section>
+  </div>
+  <div class="col-lg-6 col-12">
+    <section widgster [optionsControl]="false" [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Ngx <span class="fw-semi-bold">Line Charts</span>
+      </h5>
+      <div style="height: 343px;">
+        <ngx-charts-line-chart [scheme]="ngxLineChartData.colorScheme" [results]="ngxLineChartData.results"
+          [gradient]="ngxLineChartData.gradient" [xAxis]="ngxLineChartData.showXAxis"
+          [yAxis]="ngxLineChartData.showYAxis" [legend]="ngxLineChartData.showLegend"
+          [showXAxisLabel]="ngxLineChartData.showXAxisLabel" [showYAxisLabel]="ngxLineChartData.showYAxisLabel"
+          [xAxisLabel]="ngxLineChartData.xAxisLabel" [yAxisLabel]="ngxLineChartData.yAxisLabel"
+          [autoScale]="ngxLineChartData.autoScale" [xAxisTickFormatting]="ngxLineChartData.xAxisTickFormatting">
+        </ngx-charts-line-chart>
+      </div>
+    </section>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 col-lg-6 col-xl-3">
+    <section class="area-chart" widgster [optionsControl]="false" [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Echarts <span class="fw-semi-bold">Area Chart</span>
+      </h5>
+      <div class="stats-row mt">
+        <div class="stat-item">
+          <h6 class="na  me">Overall Growth</h6>
+          <p class="value">43.75%</p>
         </div>
-      </section>
-    </div>
-    <div class="col-lg-6 col-xl-6 col-12">
-      <section class="widget" widget>
-        <header>
-          <h5>
-            Flot <span class="fw-semi-bold">Bars</span>
-          </h5>
-          <div class="widget-controls">
-            <a data-widgster="expand" title="Expand" href="#"><i class="la la-angle-up"></i></a>
-            <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
-            <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-          </div>
-        </header>
-        <div class="widget-body">
-          <div class="mt-lg" flot-chart
-               [data]="flotBarsData"
-               [options]="flotBarsOptions"
-               style="width: 100%; height: 260px;"></div>
-          <p class="fs-mini text-muted">
-            Flot is a <span class="fw-semi-bold">pure</span> JavaScript plotting library for jQuery, with a
-            focus on simple usage, attractive looks and interactive features.
-          </p>
+        <div class="stat-item">
+          <h6 class="name">Montly</h6>
+          <p class="value">86.34%</p>
         </div>
-      </section>
-    </div>
-    <div class="col-lg-6 col-xl-3 col-12">
-      <section class="widget" widget>
-        <header>
-          <h5>
-            Morris <span class="fw-semi-bold">Donut Charts</span>
-          </h5>
-          <div class="widget-controls">
-            <a data-widgster="expand" title="Expand" href="#"><i class="la la-angle-up"></i></a>
-            <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
-            <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-          </div>
-        </header>
-        <div class="widget-body">
-          <div morris-chart [type]="'donut'" [height]="180" [options]="morris3Options">
-          </div>
-          <p class="fs-mini text-muted">
-            Donuts a great for representing some parted information like traffice sources,
-            disk partitions, etc.
-            This really couldn't be easier. Create a Donut chart using <code>Morris.Donut(options)</code>,
-            with only few options.
-          </p>
-        </div>
-      </section>
-    </div>
-
+      </div>
+      <p class="text-muted fs-mini">
+        <span class="fw-semi-bold">17% higher</span> than last month</p>
+      <div style="height: 190px;" class="chart-overflow-bottom" echarts [options]="echartAreaChartData2">
+      </div>
+    </section>
+  </div>
+  <div class="col-lg-6 col-xl-6 col-12">
+    <section widgster [optionsControl]="false" [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Apex <span class="fw-semi-bold">Bars Chart</span>
+      </h5>
+      <apx-chart class="chart-inner transparent-bg" [chart]="apexOptions4.chart"
+        [plotOptions]="apexOptions4.plotOptions" [dataLabels]="apexOptions4.dataLabels" [stroke]="apexOptions4.stroke"
+        [series]="apexOptions4.series" [xaxis]="apexOptions4.xaxis" [yaxis]="apexOptions4.yaxis"
+        [colors]="apexOptions4.colors" [legend]="apexOptions4.legend" [tooltip]="apexOptions4.tooltip"
+        [grid]="apexOptions4.grid">
+      </apx-chart>
+    </section>
+  </div>
+  <div class="col-lg-6 col-xl-3 col-12">
+    <section widgster [optionsControl]="false" [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Ngx <span class="fw-semi-bold">Donut Charts</span>
+      </h5>
+      <div style="height: 210px;">
+        <ngx-charts-pie-chart *ngIf="ngxDoughnutChartData" [scheme]="ngxDoughnutChartData.colorScheme" [results]="ngxDoughnutChartData.results"
+          [gradient]="ngxDoughnutChartData.gradient" [legend]="ngxDoughnutChartData.showLegend"
+          [labels]="ngxDoughnutChartData.showLabels" [explodeSlices]="ngxDoughnutChartData.expllodeSlices"
+          [doughnut]="ngxDoughnutChartData.doughnut">
+        </ngx-charts-pie-chart>
+      </div>
+      <p class="fs-mini text-muted">
+        Donuts a great for representing some parted information like traffice sources,
+        disk partitions, etc.
+      </p>
+    </section>
   </div>
 </div>

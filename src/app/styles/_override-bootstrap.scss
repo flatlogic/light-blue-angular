@@ -2,7 +2,7 @@
 /*         Reset           */
 /***************************/
 
-a:focus{
+a:focus {
   outline: none;
 }
 
@@ -10,7 +10,8 @@ a:focus{
 /*          Type           */
 /***************************/
 
-ul, ol {
+ul,
+ol {
   margin: 0;
 }
 
@@ -18,14 +19,14 @@ hr {
   border-top: none;
 }
 
-blockquote{
+blockquote {
   border-width: 5px;
 
-  &.blockquote-sm{
+  &.blockquote-sm {
     padding: 0 0 0 15px;
     font-size: $font-size-base;
   }
-  p{
+  p {
     font-size: inherit;
     margin-bottom: $spacer / 2;
   }
@@ -53,11 +54,21 @@ h6,
   }
 }
 
-.text-primary        { color: theme-color('primary'); }
-.text-warning        { color: theme-color('warning'); }
-.text-danger         { color: theme-color('danger'); }
-.text-success        { color: theme-color('success'); }
-.text-info           { color: theme-color('info'); }
+.text-primary {
+  color: theme-color("primary");
+}
+.text-warning {
+  color: theme-color("warning");
+}
+.text-danger {
+  color: theme-color("danger");
+}
+.text-success {
+  color: theme-color("success");
+}
+.text-info {
+  color: theme-color("info");
+}
 
 @media (min-width: 768px) {
   .lead {
@@ -99,7 +110,7 @@ textarea {
   font-weight: $font-weight-base;
 }
 
-legend small{
+legend small {
   color: $text-muted;
   font-size: 14px;
 }
@@ -108,8 +119,8 @@ textarea.form-control {
   height: auto;
 }
 
-.form-control{
-  transition: border linear .2s, box-shadow linear .2s;
+.form-control {
+  transition: border linear 0.2s, box-shadow linear 0.2s;
   height: $input-height;
 
   &.form-control-lg {
@@ -120,11 +131,13 @@ textarea.form-control {
     height: $input-height-sm;
   }
 
-  &[type=search], &.search{
+  &[type="search"],
+  &.search {
     padding-left: 26px;
   }
 
-  &, &:focus {
+  &,
+  &:focus {
     box-shadow: none;
   }
 }
@@ -136,12 +149,14 @@ input[type="checkbox"]:focus {
   outline: none;
 }
 
-.input-group-btn > .btn, .btn-group > .btn {
+.input-group-btn > .btn,
+.btn-group > .btn {
   z-index: 3;
   height: 100%;
 }
 
-.input-group-btn:not(:first-child) > .btn, .input-group-btn:not(:first-child) > .btn-group {
+.input-group-btn:not(:first-child) > .btn,
+.input-group-btn:not(:first-child) > .btn-group {
   z-index: 3;
 }
 
@@ -183,12 +198,13 @@ legend {
   font-weight: $font-weight-normal;
 }
 
-.search-query, .navbar-form .search-query{
+.search-query,
+.navbar-form .search-query {
   border-radius: $border-radius-base;
   line-height: $spacer;
 }
 
-.form-horizontal{
+.form-horizontal {
   input,
   select,
   textarea,
@@ -201,8 +217,8 @@ legend {
   }
 }
 
-.form-group{
-  margin-bottom: $form-group-margin-bottom;   //~18px
+.form-group {
+  margin-bottom: $form-group-margin-bottom; //~18px
 }
 
 .form-horizontal.form-label-left {
@@ -227,11 +243,11 @@ legend {
 .input-group-addon {
   color: $text-muted;
 
-  .input-group-lg & > *{
+  .input-group-lg & > * {
     line-height: $line-height-lg;
   }
 
-  .input-group-sm & > *{
+  .input-group-sm & > * {
     line-height: $line-height-sm;
   }
 }
@@ -252,14 +268,15 @@ legend {
 /*        Tables        */
 /***************************/
 
-.table .table{
+.table .table {
   background-color: $bg-addition;
 }
 
 .table-hover {
   tbody {
-    td, th{
-      @include transition(background-color .2s);
+    td,
+    th {
+      @include transition(background-color 0.2s);
     }
   }
 }
@@ -267,7 +284,7 @@ legend {
 .table.table-striped,
 .table.table-hover {
   thead > tr > th,
-  tfoot > tr > td{
+  tfoot > tr > td {
     border-top: none;
   }
 }
@@ -278,14 +295,14 @@ legend {
   }
 }
 
-.table thead > tr > th{
+.table thead > tr > th {
   border-bottom: none;
   font-weight: 600;
   text-transform: uppercase;
   border-bottom-width: 1px;
 }
 
-.table > thead > tr > th{
+.table > thead > tr > th {
   font-weight: $font-weight-semi-bold;
   text-transform: uppercase;
   border-bottom-width: 1px;
@@ -317,12 +334,11 @@ legend {
   }
 }
 
-
 /***************************/
 /*        Dropdowns        */
 /***************************/
 
-.dropdown-toggle{
+.dropdown-toggle {
   &:after {
     font-family: LineAwesome, sans-serif;
     content: "\F110";
@@ -330,7 +346,7 @@ legend {
     width: auto;
     height: auto;
     vertical-align: baseline;
-    opacity: .8;
+    opacity: 0.8;
     font-size: 85%;
   }
 
@@ -339,11 +355,11 @@ legend {
   }
 }
 
-.dropdown-menu{
+.dropdown-menu {
   border-radius: $border-radius-lg;
 
   & > li > a {
-    color: $white;
+    color: $white !important;
     font-weight: $font-weight-base;
   }
 }
@@ -363,15 +379,16 @@ legend {
 /*      Buttons            */
 /***************************/
 
-.dropdown-toggle::after {
-  font-family: LineAwesome, sans-serif;
-  content: "\F110";
+.dropdown-toggle:after {
+  font-family: "Line Awesome Free";
+  content: "\f107";
   border: none;
   width: auto;
   height: auto;
   vertical-align: baseline;
-  opacity: .8;
+  opacity: 0.8;
   font-size: 85%;
+  font-weight: 900;
 }
 
 .btn-link {
@@ -504,7 +521,6 @@ legend {
   }
 }
 
-
 /***************************/
 /*          Navs           */
 /***************************/
@@ -556,7 +572,7 @@ legend {
   border-bottom-right-radius: $widget-border-radius;
 
   > .tab-pane {
-    padding: $spacer*2;
+    padding: $spacer * 2;
   }
 }
 
@@ -564,7 +580,7 @@ legend {
 /*         Navbars         */
 /***************************/
 
-.navbar{
+.navbar {
   margin: 0;
 
   .btn-navbar {
@@ -585,7 +601,7 @@ legend {
   margin: ($navbar-padding-y / 2) -$navbar-padding-x;
 
   > li > a {
-    padding-top:    10px;
+    padding-top: 10px;
     padding-bottom: 10px;
     line-height: $spacer;
   }
@@ -608,18 +624,18 @@ legend {
 /*       Breadcrumbs       */
 /***************************/
 
-.breadcrumb{
+.breadcrumb {
   padding-left: 0;
 
-  a{
+  a {
     color: $breadcrumb-color;
     text-decoration: none;
-    &:hover{
+    &:hover {
       color: $breadcrumb-active-color;
     }
   }
 
-  .content > &{
+  .content > & {
     padding-left: 0;
     padding-right: 0;
     margin-top: 11px;
@@ -634,13 +650,13 @@ legend {
 /***************************/
 /*        Pagination       */
 /***************************/
-.pagination{
+.pagination {
   font-weight: $font-weight-normal;
 
   > li {
     display: inline; // Remove list-style and block-level defaults
     > a,
-    > span{
+    > span {
       border-radius: $border-radius-base;
       margin: 0 2px;
     }
@@ -669,12 +685,17 @@ legend {
   color: $gray-800;
   border-radius: $border-radius-base;
 
-  h1,h2,h3,h4,h5,h6{
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: $gray-800;
   }
 }
 
-.modal-footer{
+.modal-footer {
   background-color: #f5f5f5;
 }
 
@@ -700,12 +721,18 @@ legend {
 /***************************/
 
 .popover {
-  &, .popover-body {
+  &,
+  .popover-body {
     color: $text-color;
   }
 
   border-radius: $border-radius-base;
-  h1,h2,h3,h4,h5,h6{
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: $text-color;
   }
 }
@@ -724,7 +751,7 @@ legend {
   box-shadow: none;
   padding: $thumbnail-padding;
 
-  .widget &{
+  .widget & {
     border: $thumbnail-border-width solid $thumbnail-border-color;
   }
 }
@@ -758,7 +785,6 @@ legend {
   }
 }
 
-
 /***************************/
 /*    Labels and badges    */
 /***************************/
@@ -780,7 +806,6 @@ legend {
 .badge-warning {
   color: $white !important;
 }
-
 
 /***************************/
 /*        Jumbotron        */
@@ -808,79 +833,78 @@ legend {
     text-shadow: none;
     opacity: 1;
     outline: none;
-    @include transition(opacity .2s ease-out);
+    @include transition(opacity 0.2s ease-out);
   }
 }
 
-.alert-sm{
+.alert-sm {
   padding: 10px 12px;
   font-size: $font-size-sm;
 
-  .close{
+  .close {
     font-size: 18px;
   }
 }
 
 .alert-success {
-  background: theme-color('success');
+  background: theme-color("success");
   color: $white;
 
   &.alert-transparent {
-    color: theme-color('success');
-    background: rgba(theme-color('success'), $alert-transparent);
+    color: theme-color("success");
+    background: rgba(theme-color("success"), $alert-transparent);
   }
 
   .btn:not(.btn-default) {
     background: rgba($white, 0.8);
-    color: theme-color('success');
+    color: theme-color("success");
   }
 }
 
 .alert-info {
-  background: theme-color('info');
+  background: theme-color("info");
   color: $white;
 
   &.alert-transparent {
-    color: theme-color('info');
-    background: rgba(theme-color('info'), $alert-transparent);
+    color: theme-color("info");
+    background: rgba(theme-color("info"), $alert-transparent);
   }
 
   .btn:not(.btn-default) {
     background: rgba($white, 0.8);
-    color: theme-color('info');
+    color: theme-color("info");
   }
 }
 
 .alert-warning {
-  background: theme-color('warning');
+  background: theme-color("warning");
   color: $white;
 
   &.alert-transparent {
-    color: theme-color('warning');
-    background: rgba(theme-color('warning'), $alert-transparent);
+    color: theme-color("warning");
+    background: rgba(theme-color("warning"), $alert-transparent);
   }
 
   .btn:not(.btn-default) {
     background: rgba($white, 0.8);
-    color: theme-color('warning');
+    color: theme-color("warning");
   }
 }
 
 .alert-danger {
-  background: theme-color('danger');
+  background: theme-color("danger");
   color: $white;
 
   &.alert-transparent {
-    color: theme-color('danger');
-    background: rgba(theme-color('danger'), $alert-transparent);
+    color: theme-color("danger");
+    background: rgba(theme-color("danger"), $alert-transparent);
   }
 
   .btn:not(.btn-default) {
     background: rgba($white, 0.8);
-    color: theme-color('danger');
+    color: theme-color("danger");
   }
 }
-
 
 /***************************/
 /*        List Groups      */
@@ -928,14 +952,13 @@ legend {
   }
 }
 
-
 /***************************/
 /*         Progress        */
 /***************************/
 
 .progress {
   border-radius: 0.25rem;
-  background: rgba(black, .15);
+  background: rgba(black, 0.15);
   margin-bottom: $form-group-margin-bottom;
   box-shadow: $progress-box-shadow;
 
@@ -944,7 +967,7 @@ legend {
     transition: width 0.4s ease-in-out;
     height: $progress-height;
   }
-  @include progress-variant(theme-color('primary'));
+  @include progress-variant(theme-color("primary"));
 }
 
 .progress-sm {
@@ -959,11 +982,11 @@ legend {
   height: $progress-height-xs;
 }
 
-@include bg-variant('.bg-success', theme-color('success'));
-@include bg-variant('.bg-info', theme-color('info'));
-@include bg-variant('.bg-warning', theme-color('warning'));
-@include bg-variant('.bg-danger', theme-color('danger'));
-@include bg-variant('.bg-inverse', $widget-color);
+@include bg-variant(".bg-success", theme-color("success"));
+@include bg-variant(".bg-info", theme-color("info"));
+@include bg-variant(".bg-warning", theme-color("warning"));
+@include bg-variant(".bg-danger", theme-color("danger"));
+@include bg-variant(".bg-inverse", $widget-color);
 
 .bg-inverse {
   color: $widget-bg-color;
@@ -973,17 +996,18 @@ legend {
 /*        Carousel         */
 /***************************/
 
-.carousel{
-  .widget > &{
+.carousel {
+  .widget > & {
     margin: 0 (-($widget-padding-horizontal)) 5px;
   }
 }
 
 .carousel-control {
-  &.left, &.right{
+  &.left,
+  &.right {
     background: none;
   }
-  i{
+  i {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -996,11 +1020,11 @@ legend {
   }
 }
 
-.carousel-indicators{
-  &.outer{
+.carousel-indicators {
+  &.outer {
     bottom: -10px;
   }
-  li{
+  li {
     background-color: $gray-600;
 
     &.active {
@@ -1008,7 +1032,6 @@ legend {
     }
   }
 }
-
 
 /***************************/
 /*          Wells          */
@@ -1023,7 +1046,7 @@ legend {
   border-radius: $border-radius-base;
   blockquote {
     border-color: $gray-light;
-    border-color: rgba(0,0,0,.15);
+    border-color: rgba(0, 0, 0, 0.15);
   }
 }
 

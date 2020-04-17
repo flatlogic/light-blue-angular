@@ -1,9 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 
 
 @Component({
   selector: 'filter-dropdown',
-  templateUrl: './filter-dropdown.template.html'
+  templateUrl: './filter-dropdown.template.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FilterDropdownComponent {
   @Input() public dropdown: string[] = [];

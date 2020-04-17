@@ -1,0 +1,102 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">YOU ARE HERE</li>
+  <li class="active breadcrumb-item">Apex charts</li>
+</ol>
+<h1 class="page-title">Apex Charts</h1>
+<div class="row">
+  <div class="col-12 col-lg-6 col-xl-5">
+    <section widgster [optionsControl]="false" [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Apex <span class=fw-semi-bold>Mixed Chart</span>
+      </h5>
+      <apx-chart class="chart-inner transparent-bg" [series]="apexOptions5.series" [stroke]="apexOptions5.stroke"
+        [chart]="apexOptions5.chart" [colors]="apexOptions5.colors" [legend]="apexOptions5.legend"
+        [xaxis]="apexOptions5.xaxis" [yaxis]="apexOptions5.yaxis" [tooltip]="apexOptions5.tooltip">
+      </apx-chart>
+      <h5 class="mt">Interactive <span class="fw-semi-bold">Sparklines</span></h5>
+      <div class="row mt">
+        <div class="col-12 col-md-6">
+          <div class="stats-row">
+            <div class="stat-item">
+              <p class="value5 fw-thin">34 567</p>
+              <h6 class="name text-muted no-margin fs-mini">Overall Values</h6>
+            </div>
+            <div class="stat-item stat-item-mini-chart">
+              <div style="height: 30px; width: 54px;" class="sparkline" echarts [options]="echartBarChartData3"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="stats-row">
+            <div class="stat-item">
+              <p class="value5 fw-thin">34 567</p>
+              <h6 class="name text-muted no-margin fs-mini">Overall Values</h6>
+            </div>
+            <div class="stat-item stat-item-mini-chart">
+              <div style="height: 30px; width: 54px;" echarts [options]="echartBarChartData4">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="col-12 col-lg-6 col-xl-7">
+    <section widgster [optionsControl]="false" [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Apex <span class=fw-semi-bold>Line chart</span>
+      </h5>
+      <div class="mt mb">
+        <apx-chart class="chart-inner transparent-bg" [series]="apexOptions6.series" [stroke]="apexOptions6.stroke"
+          [chart]="apexOptions6.chart" [colors]="apexOptions6.colors" [legend]="apexOptions6.legend"
+          [xaxis]="apexOptions6.xaxis" [yaxis]="apexOptions6.yaxis" [grid]="apexOptions6.grid"
+          [tooltip]="apexOptions6.tooltip">
+        </apx-chart>
+      </div>
+    </section>
+  </div>
+  <div class="col-12 col-lg-7">
+    <section widgster [optionsControl]="false" [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Apex <span class=fw-semi-bold>Bars</span>
+      </h5>
+      <div class="mt mb">
+        <apx-chart class="chart-inner transparent-bg" [chart]="apexOptions4.chart"
+          [plotOptions]="apexOptions4.plotOptions" [dataLabels]="apexOptions4.dataLabels" [stroke]="apexOptions4.stroke"
+          [series]="apexOptions4.series" [xaxis]="apexOptions4.xaxis" [yaxis]="apexOptions4.yaxis"
+          [colors]="apexOptions4.colors" [legend]="apexOptions4.legend" [tooltip]="apexOptions4.tooltip"
+          [grid]="apexOptions4.grid"></apx-chart>
+      </div>
+    </section>
+  </div>
+  <div class="col-12 col-lg-5">
+    <section widgster [optionsControl]="false" [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Apex <span class=fw-semi-bold>Pie Chart</span>
+      </h5>
+      <div class="mt mb">
+        <apx-chart class="chart-inner transparent-bg" [chart]="apexOptions7.chart" [series]="apexOptions7.series"
+          [labels]="apexOptions7.labels" [legend]="apexOptions7.legend" [colors]="apexOptions7.colors"
+          [stroke]="apexOptions7.stroke"></apx-chart>
+      </div>
+    </section>
+    <section widgster [optionsControl]="false" [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Apex <span class=fw-semi-bold>Donut Chart</span>
+      </h5>
+      <apx-chart class="chart-inner transparent-bg" [chart]="apexOptions8.chart" [series]="apexOptions8.series"
+        [labels]="apexOptions8.labels" [legend]="apexOptions8.legend" [colors]="apexOptions8.colors"
+        [stroke]="apexOptions8.stroke"></apx-chart>
+    </section>
+  </div>
+  <div class="col-12">
+    <section widgster [optionsControl]="false" [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Apex <span class=fw-semi-bold>Bars Stacked</span>
+      </h5>
+      <apx-chart class="chart-inner transparent-bg" [chart]="apexOptions9.chart" [series]="apexOptions9.series"
+        [plotOptions]="apexOptions9.plotOptions" [colors]="apexOptions9.colors" [dataLabels]="apexOptions9.dataLabels"
+        [legend]="apexOptions9.legend" [xaxis]="apexOptions9.xaxis" [yaxis]="apexOptions9.yaxis"></apx-chart>
+    </section>
+  </div>
+</div>

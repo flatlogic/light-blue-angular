@@ -1,54 +1,37 @@
 @import "../../../styles/helpers";
 
-/**
- * Mapael
- */
+/***********************/
+/* Part:Progress Stats */
+/***********************/
 
-.mapTooltip {
-  position : fixed;
-  padding : 2px;
-  z-index: 1000;
-  max-width: 200px;
-  display: none;
-  background-color : $widget-bg-color;
-  border: 1px solid #ccc;
-  border-radius: $border-radius;
-  font-size: $font-size-sm;
-  color: $text-color;
-}
-
-.zoomIn, .zoomOut {
-  position: absolute;
-  bottom: 10px;
-  left : 10px;
-  width: 20px;
-  height: 20px;
-
-  box-sizing: content-box;
-  border: 1px solid $text-color;
-  background-color: $widget-bg-color;
-  color: $text-color;
-  line-height: 20px;
-  text-align: center;
-  border-radius: $border-radius;
-  cursor: pointer;
-  font-weight: $font-weight-bold;
-
-  user-select: none;
-}
-
-.zoomOut {
-  left: 36px;
-
-}
-
-.mapael{
-  position: relative;
-  margin: (-$widget-padding-vertical) (-$widget-padding-horizontal) 0;
-  .map {
-    position:relative;
+.progress-stats {
+  .name {
+    margin-bottom: 0.25rem;
   }
-  .stats{
+
+  .description {
+    margin-bottom: 0.25rem;
+  }
+
+  .status {
+    margin-top: 1.25rem;
+  }
+
+  @include media-breakpoint-down(lg) {
+    .description + .progress {
+      margin-bottom: 0;
+    }
+  }
+}
+
+progressbar.progress {
+  height: 100%;
+}
+
+.map-wrapper {
+  position: relative;
+
+  .stats {
     position: absolute;
     z-index: 1;
     top: 0;
@@ -58,24 +41,18 @@
 }
 
 /***********************/
-/* Part:Progress Stats */
+/* Part: Market Stats  */
 /***********************/
 
-.progress-stats{
-  .name{
-    margin-bottom: 0.25rem;
-  }
-  .description{
-    margin-bottom: 0.25rem;
-  }
-  .status{
-    margin-top: 1.25rem;
-  }
-
-  @include media-breakpoint-down(lg) {
-    .description + .progress{
-      margin-bottom: 0;
-    }
-  }
+.market-stats {
+  overflow: hidden;
 }
 
+/***********************/
+/*    Part: Calendar   */
+/***********************/
+mwl-calendar-month-view .cal-month-view {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}

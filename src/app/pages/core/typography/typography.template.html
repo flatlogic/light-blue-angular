@@ -6,80 +6,57 @@
 <h1 class="page-title">Typography - <span class="fw-semi-bold">Texts & Display</span></h1>
 <div class="row">
   <div class="col-12 col-md-6">
-    <section widget class="widget">
-      <header>
-        <h5>
-          Headings
-          <small>Default and customized</small>
-        </h5>
-        <div class="widget-controls">
-          <a data-widgster="expand" title="Expand" href="#" style="display: none;"><i class="la la-angle-up"></i></a>
-          <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
-          <a data-widgster="close" title="Close" href="#"><i class="la la-remove"></i></a>
-        </div>
-      </header>
-      <div class="widget-body">
-        <h4>Default headings</h4>
-        <p>Basic headings for everyday use</p>
-        <div class="widget-padding-md border rounded w-100 h-100 text-left">
-          <div class="row">
-            <div class="col-sm-6">
-              <h1>h1. Heading</h1>
-              <h2>h2. Heading</h2>
-              <h3>h3. Heading</h3>
-              <h4>h4. Heading</h4>
-              <h5>h5. Heading</h5>
-              <h6>h6. Heading</h6>
-            </div>
-            <div class="col-sm-6">
-              <h1 class="text-danger">h1. Heading</h1>
-              <h2 class="text-warning">h2. Heading</h2>
-              <h3 class="text-success">h3. Heading</h3>
-              <h4 class="text-primary">h4. Heading</h4>
-              <h5 class="text-info">h5. Heading</h5>
-              <h6 class="text-inverse">h6. Heading</h6>
-            </div>
+    <section widgster [optionsControl]="false" [reloadControl]="false" [fullscreenControl]="false">
+      <h5 *widgsterTitle>Headings <small>Default and customized</small></h5>
+      <h4>Default headings</h4>
+      <p>Basic headings for everyday use</p>
+      <div class="widget-padding-md border rounded w-100 h-100 text-left">
+        <div class="row">
+          <div class="col-sm-6">
+            <h1>h1. Heading</h1>
+            <h2>h2. Heading</h2>
+            <h3>h3. Heading</h3>
+            <h4>h4. Heading</h4>
+            <h5>h5. Heading</h5>
+            <h6>h6. Heading</h6>
+          </div>
+          <div class="col-sm-6">
+            <h1 class="text-danger">h1. Heading</h1>
+            <h2 class="text-warning">h2. Heading</h2>
+            <h3 class="text-success">h3. Heading</h3>
+            <h4 class="text-primary">h4. Heading</h4>
+            <h5 class="text-info">h5. Heading</h5>
+            <h6 class="text-inverse">h6. Heading</h6>
           </div>
         </div>
-        <h4 class="mt-5">Customized headings</h4>
-        <p>Enhanced with additional text</p>
-        <div class="widget-padding-md border rounded w-100 h-100 text-left">
-          <h3>
-            Headings
-            <small>And some clarification text</small>
-          </h3>
-        </div>
-        <h4 class="mt-5">Display</h4>
-        <p>Headings to stand out</p>
-        <div class="widget-padding-md border rounded w-100 h-100 text-left">
-          <h1 class="display-1">Display 1</h1>
-          <h1 class="display-2">Display 2</h1>
-          <h1 class="display-3">Display 3</h1>
-          <h1 class="display-4">Display 4</h1>
-        </div>
-        <h4 class="mt-5">Lead</h4>
-        <p>Make a paragraph stand out by adding <code class="highlighter-rouge">.lead</code>.</p>
-        <div class="widget-padding-md border rounded w-100 h-100 text-left">
-          <p class="lead">Sing App is admin dashboard template built with Bootstrap</p>
-        </div>
+      </div>
+      <h4 class="mt-5">Customized headings</h4>
+      <p>Enhanced with additional text</p>
+      <div class="widget-padding-md border rounded w-100 h-100 text-left">
+        <h3>
+          Headings
+          <small>And some clarification text</small>
+        </h3>
+      </div>
+      <h4 class="mt-5">Display</h4>
+      <p>Headings to stand out</p>
+      <div class="widget-padding-md border rounded w-100 h-100 text-left">
+        <h1 class="display-1">Display 1</h1>
+        <h1 class="display-2">Display 2</h1>
+        <h1 class="display-3">Display 3</h1>
+        <h1 class="display-4">Display 4</h1>
+      </div>
+      <h4 class="mt-5">Lead</h4>
+      <p>Make a paragraph stand out by adding <code class="highlighter-rouge">.lead</code>.</p>
+      <div class="widget-padding-md border rounded w-100 h-100 text-left">
+        <p class="lead">Sing App is admin dashboard template built with Bootstrap</p>
       </div>
     </section>
   </div>
   <div class="col-12 col-md-6">
-    <section widget class="widget">
-      <header>
-        <h5>
-          Body texts
-          <small>Variations</small>
-        </h5>
-        <div class="widget-controls">
-          <a data-widgster="expand" title="Expand" href="#" style="display: none;"><i class="la la-angle-up"></i></a>
-          <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
-          <a data-widgster="close" title="Close" href="#"><i class="la la-remove"></i></a>
-        </div>
-      </header>
-      <div class="widget-body">
-        <h4>Basic texts</h4>
+    <section widgster [optionsControl]="false" [reloadControl]="false" [fullscreenControl]="false">
+      <h5 *widgsterTitle>Body texts <small>Variations</small></h5>
+      <h4>Basic texts</h4>
         <p>Styling for common texts</p>
         <div class="widget-padding-md border rounded w-100 h-100 text-left">
           <p>You can use the mark tag to <mark>highlight</mark> text.</p>
@@ -115,10 +92,10 @@
               Now you put water in a cup, it becomes the cup; You put water into a bottle it
               becomes the bottle; You put it in a teapot it becomes the teapot. Now water can
               flow or it can crash. Be water, my friend.</p>
-            <footer class="blockquote-footer">Bruce Lee in <cite title="A Warrior's Journey">A Warrior's Journey</cite></footer>
+            <footer class="blockquote-footer">Bruce Lee in <cite title="A Warrior's Journey">A Warrior's Journey</cite>
+            </footer>
           </blockquote>
         </div>
-      </div>
     </section>
   </div>
 </div>

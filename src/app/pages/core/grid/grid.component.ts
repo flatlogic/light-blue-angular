@@ -1,13 +1,11 @@
-import {Component, OnInit} from '@angular/core';
-declare let jQuery: any;
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: '[grid]',
   templateUrl: './grid.template.html',
   styleUrls: ['./grid.style.scss'],
-  preserveWhitespaces: true
+  preserveWhitespaces: true,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class GridComponent {
-  constructor() {
-  }
 }

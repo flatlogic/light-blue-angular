@@ -1,29 +1,35 @@
 //some basic definitions
 //html-elements only. no classes
 
-html{
+html {
   min-height: 100%;
   font-size: $font-size-initial;
   position: relative;
 }
 
-body{
+body {
   overflow-x: hidden;
   color: $text-color;
-  background: url(assets/img/bg-pattern.svg), radial-gradient(farthest-side ellipse at 10% 0, #36455a 20%, #889caf);
+  background: url("../../assets/img/bg-pattern.svg"),
+    radial-gradient(farthest-side ellipse at 10% 0, #36455a 20%, #889caf);
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: $font-weight-base;
 
   &::first-letter {
     margin-top: 0;
   }
 
-  small{
+  small {
     color: $text-muted;
     font-weight: $font-weight-base;
   }
@@ -33,66 +39,70 @@ h4 {
   margin: 0.69rem 0;
 }
 
-input[type=search], input.search {
+input[type="search"],
+input.search {
   padding-left: 26px;
   background-color: $input-bg;
-  background:url(assets/img/search.png) 5px 6px no-repeat $input-bg;
+  background: url("../../assets/img/search.png") 5px 6px no-repeat $input-bg;
 
   &.input-transparent {
     border: none;
     color: $widget-color;
-    background: url(assets/img/search-white.png) 5px 5px no-repeat $widget-bg-color;
-    @include placeholder(rgba(#eee, .76));
+    background: url("../../assets/img/search-white.png") 5px 5px no-repeat
+      $widget-bg-color;
+    @include placeholder(rgba(#eee, 0.76));
   }
 }
 
 ul ul,
-ol ul{
+ol ul {
   list-style: none;
 }
 
-ul, ol{
+ul,
+ol {
   list-style: none;
   padding: 0;
 }
 
-
 //setting default iframe behaviour to border box
 //so it behaves normally within .control-row
-iframe{
+iframe {
   @include box-sizing(border-box);
 }
 
 //opera is buggy? no chrome is buggy! really strange fix
-fieldset{
+fieldset {
   width: 100%;
   //Thanks to johan@holmweb.se for that fix
   min-width: 0;
 }
 
-form{
+form {
   margin-bottom: 0;
 }
 
-a{
-  @include transition(color .2s);
+a {
+  @include transition(color 0.2s);
 
   &:not([href]) {
     cursor: pointer;
   }
 }
 
-button, .btn{
-  @include transition(background-color .2s);
+button,
+.btn {
+  @include transition(background-color 0.2s);
   font-family: $font-family-sans-serif;
   cursor: pointer;
 }
 
-.form-control{
+.form-control {
   font-family: $font-family-sans-serif;
 }
 
-strong, b {
+strong,
+b {
   font-weight: bold;
 }
 

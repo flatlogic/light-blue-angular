@@ -1,8 +1,9 @@
-import {Component, ViewChild, ElementRef, ViewEncapsulation, OnInit} from '@angular/core';
+import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 import mock from './mock';
-import {AnalyticsService} from './analytics.service';
-
-declare let jQuery: any;
+import { AnalyticsService } from './analytics.service';
+import {echartPieChartData3, echartDailyLineChartData} from '../../../utils/data/echarts.data';
+import { CalendarEvent } from 'angular-calendar';
+import { calendarEvents } from '../../../utils/data/calendar-events.data';
 
 @Component({
   selector: 'analytics',
@@ -15,39 +16,12 @@ export class AnalyticsComponent implements OnInit {
   month = this.now.getMonth() + 1;
   year = this.now.getFullYear();
   mock = mock;
+  public echartPieChartData3: any = echartPieChartData3;
+  public echartDailyLineChartData: any = echartDailyLineChartData;
 
-  calendarEvents: Array<Array<any>> = [
-    [
-      '2/' + this.month + '/' + this.year,
-      'The flower bed',
-      '#',
-      '#5d8fc2',
-      'Contents here'
-    ],
-    [
-      '5/' + this.month + '/' + this.year,
-      'Stop world water pollution',
-      '#',
-      '#f0b518',
-      'Have a kick off meeting with .inc company'
-    ],
-    [
-      '18/' + this.month + '/' + this.year,
-      'Light Blue 2.2 release',
-      '#',
-      '#64bd63',
-      'Some contents here'
-    ],
-    [
-      '29/' + this.month + '/' + this.year,
-      'A link',
-      'http://www.flatlogic.com',
-      '#dd5826',
-    ]
-  ];
+  public viewDate: Date = new Date();
+  public calendarEvents: CalendarEvent[] = [...calendarEvents];
 
-  @ViewChild('chartContainer', {static: true}) chartContainer: ElementRef;
-  @ViewChild('chartLegend', {static: true}) chartLegend: ElementRef;
 
   trends: Array<any> = [
     {
@@ -65,12 +39,6 @@ export class AnalyticsComponent implements OnInit {
     this.trends.map(t => {
       t.data = this.getRandomData();
     });
-
-    this.analyticsService.onReceiveDataSuccess.subscribe(event => {
-      if (event) {
-        this.initChart();
-      }
-    });
   }
 
   getRandomData() {
@@ -82,28 +50,15 @@ export class AnalyticsComponent implements OnInit {
     return arr;
   }
 
-  initChart() {
-    jQuery.plot($(this.chartContainer.nativeElement), this.analyticsService.revenue, {
-      series: {
-        pie: {
-          innerRadius: 0.8,
-          show: true,
-          fill: 0.5,
-        },
-      },
-      colors: ['#ffc247', '#f55d5d', '#9964e3'],
-      legend: {
-        noColumns: 1,
-        container: $(this.chartLegend.nativeElement),
-        labelBoxBorderColor: '#ffffff',
-      },
-      grid: {
-        color: '#fff'
-      }
-    });
-  }
-
   ngOnInit() {
     this.analyticsService.receiveDataRequest();
+  }
+
+  public onEventClick({ event, sourceEvent }: { event: CalendarEvent; sourceEvent: MouseEvent | KeyboardEvent; }): void {
+    if (Array.isArray(event.actions)) {
+      event.actions.forEach(a => {
+        a.onClick({ event, sourceEvent });
+      });
+    }
   }
 }

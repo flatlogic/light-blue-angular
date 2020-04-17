@@ -1,9 +1,10 @@
-import { Component, Output, EventEmitter, Renderer, ElementRef } from '@angular/core';
-import {LoginService} from "../../pages/login/login.service";
+import { Component, Output, EventEmitter, Renderer2, ElementRef, ChangeDetectionStrategy } from '@angular/core';
+import {LoginService} from '../../pages/login/login.service';
 
 @Component({
   selector: '[navbar]',
-  templateUrl: './navbar.template.html'
+  templateUrl: './navbar.template.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Navbar {
   @Output() changeSidebarPosition = new EventEmitter();
@@ -18,7 +19,7 @@ export class Navbar {
   };
 
   constructor(
-    private renderer: Renderer,
+    private renderer: Renderer2,
     private el: ElementRef,
     private loginService: LoginService
   ) {}
@@ -46,8 +47,8 @@ export class Navbar {
     this.searchFormState = !this.searchFormState;
   }
 
-  private changeStyleElement(selector, styleName, styleValue): void {
-    this.renderer.setElementStyle(this.el.nativeElement
+  private changeStyleElement(selector: string, styleName: string, styleValue: string): void {
+    this.renderer.setStyle(this.el.nativeElement
       .querySelector(selector), styleName, styleValue);
   }
 

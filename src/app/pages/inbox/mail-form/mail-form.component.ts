@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Output, Input } from '@angular/core';
 import { EventEmitter } from '@angular/core';
 

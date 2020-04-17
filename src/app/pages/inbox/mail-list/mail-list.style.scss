@@ -76,3 +76,14 @@
   }
 }
 
+.row {
+  @media (max-width: 580px) {
+    display: inline-block;
+  }
+}
+
+.search-message {
+  @media (max-width: 580px) {
+    padding-top: 1rem
+  }
+}

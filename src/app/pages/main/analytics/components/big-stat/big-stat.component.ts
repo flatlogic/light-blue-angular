@@ -10,11 +10,11 @@ import {Component, Input, ViewEncapsulation} from '@angular/core';
 export class BigStatComponent {
   text: string = 'Daily';
 
-  @Input('product') product: string;
-  @Input('color') color: string;
-  @Input('total') total: string;
-  @Input('registrations') registrations: any = {};
-  @Input('bounce') bounce: any = {};
+  @Input() product: string;
+  @Input() color: string;
+  @Input() total: string;
+  @Input() registrations: any = {};
+  @Input() bounce: any = {};
 
   changeText(e, text) {
     e.preventDefault();

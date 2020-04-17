@@ -1,132 +1,28 @@
 @import "../../../styles/helpers";
-@import "../../../../../node_modules/metrojs/release/MetroJs.Full/MetroJs.min.css";
+@import "~swiper/css/swiper.min.css";
 
 .mt-negative-lg {
   margin-top: -2.1rem;
-}
-
-/**
- * Mapael
- */
-
-.mapTooltip {
-  position : fixed;
-  padding : 2px;
-  z-index: 1000;
-  max-width: 200px;
-  display: none;
-  background-color : #fff;
-  border: 1px solid #ccc;
-  border-radius: $border-radius;
-  font-size: $font-size-sm;
-  color: $gray-700;
-}
-
-.zoomIn, .zoomOut {
-  position: absolute;
-  bottom: 10px;
-  left : 10px;
-  width: 20px;
-  height: 20px;
-
-  box-sizing: content-box;
-  border: 1px solid #ccc;
-  background-color: #fff;
-  color: $gray-700;
-  line-height: 20px;
-  text-align: center;
-  border-radius: $border-radius;
-  cursor: pointer;
-  font-weight: $font-weight-bold;
-
-  user-select: none;
-}
-
-.zoomOut {
-  left: 36px;
-
-}
-
-.mapael{
-  position: relative;
-  margin: (-$widget-padding-vertical) (-$widget-padding-horizontal) 0;
-  .map {
-    position:relative;
-  }
-  .stats{
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    margin: 5% 10%;
-  }
-}
-
-/***********************/
-/*      Live Tiles     */
-/***********************/
-
-.live-tile,
-.list-tile,
-.copy-tile,
-.tile-strip .flip-list > li{
-  height: auto;
-  width: 100%;
-  margin: 0;
-  color: inherit;
-
-  &.fade{
-    opacity: 1;
-  }
-}
-
-.live-tile p,
-.list-tile p,
-.copy-tile p {
-  padding: 0;
-}
-
-.live-tile p,
-.list-tile p,
-.copy-tile p,
-.live-tile .face,
-.list-tile .face,
-.copy-tile .face{
-  /* let .h* classes work! */
-  &.h1 { font-size: $h1-font-size; }
-  &.h2 { font-size: $h2-font-size; }
-  &.h3 { font-size: $h3-font-size; }
-  &.h4 { font-size: $h4-font-size; }
-  &.h5 { font-size: $h5-font-size; }
-  &.h6 { font-size: $h6-font-size; }
-
-  $font-sizes: $h1-font-size, $h2-font-size, $h3-font-size, $h4-font-size, $h5-font-size, $h6-font-size;
-  $i: 1;
-  @each $font-size in $font-sizes{
-    &.value#{$i}{ font-size: $font-size; }
-    $i: $i + 1;
-  }
 }
 
 /***********************/
 /*     Chart Simple    */
 /***********************/
 
-.widget-chart-simple{
-
-  .widget-body{
+.widget-chart-simple {
+  .widget-body {
     padding-top: 10px;
   }
-  .chart-value{
+  .chart-value {
     font-size: 24px;
   }
 
-  .chart{
+  .chart {
     margin-top: 20px;
   }
 }
 
-.jqstooltip{
+.jqstooltip {
   box-sizing: content-box;
 }
 
@@ -134,21 +30,22 @@
 /*    Chart Changes    */
 /***********************/
 
-.widget-chart-changes{
-  .chart{
+.widget-chart-changes {
+  .chart {
     margin: -$widget-padding-vertical (-$widget-padding-horizontal) 0;
     padding: $widget-padding-vertical 0 0;
   }
 
-  .chart-title{
+  .chart-title {
     margin: 20px 0 0;
   }
 
-  .chart-value, .chart-value-change{
+  .chart-value,
+  .chart-value-change {
     padding: 0 $widget-padding-horizontal;
   }
 
-  .chart-value{
+  .chart-value {
     margin-bottom: 0;
     font-weight: $font-weight-bold;
     font-size: 21px;
@@ -156,8 +53,8 @@
     color: $white;
   }
 
-  .chart-value-change{
-    color: rgba($white, .7);
+  .chart-value-change {
+    color: rgba($white, 0.7);
     font-size: $small-font-size;
     margin-bottom: $spacer;
   }
@@ -167,17 +64,22 @@
 /*  Chart Stats Simple */
 /***********************/
 
-.widget-chart-stats-simple{
-  > header{
-    h1,h2,h3,h4,h5,h6{
+.widget-chart-stats-simple {
+  > header {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       margin-bottom: $spacer/4;
     }
   }
 
-  .chart{
+  .chart {
     height: 200px;
     margin: $spacer/2 (-$widget-padding-horizontal) (-$widget-padding-vertical);
-    > .chart-inner{
+    > .chart-inner {
       height: 100%;
     }
   }
@@ -187,8 +89,8 @@
 /*      Big Chart      */
 /***********************/
 
-.widget-big-chart{
-  .chart{
+.widget-big-chart {
+  .chart {
     height: 200px;
   }
 }
@@ -197,7 +99,7 @@
 /*  Part:Map Controls  */
 /***********************/
 
-.map-controls{
+.map-controls {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -207,30 +109,31 @@
   border-bottom-left-radius: $border-radius;
   border-bottom-right-radius: $border-radius;
 
-  > .nav-item > .nav-link{
+  > .nav-item > .nav-link {
     border-radius: 0;
     padding: 0.7143rem 0 0.7143rem 0;
 
     color: $text-color;
-    &:hover{
+    &:hover {
       background-color: $gray-800;
       color: $text-color;
     }
   }
 
-  > .nav-item.active > .nav-link{
-    &, &:hover{
+  > .nav-item.active > .nav-link {
+    &,
+    &:hover {
       background-color: $gray-900;
       color: $text-color;
       font-weight: $font-weight-bold;
     }
   }
 
-  > .nav-item:first-child > a{
+  > .nav-item:first-child > a {
     border-bottom-left-radius: $border-radius;
   }
 
-  > .nav-item:last-child > a{
+  > .nav-item:last-child > a {
     border-bottom-right-radius: $border-radius;
   }
 }
@@ -244,34 +147,34 @@
 /**          Post Links           **/
 /***********************************/
 
-.post-links{
+.post-links {
   margin-bottom: 0;
   font-size: $font-size-sm;
   padding-left: 0;
   @include clearfix();
-  > li{
+  > li {
     float: left;
     list-style: none;
 
-    + li{
-      &:before{
+    + li {
+      &:before {
         color: #999;
         content: "\25cf";
         padding: 0 8px;
       }
     }
-    > a{
+    > a {
       text-decoration: none;
       color: $text-muted;
-      &:hover{
+      &:hover {
         color: $text-muted;
       }
     }
   }
 
-  &.no-separator > li + li{
+  &.no-separator > li + li {
     margin-left: 12px;
-    &:before{
+    &:before {
       content: normal;
     }
   }
@@ -281,12 +184,12 @@
 /**          Post Comments           **/
 /***********************************/
 
-.post-comments{
+.post-comments {
   font-size: $font-size-sm;
   padding-left: 0;
   @include clearfix();
 
-  .post-links + &{
+  .post-links + & {
     margin-top: $spacer / 2;
   }
 
@@ -296,34 +199,34 @@
     list-style: none;
     @include clearfix();
 
-    &:last-child{
+    &:last-child {
       padding-bottom: 0;
     }
   }
 
-  p:last-child{
+  p:last-child {
     margin-bottom: 0;
   }
 
-  .avatar{
+  .avatar {
     margin-top: 1px;
   }
 
-  .author{
+  .author {
     margin-top: 0;
     margin-bottom: 2px;
     color: #7ca9dd;
   }
 
-  .comment-body{
+  .comment-body {
     overflow: auto;
   }
 
-  h6.author > small{
+  h6.author > small {
     font-size: 11px;
   }
 
-  .widget > footer &{
+  .widget > footer & {
     margin-left: -$widget-padding-horizontal;
     margin-right: -$widget-padding-horizontal;
   }
@@ -333,11 +236,11 @@
 /**           Post User           **/
 /***********************************/
 
-.post-user{
+.post-user {
   position: relative;
   @include clearfix();
 
-  img{
+  img {
     border: 3px solid white;
   }
 }
@@ -346,15 +249,15 @@
 /**             Tags              **/
 /***********************************/
 
-.tags{
+.tags {
   padding-left: 0;
   list-style: none;
   @include clearfix();
 
-  > li{
+  > li {
     float: left;
 
-    > a{
+    > a {
       padding: 2px 8px;
       font-size: $font-size-mini;
       border-radius: 6px;
@@ -363,24 +266,23 @@
 
       text-decoration: none;
 
-      &:hover{
-        background-color: rgba(0,0,0,.1);
-
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
       }
 
-      .fa{
+      .fa {
         font-size: 8px;
         margin-right: 3px;
-        opacity: .8;
+        opacity: 0.8;
       }
     }
 
-    + li > a{
+    + li > a {
       margin-left: 6px;
     }
   }
 
-  .widget-top-overflow > img + &{
+  .widget-top-overflow > img + & {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -446,7 +348,7 @@
       margin-bottom: 5px;
       font-size: $font-size-mini;
       font-weight: $font-weight-normal;
-      color: theme-color('primary');
+      color: theme-color("primary");
     }
 
     .body {
@@ -481,8 +383,7 @@
 /**           Weather             **/
 /***********************************/
 
-
-.widget-image .forecast{
+.widget-image .forecast {
   position: absolute;
   left: 0;
   right: 0;
@@ -491,4 +392,41 @@
   padding-left: 15px;
   padding-right: 15px;
   text-align: center;
+}
+
+.sign-up-widget {
+  .widget-content-wrapper {
+    height: 100%;
+  }
+
+  .footer {
+    margin-bottom: 1rem;
+    width: 87%;
+  }
+}
+
+.join-widget {
+  .widget-content-wrapper {
+    height: 100%;
+  }
+}
+
+.widget-title {
+  text-align: center;
+}
+
+/***********************************/
+/**           Map             **/
+/***********************************/
+
+years-map-widget {
+  margin: -15px -17px;
+}
+
+/***********************************/
+/**          Recent Update        **/
+/***********************************/
+
+.recent-update {
+  overflow: hidden;
 }

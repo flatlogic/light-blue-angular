@@ -1,5 +1,4 @@
-import {Component, ElementRef, OnInit} from '@angular/core';
-declare let jQuery: any;
+import { Component, AfterViewInit, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'inbox',
@@ -7,19 +6,33 @@ declare let jQuery: any;
   styleUrls: ['./inbox.style.scss']
 })
 
-export class InboxComponent implements OnInit {
+export class InboxComponent implements AfterViewInit, OnDestroy {
   mailListShow: boolean = true;
   mailFormShow: boolean = false;
   mailDetailShow: boolean = false;
   currentMail: any;
   currentFolderName: string = 'Inbox';
-  $el: any;
   repliedMessage: any;
 
-  constructor(el: ElementRef) {
-    this.$el = jQuery(el.nativeElement);
+  public showAlert: boolean = false;
+  public timer: any;
 
-    this.initMailboxAppDemo(this.$el);
+  public ngAfterViewInit(): void {
+    this.timer = setTimeout(() => { this.onShowAlert(); }, 3000);
+  }
+
+  public ngOnDestroy(): void {
+    if (Boolean(this.timer)) {
+      clearTimeout(this.timer);
+    }
+  }
+
+  public onShowAlert(): void {
+    this.showAlert = true;
+  }
+
+  public onHideAlert(): void {
+    this.showAlert = false;
   }
 
   handleComposeBtn(): void {
@@ -59,27 +72,5 @@ export class InboxComponent implements OnInit {
       this.changeEmailComponents('mailList');
     }
   }
-  /* tslint:disable */
-  initMailboxAppDemo($el: any): void {
-    let showAlert = function(): void {
-      $el.find('#app-alert')
-        .removeClass('hide')
-        .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(): void {
-          jQuery(this).removeClass('animated bounceInLeft');
-        });
-    };
 
-    setTimeout(() => showAlert(), 3000);
-  }
-  /* tslint:enable */
-  changeActiveItem(): void {
-    this.$el.find('.nav a').on('click', function(): void {
-      jQuery('.nav').find('.active').removeClass('active');
-      jQuery(this).parent().addClass('active');
-    });
-  }
-
-  ngOnInit(): void {
-    this.changeActiveItem();
-  }
 }

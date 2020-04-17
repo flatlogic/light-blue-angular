@@ -1,0 +1,179 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">YOU ARE HERE</li>
+  <li class="active breadcrumb-item">Ngx Charts</li>
+</ol>
+<h1 class="page-title">Ngx Charts</h1>
+<div class="row">
+  <div class="col-12 col-lg-6">
+    <section widgster [optionsControl]="false" [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Ngx <span class=fw-semi-bold>Line Chart</span>
+      </h5>
+      <div>
+        <div class="text-center" style="height: 343px;">
+          <ngx-charts-line-chart
+            [scheme]="ngxLineChartData.colorScheme"
+            [results]="ngxLineChartData.results"
+            [gradient]="ngxLineChartData.gradient"
+            [xAxis]="ngxLineChartData.showXAxis"
+            [yAxis]="ngxLineChartData.showYAxis"
+            [legend]="ngxLineChartData.showLegend"
+            [showXAxisLabel]="ngxLineChartData.showXAxisLabel"
+            [showYAxisLabel]="ngxLineChartData.showYAxisLabel"
+            [xAxisLabel]="ngxLineChartData.xAxisLabel"
+            [yAxisLabel]="ngxLineChartData.yAxisLabel"
+            [autoScale]="ngxLineChartData.autoScale"
+            [xAxisTickFormatting]="ngxLineChartData.xAxisTickFormatting"
+            >
+          </ngx-charts-line-chart>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="col-12 col-lg-6">
+    <section widgster [optionsControl]="false" [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Ngx <span class=fw-semi-bold>Area Chart</span>
+      </h5>
+      <div>
+        <div class="text-center" style="height: 343px;">
+          <ngx-charts-area-chart
+            [scheme]="ngxAreaChartData.colorScheme"
+            [results]="ngxAreaChartData.results"
+            [gradient]="ngxAreaChartData.gradient"
+            [xAxis]="ngxAreaChartData.showXAxis"
+            [yAxis]="ngxAreaChartData.showYAxis"
+            [legend]="ngxAreaChartData.showLegend"
+            [showXAxisLabel]="ngxAreaChartData.showXAxisLabel"
+            [showYAxisLabel]="ngxAreaChartData.showYAxisLabel"
+            [xAxisLabel]="ngxAreaChartData.xAxisLabel"
+            [yAxisLabel]="ngxAreaChartData.yAxisLabel"
+            [autoScale]="ngxAreaChartData.autoScale"
+            [xAxisTickFormatting]="ngxAreaChartData.xAxisTickFormatting">
+          </ngx-charts-area-chart>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="col-12 col-lg-5">
+    <section widgster [optionsControl]="false" [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Ngx <span class=fw-semi-bold>Bar Chart</span>
+      </h5>
+      <div>
+        <div class="text-center" style="height: 260px;">
+            <ngx-charts-bar-vertical
+              [scheme]="ngxVerticalBarChartData.colorScheme"
+              [results]="ngxVerticalBarChartData.results"
+              [gradient]="ngxVerticalBarChartData.gradient"
+              [xAxis]="ngxVerticalBarChartData.showXAxis"
+              [yAxis]="ngxVerticalBarChartData.showYAxis"
+              [legend]="ngxVerticalBarChartData.showLegend"
+              [showXAxisLabel]="ngxVerticalBarChartData.showXAxisLabel"
+              [showYAxisLabel]="ngxVerticalBarChartData.showYAxisLabel"
+              [xAxisLabel]="ngxVerticalBarChartData.xAxisLabel"
+              [yAxisLabel]="ngxVerticalBarChartData.yAxisLabel"
+              [yAxisTickFormatting]="ngxVerticalBarChartData.yAxisTickFormatting">
+            </ngx-charts-bar-vertical>
+          </div>
+        <p class="fs-mini text-muted">
+          Bar charts are also commonly referred to as a
+          column charts. If you was trying to compare
+          the height of something then intuitvely you
+          would represent this by using columns. This
+          really couldn&apos;t be easier.
+        </p>
+      </div>
+    </section>
+  </div>
+  <div class="col-12 col-lg-3">
+    <section widgster [optionsControl]="false" [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Ngx <span class=fw-semi-bold>Donut Chart</span>
+      </h5>
+      <div>
+        <div class="text-center" style="height: 180px;">
+            <ngx-charts-pie-chart
+              *ngIf="ngxDoughnutChartData"
+              [scheme]="ngxDoughnutChartData.colorScheme"
+              [results]="ngxDoughnutChartData.results"
+              [gradient]="ngxDoughnutChartData.gradient"
+              [legend]="ngxDoughnutChartData.showLegend"
+              [labels]="ngxDoughnutChartData.showLabels"
+              [explodeSlices]="ngxDoughnutChartData.expllodeSlices"
+              [doughnut]="ngxDoughnutChartData.doughnut"
+            >
+            </ngx-charts-pie-chart>       
+        </div> 
+        <p class="fs-mini text-muted">
+          Donuts a great for representing some parted information
+          like traffice sources, disk partitions,
+          etc. This really couldn&apos;t be easier.
+        </p>
+      </div>
+    </section>
+  </div>
+  <div class="col-12 col-lg-4">
+    <section widgster [optionsControl]="false" [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Ngx <span class=fw-semi-bold>Bar Chart 2</span>
+      </h5>
+      <div>
+        <div class="text-center" style="height: 243px;">
+          <ngx-charts-bar-vertical-2d
+            [scheme]="ngxGroupedVerticalBarChartData.colorScheme"
+            [results]="ngxGroupedVerticalBarChartData.results"
+            [gradient]="ngxGroupedVerticalBarChartData.gradient"
+            [xAxis]="ngxGroupedVerticalBarChartData.showXAxis"
+            [yAxis]="ngxGroupedVerticalBarChartData.showYAxis"
+            [legend]="ngxGroupedVerticalBarChartData.showLegend"
+            [showXAxisLabel]="ngxGroupedVerticalBarChartData.showXAxisLabel"
+            [showYAxisLabel]="ngxGroupedVerticalBarChartData.showYAxisLabel"
+            [xAxisLabel]="ngxGroupedVerticalBarChartData.xAxisLabel"
+            [yAxisLabel]="ngxGroupedVerticalBarChartData.yAxisLabel"
+            [yAxisTickFormatting]="ngxGroupedVerticalBarChartData.yAxisTickFormatting"
+          >
+          </ngx-charts-bar-vertical-2d>
+        </div>
+        <p class="fs-mini text-muted">
+          This is generally a good chart to choose for
+          all comparison based analysis but if you were to
+          display a data set with negative values a
+          column would be the best to represent this. This
+          really couldn&apos;t be easier.
+        </p>
+      </div>
+    </section>
+  </div>
+  <div class="col-12">
+    <section widgster [optionsControl]="false" [fullscreenControl]="false" [reloadControl]="false">
+      <h5 *widgsterTitle>
+        Ngx <span class=fw-semi-bold>Stacked Bar Chart</span>
+      </h5>
+      <div>
+        <div class="text-center" style="height: 200px;">
+          <ngx-charts-bar-vertical-stacked
+              [scheme]="ngxStackedVerticalBarChartData.colorScheme"
+              [results]="ngxStackedVerticalBarChartData.results"
+              [gradient]="ngxStackedVerticalBarChartData.gradient"
+              [xAxis]="ngxStackedVerticalBarChartData.showXAxis"
+              [yAxis]="ngxStackedVerticalBarChartData.showYAxis"
+              [legend]="ngxStackedVerticalBarChartData.showLegend"
+              [showXAxisLabel]="ngxStackedVerticalBarChartData.showXAxisLabel"
+              [showYAxisLabel]="ngxStackedVerticalBarChartData.showYAxisLabel"
+              [xAxisLabel]="ngxStackedVerticalBarChartData.xAxisLabel"
+              [yAxisLabel]="ngxStackedVerticalBarChartData.yAxisLabel"
+              [yAxisTickFormatting]="ngxStackedVerticalBarChartData.yAxisTickFormatting"
+            >
+            </ngx-charts-bar-vertical-stacked>
+        </div>
+
+        <p class="fs-mini text-muted">
+          Stacked charts are excellent to track some dynamics
+          within declared categories. An example of this
+          can be seen above.
+        </p>
+      </div>
+    </section>
+  </div>
+</div>

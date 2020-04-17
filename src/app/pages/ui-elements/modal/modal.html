@@ -5,26 +5,21 @@
 <h1 class="page-title">Modal - <span class="fw-semi-bold">Examples</span></h1>
 <div class="row">
   <div class="col-12 col-md-6">
-    <widget
-      class="mb-xlg"
-      [title]="'<h5>Live <span class=fw-semi-bold>Demo</span></h5>'"
-      [close]="true"
-      [collapse]="true"
-      [customHeader]="true"
-    >
+    <section class="mb-xlg" widgster [optionsControl]="false" [reloadControl]="false" [fullscreenControl]="false">
+      <h5 *widgsterTitle>
+        Live <span class=fw-semi-bold>Demo</span>
+      </h5>
       <p>
         Toggle a working modal demo by clicking the button below. It
         will slide down and fade in from the top of the page.
       </p>
       <button class="btn btn-primary mr-sm" (click)="demoModal.show()">Demo</button>
       <button class="btn btn-primary" (click)="longModal.show()">Scrolling long content</button>
-    </widget>
-    <widget
-      [title]="'<h5>Optional <span class=fw-semi-bold>Sizes</span></h5>'"
-      [close]="true"
-      [collapse]="true"
-      [customHeader]="true"
-    >
+    </section>
+    <section class="mb-xlg" widgster [optionsControl]="false" [reloadControl]="false" [fullscreenControl]="false">
+      <h5 *widgsterTitle>
+        Optional <span class=fw-semi-bold>Sizes</span>
+      </h5>
       <p>
         Modals have two optional sizes, available via modifier .modal-sm and .modal-lg
         classes to be placed on a .modal-dialog. These sizes kick in at certain
@@ -32,16 +27,13 @@
       </p>
       <button class="btn btn-primary mr-sm" (click)="largeModal.show()">Large modal</button>
       <button class="btn btn-primary" (click)="smallModal.show()">Small modal</button>
-    </widget>
+    </section>
   </div>
   <div class="col-12 col-md-6">
-    <widget
-      class="mb-xlg"
-      [title]="'<h5>Using <span class=fw-semi-bold>Grid</span> </h5>'"
-      [close]="true"
-      [collapse]="true"
-      [customHeader]="true"
-    >
+    <section class="mb-xlg" widgster [optionsControl]="false" [reloadControl]="false" [fullscreenControl]="false">
+      <h5 *widgsterTitle>
+        Using <span class=fw-semi-bold>Grid</span>
+      </h5>
       <div class="p-3">
         <button class="btn btn-primary mb" (click)="launchModal.show()">Launch</button>
         <pre class="bg-addition border-0 w-100 h-100">
@@ -70,7 +62,7 @@
           <code class="text-danger">{{'&lt;/div&gt;'}}</code>
         </pre>
       </div>
-    </widget>
+    </section>
   </div>
 </div>
 

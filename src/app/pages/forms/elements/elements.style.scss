@@ -1,26 +1,18 @@
 @import "../../../styles/helpers";
-@import "../../../../../node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min";
-@import "../../../../../node_modules/bootstrap-timepicker/css/bootstrap-timepicker.min";
-@import "../../../../../node_modules/bootstrap-colorpicker/src/sass/colorpicker";
-@import "../../../../../node_modules/bootstrap-markdown/css/bootstrap-markdown.min";
-@import "../../../../../node_modules/bootstrap-select/dist/css/bootstrap-select";
-@import "../../../../../node_modules/jasny-bootstrap/dist/css/jasny-bootstrap";
 @import "../../../../../node_modules/dropzone/dist/dropzone";
-@import "../../../styles/select2-variables";
-@import "../../../../../node_modules/select2/src/scss/core";
-@import "../../../../../node_modules/select2-bootstrap-theme/src/select2-bootstrap";
 
 /**
  * Switchery.
  */
 
-.switch{
+.switch {
   box-sizing: content-box;
 }
 
 .switch input {
   display: none;
 }
+
 .switch i {
   display: inline-block;
   cursor: pointer;
@@ -28,26 +20,25 @@
   transition: all ease 0.2s;
   -webkit-transition: all ease 0.2s;
   border-radius: 20px;
-  box-shadow: inset 0 0 1px rgba(0,0,0,.5);
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.5);
 }
+
 .switch i:before {
   display: block;
-  content: '';
+  content: "";
   width: 30px;
   height: 30px;
   padding: 1px;
   border-radius: 20px;
   background: white;
-  box-shadow: 0 1px 2px rgba(0,0,0,.5);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
+
 .switch :checked + i {
   padding-right: 0;
   padding-left: 20px;
   background: rgb(100, 189, 99);
 }
-
-
-
 
 /**
  * Jasny Bootstrap
@@ -61,15 +52,28 @@
     background-color: $thumbnail-bg;
     border: $thumbnail-border-width solid $thumbnail-border-color;
     border-radius: $thumbnail-border-radius;
-    transition: all .2s ease-in-out;
-    @include box-shadow(0 1px 2px rgba(0,0,0,.075));
+    transition: all 0.2s ease-in-out;
+    @include box-shadow(0 1px 2px rgba(0, 0, 0, 0.075));
+    margin-bottom: 5px;
   }
 }
 
-.fileinput-preview.fileinput-exists {
+.fileinput .fileinput-preview.fileinput-exists {
   border: 1px solid $input-border-color;
   border-radius: $border-radius;
   padding: 5px;
+}
+
+.fileinput:not(.input-group) > div > button:first-of-type {
+  margin-right: 5px;
+}
+
+.fileinput .thumbnail {
+  display: inline-block;
+  margin-bottom: 5px;
+  overflow: hidden;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .fileinput.input-group {
@@ -84,6 +88,7 @@
   &.btn-sm {
     border-radius: 0 $border-radius-sm $border-radius-sm 0;
   }
+
   &.btn-lg {
     border-radius: 0 $border-radius-lg $border-radius-lg 0;
   }
@@ -91,26 +96,31 @@
 
 .form-group.has-warning .fileinput {
   .fileinput-preview {
-    color: theme-color('warning');
+    color: theme-color("warning");
   }
+
   .thumbnail {
-    border-color: theme-color('warning');
+    border-color: theme-color("warning");
   }
 }
+
 .form-group.has-error .fileinput {
   .fileinput-preview {
-    color: theme-color('danger');
+    color: theme-color("danger");
   }
+
   .thumbnail {
-    border-color: theme-color('danger');
+    border-color: theme-color("danger");
   }
 }
+
 .form-group.has-success .fileinput {
   .fileinput-preview {
-    color: theme-color('success');
+    color: theme-color("success");
   }
+
   .thumbnail {
-    border-color: theme-color('success');
+    border-color: theme-color("success");
   }
 }
 
@@ -120,12 +130,11 @@
   padding: 1px 6px;
 }
 
-
 /**
  * Dropzone
  */
 
-.dropzone{
+.dropzone {
   border: 2px dashed #ccc;
   @include border-radius($border-radius);
 }
@@ -138,7 +147,8 @@
   display: block;
   border: 1px solid $table-border-color;
 
-  > .md-header, .md-footer {
+  > .md-header,
+  .md-footer {
     display: block;
     padding: 6px 4px;
     background: $gray-light;
@@ -161,7 +171,8 @@
     font-family: $font-family-monospace;
     font-size: $font-size-base;
     outline: 0;
-    outline: thin dotted  \9; /* IE6-9 */
+    outline: thin dotted \9;
+    /* IE6-9 */
     margin: 0;
     display: block;
     width: 100%;
@@ -170,6 +181,7 @@
     border-radius: 0;
     box-shadow: none;
     background: $input-disabled-bg;
+
     &:focus {
       box-shadow: none;
       background: $input-bg;
@@ -178,6 +190,7 @@
 
   // Hover state
   $color: $input-border-focus;
+
   &.active {
     border-color: $color;
     outline: 0;
@@ -199,9 +212,11 @@ $slider-handle-size: 26px;
   display: inline-block;
   vertical-align: middle;
   position: relative;
+
   &.slider-horizontal {
     width: 210px;
     height: $slider-line-height;
+
     .slider-track {
       height: $slider-line-height/2;
       width: 100%;
@@ -209,16 +224,20 @@ $slider-handle-size: 26px;
       top: 50%;
       left: 0;
     }
+
     .slider-selection {
       height: 100%;
       top: 0;
       bottom: 0;
     }
+
     .slider-handle {
       margin-left: -$slider-handle-size/2;
-      margin-top: -$slider-handle-size*3/8;
+      margin-top: -$slider-handle-size * 3/8;
+
       &.triangle {
-        border-width: 0 $slider-line-height/2 $slider-line-height/2 $slider-line-height/2;
+        border-width: 0 $slider-line-height/2 $slider-line-height/2
+          $slider-line-height/2;
         width: 0;
         height: 0;
         border-bottom-color: #0480be;
@@ -226,9 +245,11 @@ $slider-handle-size: 26px;
       }
     }
   }
+
   &.slider-vertical {
     height: 210px;
     width: $slider-line-height;
+
     .slider-track {
       width: $slider-line-height/2;
       height: 100%;
@@ -236,17 +257,21 @@ $slider-handle-size: 26px;
       left: 50%;
       top: 0;
     }
+
     .slider-selection {
       width: 100%;
       left: 0;
       top: 0;
       bottom: 0;
     }
+
     .slider-handle {
-      margin-left: -$slider-handle-size*3/8;
+      margin-left: -$slider-handle-size * 3/8;
       margin-top: -$slider-handle-size/2;
+
       &.triangle {
-        border-width: $slider-line-height/2 0 $slider-line-height/2 $slider-line-height/2;
+        border-width: $slider-line-height/2 0 $slider-line-height/2
+          $slider-line-height/2;
         width: 1px;
         height: 1px;
         border-left-color: #0480be;
@@ -254,18 +279,22 @@ $slider-handle-size: 26px;
       }
     }
   }
+
   &.slider-disabled {
     .slider-handle {
       @include gradient-y(#dfdfdf, #bebebe);
     }
+
     .slider-track {
       @include gradient-y(#e5e5e5, #e9e9e9);
       cursor: not-allowed;
     }
   }
+
   input {
     display: none;
   }
+
   .tooltip-inner {
     white-space: nowrap;
   }
@@ -274,120 +303,65 @@ $slider-handle-size: 26px;
     top: -30px;
   }
 }
+
 .slider-track {
   position: absolute;
   cursor: pointer;
   @include gradient-y(#eee, #f8f8f8);
 
-  @include box-shadow(inset 0 1px 2px rgba(0,0,0,.1));
+  @include box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.1));
   border-radius: $border-radius;
 }
+
 .slider-selection {
   position: absolute;
-  background-color: theme-color('primary');
-  @include box-shadow(inset 0 -1px 0 rgba(0,0,0,.15));
+  background-color: theme-color("primary");
+  @include box-shadow(inset 0 -1px 0 rgba(0, 0, 0, 0.15));
   box-sizing: border-box;
   border-radius: $border-radius;
 
-  .slider-danger &{
-    background-color: theme-color('danger');
+  .slider-danger & {
+    background-color: theme-color("danger");
   }
-  .slider-success &{
-    background-color: theme-color('success');
+
+  .slider-success & {
+    background-color: theme-color("success");
   }
-  .slider-warning &{
-    background-color: theme-color('warning');
+
+  .slider-warning & {
+    background-color: theme-color("warning");
   }
-  .slider-info &{
-    background-color: theme-color('info');
+
+  .slider-info & {
+    background-color: theme-color("info");
   }
-  .slider-inverse &{
+
+  .slider-inverse & {
     background-color: $gray-700;
   }
 }
+
 .slider-handle {
   position: absolute;
   width: $slider-handle-size;
   height: $slider-handle-size;
   background-color: $white;
-  @include box-shadow(inset 0 1px 0 rgba(255,255,255,.2), 0 1px 3px rgba(0,0,0,.5));
+  @include box-shadow(
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    0 1px 3px rgba(0, 0, 0, 0.5)
+  );
   border: 0px solid transparent;
 
-  &:focus{
+  &:focus {
     outline: 0;
   }
 
   &.round {
     border-radius: 50%;
   }
+
   &.triangle {
     background: transparent none;
-  }
-}
-
-
-/**
- * Bootstrap select
- */
-
-.selectpicker.form-control {
-  height: auto;
-}
-
-.bootstrap-select {
-  .dropdown-toggle {
-    padding-left: 10px;
-
-    &:after {
-      margin-right: 0;
-      margin-left: 0;
-    }
-  }
-  .dropdown-menu > li > a {
-    display: block;
-    width: 100%; // For `<button>`s
-    padding: 3px 20px;
-    clear: both;
-    font-weight: normal;
-    line-height: $line-height-base;
-    color: $dropdown-link-color;
-    text-align: inherit; // For `<button>`s
-    white-space: nowrap; // prevent links from randomly breaking onto new lines
-    background: none; // For `<button>`s
-    border: 0; // For `<button>`s
-
-    @include hover-focus {
-      color: $dropdown-link-hover-color;
-      text-decoration: none;
-      background-color: $dropdown-link-hover-bg;
-    }
-
-    // Active state
-    &.active {
-      @include plain-hover-focus {
-        color: $dropdown-link-active-color;
-        text-decoration: none;
-        background-color: $dropdown-link-active-bg;
-        outline: 0;
-      }
-    }
-
-    // Disabled state
-    //
-    // Gray out text and ensure the hover/focus state remains gray
-    &.disabled {
-      @include plain-hover-focus {
-        color: $dropdown-link-disabled-color;
-      }
-
-      // Nuke hover/focus effects
-      @include hover-focus {
-        text-decoration: none;
-        cursor: $cursor-disabled;
-        background-color: transparent;
-        background-image: none; // Remove CSS gradient
-      }
-    }
   }
 }
 
@@ -399,7 +373,6 @@ $slider-handle-size: 26px;
   overflow: hidden;
   resize: none;
 }
-
 
 /**
 * datetime
@@ -414,6 +387,11 @@ $slider-handle-size: 26px;
 
 /* Awesome Bootstrap Checkbox */
 
-.abc-checkbox, .abc-radio {
+.abc-checkbox,
+.abc-radio {
   margin-bottom: 0.5rem;
+}
+
+.dropzone .dz-message .dz-button {
+  font-size: 1rem;
 }

@@ -17,23 +17,23 @@
     <div class="row">
       <div class="col-sm-6">
         <div class="btn-toolbar">
-          <div class="btn-group mr">
-            <a class="btn btn-default dropdown-toggle" href="#" data-toggle="dropdown">
+          <div class="btn-group mr" dropdown>
+            <a dropdownToggle class="btn btn-default dropdown-toggle" href="#" (click)="$event.preventDefault()">
               Select
             </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" (click)="toggleAll(true)">All</a></li>
-              <li><a class="dropdown-item" (click)="toggleAll(false)">None</a></li>
+            <ul *dropdownMenu class="dropdown-menu">
+              <li><a class="dropdown-item" (click)="selectAll()">All</a></li>
+              <li><a class="dropdown-item" (click)="unselectAll()">None</a></li>
               <li class="dropdown-divider"></li>
               <li><a class="dropdown-item" (click)="selectRead()">Read</a></li>
               <li><a class="dropdown-item" (click)="selectUnread()">Unread</a></li>
             </ul>
           </div>
-          <div class="btn-group">
-            <a class="btn btn-default dropdown-toggle" href="#" data-toggle="dropdown">
+          <div class="btn-group" dropdown>
+            <a dropdownToggle class="btn btn-default dropdown-toggle" href="#" (click)="$event.preventDefault()">
               Actions
             </a>
-            <ul class="dropdown-menu">
+            <ul *dropdownMenu class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Reply</a></li>
               <li><a class="dropdown-item" href="#">Forward</a></li>
               <li><a class="dropdown-item" href="#">Archive</a></li>
@@ -46,44 +46,50 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-6">
-        <input class="form-control input-transparent form-control-sm width-200 float-right" id="mailbox-search" [(ngModel)]="searchText" type="text" placeholder="Search Messages">
+      <div class="search-message col-sm-6">
+        <input class="form-control input-transparent form-control-sm width-200 float-right" id="mailbox-search"
+          [(ngModel)]="searchText" type="text" placeholder="Search Messages">
       </div>
     </div>
   </header>
   <div class="widget-body" id="mailbox-content">
-    <table class="table table-striped table-emails table-hover" id="folder-view" >
+    <table class="table table-striped table-emails table-hover" id="folder-view">
       <thead>
-      <tr>
-        <th colspan="3" id="folder-actions">
-          <div class="abc-checkbox">
-            <input id="toggle-all" type="checkbox" (click)="selectAll()">
-            <label for="toggle-all"></label>
-          </div>
-        </th>
-      </tr>
+        <tr>
+          <th colspan="3" id="folder-actions">
+            <div class="abc-checkbox">
+              <input id="toggle-all" type="checkbox" [formControl]="checkAll">
+              <label for="toggle-all"></label>
+            </div>
+          </th>
+        </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let mail of mails | FoldersPipe : folderName | SearchPipe : searchText" [ngClass]="{'unread': mail.unread}">
-        <td>
-          <div class="abc-checkbox">
-            <input class="toggle-one" type="checkbox" id="checkbox{{mail.id}}" [checked]="mail.selected"  (click)="selectMail(mail)">
-            <label attr.for="checkbox{{mail.id}}"></label>
-          </div>
-        </td>
-        <td><span class="starred"><i class="fa" [ngClass]="{'fa-star': mail.starred, 'fa-star-o': !mail.starred}" (click)="changeStarStatus(mail)"></i></span></td>
-        <td class="name d-none d-md-table-cell" (click)="openMail(mail)">{{mail.sender}}</td>
-        <td class="subject" (click)="openMail(mail)">{{mail.subject}}</td>
-        <td class="d-none d-md-block">
-          <i [ngClass]="{'fa fa-paperclip': mail.paperclip}"></i>
-        </td>
-        <td class="date">{{mail.date}}</td>
-      </tr>
-      <tr *ngIf="(mails).length == 4">
-          <td colspan="12">
-              Nothing here yet
+        <tr *ngFor="let mail of mails | FoldersPipe : folderName | SearchPipe : searchText"
+          [class.unread]="mail.unread">
+          <td>
+            <div class="abc-checkbox">
+              <input class="toggle-one" type="checkbox" id="checkbox{{mail.id}}" [checked]="mail.selected"
+                (change)="onSelect(mail.id)">
+              <label [attr.for]="'checkbox'+mail.id"></label>
+            </div>
           </td>
-      </tr>
+          <td><span class="starred"><i class="fa" [class.fa-star]="mail.starred" [class.fa-star-o]="!mail.starred"
+                (click)="changeStarStatus(mail)"></i>
+            </span>
+          </td>
+          <td class="name d-none d-md-table-cell" (click)="openMail(mail)">{{mail.sender}}</td>
+          <td class="subject" (click)="openMail(mail)">{{mail.subject}}</td>
+          <td class="d-none d-md-block">
+            <i [ngClass]="{'fa fa-paperclip': mail.paperclip}"></i>
+          </td>
+          <td class="date">{{mail.date}}</td>
+        </tr>
+        <tr *ngIf="(mails).length == 4">
+          <td colspan="12">
+            Nothing here yet
+          </td>
+        </tr>
       </tbody>
     </table>
   </div>
