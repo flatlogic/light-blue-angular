@@ -1,5 +1,10 @@
 # Changelog
 
+## [7.1.5]
+
+### Updated
+- Updated design
+
 ## [7.1.4]
 
 ### Updated
