@@ -19,10 +19,13 @@ $enable-shadows: true !default;
 // ------------------------
 
 $lime: #8cbf26 !default;
-$blue: #4e85bd !default;
-$red: #db4912 !default;
-$yellow: #f0af03 !default;
-$green: #57b955 !default;
+$blue: #1D8DFF !default;
+$darkness-blue: #1C2531 !default;
+$light-blue: #293647 !default;
+$dark-blue: #222D3C !default;
+$red: #FF8253 !default;
+$yellow: #FDD468 !default;
+$green: #61D85E !default;
 $cyan: #4ebfbb !default;
 $white: #fff !default;
 $black: #000 !default;
@@ -58,14 +61,11 @@ $theme-colors: (
   "dark": $gray-700,
   "inverse": $white-dark,
   "gray": $gray-300,
-  "default": #f8f8f8
+  "default": #f8f8f8,
+  "dark-light": #293647,
 );
 
-$body-bg: #fafbff !default;
-$body-bg-light: lighten($body-bg, 3%);
-
-$bg-gradient-color-1: #414e60;
-$bg-gradient-color-2: #94a3b1;
+$body-bg: #36455A !default;
 
 // Typography
 // -------------------------
@@ -78,6 +78,7 @@ $font-family-sans-serif: "Open Sans", sans-serif !default;
 $font-size-initial: 14px; // reset default browser value from 16px to 13px
 $font-size-base: 1rem !default;
 $font-size-lg: 1.25rem !default;
+$font-size-xl: 1.75rem !default;
 $font-size-sm: 0.875rem !default;
 $font-size-larger: 1.1rem;
 $font-size-mini: 0.9rem;
@@ -122,7 +123,8 @@ $widget-header-smalls-color: $text-muted;
 $widget-controls-color: $white;
 $widget-controls-hover-color: rgba($white, 0.6);
 $widget-border-radius: 10px;
-$widget-bg-color: rgba(0, 0, 0, 0.24);
+$widget-bg-color: $light-blue;
+$table-line-color: $dark-blue;
 
 $text-transparent: opacify($widget-bg-color, 0.07);
 $bg-addition: darken($widget-bg-color, 0.07);
@@ -276,7 +278,7 @@ $state-danger-bg: rgba($state-danger-border, 0.29) !default;
 
 //== Tables
 //
-$table-accent-bg: $widget-bg-color !default;
+$table-accent-bg: $table-line-color !default;
 $table-border-color: rgba(
   $widget-bg-color,
   0.35
@@ -359,7 +361,7 @@ $progress-height-xs: 0.38rem; //~5px
 
 $progress-value-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
 
-$progress-bg: rgba(0, 0, 0, 0.15) !default;
+$progress-bg: $darkness-blue !default;
 $progress-bar-bg: $blue !default;
 
 // Panels

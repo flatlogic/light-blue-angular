@@ -267,7 +267,6 @@ h-100 {
 @include bg-variant('.bg-danger', theme-color('danger'));
 
 @include bg-variant('.bg-body', $body-bg);
-@include bg-variant('.bg-body-light', $body-bg-light);
 @include bg-variant('.bg-gray', $gray-700);
 @include bg-variant('.bg-gray-transparent', rgba($gray-300, .6));
 @include bg-variant('.bg-gray-dark', $gray-800);
@@ -316,6 +315,10 @@ h-100 {
 
 .fs-larger{
   font-size: $font-size-larger;
+}
+
+.fs-xl {
+  font-size: $font-size-xl;
 }
 
 .btlr{

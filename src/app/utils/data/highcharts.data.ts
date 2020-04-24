@@ -21,7 +21,8 @@ export const highchartsOptions1: Options = {
       style: {
         color: '#fff'
       }
-    }
+    },
+    gridLineColor: '#1C2531'
   },
   xAxis: {
     labels: {
@@ -282,7 +283,8 @@ export const highchartsOptions3 = {
     },
     title: {
       enabled: false
-    }
+    },
+    gridLineColor: '#1C2531'
   },
   tooltip: {
     pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.percentage:.1f}%</b> ({point.y:,.0f} millions)<br/>',
@@ -1805,7 +1807,8 @@ export const highchartsOptions5 = {
     },
     title: {
       text: null
-    }
+    },
+    gridLineColor: '#1C2531'
   },
   series: [{
     data: getData(100),
@@ -1913,7 +1916,8 @@ export const highchartsOptions6 = {
     accessibility: {
       description: 'Percentage population',
       rangeDescription: 'Range: 0 to 5%'
-    }
+    },
+    gridLineColor: '#1C2531'
   },
   plotOptions: {
     series: {

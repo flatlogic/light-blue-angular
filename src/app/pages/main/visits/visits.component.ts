@@ -124,6 +124,7 @@ export class VisitsComponent implements OnInit, AfterViewInit, OnDestroy {
       polygonTemplate.tooltipText = '{name}';
       polygonTemplate.fill = color('#fff');
       polygonTemplate.fillOpacity = 0.2;
+      polygonTemplate.stroke = color('#293647');
       const hs = polygonTemplate.states.create('hover');
       hs.properties.fillOpacity = 0.5;
 

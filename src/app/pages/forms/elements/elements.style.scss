@@ -14,6 +14,7 @@
 }
 
 .switch i {
+  background-color: $darkness-blue;
   display: inline-block;
   cursor: pointer;
   padding-right: 20px;
@@ -335,10 +336,6 @@ $slider-handle-size: 26px;
   .slider-info & {
     background-color: theme-color("info");
   }
-
-  .slider-inverse & {
-    background-color: $gray-700;
-  }
 }
 
 .slider-handle {
@@ -394,4 +391,103 @@ $slider-handle-size: 26px;
 
 .dropzone .dz-message .dz-button {
   font-size: 1rem;
+}
+
+tbody td.form-group input{
+  background: #4e6381;
+  color: white;
+  border: 0;
+
+  &:focus {
+    background: #4e6381;
+    color: white;
+  }
+}
+
+ng5-slider .ng5-slider-span.ng5-slider-bar-wrapper.ng5-slider-full-bar span {
+  background: $darkness-blue;
+}
+
+editor .tox {
+  & .tox-menubar {
+    background-color: $light-blue;
+  }
+
+  & .tox-mbtn {
+    color: white;
+  }
+
+  & .tox-toolbar__primary {
+    background-color: $light-blue;
+  }
+
+  & .tox-tbtn__select-chevron svg {
+    fill: white;
+  }
+
+  & .tox-tbtn svg {
+    fill: white;
+  }
+
+  & .tox-tbtn {
+    color: white;
+  }
+
+  & .tox-edit-area__iframe {
+    background-color: $light-blue;
+  }
+
+  & .tox-statusbar {
+    background-color: $light-blue;
+
+    & a {
+      color: white;
+    }
+  }
+
+  & .tox-statusbar__path-item {
+    color: white;
+  }
+
+  & .tox-statusbar__resize-handle svg {
+    fill: white;
+  }
+}
+
+div .md-editor-container .md-layout .tool-bar {
+  background-color: $light-blue !important;
+  border-bottom: 1px solid white !important;
+}
+
+.ace-tm .ace_gutter {
+  background-color: $light-blue;
+  color: white;
+}
+
+.ace-tm .ace_heading {
+  color: #FDD468;
+}
+
+.ace_content {
+  background-color: $light-blue;
+  color: white;
+}
+
+.ace_text-layer {
+  opacity: 0.8;
+}
+
+.md-editor-container {
+  border: 1px solid white !important;
+}
+
+.md-editor-container .md-layout .preview-container .preview-panel {
+  color: white;
+  opacity: 0.8;
+  background-color: $light-blue !important;
+}
+
+md-editor .md-editor-container .preview-container {
+  color: white;
+  background-color: $light-blue;
 }

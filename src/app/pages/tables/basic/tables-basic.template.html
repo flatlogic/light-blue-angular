@@ -52,7 +52,7 @@
             </td>
             <td class="width-150">
               <div class="progress progress-sm">
-                <progressbar class="bg-gray-lighter" type="success" [animate]="true"
+                <progressbar type="success" [animate]="true"
                   [value]="progressbarValue1$ | async" [max]="100"></progressbar>
               </div>
             </td>
@@ -87,7 +87,7 @@
             </td>
             <td class="width-150">
               <div class="progress progress-sm">
-                <progressbar class="bg-gray-lighter" type="warning" [animate]="true"
+                <progressbar type="warning" [animate]="true"
                   [value]="progressbarValue2$ | async" [max]="100"></progressbar>
               </div>
             </td>
@@ -124,7 +124,7 @@
             </td>
             <td class="width-150">
               <div class="progress progress-sm">
-                <progressbar class="bg-gray-lighter" [animate]="true" [value]="progressbarValue3$ | async" [max]="100">
+                <progressbar [animate]="true" [value]="progressbarValue3$ | async" [max]="100">
                 </progressbar>
               </div>
             </td>
@@ -159,7 +159,7 @@
             </td>
             <td class="width-150">
               <div class="progress progress-sm">
-                <progressbar class="bg-gray-lighter" type="danger" [animate]="true" [value]="progressbarValue4$ | async"
+                <progressbar type="danger" [animate]="true" [value]="progressbarValue4$ | async"
                   [max]="100"></progressbar>
               </div>
             </td>
@@ -194,7 +194,7 @@
             </td>
             <td class="width-150">
               <div class="progress progress-sm">
-                <progressbar class="bg-gray-lighter" [animate]="true" [value]="progressbarValue5$ | async" [max]="100">
+                <progressbar [animate]="true" [value]="progressbarValue5$ | async" [max]="100">
                 </progressbar>
               </div>
             </td>
@@ -208,7 +208,7 @@
             Send to ...
           </button>
           <div class="btn-group" dropdown>
-            <button class="btn btn-sm btn-inverse dropdown-toggle" dropdownToggle>
+            <button class="btn btn-sm btn-default dropdown-toggle" dropdownToggle>
               &nbsp; Clear &nbsp;
             </button>
             <ul *dropdownMenu class="dropdown-menu dropdown-menu-right">
@@ -303,28 +303,28 @@
               <td>Mark</td>
               <td>Otto</td>
               <td><a href="#">ottoto@example.com</a></td>
-              <td><span class="badge badge-pill bg-gray-light text-gray">Pending</span></td>
+              <td><span class="badge badge-pill bg-warning">Pending</span></td>
             </tr>
             <tr>
               <td>2</td>
               <td>Jacob</td>
               <td>Thornton</td>
               <td><a href="#">fat.thor@example.com</a></td>
-              <td><span class="badge badge-pill bg-gray-light text-gray-light">Unconfirmed</span></td>
+              <td><span class="badge badge-pill bg-danger">Unconfirmed</span></td>
             </tr>
             <tr>
               <td>3</td>
               <td>Larry</td>
               <td>the Bird</td>
               <td><a href="#">larry@example.com</a></td>
-              <td><span class="badge badge-pill bg-gray-light text-gray">New</span></td>
+              <td><span class="badge badge-pill bg-success">New</span></td>
             </tr>
             <tr>
               <td>4</td>
               <td>Peter</td>
               <td>Horadnia</td>
               <td><a href="#">peter@example.com</a></td>
-              <td><span class="badge badge-pill bg-gray-light text-gray-light">Active</span></td>
+              <td><span class="badge badge-pill bg-primary">Active</span></td>
             </tr>
           </tbody>
         </table>

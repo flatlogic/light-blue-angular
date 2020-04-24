@@ -1,6 +1,6 @@
 :host {
   display: block;
-  background-color: #ffffff;
+  background-color: #1C2531;
   position: relative;
   overflow: hidden;
   margin: 0 0 6px;
@@ -13,7 +13,7 @@
 .message,
 .title {
   font-size: 13px;
-  color: #666666;
+  color: white;
   font-weight: 500;
 }
 
@@ -22,19 +22,19 @@ button.cancel {
   border-radius: 4px;
   text-decoration: none;
   display: inline-block;
-  color: #888888;
+  color: white;
   margin-right: 10px;
   padding: 3px 10px 5px;
   text-transform: capitalize;
   outline: none;
-  background-color: #ffffff;
+  background-color: #1C2531;
   font-size: 13px;
   font-weight: 500;
   border: 1px solid #ddd;
   transition: color 0.2s, border 0.2s;
 
   &:hover {
-    color: #444444;
+    color: white;
     border: 1px solid rgb(201, 201, 201);
   }
 }

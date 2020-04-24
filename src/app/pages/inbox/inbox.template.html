@@ -8,7 +8,7 @@
 </div>
 <h1 class="page-title">Email - <span class="fw-semi-bold">Inbox</span></h1>
 <div class="row">
-  <div class="col-lg-3 col-xl-2 col-12">
+  <div class="col-lg-3 col-xl-2 col-12 text-dark-light">
     <a class="btn btn-danger btn-block" id="compose-btn" (click)="handleComposeBtn()">Compose</a>
     <ul class="nav nav-pills flex-column nav-stacked nav-email-folders mt" id="folders-list">
       <li class="nav-item" [class.active]="currentFolderName === 'Inbox'">
@@ -30,7 +30,7 @@
       <li class="nav-item" [class.active]="currentFolderName === 'Trash'"><a class="nav-link"
           (click)="setFolderName('Trash')">Trash</a></li>
     </ul>
-    <h6 class="mt">QUICK VIEW</h6>
+    <h6 class="mt text-white">QUICK VIEW</h6>
     <ul class="nav nav-pills flex-column nav-stacked nav-email-folders mb-lg fs-mini">
       <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-circle text-danger float-right"></i> Work </a>
       </li>

@@ -50,8 +50,8 @@ export class CalendarComponent implements OnInit, AfterViewInit, OnDestroy {
       start: [null],
       end: [null],
       allDay: [true],
-      backgroundColor: ['#64bd63'],
-      textColor: ['#fff']
+      backgroundColor: ['#61D85E'],
+      textColor: ['#293647']
     });
 
 
@@ -61,14 +61,15 @@ export class CalendarComponent implements OnInit, AfterViewInit, OnDestroy {
     this.events = [{
       title: 'All Day Event',
       start: new Date(y, m, 1),
-      backgroundColor: '#79A5F0',
+      backgroundColor: '#1D8DFF',
       textColor: '#fff',
       description: 'Will be busy throughout the whole day'
     },
     {
       title: 'Long Event',
       start: new Date(y, m, d + 5),
-      backgroundColor: '#f0af03',
+      backgroundColor: '#FDD468',
+      textColor: '#293647',
       end: new Date(y, m, d + 7),
       description: 'This conference should be worse visiting'
     },
@@ -76,7 +77,8 @@ export class CalendarComponent implements OnInit, AfterViewInit, OnDestroy {
       id: 999,
       title: 'Blah Blah Car',
       start: new Date(y, m, d - 3, 16, 0),
-      backgroundColor: '#f0af03',
+      backgroundColor: '#FDD468',
+      textColor: '#293647',
       allDay: false,
       description: 'Agree with this guy on arrival time'
     },
@@ -93,15 +95,15 @@ export class CalendarComponent implements OnInit, AfterViewInit, OnDestroy {
       title: 'Got to school',
       start: new Date(y, m, d + 16, 12, 0),
       end: new Date(y, m, d + 16, 13, 0),
-      backgroundColor: '#64bd63',
-      textColor: '#fff',
+      backgroundColor: '#61D85E',
+      textColor: '#293647',
       description: 'Time to go back'
     },
     {
       title: 'Study some Node',
       start: new Date(y, m, d + 18, 12, 0),
       end: new Date(y, m, d + 18, 13, 0),
-      backgroundColor: '#79A5F0',
+      backgroundColor: '#1D8DFF',
       textColor: '#fff',
       description: 'Node.js is a platform built ' +
         'on Chrome\'s JavaScript runtime for easily' +
@@ -116,8 +118,8 @@ export class CalendarComponent implements OnInit, AfterViewInit, OnDestroy {
       start: new Date(y, m, 28),
       end: new Date(y, m, 29),
       url: 'http://flatlogic.com/',
-      backgroundColor: '#e5603b',
-      textColor: '#fff',
+      backgroundColor: '#FF8253',
+      textColor: '#293647',
       description: 'Creative solutions'
     }];
   }

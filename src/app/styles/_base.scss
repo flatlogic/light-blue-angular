@@ -513,7 +513,6 @@ a:link {
   }
 
   .widget-icon {
-    opacity: 0.5;
     font-size: 42px;
     height: 60px;
     line-height: 45px;
@@ -677,7 +676,7 @@ a:link {
     float: left;
 
     & > a {
-      color: $header-link-color;
+      color: $dark-blue;
       width: 40px;
       padding: 0;
       font-size: $font-size-base * 1.5;
@@ -707,8 +706,8 @@ a:link {
       right: 2px;
       font-size: $font-size-index;
       font-weight: normal;
-      background: $header-notification-count;
-      color: rgba(white, 0.9);
+      background: #FDD468;
+      color: $dark-blue;
       line-height: 1em;
       padding: 2px 4px;
       border-radius: 10px;
@@ -1130,7 +1129,7 @@ a:link {
   &.input-transparent {
     border: none;
     color: $input-transparent-color;
-    background-color: $widget-bg-color;
+    background-color: $dark-blue;
     @include placeholder($input-transparent-placeholder-color);
 
     &:focus {

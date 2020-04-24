@@ -2,7 +2,7 @@ import { Component, ViewChildren, QueryList, OnDestroy, ChangeDetectionStrategy 
 import { ChartComponent } from 'ng-apexcharts';
 
 import { apexOptions4, apexOptions5, apexOptions6, apexOptions7, apexOptions8, apexOptions9 } from '../../../utils/data/apex-charts.data';
-import { echartBarChartData3, echartBarChartData4 } from '../../../utils/data/echarts.data';
+import { apexBarChartData1, apexBarChartData2 } from '../../../utils/data/echarts.data';
 
 @Component({
   selector: 'app-apexcharts',
@@ -18,8 +18,8 @@ export class ApexchartsComponent implements OnDestroy {
   public apexOptions9: any = apexOptions9;
   @ViewChildren(ChartComponent) public apexchartsList: QueryList<ChartComponent>;
 
-  public echartBarChartData3: any = echartBarChartData3;
-  public echartBarChartData4: any = echartBarChartData4;
+  public apexBarChartData1: any = apexBarChartData1;
+  public apexBarChartData2: any = apexBarChartData2;
 
   public ngOnDestroy(): void {
     this.apexchartsList.forEach((c: ChartComponent) => {

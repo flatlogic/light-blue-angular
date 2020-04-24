@@ -1,3 +1,5 @@
+import EChartOption = echarts.EChartOption;
+
 export const echartBarChartData: any = {
   grid: {
     top: '0',
@@ -89,7 +91,7 @@ export const echartPieChartData: any = {
 };
 
 export const echartPieChartData3: any = {
-  color: ['#db4912', '#f0af03', '#57b955'],
+  color: ['#61D85E', '#FDD468', '#FF8253'],
   tooltip: {
     trigger: 'item'
   },
@@ -133,7 +135,7 @@ export const echartPieChartData3: any = {
 };
 
 export const echartAreaChartData: any = {
-  color: ['#8cbf26', '#4e85bd', '#db4912', '#f0af03', '#57b955'],
+  color: ['#61D85E', '#1D8DFF', '#FF8253', '#FDD468', '#57b955'],
   grid: {
     top: '0',
     right: '0',
@@ -240,6 +242,9 @@ export const echartDailyLineChartData: any = {
   yAxis: [
     {
       type: 'value',
+      splitLine: {
+        show: false
+      },
       axisLine: {
         lineStyle: {
           color: '#ffffff'
@@ -254,7 +259,6 @@ export const echartDailyLineChartData: any = {
     },
     {
       type: 'line',
-      areaStyle: {},
       data: [220, 182, 191, 234, 290, 330, 310]
     },
     {
@@ -308,7 +312,12 @@ export const echartLineChartData: any = {
         color: '#fff'
       }
     },
-    name: 'Good deeds'
+    name: 'Good deeds',
+    splitLine: {
+      lineStyle: {
+        color: '#1C2531'
+      }
+    }
   },
   series: [{
     data: [820, 932, 901, 934, 1290, 1330, 1320],
@@ -376,7 +385,12 @@ export const echartBarChartData2: any = {
         color: '#fff'
       }
     },
-    name: 'Steps'
+    name: 'Steps',
+    splitLine: {
+      lineStyle: {
+        color: '#1C2531'
+      }
+    }
   }],
   series: [{
     name: 'Steps',
@@ -423,11 +437,66 @@ export const echartLineChartData2: any = {
         color: '#fff'
       }
     },
-    name: 'Profit'
+    name: 'Profit',
+    splitLine: {
+      lineStyle: {
+        color: '#1C2531'
+      }
+    }
   },
   series: [{
     data: [820, 932, 901, 934, 1290, 1330, 1320],
     type: 'line'
+  }]
+};
+
+export const apexBarChartData1: any = {
+  grid: {
+    top: '0',
+    right: '0',
+    bottom: '0',
+    left: '0',
+  },
+  color: ['#4ebfbb'],
+  tooltip: {},
+  xAxis: {
+    type: 'category',
+    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+    show: false
+  },
+  yAxis: {
+    type: 'value',
+    show: false
+  },
+  series: [{
+    type: 'bar',
+    barWidth: '70%',
+    data: [9, 12, 14, 15, 10, 14, 20]
+  }]
+};
+
+export const apexBarChartData2: any = {
+  grid: {
+    top: '0',
+    right: '0',
+    bottom: '0',
+    left: '0',
+  },
+  color: ['#7bd47a'],
+  tooltip: {},
+  xAxis: {
+    type: 'category',
+    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+    show: false
+  },
+  yAxis: {
+    type: 'value',
+    show: false
+  },
+  series: [{
+    type: 'bar',
+    barWidth: '70%',
+    data: [9, 12, 14, 15, 10, 14, 20]
   }]
 };
 
@@ -438,7 +507,7 @@ export const echartBarChartData3: any = {
     bottom: '0',
     left: '0',
   },
-  color: ['#f0af03'],
+  color: ['#FDD468'],
   tooltip: {},
   xAxis: {
     type: 'category',
@@ -463,7 +532,7 @@ export const echartBarChartData4: any = {
     bottom: '0',
     left: '0',
   },
-  color: ['#db4912'],
+  color: ['#FF8253'],
   tooltip: {},
   xAxis: {
     type: 'category',
@@ -639,7 +708,7 @@ export const echartBarChartData6: any = {
     bottom: '0',
     left: '0',
   },
-  color: ['#618fb0'],
+  color: ['#1D8DFF'],
   tooltip: {},
   xAxis: {
     type: 'category',
@@ -664,7 +733,7 @@ export const echartBarChartData7: any = {
     bottom: '0',
     left: '0',
   },
-  color: ['#999'],
+  color: ['#61D85E'],
   tooltip: {},
   xAxis: {
     type: 'category',
@@ -689,7 +758,7 @@ export const echartBarChartData8: any = {
     bottom: '0',
     left: '0',
   },
-  color: ['#f0b518'],
+  color: ['#FDD468'],
   tooltip: {},
   xAxis: {
     type: 'category',
@@ -714,7 +783,7 @@ export const echartBarChartData9: any = {
     bottom: '0',
     left: '0',
   },
-  color: ['#e5603b'],
+  color: ['#FF8253'],
   tooltip: {},
   xAxis: {
     type: 'category',
@@ -739,7 +808,7 @@ export const echartBarChartData10: any = {
     bottom: '0',
     left: '0',
   },
-  color: ['#618fb0'],
+  color: ['#1D8DFF'],
   tooltip: {},
   xAxis: {
     type: 'category',
@@ -867,7 +936,7 @@ export const echartDynamicAreaData2: any = {
     bottom: '0',
     left: '0',
   },
-  color: ['#666666', '#343434'],
+  color: ['#1D8DFF', '#61D85E'],
   tooltip: {
   },
   legend: {
@@ -944,7 +1013,7 @@ export const echartDynamicAreaData2: any = {
         }
         return res;
       })(),
-      areaStyle: { color: '#666666' }
+      areaStyle: { color: '#1D8DFF' }
     },
     {
       name: 'Downloads',
@@ -958,7 +1027,7 @@ export const echartDynamicAreaData2: any = {
         }
         return res;
       })(),
-      areaStyle: { color: '#343434' }
+      areaStyle: { color: '#61D85E' }
     }
   ]
 };
@@ -971,7 +1040,7 @@ export const echartDynamicAreaData3: any = {
     bottom: '0',
     left: '0',
   },
-  color: ['#db4912', '#fff'],
+  color: ['#1D8DFF', '#61D85E'],
   tooltip: {
   },
   legend: {
@@ -1048,7 +1117,7 @@ export const echartDynamicAreaData3: any = {
         }
         return res;
       })(),
-      areaStyle: { color: '#db4912' }
+      areaStyle: { color: '#1D8DFF' }
     },
     {
       name: 'Google',
@@ -1062,7 +1131,7 @@ export const echartDynamicAreaData3: any = {
         }
         return res;
       })(),
-      areaStyle: { color: '#fff' }
+      areaStyle: { color: '#61D85E' }
     }
   ]
 };

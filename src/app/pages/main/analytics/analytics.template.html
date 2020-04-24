@@ -14,7 +14,7 @@
               <h5 *widgsterTitle>Visits Today</h5>
               <div class="d-flex justify-content-between align-items-center mb-lg">
                 <h2>{{analyticsService.visits.count}}</h2>
-                <i class="la la-arrow-right text-success rotate-315"></i>
+                <i class="la la-arrow-right fs-xl text-success rotate-315"></i>
               </div>
               <div class="d-flex flex-wrap justify-content-between">
                 <div class="mt visits-element">
@@ -64,22 +64,26 @@
                   This Period
                 </small>
                 <small class="mr-lg d-flex align-items-center">
-                  <span class="circle bg-info text-info mr-xs" style="font-size: 4px;">
+                  <span class="circle bg-warning text-info mr-xs" style="font-size: 4px;">
                     .
                   </span>
                   Last Period
                 </small>
               </p>
               <h6>SDK</h6>
-              <progressbar class="mb-1 progress-xs" [value]="analyticsService.performance.sdk.this_period_pct"
-                type="success"></progressbar>
-              <progressbar class="mb-3 progress-xs" [value]="analyticsService.performance.sdk.last_period_pct"
-                type="warning"></progressbar>
+              <div class="progress progress-xs mb-1">
+                <div class="progress-bar bg-success" style="width: 68%"></div>
+              </div>
+              <div class="progress progress-xs mb-1">
+                <div class="progress-bar bg-warning" style="width: 29%"></div>
+              </div>
               <h6>Integration</h6>
-              <progressbar class="mb-1 progress-xs" [value]="analyticsService.performance.integration.this_period_pct"
-                type="success"></progressbar>
-              <progressbar class="progress-xs" [value]="analyticsService.performance.integration.last_period_pct"
-                type="warning"></progressbar>
+              <div class="progress progress-xs mb-1">
+                <div class="progress-bar bg-success" style="width: 51%"></div>
+              </div>
+              <div class="progress progress-xs mb-1">
+                <div class="progress-bar bg-warning" style="width: 35%"></div>
+              </div>
             </section>
           </div>
         </div>
@@ -139,7 +143,7 @@
       <div class="row">
         <div class="col-12">
           <section widgster [optionsControl]="false" [reloadControl]="false" [fullscreenControl]="false"
-            [collapseControl]="false" [closeControl]="false" bodyClass="widget-table-overflow">
+            [collapseControl]="false" [closeControl]="false" bodyClass="widget-table-overflow" class="pb-0 overflow-hidden">
             <h5 *widgsterTitle>Support <span class='fw-semi-bold'>Requests</span></h5>
             <div class="table-responsive">
               <table class="table table-striped table-lg requests-table">
@@ -163,10 +167,10 @@
                     <td>{{row.date}}</td>
                     <td>{{row.city}}</td>
                     <td>
-                      <button
-                        class="btn p-1 px-3 btn-xs btn-{{row.status === 'Pending' ? 'success' : row.status === 'Declined' ? 'danger' : 'info'}}">
+                      <span
+                        class="badge badge-pill badge-table badge-{{row.status === 'Pending' ? 'success' : row.status === 'Declined' ? 'danger' : 'info'}}">
                         {{row.status}}
-                      </button>
+                      </span>
                     </td>
                   </tr>
                 </tbody>
@@ -200,7 +204,7 @@
           <section widgster [optionsControl]="false" [reloadControl]="false" [fullscreenControl]="false"
             [collapseControl]="false" [closeControl]="false" bodyClass="analytics-notifications w-100 mt-4">
             <h4 *widgsterTitle>Notifications
-              <span class='badge badge-pill badge-success fw-normal pull-right mt-xs'>
+              <span class='badge badge-pill badge-success fw-bold pull-right mt-xs'>
                 {{mock.notifications.length}}
               </span>
             </h4>

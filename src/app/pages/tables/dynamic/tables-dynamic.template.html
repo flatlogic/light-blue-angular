@@ -14,7 +14,7 @@
   <div class="mt">
     <div class="float-right mb">
       <div class="input-group input-group-rounded">
-        <span class="input-group-addon">
+        <span class="input-group-addon btn-default">
           <i class="fa fa-search"></i>
         </span>
         <input class="form-control input-transparent" (keyup)='updateFilter($event)' type="text"
@@ -59,7 +59,7 @@
         </ngx-datatable-column>
         <ngx-datatable-column name="Status">
           <ng-template let-value="value" ngx-datatable-cell-template>
-            <div class="bg-gray-lighter progress progress-sm">
+            <div class="progress progress-sm">
               <div class="progress-bar progress-sm bg-{{value.type}}" [ngStyle]="{ 'width': value.progress}"></div>
             </div>
           </ng-template>

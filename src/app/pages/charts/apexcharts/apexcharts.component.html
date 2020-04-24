@@ -9,7 +9,7 @@
       <h5 *widgsterTitle>
         Apex <span class=fw-semi-bold>Mixed Chart</span>
       </h5>
-      <apx-chart class="chart-inner transparent-bg" [series]="apexOptions5.series" [stroke]="apexOptions5.stroke"
+      <apx-chart class="chart-inner transparent-bg" [grid]="apexOptions5.grid" [series]="apexOptions5.series" [stroke]="apexOptions5.stroke"
         [chart]="apexOptions5.chart" [colors]="apexOptions5.colors" [legend]="apexOptions5.legend"
         [xaxis]="apexOptions5.xaxis" [yaxis]="apexOptions5.yaxis" [tooltip]="apexOptions5.tooltip">
       </apx-chart>
@@ -22,7 +22,7 @@
               <h6 class="name text-muted no-margin fs-mini">Overall Values</h6>
             </div>
             <div class="stat-item stat-item-mini-chart">
-              <div style="height: 30px; width: 54px;" class="sparkline" echarts [options]="echartBarChartData3"></div>
+              <div style="height: 30px; width: 54px;" class="sparkline" echarts [options]="apexBarChartData1"></div>
             </div>
           </div>
         </div>
@@ -33,7 +33,7 @@
               <h6 class="name text-muted no-margin fs-mini">Overall Values</h6>
             </div>
             <div class="stat-item stat-item-mini-chart">
-              <div style="height: 30px; width: 54px;" echarts [options]="echartBarChartData4">
+              <div style="height: 30px; width: 54px;" echarts [options]="apexBarChartData2">
               </div>
             </div>
           </div>
@@ -94,7 +94,7 @@
       <h5 *widgsterTitle>
         Apex <span class=fw-semi-bold>Bars Stacked</span>
       </h5>
-      <apx-chart class="chart-inner transparent-bg" [chart]="apexOptions9.chart" [series]="apexOptions9.series"
+      <apx-chart class="chart-inner transparent-bg" [grid]="apexOptions9.grid" [chart]="apexOptions9.chart" [series]="apexOptions9.series"
         [plotOptions]="apexOptions9.plotOptions" [colors]="apexOptions9.colors" [dataLabels]="apexOptions9.dataLabels"
         [legend]="apexOptions9.legend" [xaxis]="apexOptions9.xaxis" [yaxis]="apexOptions9.yaxis"></apx-chart>
     </section>

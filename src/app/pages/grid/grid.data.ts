@@ -70,7 +70,7 @@ export const initialAutoloadWidgetData: string = `
       <form>
         <div class="form-group">
           <label for="exampleInputEmail1"><i class="fa fa-circle text-warning"></i> &nbsp; Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+          <input type="email" class="form-control input-transparent" id="exampleInputEmail1" placeholder="Enter email">
         </div>
         <div class="form-group">
           <label for="pswd"><i class="fa fa-circle text-danger"></i> &nbsp; Password</label>

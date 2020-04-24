@@ -35,10 +35,10 @@
   }
 }
 
-.abc-checkbox label::after {
+.abc-checkbox-success input[type=checkbox]:checked + label::after {
   margin-left: 0;
   left: -20px;
-  color: $awesome-checkbox-default-color;
+  color: $light-blue;
 }
 
 .table td,
@@ -53,6 +53,7 @@
 .abc-radio label::after {
   margin-left: 0;
   left: -17px;
+  background-color: $blue;
 }
 
 .abc-checkbox-dark input[type="checkbox"]:checked + label {
@@ -454,6 +455,10 @@ mwl-calendar-month-view {
   }
 
   mwl-calendar-month-cell.cal-has-events {
+    .cal-events {
+      z-index: 1;
+    }
+
     .cal-day-number {
       position: relative;
 
@@ -465,7 +470,7 @@ mwl-calendar-month-view {
         border-radius: 50%;
         top: 50%;
         left: 50%;
-        z-index: -1;
+        z-index: 0;
         transform: translate(-50%, -50%);
         background-color: rgba(0, 0, 0, 0.15);
       }

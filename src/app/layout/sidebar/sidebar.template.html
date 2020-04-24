@@ -1,5 +1,5 @@
 <header class="logo">
-  <a href="https://demo.flatlogic.com/light-blue-react/">Light <span class="fw-bold">Blue</span></a>
+  <a href="https://flatlogic.com/templates/light-blue-angular/demo">Light <span class="fw-bold">Blue</span></a>
 </header>
 <ul id="side-nav" class="side-nav">
   <li class="accordion-group panel" [routerLinkActive]="['active']">
@@ -163,13 +163,13 @@
   <li>
     <a href="#">
       <!-- yep, .circle again -->
-      <i class="fa fa-circle text-warning"></i>
+      <i class="fa fa-circle text-primary"></i>
       <span class="label-name">My Recent</span>
     </a>
   </li>
   <li>
     <a href="#">
-      <i class="fa fa-circle text-gray"></i>
+      <i class="fa fa-circle text-success"></i>
       <span class="label-name">Starred</span>
     </a>
   </li>
@@ -186,12 +186,16 @@
 <div class="sidebar-alerts">
   <alert [dismissible]="true" type="transparent">
     <span class="text-white fw-semi-bold">Sales Report</span> <br>
-    <progressbar class="progress-xs mt-1 mb-0" [value]="16"></progressbar>
+    <div class="progress progress-xs w-100">
+      <div class="progress-bar bg-primary" style="width: 65%"></div>
+    </div>
     <small>Calculating x-axis bias... 65%</small>
   </alert>
   <alert [dismissible]="true" type="transparent">
     <span class="text-white fw-semi-bold">Personal Responsibility</span> <br>
-    <progressbar class="progress-xs mt-1 mb-0" type="danger" [value]="23"></progressbar>
+    <div class="progress progress-xs">
+      <div class="progress-bar bg-success" style="width: 23%"></div>
+    </div>
     <small>Provide required notes</small>
   </alert>
 </div>

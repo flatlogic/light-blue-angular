@@ -24,20 +24,20 @@
       <h5 *widgsterTitle>Map <span class="fw-semi-bold">Statistics</span></h5>
       <p>Status: <strong>Live</strong></p>
       <p>
-        <span class="circle bg-warning"><i class="fa fa-map-marker text-white"></i></span>
+        <span class="circle bg-warning"><i style="color: #293647" class="fa fa-map-marker"></i></span>
         146 Countries, 2759 Cities
       </p>
       <div class="row progress-stats">
         <div class="col-md-9 col-12">
           <h6 class="name">Foreign Visits</h6>
           <p class="description deemphasize">Some Cool Text</p>
-          <div class="bg-white progress progress-xs">
+          <div class="progress progress-xs">
             <progressbar [animate]="true" [value]="progressBarValue1$ | async" [max]="100"></progressbar>
           </div>
         </div>
         <div class="col-md-3 col-12 text-center">
-          <span class="status rounded rounded-lg bg-body-light text-dark">
-            <small><span [countUp]="75" [options]="countUpOptions">0</span>%</small>
+          <span style="width: 2.5rem; height: 2.5rem; background: #222D3C;display: flex;justify-content: center;flex-direction: column;" class="status rounded">
+            <small><span [countUp]="progressBarValue1$ | async" [options]="countUpOptions">0</span>%</small>
           </span>
         </div>
       </div>
@@ -45,14 +45,14 @@
         <div class="col-md-9 col-12">
           <h6 class="name">Local Visits</h6>
           <p class="description deemphasize">P. to C. Conversion</p>
-          <div class="bg-white progress progress-xs">
+          <div class="progress progress-xs">
             <progressbar type="danger" [animate]="true" [value]="progressBarValue2$ | async" [max]="100">
             </progressbar>
           </div>
         </div>
         <div class="col-md-3 col-12 text-center">
-          <span class="status rounded rounded-lg bg-body-light text-dark">
-            <small><span [countUp]="84" [options]="countUpOptions">0</span>%</small>
+          <span style="width: 2.5rem; height: 2.5rem; background: #222D3C;display: flex;justify-content: center;flex-direction: column;" class="status rounded">
+            <small><span [countUp]="progressBarValue2$ | async" [options]="countUpOptions">0</span>%</small>
           </span>
         </div>
       </div>
@@ -60,21 +60,21 @@
         <div class="col-md-9 col-12">
           <h6 class="name">Sound Frequencies</h6>
           <p class="description deemphasize">Average Bitrate</p>
-          <div class="bg-white progress progress-xs">
+          <div class="progress  progress-xs">
             <progressbar type="success" [animate]="true" [value]="progressBarValue3$ | async" [max]="100">
             </progressbar>
           </div>
         </div>
         <div class="col-md-3 col-12 text-center">
-          <span class="status rounded rounded-lg bg-body-light text-dark">
-            <small><span [countUp]="92" [options]="countUpOptions">0</span>%</small>
+          <span style="width: 2.5rem; height: 2.5rem; background: #222D3C;display: flex;justify-content: center;flex-direction: column;" class="status rounded">
+            <small><span [countUp]="progressBarValue3$ | async" [options]="countUpOptions">0</span>%</small>
           </span>
         </div>
       </div>
       <h6 class="fw-semi-bold mt">Map Distributions</h6>
       <p>Tracking: <strong>Active</strong></p>
       <p>
-        <span class="circle bg-warning"><i class="fa fa-cog text-white"></i></span>
+        <span class="circle bg-warning"><i style="color: #293647" class="fa fa-cog"></i></span>
         391 elements installed, 84 sets
       </p>
       <div class="input-group mt">
@@ -106,11 +106,11 @@
           <p class="value">3.38%</p>
         </div>
       </div>
-      <div class="bg-gray-lighter progress progress-xs">
+      <div class="progress progress-xs">
         <div class="progress-bar bg-success" style="width: 60%"></div>
       </div>
       <p>
-        <small><span class="circle bg-warning"><i class="fa fa-chevron-up text-white"></i></span></small>
+        <small><span class="circle bg-warning"><i style="color: #293647" class="fa fa-chevron-up"></i></span></small>
         <span class="fw-semi-bold">&nbsp;17% higher</span>
         than last month</p>
     </section>
@@ -132,11 +132,11 @@
           <p class="value">9 695</p>
         </div>
       </div>
-      <div class="bg-gray-lighter progress progress-xs">
+      <div class="progress progress-xs">
         <div class="progress-bar bg-danger" style="width: 60%"></div>
       </div>
       <p>
-        <small><span class="circle bg-warning"><i class="fa fa-chevron-down text-white"></i></span></small>
+        <small><span class="circle bg-warning"><i style="color: #293647" class="fa fa-chevron-down"></i></span></small>
         <span class="fw-semi-bold">&nbsp;8% lower</span>
         than last month
       </p>
@@ -159,11 +159,11 @@
           <p class="value">7,211M</p>
         </div>
       </div>
-      <div class="bg-gray-lighter progress progress-xs">
+      <div class="progress progress-xs">
         <div class="progress-bar progress-xs bg-primary" style="width: 60%"></div>
       </div>
       <p>
-        <small><span class="circle bg-warning"><i class="fa fa-plus text-white"></i></span></small>
+        <small><span class="circle bg-warning"><i style="color: #293647" class="fa fa-plus"></i></span></small>
         <span class="fw-semi-bold">&nbsp;8 734 higher</span>
         than last month
       </p>

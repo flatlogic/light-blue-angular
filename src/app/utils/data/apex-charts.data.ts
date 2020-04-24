@@ -107,6 +107,9 @@ export const apexOptions2: ApexOptions = {
 };
 
 export const apexOptions3 = {
+  grid: {
+    borderColor: '#1C2531'
+  },
   series: [
     {
       name: 'Traffic',
@@ -188,6 +191,9 @@ export const apexOptions3 = {
       style: {
         colors: '#fff'
       }
+    },
+    splitLine: {
+      show: false
     }
   },
   tooltip: {
@@ -260,11 +266,14 @@ export const apexOptions4 = {
     enabled: false
   },
   grid: {
-    borderColor: '#fff'
+    borderColor: '#1C2531'
   }
 };
 
 export const apexOptions5 = {
+  grid: {
+    borderColor: '#1C2531'
+  },
   series: [
     {
       name: 'Traffic',
@@ -418,6 +427,7 @@ export const apexOptions6 = {
     }
   },
   grid: {
+    borderColor: '#1C2531'
   },
   tooltip: {
     theme: 'light',
@@ -474,6 +484,9 @@ export const apexOptions8 = {
 };
 
 export const apexOptions9 = {
+  grid: {
+    borderColor: '#1C2531'
+  },
   chart: {
     height: '200px',
     type: 'bar',

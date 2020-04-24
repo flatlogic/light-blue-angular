@@ -55,6 +55,7 @@ export class MapsVectorComponent implements AfterViewInit, OnDestroy {
       let polygonTemplate = polygonSeries.mapPolygons.template;
       polygonTemplate.tooltipText = '{name}';
       polygonTemplate.fill = color('#798892');
+      polygonTemplate.stroke = color('#293647');
       let hs = polygonTemplate.states.create('hover');
       hs.properties.fill = color('#29323a');
 
