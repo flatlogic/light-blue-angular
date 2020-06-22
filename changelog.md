@@ -1,5 +1,10 @@
 # Changelog
 
+## [7.1.6]
+
+### Fixed
+- Fixed checkbox
+
 ## [7.1.5]
 
 ### Updated

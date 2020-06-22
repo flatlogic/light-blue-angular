@@ -45,6 +45,7 @@
 .table th {
   .abc-checkbox label::before,
   .abc-checkbox label::after {
+    margin-left: 0;
     left: -5px;
     color: $awesome-checkbox-default-color;
   }
