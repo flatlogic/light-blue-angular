@@ -383,15 +383,15 @@
             </label>
             <div class="col-md-8">
               <ng-select class="danger" name="n1" [(ngModel)]="selectedNumber" [clearable]="false" [searchable]="false"
-                [items]="fromOneToThree" style="display: inline-block; width: 75px;">
+                [items]="fromOneToThree" style="display: inline-block; width: 75px; margin-top: 8px">
               </ng-select>
               &nbsp;
               <ng-select class="warning" name="n2" [(ngModel)]="selectedNumber2" [clearable]="false"
-                [searchable]="false" [items]="fromFourToSix" style="display: inline-block; width: 75px;">
+                [searchable]="false" [items]="fromFourToSix" style="display: inline-block; width: 75px; margin-top: 8px">
               </ng-select>
               &nbsp;
               <ng-select class="success" name="n3" [(ngModel)]="selectedNumber3" [clearable]="false"
-                [searchable]="false" [items]="fromSevenToTen" style="display: inline-block; width: 75px;">
+                [searchable]="false" [items]="fromSevenToTen" style="display: inline-block; width: 75px; margin-top: 8px">
               </ng-select>
             </div>
           </div>
@@ -809,7 +809,7 @@
             attribute does the thing.</p>
           <form>
             <div class="row">
-              <div class="col-md-8 col-md-offset-2" style="height: 210px; margin-bottom: 10px;">
+              <div class="col-md-10 col-md-offset-2" style="height: 210px; margin-bottom: 15px;">
                 <ng5-slider [value]="14" [options]="{
                   floor: 0,
                   ceil: 20,

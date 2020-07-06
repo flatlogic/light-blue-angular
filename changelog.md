@@ -1,5 +1,10 @@
 # Changelog
 
+## [7.1.7]
+
+### Fixed
+- Fixed chart and form elements.
+
 ## [7.1.6]
 
 ### Fixed
