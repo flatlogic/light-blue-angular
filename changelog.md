@@ -1,5 +1,10 @@
 # Changelog
 
+## [7.1.8]
+
+### Update
+- Minor package updates
+
 ## [7.1.7]
 
 ### Fixed
