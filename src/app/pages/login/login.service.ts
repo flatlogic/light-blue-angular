@@ -38,16 +38,18 @@ export class LoginService {
 
   isAuthenticated() {
     const token = localStorage.getItem('token');
+    let data = null;
 
     // We check if app runs with backend mode
-    if (!this.config.isBackend && token) {
-      return true;
-    }
-    if (!token) {
-      return;
-    }
+    if (!this.config.isBackend && token) return true;
+    if (!token) return;
     const date = new Date().getTime() / 1000;
-    const data = jwt.decodeToken(token);
+    try {
+      data = jwt.decodeToken(token);
+    } catch(e) {
+      this.router.navigate(['/login']);
+    }
+    if (!data) return;
     return date < data.exp;
   }
 
