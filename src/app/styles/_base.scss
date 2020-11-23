@@ -382,6 +382,7 @@ a:link {
 
   &:hover .widget-controls-hover {
     opacity: 1;
+    z-index: auto;
   }
 
   &.widget-sm {
