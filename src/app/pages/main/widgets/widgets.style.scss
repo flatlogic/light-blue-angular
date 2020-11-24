@@ -238,6 +238,11 @@
 
 .post-user {
   position: relative;
+  &.sing {
+    margin-top: -5.1rem;
+    margin-bottom: 2rem;
+  }
+
   @include clearfix();
 
   img {

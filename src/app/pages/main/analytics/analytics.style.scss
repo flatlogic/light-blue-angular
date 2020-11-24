@@ -12,11 +12,14 @@
     th {
       font-weight: $font-weight-normal;
     }
-
+    thead th {
+      color: $white-dark;
+    }
     tbody tr {
       td {
         min-width: 100px;
         border: none;
+        color: $panel-opened-color;
       }
     }
   }

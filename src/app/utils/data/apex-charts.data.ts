@@ -5,7 +5,7 @@ export const apexOptions1: ApexOptions = {
     { name: 'Visitors', data: lineChartDataRandomizer(25, 5) },
     { name: 'Charts', data: lineChartDataRandomizer(25, 4) }
   ],
-  colors: ['#4ebfbb', '#db4912'],
+  colors: ['#4ebfbb', '#FF8253'],
   chart: {
     type: 'line',
     height: '200px',
@@ -150,7 +150,7 @@ export const apexOptions3 = {
       ]
     }
   ],
-  colors: ['#4ebfbb', '#f0af03', '#db4912'],
+  colors: ['#4ebfbb', '#FF8253', '#FDD468'],
   chart: {
     type: 'line',
     height: '280px',
@@ -253,7 +253,7 @@ export const apexOptions4 = {
       }
     }
   },
-  colors: ['#4ebfbb', '#57b955', '#db4912'],
+  colors: ['#4ebfbb', '#61D85E', '#FF8253'],
   legend: {
     show: true,
     position: 'bottom',
@@ -314,7 +314,7 @@ export const apexOptions5 = {
       ]
     }
   ],
-  colors: ['#4ebfbb', '#4e85bd', '#57b955'],
+  colors: ['#4ebfbb', '#1D8DFF', '#61D85E'],
   chart: {
     type: 'line',
     height: '250px',
@@ -379,7 +379,7 @@ export const apexOptions6 = {
         .map((value: number) => ([value, Math.cos(value)]))
     }
   ],
-  colors: ['#db4912', '#57b955'],
+  colors: ['#FF8253', '#57b955'],
   chart: {
     type: 'line',
     height: '380px',
@@ -454,7 +454,7 @@ export const apexOptions7 = {
       colors: '#fff'
     }
   },
-  colors: ['#8cbf26', '#f0af03', '#57b955', '#4ebfbb', '#4e85bd'],
+  colors: ['#61D85E', '#FDD468', '#8cbf26', '#4ebfbb', '#1D8DFF'],
   stroke: {
     width: 0
   }
@@ -477,7 +477,7 @@ export const apexOptions8 = {
       colors: '#fff'
     }
   },
-  colors: ['#8cbf26', '#f0af03', '#57b955', '#4ebfbb', '#4e85bd'],
+  colors: ['#61D85E', '#FDD468', '#8cbf26', '#4ebfbb', '#1D8DFF'],
   stroke: {
     width: 0
   }
@@ -519,7 +519,7 @@ export const apexOptions9 = {
     name: 'Product D',
     data: [21, 7, 25, 13, 22, 8, 15, 3, 22]
   }],
-  colors: ['#8cbf26', '#f0af03', '#57b955', '#4ebfbb'],
+  colors: ['#61D85E', '#FDD468', '#8cbf26', '#4ebfbb', '#1D8DFF'],
   dataLabels: {
     enabled: false
   },

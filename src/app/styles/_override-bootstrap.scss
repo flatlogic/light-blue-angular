@@ -433,6 +433,11 @@ legend {
     color: #1C2531;
   }
 }
+.btn-outline-default {
+  &:hover {
+    color: #1C2531;
+  }
+}
 
 .btn-default {
   color: $white;
@@ -537,6 +542,10 @@ legend {
   color: white;
   opacity: 1;
   font-weight: lighter;
+}
+
+.modal-header .close {
+  color: $black;
 }
 
 /***************************/

@@ -172,7 +172,7 @@ export const highchartsOptions2 = {
     type: 'variablepie',
     backgroundColor: 'transparent'
   },
-  colors: ['#8cbf26', '#4e85bd', '#db4912', '#f0af03', '#57b955', '#fff', '#4ebfbb'],
+  colors: ['#61D85E', '#4ebfbb', '#FF8253', '#FDD468', '#57b955', '#fff', '#4ebfbb'],
   credits: {
     enabled: false
   },
@@ -248,7 +248,7 @@ export const highchartsOptions3 = {
     type: 'area',
     backgroundColor: 'transparent',
   },
-  colors: ['#8cbf26', '#4e85bd', '#db4912', '#f0af03', '#57b955'],
+  colors: ['#61D85E', '#4ebfbb', '#FF8253', '#FDD468', '#57b955'],
   credits: {
     enabled: false
   },
@@ -339,7 +339,7 @@ export const highchartsOptions4 = {
     height: '90%',
     backgroundColor: 'transparent'
   },
-  colors: ['#8cbf26', '#4e85bd', '#db4912', '#f0af03', '#57b955', '#4ebfbb'],
+  colors: ['#61D85E', '#4ebfbb', '#FF8253', '#FDD468', '#57b955'],
   credits: {
     enabled: false
   },
@@ -1775,7 +1775,7 @@ export const highchartsOptions5 = {
   chart: {
     backgroundColor: 'transparent'
   },
-  colors: ['#4e85bd'],
+  colors: ['#1D8DFF'],
   credits: {
     enabled: false
   },
@@ -1836,7 +1836,7 @@ export const highchartsOptions6 = {
     type: 'bar',
     backgroundColor: 'transparent'
   },
-  colors: ['#4ebfbb', '#57b955'],
+  colors: ['#4ebfbb', '#61D85E'],
   credits: {
     enabled: false
   },
