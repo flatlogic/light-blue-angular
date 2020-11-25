@@ -1,4 +1,16 @@
 # Changelog
+## [7.1.9]
+### Updated and Fixed
+
+- Typography: fix overview;
+- ECommerce: fix dropdowns, fix several bugs with colors and adaptive;
+- Gallery: fix images;
+- Data Table: fix width;
+- Charts: fix colors
+- Inbox: fix links;
+- Profile: fix outline button and links;
+- UI -> Buttons: fix justify content;
+- UI -> modal: fix close buttons;
 
 ## [7.1.8]
 

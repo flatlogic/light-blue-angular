@@ -1,6 +1,6 @@
 {
   "name": "light-blue",
-  "version": "7.1.8",
+  "version": "7.1.9",
   "description": "Light Blue - Angular 4 & React Dashboard",
   "scripts": {
     "analyze": "npm run build:stats && webpack-bundle-analyzer dist/stats.json --port 4201",

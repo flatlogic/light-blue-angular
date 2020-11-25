@@ -2,7 +2,7 @@
 
 .filter-modal {
   min-height: calc(100vh - 50px);
-  background: white;
+  background: $body-bg;
   margin: (-$content-padding) (-$content-padding / 2);
 
   .filter-modal-title {
@@ -12,7 +12,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: theme-color('default');
 
     .close {
       left: $spacer * 2.5;
@@ -44,7 +43,6 @@
 
 .filter-modal-body {
   min-height: calc(100vh - 100px);
-  background-color: white;
   padding-left: $spacer * 2.5;
 
   .filter-item {

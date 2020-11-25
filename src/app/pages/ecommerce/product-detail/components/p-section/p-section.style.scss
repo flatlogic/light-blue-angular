@@ -4,7 +4,7 @@
   margin-bottom: $spacer * 6;
 
   @include media-breakpoint-down(sm) {
-    background-color: $white;
+    background-color: $body-bg;
     margin: 0 (-$content-padding / 2);
   }
 }
