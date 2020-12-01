@@ -74,11 +74,11 @@
             Add <code>striped</code> property to any <code>&lt;Progress&gt;</code> to
             apply a stripe via CSS gradient over the progress bar’s background color.
           </p>
-          <progressbar [striped]="true" class="mb-sm" [value]="10"></progressbar>
-          <progressbar [striped]="true" class="mb-sm" [value]="25" type="success"></progressbar>
-          <progressbar [striped]="true" class="mb-sm" [value]="50" type="info"></progressbar>
-          <progressbar [striped]="true" class="mb-sm" [value]="75" type="warning"></progressbar>
-          <progressbar [striped]="true" [value]="100" type="danger"></progressbar>
+          <progressbar [striped]="true" class="mb-sm" [value]="10" style="max-height: 20px"></progressbar>
+          <progressbar [striped]="true" class="mb-sm" [value]="25" type="success" style="max-height: 20px"></progressbar>
+          <progressbar [striped]="true" class="mb-sm" [value]="50" type="info" style="max-height: 20px"></progressbar>
+          <progressbar [striped]="true" class="mb-sm" [value]="75" type="warning" style="max-height: 20px"></progressbar>
+          <progressbar [striped]="true" [value]="100" type="danger" style="max-height: 20px"></progressbar>
         </div>
         <div class="col-12 col-md-6">
           <p>
@@ -86,11 +86,11 @@
             to <code>&lt;b-progress&gt;</code> to animate the stripes
             right to left via CSS3 animations.
           </p>
-          <progressbar [animate]="true" [striped]="true" class="mb-sm" [value]="10" type="danger"></progressbar>
-          <progressbar [animate]="true" [striped]="true" class="mb-sm" [value]="25" type="warning"></progressbar>
-          <progressbar [animate]="true" [striped]="true" class="mb-sm" [value]="50" type="info"></progressbar>
-          <progressbar [animate]="true" [striped]="true" class="mb-sm" [value]="75" type="success"></progressbar>
-          <progressbar [animate]="true" [striped]="true" [value]="100"></progressbar>
+          <progressbar [animate]="true" [striped]="true" class="mb-sm" [value]="10" type="danger" style="max-height: 20px"></progressbar>
+          <progressbar [animate]="true" [striped]="true" class="mb-sm" [value]="25" type="warning" style="max-height: 20px"></progressbar>
+          <progressbar [animate]="true" [striped]="true" class="mb-sm" [value]="50" type="info" style="max-height: 20px"></progressbar>
+          <progressbar [animate]="true" [striped]="true" class="mb-sm" [value]="75" type="success" style="max-height: 20px"></progressbar>
+          <progressbar [animate]="true" [striped]="true" [value]="100" style="max-height: 20px"></progressbar>
         </div>
       </div>
     </section>

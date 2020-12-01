@@ -1,4 +1,9 @@
 # Changelog
+## [7.1.10]
+### Updated and Fixed
+
+- Fix dropdown arrow;
+- Fix z-index on calendar page
 ## [7.1.9]
 ### Updated and Fixed
 

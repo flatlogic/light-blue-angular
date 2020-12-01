@@ -17,6 +17,19 @@
   font-weight: $font-weight-normal;
   background-color: $gray-light;
   color: $text-color;
+  .fc-content {
+    z-index: 0;
+  }
+}
+
+.fc-unthemed td {
+  z-index: 0;
+}
+.fc-unthemed tbody {
+  z-index: 0;
+}
+.fc-day-grid .fc-row {
+  z-index: 0;
 }
 
 a.fc-event{
@@ -58,4 +71,10 @@ a.fc-event{
   @include media-breakpoint-up(xl){
     margin-top: -100px;
   }
+}
+.fc-view, .fc-view > table {
+  z-index: auto;
+}
+.ng-star-inserted.input-group-btn > .btn, .btn-group > .btn {
+  z-index: 0;
 }
