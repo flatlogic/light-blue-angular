@@ -29,17 +29,8 @@ export class WizardComponent implements OnInit {
   public secondStepSubmited: boolean = false;
   public thirdStepSubmited: boolean = false;
 
-  public destindationMask = {
-    mask: [/[1-9]/, /\d/, /\d/, /\d/, /\d/]
-  };
-
-  public creditMask = {
-    mask: [/[1-9]/, /\d/, /\d/, /\d/, '-',
-      /\d/, /\d/, /\d/, /\d/, '-',
-      /\d/, /\d/, /\d/, /\d/, '-',
-      /\d/, /\d/, /\d/, /\d/
-    ]
-  };
+  destinationMask = '00000';
+  creditMask = '0000-0000-0000-0000';
 
   constructor(
     private ngWizardService: NgWizardService,

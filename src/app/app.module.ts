@@ -32,6 +32,7 @@ import { CancelLaunchToastComponent } from './pages/ui-elements/notifications/to
 import { RetryDestroyingToastComponent } from './pages/ui-elements/notifications/toasts/retry-destroying/retry-destroying-toast.component';
 import { UtilsModule } from './utils/utils-module/utils.module';
 import {SuccessToastComponent} from './pages/ui-elements/notifications/toasts/suceess/success-toast.component';
+import { NgxEchartsModule } from 'ngx-echarts';
 
 const APP_PROVIDERS = [
   CheckAllService,
@@ -55,10 +56,14 @@ const APP_PROVIDERS = [
     FormsModule,
     HttpClientModule,
     ToastrModule.forRoot(),
-    RouterModule.forRoot(ROUTES, {
-      useHash: true,
-      preloadingStrategy: PreloadAllModules
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts')
     }),
+    RouterModule.forRoot(ROUTES, {
+    useHash: true,
+    preloadingStrategy: PreloadAllModules,
+    relativeLinkResolution: 'legacy'
+}),
     ButtonsModule.forRoot(),
     BsDropdownModule.forRoot(),
     AlertModule.forRoot(),

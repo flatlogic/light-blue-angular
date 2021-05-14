@@ -314,7 +314,13 @@ $slider-handle-size: 26px;
   border-radius: $border-radius;
 }
 
-.slider-selection {
+.left-sliders .ngx-slider .ngx-slider-pointer {
+  background-color: #fff !important;
+  height: 26px !important;
+  top: -10px !important;
+}
+
+.ngx-slider .ngx-slider-selection {
   position: absolute;
   background-color: theme-color("primary");
   @include box-shadow(inset 0 -1px 0 rgba(0, 0, 0, 0.15));
@@ -404,7 +410,7 @@ tbody td.form-group input{
   }
 }
 
-ng5-slider .ng5-slider-span.ng5-slider-bar-wrapper.ng5-slider-full-bar span {
+ngx-slider .ngx-slider-span.ngx-slider-bar-wrapper.ngx-slider-full-bar span {
   background: $darkness-blue;
 }
 

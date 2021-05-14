@@ -3,14 +3,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Autosize } from 'ng-autosize';
-import { TextMaskModule } from 'angular2-text-mask';
+import { NgxMaskModule } from 'ngx-mask'
 import { EditorModule } from '@tinymce/tinymce-angular';
 import { DropzoneModule } from 'ngx-dropzone-wrapper';
 import { NgWizardModule, NgWizardConfig, THEME } from 'ng-wizard';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { ColorPickerModule } from 'ngx-color-picker';
 import { LMarkdownEditorModule } from 'ngx-markdown-editor';
-import { Ng5SliderModule } from 'ng5-slider';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { AlertModule } from 'ngx-bootstrap/alert';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
@@ -45,7 +45,7 @@ const wizardConfig: NgWizardConfig = {
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    TextMaskModule,
+    NgxMaskModule.forRoot(),
     RouterModule.forChild(routes),
     EditorModule,
     DropzoneModule,
@@ -53,7 +53,7 @@ const wizardConfig: NgWizardConfig = {
     NgSelectModule,
     ColorPickerModule,
     LMarkdownEditorModule,
-    Ng5SliderModule,
+    NgxSliderModule,
     WidgsterModule,
     TooltipModule,
     AlertModule,

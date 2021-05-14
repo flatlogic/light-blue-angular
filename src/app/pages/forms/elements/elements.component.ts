@@ -13,31 +13,12 @@ import { NgOption } from '@ng-select/ng-select';
   preserveWhitespaces: true
 })
 export class ElementsComponent {
-  date: Date = new Date(2016, 5, 10);
+  date: Date = new Date(2021, 5, 10);
   selected: any;
-  phoneMask = {
-    mask: ['(', /[1-9]/, /\d/, /\d/, ')',
-      ' ', /\d/, /\d/, /\d/,
-      '-', /\d/, /\d/, /\d/, /\d/]
-  };
-
-  interPhoneMask = {
-    mask: ['+', /[1-9]/, /\d/, /\d/,
-      ' ', /\d/, /\d/, /\d/,
-      ' ', /\d/, /\d/, /\d/, /\d/,
-      ' ', /\d/, /\d/, /\d/, /\d/]
-  };
-
-  dateMask = {
-    mask: [/\d/, /\d/,
-      '-', /\d/, /\d/,
-      '-', /[1-9]/, /\d/, /\d/, /\d/]
-  };
-
-  timeMask = {
-    mask: [/\d/, /\d/,
-      ':', /\d/, /\d/]
-  };
+  phoneMask = '(000) 000-0000';
+  interPhoneMask = '+000 000 0000 0000';
+  dateMask = '00-00-0000';
+  timeMask = '00:00';
 
   phoneValue = '';
   interPhoneValue = '';

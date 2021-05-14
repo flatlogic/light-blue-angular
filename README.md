@@ -1,6 +1,6 @@
-# Light Blue Angular Dashboard - Ngx Admin Template (7.1.8 Full version) with Angular 9.0 Final Release support
+# Light Blue Angular Dashboard - Ngx Admin Template (7.2.0 Full version) with Angular 11.2 Final Release support
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.13.
 
 **For upgrade instruction please refer to [https://update.angular.io/](https://update.angular.io/).**
 

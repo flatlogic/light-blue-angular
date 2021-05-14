@@ -83,7 +83,7 @@
                   <div class="form-group">
                     <label for="destination">Destination Zip Code</label>
                     <input type="text" formControlName="zip" class="form-control input-transparent"
-                      [textMask]="destindationMask">
+                      [mask]="destinationMask">
                     <span class="error"
                       *ngIf="form.get('shipping').get('zip').errors?.required && secondStepSubmited">This value is
                       required</span>
@@ -134,7 +134,7 @@
                   <div class="form-group ">
                     <label for="credit">Credit Card Number </label>
                     <input type="text" formControlName="cardNumber" tabindex="3" class="form-control input-transparent"
-                      [textMask]="creditMask">
+                      [mask]="creditMask">
                     <span class="error"
                       *ngIf="form.get('pay').get('cardNumber').errors?.required && thirdStepSubmited">This value is
                       required</span>

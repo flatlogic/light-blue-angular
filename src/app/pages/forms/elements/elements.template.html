@@ -685,7 +685,7 @@
               <span class="help-block">(123) 456-7890</span>
             </label>
             <div class="col-md-7 col-12">
-              <input id="mask-phone" name="mask-phone" class="form-control input-transparent" [textMask]="phoneMask"
+              <input id="mask-phone" name="mask-phone" class="form-control input-transparent" [mask]="phoneMask"
                 [ngModel]="phoneValue" (ngModelChange)="phoneValue = unmask($event)" type="text" />
             </div>
           </div>
@@ -696,7 +696,7 @@
             </label>
             <div class="col-md-7 col-12">
               <input id="mask-int-phone" name="mask-phone-inter" class="form-control input-transparent"
-                [textMask]="interPhoneMask" [ngModel]="interPhoneValue"
+                [mask]="interPhoneMask" [ngModel]="interPhoneValue"
                 (ngModelChange)="interPhoneValue = unmask($event)" type="text" />
             </div>
           </div>
@@ -706,7 +706,7 @@
               <span class="help-block">07-03-2013</span>
             </label>
             <div class="col-md-7 col-12">
-              <input id="mask-date" name="mask-date" class="form-control input-transparent" [textMask]="dateMask"
+              <input id="mask-date" name="mask-date" class="form-control input-transparent" [mask]="dateMask"
                 [(ngModel)]="dateValue" type="text" />
             </div>
           </div>
@@ -716,7 +716,7 @@
               <span class="help-block">13:43</span>
             </label>
             <div class="col-md-7 col-12">
-              <input id="mask-time" name="mask-time" class="form-control input-transparent" [textMask]="timeMask"
+              <input id="mask-time" name="mask-time" class="form-control input-transparent" [mask]="timeMask"
                 [(ngModel)]="timeValue" type="text" />
             </div>
           </div>
@@ -732,12 +732,12 @@
         Sliders
       </h6>
       <div class="row">
-        <div class="col-lg-4 ">
+        <div class="col-lg-4 left-sliders">
           <h4>Color Options</h4>
           <p>Sing extends Bootstrap Slider and provides different color options:</p>
           <form>
             <div class="mb-sm">
-              <ng5-slider [value]="14" [options]="{
+              <ngx-slider [value]="14" [options]="{
                     floor: 0,
                     ceil: 20,
                     animate: false,
@@ -747,10 +747,10 @@
                     hideLimitLabels: true,
                     hidePointerLabels: false
                   }">
-              </ng5-slider>
+              </ngx-slider>
             </div>
             <div class="slider-danger mb-sm">
-              <ng5-slider class="danger" [value]="18" [options]="{
+              <ngx-slider class="danger" [value]="18" [options]="{
                   floor: 0,
                   ceil: 20,
                   animate: false,
@@ -760,10 +760,10 @@
                   hideLimitLabels: true,
                   hidePointerLabels: false
                 }">
-              </ng5-slider>
+              </ngx-slider>
             </div>
             <div class="slider-warning mb-sm">
-              <ng5-slider class="warning" [value]="7" [options]="{
+              <ngx-slider class="warning" [value]="7" [options]="{
                   floor: 0,
                   ceil: 20,
                   animate: false,
@@ -773,10 +773,10 @@
                   hideLimitLabels: true,
                   hidePointerLabels: false
                 }">
-              </ng5-slider>
+              </ngx-slider>
             </div>
             <div class="slider-success mb-sm">
-              <ng5-slider class="success" [value]="11" [options]="{
+              <ngx-slider class="success" [value]="11" [options]="{
                   floor: 0,
                   ceil: 20,
                   animate: false,
@@ -786,10 +786,10 @@
                   hideLimitLabels: true,
                   hidePointerLabels: false
                 }">
-              </ng5-slider>
+              </ngx-slider>
             </div>
             <div class="slider-inverse mb-sm">
-              <ng5-slider [value]="4" [options]="{
+              <ngx-slider [value]="4" [options]="{
                   floor: 0,
                   ceil: 20,
                   animate: false,
@@ -799,7 +799,7 @@
                   hideLimitLabels: true,
                   hidePointerLabels: false
                 }">
-              </ng5-slider>
+              </ngx-slider>
             </div>
           </form>
         </div>
@@ -810,7 +810,7 @@
           <form>
             <div class="row">
               <div class="col-md-10 col-md-offset-2" style="height: 210px; margin-bottom: 15px;">
-                <ng5-slider [value]="14" [options]="{
+                <ngx-slider [value]="14" [options]="{
                   floor: 0,
                   ceil: 20,
                   animate: false,
@@ -821,8 +821,8 @@
                   hidePointerLabels: false,
                   vertical: true
                 }">
-                </ng5-slider>
-                <ng5-slider [value]="18" [options]="{
+                </ngx-slider>
+                <ngx-slider [value]="18" [options]="{
                   floor: 0,
                   ceil: 20,
                   animate: false,
@@ -833,8 +833,8 @@
                   hidePointerLabels: false,
                   vertical: true
                 }">
-                </ng5-slider>
-                <ng5-slider [value]="7" [options]="{
+                </ngx-slider>
+                <ngx-slider [value]="7" [options]="{
                   floor: 0,
                   ceil: 20,
                   animate: false,
@@ -845,8 +845,8 @@
                   hidePointerLabels: false,
                   vertical: true
                 }">
-                </ng5-slider>
-                <ng5-slider [value]="11" [options]="{
+                </ngx-slider>
+                <ngx-slider [value]="11" [options]="{
                   floor: 0,
                   ceil: 20,
                   animate: false,
@@ -857,19 +857,7 @@
                   hidePointerLabels: false,
                   vertical: true
                 }">
-                </ng5-slider>
-                <ng5-slider [value]="4" [options]="{
-                  floor: 0,
-                  ceil: 20,
-                  animate: false,
-                  handleDimension: 26,
-                  barDimension: 210,
-                  showSelectionBar: true,
-                  hideLimitLabels: true,
-                  hidePointerLabels: false,
-                  vertical: true
-                }">
-                </ng5-slider>
+                </ngx-slider>
               </div>
             </div>
           </form>
@@ -878,8 +866,8 @@
           <h4>Range Selector</h4>
           <p>Range selector, options specified via <strong>data-slider-value</strong> attribute as
             an array. Price range selector:</p>
-          <form>
-            <ng5-slider class="warning" [value]="200" [highValue]="1547" [options]="{
+          <form class="slider-warning mb-sm">
+            <ngx-slider class="warning" [value]="200" [highValue]="1547" [options]="{
               floor: 0,
               ceil: 2000,
               animate: false,
@@ -889,7 +877,7 @@
               hideLimitLabels: true,
               hidePointerLabels: false
             }">
-            </ng5-slider>
+            </ngx-slider>
           </form>
         </div>
       </div>

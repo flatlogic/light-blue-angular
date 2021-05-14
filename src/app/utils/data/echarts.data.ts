@@ -1,4 +1,3 @@
-import EChartOption = echarts.EChartOption;
 
 export const echartBarChartData: any = {
   grid: {
