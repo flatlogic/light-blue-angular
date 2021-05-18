@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, AfterViewInit, Renderer2 } from '@angular/core';
+import { LoginService } from '../../pages/login/login.service';
 
 @Component({
   selector: '[sidebar]',
@@ -24,7 +25,8 @@ export class Sidebar implements OnInit, AfterViewInit {
 
   constructor(
     private renderer: Renderer2,
-    private el: ElementRef
+    private el: ElementRef,
+    private loginService: LoginService
   ) {
   }
 
@@ -85,6 +87,10 @@ export class Sidebar implements OnInit, AfterViewInit {
     });
     this.renderer.setStyle(document
       .querySelector('.content'), 'margin-top', this.sidebarHeight + 'px');
+  }
+
+  logout() {
+    this.loginService.logoutUser();
   }
 }
 

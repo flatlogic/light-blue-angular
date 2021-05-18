@@ -136,7 +136,7 @@
       [collapse]="sidebarState.extraCollapsed" [isAnimated]="true">
       <li [routerLinkActive]="['active']"><a routerLink="extra/calendar">Calendar</a></li>
       <li [routerLinkActive]="['active']"><a routerLink="extra/invoice">Invoice</a></li>
-      <li><a routerLink="/login">Login</a></li>
+      <li><a (click)="logout()">Login</a></li>
       <li><a routerLink="/error">Error Page</a></li>
       <li [routerLinkActive]="['active']"><a routerLink="extra/gallery">Gallery</a></li>
       <li [routerLinkActive]="['active']"><a routerLink="extra/search">Search</a></li>

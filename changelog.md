@@ -1,5 +1,26 @@
 # Changelog
 
+## [7.2.2] - 05/18/2021
+### Fixed
+
+- Fixed error on serving project
+
+###Added packages
+    lodash.isequal: 4.5.0
+
+## [7.2.1] - 05/18/2021
+### Fixed
+
+- Fixed error on serving project
+- Added new package "resize-observer-polyfill"
+- Fixed redirect to login page 
+
+###Updated packages
+    @agm/core: 1.1.0 -> 3.0.0-beta.0
+    ng2-carouselamos: 3.2.0 -> 4.1.0
+
+###Added packages
+    @types/googlemaps: 3.39.12
 
 ## [7.2.0] - 05/14/2021
 ### Updated
