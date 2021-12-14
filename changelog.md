@@ -1,5 +1,14 @@
 # Changelog
 
+## [7.2.3] - 12/14/2021
+### Fixed
+
+- Removed incompatible version packages
+- Created custom tags input
+
+###Removed packages
+    ngx-chips: 2.2.2
+
 ## [7.2.2] - 05/18/2021
 ### Fixed
 

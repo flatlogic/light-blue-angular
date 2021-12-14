@@ -80,12 +80,18 @@
       </div>
     </div>
     <div class="form-group row">
-      <label class="col-md-2" for="productTechnology">Technology</label>
-      <div class="col-md-5">
-        <tag-input id="productTechnology" name="productTechnology" theme='bootstrap' [ngModel]="product.technology"
-          (onRemove)="updateTechnology($event, 'remove')" (onAdd)="updateTechnology($event, 'add')"
-          placeholder="Add Technology">
-        </tag-input>
+      <label class="col-md-2">Technology</label>
+      <div class="col-md-5" [formGroup]="form">
+        <div (click)="focusTagInput()" class="editor-tag">
+	        <span *ngFor="let tag of product.technology" class="tag-item">
+            {{tag}}
+            <span (click)="removeTag(tag)" class="remove-tag">×</span>
+          </span>
+          <input #tagInput
+                 (keyup)="onKeyUp($event)" class="input-tag"
+                 formControlName="tag"
+                 type="text">
+        </div>
       </div>
     </div>
     <div class="form-group row">
