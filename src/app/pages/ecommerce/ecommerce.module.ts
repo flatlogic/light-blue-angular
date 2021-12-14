@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
-import { TagInputModule } from 'ngx-chips';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
@@ -60,10 +59,10 @@ export const routes = [
     FormsModule,
     Ng2CarouselamosModule,
     CommonModule,
+    ReactiveFormsModule,
     RouterModule.forChild(routes),
     NgxDatatableModule,
     LoaderModule,
-    TagInputModule,
     WidgsterModule,
     ButtonsModule,
     BsDropdownModule,

@@ -1,5 +1,48 @@
+@import "../../../../../styles/variables";
+
 :host {
   .product-image {
     width: 100px;
+  }
+}
+
+.editor-tag {
+  cursor: text;
+  font-size: 16px;
+  padding: 10px 0px 10px 10px;
+  border-radius: 5px;
+  background: $dark-blue;
+
+  & .tag-item {
+    line-height: 28px;
+    border-radius: 0.25rem;
+    height: 28px;
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    display: inline-block;
+    background: #2A75D8;
+    padding-left: 5px;
+    color: white;
+    margin: 2px;
+
+    .remove-tag {
+      padding-right: 5px;
+      cursor: pointer;
+    }
+  }
+
+  & .tag-item:not(:first-child) {
+    margin-left: 5px;
+  }
+
+  & input {
+    margin: 0;
+    padding-left: 5px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: $dark-blue;
+    color: white;
   }
 }

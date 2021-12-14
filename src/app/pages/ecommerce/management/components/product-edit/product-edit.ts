@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Product, ProductsService } from '../../../products.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { TagModel } from 'ngx-chips/core/accessor';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'product-edit',
@@ -9,11 +9,15 @@ import { TagModel } from 'ngx-chips/core/accessor';
   styleUrls: ['./product-edit.scss'],
 })
 export class ProductEditComponent implements OnInit {
+  @ViewChild('tagInput') tagInputRef: ElementRef;
+  tag: string;
+  form: FormGroup;
 
   constructor(
     public productsService: ProductsService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private fb: FormBuilder
   ) { }
 
   ngOnInit(): void {
@@ -28,6 +32,10 @@ export class ProductEditComponent implements OnInit {
 
     }
     this.productsService.getProductsImagesRequest(newProduct);
+
+    this.form = this.fb.group({
+      tag: [undefined],
+    });
   }
 
   get isNew() {
@@ -50,14 +58,37 @@ export class ProductEditComponent implements OnInit {
     return parseInt(this.route.params['value'].id, 10) || -1;
   }
 
-  updateTechnology(model: TagModel, type) {
-    const technology = this.product.technology;
-    if (typeof model === 'string') {
-      type === 'add' ? technology.push(model) : technology.splice(technology.indexOf(model), 1);
+  focusTagInput(): void {
+    this.tagInputRef.nativeElement.focus();
+  }
+
+  onKeyUp(event: KeyboardEvent): void {
+    const inputValue = this.form.controls.tag.value;
+    if (event.code === 'Backspace' && !inputValue) {
+      this.removeTag();
+      return;
     } else {
-      type === 'add' ? technology.push(model.value) : technology.splice(technology.indexOf(model.value), 1);
+      if (event.code === 'Comma' || event.code === 'Space' || event.code === 'Enter') {
+        this.addTag(inputValue);
+        this.form.controls.tag.setValue('');
+      }
     }
-    this.updateProductProperty(technology, 'technology');
+  }
+
+  addTag(tag: string): void {
+    if (tag[tag.length - 1] === ',' || tag[tag.length - 1] === ' ') {
+      tag = tag.slice(0, -1);
+    }
+    if (tag.length > 0 && this.product.technology.indexOf(tag) < 0) {
+      this.product.technology.push(tag);
+    }
+  }
+
+  removeTag(tag?: string): void {
+    const index = this.product.technology.indexOf(tag);
+    if (index > -1) {
+      this.product.technology.splice(index, 1);
+    }
   }
 
   updateProductProperty(value, key) {
