@@ -1,5 +1,9 @@
 # Changelog
 
+## [7.2.4] - 27/11/2024
+
+- Updated dependencies
+
 ## [7.2.3] - 12/14/2021
 ### Fixed
 
