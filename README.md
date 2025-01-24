@@ -2,7 +2,8 @@
 
 [View Demo](https://flatlogic.com/templates/light-blue-angular/demo) | [Download](https://github.com/flatlogic/light-blue-angular/archive/refs/heads/master.zip) | [More Templates](https://flatlogic.com/templates) | [Discord Community](https://discord.gg/flatlogic-community) | [Support Forum](https://flatlogic.com/forum)
 
-**Originally a premium product priced at $69+, made available for free in January 2025!** 🎉 Built with love and frustration by the [Flatlogic Generator](https://flatlogic.com/ai-generator) - because who wants to build CRUD apps from scratch?
+**Originally a premium product priced at $69+, made available for free in January 2025!** 🎉
+Looking for a perfect codebase generator for your Startup? Try [Flatlogic AI Web App Generator](https://flatlogic.com/generator) - our new tool, sort of a template++.
 
 ---
 
