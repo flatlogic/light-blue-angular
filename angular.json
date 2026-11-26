@@ -12,33 +12,36 @@
       "projectType": "application",
       "architect": {
         "build": {
-          "builder": "@angular-builders/custom-webpack:browser",
+          "builder": "@angular/build:application",
           "options": {
-            "outputPath": "dist",
+            "outputPath": {
+              "base": "dist",
+              "browser": ""
+            },
             "index": "src/index.html",
-            "main": "src/main.ts",
             "tsConfig": "src/tsconfig.app.json",
-            "polyfills": "src/polyfills.ts",
-            "assets": ["src/assets"],
-            "styles": [
-              "src/app/styles/application.scss",
-              "node_modules/ngx-markdown-editor/assets/highlight.js/agate.min.css"
+            "polyfills": [
+              "zone.js"
             ],
-            "scripts": [
-              "node_modules/ngx-markdown-editor/assets/highlight.js/highlight.min.js",
-              "node_modules/ngx-markdown-editor/assets/marked.min.js"
-            ]
+            "assets": [
+              "src/assets"
+            ],
+            "styles": [
+              "src/app/styles/application.scss"
+            ],
+            "browser": "src/main.ts",
+            "optimization": {
+              "scripts": true,
+              "styles": {
+                "minify": true,
+                "inlineCritical": false
+              },
+              "fonts": false
+            }
           },
           "configurations": {
             "production": {
-              "optimization": true,
               "outputHashing": "all",
-              "sourceMap": false,
-              "namedChunks": false,
-              "aot": true,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -46,15 +49,22 @@
                 }
               ]
             },
-            "hmr": {
+            "demo": {
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.hmr.ts"
+                  "with": "src/environments/environment.demo.ts"
                 }
               ]
             },
+            "development": {
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false
+            },
             "backend": {
+              "optimization": false,
+              "sourceMap": true,
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -62,56 +72,52 @@
                 }
               ]
             }
-          }
+          },
+          "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-builders/custom-webpack:dev-server",
+          "builder": "@angular/build:dev-server",
           "options": {
-            "browserTarget": "LightBlue:build",
             "port": 3000
           },
           "configurations": {
-            "production": {
-              "browserTarget": "LightBlue:build:production"
-            },
-            "hmr": {
-              "hmr": true,
-              "browserTarget": "LightBlue:build:hmr"
+            "development": {
+              "buildTarget": "LightBlue:build:development"
             },
             "backend": {
-              "browserTarget": "LightBlue:build:backend"
+              "buildTarget": "LightBlue:build:backend"
+            },
+            "production": {
+              "buildTarget": "LightBlue:build:production"
             }
-          }
+          },
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "builder": "@angular/build:extract-i18n",
           "options": {
-            "browserTarget": "LightBlue:build"
+            "buildTarget": "LightBlue:build"
           }
         },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+        "test": {
+          "builder": "@angular/build:unit-test",
           "options": {
-            "tsConfig": ["src/tsconfig.app.json"],
-            "exclude": ["**/node_modules/**"]
+            "tsConfig": "tsconfig.spec.json",
+            "buildTarget": "LightBlue:build:development"
           }
         }
       }
-    },
-    "LightBlue-e2e": {
-      "root": "e2e",
-      "sourceRoot": "e2e",
-      "projectType": "application"
     }
   },
-  "defaultProject": "LightBlue",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
-      "style": "scss"
+      "style": "scss",
+      "standalone": false
     },
     "@schematics/angular:directive": {
-      "prefix": "app"
+      "prefix": "app",
+      "standalone": false
     }
   }
 }

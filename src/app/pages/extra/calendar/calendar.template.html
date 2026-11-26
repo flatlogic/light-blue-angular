@@ -56,30 +56,28 @@
             </label>
           </div>
         </ng-container>
-        <full-calendar #calendar (eventClick)="onEventClick($event)" (select)="onSelect($event)" (drop)="onDrop($event)"
-          defaultView="dayGridMonth" [events]="events" [eventLimit]="2" [editable]="true" [droppable]="true"
-          [selectable]="true" [selectHelper]="true" [height]="'auto'" [header]="null" [plugins]="calendarPlugins">
-        </full-calendar>
+        <full-calendar #calendar [options]="calendarOptions" [events]="events"></full-calendar>
       </section>
     </div>
   </div>
 </div>
 
 <div bsModal #viewEventModal="bs-modal" class="modal fade" tabindex="-1" role="dialog"
-  aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  aria-labelledby="calendar-event-title" aria-hidden="true">
   <div class="modal-dialog modal-sm" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 *ngIf="currentEvent?.title" class="modal-title">{{ currentEvent.title }}</h5>
-        <button type="button" class="close" (click)="viewEventModal.hide()" aria-hidden="true">×</button>
+        <h5 *ngIf="currentEvent?.title" id="calendar-event-title" class="modal-title">{{ currentEvent.title }}</h5>
+        <button type="button" class="close" (click)="viewEventModal.hide()" aria-label="Close">×</button>
       </div>
       <div class="modal-body fs-mini">
         <p *ngIf="currentEvent?.start"><i class="fa fa-calendar text-muted fs-sm"></i> &nbsp;
           {{ currentEvent.start | date : 'dd LLL y' }}
-          <p *ngIf="currentEvent?.end">
+        </p>
+        <p *ngIf="currentEvent?.end">
             <i class="fa fa-clock-o text-muted fs-sm"></i> &nbsp; {{ currentEvent.end | date : 'dd LLL y' }}
-          </p>
-          <p *ngIf="currentEvent?.extendedProps?.description">{{ currentEvent.extendedProps.description }}</p>
+        </p>
+        <p *ngIf="currentEvent?.extendedProps?.description">{{ currentEvent.extendedProps.description }}</p>
       </div>
       <div class="modal-footer no-border">
         <button type="button" class="btn btn-default btn-sm" (click)="viewEventModal.hide()">OK</button>
@@ -89,13 +87,13 @@
 </div>
 
 <div bsModal #createEventModal="bs-modal" class="modal fade" tabindex="-1" role="dialog"
-  aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  aria-labelledby="calendar-create-title" aria-hidden="true">
   <div class="modal-dialog modal-sm" role="document">
     <div class="modal-content">
       <div class="modal-header align-items-stretch flex-column">
         <div class="d-flex">
-          <h5 class="modal-title">New Event</h5>
-          <button type="button" class="close" (click)="createEventModal.hide()" aria-hidden="true">×</button>
+          <h5 id="calendar-create-title" class="modal-title">New Event</h5>
+          <button type="button" class="close" (click)="createEventModal.hide()" aria-label="Close">×</button>
         </div>
         <p class="fs-mini text-muted mt-sm">
           Just enter event name to create a new one

@@ -1,5 +1,13 @@
 # Changelog
 
+## [8.0.0] - 26/11/2026
+
+### Updated
+
+- Upgraded Angular from 11.2.13 to 21.2.26 LTS, with Angular CLI 21.2.31 and TypeScript 5.9.3. Added a reproducible npm install and production builds for both static and API demos.
+- Updated dashboard charts, calendar, editors, forms and tables for the new Angular runtime.
+- Updated API sign-in to support the companion Node.js backend and configurable API URLs. Added session regression tests and refreshed the setup guide.
+
 ## [7.2.4] - 27/11/2024
 
 - Updated dependencies

@@ -8,6 +8,7 @@ interface ListItem {
 }
 
 @Component({
+  standalone: false,
   selector: '[ui-list-groups]',
   templateUrl: './list-groups.template.html',
   encapsulation: ViewEncapsulation.None,

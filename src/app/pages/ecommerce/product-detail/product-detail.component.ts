@@ -3,6 +3,7 @@ import {Product, ProductsService} from '../products.service';
 import {ActivatedRoute} from '@angular/router';
 
 @Component({
+  standalone: false,
   selector: '[product-detail]',
   templateUrl: './product-detail.template.html',
   styleUrls: ['./product-detail.style.scss'],

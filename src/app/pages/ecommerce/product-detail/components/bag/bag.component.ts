@@ -1,6 +1,7 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: 'bag',
   templateUrl: './bag.template.html',
   styleUrls: ['./bag.style.scss'],

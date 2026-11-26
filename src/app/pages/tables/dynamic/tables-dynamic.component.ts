@@ -270,6 +270,7 @@ const PEOPLE = [
 ];
 
 @Component({
+  standalone: false,
   selector: '[tables-dynamic]',
   templateUrl: './tables-dynamic.template.html',
   encapsulation: ViewEncapsulation.None,
@@ -402,6 +403,6 @@ export class TablesDynamicComponent implements OnInit {
     // update the rows
     this.people = temp;
     // Whenever the filter changes, always go back to the first page
-    this.table.offset = 0;
+    this.table.offset.set(0);
   }
 }

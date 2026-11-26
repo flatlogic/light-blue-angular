@@ -4,6 +4,7 @@ import {ActivatedRoute} from '@angular/router';
 import {AppConfig} from '../../app.config';
 
 @Component({
+  standalone: false,
   selector: 'login',
   templateUrl: './login.template.html',
 })
@@ -20,8 +21,10 @@ export class Login {
   ) {
     const config: any = appConfig.getConfig();
     const creds = config.auth;
-    this.email = creds.email;
-    this.password = creds.password;
+    if (!config.isBackend) {
+      this.email = creds.email;
+      this.password = creds.password;
+    }
 
     if (this.loginService.isAuthenticated()) {
       this.loginService.receiveLogin();

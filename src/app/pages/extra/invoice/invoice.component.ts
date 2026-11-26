@@ -1,6 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: '[extra-invoice]',
   templateUrl: './invoice.template.html',
   encapsulation: ViewEncapsulation.None,

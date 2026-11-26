@@ -1,10 +1,7 @@
-import {AppConfig} from '../../app.config';
-const config: any = new AppConfig().getConfig();
-
 export default [
   {
     id: 1,
-    img: config.remote + '/assets/products/img1.jpg',
+    img: 'assets/img/products/img1.jpg',
     title: 'trainers',
     subtitle: 'Trainers In White',
     price: 76,
@@ -23,7 +20,7 @@ export default [
   },
   {
     id: 2,
-    img: config.remote + '/assets/products/img2.jpg',
+    img: 'assets/img/products/img2.jpg',
     title: 'boots',
     subtitle: 'Trainers In Blue',
     price: 45,
@@ -43,7 +40,7 @@ export default [
   },
   {
     id: 3,
-    img: config.remote + '/assets/products/img3.jpg',
+    img: 'assets/img/products/img3.jpg',
     title: 'flat sandals',
     subtitle: 'Trainers In White',
     price: 55,
@@ -62,7 +59,7 @@ export default [
   },
   {
     id: 4,
-    img: config.remote + '/assets/products/img4.jpg',
+    img: 'assets/img/products/img4.jpg',
     title: 'trainers',
     subtitle: 'Trainers In White',
     price: 76,
@@ -81,7 +78,7 @@ export default [
   },
   {
     id: 5,
-    img: config.remote + '/assets/products/img5.jpeg',
+    img: 'assets/img/products/img5.jpeg',
     title: 'boots',
     subtitle: 'Trainers In Blue',
     price: 45,
@@ -101,7 +98,7 @@ export default [
   },
   {
     id: 6,
-    img: config.remote + '/assets/products/img6.jpg',
+    img: 'assets/img/products/img6.jpg',
     title: 'flat sandals',
     subtitle: 'Trainers In White',
     price: 55,
@@ -120,7 +117,7 @@ export default [
   },
   {
     id: 7,
-    img: config.remote + '/assets/products/img1.jpg',
+    img: 'assets/img/products/img1.jpg',
     title: 'trainers',
     subtitle: 'Trainers In White',
     price: 76,
@@ -139,7 +136,7 @@ export default [
   },
   {
     id: 8,
-    img: config.remote + '/assets/products/img2.jpg',
+    img: 'assets/img/products/img2.jpg',
     title: 'boots',
     subtitle: 'Trainers In Blue',
     price: 45,
@@ -159,7 +156,7 @@ export default [
   },
   {
     id: 9,
-    img: config.remote + '/assets/products/img3.jpg',
+    img: 'assets/img/products/img3.jpg',
     title: 'flat sandals',
     subtitle: 'Trainers In White',
     price: 55,
@@ -178,7 +175,7 @@ export default [
   },
   {
     id: 10,
-    img: config.remote + '/assets/products/img4.jpg',
+    img: 'assets/img/products/img4.jpg',
     title: 'trainers',
     subtitle: 'Trainers In White',
     price: 76,
@@ -197,7 +194,7 @@ export default [
   },
   {
     id: 11,
-    img: config.remote + '/assets/products/img5.jpeg',
+    img: 'assets/img/products/img5.jpeg',
     title: 'boots',
     subtitle: 'Trainers In Blue',
     price: 45,
@@ -217,7 +214,7 @@ export default [
   },
   {
     id: 12,
-    img: config.remote + '/assets/products/img6.jpg',
+    img: 'assets/img/products/img6.jpg',
     title: 'flat sandals',
     subtitle: 'Trainers In White',
     price: 55,

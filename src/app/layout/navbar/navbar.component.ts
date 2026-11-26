@@ -2,6 +2,7 @@ import { Component, Output, EventEmitter, Renderer2, ElementRef, ChangeDetection
 import {LoginService} from '../../pages/login/login.service';
 
 @Component({
+  standalone: false,
   selector: '[navbar]',
   templateUrl: './navbar.template.html',
   changeDetection: ChangeDetectionStrategy.OnPush

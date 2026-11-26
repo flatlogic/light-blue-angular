@@ -6,6 +6,7 @@ import { CalendarEvent } from 'angular-calendar';
 import { calendarEvents } from '../../../utils/data/calendar-events.data';
 
 @Component({
+  standalone: false,
   selector: 'analytics',
   templateUrl: './analytics.template.html',
   styleUrls: ['./analytics.style.scss'],

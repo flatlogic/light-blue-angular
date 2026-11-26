@@ -13,7 +13,7 @@
       <h5>Inpage <strong>Wizard</strong></h5>
         <p>An example of complete wizard form in widget.</p>
         <form [formGroup]="form">
-          <ng-wizard #wizard [config]="config">
+          <ng-wizard #wizard [config]="config" (stepChanged)="changeDetector.markForCheck()">
             <ng-wizard-step title="1. Your Details">
               <ng-container formGroupName="details">
                 <fieldset>

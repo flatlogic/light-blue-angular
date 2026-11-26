@@ -2,6 +2,7 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
 import {Product} from '../../../products.service';
 
 @Component({
+  standalone: false,
   selector: 'description',
   templateUrl: './description.template.html',
   styleUrls: ['./description.style.scss'],

@@ -6,18 +6,20 @@ import {
   AfterViewInit,
   ElementRef,
   OnDestroy,
-  ChangeDetectionStrategy
+  ChangeDetectionStrategy,
+  ChangeDetectorRef
 } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 
 import { ModalDirective } from 'ngx-bootstrap/modal';
 import { FullCalendarComponent } from '@fullcalendar/angular';
-import { PluginDef, Calendar, EventInput, EventApi, View } from '@fullcalendar/core';
-import dayGridPlugin, { DayGridView } from '@fullcalendar/daygrid';
-import timeGrigPlugin from '@fullcalendar/timegrid';
-import interactionPlugin, { Draggable } from '@fullcalendar/interaction';
+import { CalendarOptions, Calendar, EventInput, EventApi, EventClickArg, DateSelectArg } from '@fullcalendar/core';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import timeGridPlugin from '@fullcalendar/timegrid';
+import interactionPlugin, { Draggable, DropArg } from '@fullcalendar/interaction';
 
 @Component({
+  standalone: false,
   selector: '[extra-calendar]',
   templateUrl: './calendar.template.html',
   encapsulation: ViewEncapsulation.None,
@@ -30,11 +32,20 @@ export class CalendarComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('calendar', { static: false }) public calendarComponent: FullCalendarComponent;
   @ViewChild('externalEvents', { static: false }) public externalEventsRef: ElementRef<HTMLElement>;
   public calendarApi: Calendar;
-  public calendarPlugins: PluginDef[] = [
-    dayGridPlugin,
-    timeGrigPlugin,
-    interactionPlugin
-  ];
+  public calendarOptions: CalendarOptions = {
+    plugins: [dayGridPlugin, timeGridPlugin, interactionPlugin],
+    initialView: 'dayGridMonth',
+    dayMaxEvents: 2,
+    editable: true,
+    droppable: true,
+    selectable: true,
+    selectMirror: true,
+    height: 'auto',
+    headerToolbar: false,
+    eventClick: event => this.onEventClick(event),
+    select: selection => this.onSelect(selection),
+    drop: event => this.onDrop(event)
+  };
   public events: EventInput[];
   public currentDate: Date = new Date();
   public currentEvent: EventApi;
@@ -42,7 +53,7 @@ export class CalendarComponent implements OnInit, AfterViewInit, OnDestroy {
   public view: string = 'dayGridMonth';
   private draggable: Draggable;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private changeDetector: ChangeDetectorRef) { }
 
   public ngOnInit(): void {
     this.eventForm = this.fb.group({
@@ -74,7 +85,7 @@ export class CalendarComponent implements OnInit, AfterViewInit, OnDestroy {
       description: 'This conference should be worse visiting'
     },
     {
-      id: 999,
+      id: '999',
       title: 'Blah Blah Car',
       start: new Date(y, m, d - 3, 16, 0),
       backgroundColor: '#FDD468',
@@ -83,7 +94,7 @@ export class CalendarComponent implements OnInit, AfterViewInit, OnDestroy {
       description: 'Agree with this guy on arrival time'
     },
     {
-      id: 1000,
+      id: '1000',
       title: 'Buy this template',
       start: new Date(y, m, d + 3, 12, 0),
       allDay: false,
@@ -131,7 +142,7 @@ export class CalendarComponent implements OnInit, AfterViewInit, OnDestroy {
       eventData: function (el: HTMLElement) {
         return {
           title: el.innerText,
-          className: el.dataset['eventClass']
+          classNames: el.dataset['eventClass']
         };
       }
     });
@@ -143,26 +154,13 @@ export class CalendarComponent implements OnInit, AfterViewInit, OnDestroy {
     }
   }
 
-  public onEventClick({ event }: {
-    el: HTMLElement;
-    event: EventApi;
-    jsEvent: MouseEvent;
-    view: DayGridView;
-  }): void {
+  public onEventClick({ event }: EventClickArg): void {
     this.currentEvent = event;
+    this.changeDetector.markForCheck();
     this.viewEventModal.show();
   }
 
-  public onSelect({ start, end, allDay }: {
-    start: Date;
-    end: Date;
-    startStr: string;
-    endStr: string;
-    allDay: boolean;
-    resource?: any;
-    jsEvent: MouseEvent;
-    view: View;
-  }): void {
+  public onSelect({ start, end, allDay }: DateSelectArg): void {
     this.eventForm.patchValue({
       start,
       end,
@@ -189,14 +187,7 @@ export class CalendarComponent implements OnInit, AfterViewInit, OnDestroy {
     this.eventForm.get('title').reset();
   }
 
-  public onDrop({ draggedEl }: {
-    date: Date;
-    dateStr: string;
-    allDay: boolean;
-    draggedEl: HTMLElement;
-    jsEvent: MouseEvent;
-    view: View;
-  }): void {
+  public onDrop({ draggedEl }: DropArg): void {
     draggedEl.parentNode.removeChild(draggedEl);
   }
 

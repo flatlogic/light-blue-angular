@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 
-import * as Highstock from 'highcharts/highstock';
-import * as Highcharts from 'highcharts';
+import Highstock from 'highcharts/highstock';
+import Highcharts from 'highcharts';
 import IndicatorsCore from 'highcharts/indicators/indicators';
 IndicatorsCore(Highstock);
 import IndicatorZigZag from 'highcharts/indicators/zigzag';
@@ -21,6 +21,7 @@ import {
 } from '../../../utils/data/highcharts.data';
 
 @Component({
+  standalone: false,
   selector: 'app-highcharts',
   templateUrl: './highcharts.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush

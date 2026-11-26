@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { Toast, ToastrService, ToastPackage } from 'ngx-toastr';
+import { Toast } from 'ngx-toastr';
 
 @Component({
+  standalone: false,
   selector: 'success-toast',
   templateUrl: './success-toast.component.html',
   styleUrls: ['./success-toast.component.scss'],
@@ -24,10 +25,6 @@ import { Toast, ToastrService, ToastPackage } from 'ngx-toastr';
   preserveWhitespaces: false
 })
 export class SuccessToastComponent extends Toast {
-  constructor(protected toastrService: ToastrService, public toastPackage: ToastPackage) {
-    super(toastrService, toastPackage);
-  }
-
   public onAction(event: Event) {
     event.stopPropagation();
     this.toastPackage.triggerAction();

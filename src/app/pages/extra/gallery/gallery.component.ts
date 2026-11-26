@@ -1,12 +1,13 @@
 import { Component, ViewChild, AfterViewInit, ElementRef, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
 
 import Shuffle, { ShuffleOptions } from 'shufflejs';
-import * as PhotoSwipe from 'photoswipe';
-import * as PhotoSwipeUI_Default from 'photoswipe/dist/photoswipe-ui-default';
+import PhotoSwipe from 'photoswipe';
+import PhotoSwipeUI_Default from 'photoswipe/dist/photoswipe-ui-default';
 import { GalleryItem, galleryItems, photoswipeItems } from './gallery-items';
 
 
 @Component({
+  standalone: false,
   selector: '[extra-gallery]',
   templateUrl: './gallery.template.html',
   styleUrls: ['./gallery.style.scss'],
@@ -22,8 +23,7 @@ export class GalleryComponent implements AfterViewInit, OnDestroy {
   public shuffle: any;
   shuffleOptions: ShuffleOptions = {
     itemSelector: '.gallery-item',
-    sizer: '.js-shuffle-sizer',
-    delimeter: ','
+    sizer: '.js-shuffle-sizer'
   };
 
   activeGroupSelected(group: string): void {

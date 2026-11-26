@@ -10,6 +10,7 @@ import {
 } from '../../../utils/data/echarts.data';
 
 @Component({
+  standalone: false,
   selector: 'app-echarts',
   templateUrl: './echarts.component.html',
   styleUrls: ['./echarts.component.scss'],

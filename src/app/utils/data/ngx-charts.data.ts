@@ -1,7 +1,11 @@
+import { Color, ScaleType } from '@swimlane/ngx-charts';
+
+function chartColors(domain: string[]): Color {
+  return {name: 'Light Blue', selectable: false, group: ScaleType.Ordinal, domain};
+}
+
 export const ngxLineChartData = {
-  colorScheme: {
-    domain: ['#8cbf26', '#db4912', '#f0af03', '#57b955']
-  },
+  colorScheme: chartColors(['#8cbf26', '#db4912', '#f0af03', '#57b955']),
   gradient: false,
   showXAxis: true,
   showYAxis: true,
@@ -138,9 +142,7 @@ export const ngxLineChartData = {
 };
 
 export const ngxAreaChartData = {
-  colorScheme: {
-    domain: ['#8cbf26', '#db4912', '#f0af03', '#57b955']
-  },
+  colorScheme: chartColors(['#8cbf26', '#db4912', '#f0af03', '#57b955']),
   gradient: false,
   showXAxis: true,
   showYAxis: true,
@@ -277,9 +279,7 @@ export const ngxAreaChartData = {
 };
 
 export const ngxVerticalBarChartData = {
-  colorScheme: {
-    domain: ['#57b955', '#db4912', '#f0af03']
-  },
+  colorScheme: chartColors(['#57b955', '#db4912', '#f0af03']),
   gradient: false,
   showXAxis: true,
   showYAxis: true,
@@ -302,9 +302,7 @@ export const ngxVerticalBarChartData = {
 };
 
 export const ngxDoughnutChartData = {
-  colorScheme: {
-    domain: ['#57b955', '#db4912', '#f0af03']
-  },
+  colorScheme: chartColors(['#57b955', '#db4912', '#f0af03']),
   gradient: false,
   showLegend: false,
   showLabes: true,
@@ -327,9 +325,7 @@ export const ngxDoughnutChartData = {
 };
 
 export const ngxGroupedVerticalBarChartData = {
-  colorScheme: {
-    domain: ['#4e85bd', '#57b955']
-  },
+  colorScheme: chartColors(['#4e85bd', '#57b955']),
   gradient: false,
   showXAxis: true,
   showYAxis: true,
@@ -381,9 +377,7 @@ export const ngxGroupedVerticalBarChartData = {
 };
 
 export const ngxStackedVerticalBarChartData = {
-  colorScheme: {
-    domain: ['#4e85bd', '#4ebfbb']
-  },
+  colorScheme: chartColors(['#4e85bd', '#4ebfbb']),
   gradient: false,
   showXAxis: true,
   showYAxis: true,

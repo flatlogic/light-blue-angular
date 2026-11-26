@@ -20,6 +20,7 @@ import {
 const TIMEOUT: number = 1000;
 
 @Component({
+  standalone: false,
   selector: '[grid]',
   templateUrl: './grid.template.html',
   encapsulation: ViewEncapsulation.None,

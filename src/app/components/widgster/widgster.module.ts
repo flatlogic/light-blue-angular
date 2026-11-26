@@ -20,7 +20,7 @@ import { WidgsterFooterDirective } from './directives/widgster-footer.directive'
   imports: [
     CommonModule,
     LoaderModule,
-    TooltipModule.forRoot()
+    TooltipModule
   ],
   exports: [
     WidgsterComponent,

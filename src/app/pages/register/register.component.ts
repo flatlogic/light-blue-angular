@@ -3,6 +3,7 @@ import {RegisterService} from './register.service';
 import {LoginService} from '../login/login.service';
 
 @Component({
+  standalone: false,
   selector: 'app-login',
   templateUrl: './register.template.html'
 })

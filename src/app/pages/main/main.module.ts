@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { TrendModule } from 'ngx-trend';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { NgApexchartsModule } from 'ng-apexcharts';
-import { SwiperConfigInterface, SwiperModule, SWIPER_CONFIG } from 'ngx-swiper-wrapper';
-import { CountUpModule } from 'ngx-countup';
+import { WidgetSwiperComponent } from './widgets/widget-swiper.component';
+import { CountUpDirective } from 'ngx-countup';
 import { CalendarModule as AngularCalendarModule, DateAdapter, CalendarDateFormatter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
@@ -26,19 +26,13 @@ import { AnalyticsService } from './analytics/analytics.service';
 import { YearsMapModule } from '../../components/years-map-widget/year-map.module';
 import { CustomDateFormatter } from './visits/custom-date-formatter.service';
 import { WidgsterModule } from '../../components/widgster/widgster.module';
-import { UtilsModule } from '../../utils/utils-module/utils.module';
 
-export const routes = [
+export const routes: Routes = [
   { path: '', redirectTo: 'visits', pathMatch: 'full' },
   { path: 'analytics', component: AnalyticsComponent, pathMatch: 'full' },
   { path: 'visits', component: VisitsComponent, pathMatch: 'full' },
   { path: 'widgets', component: WidgetsComponent, pathMatch: 'full' }
 ];
-
-const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
-  direction: 'horizontal',
-  slidesPerView: 'auto'
-};
 
 @NgModule({
   declarations: [
@@ -50,6 +44,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     VisitsComponent,
     MarketStatsWidgetComponent,
     WidgetsComponent,
+    WidgetSwiperComponent,
     ChangesChartWidgetComponent,
     NasdaqWidgetComponent,
     RealtimeTrafficWidgetComponent
@@ -62,8 +57,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     NgApexchartsModule,
     NgxEchartsModule,
     YearsMapModule,
-    SwiperModule,
-    CountUpModule,
+    CountUpDirective,
     AngularCalendarModule.forRoot({
       provide: DateAdapter,
       useFactory: adapterFactory
@@ -71,14 +65,9 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     WidgsterModule,
     ProgressbarModule,
     BsDropdownModule,
-    UtilsModule
   ],
   providers: [
     AnalyticsService,
-    {
-      provide: SWIPER_CONFIG,
-      useValue: DEFAULT_SWIPER_CONFIG
-    },
     {
       provide: CalendarDateFormatter,
       useClass: CustomDateFormatter

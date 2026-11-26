@@ -5,6 +5,7 @@ import {ProductsService} from '../products.service';
 import {Router} from '@angular/router';
 
 @Component({
+  standalone: false,
   selector: '[product-grid]',
   templateUrl: './product-grid.template.html',
   styleUrls: ['./product-grid.style.scss', './product-card.style.scss']

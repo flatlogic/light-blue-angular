@@ -9,10 +9,7 @@
       <h5 *widgsterTitle>
         Google Maps <small class=text-muted>Default and customized</small>
       </h5>
-      <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" class="content-map">
-        <agm-marker [latitude]="lat" [longitude]="lng" [markerDraggable]="true">
-        </agm-marker>
-      </agm-map>
+      <app-google-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" class="content-map"></app-google-map>
     </section>
   </div>
 </div>

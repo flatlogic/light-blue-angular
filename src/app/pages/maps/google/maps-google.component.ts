@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: '[maps-google]',
   templateUrl: './maps-google.template.html',
   styles: [`

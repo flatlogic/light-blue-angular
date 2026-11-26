@@ -3,6 +3,7 @@ import { Output, Input } from '@angular/core';
 import { EventEmitter } from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: '[mail-form]',
   templateUrl: './mail-form.template.html',
 })

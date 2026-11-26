@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: 'selects',
   templateUrl: './selects.template.html',
   styleUrls: ['./selects.style.scss']

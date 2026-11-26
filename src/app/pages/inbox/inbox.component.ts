@@ -1,6 +1,7 @@
 import { Component, AfterViewInit, OnDestroy } from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: 'inbox',
   templateUrl: './inbox.template.html',
   styleUrls: ['./inbox.style.scss']

@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { ToastrModule } from 'ngx-toastr';
-import { SortablejsModule } from 'ngx-sortablejs';
+import { SortablejsModule } from '@dustfoundation/ngx-sortablejs';
 import { AlertModule } from 'ngx-bootstrap/alert';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
@@ -29,9 +29,8 @@ import { CardComponent } from './card/card';
 import { BadgeComponent } from './badge/badge';
 import { AlertsComponent } from './alerts/alerts';
 import { WidgsterModule } from '../../components/widgster/widgster.module';
-import { UtilsModule } from '../../utils/utils-module/utils.module';
 
-export const routes = [
+export const routes: Routes = [
   { path: '', redirectTo: 'components', pathMatch: 'full' },
   { path: 'buttons', component: ButtonsComponent },
   { path: 'notifications', component: NotificationsComponent },
@@ -82,7 +81,6 @@ export const routes = [
     CarouselModule,
     PopoverModule,
     ProgressbarModule,
-    UtilsModule
   ]
 })
 export class UiElementsModule { }

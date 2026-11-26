@@ -10,6 +10,7 @@ import {
 
 
 @Component({
+  standalone: false,
   selector: 'layout',
   encapsulation: ViewEncapsulation.None,
   templateUrl: './layout.template.html'

@@ -1,3 +1,4 @@
+import {authErrorMessage} from '../../utils/functions/auth-error';
 import {AppConfig} from '../../app.config';
 import {HttpClient} from '@angular/common/http';
 import {Router} from '@angular/router';
@@ -44,12 +45,12 @@ export class RegisterService {
       this.requestRegister();
       const creds = payload;
       if (creds.email.length > 0 && creds.password.length > 0) {
-        this.http.post('/user/signup', creds).subscribe(() => {
+        this.http.post(this.config.authPath + '/signup', creds, {responseType: 'text'}).subscribe(() => {
           this.receiveRegister();
           this.toastr.success('You\'ve been registered successfully');
           this.router.navigate(['/login']);
         }, err => {
-          this.registerError(err.response.data);
+          this.registerError(authErrorMessage(err, 'Registration failed. Please try again.'));
         });
       } else {
         this.registerError('Something was wrong. Try again');

@@ -1,11 +1,12 @@
-import { Component, ViewEncapsulation, AfterViewInit, OnDestroy, ViewChildren, QueryList, ChangeDetectionStrategy } from '@angular/core';
-import { ApexOptions, ChartComponent } from 'ng-apexcharts';
-import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+import { Component, ViewEncapsulation, AfterViewInit, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
+import { ApexOptions } from 'ng-apexcharts';
+import type { SwiperOptions } from 'swiper/types';
 
 import { apexOptions1, apexOptions2 } from '../../../utils/data/apex-charts.data';
 import { echartLineBarData, echartDynamicAreaData2, echartBarChartData5, echartLineChartData3 } from '../../../utils/data/echarts.data';
 
 @Component({
+  standalone: false,
   selector: 'widgets',
   templateUrl: './widgets.template.html',
   encapsulation: ViewEncapsulation.None,
@@ -15,14 +16,13 @@ import { echartLineBarData, echartDynamicAreaData2, echartBarChartData5, echartL
 export class WidgetsComponent implements AfterViewInit, OnDestroy {
   public apexOptions1: ApexOptions = apexOptions1;
   public apexOptions2: ApexOptions = apexOptions2;
-  @ViewChildren(ChartComponent) public apexchartsList: QueryList<ChartComponent>;
   public echartDynamicAreaData2: any = echartDynamicAreaData2;
   public echartDynamicAreaDataUpdate: any;
   public echartBarChartData5: any = echartBarChartData5;
   public echartLineBarData: any = echartLineBarData;
   public echartLineChartData3: any = echartLineChartData3;
 
-  public verticalSwiperConfig: SwiperConfigInterface = {
+  public verticalSwiperConfig: SwiperOptions = {
     direction: 'vertical',
     keyboard: false,
     mousewheel: false,
@@ -35,7 +35,7 @@ export class WidgetsComponent implements AfterViewInit, OnDestroy {
     slidesPerView: 'auto'
   };
 
-  public verticalFlipSwiperConfig: SwiperConfigInterface = {
+  public verticalFlipSwiperConfig: SwiperOptions = {
     effect: 'flip',
     direction: 'vertical',
     flipEffect: {
@@ -52,7 +52,7 @@ export class WidgetsComponent implements AfterViewInit, OnDestroy {
     slidesPerView: 1
   };
 
-  public horizontalFlipSwiperConfig: SwiperConfigInterface = {
+  public horizontalFlipSwiperConfig: SwiperOptions = {
     effect: 'flip',
     flipEffect: {
       slideShadows: false
@@ -89,8 +89,5 @@ export class WidgetsComponent implements AfterViewInit, OnDestroy {
 
   public ngOnDestroy(): void {
     if (this.interval) { clearInterval(this.interval); }
-    this.apexchartsList.forEach((c: ChartComponent) => {
-      if (Boolean(c)) { c.destroy(); }
-    });
   }
 }

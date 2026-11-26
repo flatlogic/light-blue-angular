@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: 'rating',
   templateUrl: './rating.template.html',
   styleUrls: ['./rating.style.scss']

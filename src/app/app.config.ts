@@ -1,18 +1,16 @@
 import { Injectable } from '@angular/core';
 import {environment} from '../environments/environment';
 
-const hostApi = process.env.NODE_ENV === 'development' ? 'http://localhost' : 'https://flatlogic-node-backend.herokuapp.com';
-const portApi = process.env.NODE_ENV === 'development' ? 8080 : '';
-const baseURLApi = `${hostApi}${portApi ? `:${portApi}` : ``}`;
+const configuredApi = document.querySelector<HTMLMetaElement>('meta[name="light-blue-api"]')?.content.trim();
+const defaultApi = environment.production ? '/api' : 'http://localhost:8080/api';
+const baseURLApi = (configuredApi || defaultApi).replace(/\/$/, '');
 
 @Injectable()
 export class AppConfig {
   config = {
-    remote: 'https://flatlogic-node-backend.herokuapp.com',
     isBackend: environment.backend,
-    hostApi,
-    portApi,
     baseURLApi,
+    authPath: '/auth',
     auth: {
       email: 'admin@flatlogic.com',
       password: 'password'

@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { ColumnMode } from '@swimlane/ngx-datatable';
 
 @Component({
+  standalone: false,
   selector: 'management',
   templateUrl: './management.html',
   styleUrls: ['./management.scss'],

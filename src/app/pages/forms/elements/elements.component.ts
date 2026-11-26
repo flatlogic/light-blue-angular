@@ -1,18 +1,51 @@
 import {
+  AfterViewInit,
   Component,
+  ElementRef,
+  OnDestroy,
+  SecurityContext,
+  ViewChild,
   ViewEncapsulation
 } from '@angular/core';
 import { defaultData, groupedData, simpleOptions, fromOneToThree, fromFourToSix, fromSevenToTen, defaultMarkdownEditorContent } from './elements.data';
-import { NgOption } from '@ng-select/ng-select';
+import { DomSanitizer } from '@angular/platform-browser';
+import EasyMDE from 'easymde';
+import Dropzone from 'dropzone';
+import 'trix';
 
 @Component({
+  standalone: false,
   selector: '[elements]',
   templateUrl: './elements.template.html',
   styleUrls: ['./elements.style.scss'],
   encapsulation: ViewEncapsulation.None,
   preserveWhitespaces: true
 })
-export class ElementsComponent {
+export class ElementsComponent implements AfterViewInit, OnDestroy {
+  @ViewChild('markdownInput') private markdownInput: ElementRef<HTMLTextAreaElement>;
+  @ViewChild('uploadArea') private uploadArea: ElementRef<HTMLFormElement>;
+  private markdown: EasyMDE;
+  private dropzone: Dropzone;
+
+  constructor(private sanitizer: DomSanitizer) {}
+
+  ngAfterViewInit(): void {
+    this.markdown = new EasyMDE({
+      element: this.markdownInput.nativeElement,
+      initialValue: defaultMarkdownEditorContent,
+      spellChecker: false,
+      autoDownloadFontAwesome: false,
+      renderingConfig: {sanitizerFunction: html => this.sanitizer.sanitize(SecurityContext.HTML, html) || ''}
+    });
+    this.dropzone = new Dropzone(this.uploadArea.nativeElement, {url: 'https://httpbin.org/post'});
+  }
+
+  ngOnDestroy(): void {
+    this.markdown.toTextArea();
+    this.markdown.cleanup();
+    this.dropzone.destroy();
+  }
+
   date: Date = new Date(2021, 5, 10);
   selected: any;
   phoneMask = '(000) 000-0000';
@@ -25,27 +58,26 @@ export class ElementsComponent {
   dateValue = '';
   timeValue = '';
 
-  public defaultOptions: NgOption[] = defaultData;
-  public groupedOptions: NgOption[] = groupedData;
+  public defaultOptions = defaultData;
+  public groupedOptions = groupedData;
   public color: string = '#f0b518';
-  public markdownEditorContent: string = defaultMarkdownEditorContent;
   public selectedItem: string;
   public readonly typesDropdownOptions: string[] = ['Another type', 'Type one', 'Next type'];
   public selecetedType = this.typesDropdownOptions[0];
-  public readonly simpleOptions: NgOption[] = simpleOptions;
-  public selectedSimpleOption: NgOption = this.simpleOptions[0];
-  public readonly fromOneToThree: NgOption[] = fromOneToThree;
-  public readonly fromFourToSix: NgOption[] = fromFourToSix;
-  public readonly fromSevenToTen: NgOption[] = fromSevenToTen;
-  public selectedNumber: NgOption = fromOneToThree[0];
-  public selectedNumber2: NgOption = fromFourToSix[0];
-  public selectedNumber3: NgOption = fromSevenToTen[0];
+  public readonly simpleOptions = simpleOptions;
+  public selectedSimpleOption = this.simpleOptions[0];
+  public readonly fromOneToThree = fromOneToThree;
+  public readonly fromFourToSix = fromFourToSix;
+  public readonly fromSevenToTen = fromSevenToTen;
+  public selectedNumber = fromOneToThree[0];
+  public selectedNumber2 = fromFourToSix[0];
+  public selectedNumber3 = fromSevenToTen[0];
 
   unmask(event) {
     return event.replace(/\D+/g, '');
   }
 
-  public onValueChange(model: NgOption | undefined): void {
+  public onValueChange(model: {id: string} | undefined): void {
     this.selected = Boolean(model) ? model.id : model;
   }
 

@@ -1,20 +1,17 @@
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { Autosize } from 'ng-autosize';
-import { NgxMaskModule } from 'ngx-mask'
-import { EditorModule } from '@tinymce/tinymce-angular';
-import { DropzoneModule } from 'ngx-dropzone-wrapper';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { TextFieldModule } from '@angular/cdk/text-field';
+import { NgxMaskDirective, provideNgxMask } from 'ngx-mask';
 import { NgWizardModule, NgWizardConfig, THEME } from 'ng-wizard';
 import { NgSelectModule } from '@ng-select/ng-select';
-import { ColorPickerModule } from 'ngx-color-picker';
-import { LMarkdownEditorModule } from 'ngx-markdown-editor';
+import { ColorPickerDirective } from 'ngx-color-picker';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { AlertModule } from 'ngx-bootstrap/alert';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import { DatepickerModule } from 'ngx-bootstrap/datepicker';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { TimepickerModule } from 'ngx-bootstrap/timepicker';
 
 import { ElementsComponent } from './elements/elements.component';
@@ -23,7 +20,7 @@ import { WizardComponent } from './wizard/wizard.component';
 import { WidgsterModule } from '../../components/widgster/widgster.module';
 import { FileInputModule } from '../../components/file-input/file-input.module';
 
-export const routes = [
+export const routes: Routes = [
   { path: '', redirectTo: 'elements', pathMatch: 'full' },
   { path: 'elements', component: ElementsComponent },
   { path: 'validation', component: ValidationComponent },
@@ -36,7 +33,6 @@ const wizardConfig: NgWizardConfig = {
 
 @NgModule({
   declarations: [
-    Autosize,
     ElementsComponent,
     ValidationComponent,
     WizardComponent
@@ -45,22 +41,22 @@ const wizardConfig: NgWizardConfig = {
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxMaskModule.forRoot(),
+    NgxMaskDirective,
+    TextFieldModule,
     RouterModule.forChild(routes),
-    EditorModule,
-    DropzoneModule,
     NgWizardModule.forRoot(wizardConfig),
     NgSelectModule,
-    ColorPickerModule,
-    LMarkdownEditorModule,
+    ColorPickerDirective,
     NgxSliderModule,
     WidgsterModule,
     TooltipModule,
     AlertModule,
     BsDropdownModule,
-    DatepickerModule,
+    BsDatepickerModule,
     TimepickerModule,
     FileInputModule
-  ]
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  providers: [provideNgxMask()]
 })
 export class FormModule { }

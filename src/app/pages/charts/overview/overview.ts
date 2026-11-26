@@ -1,5 +1,5 @@
-import { Component, ViewEncapsulation, AfterViewInit, OnDestroy, ViewChildren, QueryList, ChangeDetectionStrategy } from '@angular/core';
-import * as Highcharts from 'highcharts';
+import { Component, ViewEncapsulation, AfterViewInit, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
+import Highcharts from 'highcharts';
 
 import { apexOptions3, apexOptions4 } from '../../../utils/data/apex-charts.data';
 import { ngxAreaChartData, ngxLineChartData, ngxDoughnutChartData } from '../../../utils/data/ngx-charts.data';
@@ -16,9 +16,9 @@ import {
   smallHighchartsOptions5
 } from '../../../utils/data/highcharts.data';
 import { ngxGroupedVerticalBarChartData } from '../../../utils/data/ngx-charts.data';
-import { ChartComponent } from 'ng-apexcharts';
 
 @Component({
+  standalone: false,
   selector: '[charts-overview]',
   templateUrl: './overview.html',
   styleUrls: ['./overview.scss'],
@@ -28,7 +28,6 @@ import { ChartComponent } from 'ng-apexcharts';
 export class OverviewComponent implements AfterViewInit, OnDestroy {
   public apexOptions3: any = apexOptions3;
   public apexOptions4: any = apexOptions4;
-  @ViewChildren(ChartComponent) public apexchartsList: QueryList<ChartComponent>;
 
   public ngxAreaChartData: any = ngxAreaChartData;
   public ngxLineChartData: any = ngxLineChartData;
@@ -68,8 +67,5 @@ export class OverviewComponent implements AfterViewInit, OnDestroy {
 
   public ngOnDestroy(): void {
     if (this.interval) { clearInterval(this.interval); }
-    this.apexchartsList.forEach((c: ChartComponent) => {
-      if (Boolean(c)) { c.destroy(); }
-    });
   }
 }

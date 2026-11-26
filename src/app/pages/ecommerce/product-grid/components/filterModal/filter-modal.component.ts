@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges, Chang
 
 
 @Component({
+  standalone: false,
   selector: 'filter-modal',
   templateUrl: './filter-modal.template.html',
   styleUrls: ['./filter-modal.style.scss'],

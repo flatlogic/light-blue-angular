@@ -8,6 +8,7 @@ import {AppConfig} from '../../app.config';
 export class Product {
   id?: number;
   img?: string;
+  starred?: boolean;
   title?: string;
   subtitle?: string;
   price?: number;

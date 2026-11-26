@@ -15,14 +15,10 @@
     <p class="widget-auth-info">
       Use your email to sign in.
     </p>
-    <alert type="secondary alert-sm text-center mt-2 widget-middle-overflow rounded-0">
-      This is a real app with Node.js backend - use
-      <br/>
-      <span class="font-weight-bold">"admin@flatlogic.com / password"</span>
-      <br/>
-      to login!
+    <alert *ngIf="!loginService.config.isBackend" type="secondary alert-sm text-center mt-2 widget-middle-overflow rounded-0">
+      Use the prefilled demo credentials to explore the dashboard.
     </alert>
-    <form>
+    <form (ngSubmit)="login()">
       <alert *ngIf="loginService.errorMessage" type="danger alert-sm widget-middle-overflow rounded-0">
         {{loginService.errorMessage}}
       </alert>
@@ -49,7 +45,7 @@
         </div>
       </div>
       <div class="bg-widget auth-widget-footer">
-        <button (click)="login()" type="submit" class="btn btn-sm btn-danger auth-btn">
+        <button type="submit" class="btn btn-sm btn-danger auth-btn">
           <span class="auth-btn-circle">
             <i class="la la-caret-right"></i>
           </span>
@@ -60,11 +56,11 @@
         </p>
         <a routerLink="/register" class="d-block text-center mb-4">Create an Account</a>
         <div class="social-buttons">
-          <button (click)="googleLogin()" class="btn btn-primary social-button">
+          <button type="button" (click)="googleLogin()" class="btn btn-primary social-button">
             <i class="social-icon social-google"></i>
             <p class="social-text">GOOGLE</p>
           </button>
-          <button (click)="microsoftLogin()" class="btn btn-success social-button">
+          <button type="button" (click)="microsoftLogin()" class="btn btn-success social-button">
             <i class="social-icon social-microsoft"></i>
             <p class="social-text">MICROSOFT</p>
           </button>
@@ -74,5 +70,5 @@
   </section>
 </div>
 <footer class="auth-footer">
-  2020 &copy; Sing App - React Admin Dashboard Template - Made by <a href="https://flatlogic.com/">Flatlogic</a>
+  Light Blue Angular dashboard by <a href="https://flatlogic.com/">Flatlogic</a>
 </footer>

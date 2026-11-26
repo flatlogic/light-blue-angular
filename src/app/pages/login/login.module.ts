@@ -1,13 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { AlertModule } from 'ngx-bootstrap/alert';
 
 import { Login } from './login.component';
 import { WidgsterModule } from '../../components/widgster/widgster.module';
 
-export const routes = [
+export const routes: Routes = [
   { path: '', component: Login, pathMatch: 'full' }
 ];
 

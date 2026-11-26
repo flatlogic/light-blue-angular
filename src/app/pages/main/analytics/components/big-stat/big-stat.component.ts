@@ -2,6 +2,7 @@ import {Component, Input, ViewEncapsulation} from '@angular/core';
 
 
 @Component({
+  standalone: false,
   selector: 'big-stat',
   templateUrl: './big-stat.template.html',
   styleUrls: ['./big-stat.style.scss'],

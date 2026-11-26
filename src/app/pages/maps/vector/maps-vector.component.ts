@@ -7,6 +7,7 @@ useTheme(am4themes_animated);
 import { data } from './data';
 
 @Component({
+  standalone: false,
   selector: '[maps-vector]',
   templateUrl: './maps-vector.template.html',
   encapsulation: ViewEncapsulation.None,

@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { FullCalendarModule } from '@fullcalendar/angular';
-import { AgmCoreModule } from '@agm/core';
+import { GoogleMapModule } from '../../components/google-map/google-map.module';
 import { AlertModule } from 'ngx-bootstrap/alert';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
@@ -17,7 +17,7 @@ import { TimeLineComponent } from './time-line/time-line.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { WidgsterModule } from '../../components/widgster/widgster.module';
 
-export const routes = [
+export const routes: Routes = [
   { path: '', redirectTo: 'calendar', pathMatch: 'full' },
   { path: 'calendar', component: CalendarComponent },
   { path: 'invoice', component: InvoiceComponent },
@@ -40,7 +40,7 @@ export const routes = [
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forChild(routes),
-    AgmCoreModule.forRoot({
+    GoogleMapModule.forRoot({
       apiKey: 'AIzaSyDe_oVpi9eRSN99G4o6TwVjJbFBNr58NxE'
     }),
     FullCalendarModule,

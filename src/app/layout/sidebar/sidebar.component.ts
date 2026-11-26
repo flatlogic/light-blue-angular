@@ -2,6 +2,7 @@ import { Component, ElementRef, OnInit, AfterViewInit, Renderer2 } from '@angula
 import { LoginService } from '../../pages/login/login.service';
 
 @Component({
+  standalone: false,
   selector: '[sidebar]',
   templateUrl: './sidebar.template.html',
   styleUrls: ['./sidebar.component.scss']

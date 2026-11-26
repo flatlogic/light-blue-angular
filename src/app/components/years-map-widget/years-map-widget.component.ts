@@ -7,6 +7,7 @@ useTheme(am4themes_animated);
 import { fakeWorldData } from './fake-world-data';
 
 @Component({
+  standalone: false,
   selector: 'years-map-widget',
   templateUrl: './years-map-widget.template.html',
   styleUrls: ['./year-map-widget.component.scss'],

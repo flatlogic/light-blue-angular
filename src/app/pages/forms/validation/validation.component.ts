@@ -4,6 +4,7 @@ import { isURLValidator } from './validators/is-url.validator';
 import { arePasswordsEqual } from './validators/are-passwords-equal.validator';
 
 @Component({
+  standalone: false,
   selector: '[forms-validation]',
   templateUrl: './validation.template.html',
   encapsulation: ViewEncapsulation.None,

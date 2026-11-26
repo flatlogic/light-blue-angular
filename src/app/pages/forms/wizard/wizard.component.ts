@@ -1,9 +1,10 @@
-import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { NgWizardConfig, THEME, NgWizardService } from 'ng-wizard';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { countries } from './countries';
 
 @Component({
+  standalone: false,
   selector: '[forms-wizard]',
   templateUrl: './wizard.template.html',
   encapsulation: ViewEncapsulation.None,
@@ -33,6 +34,7 @@ export class WizardComponent implements OnInit {
   creditMask = '0000-0000-0000-0000';
 
   constructor(
+    public changeDetector: ChangeDetectorRef,
     private ngWizardService: NgWizardService,
     private fb: FormBuilder
   ) { }

@@ -8,6 +8,7 @@ const FOLDERS = [
 ];
 
 @Pipe({
+  standalone: false,
   name: 'FoldersPipe'
 })
 export class FoldersPipe implements PipeTransform {

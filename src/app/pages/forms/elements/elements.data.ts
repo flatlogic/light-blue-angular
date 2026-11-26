@@ -1,6 +1,4 @@
-import { NgOption } from '@ng-select/ng-select';
-
-export const defaultData: NgOption[] = [
+export const defaultData = [
   {
     id: 'Magellanic',
     text: 'Large Magellanic Cloud'
@@ -15,7 +13,7 @@ export const defaultData: NgOption[] = [
   }
 ];
 
-export const groupedData: NgOption[] = [
+export const groupedData = [
   { label: 'Dallas Cowboys', group: 'NFC EAST' },
   { label: 'New York Giants', group: 'NFC EAST' },
   { label: 'Philadelphia Eagles', group: 'NFC EAST' },
@@ -30,25 +28,25 @@ export const groupedData: NgOption[] = [
   { label: 'Tampa Bay Buccaneers', group: 'NFC SOUTH' },
 ];
 
-export const simpleOptions: NgOption[] = [
+export const simpleOptions = [
   { index: 0, label: 'Option One' },
   { index: 1, label: 'Options Two' },
   { index: 2, label: 'Option Three' }
 ];
 
-export const fromOneToThree: NgOption[] = [
+export const fromOneToThree = [
   { index: 0, label: 'Ichi' },
   { index: 1, label: 'Ni' },
   { index: 2, label: 'San' }
 ];
 
-export const fromFourToSix: NgOption[] = [
+export const fromFourToSix = [
   { index: 3, label: 'Shi' },
   { index: 4, label: 'Go' },
   { index: 5, label: 'Roku' }
 ];
 
-export const fromSevenToTen: NgOption[] = [
+export const fromSevenToTen = [
   { index: 6, label: 'Hichi' },
   { index: 7, label: 'Hachi' },
   { index: 8, label: 'Ku' },

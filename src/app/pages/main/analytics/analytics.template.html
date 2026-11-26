@@ -212,7 +212,7 @@
               [attr.key]="notification.id">
               <i class="la la-{{notification.icon}} mr text-{{notification.color}}"></i>
               <p [ngClass]="{ 'mb-0': notification.id === mock.notifications.length - 1 }"
-                [innerHtml]="notification.content | sanitize"></p>
+                [innerHtml]="notification.content"></p>
             </div>
           </section>
         </div>

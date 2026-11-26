@@ -9,6 +9,7 @@ import {
 } from '../../../utils/data/ngx-charts.data';
 
 @Component({
+  standalone: false,
   selector: 'app-ngx-charts',
   templateUrl: './ngx-charts.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush

@@ -1,5 +1,4 @@
-import {CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router} from '@angular/router';
-import {Observable} from 'rxjs';
+import {CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router, UrlTree} from '@angular/router';
 import {LoginService} from './pages/login/login.service';
 import {Injectable} from '@angular/core';
 
@@ -13,12 +12,8 @@ export class AppGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
-  ): Observable<boolean> | boolean {
+  ): boolean | UrlTree {
 
-    if (this.loginService.isAuthenticated()) {
-      return true;
-    } else {
-      this.router.navigate(['/login']);
-    }
+    return this.loginService.isAuthenticated() || this.router.parseUrl('/login');
   }
 }

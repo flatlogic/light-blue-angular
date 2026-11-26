@@ -21,6 +21,7 @@ import { WidgesterTooltipPosition } from './widgster-tooltip-position.type';
 import { WidgsterFooterDirective } from './directives/widgster-footer.directive';
 
 @Component({
+  standalone: false,
   selector: '[widgster]',
   templateUrl: './widgster.component.html',
   styleUrls: ['./widgster.component.scss'],

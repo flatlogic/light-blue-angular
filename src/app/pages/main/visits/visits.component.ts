@@ -25,6 +25,7 @@ import {citySeries as citySeriesData} from '../../../utils/data/city-series.data
 
 useTheme(am4themes_animated);
 @Component({
+  standalone: false,
   selector: 'visits',
   templateUrl: './visits.template.html',
   styleUrls: ['./visits.style.scss'],

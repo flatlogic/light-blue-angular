@@ -8,6 +8,7 @@ import { FileInputLabelDirective } from './directives/file-input-label.directive
 import { FileInputDirective } from './directives/file-input.directive';
 
 @Component({
+  standalone: false,
   selector: 'file-input',
   templateUrl: './file-input.component.html',
   styleUrls: ['./file-input.component.scss'],

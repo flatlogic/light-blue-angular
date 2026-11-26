@@ -1,4 +1,5 @@
 import { Directive } from '@angular/core';
 
-@Directive({ selector: '[widgsterFooter]' })
+@Directive({
+  standalone: false, selector: '[widgsterFooter]' })
 export class WidgsterFooterDirective { }

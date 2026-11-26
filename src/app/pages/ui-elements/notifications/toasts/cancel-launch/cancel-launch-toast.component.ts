@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { Toast, ToastrService, ToastPackage } from 'ngx-toastr';
+import { Toast } from 'ngx-toastr';
 
 @Component({
+  standalone: false,
   selector: 'cancel-launch-toast',
   templateUrl: './cancel-launch-toast.component.html',
   styleUrls: ['./cancel-launch-toast.component.scss'],
@@ -24,10 +25,6 @@ import { Toast, ToastrService, ToastPackage } from 'ngx-toastr';
   preserveWhitespaces: false
 })
 export class CancelLaunchToastComponent extends Toast {
-  constructor(protected toastrService: ToastrService, public toastPackage: ToastPackage) {
-    super(toastrService, toastPackage);
-  }
-
   public onAction(event: Event) {
     event.stopPropagation();
     this.toastPackage.triggerAction();

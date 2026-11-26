@@ -2,6 +2,7 @@ import { Component, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/
 import { Router } from '@angular/router';
 
 @Component({
+  standalone: false,
   selector: 'error',
   styleUrls: ['./error.style.scss'],
   templateUrl: './error.template.html',

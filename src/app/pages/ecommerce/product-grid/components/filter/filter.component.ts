@@ -2,6 +2,7 @@ import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 
 
 @Component({
+  standalone: false,
   selector: 'filter',
   templateUrl: './filter.template.html',
   styleUrls: ['./filter.style.scss'],

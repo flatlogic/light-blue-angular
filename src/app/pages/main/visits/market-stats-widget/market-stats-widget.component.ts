@@ -1,6 +1,7 @@
 import { Component, ViewEncapsulation, Input, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: '[market-stats-widget]',
   template: `<div echarts [style.height]="height" [options]="options" [merge]="merge"></div>`,
   encapsulation: ViewEncapsulation.None,

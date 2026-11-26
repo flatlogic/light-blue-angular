@@ -18,7 +18,7 @@ import { Navbar } from './navbar/navbar.component';
     ROUTES,
     FormsModule,
     ButtonsModule,
-    BsDropdownModule.forRoot(),
+    BsDropdownModule,
     AlertModule,
     ProgressbarModule,
     CollapseModule

@@ -11,10 +11,10 @@
 @import "../../../node_modules/animate.css/animate";
 @import "../../../node_modules/line-awesome/dist/line-awesome/css/line-awesome.min.css";
 @import "./fonts/flaticon/flaticon";
-@import "../../../node_modules/ngx-toastr/toastr-bs4-alert";
-@import "~@ng-select/ng-select/themes/default.theme.css";
-@import "~angular-calendar/css/angular-calendar.css";
-@import "../../../node_modules/ngx-bootstrap/datepicker/bs-datepicker.scss";
+@import "ngx-toastr/toastr-bs4-alert";
+@import "@ng-select/ng-select/themes/default.theme.css";
+@import "../../../node_modules/angular-calendar/css/angular-calendar.css";
+@import "ngx-bootstrap/datepicker/bs-datepicker.css";
 
 @import "font";
 

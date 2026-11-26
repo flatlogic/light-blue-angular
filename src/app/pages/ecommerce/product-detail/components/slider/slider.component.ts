@@ -3,6 +3,7 @@ import {Router} from '@angular/router';
 import {Product} from '../../../products.service';
 
 @Component({
+  standalone: false,
   selector: 'slider',
   templateUrl: './slider.template.html',
   styleUrls: ['./slider.style.scss', '../../../product-grid/product-card.style.scss'],
@@ -15,8 +16,12 @@ export class SliderComponent {
     public router: Router
   ) {}
 
+  scroll(track: HTMLElement, direction: number): void {
+    track.scrollBy({left: direction * track.clientWidth, behavior: 'smooth'});
+  }
+
   public toggleSliderProductStarred(product: Product) {
-    product['starred'] = !product['starred'];
+    product.starred = !product.starred;
   }
 
   getLabel(product) {

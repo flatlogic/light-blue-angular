@@ -10,6 +10,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { getRandomInt } from '../../../utils/functions/randomizer';
 
 @Component({
+  standalone: false,
   selector: '[tables-basic]',
   templateUrl: './tables-basic.template.html',
   changeDetection: ChangeDetectionStrategy.OnPush

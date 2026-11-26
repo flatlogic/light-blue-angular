@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
-import { SortablejsModule } from 'ngx-sortablejs';
+import { RouterModule, Routes } from '@angular/router';
+import { SortablejsModule } from '@dustfoundation/ngx-sortablejs';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
 import { GridComponent } from './grid.component';
 import { WidgsterModule } from '../../components/widgster/widgster.module';
 import { LoaderModule } from '../../components/loader/loader.module';
-import { UtilsModule } from '../../utils/utils-module/utils.module';
 
-export const routes = [
+export const routes: Routes = [
   { path: '', component: GridComponent, pathMatch: 'full' }
 ];
 
@@ -20,7 +19,6 @@ export const routes = [
     RouterModule.forChild(routes),
     WidgsterModule,
     LoaderModule,
-    UtilsModule,
     SortablejsModule,
     BsDropdownModule,
     TooltipModule

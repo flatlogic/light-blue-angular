@@ -2,6 +2,7 @@ import { Directive, ElementRef, Output, EventEmitter, Optional, Self } from '@an
 import { NgControl } from '@angular/forms';
 
 @Directive({
+  standalone: false,
   selector: 'input[type="file"][fileInput]',
 })
 export class FileInputDirective {

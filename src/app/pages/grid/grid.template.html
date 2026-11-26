@@ -106,7 +106,7 @@
         </ng-container>
       </ng-container>
       <loader *widgsterLoader [size]="40"></loader>
-      <div [innerHTML]="autoloadWidgetData$ | async | sanitize"></div>
+      <div [innerHTML]="autoloadWidgetData$ | async"></div>
     </section>
     <section widgster style="min-height: 200px" [optionsControl]="false" [reloadControl]="false"
       [fullscreenControl]="false" [collapseControl]="false" [closeControl]="false"

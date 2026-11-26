@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
+  standalone: false,
   selector: 'product-edit',
   templateUrl: './product-edit.html',
   styleUrls: ['./product-edit.scss'],

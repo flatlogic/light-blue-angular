@@ -1,7 +1,8 @@
 import { Component, ViewChild, OnChanges, OnInit, Input, ElementRef, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
-import * as Skycons from 'skycons';
+import Skycons from 'skycons';
 
 @Component({
+  standalone: false,
   selector: 'skycon',
   templateUrl: './skycon.component.html',
   styleUrls: ['./skycon.component.scss'],
@@ -30,6 +31,7 @@ export class SkyconComponent implements OnChanges, OnInit, OnDestroy {
   }
 
   public ngOnDestroy(): void {
+    this.icon.pause();
     this.icon.remove(this.canvas.nativeElement);
   }
 

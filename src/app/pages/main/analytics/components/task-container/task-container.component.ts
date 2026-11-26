@@ -2,6 +2,7 @@ import {Component, Input} from '@angular/core';
 
 
 @Component({
+  standalone: false,
   selector: 'task-container',
   templateUrl: './task-container.template.html'
 })

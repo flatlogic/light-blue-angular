@@ -9,6 +9,7 @@ import { RetryAction } from './toasts/retry-destroying/retry-action.enum';
 import { SuccessToastComponent } from './toasts/suceess/success-toast.component';
 
 @Component({
+  standalone: false,
   selector: '[ui-components]',
   templateUrl: './notifications.template.html',
   encapsulation: ViewEncapsulation.None,

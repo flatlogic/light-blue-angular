@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { NgxEchartsModule } from 'ngx-echarts';
@@ -15,7 +15,7 @@ import { OverviewComponent } from './overview/overview';
 import { HighchartsComponent } from './highcharts/highcharts.component';
 import { WidgsterModule } from '../../components/widgster/widgster.module';
 
-export const routes = [
+export const routes: Routes = [
   { path: '', redirectTo: 'overview', pathMatch: 'full' },
   { path: 'overview', component: OverviewComponent },
   { path: 'apexcharts', component: ApexchartsComponent },

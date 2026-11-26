@@ -1,6 +1,7 @@
 import { Component, ViewEncapsulation, Input } from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: '[realtime-traffic-widget]',
   templateUrl: './realtime-traffic-widget.template.html',
   encapsulation: ViewEncapsulation.None,

@@ -1,6 +1,7 @@
 import {Component, Input, ChangeDetectionStrategy} from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: 'loader',
   templateUrl: './loader.html',
   styleUrls: ['./loader.scss'],

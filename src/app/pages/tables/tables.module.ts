@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { TableModule } from 'ngx-easy-table';
 import { AlertModule } from 'ngx-bootstrap/alert';
@@ -17,7 +17,7 @@ import { SearchPipe } from './dynamic/pipes/search-pipe';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { WidgsterModule } from '../../components/widgster/widgster.module';
 
-export const routes = [
+export const routes: Routes = [
   { path: '', redirectTo: 'basic', pathMatch: 'full' },
   { path: 'basic', component: TablesBasicComponent },
   { path: 'dynamic', component: TablesDynamicComponent },

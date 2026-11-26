@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { Toast, ToastrService, ToastPackage } from 'ngx-toastr';
+import { Toast } from 'ngx-toastr';
 import { RetryAction } from './retry-action.enum';
 
 @Component({
+  standalone: false,
   selector: 'retry-destroying-toast',
   templateUrl: './retry-destroying-toast.component.html',
   styleUrls: ['./retry-destroying-toast.component.scss'],
@@ -25,10 +26,6 @@ import { RetryAction } from './retry-action.enum';
   preserveWhitespaces: false
 })
 export class RetryDestroyingToastComponent extends Toast {
-  constructor(protected toastrService: ToastrService, public toastPackage: ToastPackage) {
-    super(toastrService, toastPackage);
-  }
-
   public stickAround(): void {
     // override default toast behavour
   }

@@ -196,8 +196,10 @@
         <i class="fa fa-bars"></i>
       </a>
     </li>
-    <li class="nav-item d-sm-down-none">
-      <a class="nav-link" (click)="logout()"><i class="glyphicon glyphicon-off"></i></a>
+    <li class="nav-item">
+      <button type="button" class="btn btn-link nav-link px-2" aria-label="Log out" title="Log out" (click)="logout()">
+        <i class="glyphicon glyphicon-off" aria-hidden="true"></i>
+      </button>
     </li>
   </ul>
 </nav>

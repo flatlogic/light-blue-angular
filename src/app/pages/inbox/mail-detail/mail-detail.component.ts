@@ -1,6 +1,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: '[mail-detail]',
   templateUrl: './mail-detail.template.html',
   styleUrls: ['./mail-detail.style.scss']

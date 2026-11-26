@@ -1,123 +1,44 @@
-# 🚀 Light Blue Angular - A Free Premium Transparent Angular Dashboard Template!
+# Light Blue Angular
 
-[View Demo](https://flatlogic.com/templates/light-blue-angular/demo) | [Download](https://github.com/flatlogic/light-blue-angular/archive/refs/heads/master.zip) | [More Templates](https://flatlogic.com/templates) | [Discord Community](https://discord.gg/flatlogic-community) | [Support Forum](https://flatlogic.com/forum)
+A free Angular dashboard with a transparent Bootstrap theme. Explore the Visits and Analytics dashboards, interactive charts, calendars, forms, sortable tables and ecommerce screens. Run it as a standalone demo or connect it to a Node.js API.
 
-**Originally a premium product priced at $69+, made available for free in January 2025!** 🎉
+[Live demo](https://flatlogic.com/templates/light-blue-angular/demo) · [Download the latest release](https://github.com/flatlogic/light-blue-angular/releases/latest) · [Changelog](changelog.md)
 
-Looking for a perfect codebase generator for your Startup? Try [Flatlogic AI Web App Generator](https://flatlogic.com/generator) - our new tool, sort of a template++.
+![Visits dashboard with a geographic activity map, traffic charts and a calendar](docs/dashboard.jpg)
 
----
+## Run the demo
 
-## 🎯 Why Light Blue Angular?
-- **Ex-Premium**: This template was previously paid. Enjoy it for free now. 😉
-- **Transparent Design**: A world-first transparent dashboard design with deep background visuals.
-- **Join the Community**: [Flatlogic Discord](https://discord.gg/flatlogic-community) is where the action happens.
-- **Free Node.js Backend**: Pair it up with [this backend](https://github.com/flatlogic/nodejs-backend) to go full-stack.
+Use Node.js 22.13 or later on the 22.x line, or Node.js 24 or later. The repository includes an npm lockfile.
 
----
+```sh
+git clone https://github.com/flatlogic/light-blue-angular.git
+cd light-blue-angular
+npm ci
+npm start
+```
 
-## 🚀 Quick Start
+Open [localhost:3000](http://localhost:3000/) and choose **Login** with the prefilled demo credentials. This mode uses sample data and stores the demo session in your browser. Log out from the navigation bar to clear it.
 
-1. **Clone the repo**  
-   ```bash
-   git clone <repository-url> LightBlueAngular
-   cd LightBlueAngular
-   ```
-2. **Install dependencies**  
-   ```bash
-   yarn install  # Do NOT use npm!
-   ```
-3. **Run the app**  
-   ```bash
-   yarn start
-   ```
-   Navigate to http://localhost:3000/.
+| Command | Purpose |
+| --- | --- |
+| `npm run build:demo` | Build the standalone demo for static hosting |
+| `npm run start:backend` | Run the frontend against a local API |
+| `npm run build` | Build the production frontend with API sign-in |
+| `npm test` | Run the Angular session tests |
+| `npm run lint` | Check the TypeScript sources with ESLint |
 
-4. **Backend Support**  
-   ```bash
-   yarn run start:backend
-   ```
+Both production builds write files to `dist/`. Deploy that directory to a static server. When hosting under a subdirectory, pass its path to the build, for example `npm run build:demo -- --base-href /dashboard/`. The app uses hash-based routes.
 
-5. **Build for production**  
-   ```bash
-   yarn build --prod
-   ```
+## Connect an API
 
-> **Pro Tip:** If something breaks, it's probably your fault. 😜
+Start the [Flatlogic Node.js backend](https://github.com/flatlogic/nodejs-backend) with a development database and a test account, then run `npm run start:backend`. The frontend uses `http://localhost:8080/api` in development and `/api` on the frontend's origin in production. Set the `content` of the `light-blue-api` meta tag in `index.html` to use a different API base URL. A cross-origin API must allow the frontend origin.
 
----
+The companion backend exposes `POST /auth/signin/local` and `POST /auth/signup` under its API base. Sign-in accepts the backend's plain-text JWT and the older JSON response with a `token` field. If your existing installation serves those routes under `/user`, set `authPath` in [app.config.ts](src/app/app.config.ts) to `/user`. Social login also requires provider configuration on your backend.
 
-## 🧩 Features
+## Upgrading from 7.x
 
-- Over 30 Unique Pages
-- Fully Responsive
-- Built with Angular 11
-- Deep Background Visuals
-- 8 Chart Libraries
-- Developer-Oriented Dashboard
-- Easily Customizable Widgets
-- Fully Documented Codebase
+Switch to a supported Node.js version and install with `npm ci`. Version 8 uses Angular 21 LTS, the Angular application builder and TypeScript 5.9. The static and API builds are separate commands. Existing deployments that used a remote API should set their API base URL when publishing the new build.
 
----
+## Project links
 
-## 🛠 Built With
-- Angular 11.2
-- Bootstrap 4
-- Node.js
-- SASS
-- JavaScript (ES6)
-- Webpack
-- D3 Charts
-
----
-
-## 📦 Components
-- Dashboards
-- Traffic Sources
-- Chat
-- Forms (Validation, Wizard)
-- Widgets (Basic, Live)
-- Buttons (Default, Small, Large, Disabled)
-- User Interface (Dialogs, Notifications, Tabs, Accordion)
-- Maps (Google, Vector)
-- Tables (Static, Dynamic)
-- Special Pages (Search, Invoice, Login, Error, Inbox, Landing)
-
----
-
-## 🌍 Available Variants
-
-|               | **Material**                                              | **Transparent**                                         | **Classic**                                          | **Sofia**                                          | **Flatlogic**                                      |
-|---------------|-----------------------------------------------------------|---------------------------------------------------------|-------------------------------------------------------|-----------------------------------------------------|----------------------------------------------------|
-| **React**     | [React Material Admin](https://github.com/flatlogic/react-material-admin-full) | [Light Blue React](https://github.com/flatlogic/light-blue-react) | [Sing App React](https://github.com/flatlogic/sing-app-react) | [Sofia React](https://github.com/flatlogic/sofia-react) | [One React](https://github.com/flatlogic/one-react) |
-| **Angular**   | [Angular Material Admin](https://github.com/flatlogic/angular-material-admin-full) | [Light Blue Angular](https://github.com/flatlogic/light-blue-angular) | [Sing App Angular](https://github.com/flatlogic/sing-app-angular) | - | - |
-| **Vue**       | [Material Vue](https://github.com/flatlogic/material-vue-full) | [Light Blue Vue](https://github.com/flatlogic/light-blue-vue) | [Sing App Vue](https://github.com/flatlogic/sing-app-vue) | - | - |
-| **Bootstrap** | - | [Light Blue HTML5](https://github.com/flatlogic/light-blue-html5) | [Sing App HTML5](https://github.com/flatlogic/sing-app-html5) | - | [One Bootstrap](https://github.com/flatlogic/one-bootstrap-template-full) |
-
-Additionally, these templates are tailored for specific business needs:
-
-- [E-Commerce Frontend (React)](https://github.com/flatlogic/ecommerce-frontend) - A complete e-commerce solution.
-- [Bookkeeper UI (React)](https://github.com/flatlogic/bookkeeper-ui) - Accounting dashboard for finance management.
-- [User Management Template (React)](https://github.com/flatlogic/user-management-template) - User authentication and management.
-
----
-
-## 👨‍💻 How to Contribute
-- **Star this repo ⭐** - show some love.
-- **Report bugs** - but be nice.
-- **Join the [Discord](<insert-discord-invite-link>)** - meet fellow devs.
-
----
-
-## 🔥 About Flatlogic
-[Flatlogic](https://flatlogic.com/ai-software-development-agent) builds modern business software so you don't have to. Our AI Software Development Agent helps you generate, deploy, and maintain enterprise applications with minimal effort.
-
----
-
-## 📜 License
-This template is free to use. Modify it, break it, make it your own. Just don’t try to sell it back to us. 😎
-
----
-
-> **Questions or feedback?**  
-> Join our [Flatlogic Community Discord](https://discord.gg/flatlogic-community) or visit our [support forum](https://flatlogic.com/forum). We might even reply!
+[Source code](https://github.com/flatlogic/light-blue-angular) · [Flatlogic community](https://discord.gg/flatlogic-community) · [MIT license](LICENSE)
